@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Simple Invoices 500 Internal Server Error | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Simple Invoices 500 Internal Server Error" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simple Invoices is a free, open source, web based invoicing system that you can install on your server, desktop, or at a service provider. I installed Simple Invoices on a webhost company I rather not mention. The application was working fine, until they tweak their PHP settings several months back. As a result, the PDF export in Simple Invoices no longer worked. I was bummed. So, I was forced to run Simple Invoices from my home server, which was fun, but the issue was, I can’t access it outside of the house." />
+<meta property="og:description" content="Simple Invoices is a free, open source, web based invoicing system that you can install on your server, desktop, or at a service provider. I installed Simple Invoices on a webhost company I rather not mention. The application was working fine, until they tweak their PHP settings several months back. As a result, the PDF export in Simple Invoices no longer worked. I was bummed. So, I was forced to run Simple Invoices from my home server, which was fun, but the issue was, I can’t access it outside of the house." />
+<link rel="canonical" href="http://0.0.0.0:4000/2012/07/13/simple-invoices-500-internal-server-error/" />
+<meta property="og:url" content="http://0.0.0.0:4000/2012/07/13/simple-invoices-500-internal-server-error/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-07-14T03:32:05+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Simple Invoices 500 Internal Server Error" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2012-07-14T03:32:05+00:00","datePublished":"2012-07-14T03:32:05+00:00","description":"Simple Invoices is a free, open source, web based invoicing system that you can install on your server, desktop, or at a service provider. I installed Simple Invoices on a webhost company I rather not mention. The application was working fine, until they tweak their PHP settings several months back. As a result, the PDF export in Simple Invoices no longer worked. I was bummed. So, I was forced to run Simple Invoices from my home server, which was fun, but the issue was, I can’t access it outside of the house.","headline":"Simple Invoices 500 Internal Server Error","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2012/07/13/simple-invoices-500-internal-server-error/"},"url":"http://0.0.0.0:4000/2012/07/13/simple-invoices-500-internal-server-error/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Simple Invoices 500 Internal Server Error</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-07-14T03:32:05+00:00" itemprop="datePublished">Jul 14, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Simple Invoices is a free, open source, web based invoicing system that you can install on your server, desktop, or at a service provider. I installed Simple Invoices on a webhost company I rather not mention. The application was working fine, until they tweak their PHP settings several months back. As a result, the PDF export in Simple Invoices no longer worked. I was bummed. So, I was forced to run Simple Invoices from my home server, which was fun, but the issue was, I can’t access it outside of the house.</p>
+
+<p>So, I decided to install Simple Invoices on my new account at Linode. Now, the funny thing was, the application won’t even come up. Not even a login page. So, I searched online for a possible solution to my dilemma. Some suggested to increase the php memory settings to 128M, but that didn’t work out for me. At one time, I thought I had a missing pdo_mysql module, but that wasn’t the case. Then, I stumbled into something that led me to the ultimate discovery.</p>
+
+<p>Simple Invoices has this configuration file called <strong>config.ini</strong> located inside the config folder. One thing this application doesn’t like are extra characters inside the config file. I happen to like funky passwords with interesting characters like +-)!@#. My MySQL password happens to have a close parenthesis in it. Essentially, this extra character caused the entire application to not start. So, I change my password, and sure enough, the application worked.</p>
+
+<p>So, if you ever get a 500 internal server error with the Simple Invoices application, make sure you don’t have any of those extra characters inside your config.ini file. I wasted two hours trying to fix this issue, only to be surprised by such an idiotic requirement. That means I can’t use difficult passwords for this application. I think this is either a design issue or a funny requirement of the Zend Framework, which by the way, Simple Invoices is written on. It was somewhat funny, but I wasn’t amused.</p>
+
+  </div><a class="u-url" href="/2012/07/13/simple-invoices-500-internal-server-error/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

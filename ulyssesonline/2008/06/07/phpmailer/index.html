@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>PHPMailer | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="PHPMailer" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Have you ever tried to use the mail function in PHP and it doesn’t work? Chances are the sendmail on the host server is not configured correctly. Maybe you may need to play around with PHP.INI to make it work. There is an easy workaround to make your mail function work without tinkering with sendmail. Try PHPMailer." />
+<meta property="og:description" content="Have you ever tried to use the mail function in PHP and it doesn’t work? Chances are the sendmail on the host server is not configured correctly. Maybe you may need to play around with PHP.INI to make it work. There is an easy workaround to make your mail function work without tinkering with sendmail. Try PHPMailer." />
+<link rel="canonical" href="http://0.0.0.0:4000/2008/06/07/phpmailer/" />
+<meta property="og:url" content="http://0.0.0.0:4000/2008/06/07/phpmailer/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2008-06-07T17:03:39+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PHPMailer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2008-06-07T17:03:39+00:00","datePublished":"2008-06-07T17:03:39+00:00","description":"Have you ever tried to use the mail function in PHP and it doesn’t work? Chances are the sendmail on the host server is not configured correctly. Maybe you may need to play around with PHP.INI to make it work. There is an easy workaround to make your mail function work without tinkering with sendmail. Try PHPMailer.","headline":"PHPMailer","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2008/06/07/phpmailer/"},"url":"http://0.0.0.0:4000/2008/06/07/phpmailer/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">PHPMailer</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2008-06-07T17:03:39+00:00" itemprop="datePublished">Jun 7, 2008
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Have you ever tried to use the mail function in PHP and it doesn’t work? Chances are the sendmail on the host server is not configured correctly. Maybe you may need to play around with PHP.INI to make it work. There is an easy workaround to make your mail function work without tinkering with sendmail. Try <a href="http://phpmailer.codeworxtech.com/index.html">PHPMailer</a>.</p>
+
+<blockquote>
+  <p>PHPMailer is a PHP class for PHP (<a href="http://www.php.net/">www.php.net</a>) that provides a package of functions to send email. The two primary features are sending HTML Email and e-mails with attachments. PHPMailer supports nearly all possiblities to send email: <span class="bg">mail()</span>, Sendmail, qmail &amp; direct to SMTP server. You can use any feature of SMTP-based e-mail, multiple recepients via to, CC, BCC, etc. In short: PHPMailer is an efficient way to send e-mail within PHP.</p>
+</blockquote>
+
+<p>The key feature of PHPMailer is having the ability to use the mail function with a smtp server. There several features worth noting such as the ability to send an HTML email, CC and BCC recipients, embedded images, attachments, custom mail headers, redundant SMTP servers, SMTP authentication, wordwrap, etc.</p>
+
+<p>A sample PHP mail function may look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$to      = 'nobody@example.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+           'Reply-To: webmaster@example.com' . "\r\n" .
+mail($to, $subject, $message, $headers);
+</code></pre></div></div>
+
+<p>In PHPMailer, you would write something like this using SMTP server:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
+require("class.phpmailer.php");
+$mail = new PHPMailer();
+$mail-&gt;IsSMTP();
+$mail-&gt;Host = "smtp.host.com";
+$mail-&gt;From = "donotreply@host.com";
+$mail-&gt;FromName = "Your name";
+$mail-&gt;AddAddress("someone@domain.com", "John Doe");
+$mail-&gt;Subject = "Hello there";
+$mail-&gt;Body = "Hi, just wanted to drop by and say hi." ;
+if(!$mail-&gt;Send()) {
+  echo "Message could not be sent.";
+} else {
+  echo "Message successful";
+}
+</code></pre></div></div>
+
+<p>Some smtp servers may require authentication. You may need to add these lines:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
+$mail-&gt;SMTPAuth = true;
+$mail-&gt;Username = "username";
+$mail-&gt;Password = "password";
+</code></pre></div></div>
+
+<p>PHPMailer is an excellent and simple replacement for the PHP mail function. It’s easy and it works. Give PHPMailer a try.</p>
+
+  </div><a class="u-url" href="/2008/06/07/phpmailer/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

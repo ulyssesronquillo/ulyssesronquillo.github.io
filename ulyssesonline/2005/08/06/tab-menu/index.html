@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tab Menu | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Tab Menu" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’ve just added a Tab Menu on the WordPress default theme. Look above. I got the inspiration from Michael Heilemann of binarybonsai. As Mike has indicated, it’s perfectly ok to rip the code out from his website. That I did. If you are curious how I got it to work, then read on!" />
+<meta property="og:description" content="I’ve just added a Tab Menu on the WordPress default theme. Look above. I got the inspiration from Michael Heilemann of binarybonsai. As Mike has indicated, it’s perfectly ok to rip the code out from his website. That I did. If you are curious how I got it to work, then read on!" />
+<link rel="canonical" href="http://0.0.0.0:4000/2005/08/06/tab-menu/" />
+<meta property="og:url" content="http://0.0.0.0:4000/2005/08/06/tab-menu/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2005-08-06T09:47:05+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tab Menu" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2005-08-06T09:47:05+00:00","datePublished":"2005-08-06T09:47:05+00:00","description":"I’ve just added a Tab Menu on the WordPress default theme. Look above. I got the inspiration from Michael Heilemann of binarybonsai. As Mike has indicated, it’s perfectly ok to rip the code out from his website. That I did. If you are curious how I got it to work, then read on!","headline":"Tab Menu","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2005/08/06/tab-menu/"},"url":"http://0.0.0.0:4000/2005/08/06/tab-menu/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tab Menu</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2005-08-06T09:47:05+00:00" itemprop="datePublished">Aug 6, 2005
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I’ve just added a Tab Menu on the WordPress default theme. Look above. I got the inspiration from Michael Heilemann of <a href="http://binarybonsai.com">binarybonsai</a>. As Mike has indicated, it’s perfectly ok to rip the code out from his website. That I did. If you are curious how I got it to work, then read on!</p>
+
+<p>The following are step-by-step instructions on how to create a Tab Menu on your WordPress default theme. The Tab Menu works mainly with WordPress Pages. As a reference, a “Page” refers to pages created in WordPress, while a “page” means any generic web page. I also created a tab for the WordPress default page otherwise known as a blog page.</p>
+
+<p><strong>3 Easy Steps</strong></p>
+
+<ol>
+  <li>Edit the CSS file.</li>
+  <li>Edit page.php file.</li>
+  <li>Edit index.php, archive.php, search.php and single.php.</li>
+</ol>
+
+<p><strong>Step 1</strong><br />
+The first thing we need to do is to make backups of the files I mentioned above. Now, that’s completed. Let’s get started. Add the following <a href="http://ulyssesronquillo.com/upload/files/menu.txt">code</a> to your existing “style.css” file. I’ve added it to the end of the file so that it’s easy to locate them later on. You’ll probably need to adjust the positioning of the Menu Tab later to make sure it’s flush between the main content area and the header. This gives the impression of a tabbed menu. Also, don’t forget to change the color scheme to match your theme.</p>
+
+<p><strong>Step 2</strong><br />
+Edit “page.php” and place this <a href="http://ulyssesronquillo.com/upload/files/page.txt">code</a> just below the php get_header() statement which is located on the first line of the file. This code adds menu tabs to each of the WordPress Pages.</p>
+
+<p><strong>Step 3</strong><br />
+Edit “index.php” and place this <a href="http://ulyssesronquillo.com/upload/files/index.txt">code</a> just below the get_header() statement which is located on the first line of the file. This entry adds a home tab on the WordPress default page (blog). Repeat the same process for the next three files: archive.php, search.php and single.php. This is to make sure the Tab Menu appears in other pages within WordPress.</p>
+
+<p>That’s it. Upload the modified files to your web server. Enjoy your new Tab Menus.</p>
+
+  </div><a class="u-url" href="/2005/08/06/tab-menu/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

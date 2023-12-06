@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Vncserver on Fedora Core 4 | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Vncserver on Fedora Core 4" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’m posting this article to document the setup and configuration of vncserver on my Fedora Core 4 desktop. I’ve had a hard time finding the right documentation online. So, I’m making this document available to anyone who might be looking for help configuring the vncserver on the Fedora Core 4 and 5 platform. And now, Fedora 6 as well. Let’s get started." />
+<meta property="og:description" content="I’m posting this article to document the setup and configuration of vncserver on my Fedora Core 4 desktop. I’ve had a hard time finding the right documentation online. So, I’m making this document available to anyone who might be looking for help configuring the vncserver on the Fedora Core 4 and 5 platform. And now, Fedora 6 as well. Let’s get started." />
+<link rel="canonical" href="http://0.0.0.0:4000/2006/02/26/vncserver-on-fedora-core-4/" />
+<meta property="og:url" content="http://0.0.0.0:4000/2006/02/26/vncserver-on-fedora-core-4/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2006-02-27T06:34:13+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Vncserver on Fedora Core 4" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2006-02-27T06:34:13+00:00","datePublished":"2006-02-27T06:34:13+00:00","description":"I’m posting this article to document the setup and configuration of vncserver on my Fedora Core 4 desktop. I’ve had a hard time finding the right documentation online. So, I’m making this document available to anyone who might be looking for help configuring the vncserver on the Fedora Core 4 and 5 platform. And now, Fedora 6 as well. Let’s get started.","headline":"Vncserver on Fedora Core 4","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2006/02/26/vncserver-on-fedora-core-4/"},"url":"http://0.0.0.0:4000/2006/02/26/vncserver-on-fedora-core-4/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Vncserver on Fedora Core 4</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2006-02-27T06:34:13+00:00" itemprop="datePublished">Feb 27, 2006
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I’m posting this article to document the setup and configuration of vncserver on my Fedora Core 4 desktop. I’ve had a hard time finding the right documentation online. So, I’m making this document available to anyone who might be looking for help configuring the vncserver on the Fedora Core 4 and 5 platform. And now, Fedora 6 as well. Let’s get started.</p>
+
+<p>1. If you haven’t installed the vncserver yet, type in the following commands from the bash console to start the installation process.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum -install vnc-server
+</code></pre></div></div>
+
+<p>2. The following commands takes you to your home directory and starts the vncserver configuration. You’ll be prompted to enter your vncserver password twice. Vncserver will then create several files in the .vnc directory underneath your home directory.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd
+vncserver
+</code></pre></div></div>
+
+<p>3. Change directory to .vnc directory and edit the xstartup file and remove the “#” uncommenting the following lines:</p>
+
+<p>unset SESSION MANAGER<br />
+exec /etc/X11/xinit/xinitrc</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd .vnc
+vi xstartup
+</code></pre></div></div>
+
+<p>Save the file by typing “:wq”</p>
+
+<p>4. If the firewall is NOT installed, skip the next two steps. Otherwise, login as root. Change directory to /etc/sysconfig. Edit the iptables firewall.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+su
+cd /etc/sysconfig
+vi iptables
+</code></pre></div></div>
+
+<p>Add the following rules:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+-A RH-Firewall-1-INPUT -m state --state NEW
+-m tcp -p tcp --dport 5901:5909 -j ACCEPT
+</code></pre></div></div>
+
+<p>Save the file by typing “:wq”</p>
+
+<p>5. Restart the firewall.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+/sbin/service iptables restart
+</code></pre></div></div>
+
+<p>6. Start the vncserver with the following options. If successful, you will see a message stating the server has been started.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+vncserver -geometry 1024x768 -depth 16 :1
+</code></pre></div></div>
+
+<p>7. Now access the vncserver from another machine, using either a Windows or Linux machine. You can use the vncviewer program which is available for both Windows and Linux platforms.</p>
+
+<p>From Linux, enter the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+vncviewer hostname:1
+</code></pre></div></div>
+
+<p>From Windows, start vncserver application and type <strong>hostname:1</strong> in the dialog box.</p>
+
+<p>Enter your vncserver password!</p>
+
+<p><strong><ins datetime="2006-03-06T20:33:35+00:00">Addendum:</ins></strong></p>
+
+<p>8. Perform the following commands to make the vncserver server start at boot time. Login as root. Change directory to /etc/sysconfig.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+su
+cd /etc/sysconfig
+vi vncservers
+</code></pre></div></div>
+
+<p>Edit the <strong>vncservers</strong> file and type in the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+VNCSERVERS="1:user1 2:user2"
+VNCSERVERARGS[1]="-geometry 1276x968 -depth 16"
+VNCSERVERARGS[2]="-geometry 1024x768 -depth 16"
+</code></pre></div></div>
+
+<p>Save the file and reboot. I tried restarting vncserver via Services without rebooting, but it didn’t work for me. So, a reboot is necessary. The vncserver should start automatically after each reboot.</p>
+
+<p>9. Finally, if you like to run the vncserver on several runlevels other than the default 5, perform the following commands.</p>
+
+<p>Check status of vncserver:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+chkconfig --list vncserver
+</code></pre></div></div>
+
+<p>If you like to activate vncserver on different runlevels, for example 3, 4 and 5.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+chkconfig --level 345 vncserver on
+</code></pre></div></div>
+
+<p>10. That’s it.</p>
+
+  </div><a class="u-url" href="/2006/02/26/vncserver-on-fedora-core-4/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

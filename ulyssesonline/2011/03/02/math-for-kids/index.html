@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Math For Kids | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Math For Kids" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I just created a couple of PHP scripts for my nephew to help him with his math. Actually, any kid or adult can use it. The program performs some basic mathematics such as addition, subtraction, multiplication and division. The numbers and result are totally random. You will get a different set of numbers and result each time. You can play with it as long as you want, and as often as you like." />
+<meta property="og:description" content="I just created a couple of PHP scripts for my nephew to help him with his math. Actually, any kid or adult can use it. The program performs some basic mathematics such as addition, subtraction, multiplication and division. The numbers and result are totally random. You will get a different set of numbers and result each time. You can play with it as long as you want, and as often as you like." />
+<link rel="canonical" href="http://0.0.0.0:4000/2011/03/02/math-for-kids/" />
+<meta property="og:url" content="http://0.0.0.0:4000/2011/03/02/math-for-kids/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-03-02T18:32:23+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Math For Kids" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2011-03-02T18:32:23+00:00","datePublished":"2011-03-02T18:32:23+00:00","description":"I just created a couple of PHP scripts for my nephew to help him with his math. Actually, any kid or adult can use it. The program performs some basic mathematics such as addition, subtraction, multiplication and division. The numbers and result are totally random. You will get a different set of numbers and result each time. You can play with it as long as you want, and as often as you like.","headline":"Math For Kids","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2011/03/02/math-for-kids/"},"url":"http://0.0.0.0:4000/2011/03/02/math-for-kids/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Math For Kids</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-03-02T18:32:23+00:00" itemprop="datePublished">Mar 2, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I just created a couple of PHP scripts for my nephew to help him with his math. Actually, any kid or adult can use it. The program performs some basic mathematics such as addition, subtraction, multiplication and division. The numbers and result are totally random. You will get a different set of numbers and result each time. You can play with it as long as you want, and as often as you like.</p>
+
+<p>The result of each equation is hidden when the page is initially loaded. You can click the “Display Answer” link to reveal the answer. Clicking the “New Question” link will generate a different set of random numbers. Navigation is located at the top. You can select: Addition, Subtraction, Multiplication and Division. Give it a try.</p>
+
+<p>Just a couple of other things that I wanted to mention. I’m using Javascript to hide the answers when the documents are initially loaded. The math result is contained inside a hidden div. The div is toggled on or off or displayed or hidden, by simply clicking on a link. The Javascript that I use can be viewed and copied if you look at the source.</p>
+
+<p>In addition, I’m using simple a rand() function to generate a set of numbers. I use basic PHP math operations to perform the math operations. I do a couple of checks in subtraction and division scripts to avoid the following: subtraction which results in negative number, division by zero, and a divisible number, meaning no remainders when performing divisions. The scripts can be easily modified.</p>
+
+<h3 id="examples">Examples</h3>
+
+<h4 id="addition">Addition</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
+$a = rand(0, 20);  // This generates a random number between 0 and 20.
+$b = rand(0, 20);  // This generates a random number between 0 and 20.
+$c = $a + $b; // Performs addition
+</code></pre></div></div>
+
+<h4 id="subtraction">Subtraction</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
+$a = rand(0, 20);  // This generates a random number between 0 and 20.
+$b = rand(0, 20);  // This generates a random number between 0 and 20.
+if ($a&gt;$b) {$c=$a-$b;} else {$c=$b-$a;}  // No negative results
+</code></pre></div></div>
+
+<h4 id="division">Division</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
+$a = rand(2, 100);  // This generates a random number between 2 and 100.
+$b = rand(2, 100);  // This generates a random number between 2 and 100.
+do {
+$c = $a / $b;
+} while ($a % $b != 0) // Checks if result is divisible
+</code></pre></div></div>
+
+<p>It was a fun little project.</p>
+
+  </div><a class="u-url" href="/2011/03/02/math-for-kids/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

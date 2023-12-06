@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>PHP: Generate Random Alphanumeric Keys | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="PHP: Generate Random Alphanumeric Keys" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Occasionally, you might need to generate a random alphanumeric key in your project or within your script. This article will show you how to generate a random key using several PHP functions such as: mt_rand(), in_array() and the staple while and foreach loops." />
+<meta property="og:description" content="Occasionally, you might need to generate a random alphanumeric key in your project or within your script. This article will show you how to generate a random key using several PHP functions such as: mt_rand(), in_array() and the staple while and foreach loops." />
+<link rel="canonical" href="http://0.0.0.0:4000/2011/10/18/php-generate-random-alphanumeric-keys/" />
+<meta property="og:url" content="http://0.0.0.0:4000/2011/10/18/php-generate-random-alphanumeric-keys/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-10-18T21:36:40+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PHP: Generate Random Alphanumeric Keys" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2011-10-18T21:36:40+00:00","datePublished":"2011-10-18T21:36:40+00:00","description":"Occasionally, you might need to generate a random alphanumeric key in your project or within your script. This article will show you how to generate a random key using several PHP functions such as: mt_rand(), in_array() and the staple while and foreach loops.","headline":"PHP: Generate Random Alphanumeric Keys","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2011/10/18/php-generate-random-alphanumeric-keys/"},"url":"http://0.0.0.0:4000/2011/10/18/php-generate-random-alphanumeric-keys/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">PHP: Generate Random Alphanumeric Keys</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-10-18T21:36:40+00:00" itemprop="datePublished">Oct 18, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Occasionally, you might need to generate a random alphanumeric key in your project or within your script. This article will show you how to generate a random key using several PHP functions such as: mt_rand(), in_array() and the staple while and foreach loops.</p>
+
+<p>The mt_rand() function generates a random key based on the characters supplied to it. mt_round() is a direct replacement for the original rand() function. The mt_rand() function is recommended since it’s considerably faster (4 times faster) than rand().</p>
+
+<p>The in_array() function checks to see if the value is already in array. in_array() prevents duplication of the randomly chosen characters within the script.</p>
+
+<p>Let’s get started.</p>
+
+<h3 id="assign-characters">Assign Characters</h3>
+
+<p>In this code, several alphanumeric characters are assigned to the variable $characters. I omitted all vowels and will use both uppercase and lowercase alpha characters. In addition, I’m using numbers 1 through 9 only. I ommited zero since it can be confused with the letter O, although I’m not using the letter O in this example.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;// Random characters
+$characters = array("B","C","D","F","G","H","J","K","L","M","N",
+"P","Q","R","S","T","V","W","X","Y","Z","b","c","d","f","g","h",
+"j","k","l","m","n","p","q","r","s","t","v","w","x","y","z",
+"1","2","3","4","5","6","7","8","9");
+</code></pre></div></div>
+
+<h3 id="set-the-array">Set The Array</h3>
+
+<p>We will set the variable $keys as an array.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
+// set the array
+$keys = array();
+</code></pre></div></div>
+
+<h3 id="set-the-key-length">Set The Key Length</h3>
+
+<p>This is the length of the random key. It’s originally set for 7 characters and can be changed to a length of your choosing.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
+// set length
+$length = 7;
+</code></pre></div></div>
+
+<h3 id="generate-the-random-key">Generate The Random Key</h3>
+
+<p>This is main code that generates the random key. The code loops 7 times and assigns a random character to the variable $x. If $x is not in the array, it will assign the value of $x to the array called $keys[].</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
+// loop to generate random keys and assign to an array
+while(count($keys) 
+&lt;h3&gt;Display The Random Key&lt;/h3&gt;
+&lt;p&gt;We will use the foreach loop to display the random key stored in the $keys array. We will loop and extract each key and assign it the $random_chars variable. Finally, we will echo the $random_chars variable to display our random generated key.&lt;/p&gt;
+&lt;pre lang="php"&gt;
+// extract each key from array
+foreach($keys as $key){
+   $random_chars .= $characters[$key];
+}
+
+// display random key
+echo $random_chars;
+
+&lt;h3&gt;The Script&lt;/h3&gt;
+&lt;p&gt;All together now. Here's the entire script pieced together.&lt;/p&gt;
+&lt;pre lang="php"&gt;
+// Random characters
+$characters = array("B","C","D","F","G","H","J","K","L","M","N",
+"P","Q","R","S","T","V","W","X","Y","Z","b","c","d","f","g","h",
+"j","k","l","m","n","p","q","r","s","t","v","w","x","y","z",
+"1","2","3","4","5","6","7","8","9");
+
+// set the array
+$keys = array();
+
+// set length
+$length = 7;
+
+// loop to generate random keys and assign to an array
+while(count($keys) 
+&lt;p&gt;There you have it, a random generated key based on the assigned characters and length that we indicated in our tiny PHP script. I hope you find this short article useful on future projects. By the way, you can also use this script to generate random passwords.&lt;/p&gt;
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/2011/10/18/php-generate-random-alphanumeric-keys/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
