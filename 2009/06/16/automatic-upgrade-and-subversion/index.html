@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Automatic Upgrade and Subversion | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Automatic Upgrade and Subversion" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I have been using Subversion to manage WordPress upgrades for two years now. When WordPress 2.7 appeared, it came with an Automatic Upgrade feature that made one click upgrade possible. Unfortunately, for those of us who have been using Subversion to switch from one WordPress version to another, the Automatic Upgrade feature breaks Subversion. The .svn directories that are essential for tracking and version control are no longer available." />
+<meta property="og:description" content="I have been using Subversion to manage WordPress upgrades for two years now. When WordPress 2.7 appeared, it came with an Automatic Upgrade feature that made one click upgrade possible. Unfortunately, for those of us who have been using Subversion to switch from one WordPress version to another, the Automatic Upgrade feature breaks Subversion. The .svn directories that are essential for tracking and version control are no longer available." />
+<link rel="canonical" href="http://0.0.0.0:4000/ulyssesonline/2009/06/16/automatic-upgrade-and-subversion/" />
+<meta property="og:url" content="http://0.0.0.0:4000/ulyssesonline/2009/06/16/automatic-upgrade-and-subversion/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2009-06-17T03:45:32+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Automatic Upgrade and Subversion" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2009-06-17T03:45:32+00:00","datePublished":"2009-06-17T03:45:32+00:00","description":"I have been using Subversion to manage WordPress upgrades for two years now. When WordPress 2.7 appeared, it came with an Automatic Upgrade feature that made one click upgrade possible. Unfortunately, for those of us who have been using Subversion to switch from one WordPress version to another, the Automatic Upgrade feature breaks Subversion. The .svn directories that are essential for tracking and version control are no longer available.","headline":"Automatic Upgrade and Subversion","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/ulyssesonline/2009/06/16/automatic-upgrade-and-subversion/"},"url":"http://0.0.0.0:4000/ulyssesonline/2009/06/16/automatic-upgrade-and-subversion/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ulyssesonline/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/ulyssesonline/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ulyssesonline/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ulyssesonline/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Automatic Upgrade and Subversion</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2009-06-17T03:45:32+00:00" itemprop="datePublished">Jun 17, 2009
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I have been using Subversion to manage WordPress upgrades for two years now. When WordPress 2.7 appeared, it came with an Automatic Upgrade feature that made one click upgrade possible. Unfortunately, for those of us who have been using Subversion to switch from one WordPress version to another, the Automatic Upgrade feature breaks Subversion. The .svn directories that are essential for tracking and version control are no longer available.</p>
+
+<p>But, I am happy to say the WordPress upgrade went without a hitch. The WordPress 2.8 files were installed and the database upgrade worked as well. This means only one thing: Automatic Upgrade and Subversion can’t co-exist. You either have to use one or the other. Although nothing could be easier than a one click upgrade, I still feel comfortable using Subversion when upgrading WordPress. Maybe, it’s because I know exactly what happens inside the Subversion upgrade.</p>
+
+<p>In addition, I also have multiple blogs to upgrade each time a new WordPress version comes out. To make life easier, I run a small shell script to upgrade all of my WordPress instances at once. Here’s a sample of the shell script below:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;#!/bin/sh
+</code></pre></div></div>
+
+<p># A script to upgrade several WordPress instances using Subversion.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+wpv=http://svn.automattic.com/wordpress/tags/2.8 
+
+echo "Upgrading domain.com"
+cd /home/user/domain.com/
+svn switch $wpv
+
+echo "Upgrading domain2.com"
+cd /home/user/domain2.com/
+svn switch $wpv
+</code></pre></div></div>
+
+<p>As you can see, the shell script is quite simple. I just have to make one minor change to the script every time an upgrade is needed, and that is, to assign the latest tag to the $wpv variable.</p>
+
+  </div><a class="u-url" href="/ulyssesonline/2009/06/16/automatic-upgrade-and-subversion/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ulyssesonline/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/ulyssesonline/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ulyssesonline/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

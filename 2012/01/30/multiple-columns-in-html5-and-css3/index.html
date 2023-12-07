@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Multiple Columns in HTML5 and CSS3 | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Multiple Columns in HTML5 and CSS3" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Creating a multiple column pages is so much easier now with HTML5 and CSS3 than was previously possible. Consider if you have a page with 200 unordered lists. The HTML markup for this would be something similar to this:" />
+<meta property="og:description" content="Creating a multiple column pages is so much easier now with HTML5 and CSS3 than was previously possible. Consider if you have a page with 200 unordered lists. The HTML markup for this would be something similar to this:" />
+<link rel="canonical" href="http://0.0.0.0:4000/ulyssesonline/2012/01/30/multiple-columns-in-html5-and-css3/" />
+<meta property="og:url" content="http://0.0.0.0:4000/ulyssesonline/2012/01/30/multiple-columns-in-html5-and-css3/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-01-31T00:26:17+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Multiple Columns in HTML5 and CSS3" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2012-01-31T00:26:17+00:00","datePublished":"2012-01-31T00:26:17+00:00","description":"Creating a multiple column pages is so much easier now with HTML5 and CSS3 than was previously possible. Consider if you have a page with 200 unordered lists. The HTML markup for this would be something similar to this:","headline":"Multiple Columns in HTML5 and CSS3","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/ulyssesonline/2012/01/30/multiple-columns-in-html5-and-css3/"},"url":"http://0.0.0.0:4000/ulyssesonline/2012/01/30/multiple-columns-in-html5-and-css3/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ulyssesonline/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/ulyssesonline/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ulyssesonline/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ulyssesonline/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Multiple Columns in HTML5 and CSS3</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-01-31T00:26:17+00:00" itemprop="datePublished">Jan 31, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Creating a multiple column pages is so much easier now with HTML5 and CSS3 than was previously possible. Consider if you have a page with 200 unordered lists. The HTML markup for this would be something similar to this:</p>
+
+<h4 id="unordered-list">Unordered List</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>1</li>
+  <li>2
+ and so on…. - 200</li>
+</ul>
+
+<p>As you’ve noticed, I’ve abbreviated the markup. The page rendered will be long. It will take some scrolling down to get to the bottom of the page. The obvious solution for this page layout is to display the data in multiple columns.</p>
+
+<p>Displaying two to three columns is ideal. You can add more if you like. It really depends on how you want to layout your page. How do we add multiple columns on our pages? It’s quite easy. You’ll be surprised how simple it is.</p>
+
+<p>First, let’s add a class div to our markup. In this example, we will call our div “data.” Our markup will now look like the example below. It’s relatively unchanged, except for the div we’ve just added.</p>
+
+<h4 id="html5-markup">HTML5 Markup</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+&lt;div class="”data”"&gt;
+&lt;ul&gt;
+&lt;li&gt;1&lt;/li&gt;
+&lt;li&gt;2&lt;/li&gt;
+and so on….
+&lt;li&gt;200&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h4 id="css3-markup">CSS3 Markup</h4>
+
+<p>The magic is really in CSS. It’s ideal to place a width in your class div, unless your class div is already inside another div that already has a width limit. We can then set a limit how wide we want our columns widths and column gaps.</p>
+
+<p>I’m using a div with a width of 500px because it goes well with the 150px columns widths and 25px column gaps. You probably already guessed, the column widths are how wide the columns are, and the gaps are the spaces between column widths.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="css"&gt;
+.data {
+  width:500px;
+  -moz-column-width:150px;
+  -webkit-column-width:150px ;
+  -moz-column-gap: 25px;
+  -webkit-column-gap: 25px;
+}
+</code></pre></div></div>
+
+<h4 id="give-it-a-try">Give It A Try</h4>
+
+<p>Give it a try. Adding multiple columns in HTML5 and CSS3 is much easier than was previously thought. Create a simple page with some sample data. Add a class div and use the CSS3 multiple column styles to it.</p>
+
+<h4 id="compatibility">Compatibility</h4>
+
+<p>The code has been tested with Mozilla Firefox, Google Chrome and Apple’s Safari. I haven’t tested it with any Internet Explorer. I’ll be curious if it works with IE 7, 8 or 9.</p>
+
+<p>Here’s a <a href="http://surfcali.com">demo</a> of a page using the multiple columns.</p>
+
+  </div><a class="u-url" href="/ulyssesonline/2012/01/30/multiple-columns-in-html5-and-css3/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ulyssesonline/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/ulyssesonline/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ulyssesonline/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Install Ventrilo Server on Ubuntu 12.04 | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Install Ventrilo Server on Ubuntu 12.04" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Ventrilo is a VoIP group communications software used by business users, gamers, or anyone needing group communication. A typical setup usually requires a Ventrilo server and some Ventrilo clients connected to it. The client software is available on Windows and the Mac." />
+<meta property="og:description" content="Ventrilo is a VoIP group communications software used by business users, gamers, or anyone needing group communication. A typical setup usually requires a Ventrilo server and some Ventrilo clients connected to it. The client software is available on Windows and the Mac." />
+<link rel="canonical" href="http://0.0.0.0:4000/ulyssesonline/2012/08/27/install-ventrilo-server-on-ubuntu-12-04/" />
+<meta property="og:url" content="http://0.0.0.0:4000/ulyssesonline/2012/08/27/install-ventrilo-server-on-ubuntu-12-04/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-08-28T02:53:32+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Install Ventrilo Server on Ubuntu 12.04" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2012-08-28T02:53:32+00:00","datePublished":"2012-08-28T02:53:32+00:00","description":"Ventrilo is a VoIP group communications software used by business users, gamers, or anyone needing group communication. A typical setup usually requires a Ventrilo server and some Ventrilo clients connected to it. The client software is available on Windows and the Mac.","headline":"Install Ventrilo Server on Ubuntu 12.04","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/ulyssesonline/2012/08/27/install-ventrilo-server-on-ubuntu-12-04/"},"url":"http://0.0.0.0:4000/ulyssesonline/2012/08/27/install-ventrilo-server-on-ubuntu-12-04/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ulyssesonline/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/ulyssesonline/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ulyssesonline/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ulyssesonline/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Install Ventrilo Server on Ubuntu 12.04</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-08-28T02:53:32+00:00" itemprop="datePublished">Aug 28, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Ventrilo is a VoIP group communications software used by business users, gamers, or anyone needing group communication. A typical setup usually requires a Ventrilo server and some Ventrilo clients connected to it. The client software is available on Windows and the Mac.</p>
+
+<p>Ventrilo server is available on many platforms such as Windows, Mac, Linux, Solaris, FreeBSD and NetBSD. Ventrilo server is available in two versions: (1) the public version which defaults to port 3784 with up to 8 users, (2) and the pro version that is configurable that can run on multiple servers and thousands of users.</p>
+
+<p>This article will show how to install Ventrilo Server on the latest version of Ubuntu Linux, currently version 12.04. Credit goes to Ben Wagner for his <a href="http://www.benwagner.net/computing/installing-ventrilo-ubuntu-10-10/">article</a> on installing Ventrilo server on Ubuntu 10.10.</p>
+
+<h4 id="download">Download</h4>
+
+<p>First, download the latest Linux version of Ventrilo Server from Ventrilo’s <a href="http://www.ventrilo.com/download.php">website</a>.</p>
+
+<h4 id="upload-and-unzip">Upload and Unzip</h4>
+
+<p>FTP the tar file to the home directory of your web server. Unpack the zipped file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ tar -xzf ventrilo_srv-3.0.3-Linux-i386.tar.gz
+$ cd ventsrv
+</code></pre></div></div>
+
+<h4 id="create-ventrilo-user">Create Ventrilo user</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo useradd ventrilo
+</code></pre></div></div>
+
+<h4 id="move-binaries">Move Binaries</h4>
+
+<p>Move the binaries to /usr/bin and make them executable.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo mv ventsrv/ventrilo_srv /usr/bin/ventrilo_srv
+$ sudo mv ventsrv/ventrilo_status /usr/bin/ventrilo_status
+$ sudo chmod +x /usr/bin/ventrilo_srv /usr/bin/ventrilo_status
+</code></pre></div></div>
+
+<h4 id="move-config-file">Move config file</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo mkdir /etc/ventrilo
+$ sudo mv ventrilo_srv.ini /etc/ventrilo/ventrilo_srv.ini
+$ sudo chown -R ventrilo:ventrilo /etc/ventrilo
+</code></pre></div></div>
+
+<h4 id="create-the-startstop-scripts">Create the Start/Stop scripts</h4>
+
+<p>Insert the <a href="http://www.benwagner.net/wp-content/uploads/2011/05/ventrilo.txt">contents</a> of this script into the ventrilo file. Make the file executable. Add the scripts to the boot sequence.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo nano /etc/init.d/ventrilo
+$ sudo chmod 755 /etc/init.d/ventrilo
+$ sudo update-rc.d ventrilo defaults
+</code></pre></div></div>
+
+<h4 id="start-ventrilo">Start Ventrilo</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo /etc/init.d/ventrilo start
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;* Starting VOIP server ventrilo
+8931 (process ID) old priority 0, new priority -5   [ OK ]
+</code></pre></div></div>
+
+<h4 id="stop-ventrilo">Stop Ventrilo</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo /etc/init.d/ventrilo stop
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;* Stopping VOIP server ventrilo   [ OK ]
+</code></pre></div></div>
+
+<h4 id="customize-config">Customize Config</h4>
+
+<p>Edit the Ventrilo config file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo nano /etc/ventrilo/ventrilo_srv.ini
+</code></pre></div></div>
+
+<p>The contents will look similar to this.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[Server]
+Name=ServerName
+Phonetic=Servername
+Auth=0
+Duplicates=1
+AdminPassword=password
+Password=password
+SendBuffer=0
+RecvBuffer=0
+Diag=0
+LogonTimeout=5
+CloseStd=1
+TimeStamp=0
+PingRate=10
+ExtraBuffer=0
+ChanWidth=0
+ChanDepth=0
+ChanClients=0
+DisableQuit=0
+VoiceCodec=3
+VoiceFormat=18
+SilentLobby=0
+</code></pre></div></div>
+
+<p>Pay attention to VoiceCodec and VoiceFormat. I’m using 3 and 18 respectively, so it’s compatible with the Mac OS clients.</p>
+
+<h4 id="firewall-rules">Firewall Rules</h4>
+
+<p>The standard default port for Ventrilo server is port 3784. With the public version, you can connect up to 8 users concurrently. If you have a firewall installed such as iptables, you will need to open up port 3784 for both TCP and UDP. Here are the rules you will need to add to /etc/iptables.firewall.rules.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#  Allow Ventrilo
+-A INPUT -p tcp --dport 3784 -j ACCEPT
+-A INPUT -p udp --dport 3784 -j ACCEPT
+</code></pre></div></div>
+
+<p>Apply the new rules.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo iptables-restore 
+&lt;p&gt;Just connect the Ventrilo clients to the server. &lt;/p&gt;
+&lt;p&gt;That's it.&lt;/p&gt;
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/ulyssesonline/2012/08/27/install-ventrilo-server-on-ubuntu-12-04/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ulyssesonline/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/ulyssesonline/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ulyssesonline/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

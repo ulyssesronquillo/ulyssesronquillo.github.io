@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ImageMagick Convert | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="ImageMagick Convert" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ImageMagick is a suite of programs for creating, editing and composing bitmap images. Convert is a program capable of converting image formats as well as having the ability to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and many more. Convert is accessible from the command-line, ideal for programmers and batch processing. Here are some examples:" />
+<meta property="og:description" content="ImageMagick is a suite of programs for creating, editing and composing bitmap images. Convert is a program capable of converting image formats as well as having the ability to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and many more. Convert is accessible from the command-line, ideal for programmers and batch processing. Here are some examples:" />
+<link rel="canonical" href="http://0.0.0.0:4000/ulyssesonline/2009/09/22/imagemagick-convert/" />
+<meta property="og:url" content="http://0.0.0.0:4000/ulyssesonline/2009/09/22/imagemagick-convert/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2009-09-22T18:18:59+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ImageMagick Convert" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2009-09-22T18:18:59+00:00","datePublished":"2009-09-22T18:18:59+00:00","description":"ImageMagick is a suite of programs for creating, editing and composing bitmap images. Convert is a program capable of converting image formats as well as having the ability to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and many more. Convert is accessible from the command-line, ideal for programmers and batch processing. Here are some examples:","headline":"ImageMagick Convert","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/ulyssesonline/2009/09/22/imagemagick-convert/"},"url":"http://0.0.0.0:4000/ulyssesonline/2009/09/22/imagemagick-convert/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ulyssesonline/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/ulyssesonline/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ulyssesonline/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ulyssesonline/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ImageMagick Convert</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2009-09-22T18:18:59+00:00" itemprop="datePublished">Sep 22, 2009
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="http://www.imagemagick.org/script/index.php">ImageMagick</a> is a suite of programs for creating, editing and composing bitmap images. Convert is a program capable of converting image formats as well as having the ability to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and many more. Convert is accessible from the command-line, ideal for programmers and batch processing. Here are some examples:</p>
+
+<p>Converting a JPEG to a GIF file format.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;convert image.jpg image.gif
+</code></pre></div></div>
+
+<p>Reduce image size by 50% and convert to PNG.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;convert image.jpg -resize 50% image.png
+</code></pre></div></div>
+
+<p>A more complex conversion.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;convert label.gif +matte \
+\( +clone -shade 110x90 -normalize -negate +clone -compose Plus -composite \) \
+\( -clone 0 -shade 110x50 -normalize -channel BG -fx 0 +channel -matte \) \
+-delete 0 +swap -compose Multiply -composite button.gif
+</code></pre></div></div>
+
+<p>The Convert program is powerful. Over 100 options.</p>
+
+<p>Convert Options</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>-adaptive-blur <em>geometry</em></th>
+      <th>adaptively blur pixels; decrease effect near edges</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-adaptive-resize <em>geometry</em></td>
+      <td>adaptively resize image with data dependent triangulation.</td>
+    </tr>
+    <tr>
+      <td>-adaptive-sharpen <em>geometry</em></td>
+      <td>adaptively sharpen pixels; increase effect near edges</td>
+    </tr>
+    <tr>
+      <td>-adjoin</td>
+      <td>join images into a single multi-image file</td>
+    </tr>
+    <tr>
+      <td>-affine <em>matrix</em></td>
+      <td>affine transform matrix</td>
+    </tr>
+    <tr>
+      <td>-alpha</td>
+      <td>on, activate, off, deactivate, set, opaque, copy”, transparent, extract, background, or shape the alpha channel</td>
+    </tr>
+    <tr>
+      <td>-annotate <em>geometry text</em></td>
+      <td>annotate the image with text</td>
+    </tr>
+    <tr>
+      <td>-antialias</td>
+      <td>remove pixel-aliasing</td>
+    </tr>
+    <tr>
+      <td>-append</td>
+      <td>append an image sequence</td>
+    </tr>
+    <tr>
+      <td>-authenticate <em>value</em></td>
+      <td>decipher image with this password</td>
+    </tr>
+    <tr>
+      <td>-auto-gamma</td>
+      <td>automagically adjust gamma level of image</td>
+    </tr>
+    <tr>
+      <td>-auto-level</td>
+      <td>automagically adjust color levels of image</td>
+    </tr>
+    <tr>
+      <td>-auto-orient</td>
+      <td>automagically orient image</td>
+    </tr>
+    <tr>
+      <td>-average</td>
+      <td>average an image sequence</td>
+    </tr>
+    <tr>
+      <td>-background <em>color</em></td>
+      <td>background color</td>
+    </tr>
+    <tr>
+      <td>-bench <em>iterations</em></td>
+      <td>measure performance</td>
+    </tr>
+    <tr>
+      <td>-bias <em>value</em></td>
+      <td>add bias when convolving an image</td>
+    </tr>
+    <tr>
+      <td>-black-threshold <em>value</em></td>
+      <td>force all pixels below the threshold into black</td>
+    </tr>
+    <tr>
+      <td>-blue-primary <em>point</em></td>
+      <td>chromaticity blue primary point</td>
+    </tr>
+    <tr>
+      <td>-blue-shift <em>factor</em></td>
+      <td>simulate a scene at nighttime in the moonlight</td>
+    </tr>
+    <tr>
+      <td>-blur <em>geometry</em></td>
+      <td>reduce image noise and reduce detail levels</td>
+    </tr>
+    <tr>
+      <td>-border <em>geometry</em></td>
+      <td>surround image with a border of color</td>
+    </tr>
+    <tr>
+      <td>-bordercolor <em>color</em></td>
+      <td>border color</td>
+    </tr>
+    <tr>
+      <td>-caption <em>string</em></td>
+      <td>assign a caption to an image</td>
+    </tr>
+    <tr>
+      <td>-cdl <em>filename</em></td>
+      <td>color correct with a color decision list</td>
+    </tr>
+    <tr>
+      <td>-channel <em>type</em></td>
+      <td>apply option to select image channels</td>
+    </tr>
+    <tr>
+      <td>-charcoal <em>radius</em></td>
+      <td>simulate a charcoal drawing</td>
+    </tr>
+    <tr>
+      <td>-chop <em>geometry</em></td>
+      <td>remove pixels from the image interior</td>
+    </tr>
+    <tr>
+      <td>-clip</td>
+      <td>clip along the first path from the 8BIM profile</td>
+    </tr>
+    <tr>
+      <td>-clip-mask <em>filename</em></td>
+      <td>associate clip mask with the image</td>
+    </tr>
+    <tr>
+      <td>-clip-path <em>id</em></td>
+      <td>clip along a named path from the 8BIM profile</td>
+    </tr>
+    <tr>
+      <td>-clone <em>index</em></td>
+      <td>clone an image</td>
+    </tr>
+    <tr>
+      <td>-clut</td>
+      <td>apply a color lookup table to the image</td>
+    </tr>
+    <tr>
+      <td>-contrast-stretch <em>geometry</em></td>
+      <td>improve the contrast in an image by `stretching’ the range of intensity value</td>
+    </tr>
+    <tr>
+      <td>-coalesce</td>
+      <td>merge a sequence of images</td>
+    </tr>
+    <tr>
+      <td>-colorize <em>value</em></td>
+      <td>colorize the image with the fill color</td>
+    </tr>
+    <tr>
+      <td>-colors <em>value</em></td>
+      <td>preferred number of colors in the image</td>
+    </tr>
+    <tr>
+      <td>-colorspace <em>type</em></td>
+      <td>set image colorspace</td>
+    </tr>
+    <tr>
+      <td>-combine</td>
+      <td>combine a sequence of images</td>
+    </tr>
+    <tr>
+      <td>-comment <em>string</em></td>
+      <td>annotate image with comment</td>
+    </tr>
+    <tr>
+      <td>-compose <em>operator</em></td>
+      <td>set image composite operator</td>
+    </tr>
+    <tr>
+      <td>-composite</td>
+      <td>composite image</td>
+    </tr>
+    <tr>
+      <td>-compress <em>type</em></td>
+      <td>image compression type</td>
+    </tr>
+    <tr>
+      <td>-contrast</td>
+      <td>enhance or reduce the image contrast</td>
+    </tr>
+    <tr>
+      <td>-convolve <em>coefficients</em></td>
+      <td>apply a convolution kernel to the image</td>
+    </tr>
+    <tr>
+      <td>-crop <em>geometry</em></td>
+      <td>crop the image</td>
+    </tr>
+    <tr>
+      <td>-cycle <em>amount</em></td>
+      <td>cycle the image colormap</td>
+    </tr>
+    <tr>
+      <td>-decipher <em>filename</em></td>
+      <td>convert cipher pixels to plain</td>
+    </tr>
+    <tr>
+      <td>-debug <em>events</em></td>
+      <td>display copious debugging information</td>
+    </tr>
+    <tr>
+      <td>-define <em>format:option</em></td>
+      <td>define one or more image format options</td>
+    </tr>
+    <tr>
+      <td>-deconstruct</td>
+      <td>break down an image sequence into constituent parts</td>
+    </tr>
+    <tr>
+      <td>-delay <em>value</em></td>
+      <td>display the next image after pausing</td>
+    </tr>
+    <tr>
+      <td>-delete <em>index</em></td>
+      <td>delete the image from the image sequence</td>
+    </tr>
+    <tr>
+      <td>-density <em>geometry</em></td>
+      <td>horizontal and vertical density of the image</td>
+    </tr>
+    <tr>
+      <td>-depth <em>value</em></td>
+      <td>image depth</td>
+    </tr>
+    <tr>
+      <td>-despeckle</td>
+      <td>reduce the speckles within an image</td>
+    </tr>
+    <tr>
+      <td>-display <em>server</em></td>
+      <td>get image or font from this X server</td>
+    </tr>
+    <tr>
+      <td>-dispose <em>method</em></td>
+      <td>layer disposal method</td>
+    </tr>
+    <tr>
+      <td>-distort <em>type coefficients</em></td>
+      <td>distort image</td>
+    </tr>
+    <tr>
+      <td>-dither <em>method</em></td>
+      <td>apply error diffusion to image</td>
+    </tr>
+    <tr>
+      <td>-draw <em>string</em></td>
+      <td>annotate the image with a graphic primitive</td>
+    </tr>
+    <tr>
+      <td>-edge <em>radius</em></td>
+      <td>apply a filter to detect edges in the image</td>
+    </tr>
+    <tr>
+      <td>-emboss <em>radius</em></td>
+      <td>emboss an image</td>
+    </tr>
+    <tr>
+      <td>-encipher <em>filename</em></td>
+      <td>convert plain pixels to cipher pixels</td>
+    </tr>
+    <tr>
+      <td>-encoding <em>type</em></td>
+      <td>text encoding type</td>
+    </tr>
+    <tr>
+      <td>-endian <em>type</em></td>
+      <td>endianness (MSB or LSB) of the image</td>
+    </tr>
+    <tr>
+      <td>-enhance</td>
+      <td>apply a digital filter to enhance a noisy image</td>
+    </tr>
+    <tr>
+      <td>-equalize</td>
+      <td>perform histogram equalization to an image</td>
+    </tr>
+    <tr>
+      <td>-evaluate <em>operator value</em></td>
+      <td>evaluate an arithmetic, relational, or logical expression</td>
+    </tr>
+    <tr>
+      <td>-extent <em>geometry</em></td>
+      <td>set the image size</td>
+    </tr>
+    <tr>
+      <td>-extract <em>geometry</em></td>
+      <td>extract area from image</td>
+    </tr>
+    <tr>
+      <td>-family <em>name</em></td>
+      <td>render text with this font family</td>
+    </tr>
+    <tr>
+      <td>-fft</td>
+      <td>implments the discrete Fourier transform (DFT)</td>
+    </tr>
+    <tr>
+      <td>-fill <em>color</em></td>
+      <td>color to use when filling a graphic primitive</td>
+    </tr>
+    <tr>
+      <td>-filter <em>type</em></td>
+      <td>use this filter when resizing an image</td>
+    </tr>
+    <tr>
+      <td>-flatten</td>
+      <td>flatten a sequence of images</td>
+    </tr>
+    <tr>
+      <td>-flip</td>
+      <td>flip image in the vertical direction</td>
+    </tr>
+    <tr>
+      <td>-floodfill <em>geometry color</em></td>
+      <td>floodfill the image with color</td>
+    </tr>
+    <tr>
+      <td>-flop</td>
+      <td>flop image in the horizontal direction</td>
+    </tr>
+    <tr>
+      <td>-font <em>name</em></td>
+      <td>render text with this font</td>
+    </tr>
+    <tr>
+      <td>-format <em>string</em></td>
+      <td>output formatted image characteristics</td>
+    </tr>
+    <tr>
+      <td>-frame <em>geometry</em></td>
+      <td>surround image with an ornamental border</td>
+    </tr>
+    <tr>
+      <td>-function <em>name</em></td>
+      <td>apply a function to the image</td>
+    </tr>
+    <tr>
+      <td>-fuzz <em>distance</em></td>
+      <td>colors within this distance are considered equal</td>
+    </tr>
+    <tr>
+      <td>-fx <em>expression</em></td>
+      <td>apply mathematical expression to an image channel(s)</td>
+    </tr>
+    <tr>
+      <td>-gamma <em>value</em></td>
+      <td>level of gamma correction</td>
+    </tr>
+    <tr>
+      <td>-gaussian <em>geometry</em></td>
+      <td>reduce image noise and reduce detail levels</td>
+    </tr>
+    <tr>
+      <td>-geometry <em>geometry</em></td>
+      <td>preferred size or location of the image</td>
+    </tr>
+    <tr>
+      <td>-gravity <em>type</em></td>
+      <td>horizontal and vertical text placement</td>
+    </tr>
+    <tr>
+      <td>-green-primary <em>point</em></td>
+      <td>chromaticity green primary point</td>
+    </tr>
+    <tr>
+      <td>-help</td>
+      <td>print program options</td>
+    </tr>
+    <tr>
+      <td>-identify</td>
+      <td>identify the format and characteristics of the image</td>
+    </tr>
+    <tr>
+      <td>-ift</td>
+      <td>implements the inverse discrete Fourier transform (DFT)</td>
+    </tr>
+    <tr>
+      <td>-implode <em>amount</em></td>
+      <td>implode image pixels about the center</td>
+    </tr>
+    <tr>
+      <td>-insert <em>index</em></td>
+      <td>insert last image into the image sequence</td>
+    </tr>
+    <tr>
+      <td>-intent <em>type</em></td>
+      <td>type of rendering intent when managing the image color</td>
+    </tr>
+    <tr>
+      <td>-interlace <em>type</em></td>
+      <td>type of image interlacing scheme</td>
+    </tr>
+    <tr>
+      <td>-interline-spacing <em>value</em></td>
+      <td>the space between two text lines</td>
+    </tr>
+    <tr>
+      <td>-interpolate <em>method</em></td>
+      <td>pixel color interpolation method</td>
+    </tr>
+    <tr>
+      <td>-interword-spacing <em>value</em></td>
+      <td>the space between two words</td>
+    </tr>
+    <tr>
+      <td>-kerning <em>value</em></td>
+      <td>the space between two characters</td>
+    </tr>
+    <tr>
+      <td>-label <em>string</em></td>
+      <td>assign a label to an image</td>
+    </tr>
+    <tr>
+      <td>-lat <em>geometry</em></td>
+      <td>local adaptive thresholding</td>
+    </tr>
+    <tr>
+      <td>-layers <em>method</em></td>
+      <td>optimize or compare image layers</td>
+    </tr>
+    <tr>
+      <td>-level <em>value</em></td>
+      <td>adjust the level of image contrast</td>
+    </tr>
+    <tr>
+      <td>-limit <em>type value</em></td>
+      <td>pixel cache resource limit</td>
+    </tr>
+    <tr>
+      <td>-linear-stretch <em>geometry</em></td>
+      <td>linear with saturation histogram stretch</td>
+    </tr>
+    <tr>
+      <td>-liquid-rescale <em>geometry</em></td>
+      <td>rescale image with seam-carving</td>
+    </tr>
+    <tr>
+      <td>-log <em>format</em></td>
+      <td>format of debugging information</td>
+    </tr>
+    <tr>
+      <td>-loop <em>iterations</em></td>
+      <td>add Netscape loop extension to your GIF animation</td>
+    </tr>
+    <tr>
+      <td>-mask <em>filename</em></td>
+      <td>associate a mask with the image</td>
+    </tr>
+    <tr>
+      <td>-mattecolor <em>color</em></td>
+      <td>frame color</td>
+    </tr>
+    <tr>
+      <td>-median <em>radius</em></td>
+      <td>apply a median filter to the image</td>
+    </tr>
+    <tr>
+      <td>-modulate <em>value</em></td>
+      <td>vary the brightness, saturation, and hue</td>
+    </tr>
+    <tr>
+      <td>-monitor</td>
+      <td>monitor progress</td>
+    </tr>
+    <tr>
+      <td>-monochrome</td>
+      <td>transform image to black and white</td>
+    </tr>
+    <tr>
+      <td>-morph <em>value</em></td>
+      <td>morph an image sequence</td>
+    </tr>
+    <tr>
+      <td>-motion-blur <em>geometry</em></td>
+      <td>simulate motion blur</td>
+    </tr>
+    <tr>
+      <td>-negate</td>
+      <td>replace every pixel with its complementary color</td>
+    </tr>
+    <tr>
+      <td>-noise <em>radius</em></td>
+      <td>add or reduce noise in an image</td>
+    </tr>
+    <tr>
+      <td>-normalize</td>
+      <td>transform image to span the full range of colors</td>
+    </tr>
+    <tr>
+      <td>-opaque <em>color</em></td>
+      <td>change this color to the fill color</td>
+    </tr>
+    <tr>
+      <td>-ordered-dither <em>NxN</em></td>
+      <td>ordered dither the image</td>
+    </tr>
+    <tr>
+      <td>-orient <em>type</em></td>
+      <td>image orientation</td>
+    </tr>
+    <tr>
+      <td>-page <em>geometry</em></td>
+      <td>size and location of an image canvas (setting)</td>
+    </tr>
+    <tr>
+      <td>-paint <em>radius</em></td>
+      <td>simulate an oil painting</td>
+    </tr>
+    <tr>
+      <td>-ping</td>
+      <td>efficiently determine image attributes</td>
+    </tr>
+    <tr>
+      <td>-pointsize <em>value</em></td>
+      <td>font point size</td>
+    </tr>
+    <tr>
+      <td>-polaroid <em>angle</em></td>
+      <td>simulate a Polaroid picture</td>
+    </tr>
+    <tr>
+      <td>-posterize <em>levels</em></td>
+      <td>reduce the image to a limited number of color levels</td>
+    </tr>
+    <tr>
+      <td>-preview <em>type</em></td>
+      <td>image preview type</td>
+    </tr>
+    <tr>
+      <td>-print <em>string</em></td>
+      <td>interpret string and print to console</td>
+    </tr>
+    <tr>
+      <td>-process <em>image-filter</em></td>
+      <td>process the image with a custom image filter</td>
+    </tr>
+    <tr>
+      <td>-profile <em>filename</em></td>
+      <td>add, delete, or apply an image profile</td>
+    </tr>
+    <tr>
+      <td>-quality <em>value</em></td>
+      <td>JPEG/MIFF/PNG compression level</td>
+    </tr>
+    <tr>
+      <td>-quantize <em>colorspace</em></td>
+      <td>reduce image colors in this colorspace</td>
+    </tr>
+    <tr>
+      <td>-quiet</td>
+      <td>suppress all warning messages</td>
+    </tr>
+    <tr>
+      <td>-radial-blur <em>angle</em></td>
+      <td>radial blur the image</td>
+    </tr>
+    <tr>
+      <td>-raise <em>value</em></td>
+      <td>lighten/darken image edges to create a 3-D effect</td>
+    </tr>
+    <tr>
+      <td>-random-threshold <em>low,high</em></td>
+      <td>random threshold the image</td>
+    </tr>
+    <tr>
+      <td>-recolor <em>matrix</em></td>
+      <td>translate, scale, shear, or rotate image colors.</td>
+    </tr>
+    <tr>
+      <td>-red-primary <em>point</em></td>
+      <td>chromaticity red primary point</td>
+    </tr>
+    <tr>
+      <td>-regard-warnings</td>
+      <td>pay attention to warning messages.</td>
+    </tr>
+    <tr>
+      <td>-region <em>geometry</em></td>
+      <td>apply options to a portion of the image</td>
+    </tr>
+    <tr>
+      <td>-remap <em>filename</em></td>
+      <td>transform image colors to match this set of colors</td>
+    </tr>
+    <tr>
+      <td>-render</td>
+      <td>render vector graphics</td>
+    </tr>
+    <tr>
+      <td>-repage <em>geometry</em></td>
+      <td>size and location of an image canvas</td>
+    </tr>
+    <tr>
+      <td>-resample <em>geometry</em></td>
+      <td>change the resolution of an image</td>
+    </tr>
+    <tr>
+      <td>-resize <em>geometry</em></td>
+      <td>resize the image</td>
+    </tr>
+    <tr>
+      <td>-respect-parentheses</td>
+      <td>settings remain in effect until parenthesis boundary.</td>
+    </tr>
+    <tr>
+      <td>-roll <em>geometry</em></td>
+      <td>roll an image vertically or horizontally</td>
+    </tr>
+    <tr>
+      <td>-rotate <em>degrees</em></td>
+      <td>apply Paeth rotation to the image</td>
+    </tr>
+    <tr>
+      <td>-sample <em>geometry</em></td>
+      <td>scale image with pixel sampling</td>
+    </tr>
+    <tr>
+      <td>-sampling-factor <em>geometry</em></td>
+      <td>horizontal and vertical sampling factor</td>
+    </tr>
+    <tr>
+      <td>-scale <em>geometry</em></td>
+      <td>scale the image</td>
+    </tr>
+    <tr>
+      <td>-scene <em>value</em></td>
+      <td>image scene number</td>
+    </tr>
+    <tr>
+      <td>-seed <em>value</em></td>
+      <td>seed a new sequence of pseudo-random numbers</td>
+    </tr>
+    <tr>
+      <td>-segment <em>values</em></td>
+      <td>segment an image</td>
+    </tr>
+    <tr>
+      <td>-selective-blur <em>geometry</em></td>
+      <td>selectively blur pixels within a contrast threshold</td>
+    </tr>
+    <tr>
+      <td>-separate</td>
+      <td>separate an image channel into a grayscale image</td>
+    </tr>
+    <tr>
+      <td>-sepia-tone <em>threshold</em></td>
+      <td>simulate a sepia-toned photo</td>
+    </tr>
+    <tr>
+      <td>-set <em>attribute value</em></td>
+      <td>set an image attribute</td>
+    </tr>
+    <tr>
+      <td>-shade <em>degrees</em></td>
+      <td>shade the image using a distant light source</td>
+    </tr>
+    <tr>
+      <td>-shadow <em>geometry</em></td>
+      <td>simulate an image shadow</td>
+    </tr>
+    <tr>
+      <td>-sharpen <em>geometry</em></td>
+      <td>sharpen the image</td>
+    </tr>
+    <tr>
+      <td>-shave <em>geometry</em></td>
+      <td>shave pixels from the image edges</td>
+    </tr>
+    <tr>
+      <td>-shear <em>geometry</em></td>
+      <td>slide one edge of the image along the X or Y axis</td>
+    </tr>
+    <tr>
+      <td>-sigmoidal-contrast <em>geometry</em></td>
+      <td>increase the contrast without saturating highlights or shadows</td>
+    </tr>
+    <tr>
+      <td>-size <em>geometry</em></td>
+      <td>width and height of image</td>
+    </tr>
+    <tr>
+      <td>-sketch <em>geometry</em></td>
+      <td>simulate a pencil sketch</td>
+    </tr>
+    <tr>
+      <td>-solarize <em>threshold</em></td>
+      <td>negate all pixels above the threshold level</td>
+    </tr>
+    <tr>
+      <td>-splice <em>geometry</em></td>
+      <td>splice the background color into the image</td>
+    </tr>
+    <tr>
+      <td>-spread <em>radius</em></td>
+      <td>displace image pixels by a random amount</td>
+    </tr>
+    <tr>
+      <td>-strip</td>
+      <td>strip image of all profiles and comments</td>
+    </tr>
+    <tr>
+      <td>-stroke <em>color</em></td>
+      <td>graphic primitive stroke color</td>
+    </tr>
+    <tr>
+      <td>-strokewidth <em>value</em></td>
+      <td>graphic primitive stroke width</td>
+    </tr>
+    <tr>
+      <td>-stretch <em>type</em></td>
+      <td>render text with this font stretch</td>
+    </tr>
+    <tr>
+      <td>-style <em>type</em></td>
+      <td>render text with this font style</td>
+    </tr>
+    <tr>
+      <td>-swap <em>indexes</em></td>
+      <td>swap two images in the image sequence</td>
+    </tr>
+    <tr>
+      <td>-swirl <em>degrees</em></td>
+      <td>swirl image pixels about the center</td>
+    </tr>
+    <tr>
+      <td>-texture <em>filename</em></td>
+      <td>name of texture to tile onto the image background</td>
+    </tr>
+    <tr>
+      <td>-threshold <em>value</em></td>
+      <td>threshold the image</td>
+    </tr>
+    <tr>
+      <td>-thumbnail <em>geometry</em></td>
+      <td>create a thumbnail of the image</td>
+    </tr>
+    <tr>
+      <td>-tile <em>filename</em></td>
+      <td>tile image when filling a graphic primitive</td>
+    </tr>
+    <tr>
+      <td>-tile-offset <em>geometry</em></td>
+      <td>set the image tile offset</td>
+    </tr>
+    <tr>
+      <td>-tint <em>value</em></td>
+      <td>tint the image with the fill color</td>
+    </tr>
+    <tr>
+      <td>-transform</td>
+      <td>affine transform image</td>
+    </tr>
+    <tr>
+      <td>-transparent <em>color</em></td>
+      <td>make this color transparent within the image</td>
+    </tr>
+    <tr>
+      <td>-transparent-color <em>color</em></td>
+      <td>transparent color</td>
+    </tr>
+    <tr>
+      <td>-transpose</td>
+      <td>flip image in the vertical direction and rotate 90 degrees</td>
+    </tr>
+    <tr>
+      <td>-transverse</td>
+      <td>flop image in the horizontal direction and rotate 270 degrees</td>
+    </tr>
+    <tr>
+      <td>-treedepth <em>value</em></td>
+      <td>color tree depth</td>
+    </tr>
+    <tr>
+      <td>-trim</td>
+      <td>trim image edges</td>
+    </tr>
+    <tr>
+      <td>-type <em>type</em></td>
+      <td>image type</td>
+    </tr>
+    <tr>
+      <td>-undercolor <em>color</em></td>
+      <td>annotation bounding box color</td>
+    </tr>
+    <tr>
+      <td>-unique-colors</td>
+      <td>discard all but one of any pixel color.</td>
+    </tr>
+    <tr>
+      <td>-units <em>type</em></td>
+      <td>the units of image resolution</td>
+    </tr>
+    <tr>
+      <td>-unsharp <em>geometry</em></td>
+      <td>sharpen the image</td>
+    </tr>
+    <tr>
+      <td>-verbose</td>
+      <td>print detailed information about the image</td>
+    </tr>
+    <tr>
+      <td>-version</td>
+      <td>print version information</td>
+    </tr>
+    <tr>
+      <td>-view</td>
+      <td>FlashPix viewing transforms</td>
+    </tr>
+    <tr>
+      <td>-vignette <em>geometry</em></td>
+      <td>soften the edges of the image in vignette style</td>
+    </tr>
+    <tr>
+      <td>-virtual-pixel <em>method</em></td>
+      <td>access method for pixels outside the boundaries of the image</td>
+    </tr>
+    <tr>
+      <td>-wave <em>geometry</em></td>
+      <td>alter an image along a sine wave</td>
+    </tr>
+    <tr>
+      <td>-weight <em>type</em></td>
+      <td>render text with this font weight</td>
+    </tr>
+    <tr>
+      <td>-white-point <em>point</em></td>
+      <td>chromaticity white point</td>
+    </tr>
+    <tr>
+      <td>-white-threshold <em>value</em></td>
+      <td>force all pixels above the threshold into white</td>
+    </tr>
+    <tr>
+      <td>-write <em>filename</em></td>
+      <td>write images to this file</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div><a class="u-url" href="/ulyssesonline/2009/09/22/imagemagick-convert/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ulyssesonline/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/ulyssesonline/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ulyssesonline/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

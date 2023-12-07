@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setup The Canon MX330 Printer in Ubuntu | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Setup The Canon MX330 Printer in Ubuntu" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It seems like every time I reinstall Ubuntu, I also have to reconfigure my personal Canon MX330 printer. I admit it’s not a straightforward install. It usually involves a few Google searches to look for the drivers as well as performing a few manual commands on the Terminal." />
+<meta property="og:description" content="It seems like every time I reinstall Ubuntu, I also have to reconfigure my personal Canon MX330 printer. I admit it’s not a straightforward install. It usually involves a few Google searches to look for the drivers as well as performing a few manual commands on the Terminal." />
+<link rel="canonical" href="http://0.0.0.0:4000/ulyssesonline/2011/07/20/setup-the-canon-mx330-printer-in-ubuntu/" />
+<meta property="og:url" content="http://0.0.0.0:4000/ulyssesonline/2011/07/20/setup-the-canon-mx330-printer-in-ubuntu/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-07-21T00:34:02+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setup The Canon MX330 Printer in Ubuntu" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2011-07-21T00:34:02+00:00","datePublished":"2011-07-21T00:34:02+00:00","description":"It seems like every time I reinstall Ubuntu, I also have to reconfigure my personal Canon MX330 printer. I admit it’s not a straightforward install. It usually involves a few Google searches to look for the drivers as well as performing a few manual commands on the Terminal.","headline":"Setup The Canon MX330 Printer in Ubuntu","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/ulyssesonline/2011/07/20/setup-the-canon-mx330-printer-in-ubuntu/"},"url":"http://0.0.0.0:4000/ulyssesonline/2011/07/20/setup-the-canon-mx330-printer-in-ubuntu/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ulyssesonline/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/ulyssesonline/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ulyssesonline/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ulyssesonline/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Setup The Canon MX330 Printer in Ubuntu</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-07-21T00:34:02+00:00" itemprop="datePublished">Jul 21, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>It seems like every time I reinstall Ubuntu, I also have to reconfigure my personal Canon MX330 printer. I admit it’s not a straightforward install. It usually involves a few Google searches to look for the drivers as well as performing a few manual commands on the Terminal.</p>
+
+<p>So, I decided to document the Canon MX330 printer setup in Ubuntu for future reference.</p>
+
+<h3 id="download">Download</h3>
+
+<p>To get started, first, we need to download the Canon <a href="http://www.canon.com.au/products/all_in_one_printers/all_in_one_printers/MX330_support.aspx">MX330 drivers</a> directly from Canon’s website. Select “Support and Services” from the menu, and then select “Driver Downloads.” You’ll need to choose the appropriate tarball for your distro. For Ubuntu, you need the “Debian” tarball.</p>
+
+<h3 id="extract">Extract</h3>
+
+<p>Download and extract the files to your local directory. Access the extracted directory and go to the “cnijfilter-mx330series-3.10-1-i386-deb/packages” directory.</p>
+
+<h3 id="install">Install</h3>
+
+<p>Now, type the following commands on the Terminal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo dpkg -i --force-architecture cnijfilter-common_3.00-1_i386.deb
+sudo dpkg -i --force-architecture cnijfilter-mx330series_3.10-1_i386.deb
+</code></pre></div></div>
+
+<h3 id="add-printer">Add Printer</h3>
+
+<p>Go to System-&gt;Administrtion-&gt;Printing, then select New-&gt;Printer. The Canon MX330 should be on a list of available printers. Select it and send a short print test. Simple. That’s it.</p>
+
+  </div><a class="u-url" href="/ulyssesonline/2011/07/20/setup-the-canon-mx330-printer-in-ubuntu/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ulyssesonline/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/ulyssesonline/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ulyssesonline/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

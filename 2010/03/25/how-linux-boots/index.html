@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How Linux Boots | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="How Linux Boots" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How does Linux boot? Linux Boot Camp covers the basics of the boot up process in Part 1 of multi-part series. The Linux boot sequence is broken down into 3 main areas: Grub, Init and RunLevels." />
+<meta property="og:description" content="How does Linux boot? Linux Boot Camp covers the basics of the boot up process in Part 1 of multi-part series. The Linux boot sequence is broken down into 3 main areas: Grub, Init and RunLevels." />
+<link rel="canonical" href="http://0.0.0.0:4000/ulyssesonline/2010/03/25/how-linux-boots/" />
+<meta property="og:url" content="http://0.0.0.0:4000/ulyssesonline/2010/03/25/how-linux-boots/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-03-25T19:00:52+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How Linux Boots" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2010-03-25T19:00:52+00:00","datePublished":"2010-03-25T19:00:52+00:00","description":"How does Linux boot? Linux Boot Camp covers the basics of the boot up process in Part 1 of multi-part series. The Linux boot sequence is broken down into 3 main areas: Grub, Init and RunLevels.","headline":"How Linux Boots","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/ulyssesonline/2010/03/25/how-linux-boots/"},"url":"http://0.0.0.0:4000/ulyssesonline/2010/03/25/how-linux-boots/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ulyssesonline/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/ulyssesonline/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ulyssesonline/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ulyssesonline/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">How Linux Boots</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-03-25T19:00:52+00:00" itemprop="datePublished">Mar 25, 2010
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>How does Linux boot? <a href="http://www.linuxplanet.com/linuxplanet/tutorials/7019/1/">Linux Boot Camp</a> covers the basics of the boot up process in Part 1 of multi-part series. The Linux boot sequence is broken down into 3 main areas: Grub, Init and RunLevels.</p>
+
+<blockquote>
+  <p>Booting. Sometimes it seems like it takes forever. What’s the computer doing all that time? How do you find out?</p>
+
+  <p>The Linux boot sequence is surprisingly simple, and the best part is that almost all of it is controlled by shell scripts you can read — and even edit yourself.</p>
+
+  <p>Today’s tutorial will take you through boot camp, focusing on the classic “SysV init” methods Linux has always used. Part II will discoss some of the changes on systems like Ubuntu as they gradually migrate to a new “Upstart” model.</p>
+
+  <h3 id="first-grub-loads-the-kernel">First, Grub loads the kernel</h3>
+
+  <p>When you power your machine on, a program called grub takes control. It reads the first sector of your disk, figures out where to look for the operating system, and starts the kernel running. Then it gets out of the way and the kernel takes over: usually you’ll see a brief message like “OK, loading the kernel”.</p>
+
+  <p>Do those messages fly by too fast on the graphical boot screen? If you want more information while you’re booting, you can disable graphical booting by editing the kernel line in grub and removing quiet.</p>
+
+  <p>The kernel takes anywhere from a few seconds to nearly a minute to load, depending on your hardware and how many modules it has to load. Recent distros have improved this a lot, so look for faster kernel load times in the future.</p>
+
+  <h3 id="init-takes-over">init takes over</h3>
+
+  <p>Once the kernel is finished loading, it passes control to a process called init. init is the master process from this point until you finally shut the machine down. It’s running on your system right now: run ps aux and you’ll see that it’s process 1, at the top of the list.</p>
+
+  <p>There are two types of inits. The classic “SysV” model dates back to the days of AT&amp;T System V Unix, long before Linux even existed — but it’s still used in every Linux distro today. The newer “Upstart” model is being gradually phased in by Ubuntu and a few others — but even after years of migration, there’s still a lot of SysV in the boot process.</p>
+
+  <h3 id="runlevels">Runlevels</h3>
+
+  <p>A SysV-init Linux system has several possible runlevels. Generally you’ll boot into runlevel 2 (Debian/Ubuntu), 3 or 5 (most others). Some distros (Redhat/Fedora) use runlevel 3 to boot into a text console and 5 for a full graphical desktop. You can find your current runlevel by typing runlevel at the command line.</p>
+
+  <p>There are a few special runlevels. 0 means halt, while 1 and S both mean to boot single-user, with only a root shell, no window system and fewer daemon processes — useful for debugging if things go wrong.</p>
+
+  <p>In theory, you can boot into other runlevels by adding the runlevel number to the end of the kernel line in grub. In practice, that doesn’t always work, but adding “single” should always get you into single-user mode.</p>
+
+  <p>The default runlevel is traditionally set in a file called /etc/inittab. Some distros change that; for instance, Ubuntu sets it in two places, /etc/init/rc-sysinit.conf and /etc/event.d/rc-default.</p>
+</blockquote>
+
+  </div><a class="u-url" href="/ulyssesonline/2010/03/25/how-linux-boots/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ulyssesonline/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/ulyssesonline/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ulyssesonline/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

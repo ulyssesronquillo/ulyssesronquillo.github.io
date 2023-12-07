@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Add Focus To HTML Forms | ulyssesonline</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Add Focus To HTML Forms" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When you visit Google.com, you probably noticed that the mouse cursor jumps to the searchbox, ready for users to type and submit a search. This method is called form focus. It’s made possible by using Javascript. With Javascript, you can set certain elements of the HTML form to be set in focus. This is particularly helpful for pages where there is minimal content, and the intent of the web developer/designer is to get the user to enter data and submit quickly. A login page is a perfect example of such a page." />
+<meta property="og:description" content="When you visit Google.com, you probably noticed that the mouse cursor jumps to the searchbox, ready for users to type and submit a search. This method is called form focus. It’s made possible by using Javascript. With Javascript, you can set certain elements of the HTML form to be set in focus. This is particularly helpful for pages where there is minimal content, and the intent of the web developer/designer is to get the user to enter data and submit quickly. A login page is a perfect example of such a page." />
+<link rel="canonical" href="http://0.0.0.0:4000/ulyssesonline/2012/01/03/add-focus-to-html-forms/" />
+<meta property="og:url" content="http://0.0.0.0:4000/ulyssesonline/2012/01/03/add-focus-to-html-forms/" />
+<meta property="og:site_name" content="ulyssesonline" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-01-03T18:43:16+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Add Focus To HTML Forms" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2012-01-03T18:43:16+00:00","datePublished":"2012-01-03T18:43:16+00:00","description":"When you visit Google.com, you probably noticed that the mouse cursor jumps to the searchbox, ready for users to type and submit a search. This method is called form focus. It’s made possible by using Javascript. With Javascript, you can set certain elements of the HTML form to be set in focus. This is particularly helpful for pages where there is minimal content, and the intent of the web developer/designer is to get the user to enter data and submit quickly. A login page is a perfect example of such a page.","headline":"Add Focus To HTML Forms","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/ulyssesonline/2012/01/03/add-focus-to-html-forms/"},"url":"http://0.0.0.0:4000/ulyssesonline/2012/01/03/add-focus-to-html-forms/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ulyssesonline/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/ulyssesonline/feed.xml" title="ulyssesonline" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ulyssesonline/">ulyssesonline</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ulyssesonline/about.html">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Add Focus To HTML Forms</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-01-03T18:43:16+00:00" itemprop="datePublished">Jan 3, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>When you visit Google.com, you probably noticed that the mouse cursor jumps to the searchbox, ready for users to type and submit a search. This method is called form focus. It’s made possible by using Javascript. With Javascript, you can set certain elements of the HTML form to be set in focus. This is particularly helpful for pages where there is minimal content, and the intent of the web developer/designer is to get the user to enter data and submit quickly. A login page is a perfect example of such a page.</p>
+
+<p>You can bring into focus the username field, so users can start typing their login credentials. The form focus saves users from finding the mouse cursor on the screen, and then clicking on the field. With form focus, users are already on the form, ready to input text and submit. If the user presses Tab, the cursor jumps to the next field, which happens to be the password field. Pressing Enter, simply submits the form to start the login process. This article will show you the most simple way to add form focus to your HTML forms. Consider a login page. It has two fields: username, password, and a Submit button. The HTML markup is:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
+
+<form method="post' action=" submit.php=""> <label for="username">Username: </label> <input name="username" type="text" />&lt;/input&gt; <label for="password">Password: </label> <input name="password" type="password" />&lt;/input&gt; <input name="submit" type="submit" value="Login" />&lt;/input&gt; </form>
+<h4 id="how-to-add-focus-to-forms">How To Add Focus To Forms</h4>
+
+<p>1. Assign an ID to the form. We are using an id of “login” in this example.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
+
+<form action="submit.php" id="login" method="post">2\. Add IDs to the fields.
+
+```
+<pre lang="html">
+<input id="user" name="username" type="text" />&lt;/input&gt;
+<input id="pass" name="password" type="password" />&lt;/input&gt;
+```
+
+3\. Add Tab Index to the fields. Notice the order starting with 1 and then 2.
+
+```
+<pre lang="html">
+<input id="user" name="username" tabindex="1" type="text" />&lt;/input&gt;
+<input id="pass" name="password" tabindex="2" type="password" />&lt;/input&gt;
+```
+
+4\. Add Javascript at the end of the form.
+
+```
+<pre lang="javascript">
+<script language="”JavaScript”" type="”text/javascript”">
+document.login.user.focus();
+</script>
+```
+
+Where **login** is the id of the form, and **user** is the id of the field.
+
+#### Final Form
+
+```
+<pre lang="javascript">
+```
+
+&lt;/form&gt;<form action="submit.php" id="login" method="post"> <label for="username">Username: </label> <input id="user" name="username" tabindex="1" type="text" />&lt;/input&gt; <label for="password">Password: </label> <input id="pass" name="password" tabindex="2" type="password" />&lt;/input&gt; <input name="submit" type="submit" value="Login" />&lt;/input&gt; </form> <script language="JavaScript" type="text/javascript">
+document.login.user.focus();
+</script>This is just one way of adding form focus to HTML forms. There are other methods, like using body onload and such, but I find this method the cleanest and the most simple one to implement by far.
+</pre></pre></pre></pre></form>
+
+  </div><a class="u-url" href="/ulyssesonline/2012/01/03/add-focus-to-html-forms/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ulyssesonline/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/ulyssesonline/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ulyssesonline/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
