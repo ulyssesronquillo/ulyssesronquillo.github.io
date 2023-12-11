@@ -1,8 +1,0 @@
-services:
-  jekyll:
-    image: bretfisher/jekyll-serve
-    volumes:
-      - .:/site
-    ports:
-      - '4001:4000'
-    restart: always
