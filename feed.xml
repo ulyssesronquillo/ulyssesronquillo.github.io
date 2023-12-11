@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-08T21:05:35+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ulyssesronquillo.github.io</title><subtitle></subtitle><entry><title type="html">Yosemite</title><link href="http://0.0.0.0:4000/2023/11/30/yosemite.html" rel="alternate" type="text/html" title="Yosemite" /><published>2023-11-30T00:00:00+00:00</published><updated>2023-11-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/11/30/yosemite</id><content type="html" xml:base="http://0.0.0.0:4000/2023/11/30/yosemite.html"><![CDATA[<p>Nikon D700. 35mm. F/2.0D. F8. 1/400s. iso320. 35mm.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-11T20:44:48+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Yosemite</title><link href="http://0.0.0.0:4000/2023/11/30/yosemite.html" rel="alternate" type="text/html" title="Yosemite" /><published>2023-11-30T00:00:00+00:00</published><updated>2023-11-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/11/30/yosemite</id><content type="html" xml:base="http://0.0.0.0:4000/2023/11/30/yosemite.html"><![CDATA[<p>Nikon D700. 35mm. F/2.0D. F8. 1/400s. iso320. 35mm.</p>
 
 <p><img src="https://s3.us-east-2.amazonaws.com/uly.rocks/wp-content/uploads/2023/11/30174159/1920_700_3471.jpg" alt="yosemite" /></p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Nikon D700. 35mm. F/2.0D. F8. 1/400s. iso320. 35mm.]]></summary></entry><entry><title type="html">Lake</title><link href="http://0.0.0.0:4000/2023/11/20/lake.html" rel="alternate" type="text/html" title="Lake" /><published>2023-11-20T00:00:00+00:00</published><updated>2023-11-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/11/20/lake</id><content type="html" xml:base="http://0.0.0.0:4000/2023/11/20/lake.html"><![CDATA[<p>Nikon D700. 35mm F/2.0D. F8. 1/800s. iso200. 35mm.</p>
 
@@ -10,159 +10,80 @@
 
 <p><img src="https://s3.us-east-2.amazonaws.com/uly.rocks/wp-content/uploads/2023/11/19110207/1920_700_1182.jpg" alt="water-trough" /></p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Nikon D700. 50mm F/1.4D. F8. 1/500s. iso640. 50mm.]]></summary></entry><entry><title type="html">Leaves</title><link href="http://0.0.0.0:4000/2023/11/18/leaves.html" rel="alternate" type="text/html" title="Leaves" /><published>2023-11-18T00:00:00+00:00</published><updated>2023-11-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/11/18/leaves</id><content type="html" xml:base="http://0.0.0.0:4000/2023/11/18/leaves.html"><![CDATA[<p>Nikon D700. 50mm F/1.4D. F11. iso3200. 1/60s. 50mm.</p>
 
-<p><img src="https://s3.us-east-2.amazonaws.com/uly.rocks/wp-content/uploads/2023/11/19024113/1920_700_3319.jpg" alt="leaves" /></p>]]></content><author><name>Ulysses</name></author><summary type="html"><![CDATA[Nikon D700. 50mm F/1.4D. F11. iso3200. 1/60s. 50mm.]]></summary></entry><entry><title type="html">Using Markdown</title><link href="http://0.0.0.0:4000/2023/08/07/using-markdown.html" rel="alternate" type="text/html" title="Using Markdown" /><published>2023-08-07T00:00:00+00:00</published><updated>2023-08-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/08/07/using-markdown</id><content type="html" xml:base="http://0.0.0.0:4000/2023/08/07/using-markdown.html"><![CDATA[<p>How to use markdown in Jekyll.</p>
+<p><img src="https://s3.us-east-2.amazonaws.com/uly.rocks/wp-content/uploads/2023/11/19024113/1920_700_3319.jpg" alt="leaves" /></p>]]></content><author><name>Ulysses</name></author><summary type="html"><![CDATA[Nikon D700. 50mm F/1.4D. F11. iso3200. 1/60s. 50mm.]]></summary></entry><entry><title type="html">Hiding Passwords Using OpenSSL</title><link href="http://0.0.0.0:4000/hiding-passwords-using-openssl" rel="alternate" type="text/html" title="Hiding Passwords Using OpenSSL" /><published>2023-10-31T17:06:54+00:00</published><updated>2023-10-31T17:06:54+00:00</updated><id>http://0.0.0.0:4000/hiding-passwords-using-openssl</id><content type="html" xml:base="http://0.0.0.0:4000/hiding-passwords-using-openssl"><![CDATA[<p>How to hide main password on Linux using OpenSSL.</p>
 
-<p>Headings</p>
+<p>Run this on a web server once.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># H1
-## H2
-### H3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo "SecretPassword" | openssl enc -aes-256-cbc -md sha512 -a -salt -pass pass:NotSoSecretPassword &gt; secret.txt  
+$ chmod 600 secret.txt
 </code></pre></div></div>
 
-<p>Bold</p>
+<p>On client machine, download the secret file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**bold text**
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl https://webserver/some/dir/secret.txt --output -s secret.txt
 </code></pre></div></div>
 
-<p>Italic</p>
+<p>To retrieve the secret password, run the code below. For added measure, delete secret.txt file afterwards.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*italicized text*
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat secret.txt | openssl enc -aes-256-cbc -md sha512 -a -d -salt -pass pass:NotSoSecretPassword
+$rm -f secret.txt
 </code></pre></div></div>
 
-<p>Blockquote</p>
+<p>In addition, you can rotate the NotSoSecretPassword to make it more secure.</p>]]></content><author><name>Ulysses</name></author><category term="Linux" /><category term="hide" /><category term="obfuscate" /><category term="openssl" /><category term="password" /><summary type="html"><![CDATA[How to hide main password on Linux using OpenSSL.]]></summary></entry><entry><title type="html">Install Latest Terraform via Homebrew</title><link href="http://0.0.0.0:4000/install-latest-terraform-via-homebrew" rel="alternate" type="text/html" title="Install Latest Terraform via Homebrew" /><published>2023-10-27T14:40:49+00:00</published><updated>2023-10-27T14:40:49+00:00</updated><id>http://0.0.0.0:4000/install-latest-terraform-via-homebrew</id><content type="html" xml:base="http://0.0.0.0:4000/install-latest-terraform-via-homebrew"><![CDATA[<p>As of this writing, the latest Terraform version supported by Homebrew is version 1.5.7. It’s a bit outdated considering the latest Terraform version is 1.6.2. To force Homebrew to install the latest version of Terraform, run the following commands from your MacOS Terminal. But prior to that, check your version first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; blockquote
+<p>Check current version</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform --version
+Terraform v1.5.7
+on darwin_amd64
 </code></pre></div></div>
 
-<p>Ordered List</p>
+<p>Upgrade Terraform</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. First
-2. Second
-3. Third
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew tap hashicorp/tap
+$ brew install hashicorp/tap/terraform
 </code></pre></div></div>
 
-<p>Unordered List</p>
+<p>Check version again</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- one
-- two
-- three 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform --version
+Terraform v1.6.2
+on darwin_amd64
 </code></pre></div></div>
 
-<p>Horizontal rule</p>
+<p>That’s it.</p>]]></content><author><name>Ulysses</name></author><category term="Linux" /><category term="homebrew" /><category term="install" /><category term="latest" /><category term="terraform" /><summary type="html"><![CDATA[As of this writing, the latest Terraform version supported by Homebrew is version 1.5.7. It’s a bit outdated considering the latest Terraform version is 1.6.2. To force Homebrew to install the latest version of Terraform, run the following commands from your MacOS Terminal. But prior to that, check your version first.]]></summary></entry><entry><title type="html">YouTube Thumbnail</title><link href="http://0.0.0.0:4000/youtube-thumbnail" rel="alternate" type="text/html" title="YouTube Thumbnail" /><published>2023-10-26T18:40:51+00:00</published><updated>2023-10-26T18:40:51+00:00</updated><id>http://0.0.0.0:4000/youtube-thumbnail</id><content type="html" xml:base="http://0.0.0.0:4000/youtube-thumbnail"><![CDATA[<p>When uploading videos, Youtube gives you an option to upload your own thumbnails. If you want to use your own pics, you can format them to 1280×720 pixels and use it as a thumbnail. The script below will resize any image regardless of the original size to 1280×720 pixels using the convert utility of ImageMagick. The conversion may crop the edges of your image if it’s not 16:9 or 1.777 format. The script will also resize an image in portrait format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+cd /home/ulysses/Pictures/jpg
+image=$1
+test=`convert $image -format "%[fx:(w/h&gt;1)?1:0]" info:`
+if [ $test -eq 1 ]; then
+    convert $image -resize 1280x720! 720_$image
+else
+    convert $image -resize 720x1280! 720_$image
+fi
 </code></pre></div></div>
 
-<p>Link</p>
+<p>Enjoy.</p>]]></content><author><name>Ulysses</name></author><category term="Linux" /><category term="convert" /><category term="imagemagick" /><category term="thumbnail" /><category term="upload" /><category term="youtube" /><summary type="html"><![CDATA[When uploading videos, Youtube gives you an option to upload your own thumbnails. If you want to use your own pics, you can format them to 1280×720 pixels and use it as a thumbnail. The script below will resize any image regardless of the original size to 1280×720 pixels using the convert utility of ImageMagick. The conversion may crop the edges of your image if it’s not 16:9 or 1.777 format. The script will also resize an image in portrait format.]]></summary></entry><entry><title type="html">Search Second Column for Characters</title><link href="http://0.0.0.0:4000/search-second-column-for-characters" rel="alternate" type="text/html" title="Search Second Column for Characters" /><published>2023-10-24T19:42:05+00:00</published><updated>2023-10-24T19:42:05+00:00</updated><id>http://0.0.0.0:4000/search-second-column-for-characters</id><content type="html" xml:base="http://0.0.0.0:4000/search-second-column-for-characters"><![CDATA[<p>How to search the second column for string starting with.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[title](https://example.com)
+<p>Here are the contents of results.txt.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>John 10
+Mario 12
+Derek 15
+Mark 20
+Matt 25
 </code></pre></div></div>
 
-<p>Image</p>
+<p>Display only individuals that are older than 20 using awk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![alt text](image.jpg)
-</code></pre></div></div>]]></content><author><name>Ulysses</name></author><summary type="html"><![CDATA[How to use markdown in Jekyll.]]></summary></entry><entry><title type="html">Camping Checklist</title><link href="http://0.0.0.0:4000/2023/08/02/camping-checklist.html" rel="alternate" type="text/html" title="Camping Checklist" /><published>2023-08-02T00:00:00+00:00</published><updated>2023-08-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/08/02/camping-checklist</id><content type="html" xml:base="http://0.0.0.0:4000/2023/08/02/camping-checklist.html"><![CDATA[<p>Checklist</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '$2 ~ /^20/' results.txt
+</code></pre></div></div>
 
-<p>My camping checklist (close to the car).</p>
+<p>Result.</p>
 
-<p>Gear</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mark 20
+Matt 25
+</code></pre></div></div>
 
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Tent</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Tarps</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Tarp poles</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Sleeping bag</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Sleeping pads x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Air matresses x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Extra stakes</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Paracords</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Camping chairs x4</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Picnic mats x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Hammock</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Walking sticks x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Pillows</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Sheets</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Blankets</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Camelback</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Carabiners</li>
-</ul>
-
-<p>Tools</p>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Overhead lamp</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Headlamps x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Flashlights x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Pocket knife</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Duct tape</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Mallet</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Lighter</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Clamps x5</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Fire starters</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Scissors</li>
-</ul>
-
-<p>Food</p>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Blue table</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Stove</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Propane tanks x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Bialetti x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Milk frother</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Milk</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ground coffee</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Food &amp; snacks</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Water</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Cooler</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Ice</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Bowls, cups, utensils</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Marshmallow metal rods</li>
-</ul>
-
-<p>Clothing</p>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Shorts</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Pants</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Shirts x3</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Rain jacket</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Shoes x2</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Socks</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Hats</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Hoodies</li>
-</ul>
-
-<p>Hygiene</p>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Toothbrush</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Toothpaste</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Lip balm</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Face towels</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Deodorant</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />First Aid Kit</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Insect repellant</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Sunscreen</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Portable fan</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Pink poop bucket</li>
-</ul>
-
-<p>Electronics</p>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Camera</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />GoPro</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Chargers</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Extension cords</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Extension splitter</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Books &amp; Magazines</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Bluetooth speaker</li>
-</ul>
-
-<p>Miscellaneous</p>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Directions</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Check weather</li>
-</ul>]]></content><author><name>Ulysses</name></author><summary type="html"><![CDATA[Checklist]]></summary></entry></feed>
+<p>You can easily adjust this to other columns.</p>]]></content><author><name>Ulysses</name></author><category term="Linux" /><category term="awk" /><category term="bash" /><category term="column" /><category term="display" /><category term="search" /><category term="second" /><summary type="html"><![CDATA[How to search the second column for string starting with.]]></summary></entry></feed>

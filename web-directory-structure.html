@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Web Directory Structure | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Web Directory Structure" />
+<meta name="author" content="Ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="If you’re a system administrator or web developer with root privileges, chances are, you probably have complete control of your web server, including root privileges. That’s a good thing. You can setup the server anyway you want. If you’re starting out to build out a new web server, some of the questions that you may have is, what’s the proper or correct way of creating a web directory structure on your web server." />
+<meta property="og:description" content="If you’re a system administrator or web developer with root privileges, chances are, you probably have complete control of your web server, including root privileges. That’s a good thing. You can setup the server anyway you want. If you’re starting out to build out a new web server, some of the questions that you may have is, what’s the proper or correct way of creating a web directory structure on your web server." />
+<link rel="canonical" href="http://0.0.0.0:4000/web-directory-structure" />
+<meta property="og:url" content="http://0.0.0.0:4000/web-directory-structure" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-01-16T12:02:37+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Web Directory Structure" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulysses"},"dateModified":"2013-01-16T12:02:37+00:00","datePublished":"2013-01-16T12:02:37+00:00","description":"If you’re a system administrator or web developer with root privileges, chances are, you probably have complete control of your web server, including root privileges. That’s a good thing. You can setup the server anyway you want. If you’re starting out to build out a new web server, some of the questions that you may have is, what’s the proper or correct way of creating a web directory structure on your web server.","headline":"Web Directory Structure","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/web-directory-structure"},"url":"http://0.0.0.0:4000/web-directory-structure"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/read.html">Read</a><a class="page-link" href="/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Web Directory Structure</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-01-16T12:02:37+00:00" itemprop="datePublished">Jan 16, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you’re a system administrator or web developer with root privileges, chances are, you probably have complete control of your web server, including root privileges. That’s a good thing. You can setup the server anyway you want. If you’re starting out to build out a new web server, some of the questions that you may have is, what’s the proper or correct way of creating a web directory structure on your web server.</p>
+
+<p>The answer is, there is really no correct way. There’s no magic bullet configuration. You do have complete freedom to setup your server anyway you want. But, if you want to make it easy for yourself, you should probably look for a well-established standard, or some proven way in structuring web directories.</p>
+
+<p>The following is my “suggestion” after my extensive experience with countless web servers over the years. I called it “suggestion” because it’s by no means the holy grail, but the concept has served me well over the years. You may not necessarily agree with my format, or you may have something similar, or something completely different than mine. Nevertheless, my setup is simple and it works.</p>
+
+<p>Most web servers nowadays can host multiple domains. I will make an assumption that you will be running multiple domains on your web server. A typical structure would be something similar to the one below. Each domain has its own subdirectory.</p>
+
+<p>/var/www/domain1.com/<br />
+/var/www/domain2.com/<br />
+/var/www/domain3.com/</p>
+
+<p>If you have a static website, the file structure would be something like this.</p>
+
+<p>/var/wwww/domain.com/index.html</p>
+
+<p>If you have a dynamic website, you have something similar to this.</p>
+
+<p>/var/www/domain.com/index.php<br />
+/var/www/domain.com/wp-content/</p>
+
+<p>By the way, “wp-content” is a WordPress folder where templates and plugins reside. The above structure is serviceable, but if you ever find yourself working with PHP Frameworks such as CodeIgniter, Zend Frameworks, or even Ruby on Rails, there are some additional directories and programs that you would want to hide from the public for security reasons. Here are some directories using the CodeIgniter example.</p>
+
+<p>/var/www/domain.com/index.php<br />
+/var/www/domain.com/application/<br />
+/var/www/domain.com/system/</p>
+
+<p>To make your application secure, we need to move the “application” and the “system” folders above the web root folder. With the current setup, this is where you begin to have some issues. Where exactly do we put your “application” and “system” folders if multiple domains need them. So, here’s my suggestion. We need to create a “www” folder under each domain. We will make the “www” folder the web root folder. The setup would look something like this.</p>
+
+<p>/var/www/domain1.com/www/<br />
+/var/www/domain2.com/www/</p>
+
+<p>Now, that we have the “www” folder created, we can then place the “application” and “system” folders on their own directory above the web root. The setup would look something like this.</p>
+
+<p>/var/www/domain1.com/www/index.php<br />
+/var/www/domain1.com/application/<br />
+/var/www/domain1.com/system/<br />
+/var/www/domain2.com/www/index.php<br />
+/var/www/domain2.com/application/<br />
+/var/www/domain2.com/system/</p>
+
+<p>So, the setup above is ideal for placing folders above the web root folder if you want a more secure application. At the same time, these folders are still under each domain. So, this is the web structure that I have implemented over the years. If there’s a better way of doing this, I would like to hear about it.</p>
+
+  </div><a class="u-url" href="/web-directory-structure" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

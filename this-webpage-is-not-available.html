@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>This Webpage is not Available | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="This Webpage is not Available" />
+<meta name="author" content="Ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I stopped by Starbucks to hang out, sip coffee, and perform some housecleaning on my website. I fired up my MacBook Air and tried to access my website. Chrome barked at me saying, “This webpage is not available.” What! So, I opened up Terminal to see if I’m really connected to the WiFi network. Yes, I am. I can ping everything else, but my domain." />
+<meta property="og:description" content="I stopped by Starbucks to hang out, sip coffee, and perform some housecleaning on my website. I fired up my MacBook Air and tried to access my website. Chrome barked at me saying, “This webpage is not available.” What! So, I opened up Terminal to see if I’m really connected to the WiFi network. Yes, I am. I can ping everything else, but my domain." />
+<link rel="canonical" href="http://0.0.0.0:4000/this-webpage-is-not-available" />
+<meta property="og:url" content="http://0.0.0.0:4000/this-webpage-is-not-available" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-01-17T00:17:37+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="This Webpage is not Available" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulysses"},"dateModified":"2014-01-17T00:17:37+00:00","datePublished":"2014-01-17T00:17:37+00:00","description":"I stopped by Starbucks to hang out, sip coffee, and perform some housecleaning on my website. I fired up my MacBook Air and tried to access my website. Chrome barked at me saying, “This webpage is not available.” What! So, I opened up Terminal to see if I’m really connected to the WiFi network. Yes, I am. I can ping everything else, but my domain.","headline":"This Webpage is not Available","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/this-webpage-is-not-available"},"url":"http://0.0.0.0:4000/this-webpage-is-not-available"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/read.html">Read</a><a class="page-link" href="/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">This Webpage is not Available</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-01-17T00:17:37+00:00" itemprop="datePublished">Jan 17, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I stopped by Starbucks to hang out, sip coffee, and perform some housecleaning on my website. I fired up my MacBook Air and tried to access my website. Chrome barked at me saying, “This webpage is not available.” What! So, I opened up Terminal to see if I’m really connected to the WiFi network. Yes, I am. I can ping everything else, but my domain.</p>
+
+<p>So, what’s happening? Is my site down? I logged into my VPS. The server is doing just fine. I did some more investigating. I realized that I can ping my IP address, but not the domain. That’s interesting. AT&amp;T is currently the provider for the WiFI for Starbucks.</p>
+
+<p>A few weeks ago, I saw a blurb on the news that Google will provide WiFi for Starbucks. As far as I know, that hasn’t happened yet, at least not at this Starbucks location. Google plans to roll out its WiFi services to Starbucks in the next few months. So, we are still months away from that coming into fruition.</p>
+
+<p>Is AT&amp;T blocking my domain? I have AT&amp;T DSL at home. I can access my domain just fine. So, whoever is managing the AT&amp;T WiFi, must be applying some kind of filtering to block certain domains from working.</p>
+
+<p>Since I can still ping my IP Address, I decided to just edit my hosts file.</p>
+
+<p>For Macs, the hosts file is located in /private/etc/hosts.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+<p>I added a host a new entry to resolve my domain to my server’s IP address.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>255.255.255.255 broadcasthost
+::1             localhost
+173.255.251.194 uly.me
+</code></pre></div></div>
+
+<p>I saved the new entry, and pinged my domain! It works! I opened up the browser to access my website. It works!</p>
+
+<p>I’m glad I was able to find a workaround! However, I’m still perplexed as to why my domain is being blocked.</p>
+
+  </div><a class="u-url" href="/this-webpage-is-not-available" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
