@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>WP-CLI | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="WP-CLI" />
+<meta name="author" content="Ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="WP-CLI is a set of command-line tools for managing WordPress websites. With just a few simple commands, you can manage WordPress from the command line without the need to login to the Admin Dashboard and navigate the pages. You can install, update and delete plugins and themes, perform backups, configure standard and multisite installs and much more — all without ever using a web browser." />
+<meta property="og:description" content="WP-CLI is a set of command-line tools for managing WordPress websites. With just a few simple commands, you can manage WordPress from the command line without the need to login to the Admin Dashboard and navigate the pages. You can install, update and delete plugins and themes, perform backups, configure standard and multisite installs and much more — all without ever using a web browser." />
+<link rel="canonical" href="http://0.0.0.0:4000/wp/2016/09/15/wp-cli.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/wp/2016/09/15/wp-cli.html" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-09-15T03:47:12+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="WP-CLI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulysses"},"dateModified":"2016-09-15T03:47:12+00:00","datePublished":"2016-09-15T03:47:12+00:00","description":"WP-CLI is a set of command-line tools for managing WordPress websites. With just a few simple commands, you can manage WordPress from the command line without the need to login to the Admin Dashboard and navigate the pages. You can install, update and delete plugins and themes, perform backups, configure standard and multisite installs and much more — all without ever using a web browser.","headline":"WP-CLI","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/wp/2016/09/15/wp-cli.html"},"url":"http://0.0.0.0:4000/wp/2016/09/15/wp-cli.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/read.html">Read</a><a class="page-link" href="/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <p>WP-CLI is a set of command-line tools for managing WordPress websites. With just a few simple commands, you can manage WordPress from the command line without the need to login to the Admin Dashboard and navigate the pages. You can install, update and delete plugins and themes, perform backups, configure standard and multisite installs and much more — all without ever using a web browser.</p>
+
+<p>How to install WP-CLI</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+</code></pre></div></div>
+
+<p>Make WP-CLI Executable</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod +x wp-cli.phar
+</code></pre></div></div>
+
+<p>Rename wp-cli.phar to wp and move to a folder where it can be executed globally.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mv wp-cli.phar /usr/local/bin/wp
+</code></pre></div></div>
+
+<p>How to Install and Activate Theme from the command line</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wp theme install twentytwelve
+$ wp theme activate twentytwelve
+</code></pre></div></div>
+
+<p>How to Install, Activate, Deactivate a Plugin</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wp plugin install hello-dolly
+$ wp plugin activate hello-dolly
+$ wp plugin deactivate hello-dolly
+</code></pre></div></div>
+
+<p>How to update WordPress to the latest core release</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wp core update
+</code></pre></div></div>
+
+<p>How to list the last 5 posts</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wp post list --post_type=post --posts_per_page=5 --format=json
+</code></pre></div></div>
+
+<p>The command above will spit out an array in JSON format.</p>
+
+<p>Read the rest of WP-CLI <a href="http://wp-cli.org/docs/">documentation</a>.</p>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

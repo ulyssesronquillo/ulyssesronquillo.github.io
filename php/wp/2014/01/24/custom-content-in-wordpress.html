@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Custom Content in WordPress | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Custom Content in WordPress" />
+<meta name="author" content="Ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There are some instances where you might need to alter or customize the content of a WordPress post. You could be working on a custom post type with a few extra meta box fields, and you simply want to display them on a template. So, instead of editing the WordPress theme files, you can simply customize the WordPress content if it’s a certain post type. Otherwise, the content remains the same if it’s a regular post or page." />
+<meta property="og:description" content="There are some instances where you might need to alter or customize the content of a WordPress post. You could be working on a custom post type with a few extra meta box fields, and you simply want to display them on a template. So, instead of editing the WordPress theme files, you can simply customize the WordPress content if it’s a certain post type. Otherwise, the content remains the same if it’s a regular post or page." />
+<link rel="canonical" href="http://0.0.0.0:4000/php/wp/2014/01/24/custom-content-in-wordpress.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/php/wp/2014/01/24/custom-content-in-wordpress.html" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-01-24T20:27:13+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Custom Content in WordPress" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulysses"},"dateModified":"2014-01-24T20:27:13+00:00","datePublished":"2014-01-24T20:27:13+00:00","description":"There are some instances where you might need to alter or customize the content of a WordPress post. You could be working on a custom post type with a few extra meta box fields, and you simply want to display them on a template. So, instead of editing the WordPress theme files, you can simply customize the WordPress content if it’s a certain post type. Otherwise, the content remains the same if it’s a regular post or page.","headline":"Custom Content in WordPress","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/php/wp/2014/01/24/custom-content-in-wordpress.html"},"url":"http://0.0.0.0:4000/php/wp/2014/01/24/custom-content-in-wordpress.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/read.html">Read</a><a class="page-link" href="/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <p>There are some instances where you might need to alter or customize the content of a WordPress post. You could be working on a custom post type with a few extra meta box fields, and you simply want to display them on a template. So, instead of editing the WordPress theme files, you can simply customize the WordPress content if it’s a certain post type. Otherwise, the content remains the same if it’s a regular post or page.</p>
+
+<p>Show me! In this example, we will filter the WordPress content called the_content by passing a custom function to it. The custom function will pass the content and checks to see if the post type is equal to ‘books.’ If the post type is equal to ‘books’, it will prepend a paragraph saying, ‘Hello Bookworms!!!’ before the content. If the post type is not equal to ‘books’, it will simply return the original content.</p>
+
+<h4 id="heres-the-code">Here’s the Code</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function urr_filter_content($content) {
+  $format = get_post_type( get_the_ID() );
+  if ( $format == 'books' ) : // your custom post-type
+    $new_content  = '&lt;p&gt;Hello Bookworms!!!&lt;/p&gt;';
+    // add your custom post type meta 
+    $new_content  .= '&lt;p&gt;Writer: ' . get_post_meta( get_the_ID(), 'books_writer', true) . '&lt;/p&gt;';
+  endif;
+  $content = $new_content . $content;
+  return $content;
+}
+add_filter('the_content', 'urr_filter_content');
+</code></pre></div></div>
+
+<p>There could be numerous reasons why you want to filter the content. Here’s just a few.</p>
+
+<ul>
+  <li>Custom format based on ‘post type’ or ‘post format’</li>
+  <li>Adding image, audio and video embeds to your content</li>
+  <li>Adding special divs to your content</li>
+  <li>Drop Caps</li>
+  <li>An author byline</li>
+  <li>Adding a widget area</li>
+</ul>
+
+<p>In most cases, content remains undisturbed. But, there might be some crazy instance where you may have to alter it. The function above shows you how you can filter and alter your WordPress content. If you have questions, just leave me a comment!</p>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

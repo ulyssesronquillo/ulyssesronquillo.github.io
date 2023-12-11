@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>MySQL and Access via ODBC | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="MySQL and Access via ODBC" />
+<meta name="author" content="Ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A client of mine had a request to connect Microsoft Access to MySQL via an ODBC connector. The MySQL ODBC setup is not very common, but is entirely possible. MySQL does provide an ODBC connector for other database clients. The setup is a bit tricky. Unfortunately, there’s not a lot of information and documentation online for this type of setup. After some trial and error, I got it to work." />
+<meta property="og:description" content="A client of mine had a request to connect Microsoft Access to MySQL via an ODBC connector. The MySQL ODBC setup is not very common, but is entirely possible. MySQL does provide an ODBC connector for other database clients. The setup is a bit tricky. Unfortunately, there’s not a lot of information and documentation online for this type of setup. After some trial and error, I got it to work." />
+<link rel="canonical" href="http://0.0.0.0:4000/linux/2013/05/25/mysql-and-access-via-odbc.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/linux/2013/05/25/mysql-and-access-via-odbc.html" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-05-25T01:26:39+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MySQL and Access via ODBC" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulysses"},"dateModified":"2013-05-25T01:26:39+00:00","datePublished":"2013-05-25T01:26:39+00:00","description":"A client of mine had a request to connect Microsoft Access to MySQL via an ODBC connector. The MySQL ODBC setup is not very common, but is entirely possible. MySQL does provide an ODBC connector for other database clients. The setup is a bit tricky. Unfortunately, there’s not a lot of information and documentation online for this type of setup. After some trial and error, I got it to work.","headline":"MySQL and Access via ODBC","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2013/05/25/mysql-and-access-via-odbc.html"},"url":"http://0.0.0.0:4000/linux/2013/05/25/mysql-and-access-via-odbc.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/read.html">Read</a><a class="page-link" href="/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <p>A client of mine had a request to connect Microsoft Access to MySQL via an ODBC connector. The MySQL ODBC setup is not very common, but is entirely possible. MySQL does provide an ODBC connector for other database clients. The setup is a bit tricky. Unfortunately, there’s not a lot of information and documentation online for this type of setup. After some trial and error, I got it to work.</p>
+
+<p>First of all, here are some details. The MySQL server runs on Ubuntu 12.04. The ODBC client, MS Access 2010, runs on a Windows 7 machine. Assuming MySQL is already installed, we just need to make sure the MySQL server ODBC library is installed first.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+<p>Now, let’s create an ODBC Data Source. Not sure if this step is required or optional. I did it anyways.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+<p>Add the following entries:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testodbc = MyODBC 5.2.5 Driver DSN
+
+[testodbc]
+Driver       = MySQL
+Description  = MySQL ODBC 5.2.5 Driver DSN
+Server       = localhost
+Port         =
+User         = user
+Password     = password
+Database     = test
+Option       = 3
+Socket       =
+</code></pre></div></div>
+
+<p>Let’s secure your MySQL database by answering the following questions.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+<p>Answer the following questions:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Change root password? [Y/n] n
+Remove anonymous users? [Y/n] Y
+Disallow root login remotely? [Y/n] n
+Remove test database and access to it? [Y/n] Y
+Reload privilege tables now? [Y/n] Y
+</code></pre></div></div>
+
+<p>Allow remote login on MySQL</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/mysql/my.cnf
+
+# Comment out "skip-networking"
+# Add "bind-address = 192.168.0.10"
+# Enter your own IP address
+$ bind-address = 192.168.0.10
+# Save file and exit. 
+
+# Login to MySQL 
+$ sudo mysql -u root -p 
+
+# Grant privileges 
+mysql&gt; grant all privileges on *.* to 'root'@'%' identified by 'password' with grant option;
+mysql&gt; flush privileges;
+mysql&gt; exit;
+
+# Restart MySQL
+$ sudo /etc/init.d/mysql restart
+# Test connection
+$ telnet 192.168.0.10 3306
+</code></pre></div></div>
+
+<p>Download the latest MySQL ODBC Connector and install.</p>
+
+<p><a href="http://dev.mysql.com/downloads/connector/odbc/">http://dev.mysql.com/downloads/connector/odbc/</a></p>
+
+<p>Open Microsoft Access</p>
+
+<ol>
+  <li>Create “<strong>new blank database</strong>.”</li>
+  <li>Select “<strong>External Data</strong>” and click on “<strong>ODBC Database</strong>.”</li>
+  <li>Select “<strong>Link to the data source by creating a link table</strong>.”</li>
+  <li>Create a new DSN</li>
+  <li>Choose “<strong>MySQL 5.2 ODBC Driver</strong>.”</li>
+  <li>Enter IP, Port 3306, Username, Password, and Database.</li>
+  <li>Save DNS for later use.</li>
+</ol>
+
+<p>You should have connected to the MySQL by now.</p>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Backup Rotation | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Backup Rotation" />
+<meta name="author" content="Ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="After another downtime with my service provider, I wasn’t really happy with my backup strategy. Although, I have a backup plan in place, it’s not to the level of detail that I wanted. Back to the drawing board I went. I realized that what I really needed, was to back up my databases and keep copies of the last few days. Prior to that I was just relying on full file system backup and restore. Thankfully, backing up MySQL databases is not that difficult. The following pieces of code is the backup script I have put together to backup each MySQL database, as well rotate the backups and keep 5 days of copies of each database." />
+<meta property="og:description" content="After another downtime with my service provider, I wasn’t really happy with my backup strategy. Although, I have a backup plan in place, it’s not to the level of detail that I wanted. Back to the drawing board I went. I realized that what I really needed, was to back up my databases and keep copies of the last few days. Prior to that I was just relying on full file system backup and restore. Thankfully, backing up MySQL databases is not that difficult. The following pieces of code is the backup script I have put together to backup each MySQL database, as well rotate the backups and keep 5 days of copies of each database." />
+<link rel="canonical" href="http://0.0.0.0:4000/linux/wp/2015/06/12/backup-rotation.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/linux/wp/2015/06/12/backup-rotation.html" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-06-12T15:47:12+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Backup Rotation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulysses"},"dateModified":"2015-06-12T15:47:12+00:00","datePublished":"2015-06-12T15:47:12+00:00","description":"After another downtime with my service provider, I wasn’t really happy with my backup strategy. Although, I have a backup plan in place, it’s not to the level of detail that I wanted. Back to the drawing board I went. I realized that what I really needed, was to back up my databases and keep copies of the last few days. Prior to that I was just relying on full file system backup and restore. Thankfully, backing up MySQL databases is not that difficult. The following pieces of code is the backup script I have put together to backup each MySQL database, as well rotate the backups and keep 5 days of copies of each database.","headline":"Backup Rotation","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/wp/2015/06/12/backup-rotation.html"},"url":"http://0.0.0.0:4000/linux/wp/2015/06/12/backup-rotation.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/read.html">Read</a><a class="page-link" href="/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <p>After another downtime with my service provider, I wasn’t really happy with my backup strategy. Although, I have a backup plan in place, it’s not to the level of detail that I wanted. Back to the drawing board I went. I realized that what I really needed, was to back up my databases and keep copies of the last few days. Prior to that I was just relying on full file system backup and restore. Thankfully, backing up MySQL databases is not that difficult. The following pieces of code is the backup script I have put together to backup each MySQL database, as well rotate the backups and keep 5 days of copies of each database.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#! /bin/bash
+
+# where sql files are stored
+cd /home/user/mysql
+
+# list all databases and assign to variable
+# exclude 3 MySQL default databases (information_schema,performance_schema,mysql)
+DATABASES=`mysql -e "SHOW DATABASES;" | grep -Ev "(Database|information_schema|performance_schema|mysql)"`
+
+# loop through all databases
+# remove db that's 5 days old
+# rotate dbs. rename 1 day older
+# perform backup today
+for db in $DATABASES; do
+  rm -rf $db-4.sql
+  mv $db-3.sql $db-4.sql
+  mv $db-2.sql $db-3.sql
+  mv $db-1.sql $db-2.sql
+  mv $db-0.sql $db-1.sql
+  mysqldump $db &gt; "$db-0.sql"
+done
+</code></pre></div></div>
+
+<p>The for loop will execute everything inside it. The backup rotation gives me 5 days of backups of each database. You can schedule the script to run daily with cron. Just a side note. You need to create .my.cnf file in your home directory with your database credentials, so you don’t have to enter your username and password when running it from cron. Also script needs to be executable. A simple chmod +x will do the trick.</p>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Virtual Apache Host | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Virtual Apache Host" />
+<meta name="author" content="Ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Creating a virtual host in Apache allows for multiple domains to be hosted on a single IP address. This is extremely useful in terms of hosting multiple domains on a single host or VPS. As far as I know, you can have an unlimited number of virtual hosts. The only limitation is the system resources in terms of CPU usage, memory and storage. This article will show you how to add Apache virtual hosts in Ubuntu." />
+<meta property="og:description" content="Creating a virtual host in Apache allows for multiple domains to be hosted on a single IP address. This is extremely useful in terms of hosting multiple domains on a single host or VPS. As far as I know, you can have an unlimited number of virtual hosts. The only limitation is the system resources in terms of CPU usage, memory and storage. This article will show you how to add Apache virtual hosts in Ubuntu." />
+<link rel="canonical" href="http://0.0.0.0:4000/html/linux/2013/12/17/virtual-apache-host.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/html/linux/2013/12/17/virtual-apache-host.html" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-12-17T05:10:49+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Virtual Apache Host" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulysses"},"dateModified":"2013-12-17T05:10:49+00:00","datePublished":"2013-12-17T05:10:49+00:00","description":"Creating a virtual host in Apache allows for multiple domains to be hosted on a single IP address. This is extremely useful in terms of hosting multiple domains on a single host or VPS. As far as I know, you can have an unlimited number of virtual hosts. The only limitation is the system resources in terms of CPU usage, memory and storage. This article will show you how to add Apache virtual hosts in Ubuntu.","headline":"Virtual Apache Host","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/html/linux/2013/12/17/virtual-apache-host.html"},"url":"http://0.0.0.0:4000/html/linux/2013/12/17/virtual-apache-host.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/read.html">Read</a><a class="page-link" href="/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <p>Creating a virtual host in <a href="http://httpd.apache.org/">Apache</a> allows for multiple domains to be hosted on a single IP address. This is extremely useful in terms of hosting multiple domains on a single host or VPS. As far as I know, you can have an unlimited number of virtual hosts. The only limitation is the system resources in terms of CPU usage, memory and storage. This article will show you how to add Apache virtual hosts in Ubuntu.</p>
+
+<p>Typically, the web root for Apache in Ubuntu is located in /var/www. Instead, we will use a directory under the /home/username directory. So, let’s now create a directory in /home/username/fakedomain.com/. We can achieve this by typing the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir /home/username/fakedomain.com
+</code></pre></div></div>
+
+<p>We will give it read and write permissions.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod 755 -R /home/username/fakedomain.com
+</code></pre></div></div>
+
+<p>Now, let’s create a new virtual host file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo touch /etc/apache2/sites-available/fakedomain.com
+</code></pre></div></div>
+
+<p>We will add the following configuration.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;virtualhost&gt;
+ServerAdmin webmaster@localhost
+Servername fakedomain.com
+ServerAlias www.fakedomain.com
+DocumentRoot /home/username/fakedomain.com
+&lt;/virtualhost&gt;
+</code></pre></div></div>
+
+<p>Save the file by pressing Control-O followed by Control-X.</p>
+
+<p>Activate our new host.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo a2ensite fakedomain.com
+</code></pre></div></div>
+
+<p>Restart Apache.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service apache2 restart
+</code></pre></div></div>
+
+<p>Edit your hosts file. The first line is for Ubuntu, the second for Mac OS.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /etc/hosts
+$ sudo nano /private/etc/hosts
+</code></pre></div></div>
+
+<p>Add the fakedomain.com to your hosts file. Substitute the IP address of your host.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.5  fakedomain.com
+</code></pre></div></div>
+
+<p>Save the file by pressing Control-O followed by Control-X.</p>
+
+<p>You can now access fakedomain.com from your browser by typing ‘http://fakedomain.com’ on the address bar.</p>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://0.0.0.0:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>Copyright &copy; 2023</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
