@@ -42,14 +42,12 @@
 
 <p>String</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-server-boot;server-data
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server-boot;server-data
 </code></pre></div></div>
 
 <p>Split the string and print on every line.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-data="server-boot;server-data"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data="server-boot;server-data"
 for i in $(echo $data | tr ";" "\n"); do
   echo $i
 done
@@ -57,15 +55,13 @@ done
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-server-boot
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server-boot
 server-data
 </code></pre></div></div>
 
 <p>Send output to a file</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-file="output.txt"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file="output.txt"
 &gt; $file
 data="server-boot;server-data"
 for i in $(echo $data | tr ";" "\n"); do

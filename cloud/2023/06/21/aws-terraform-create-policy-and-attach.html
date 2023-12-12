@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Here’s the Terraform code that creates an AWS IAM policy and attaches it to an existing role (ROLENAME).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# CREDENTIALS
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># CREDENTIALS
 provider "aws" {
   shared_credentials_files = ["~/.aws/credentials"]
   shared_config_files      = ["~/.aws/config"]
@@ -63,8 +62,7 @@ resource "aws_iam_role_policy_attachment" "s3-policy-attachment" {
 
 <p>Here’s the policy.json file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "Version": "2012-10-17",
     "Statement": [
         {

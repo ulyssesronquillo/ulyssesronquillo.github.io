@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-12T09:36:02+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Edit All Files In A Directory</title><link href="http://0.0.0.0:4000/2023/12/12/edit-all-files-in-a-directory.html" rel="alternate" type="text/html" title="Edit All Files In A Directory" /><published>2023-12-12T00:00:00+00:00</published><updated>2023-12-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/12/12/edit-all-files-in-a-directory</id><content type="html" xml:base="http://0.0.0.0:4000/2023/12/12/edit-all-files-in-a-directory.html"><![CDATA[<p>How to edit dozens or even thousands of files in a single directory.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-12T09:57:12+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Edit All Files In A Directory</title><link href="http://0.0.0.0:4000/2023/12/12/edit-all-files-in-a-directory.html" rel="alternate" type="text/html" title="Edit All Files In A Directory" /><published>2023-12-12T00:00:00+00:00</published><updated>2023-12-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/12/12/edit-all-files-in-a-directory</id><content type="html" xml:base="http://0.0.0.0:4000/2023/12/12/edit-all-files-in-a-directory.html"><![CDATA[<p>How to edit dozens or even thousands of files in a single directory.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for FILE in *.md; do sed -i '/permalink: /d' $FILE; sed -i '/layout: post/c\layout: default' $FILE; done
 </code></pre></div></div>
@@ -15,21 +15,18 @@ layout: default</li>
 
 <p>Run this on a web server once.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ echo "SecretPassword" | openssl enc -aes-256-cbc -md sha512 -a -salt -pass pass:NotSoSecretPassword &gt; secret.txt  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo "SecretPassword" | openssl enc -aes-256-cbc -md sha512 -a -salt -pass pass:NotSoSecretPassword &gt; secret.txt  
 $ chmod 600 secret.txt
 </code></pre></div></div>
 
 <p>On client machine, download the secret file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ curl https://webserver/some/dir/secret.txt --output -s secret.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl https://webserver/some/dir/secret.txt --output -s secret.txt
 </code></pre></div></div>
 
 <p>To retrieve the secret password, run the code below. For added measure, delete secret.txt file afterwards.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ cat secret.txt | openssl enc -aes-256-cbc -md sha512 -a -d -salt -pass pass:NotSoSecretPassword
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat secret.txt | openssl enc -aes-256-cbc -md sha512 -a -d -salt -pass pass:NotSoSecretPassword
 $rm -f secret.txt
 </code></pre></div></div>
 
@@ -37,31 +34,27 @@ $rm -f secret.txt
 
 <p>Check current version</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ terraform --version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform --version
 Terraform v1.5.7
 on darwin_amd64
 </code></pre></div></div>
 
 <p>Upgrade Terraform</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ brew tap hashicorp/tap
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew tap hashicorp/tap
 $ brew install hashicorp/tap/terraform
 </code></pre></div></div>
 
 <p>Check version again</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ terraform --version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform --version
 Terraform v1.6.2
 on darwin_amd64
 </code></pre></div></div>
 
 <p>That’s it.</p>]]></content><author><name>Ulysses</name></author><category term="Linux" /><category term="homebrew" /><category term="install" /><category term="latest" /><category term="terraform" /><summary type="html"><![CDATA[As of this writing, the latest Terraform version supported by Homebrew is version 1.5.7. It’s a bit outdated considering the latest Terraform version is 1.6.2. To force Homebrew to install the latest version of Terraform, run the following commands from your MacOS Terminal. But prior to that, check your version first.]]></summary></entry><entry><title type="html">YouTube Thumbnail</title><link href="http://0.0.0.0:4000/linux/2023/10/26/youtube-thumbnail.html" rel="alternate" type="text/html" title="YouTube Thumbnail" /><published>2023-10-26T18:40:51+00:00</published><updated>2023-10-26T18:40:51+00:00</updated><id>http://0.0.0.0:4000/linux/2023/10/26/youtube-thumbnail</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/10/26/youtube-thumbnail.html"><![CDATA[<p>When uploading videos, Youtube gives you an option to upload your own thumbnails. If you want to use your own pics, you can format them to 1280×720 pixels and use it as a thumbnail. The script below will resize any image regardless of the original size to 1280×720 pixels using the convert utility of ImageMagick. The conversion may crop the edges of your image if it’s not 16:9 or 1.777 format. The script will also resize an image in portrait format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 cd /home/ulysses/Pictures/jpg
 image=$1
 test=`convert $image -format "%[fx:(w/h&gt;1)?1:0]" info:`
@@ -76,8 +69,7 @@ fi
 
 <p>Here are the contents of results.txt.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-John 10
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>John 10
 Mario 12
 Derek 15
 Mark 20
@@ -86,14 +78,12 @@ Matt 25
 
 <p>Display only individuals that are older than 20 using awk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-awk '$2 ~ /^20/' results.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '$2 ~ /^20/' results.txt
 </code></pre></div></div>
 
 <p>Result.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-Mark 20
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mark 20
 Matt 25
 </code></pre></div></div>
 
@@ -101,8 +91,7 @@ Matt 25
 
 <p>Include name and IP address on the output.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-import boto3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import boto3
 import json
 import os
 from botocore.exceptions import NoCredentialsError
@@ -151,8 +140,7 @@ def lambda_handler(event, context):
     }
 </code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="bucket" /><category term="ec2" /><category term="instances" /><category term="lambda" /><category term="list" /><category term="python" /><category term="s3" /><summary type="html"><![CDATA[This is a Lambda function code that list EC2 instances from multiple regions and write the output to a S3 bucket.]]></summary></entry><entry><title type="html">Alternative to JQ</title><link href="http://0.0.0.0:4000/cloud/linux/2023/10/18/alternative-to-jq.html" rel="alternate" type="text/html" title="Alternative to JQ" /><published>2023-10-18T11:50:33+00:00</published><updated>2023-10-18T11:50:33+00:00</updated><id>http://0.0.0.0:4000/cloud/linux/2023/10/18/alternative-to-jq</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/linux/2023/10/18/alternative-to-jq.html"><![CDATA[<p>If you don’t have JQ (JSON Parser) installed, you can use a combination of echo, grep and sed to pull out the data.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# create new credentials
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># create new credentials
 new_access_keys_json=$(aws iam create-access-key --user-name $user --profile $profile)
 new_access_key_id=$(echo "$new_access_keys_json" | grep -o '"AccessKeyId": "[^"]*' | sed 's/"AccessKeyId": "//')
 new_access_secret_key=$(echo "$new_access_keys_json" | grep -o '"SecretAccessKey": "[^"]*' | sed 's/"SecretAccessKey": "//')
@@ -162,14 +150,12 @@ new_access_secret_key=$(echo "$new_access_keys_json" | grep -o '"SecretAccessKey
 
 <p>String</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-server-boot;server-data
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server-boot;server-data
 </code></pre></div></div>
 
 <p>Split the string and print on every line.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-data="server-boot;server-data"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data="server-boot;server-data"
 for i in $(echo $data | tr ";" "\n"); do
   echo $i
 done
@@ -177,15 +163,13 @@ done
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-server-boot
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server-boot
 server-data
 </code></pre></div></div>
 
 <p>Send output to a file</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-file="output.txt"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file="output.txt"
 &gt; $file
 data="server-boot;server-data"
 for i in $(echo $data | tr ";" "\n"); do
@@ -195,8 +179,7 @@ done
 
 <p>Table format</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute snapshots list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
 --filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
 --format="table(sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
 --sort-by "~creationTimestamp" \
@@ -205,8 +188,7 @@ gcloud compute snapshots list \
 
 <p>CSV format</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute snapshots list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
 --filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
 --format="csv[separator=','](sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
 --sort-by "~creationTimestamp" \
@@ -215,14 +197,12 @@ gcloud compute snapshots list \
 
 <p>Output to file</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute snapshots list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
 --filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
 --format="csv[separator=','](sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
 --sort-by "~creationTimestamp" \
 --project="$PROJECT" &gt; output.csv
 </code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="csv" /><category term="format" /><category term="gcloud" /><category term="gcp" /><category term="output" /><category term="table" /><summary type="html"><![CDATA[Differences using gcloud table vs CSV format.]]></summary></entry><entry><title type="html">GCP Cloud Shell Format</title><link href="http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format.html" rel="alternate" type="text/html" title="GCP Cloud Shell Format" /><published>2023-09-18T19:53:48+00:00</published><updated>2023-09-18T19:53:48+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format.html"><![CDATA[<p>If you are getting funky formatting in GCP Cloud Shell, run this to set the format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud config set accessibility/screen_reader False
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud config set accessibility/screen_reader False
 </code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="cloud" /><category term="format" /><category term="gcp" /><category term="set" /><category term="shell" /><summary type="html"><![CDATA[If you are getting funky formatting in GCP Cloud Shell, run this to set the format.]]></summary></entry></feed>
