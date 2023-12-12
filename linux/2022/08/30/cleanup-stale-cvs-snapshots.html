@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s the script that looks mounts with stale file handles and removes them.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 file='/tmp/stale.txt'
 df -h | grep Stale &gt; $file
 sed -i -e 's/df: ‘/'""'/g' $file

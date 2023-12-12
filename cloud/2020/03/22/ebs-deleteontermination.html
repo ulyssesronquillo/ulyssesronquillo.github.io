@@ -42,7 +42,8 @@
 
 <p>During creation.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 run-instances \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws ec2 run-instances \
 --count 1 \
 --region us-east-2 \
 --key-name tfc-ohio \
@@ -57,7 +58,8 @@
 
 <p>Contents of mapping.json</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[
   {
     "DeviceName": "/dev/sda1",
     "Ebs": {
@@ -73,14 +75,16 @@
 
 <p>Modifying an existing EC2 instance.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 modify-instance-attribute \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws ec2 modify-instance-attribute \
 --instance-id i-xxxxxxxxxxxxx \
 --block-device-mappings file://mapping.json
 </code></pre></div></div>
 
 <p>Here’s the mapping.json file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[
   {
     "DeviceName": "/dev/sda1",
     "Ebs": {

@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>You can check when the system was last patch using the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># check RPM when the last updates were ran.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# check RPM when the last updates were ran.
 rpm -qa --last | grep kernel
 # this is a bit of a stretch, but typically a reboot is performed after an upgrade.
 uptime

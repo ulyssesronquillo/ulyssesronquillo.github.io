@@ -40,14 +40,16 @@
       <div class="wrapper">
         <p>Check mounted file systems using df. Displaying different options.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+df 
 df -h
 df -Th
 </code></pre></div></div>
 
 <p>To get rid tmpfs, run this.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -Th| grep -Ev '(udev|tmpfs)'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+df -Th| grep -Ev '(udev|tmpfs)'
 </code></pre></div></div>
 
       </div>

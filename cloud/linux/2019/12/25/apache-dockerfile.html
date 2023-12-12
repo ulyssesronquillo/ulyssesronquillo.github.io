@@ -42,13 +42,15 @@
 
 <p>Here’s the Dockerfile.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM httpd:2.4
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+FROM httpd:2.4
 COPY ./public-html/ /usr/local/apache2/htdocs/
 </code></pre></div></div>
 
 <p>Build and run your Docker image.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t my-app .
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+docker build -t my-app .
 docker run -dit --name my-running-app -p 8080:80 my-app
 </code></pre></div></div>
 

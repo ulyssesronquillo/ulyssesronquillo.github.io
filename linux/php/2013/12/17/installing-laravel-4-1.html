@@ -44,31 +44,37 @@
 
 <p>First things first, update Ubuntu to the latest and greatest patches.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get upgrade
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;$ sudo apt-get update
+$ sudo apt-get upgrade
 </code></pre></div></div>
 
 <p>You can skip the following command if you’ve already installed Apache, MySQL and PHP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;$ sudo apt-get install apache2 mysql-server mysql-client php5 libapache2-mod-php5
+</code></pre></div></div>
 
 <p>In addition, we also want to make sure PHP5 mcrypt and Json is also installed.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;$ sudo apt-get install php5-mcrypt php5-common
+</code></pre></div></div>
 
 <p>We will now install Composer first using the curl command from the Terminal. Once the install is finished, we will now rename ‘composer.phar’ to ‘composer’ and move it to the ‘/usr/local/bin’ directory so it’s accessible from anywhere on the system.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mv composer.phar /usr/local/bin/composer
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;$ curl -sS https://getcomposer.org/installer | php
+$ sudo mv composer.phar /usr/local/bin/composer
 </code></pre></div></div>
 
 <p>Now that we have Composer installed, we will now install Laravel using Composer. The only variable that we need to modify is ‘test.’ This is the target directory where Laravel will be installed from the current directory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;$ composer create-project laravel/laravel test --prefer-dist
+</code></pre></div></div>
 
 <p>Relax and grab a cup of coffee. This process will take approximately 2-3 minutes to complete. Composer will be installing Laravel and all its dependencies.</p>
 
 <p>After Laravel install is complete, we need to give read and write permissions to the app/storage directory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;$ sudo chmod 777 app/storage
+</code></pre></div></div>
 
 <p>You can now access Laravel from the browser. To make it simpler, you can setup a virtual host if you like. I recently wrote an article on how to create a <a href="http://uly.me/virtual-apache-host/">new virtual host</a>. Check it out.</p>
 

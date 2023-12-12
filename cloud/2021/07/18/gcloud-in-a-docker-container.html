@@ -40,15 +40,18 @@
       <div class="wrapper">
         <p>You can run a gcloud commands in a Docker container.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;docker run -ti --name gcloud-config google/cloud-sdk gcloud auth login
+</code></pre></div></div>
 
 <p>Create an alias.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;alias gcloud='docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk:latest gcloud'
+</code></pre></div></div>
 
 <p>Run the command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Google Cloud SDK 348.0.0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud --version
+Google Cloud SDK 348.0.0
 alpha 2021.07.09
 app-engine-go 1.9.71
 app-engine-java 1.9.90
@@ -71,7 +74,8 @@ pubsub-emulator 0.4.1
 
 <p>Create one for gsutil.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;alias gsutil='docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk:latest gsutil'
+</code></pre></div></div>
 
       </div>
     </main><footer class="site-footer h-card">

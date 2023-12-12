@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>If you’re into photography, you would know what crop factor means. I have a Nikon D90 camera with a crop factor of 1.5. For example, if you use a 24mm full frame lens on a D90, the focal length will be 36mm. So, here’s a handy bash script that calculates the crop factor by multiplying the full frame focal length by 1.5.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 if [ $# -eq 0 ]
   then
     echo "Usage: cropfactor.sh 24"
@@ -52,7 +53,8 @@ echo "Cropfactor focal length is: " $a"mm."
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ulysses@penguin:~/Code$ ./cropfactor.sh 24
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ulysses@penguin:~/Code$ ./cropfactor.sh 24
 Cropfactor focal length is:  36.0mm.
 </code></pre></div></div>
 

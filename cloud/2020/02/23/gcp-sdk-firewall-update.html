@@ -42,7 +42,8 @@
 
 <p>Ingress</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--description="firewall description" \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute firewall-rules update "firewall-rule-name" \
+--description="firewall description" \
 --priority="1000"
 --target-service-accounts="service-account@gserviceaccount.com" \
 --source-ranges="10.0.0.0/8"
@@ -51,7 +52,8 @@
 
 <p>Egress</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--description="firewall description" \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute firewall-rules update "firewall-rule-name" \
+--description="firewall description" \
 --priority="1000"
 --target-service-accounts="service-account@gserviceaccount.com" \
 --destination-ranges="10.0.0.0/8"

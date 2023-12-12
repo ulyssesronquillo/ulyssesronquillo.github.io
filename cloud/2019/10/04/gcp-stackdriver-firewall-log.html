@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s one way how to look at traffic hitting a GCP firewall. To view the traffic activity, go to Stackdriver Logging &gt; Viewer. Enter the following search string. Just replace the network name and firewall name.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AND jsonPayload.rule_details.reference:("network:network-name/firewall:firewall-name")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;logName:(projects/project-name/logs/compute.googleapis.com%2Ffirewall) 
+AND jsonPayload.rule_details.reference:("network:network-name/firewall:firewall-name")
 </code></pre></div></div>
 
       </div>

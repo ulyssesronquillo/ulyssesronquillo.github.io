@@ -40,12 +40,14 @@
       <div class="wrapper">
         <p>Show a list of EFS file systems within a region.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--region us-east-1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws efs describe-file-systems \
+--region us-east-1
 </code></pre></div></div>
 
 <p>Filter by Name and FileSystemId.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> aws efs describe-file-systems \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ aws efs describe-file-systems \
 --query 'FileSystems[*].[Name,FileSystemId]'
 </code></pre></div></div>
 

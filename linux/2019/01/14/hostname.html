@@ -40,23 +40,27 @@
       <div class="wrapper">
         <p>If you need to change your system’s hostname, use hostname or hostnamectl commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hostnamectl set-hostname servername
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;hostname servername
+hostnamectl set-hostname servername
 </code></pre></div></div>
 
 <p>You can add the hostname to these 2 files and reboot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/hosts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;vi /etc/hostname
+vi /etc/hosts
 reboot
 </code></pre></div></div>
 
 <p>Without a reboot. Add the hostname to these 2 files.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/hosts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;vi /etc/hostname
+vi /etc/hosts
 </code></pre></div></div>
 
 <p>And add a hostname entry to 127.0.0.1 in /etc/hosts.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;127.0.0.1 servername
+</code></pre></div></div>
 
 <p>That’s all she wrote.</p>
 

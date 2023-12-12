@@ -42,7 +42,8 @@
 
 <p>I have 2 servers called blue-server and red-server. I’m detaching the disks on blue-server and attaching it to the red-server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances attach-disk cyan-server --disk=blue-server-disk --zone us-central1-c
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances detach-disk blue-server --disk=blue-server-disk --zone us-central1-c
+gcloud compute instances attach-disk cyan-server --disk=blue-server-disk --zone us-central1-c
 gcloud compute instances detach-disk cyan-server --disk=blue-server-disk --zone us-central1-c
 gcloud compute instances attach-disk blue-server --disk=blue-server-disk --zone us-central1-c
 </code></pre></div></div>

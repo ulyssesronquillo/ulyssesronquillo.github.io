@@ -40,17 +40,20 @@
       <div class="wrapper">
         <p>Here’s how to display a list of Google Cloud forwarding rules.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute forwarding-rules list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute forwarding-rules list
 </code></pre></div></div>
 
 <p>If you want global only.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute forwarding-rules --global
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute forwarding-rules --global
 </code></pre></div></div>
 
 <p>Or just local regions only.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute forwarding-rules --filter="region:( us-central us-west1 )"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute forwarding-rules --filter="region:( us-central us-west1 )"
 </code></pre></div></div>
 
       </div>

@@ -42,7 +42,8 @@
 
 <p>In the WordPress loop, look for the code ‘the_content().’ Add this command just before it:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remove_filter ('the_content', 'wpautop');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+remove_filter ('the_content', 'wpautop');
 the_content();
 </code></pre></div></div>
 

@@ -42,11 +42,13 @@
 
 <p>You can edit it manually using an editor such as vi or vim.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;vim ~/.ssh/known_hosts
+</code></pre></div></div>
 
 <p>Or you can use ssh-keygen command with -R option to delete the hostname or IP address.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ssh-keygen -f "~/.ssh/known_hosts" -R "xxx.xxx.xxx.xxx"
+</code></pre></div></div>
 
       </div>
     </main><footer class="site-footer h-card">

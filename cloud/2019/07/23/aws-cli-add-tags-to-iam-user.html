@@ -40,13 +40,15 @@
       <div class="wrapper">
         <p>How to add tags to an existing IAM user via AWS CLI.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--user-name john.doe \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws iam tag-user \
+--user-name john.doe \
 --tags '{"Key": "Department", "Value": "Accounting"}'
 </code></pre></div></div>
 
 <p>Multiple tags.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws iam tag-user \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws iam tag-user \
 --user-name john.doe \
 --tags '[{"Key": "Department", "Value": "Accounting"},{"Key": "Manager", "Value": "jane.doe"}]'
 </code></pre></div></div>

@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>How to install syslog-np on Centos 7.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /tmp
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd /tmp
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum -y reinstall ./epel-release-latest-7.noarch.rpm
 chattr +i /etc/yum.repos.d/epel*
@@ -49,7 +50,8 @@ yum -y install syslog-ng
 
 <p>Enable syslog-np. Disable rsyslog.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl enable syslog-ng
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+systemctl enable syslog-ng
 systemctl start syslog-ng
 yum -y erase rsyslog
 </code></pre></div></div>

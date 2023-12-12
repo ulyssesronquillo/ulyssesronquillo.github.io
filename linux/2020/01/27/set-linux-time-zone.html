@@ -42,18 +42,21 @@
 
 <p>Check server time.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>date
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# check server time
+date
 </code></pre></div></div>
 
 <p>Change to local time.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm /etc/localtime
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# set to local time
+rm /etc/localtime
 ln -s /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 </code></pre></div></div>
 
 <p>Check server time again.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>date
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# check server time again
+date
 </code></pre></div></div>
 
       </div>

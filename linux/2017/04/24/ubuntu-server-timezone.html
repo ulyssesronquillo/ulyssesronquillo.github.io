@@ -40,13 +40,15 @@
       <div class="wrapper">
         <p>If you want to run a couple of cron jobs, you may need to check if your server is using your timezone. You can determine the server’s timezone by simply typing the system’s date command. You’ll see right away if your server is using the same timezone.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ date
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ date
 Sun Apr 23 21:21:24 PDT 2017
 </code></pre></div></div>
 
 <p>If it isn’t, then you need to change it so it’s in sync with cron jobs. To change timezone, run dpkg-reconfigure tzdata. You’ll be asked to choose a region and the nearest city. In this example, I’m picking the Americas/Los Angeles combination. Choose your own region and city.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo dpkg-reconfigure tzdata
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo dpkg-reconfigure tzdata
 Current default time zone: 'America/Los_Angeles'
 Local time is now:      Sun Apr 23 21:24:57 PDT 2017.
 Universal Time is now:  Mon Apr 24 04:24:57 UTC 2017.
@@ -54,7 +56,8 @@ Universal Time is now:  Mon Apr 24 04:24:57 UTC 2017.
 
 <p>You may need to restart cron so that the new timezone can take effect.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service cron restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo service cron restart
 </code></pre></div></div>
 
       </div>

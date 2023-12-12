@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>You can use the curl command to test if your load balancer is working as expected. The curl command will alternately and randomly access several instances in your load balancer. If you have 3 instances behind your load balancer, it will be cycled across all 3. The -m1 command means max time is set to 1 second.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while true; do curl -m1 [IP_ADDRESS]; done
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+while true; do curl -m1 [IP_ADDRESS]; done
 </code></pre></div></div>
 
       </div>

@@ -40,14 +40,16 @@
       <div class="wrapper">
         <p>After you created a backup vault, it’s time to create a backup plan. Here are a few examples.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--cli-input-json file://backup-plan.json \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws backup create-backup-plan \
+--cli-input-json file://backup-plan.json \
 --profile default \
 --region us-east-1
 </code></pre></div></div>
 
 <p>File: backup-plan.json</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+{
     "BackupPlan": {
         "BackupPlanName": "efs-0123",
         "Rules": [
@@ -68,7 +70,8 @@
 
 <p>Finally, create a backup selection.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws backup create-backup-selection \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws backup create-backup-selection \
 --backup-plan-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx \
 --cli-input-json file://backup-selection.json \
 --profile poc \
@@ -77,7 +80,8 @@
 
 <p>File: backup-selection.json</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+{
     "BackupSelection": {
 	"SelectionName": "efs-0123",
         "IamRoleArn": "arn:aws:iam::xxxxxxxxxxxx:role/service-role/AWSBackupDefaultServiceRole",

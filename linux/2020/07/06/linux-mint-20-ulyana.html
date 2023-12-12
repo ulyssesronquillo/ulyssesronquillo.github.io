@@ -42,28 +42,33 @@
 
 <p>Edit your package repository. Replace tricia with ulyana, and bionic with focal.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim /etc/apt/sources.list.d/official-package-repositories.list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+vim /etc/apt/sources.list.d/official-package-repositories.list
 </code></pre></div></div>
 
 <p>Run update first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt update -y
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+apt update -y
 apt upgrade -y
 </code></pre></div></div>
 
 <p>Perform upgrade to Linux Mint 20. When prompted, choose default.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt dist-upgrade
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+apt dist-upgrade
 </code></pre></div></div>
 
 <p>Reboot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reboot
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+reboot
 </code></pre></div></div>
 
 <p>cat /etc/os-release.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ulysses@penguin:~/Code$ cat /etc/os-release
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ulysses@penguin:~/Code$ cat /etc/os-release
 NAME="Linux Mint"
 VERSION="20 (Ulyana)"
 ID=linuxmint

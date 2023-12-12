@@ -40,15 +40,18 @@
       <div class="wrapper">
         <p>Subversion has an export command when you want a copy of the repository without the .svn directories and files. Git Export is similar to Subversion’s Export command. To export a project in Git, you will need to go to the root of your Git project and issue the following commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;cd git/project
+</code></pre></div></div>
 
 <p>Create a gzip file or a zip file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;git archive master | gzip &gt; project.tgz
+</code></pre></div></div>
 
 <p>or</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;git archive master | zip &gt; project.zip
+</code></pre></div></div>
 
       </div>
     </main><footer class="site-footer h-card">

@@ -42,7 +42,8 @@
 
 <p>Centos, Fedora and Redhat</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Setup Repo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# Setup Repo
 sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo 
 
 
@@ -51,6 +52,7 @@ sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo
 
 
 
+&lt;pre lang="bash"&gt;
 # Create an environment variable for the correct distribution
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 # Add the Cloud SDK distribution URI as a package source

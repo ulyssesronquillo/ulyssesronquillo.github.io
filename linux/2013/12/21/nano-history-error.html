@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>I experienced a “nano” editor error this morning. It displayed this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error reading /home/ulysses/.nano_history: Permission denied
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+Error reading /home/ulysses/.nano_history: Permission denied
 Press Enter to continue starting nano.
 </code></pre></div></div>
 
@@ -48,7 +49,8 @@ Press Enter to continue starting nano.
 
 <p>So, when accessed as a regular user, I simply didn’t have permissions to the nano history. A simple fix for this is to delete the .nano_history file while logged in as root. Switch back as a regular user and run nano again. Nano will re-create the history file the next time you use it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo rm /home/ulysses/.nano_history
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ sudo rm /home/ulysses/.nano_history
 </code></pre></div></div>
 
 <p>That should take care of it.</p>

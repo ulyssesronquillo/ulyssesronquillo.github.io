@@ -42,18 +42,21 @@
 
 <p>Plug in the USB drive to see mount point.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -Th
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# scan for all drives
+df -Th
 Filesystem     Type     Size  Used Avail Use% Mounted on
 /dev/sdc1      fuseblk   30G   66M   30G   1% /media/ulysses/451B99AF225B48EC
 </code></pre></div></div>
 
 <p>Unmount USB drive.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;umount /dev/sdc1
+</code></pre></div></div>
 
 <p>Choose a file system type and run the appropriate format command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfs.ntfs /dev/sdc1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# nfts format
+mkfs.ntfs /dev/sdc1
 # vfat format
 mkfs.vfat /dev/sdc1
 # ext4 format

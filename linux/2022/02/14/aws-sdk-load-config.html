@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Occasionally I was getting this random error when running Terraform.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>╷
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+╷
 │ Error: error configuring Terraform AWS Provider: no valid credential sources for Terraform AWS Provider found.
 │ 
 │ Please see https://registry.terraform.io/providers/hashicorp/aws
@@ -57,7 +58,8 @@
 
 <p>Here’s the fix. Place this in your ~/.bash_profile.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export AWS_SDK_LOAD_CONFIG=1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+export AWS_SDK_LOAD_CONFIG=1
 </code></pre></div></div>
 
 <p>This forces Terraform to use both config and credentials file.</p>

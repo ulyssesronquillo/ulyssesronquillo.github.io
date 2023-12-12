@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>I had an issue with using the backspace in Vim in GCP’s Cloud Shell. Every time I’m in the insert mode and I want to edit using backspace, it doesn’t delete the characters. It shows these characters “^?” instead. Well, it turned out to be a backspace setting that you can set within .vimrc. So, here’s my working setup.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colo desert
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+colo desert
 syntax on
 set backspace=indent,eol,start
 set nocompatible

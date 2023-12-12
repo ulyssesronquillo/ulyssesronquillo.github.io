@@ -40,22 +40,26 @@
       <div class="wrapper">
         <p>Here’s the command to remove quotes from a string in Bash by using the tr -d command. I’m using jq tool to extract the access key from a json file. Bash returns a string surrounded by quotes. To remove the quotes, just pipe the string to the tr -d command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jq .AccessKey.AccessKeyId key.json 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+jq .AccessKey.AccessKeyId key.json 
 </code></pre></div></div>
 
 <p>Result:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"ASDFSDFSDFASDFSDFSDFGHGDF"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+"ASDFSDFSDFASDFSDFSDFGHGDF"
 </code></pre></div></div>
 
 <p>Using tr -d.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jq .AccessKey.AccessKeyId key.json | tr -d \"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+jq .AccessKey.AccessKeyId key.json | tr -d \"
 </code></pre></div></div>
 
 <p>Result:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ASDFSDFSDFASDFSDFSDFGHGDF
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ASDFSDFSDFASDFSDFSDFGHGDF
 </code></pre></div></div>
 
       </div>

@@ -40,14 +40,16 @@
       <div class="wrapper">
         <p>How to create an IAM user via AWS CLI.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws iam create-user --user-name john.doe \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws iam create-user --user-name john.doe \
 --tags Key='key1',Value='value1', Key='key2',Value='value2' \
 --profile your-profile
 </code></pre></div></div>
 
 <p>To add keys.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws iam create-access-key \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws iam create-access-key \
 --user-name username \
 --profile your-profile
 </code></pre></div></div>

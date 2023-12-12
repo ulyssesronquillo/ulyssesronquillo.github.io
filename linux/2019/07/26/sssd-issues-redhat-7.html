@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Some cache to clear.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service sssd stop
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+service sssd stop
 rm -r /var/lib/sss/db/*
 rm -r /var/lib/sss/mc/*
 service sssd start

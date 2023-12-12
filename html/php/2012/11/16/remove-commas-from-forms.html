@@ -44,14 +44,16 @@
 
 <p>First, the HTML form. This is just a HTML form with one field and a submit button. The form calls itself when submitted since the “action” field is left blank.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
 
 <form action="" method="post"> <input name="field" />&lt;/input&gt; <input name="submit" type="submit" />&lt;/input&gt; </form>
 <h4 id="php">PHP</h4>
 
 <p>Now, the fun part. I came up with a list of characters that I want filtered out. In this example, I want to filter out commas and semicolons only. The unwanted characters are placed in an array. I cleaned up the input data using a PHP function called str_replace(). This PHP function replaces commas and semicolons with blanks. Finally, the results are assigned to a variable called $clean and echoed to the screen.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$list = array(",", ";");
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$list = array(",", ";");
 $clean = str_replace($list, "", $_POST['field']);
 echo $clean;
 </code></pre></div></div>
@@ -60,7 +62,8 @@ echo $clean;
 
 <p>Taking one more step. I made the code modular by creating a function called clean_input(). I can then invoke the function numerous times on my script without repeating code. I simply call the clean_input() function when I need it. The function uses the same code above with some slight modification. We are passing the $in variable to the function. This is going to be in input field on our form. The clean_input function replaces it, and the results are returned.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function clean_input($in) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+function clean_input($in) {
   $list = array(",", ";");
   $clean = str_replace($list, "", $in);
   return $clean;
@@ -73,7 +76,8 @@ echo $output;
 
 <p>Finally, we can put all the pieces together in a single file called form.php. The input value in the form will be echoed after submission. Commas and semicolons are filtered out by our PHP function. We can test the function in the demo below. Just type any value to our input field. If you type a comma or semicolon, the input is replaced with a blank.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
 
 <form action="" method="post"> <input name="field" />&lt;/input&gt; <input name="submit" type="submit" />&lt;/input&gt; </form>
 <p>&lt;?php function clean_input($in) {

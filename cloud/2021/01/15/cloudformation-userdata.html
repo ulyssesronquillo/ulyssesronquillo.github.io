@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s another way to add startup scripts to your instance during creation.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      UserData:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+      UserData:
         Fn::Base64: !Sub |
           #cloud-config
           repo_upgrade: none

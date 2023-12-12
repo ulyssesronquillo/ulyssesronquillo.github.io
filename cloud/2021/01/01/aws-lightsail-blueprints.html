@@ -40,11 +40,13 @@
       <div class="wrapper">
         <p><a href="https://aws.amazon.com/lightsail/">Amazon Lightsail</a> offers a variety of OS blueprints, starting from Amazon Linux 2, Ubuntu 20, Windows Server 2019 to Debian 10 to name just a few. Blueprints are a curated selection of operating systems and software that are preinstalled for the creation of instances. For brevity, only a subset of blueprints are displayed below. The description and licenseUrl portions are truncated. To display an entire list of LightSail blueprints, run this command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws lightsail get-blueprints --region us-east-1
+</code></pre></div></div>
 
 <p>Output:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "blueprints": [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;{
+  "blueprints": [
         {
             "blueprintId": "ubuntu_20_04",
             "name": "Ubuntu",
@@ -78,11 +80,13 @@
 
 <p>In this example, I’m using the query option to display only the blueprints ids.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws lightsail get-blueprints --query 'blueprints[*].[blueprintId]' --output text --region us-east-1
+</code></pre></div></div>
 
 <p>Output:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>windows_server_2016
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;windows_server_2019
+windows_server_2016
 windows_server_2012
 windows_server_2016_sql_2016_express
 amazon_linux_2

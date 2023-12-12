@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>How to create an instance from a snapshot with alias IP and reserved IPs.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta compute instances create jump-server \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;#!/bin/bash
+gcloud beta compute instances create jump-server \
 --network-interface=aliases=10.128.1.0/24,private-network-ip=jump-server,subnet=default \
 --machine-type=n1-standard-1 \``
 --network-tier=PREMIUM \
@@ -63,12 +64,14 @@
 
 <p>The default command uses –private-network-ip and –subnet options separately.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--subnet=default \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;--private-network-ip 10.0.0.24 \
+--subnet=default \
 </code></pre></div></div>
 
 <p>But when dealing with aliases, reserved IPs and subnets, use a single –network-interface option instead.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;--network-interface=aliases=10.128.1.0/24,private-network-ip=jump-server,subnet=default \
+</code></pre></div></div>
 
       </div>
     </main><footer class="site-footer h-card">

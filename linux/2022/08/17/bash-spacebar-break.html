@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s how to add breaks in your Bash scripts. The function is called spacebar.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function spacebar {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+function spacebar {
   echo 'Press spacebar to continue. Press Ctrl-C to exit.'
   stty -echo &gt; /dev/null
   until read -r -n 1 -t 0.001 &amp;&amp; [ "$REPLY" = ' ' ]; do abc=''; done

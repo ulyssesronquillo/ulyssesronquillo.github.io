@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>When performing a database query, we normally use a loop to output the database result. This is a common exercise for programmers when displaying results to the screen. To make the output readable, commas are typically used to separate data. Consider a loop below that prints a list of names. We added a string <strong>‘, ‘</strong> after each name to make it readable.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foreach($query as $item) :
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+foreach($query as $item) :
 echo $item-&gt;name.', '; 
 endforeach;
 </code></pre></div></div>
@@ -52,7 +53,8 @@ John, Mary, Steve, Mark,</p>
 
 <p>We will use the trim() function to remove the last comma. But before we can do that, we should probably hold off on echoing to the screen until the loop is finished. So, we will store the results in a variable called $result as we go through the loop. To avoid a PHP undefined variable error, we need to initialize the $result variable before the loop begins. After the loop, we will use the rtrim function to remove the last comma. Finally, we echo the trimmed results and add a period.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$result="";
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$result="";
 foreach($query as $item) :
 $result.=$item-&gt;name.', '; 
 endforeach;

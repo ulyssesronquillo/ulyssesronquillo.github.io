@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s the script to install Jekyll on Amazon Linux 2.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo hostnamectl set-hostname jekyll
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;#!/bin/bash
+sudo hostnamectl set-hostname jekyll
 sudo yum update -y
 sudo amazon-linux-extras install ruby2.4 -y
 sudo yum install ruby ruby-devel -y
@@ -54,13 +55,15 @@ jekyll new myblog
 
 <p>To start the Jekyll server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;cd mysite
+jekyll build
 jekyll serve --host 0.0.0.0
 </code></pre></div></div>
 
 <p>Open your browser and point it to the external IP of your instance on port 4000.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;http://xxx.xxx.xxx.xxx:4000
+</code></pre></div></div>
 
 <p>You may to edit your security group to allow ingress 4000 from 0.0.0.0/0.</p>
 

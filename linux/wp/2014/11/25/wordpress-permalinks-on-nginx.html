@@ -42,11 +42,13 @@
 
 <p>WordPress on root directory</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Edit nginx config
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# Edit nginx config
 sudo nano /etc/nginx/sites-available/default
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Add the following lines to the file.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# Add the following lines to the file.
 location / {
 index index.php index.html index.htm;
 try_files $uri $uri/ /index.php?args;
@@ -55,14 +57,16 @@ try_files $uri $uri/ /index.php?args;
 
 <p>WordPress in a subdirectory under root</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>location /wordpress/ {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+location /wordpress/ {
 try_files $uri $uri/ /wordpress/index.php?args;
 }
 </code></pre></div></div>
 
 <p>Restart Nginx</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># must restart nginx for the changes to take effect
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# must restart nginx for the changes to take effect
 sudo nano service nginx restart
 </code></pre></div></div>
 

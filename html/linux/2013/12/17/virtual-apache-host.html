@@ -42,22 +42,26 @@
 
 <p>Typically, the web root for Apache in Ubuntu is located in /var/www. Instead, we will use a directory under the /home/username directory. So, let’s now create a directory in /home/username/fakedomain.com/. We can achieve this by typing the following:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir /home/username/fakedomain.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ mkdir /home/username/fakedomain.com
 </code></pre></div></div>
 
 <p>We will give it read and write permissions.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod 755 -R /home/username/fakedomain.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ chmod 755 -R /home/username/fakedomain.com
 </code></pre></div></div>
 
 <p>Now, let’s create a new virtual host file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo touch /etc/apache2/sites-available/fakedomain.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ sudo touch /etc/apache2/sites-available/fakedomain.com
 </code></pre></div></div>
 
 <p>We will add the following configuration.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;virtualhost&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+&lt;virtualhost&gt;
 ServerAdmin webmaster@localhost
 Servername fakedomain.com
 ServerAlias www.fakedomain.com
@@ -69,23 +73,27 @@ DocumentRoot /home/username/fakedomain.com
 
 <p>Activate our new host.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo a2ensite fakedomain.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ sudo a2ensite fakedomain.com
 </code></pre></div></div>
 
 <p>Restart Apache.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service apache2 restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ sudo service apache2 restart
 </code></pre></div></div>
 
 <p>Edit your hosts file. The first line is for Ubuntu, the second for Mac OS.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /etc/hosts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ sudo nano /etc/hosts
 $ sudo nano /private/etc/hosts
 </code></pre></div></div>
 
 <p>Add the fakedomain.com to your hosts file. Substitute the IP address of your host.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.0.5  fakedomain.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+192.168.0.5  fakedomain.com
 </code></pre></div></div>
 
 <p>Save the file by pressing Control-O followed by Control-X.</p>

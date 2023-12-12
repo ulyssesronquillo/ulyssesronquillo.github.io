@@ -40,34 +40,40 @@
       <div class="wrapper">
         <p>How to read a file line by line in Bash.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 file=test.txt
 while IFS= read -r line; do
   echo $line
 done 
 &lt;p&gt;Contents of test.txt.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 one
 two
 three
 
 &lt;p&gt;Results when running test.sh.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 $ bash test.sh
 one
 two
 three
 
 &lt;p&gt;To read multiple strings line by line.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 #!/bin/bash
 file=test.txt
 while read -r a b; do
   echo $b
 done 
 &lt;p&gt;Modified contents of test.txt.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 one 1
 two 2
 three 3
 
 &lt;p&gt;New results.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 $ bash test.sh
 1
 2

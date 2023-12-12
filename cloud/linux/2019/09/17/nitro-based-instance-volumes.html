@@ -44,7 +44,8 @@
 
 <p>In AWS Console, the storage devices will look like this.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/xvdb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;/dev/sda1
+/dev/xvdb
 /dev/xvdc
 /dev/xvdd
 /dev/xvde
@@ -57,7 +58,8 @@
 
 <p>In the operating system, invoking df -h, results in this.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/nvme4n1     50G   20G   31G  40% /vol1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;/dev/nvme0n1p2   30G  7.0G   24G  24% /
+/dev/nvme4n1     50G   20G   31G  40% /vol1
 /dev/nvme1n1     10G  753M  9.3G   8% /vol2
 /dev/nvme8n1    500G   67G  433G  14% /backups
 /dev/nvme2n1    400G   12G  388G   3% /vol3
@@ -69,11 +71,13 @@
 
 <p>The big question is, how can you tell which volume is associated with which. You’ll need nvme program to map out the volumes. Install nvme-cli first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;yum install nvme-cli
+</code></pre></div></div>
 
 <p>Then run the command below.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nvme id-ctrl -v /dev/nvme6n1 | grep xv
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# run nvme
+sudo nvme id-ctrl -v /dev/nvme6n1 | grep xv
 # the result
 0000: 2f 64 65 76 2f 73 64 6a 20 20 20 20 20 20 20 20 "/dev/xvdf..."
 </code></pre></div></div>

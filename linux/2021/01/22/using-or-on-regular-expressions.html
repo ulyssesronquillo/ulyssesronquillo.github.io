@@ -40,12 +40,14 @@
       <div class="wrapper">
         <p>Here’s a regex using the pipe symbol as OR to allow only 6 possible values.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>regex="efs-(00|04|08|12|16|20)00"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+regex="efs-(00|04|08|12|16|20)00"
 </code></pre></div></div>
 
 <p>Matches:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>efs-0000
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+efs-0000
 efs-0400
 efs-0800
 efs-1200
@@ -55,7 +57,8 @@ efs-2000
 
 <p>No matches:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>efs-0100
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+efs-0100
 efs-2200
 efs-0600
 efs-1400
@@ -71,7 +74,8 @@ abc
 
 <p>$var is compared with $regex to find a match. $var is any of the variables above.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if [[ $var != $regex ]]; then
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+if [[ $var != $regex ]]; then
   echo "Not a match"
 else
   echo "It's a match"

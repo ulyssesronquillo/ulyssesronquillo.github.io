@@ -42,13 +42,15 @@
 
 <p>To avoid Terminal timeouts, you can set the SSH client, your terminal, to keep the connection alive by sending a null signal to the server every few seconds. I’ve set mine to 2 minutes. Since I’m on Mac OS, I’ll need to configure my SSH client. The configuration file is located in your home directory under .ssh/config. If the file doesn’t exist, just create one.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd
 nano .ssh/config
 </code></pre></div></div>
 
 <p>Now add the following lines to it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host *
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+Host *
 ServerAliveInterval 120
 </code></pre></div></div>
 

@@ -40,12 +40,14 @@
       <div class="wrapper">
         <p>Here’s how to list reservations in GCP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute reservations list --project project-id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute reservations list --project project-id
 </code></pre></div></div>
 
 <p>Specify a zone.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute reservations list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute reservations list \
 --filter="zone:('us-central1-a')" \
 --project project-id
 </code></pre></div></div>

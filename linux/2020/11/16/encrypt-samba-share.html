@@ -42,7 +42,8 @@
 
 <p>Edit /etc/samba/smb.conf on the Samba server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[global]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[global]
 server max protocol = SMB3
 smb encrypt = required 
 lanman auth = no
@@ -50,7 +51,8 @@ lanman auth = no
 
 <p>Edit /etc/samba/smb.conf on the Samba clients.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[global]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[global]
 smb encrypt = required
 client min protocol = SMB2
 client max protocol = SMB3
@@ -58,7 +60,8 @@ client max protocol = SMB3
 
 <p>To connect.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>smbclient -e -m SMB3 //xxx.xxx.xxx.xxx/share-name -U username
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+smbclient -e -m SMB3 //xxx.xxx.xxx.xxx/share-name -U username
 </code></pre></div></div>
 
       </div>

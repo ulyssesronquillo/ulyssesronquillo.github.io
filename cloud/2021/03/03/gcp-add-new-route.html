@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s how to add a new route in Google Cloud Platform.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute routes create name-of-new-route \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute routes create name-of-new-route \
   --destination-range=200.20.0.0/15 \
   --next-hop-gateway=default-internet-gateway \
   --project=host-project \

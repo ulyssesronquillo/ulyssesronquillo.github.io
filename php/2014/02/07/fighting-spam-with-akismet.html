@@ -50,7 +50,8 @@
 
 <p>We will keep our form simple. We will use the post method. Our form will call itself after submission. We are taking the proper precautions to avoid cross-site scripting attacks, etc. by using the htmlspecialchars function and the $_SERVER[“PHP_SELF”] variable itself.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
 
 <form action="&lt;?php echo htmlspecialchars($_SERVER[" method="post" php_self="">"&gt; Name: <input name="name" type="text" />&lt;/input&gt; Email: <input name="email" type="text" />&lt;/input&gt; URL: <input name="url" type="text" />&lt;/input&gt; Comment: <textarea cols="80" name="comment" rows="5"></textarea> <input name="submit" type="submit" value="Submit" />&lt;/input&gt; </form>
 <h4 id="our-php-code">Our PHP Code</h4>

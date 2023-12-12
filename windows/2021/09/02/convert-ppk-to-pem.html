@@ -54,17 +54,20 @@
 
 <p>You can also use puttygen in Linux. Install it first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install putty-tools
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo apt-get install putty-tools
 </code></pre></div></div>
 
 <p>Convert your key.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ puttygen yourkey.ppk -O private-openssh -o yourkey.pem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ puttygen yourkey.ppk -O private-openssh -o yourkey.pem
 </code></pre></div></div>
 
 <p>SSH to your server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod 400 yourkey.pem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ chmod 400 yourkey.pem
 $ ssh -i yourkey.pem ec2-user@server-ip
 </code></pre></div></div>
 

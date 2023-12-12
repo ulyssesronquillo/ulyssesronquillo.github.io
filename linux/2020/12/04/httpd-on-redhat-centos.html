@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here are the commands to start, stop, enable and get the status of Apache on RHEL and CentOS.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl status httpd  # get status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;systemctl enable httpd  # enable on bootup
+systemctl status httpd  # get status
 systemctl start httpd   # start
 systemctl stop httpd    # stop
 systemctl restart httpd # restart

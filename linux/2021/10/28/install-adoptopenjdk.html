@@ -44,7 +44,8 @@
 
 <p>TAR</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /usr/java
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd /usr/java
 wget --no-check-certificate https://bit.ly/3jKm3KZ
 tar xzf OpenJDK8U-jdk_x64_linux_hotspot_8u312b07.tar.gz
 export PATH=$PWD/jdk8u312-b07/bin:$PATH
@@ -53,7 +54,8 @@ java -version
 
 <p>RPM</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat  /etc/yum.repos.d/adoptopenjdk.repo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cat  /etc/yum.repos.d/adoptopenjdk.repo
 [AdoptOpenJDK]
 name=AdoptOpenJDK
 baseurl=http://adoptopenjdk.jfrog.io/adoptopenjdk/rpm/centos/$releasever/$basearch
@@ -63,7 +65,8 @@ gpgkey=https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public
 EOF
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install adoptopenjdk-8-openj9
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum install adoptopenjdk-8-openj9
 </code></pre></div></div>
 
       </div>

@@ -40,12 +40,14 @@
       <div class="wrapper">
         <p>How do you create a crontab entry via a Bash script? That’s a good question. Here is one solution:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(crontab -l 2&gt;/dev/null; echo "* 11 * * * /path/to/job -with args") | crontab -
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+(crontab -l 2&gt;/dev/null; echo "* 11 * * * /path/to/job -with args") | crontab -
 </code></pre></div></div>
 
 <p>If you want to run it as a specific user, use the following:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(crontab -l -u user 2&gt;/dev/null; echo "* 11 * * * /path/to/job -with args") | crontab -
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+(crontab -l -u user 2&gt;/dev/null; echo "* 11 * * * /path/to/job -with args") | crontab -
 </code></pre></div></div>
 
       </div>

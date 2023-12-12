@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Handy little script to see if nameserver is on an array.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 declare -a servers=("127.0.0.53" "127.0.0.52" "127.0.0.51")
 client=$(cat /etc/resolv.conf | grep nameserver)
 for i in "${servers[@]}"

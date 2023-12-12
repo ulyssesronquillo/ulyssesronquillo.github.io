@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>If you’re a Mac user, you can open up a file by right-clicking on it, and choosing “Open With,” and selecting an application. If you see duplicates, you can remove multiple entries by running the following script. The script restarts the Launch Register called lsregister and removes the duplicates.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 </code></pre></div></div>
 
 <p>Right click the file again. The duplicates should be gone.</p>

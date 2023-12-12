@@ -40,12 +40,14 @@
       <div class="wrapper">
         <p>Here’s another command to check what version of SSL and TLS is being used.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap --script ssl-enum-ciphers -p 443 server.domain.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+nmap --script ssl-enum-ciphers -p 443 server.domain.com
 </code></pre></div></div>
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PORT    STATE SERVICE
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+PORT    STATE SERVICE
 443/tcp open  https
 | ssl-enum-ciphers: 
 |   TLSv1.2: 

@@ -51,29 +51,34 @@
 
 <p>Edit the /boot/config.txt file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /boot/config.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo nano /boot/config.txt
 </code></pre></div></div>
 
 <p>Add the following code to the end of the file. 58 is for screens with a 1680×1050 resolution.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hdmi_group=2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+hdmi_group=2
 hdmi_mode=58
 </code></pre></div></div>
 
 <p>Reboot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo reboot
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo reboot
 </code></pre></div></div>
 
 <p>My monitor works! All 1680×1050 pixels. I ran an update next by issuing the following commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo apt-get update
 sudo apt-get upgrade
 </code></pre></div></div>
 
 <p>This process takes a good 20 minutes. Finally, I installed Apache.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install apache2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo apt-get install apache2
 </code></pre></div></div>
 
 <p>Once installed. I checked if the web server works. It does.</p>

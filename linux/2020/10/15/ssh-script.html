@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s my custom ssh script named login.sh using multiple arguments.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 if [ $# -eq 0 ]
   then
     echo 'no server supplied'
@@ -62,7 +63,8 @@ esac
 
 <p>How to use with expected outputs.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./login.sh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+./login.sh
 no server supplied
 ./login.sh server3 abc
 ssh user1@server3

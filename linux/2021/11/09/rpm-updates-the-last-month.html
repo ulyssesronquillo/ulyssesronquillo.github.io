@@ -40,12 +40,14 @@
       <div class="wrapper">
         <p>Here’s the software packages updated the last month.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -qa --last | grep -w "$(date --date='1 month ago' +'%b %Y')"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+rpm -qa --last | grep -w "$(date --date='1 month ago' +'%b %Y')"
 </code></pre></div></div>
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python-perf-3.10.0-1160.42.2.el7.x86_64       Mon 04 Oct 2021 02:16:16 AM UTC
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+python-perf-3.10.0-1160.42.2.el7.x86_64       Mon 04 Oct 2021 02:16:16 AM UTC
 openldap-2.4.44-24.el7_9.x86_64               Mon 04 Oct 2021 02:16:12 AM UTC
 kpartx-0.4.9-135.el7_9.x86_64                 Mon 04 Oct 2021 02:16:09 AM UTC
 kernel-tools-libs-3.10.0-1160.42.2.el7.x86_64 Mon 04 Oct 2021 02:16:05 AM UTC

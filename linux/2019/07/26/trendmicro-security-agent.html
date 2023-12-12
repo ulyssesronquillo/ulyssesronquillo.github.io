@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>How to start/stop/restart/status TrendMicro Security agent.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/init.d/ds_agent start
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+/etc/init.d/ds_agent start
 /etc/init.d/ds_agent stop
 /etc/init.d/ds_agent restart
 /etc/init.d/ds_agent status
@@ -49,17 +50,20 @@
 
 <p>Check if installed.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -qa | grep 'ds_agent'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+rpm -qa | grep 'ds_agent'
 </code></pre></div></div>
 
 <p>Install with verbose and hash.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -ivh package-name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+rpm -ivh package-name
 </code></pre></div></div>
 
 <p>Uninstall with verbose.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -ev package-name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+rpm -ev package-name
 </code></pre></div></div>
 
       </div>

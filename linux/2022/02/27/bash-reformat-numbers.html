@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>How to reformat numbers in Bash.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ n=1023555
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ n=1023555
 $ m=$(numfmt --to=si n)
 $ echo $m
 1.1M
@@ -48,7 +49,8 @@ $ echo $m
 
 <p>Other options</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--to=none     # no scaling. Output: 1023555
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+--to=none     # no scaling. Output: 1023555
 --to=si       # International System of Units (SI) standard. Output 1.1M
 --to=iec      # International Electrotechnical Commission (IEC) standard. Output: 1.1Mi 
 --to=iec-i    # International Electrotechnical Commission (IEC) standard. Output: 1.1M

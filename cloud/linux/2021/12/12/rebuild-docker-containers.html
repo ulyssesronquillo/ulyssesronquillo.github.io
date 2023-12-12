@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>How to rebuild your application from scratch using Docker.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 docker-compose down -v
 docker rmi $(docker images -a -q)
 docker-compose up -d

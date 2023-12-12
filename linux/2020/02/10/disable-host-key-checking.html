@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>How to suppress typing “yes” when prompted by ssh.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 ssh-keygen -f "/home/user/.ssh/known_hosts" -R "yourdomain.com" 
 ssh -o "StrictHostKeyChecking=no" -i "keys/key.pem" ubuntu@domain.com
 </code></pre></div></div>

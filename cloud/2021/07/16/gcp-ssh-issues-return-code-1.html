@@ -42,7 +42,8 @@
 
 <p>Here’s the error when logging in.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssh your-server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute ssh your-server-name \
 --zone us-central1-a \
 --project your-project-id \
 --internal-ip &amp;
@@ -51,7 +52,8 @@ ERROR: (gcloud.compute.ssh) [C:\Program Files (x86)\Google\Cloud SDK\google-clou
 
 <p>Remove metadata.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances remove-metadata your-server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances remove-metadata your-server-name \
 --keys=enable-oslogin \
 --zone us-central1-a \
 --project your-project-id
@@ -60,7 +62,8 @@ Updated [https://www.googleapis.com/compute/v1/projects/your-project-id/zones/us
 
 <p>Run gcloud ssh again.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssh your-server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute ssh your-server-name \
 --zone us-central1-a \
 --project your-project-id \
 --internal-ip &amp;

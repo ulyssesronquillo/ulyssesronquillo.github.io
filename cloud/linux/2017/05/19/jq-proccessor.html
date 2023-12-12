@@ -46,7 +46,8 @@
 
 <p>In this example, we will use the AWS CLI to give us a list of running EC2 instances. We will then dump the output into a file called output.json. We will then filter out the “InstanceId” by running it through cat and the jq processor. We will then assign the result to a variable called INSTANCE, and then finally use that variable to associate our instance to an Elastic IP Address.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 describe-instances --filters Name=instance-state-name,Values=running &gt; output.json
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws ec2 describe-instances --filters Name=instance-state-name,Values=running &gt; output.json
 INSTANCEID=$(cat output.json | jq '.Reservations[].Instances[] | {InstanceId} | .InstanceId' --raw-output)
 aws ec2 associate-address --instance-id $INSTANCEID --public-ip xxx.xxx.xxx.xxx
 </code></pre></div></div>

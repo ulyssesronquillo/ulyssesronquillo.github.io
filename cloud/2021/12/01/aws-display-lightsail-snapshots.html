@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>How to display Lightsail snapshots.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 displaysnapshots () {
   echo '--------------------------------------------------------'
   aws lightsail get-instance-snapshots --query 'instanceSnapshots[].[name]' --output text | sort
@@ -51,7 +52,8 @@ displaysnapshots
 
 <p>Result.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>daily_ulyme_1637812801
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+daily_ulyme_1637812801
 daily_ulyme_1637899201
 daily_ulyme_1637985601
 daily_ulyme_1638072001
@@ -59,12 +61,14 @@ daily_ulyme_1638072001
 
 <p>Adding timestamp to the output.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  aws lightsail get-instance-snapshots --query 'instanceSnapshots[].[name,createdAt]' --output text | sort
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+  aws lightsail get-instance-snapshots --query 'instanceSnapshots[].[name,createdAt]' --output text | sort
 </code></pre></div></div>
 
 <p>Result.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>daily_ulyme_1637812801	1637812806.853
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+daily_ulyme_1637812801	1637812806.853
 daily_ulyme_1637899201	1637899208.285
 daily_ulyme_1637985601	1637985606.184
 daily_ulyme_1638072001	1638072006.579
@@ -72,12 +76,14 @@ daily_ulyme_1638072001	1638072006.579
 
 <p>Convert Unix timestamp to iso8601. Edit your ~/.aws/config file. Add this line.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cli_timestamp_format = iso8601
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cli_timestamp_format = iso8601
 </code></pre></div></div>
 
 <p>Result.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>daily_ulyme_1637812801	2021-11-25T04:00:06.853000+00:00
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+daily_ulyme_1637812801	2021-11-25T04:00:06.853000+00:00
 daily_ulyme_1637899201	2021-11-26T04:00:08.285000+00:00
 daily_ulyme_1637985601	2021-11-27T04:00:06.184000+00:00
 daily_ulyme_1638072001	2021-11-28T04:00:06.579000+00:00

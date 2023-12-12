@@ -42,10 +42,12 @@
 
 <p>Since my server runs on Ubuntu, the php.ini file is located in /etc/php/apache2/php.ini. You’ll need to change the following settings:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/php/apache2/php.ini
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo nano /etc/php/apache2/php.ini
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Edit the following entries to file size you want
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# Edit the following entries to file size you want
 upload_max_filesize = 32M
 post_max_size = 32M
 </code></pre></div></div>
@@ -54,7 +56,8 @@ post_max_size = 32M
 
 <p>The changes won’t take effect until you restart Apache.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service apache2 restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo service apache2 restart
 </code></pre></div></div>
 
       </div>

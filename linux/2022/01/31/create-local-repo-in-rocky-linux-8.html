@@ -42,14 +42,16 @@
 
 <p>Install nginx. Enable service.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dnf install nginx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+dnf install nginx
 systemctl enable nginx --now
 systemctl status nginx
 </code></pre></div></div>
 
 <p>Create repo.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dnf repolist
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+dnf repolist
 dnf install createrepo yum-utils
 mkdir /usr/share/nginx/html/repos
 mkdir -p /usr/share/nginx/html/repos/{baseos,appstream}
@@ -57,7 +59,8 @@ mkdir -p /usr/share/nginx/html/repos/{baseos,appstream}
 
 <p>Sync repos.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dnf reposync -g --delete -p /usr/share/nginx/html/repos/ --repoid=baseos --newest-only --download-metadata
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+dnf reposync -g --delete -p /usr/share/nginx/html/repos/ --repoid=baseos --newest-only --download-metadata
 dnf reposync -g --delete -p /usr/share/nginx/html/repos/ --repoid=appstream --newest-only --download-metadata
 createrepo /usr/share/nginx/html/repos/baseos/
 createrepo /usr/share/nginx/html/repos/appstream/
@@ -65,7 +68,8 @@ createrepo /usr/share/nginx/html/repos/appstream/
 
 <p>Create cron to sync repos daily. Create file called /etc/cron.daily/update-localrepos</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 /bin/dnf reposync -g --delete -p /usr/share/nginx/html/repos/ --repoid=baseos --newest-only --download-metadata
 /bin/dnf reposync -g --delete -p /usr/share/nginx/html/repos/ --repoid=appstream --newest-only --download-metadata
 /usr/bin/createrepo /usr/share/nginx/html/repos/baseos/
@@ -74,7 +78,8 @@ createrepo /usr/share/nginx/html/repos/appstream/
 
 <p>Create a file called /etc/nginx/conf.d/repos.conf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+server {
         listen   80;
         server_name  reposerver.example.com;
         root   /usr/share/nginx/html/repos;
@@ -87,12 +92,14 @@ createrepo /usr/share/nginx/html/repos/appstream/
 
 <p>Restart nginx.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart nginx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+systemctl restart nginx
 </code></pre></div></div>
 
 <p>Configure firewall and SELinux.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall-cmd --zone=public --permanent --add-service=http
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --reload
 getenforce
 chcon -Rt httpd_sys_content_t /usr/share/nginx/html/repos/
@@ -100,12 +107,14 @@ chcon -Rt httpd_sys_content_t /usr/share/nginx/html/repos/
 
 <p>Move existing repos to /tmp.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv /etc/yum.repos.d/*.repo /tmp/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mv /etc/yum.repos.d/*.repo /tmp/
 </code></pre></div></div>
 
 <p>Create a new repo called /etc/yum.repos.d/localrepo.repo</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[localrepo-base]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[localrepo-base]
 name=RockyLinux Base
 baseurl=http://reposerver.example.com/baseos/
 gpgcheck=0
@@ -119,18 +128,21 @@ enabled=1
 
 <p>Clean cache and check repolist.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dnf clean all 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+dnf clean all 
 dnf repolist
 </code></pre></div></div>
 
 <p>Edit /etc/hosts and add reposerver.example.com. Add it to other hosts.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "10.10.10.10        reposerver.example.com     reposerver" &gt;&gt; /etc/hosts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+echo "10.10.10.10        reposerver.example.com     reposerver" &gt;&gt; /etc/hosts
 </code></pre></div></div>
 
 <p>Finally, run yum install against the local repo. Installing lvm in this example.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install lvm2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum install lvm2
 </code></pre></div></div>
 
       </div>

@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>I decided to log my commands for good record keeping. Here’s my script.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 if [[ $# -eq 0 ]] ; then echo 'No arguments. Format: ./go.sh script.sh'; exit 0; fi
 log=log.txt
 echo '-------------------------------' &gt;&gt; $log
@@ -53,7 +54,8 @@ echo '---' &gt;&gt; $log
 
 <p>To run.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./go.sh script.sh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+./go.sh script.sh
 </code></pre></div></div>
 
 <p>Line by line explanation.</p>

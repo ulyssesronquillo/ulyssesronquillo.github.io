@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s a standard S3 policy to grant an IAM user access to a bucket within an AWS account. User is allowed to add, update, and delete objects. These 3 actions s3:ListAllMyBuckets, s3:GetBucketLocation, and s3:ListBucket are the additional permissions required to access the console. Also, the s3:PutObjectAcl and the s3:GetObjectAcl actions are required to be able to copy, cut, and paste objects within the console.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+{
    "Version":"2012-10-17",
    "Statement":[
       {

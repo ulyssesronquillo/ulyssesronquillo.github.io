@@ -48,7 +48,8 @@
   <li>Flush privileges to commit your changes.</li>
 </ol>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mariadb -u root -p
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mariadb -u root -p
 use mysql;
 create user 'wpro'@'localhost' identified by 'yourpassword';
 grant select on wordpress.* to 'wpro'@'localhost';
@@ -59,7 +60,8 @@ flush privileges;
 
 <p>Now edit your WordPress wp-config.php file. vim /var/www/wordpress/wp-config.php.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/** MySQL database username */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+/** MySQL database username */
 define('DB_USER', 'wpro');
 
 /** MySQL database password */

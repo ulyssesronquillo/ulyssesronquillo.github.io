@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Homebrew is the missing package manager for the Mac OS. It’s missing because the MacOS doesn’t have one. Homebrew is the MacOS equivalent of apt-get or aptitude in Ubuntu Linux. With Homebrew installed on your MacOS, you can easily install and uninstall programs, packages, and utilities via the command line. For example, to install the wget, apache, git and ffmpeg, you can run the following commands from the Terminal.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew install wget
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ brew install wget
 $ brew install apache
 $ brew install git
 $ brew install ffmpeg
@@ -48,12 +49,14 @@ $ brew install ffmpeg
 
 <p>If you don’t have Homebrew installed, run the following command from the Terminal.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 </code></pre></div></div>
 
 <p>If for some unexplained reason you’re having problems with Homebrew, you can uninstall and reinstall it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rm -rf /usr/local/Cellar /usr/local/.git &amp;&amp; brew cleanup
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ rm -rf /usr/local/Cellar /usr/local/.git &amp;&amp; brew cleanup
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 </code></pre></div></div>
 

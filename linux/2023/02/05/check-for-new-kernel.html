@@ -42,29 +42,34 @@
 
 <p>Redhat, Centos, Fedora, Rocky</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -qa kernel
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+rpm -qa kernel
 yum list installed kernel
 </code></pre></div></div>
 
 <p>Arch Linux</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman -Q | grep linux
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+pacman -Q | grep linux
 </code></pre></div></div>
 
 <p>Fedora</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dnf list installed kernel
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+dnf list installed kernel
 </code></pre></div></div>
 
 <p>SUSE</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -qa | grep -i kernel
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+rpm -qa | grep -i kernel
 zypper search -i kernel
 </code></pre></div></div>
 
 <p>Debian, Ubuntu, Mint</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dpkg --list | grep linux-image
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+dpkg --list | grep linux-image
 </code></pre></div></div>
 
       </div>

@@ -42,7 +42,8 @@
 
 <p>Login as root, otherwise use sudo for all commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add-apt-repository ppa:ondrej/php
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# use 3rd party ppa repo
+add-apt-repository ppa:ondrej/php
 apt -y update
 apt -y upgrade
 # install php-core
@@ -64,7 +65,8 @@ apt purge php7.0 libapache2-mod-php7.0
 
 <p>Finally, run update on more time to get all the latest updates.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt -y upgrade
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;apt -y update
+apt -y upgrade
 apt -y autoremove
 apt-get --with-new-pkgs upgrade
 </code></pre></div></div>

@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s how to convert multiple files to UTF-8 format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for file in *.csv; do
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+for file in *.csv; do
     iconv -f ascii -t utf-8 "$file" -o "${file%.txt}.utf8.csv"
 done
 </code></pre></div></div>

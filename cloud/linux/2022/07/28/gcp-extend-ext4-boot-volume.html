@@ -40,12 +40,14 @@
       <div class="wrapper">
         <p>Here’s how to extend an ext4 boot volume.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks resize DISK_NAME --size DISK_SIZE --zone ZONE --project PROJECTID
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute disks resize DISK_NAME --size DISK_SIZE --zone ZONE --project PROJECTID
 </code></pre></div></div>
 
 <p>Resize the file system. Example / is on sda3.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>growpart /dev/sda 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+growpart /dev/sda 3
 resize2fs /dev/sda3
 </code></pre></div></div>
 

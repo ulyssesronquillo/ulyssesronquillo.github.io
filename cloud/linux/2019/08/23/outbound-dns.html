@@ -44,12 +44,14 @@
 
 <p>Install Unbound DNS</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install unbound
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum install unbound
 </code></pre></div></div>
 
 <p>Configuration: /etc/outbound/outbound.conf</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+server:
         interface: 0.0.0.0
         access-control: 0.0.0.0/0 allow
         local-zone: "10.in-addr.arpa." nodefault
@@ -67,7 +69,8 @@ forward-zone:
 
 <p>Unbound Start, Stop, Restart and Status</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;service outbound start | stop | restart | status
+</code></pre></div></div>
 
       </div>
     </main><footer class="site-footer h-card">

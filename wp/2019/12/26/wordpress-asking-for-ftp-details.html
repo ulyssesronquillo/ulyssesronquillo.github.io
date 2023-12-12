@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>If WordPress is asking for FTP details when you’re trying to update a theme, plugin, or WordPress itself, you will need to edit your wp-config.php file to add the following line to your configuration.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;define('FS_METHOD','direct');
+</code></pre></div></div>
 
 <p>Save the file and try updating again. It shouldn’t ask you for FTP details.</p>
 

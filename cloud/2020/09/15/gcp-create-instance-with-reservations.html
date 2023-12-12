@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s how to create an instance with CUD (committed used discounts) reservations.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--no-address \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances create instance-name \
+--no-address \
 --private-network-ip 10.0.0.24 \
 --source-machine-image=projects/project-id/global/machineImages/image-name \
 --subnet=https://www.googleapis.com/compute/v1/projects/your-project/regions/us-central1/subnetworks/your-sub-network \

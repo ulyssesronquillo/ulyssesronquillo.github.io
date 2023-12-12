@@ -42,7 +42,8 @@
 
 <p>With that said, let’s build one.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  --project=[PROJECT_ID] \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud filestore instances create nfs-server \
+  --project=[PROJECT_ID] \
   --zone=us-central1-c \
   --tier=STANDARD \
   --file-share=name="vol1",capacity=1TB \
@@ -51,7 +52,8 @@
 
 <p>How to mount the filestore on clients.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get -y install nfs-common
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;sudo apt-get -y update
+sudo apt-get -y install nfs-common
 sudo mkdir /mnt/test
 sudo mount 10.0.0.2:/vol1 /mnt/test
 sudo chmod go+rw /mnt/test
@@ -59,7 +61,8 @@ sudo chmod go+rw /mnt/test
 
 <p>Increase capacity to 3TB.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  --project=myproject 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud filestore instances update nfs-server 
+  --project=myproject 
   --zone=us-central1-c 
   --file-share=name="vol1",capacity=3TB
 </code></pre></div></div>

@@ -42,19 +42,23 @@
 
 <p>Change the group name to /var/www.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;sudo chgrp www-data /var/www
+</code></pre></div></div>
 
 <p>Make it writeable.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;sudo chmod 775 /var/www
+</code></pre></div></div>
 
 <p>Set the GID for www-data for all sub-folders.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;sudo chmod g+s /var/www
+</code></pre></div></div>
 
 <p>Finally, add your user to www-data group.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;sudo usermod -a -G www-data username
+</code></pre></div></div>
 
 <p>This will now allow you to use a regular user account via FTP or SSH with write permissions to the /var/www directory. This is much more secure way than using the www-data user account.</p>
 

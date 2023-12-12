@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s the IAM policy you’ll need to change Route 53 DNS records. Substitute with your own hosted zone id.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   "Statement":[{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;{
+   "Statement":[{
       "Effect":"Allow",
       "Action":["route53:ChangeResourceRecordSets"],
       "Resource":"arn:aws:route53:::hostedzone/*HOSTEDZONEID*"

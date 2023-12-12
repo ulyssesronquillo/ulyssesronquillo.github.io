@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>How to create scheduled snapshots in GCP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute resource-policies create snapshot-schedule hourly \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute resource-policies create snapshot-schedule hourly \
 --description "my hourly schedule" \
 --max-retention-days 7 \
 --start-time 00:00 \
@@ -52,24 +53,28 @@
 
 <p>Add snapshot schedule to a disk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks add-resource-policies disk-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute disks add-resource-policies disk-name \
 --resource-policies hourly \
 --zone us-central1-a
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create disk-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute disks create disk-name \
 --resource-policies hourly \
 --zone us-central1-a
 </code></pre></div></div>
 
 <p>List snapshot schedules.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute resource-policies list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute resource-policies list
 </code></pre></div></div>
 
 <p>Describe snapshot schedule.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute resource-policies describe hourly
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute resource-policies describe hourly
 </code></pre></div></div>
 
       </div>

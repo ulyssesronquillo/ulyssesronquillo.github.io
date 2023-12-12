@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s how to copy multiple files recursively using AWS CLI. The S3 cp command by default only copies a single file. To copy multiple files, you have to use the –recursive option along with –exclude and –include. In this example, we will exclude every file, but include only files with a json extension.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws s3 cp /tmp/folder s3://bucket/folder \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws s3 cp /tmp/folder s3://bucket/folder \
   --recursive
   --exclude "*"
   --include "*.json"
@@ -48,7 +49,8 @@
 
 <p>The result:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>upload: ./abc.json to s3://bucket/folder/abc.json    
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+upload: ./abc.json to s3://bucket/folder/abc.json    
 upload: ./xyz.json to s3://bucket/folder/xyz.json
 </code></pre></div></div>
 

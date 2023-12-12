@@ -42,7 +42,8 @@
 
 <p>How to record your camera to a video file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ffmpeg -f avfoundation -i "2:0" -t 00:00:15 -s 1280x720 -r 30 -b:v 3500k -b:a 128k out.mpg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ ffmpeg -f avfoundation -i "1:0" -t 00:00:15 -s 1280x720 -r 30 -b:v 3500k -b:a 128k out.mpg
+$ ffmpeg -f avfoundation -i "2:0" -t 00:00:15 -s 1280x720 -r 30 -b:v 3500k -b:a 128k out.mpg
 </code></pre></div></div>
 
 <p>-i = “video:audio”<br />
@@ -53,20 +54,23 @@
 
 <p>How to stream a video file to a RTMP server</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ffmpeg -re -i input.mp4 -vcodec libx264 -preset veryfast -maxrate 1500k 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ ffmpeg -re -i input.mp4 -vcodec libx264 -preset veryfast -maxrate 1500k 
   -c:a aac -b:a 128k -ac 2 -ar 44100 -f flv rtmp://yourserver:1935/live/mystream
 </code></pre></div></div>
 
 <p>How to live stream your screen monitor to a RTMP server</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ffmpeg -f avfoundation -i "2:0" -vcodec libx264 -preset ultrafast 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ ffmpeg -f avfoundation -i "2:0" -vcodec libx264 -preset ultrafast 
   -pix_fmt yuv420p -s 1280x720 -r 30 -b:v 1500k -bufsize 1500k -maxrate 7000k 
   -c:a aac -b:a 128k -ac 2 -ar 44100 -f flv rtmp://yourserver:1935/live/mystream
 </code></pre></div></div>
 
 <p>How to stream your camera to a RTMP server</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ffmpeg -f avfoundation -i "1:0" -vcodec libx264 -preset ultrafast 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ ffmpeg -f avfoundation -i "1:0" -vcodec libx264 -preset ultrafast 
   -pix_fmt yuv420p -s 1280x720 -r 30 -b:v 1500k -bufsize 1500k -maxrate 7000k 
   -c:a aac -b:a 128k -ac 2 -ar 44100 -f flv rtmp://yourserver:1935/live/mystream
 </code></pre></div></div>

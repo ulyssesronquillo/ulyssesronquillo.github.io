@@ -40,13 +40,15 @@
       <div class="wrapper">
         <p>Who is accessing a particular directory? There’s a Linux command called fuser which will tell you who’s running processes in that directory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fuser /etc/apache/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+fuser /etc/apache/
 fuser /home/john/
 </code></pre></div></div>
 
 <p>Verbose.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fuser /data/exports/ -v
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+fuser /data/exports/ -v
 </code></pre></div></div>
 
 <p>Check out the <a href="https://www.man7.org/linux/man-pages/man1/fuser.1.html">fuser</a> man page.</p>

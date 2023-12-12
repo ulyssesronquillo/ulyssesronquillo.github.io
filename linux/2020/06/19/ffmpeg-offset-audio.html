@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>If your audio is out of sync, you can fix using ffmpeg.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-i livestream.mp4 \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ffmpeg -i source.mp4 \
+-i livestream.mp4 \
 -map 0:0 -map 1:1 \
 -acodec copy \
 -vcodec copy \

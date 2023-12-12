@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>If you have a ton of EC2 instances, one way to get results quickly is to run to use AWS CLI such as “describe-instances.” Here’s an example on how to get a list of instances with a tag name equal to some value. In addition, you limit the display only results you want displayed.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--query 'Reservations[].Instances[].Tags[?Key==`Name`].Value' \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ aws ec2 describe-instances \
+--query 'Reservations[].Instances[].Tags[?Key==`Name`].Value' \
 --filter Name=tag:Project,Values=web \
 --region us-east-1 \
 --profile default \

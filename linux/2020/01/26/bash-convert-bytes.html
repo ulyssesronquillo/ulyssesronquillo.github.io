@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s a function to convert bytes into kilo, mega, giga, tera up to zeta bytes.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bytes=$credits
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;function convert_bytes {
+    bytes=$credits
     b=${bytes:-0}; d=''; s=0; S=(Bytes {K,M,G,T,E,P,Y,Z}B)
     while ((b &gt; 1024)); do
         d="$(printf ".%02d" $((b % 1000 * 100 / 1000)))"
@@ -56,7 +57,8 @@ convert_bytes $credits
 
 <p>Result is:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2.30 TB
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;2308974418330
+2.30 TB
 </code></pre></div></div>
 
       </div>

@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Moving a GCP instance to another zone is actually much simpler than initially thought. It’s just a single gcloud command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--zone us-central1-a \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances move instance-name \
+--zone us-central1-a \
 --destination-zone us-central1-b
 </code></pre></div></div>
 

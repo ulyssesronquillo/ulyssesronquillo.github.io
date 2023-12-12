@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s my Bash script to login to both AWS and GCP. It has a little bit of intelligence. It checks if you are already logged in, and skips if you are. If not logged in, it will open up the cloud web console which is protected by Okta. The script has been redacted and replace with generic usernames and web pages for security reasons.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 ## CHECK IF LOGGED IN TO GCP 
 read -p "Login to GCP? (y/n) : " login_gcp
 if [[ $login_gcp = "y" ]]; then

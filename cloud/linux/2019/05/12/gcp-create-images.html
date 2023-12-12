@@ -48,7 +48,8 @@
 
 <h3 id="create-from-disk">Create From Disk</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute images create the-new-image-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute images create the-new-image-name \
    --source-disk the-source-boot-disk \
    --source-disk-zone us-central1-a \
    --family the-image-family \
@@ -57,7 +58,8 @@
 
 <h3 id="create-from-image">Create From Image</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute images create the-new-image-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute images create the-new-image-name \
   --source-image the-source-image \
   --source-image-project the-project-where-the-image-is-located \
   --family the-image-family
@@ -65,7 +67,8 @@
 
 <h3 id="create-from-snapshot">Create From Snapshot</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute images create the-new-image-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute images create the-new-image-name \
   --source-snapshot the-source-snapshot
 </code></pre></div></div>
 

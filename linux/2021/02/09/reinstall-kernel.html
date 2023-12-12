@@ -42,14 +42,16 @@
 
 <p>Find the latest kernel.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -qa kernel
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+rpm -qa kernel
 kernel-3.10.0-1160.6.1.el7.x86_64
 kernel-3.10.0-1160.11.1.el7.x86_64
 </code></pre></div></div>
 
 <p>Remove the kernel first, then reinstall.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum remove kernel-3.10.0-1160.6.1.el7.x86_64
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum remove kernel-3.10.0-1160.6.1.el7.x86_64
 yum install kernel-3.10.0-1160.6.1.el7.x86_64
 </code></pre></div></div>
 

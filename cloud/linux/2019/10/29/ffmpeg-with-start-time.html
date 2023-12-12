@@ -42,11 +42,13 @@
 
 <p>Here’s how to set the start time using -ss option and -to for the duration. Video will start at 1 min 23 secs and play until 2 mins.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ffmpeg -ss 00:01:23 -i video.mp4 -to 00:02:00 -c copy -copyts cut.mp4
+</code></pre></div></div>
 
 <p>Here’s how to start time to start the video at 1 min 23 sec for RTMP streaming. Please note, the start time option needs to be before the input file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-re -i $1 -acodec libmp3lame -ar 44100 -b:a 128k \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ffmpeg -ss 00:01:23 \
+-re -i $1 -acodec libmp3lame -ar 44100 -b:a 128k \
 -pix_fmt yuv420p -profile:v baseline -s 1280x720 -bufsize 6000k \
 -vb 1200k -maxrate 1500k -deinterlace -vcodec libx264           \
 -preset veryfast -g 30 -r 30 -f flv                            \

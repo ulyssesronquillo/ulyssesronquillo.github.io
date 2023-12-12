@@ -40,13 +40,15 @@
       <div class="wrapper">
         <p>Keep your disks when a VM is deleted.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances set-disk-auto-delete server --no-auto-delete --disk=server-disk-1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances set-disk-auto-delete server --no-auto-delete --disk=server-disk-1
 gcloud compute instances set-disk-auto-delete server --no-auto-delete --disk=server-disk-2
 </code></pre></div></div>
 
 <p>To delete.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances set-disk-auto-delete server --auto-delete --disk=server-disk-1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances set-disk-auto-delete server --auto-delete --disk=server-disk-1
 gcloud compute instances set-disk-auto-delete server --auto-delete --disk=server-disk-2
 </code></pre></div></div>
 

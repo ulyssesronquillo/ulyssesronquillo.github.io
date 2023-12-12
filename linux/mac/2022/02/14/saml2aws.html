@@ -42,23 +42,27 @@
 
 <p>Install on Mac.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install saml2aws
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+brew install saml2aws
 saml2aws --version
 </code></pre></div></div>
 
 <p>Configure. Provide information.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>saml2aws configure
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+saml2aws configure
 </code></pre></div></div>
 
 <p>It will create a ~/.saml2aws config file. Set session to 8 hours.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws_session_duration    = 28800
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws_session_duration    = 28800
 </code></pre></div></div>
 
 <p>Login.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>saml2aws login
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+saml2aws login
 </code></pre></div></div>
 
 <p>After authentication and/or MFA, your ~/.aws/credentials will be updated.</p>

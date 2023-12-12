@@ -40,21 +40,24 @@
       <div class="wrapper">
         <p>You can run MySQL commands from the terminal by using -e switch. Here are a few examples.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u username -p -e "create database mydb"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mysql -u username -p -e "create database mydb"
 mysql -u username -p -e "use mydb"
 mysql -u username -p database -e "select * from mytable"
 </code></pre></div></div>
 
 <p>If you have .mycnf configured, you can omit the username and password.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -e "create database mydb"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mysql -e "create database mydb"
 mysql -e "use mydb"
 mysql -e "select * from mytable"
 </code></pre></div></div>
 
 <p>To run multiple commands from a single line, separate the commands using a semicolon.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -e "create database somedb; use mydb; select * from mytable;"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mysql -e "create database somedb; use mydb; select * from mytable;"
 </code></pre></div></div>
 
       </div>

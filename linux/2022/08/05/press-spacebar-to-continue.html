@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s a little snippet of Bash code that waits for spacebar to be pressed to continue.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function spacebar {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+function spacebar {
   echo 'Press spacebar to continue. Press Ctrl-C to exit.'
   stty -echo &gt; /dev/null
   until read -r -n 1 -t 0.001 &amp;&amp; [ "$REPLY" = ' ' ]; do abc=''; done
@@ -52,7 +53,8 @@ spacebar
 
 <p>Output</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting upgrade
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+Starting upgrade
 Press spacebar to continue. Or Ctrl-C to exit.
 </code></pre></div></div>
 

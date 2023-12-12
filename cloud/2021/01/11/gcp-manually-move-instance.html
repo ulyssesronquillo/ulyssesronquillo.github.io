@@ -42,26 +42,31 @@
 
 <p>Get a list of compute and IP reservations.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute reservations list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute addresses list
+gcloud compute reservations list
 </code></pre></div></div>
 
 <p>Make reservations.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute reservations create centos-us-central1-b --machine-type=n1-standard-1 --vm-count=1 --zone us-central1-b
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute addresses create centos-ip-reservation --addresses 10.128.15.216 --region us-central1 --subnet default
+gcloud compute reservations create centos-us-central1-b --machine-type=n1-standard-1 --vm-count=1 --zone us-central1-b
 </code></pre></div></div>
 
 <p>Create a machine image.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta compute machine-images create centos-image-00 --source-instance centos
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances stop centos
+gcloud beta compute machine-images create centos-image-00 --source-instance centos
 </code></pre></div></div>
 
 <p>Delete original instance.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances delete centos
+</code></pre></div></div>
 
 <p>Create an instance from image in the new zone. Use the compute and ip reservations previously made.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--no-address \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud beta compute instances create centos \
+--no-address \
 --private-network-ip 10.128.15.216 \
 --source-machine-image=centos-image-00 \
 --subnet=https://www.googleapis.com/compute/v1/projects/airy-totality-151318/regions/us-central1/subnetworks/default \
@@ -73,7 +78,8 @@
 
 <p>Finally, clean it up once you are done.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute addresses delete centos-ip-reservation 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances delete centos --zone us-central1-b
+gcloud compute addresses delete centos-ip-reservation 
 gcloud compute reservations delete centos-us-central1-b --zone us-central1-b
 gcloud beta compute machine-images delete centos-image-00
 </code></pre></div></div>

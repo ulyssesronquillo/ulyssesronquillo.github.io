@@ -40,19 +40,22 @@
       <div class="wrapper">
         <p>I recently had a problem with an Ubuntu server that was running MySQL. None of my applications were connecting to the database. After poking around in the server, I realized the database doesn’t seem to be running at all. I tried restarting it from the Terminal, but I ran into this error message.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR 2003 (HY000): Can't connect to MySQL server on '10.10.10.110' (111)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+ERROR 2003 (HY000): Can't connect to MySQL server on '10.10.10.110' (111)
 </code></pre></div></div>
 
 <p>As it turns out, the Ubuntu server picked up a new IP address of 10.10.10.113 from the last reboot. I went ahead and assigned a static IP address to the server of 10.10.10.200. I should have done it initially when I setup the server. If you need help setting up a static IP address on the Ubuntu server, here are the instructions on <a href="http://ulyssesonline.com/ubuntu/2007/06/28/change-ip-address/">how to set Ubuntu server to static IP address</a>.</p>
 
 <p>I looked at the MySQL configuration file called /etc/mysql/my.cnf, the bind-address was manually set to the old IP address of 10.10.10.110. So, edited the file and entered the new IP address of 10.10.10.200.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bind-address = 10.10.10.200
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+bind-address = 10.10.10.200
 </code></pre></div></div>
 
 <p>Finally, I restarted the network as well as started the MySQL server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo /etc/init.d/networking restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+sudo /etc/init.d/networking restart
 sudo /etc/init.d/mysql start
 </code></pre></div></div>
 

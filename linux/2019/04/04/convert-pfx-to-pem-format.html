@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>SSL certificates comes in multiple formats. Some providers will hand you over certificates in PFX format which comes in a single file. If you need to import it to AWS Certificate Manager, you will need to convert it from PFX to PEM format. The following set of commands uses OpenSSL and pkcs12 to convert a SSL certificate from PFX to PEM format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl pkcs12 -in cert.pfx -nocerts -out key.pem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+openssl pkcs12 -in cert.pfx -nocerts -out key.pem
 openssl rsa -in key.pem -out server.key
 openssl pkcs12 -in cert.pfx -clcerts -nokeys -out cert.pem
 openssl pkcs12 -in cert.pfx -nodes -nokeys -out chain.pem

@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s how to list GCP Scheduled Snapshots older than 14 days. projectIds.txt contains a list of projects.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 ts=$(date +%Y%m%d-%H%M%S)
 old=$(date -v -14d +%Y-%m-%dT%H:%M:%S)
 log="scheduled-snapshots-logs-$ts"

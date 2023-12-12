@@ -42,7 +42,8 @@
 
 <p>Copy directory structure of DIR1 to DIR2.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find /DIR1 -type d &gt; /tmp/dirs.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+find /DIR1 -type d &gt; /tmp/dirs.txt
 sed -i 's/DIR1/DIR2/' /tmp/dirs.txt 
 xargs mkdir -p 
 </code></pre></div></div>

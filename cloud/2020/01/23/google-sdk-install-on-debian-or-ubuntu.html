@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s the script.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  https://packages.cloud.google.com/apt cloud-sdk main" | \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] \
+  https://packages.cloud.google.com/apt cloud-sdk main" | \
   sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 sudo apt-get install apt-transport-https ca-certificates
 sudo curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | \

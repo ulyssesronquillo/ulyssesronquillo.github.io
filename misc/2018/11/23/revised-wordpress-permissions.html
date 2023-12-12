@@ -40,7 +40,8 @@
       <div class="wrapper">
         <p>Here’s my revised WordPress permissions. Originally, I had it set to:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ find /var/www -type d -exec sudo chmod 755 {} \;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo chown -R www-data:www-data /var/www
+$ find /var/www -type d -exec sudo chmod 755 {} \;
 $ find /var/www -type f -exec sudo chmod 644 {} \;
 </code></pre></div></div>
 
@@ -48,20 +49,23 @@ $ find /var/www -type f -exec sudo chmod 644 {} \;
 
 <p>However, here’s the issue. When you try to FTP as “ulysses” user, it won’t let you overwrite files, because it doesn’t have write access to the “/var/www” directory since it’s owned by www-data. To fix the permission issue, first you have to add the “ulysses” user to the www-data group. See below. In addition, you’ll need to change ownership of the files and directories to the “ulysses” user and give “ulysses” user full access to the files. Change file permissions to 775, and directory permissions to 664.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo chown -R ulysses:www-data /var/www
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo usermod -a -G www-data ulysses
+$ sudo chown -R ulysses:www-data /var/www
 $ find /var/www -type d -exec sudo chmod 775 {} \;
 $ find /var/www -type f -exec sudo chmod 664 {} \;
 </code></pre></div></div>
 
 <p>Everything is all and good, until you try to add a plugin within the WordPress console. It’s now asking for your FTP credentials which most people don’t have setup. The simple fix here is to the following line in your wp-config.php file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Add the following ...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ vi /var/www/html/wp-config.php
+# Add the following ...
 define('FS_METHOD', 'direct');
 </code></pre></div></div>
 
 <p>While you are at it, you should also change wp-config.php permissions to 660. Some people recommend 600, but then you’ll end up with the same permission issue as before, user “ulysses” will not have access to the wp-config.php file. So 660 is the preferred value.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo chmod 660 /var/www/html/wp-config.php
+</code></pre></div></div>
 
 <p>That should take care of everything.</p>
 

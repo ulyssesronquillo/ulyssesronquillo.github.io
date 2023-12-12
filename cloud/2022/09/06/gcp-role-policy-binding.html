@@ -40,12 +40,14 @@
       <div class="wrapper">
         <p>How to display the policy binding.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances get-iam-policy SERVER --project=PROJECT_ID --zone=ZONE
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances get-iam-policy SERVER --project=PROJECT_ID --zone=ZONE
 </code></pre></div></div>
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># There is no binding policy
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# There is no binding policy
 etag: ACAB
 
 # There is a binding policy
@@ -59,7 +61,8 @@ version: 1
 
 <p>Add a role binding policy</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-iam-policy-binding SERVER \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances add-iam-policy-binding SERVER \
 --project=PROJECT_ID \
 --zone=ZONE \
 --member=serviceAccount:SERVICEACCOUNT \
@@ -68,7 +71,8 @@ version: 1
 
 <p>Remove a role binding policy</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances remove-iam-policy-binding SERVER \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances remove-iam-policy-binding SERVER \
 --project=PROJECT_ID \
 --zone=ZONE \
 --member=serviceAccount:SERVICEACCOUNT \

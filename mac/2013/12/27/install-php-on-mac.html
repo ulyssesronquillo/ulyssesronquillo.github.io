@@ -48,22 +48,26 @@
 
 <p>PHP is already installed. We just have to enable it. Edit the ‘<strong>/etc/apache2/httpd.conf</strong>‘ file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /etc/apache2/httpd.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ sudo nano /etc/apache2/httpd.conf
 </code></pre></div></div>
 
 <p>Uncomment or delete the ‘#’ sign for the line that contains the text below.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LoadModule php5_module libexec/apache2/libphp5.so
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+LoadModule php5_module libexec/apache2/libphp5.so
 </code></pre></div></div>
 
 <p>Restart Apache</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apachectl restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$ sudo apachectl restart
 </code></pre></div></div>
 
 <p>Place a index.php file that contains the following in your web server root.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php phpinfo(); ??&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+&lt;?php phpinfo(); ??&gt;
 </code></pre></div></div>
 
 <p>If you see PHP info and stats, that means PHP is working! If you see the code, it means PHP is not working.</p>

@@ -42,7 +42,8 @@
 
 <p>To create a standard link, all you have to do is code this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=anchor('blog /index', 'Home');?&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+=anchor('blog /index', 'Home');?&gt;
 
 // Output is
 &lt;a href="http://yourdomain.com/blog/index.php"&gt;Home&lt;/a&gt;
@@ -50,7 +51,8 @@
 
 <p>If you want to add a Javascript popup that will ask you “Are you sure?” before proceeding to the link, then all you have to do is add a third option in the anchor function like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php $onclick = array('onclick'=?&gt;"return confirm('Are you sure?')");?&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+&lt;?php $onclick = array('onclick'=?&gt;"return confirm('Are you sure?')");?&gt;
 =anchor('blog /index', 'Home', $onclick);?&gt;
 
 // Output is
