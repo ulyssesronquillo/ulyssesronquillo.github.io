@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Lastlog displays the latest login information of all users in the system. You can’t view the lastlog file since it’s not an ascii file. You’ll need to run the actual command to view what’s in it. The program will spit out a list that may be longer than your terminal buffer. In that case, it’s best to pipe the output to “more” or better yet, use the “grep” command to isolate the user.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lastlog | more
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+lastlog | more
 lastlog | grep johndoe
 </code></pre></div></div>
 

@@ -50,22 +50,26 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s another way of setting your server’s timezone. See all the options under North America.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>timedatectl list-timezones | grep -i America
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+timedatectl list-timezones | grep -i America
 </code></pre></div></div>
 
 <p>Set timezone.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>timedatectl set-timezone America/New_York
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+timedatectl set-timezone America/New_York
 </code></pre></div></div>
 
 <p>To check.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>date
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+date
 </code></pre></div></div>
 
 <p>Restart cron if needed.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart cron.service
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+systemctl restart cron.service
 </code></pre></div></div>
 
   </div><a class="u-url" href="/timedatectl" hidden></a>

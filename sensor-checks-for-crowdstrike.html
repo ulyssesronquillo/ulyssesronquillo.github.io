@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s the Crowdstrike Falcon Sensor checks.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if [ -e /etc/redhat-release ] ; then
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;#!/bin/bash
+if [ -e /etc/redhat-release ] ; then
   if egrep -q 'Ootpa|CentOS Linux release 8' /etc/redhat-release ; then
     OSver="el8"
   elif egrep -q 'Maipo|CentOS Linux release 7' /etc/redhat-release ; then

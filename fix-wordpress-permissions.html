@@ -61,7 +61,8 @@ Files = 644</p>
 
 <p>Assuming you’re logged in as normal user. Use sudo to execute commands as superuser.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd /var/www/
 sudo wget https://wordpress.org/latest.tar.gz
 sudo tar -xzvf latest.tar.gz
 sudo chown -R www-data:www-data wordpress
@@ -71,7 +72,8 @@ sudo chown -R www-data:www-data wordpress
 
 <p>If your permissions are wrong, then perform the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo find /var/www/wordpress/ -type d -exec chmod 755 {} \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo find /var/www/wordpress/ -type d -exec chmod 755 {} \
 sudo find /var/www/wordpress/ -type f -exec chmod 644 {} \
 </code></pre></div></div>
 

@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>How to find a boot disk from an instance.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances describe servername \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances describe servername \
 --format='get(disks[0].source)' \
 --zone=us-central1-c \
 --project project-id
@@ -58,7 +59,8 @@
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.googleapis.com/compute/v1/projects/project-id/zones/us-central1-f/disks/servername-boot
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+https://www.googleapis.com/compute/v1/projects/project-id/zones/us-central1-f/disks/servername-boot
 </code></pre></div></div>
 
   </div><a class="u-url" href="/gcp-find-instance-boot-disk" hidden></a>

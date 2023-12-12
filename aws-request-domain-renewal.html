@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Occassionally, AWS requires validation of your domain via email message. Here’s the command to send a request.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws acm resend-validation-email \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws acm resend-validation-email \
 --certificate-arn arn:aws:acm:us-east-1:xxxxxxxxxxxx:certificate/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx \
 --domain yourdomain.com \
 --validation-domain yourdomain.com

@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>When running awscli as a user, I’m getting a permissioned denied.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[user@servername ~]$ aws s3 ls
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[user@servername ~]$ aws s3 ls
 Traceback (most recent call last):
   File "/home/db2inst1/.local/bin/aws", line 19, in &lt;module&gt;
     import awscli.clidriver
@@ -70,18 +71,21 @@ ImportError: PyCapsule_Import could not import module "pyexpat"
 
 <p>This is a permission error with the directory where the awscli is installed.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ which aws 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ which aws 
 /usr/local/bin/aws
 </code></pre></div></div>
 
 <p>I ran chmod to fix the directory permission.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod -R 755 /usr/local/aws-cli/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+chmod -R 755 /usr/local/aws-cli/
 </code></pre></div></div>
 
 <p>The error is now gone.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ aws s3 ls
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ aws s3 ls
 bucket-1
 bucket-2
 bucket-3

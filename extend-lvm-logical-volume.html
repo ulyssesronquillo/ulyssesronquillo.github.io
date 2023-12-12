@@ -52,29 +52,36 @@
 
 <p>Extend the physical drive.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks resize data-drive --size=40GB
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute disks resize data-drive --size=40GB
 </code></pre></div></div>
 
 <p>SSH to a server and extend the physical volume.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pvresize /dev/sdb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ pvresize /dev/sdb
   Physical volume "/dev/sdb" changed
   1 physical volume(s) resized or updated / 0 physical volume(s) not resized
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pvs
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ pvs
   PV         VG Fmt  Attr PSize   PFree 
   /dev/sdb   vg lvm2 a--  
+&lt;pre lang="bash"&gt;
 $ vgs
   VG #PV #LV #SN Attr   VSize   VFree 
   vg   1   1   0 wz--n- 
+&lt;pre lang="bash"&gt;
 $ lvs
   LV   VG Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   data vg -wi-ao---- 
 &lt;p&gt;Extend the logical volume.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 $ lvresize -l +100%FREE /dev/vg/data
   Size of logical volume vg/data changed from 
 &lt;p&gt;Check the volume size.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 $ lsblk
 NAME      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda         8:0    0   20G  0 disk 
@@ -84,6 +91,7 @@ sdb         8:16   0   40G  0 disk
 └─vg-data 253:0    0   40G  0 lvm  /mnt
 
 &lt;p&gt;Still at 30GB.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 $ df -Th
 Filesystem          Type      Size  Used Avail Use% Mounted on
 devtmpfs            devtmpfs  385M     0  385M   0% /dev
@@ -96,6 +104,7 @@ tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
 tmpfs               tmpfs      81M     0   81M   0% /run/user/1001
 
 &lt;p&gt;Extend the file system.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 $ xfs_growfs /dev/vg/data
 meta-data=/dev/mapper/vg-data    isize=512    agcount=12, agsize=655360 blks
          =                       sectsz=4096  attr=2, projid32bit=1
@@ -110,6 +119,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 data blocks changed from 7863296 to 10484736
 
 &lt;p&gt;Let's check again.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 $ df -Th
 Filesystem          Type      Size  Used Avail Use% Mounted on
 devtmpfs            devtmpfs  385M     0  385M   0% /dev

@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s a handy little script that has multiple applications to calculate date from a year ago.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 now=$(date +%Y%m%d-%H%M%S)
 # mac os
 year_old=$(date -v-1y +%Y%m%d-%H%M%S) 
@@ -64,7 +65,8 @@ echo $year_old
 
 <p>Results</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>20230618-084940
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+20230618-084940
 20220618-084940
 </code></pre></div></div>
 

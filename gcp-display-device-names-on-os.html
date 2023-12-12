@@ -50,14 +50,16 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>In GCP console you can see the VM’s Device Names. In this case, it’s boot and persistent-disk-1.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Name		          Device name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+Name		          Device name
 server-boot               boot	
 server-data               persistent-disk-1	
 </code></pre></div></div>
 
 <p>To display the volume names on the OS, run this command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -l /dev/disk/by-id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ ls -l /dev/disk/by-id
 total 0
 lrwxrwxrwx. 1 root root  9 Aug  2 01:12 google-boot -&gt; ../../sda
 lrwxrwxrwx. 1 root root 10 Aug  2 01:12 google-boot-part1 -&gt; ../../sda1

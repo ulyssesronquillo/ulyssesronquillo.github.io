@@ -50,24 +50,28 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>To see which disk is available for swap disk use.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>blkid
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;lsblk
+blkid
 df -Th
 </code></pre></div></div>
 
 <p>Format the disk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;fdisk /dev/xvda
+</code></pre></div></div>
 
 <p>Create a swap disk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo swapon -s /dev/xvda
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;sudo mkswap -f /dev/xvda
+sudo swapon -s /dev/xvda
 # or
 sudo swapon /dev/xvda
 </code></pre></div></div>
 
 <p>Check if swap disk is available.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>free -h 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;lsblk
+free -h 
 cat /proc/swaps
 cat /proc/meminfo
 swapon -s

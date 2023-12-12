@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>This script add new tags if they are missing.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>log="log.txt"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;#!/bin/bash
+log="log.txt"
 id=$(aws efs describe-file-systems --query "FileSystems[*].[FileSystemId]" --output text --region us-east-1)
 tag=$(aws efs describe-file-systems --query "FileSystems[*].Tags[?Key=='aws-backup'].Value" --output text --region us-east-1 )
 

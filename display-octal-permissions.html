@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>If you’re working on the command line, listing a directory to display permissions of files is not always the most user-friendly. Here’s an example of listing the files in a directory using the ‘ls -al’ command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -al
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ ls -al
 total 20
 drwxrwsr-x  2 ulysses www-data 4096 Feb 26 13:31 .
 drwxrwsr-x 10 ulysses www-data 4096 Feb 26 02:30 ..
@@ -64,7 +65,8 @@ drwxrwsr-x 10 ulysses www-data 4096 Feb 26 02:30 ..
 
 <p>Well, there is. It’s a command called “stat” that displays the detailed status about a file or file system. On one of the switches of the stat command, is an option that allows you to display the file status in human readable format. Here’s an example using the stat from the command line.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ stat -c '%A %a %n' *
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ stat -c '%A %a %n' *
 664 display.txt
 775 sync_com.sh
 644 sync_db.sh

@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s my script to create snapshots of a LightSail instance. Create daily or weekly snapshots.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 if [ $1 != '' ]; then 
   prefix=$1
   timestamp=$(date +%s)
@@ -65,7 +66,8 @@ fi
 
 <p>Crontab. Job can be scheduled daily or weekly.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># run daily at 4am
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# run daily at 4am
 0 4 * * * /bin/bash /root/snapshots/create-snapshot.sh daily 2&gt;&amp;1
 # run weekly every sunday at 5am
 0 5 * * 0 /bin/bash /root/snapshots/create-snapshot.sh weekly 2&gt;&amp;1

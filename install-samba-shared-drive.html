@@ -52,12 +52,14 @@
 
 <p>Install Samba Server</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install samba
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+sudo apt-get install samba
 </code></pre></div></div>
 
 <p>Configure Samba by editing /usr/samba/smb.conf. Uncomment and add the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>security = user
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+security = user
 
 [share]
 comment = Ubuntu File Server Share
@@ -70,14 +72,16 @@ create mask = 0755
 
 <p>Create the shared drive.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir /home/ulysses/share
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+sudo mkdir /home/ulysses/share
 sudo chown nobody.nogroup /home/ulysses/share
 sudo chmod -R 0777 /home/ulysses/share
 </code></pre></div></div>
 
 <p>Restart Samba Server</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo restart smbd
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+sudo restart smbd
 sudo restart nmbd
 </code></pre></div></div>
 

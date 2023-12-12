@@ -52,7 +52,8 @@
 
 <p>To keep track of running containers on your system, you can type ‘docker ps -a’ on your terminal.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps -a
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ docker ps -a
 # gives a result similar to this ...
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 f322d2370415        moul/icecast        "/start.sh"              2 hours ago         Up 2 hours          0.0.0.0:8000-&gt;8000/tcp   icecast_icecast_1
@@ -60,7 +61,8 @@ f322d2370415        moul/icecast        "/start.sh"              2 hours ago    
 
 <p>If you would like to SSH to a running Docker container, just run the following from the terminal.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -t -i f322d2370415 /bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+docker exec -t -i f322d2370415 /bin/bash
 # it will take you to this ... 
 root@f322d2370415:/#
 </code></pre></div></div>

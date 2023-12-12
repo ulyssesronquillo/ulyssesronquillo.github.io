@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>How to restore an object from Amazon S3 Glacier via the AWS CLI.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws s3api restore-object \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws s3api restore-object \
 --bucket awsexamplebucket \
 --key dir1/example.obj \
 --restore-request '{"Days":25,"GlacierJobParameters":{"Tier":"Standard"}}'

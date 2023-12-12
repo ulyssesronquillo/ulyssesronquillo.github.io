@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to copy a disk from one project to another.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create lamp-server \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute disks create lamp-server \
 --source-snapshot https://www.googleapis.com/compute/v1/projects/project-id/global/snapshots/lamp-server \
 --project next-project-id \
 --zone us-central1-a
@@ -58,12 +59,14 @@
 
 <p>Once all the disks are copied. You can create a snapshot of the boot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks snapshot lamp-server
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute disks snapshot lamp-server
 </code></pre></div></div>
 
 <p>Create an instance from snapshot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create "hostname-boot" \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute disks create "hostname-boot" \
 --project "project-id" \
 --zone "us-central1-a" \
 --source-snapshot "snapshot-name" \

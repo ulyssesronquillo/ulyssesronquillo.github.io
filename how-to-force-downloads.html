@@ -52,7 +52,8 @@
 
 <p>A simple link like the one below simply won’t work.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="video.mp4"&gt;Download&lt;/a&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+&lt;a href="video.mp4"&gt;Download&lt;/a&gt;
 </code></pre></div></div>
 
 <p>One way of forcing downloads is to use a <a href="http://php.net">PHP</a> function called <a href="http://php.net/manual/en/function.readfile.php">readfile</a>.</p>
@@ -70,7 +71,8 @@ readfile("".$url."");
 
 <p>Our HTML download link will look like this.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="dl.php?file=video.mp4"&gt;Download&lt;/a&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+&lt;a href="dl.php?file=video.mp4"&gt;Download&lt;/a&gt;
 </code></pre></div></div>
 
 <p>It’s one way of forcing a download via the PHP route.</p>

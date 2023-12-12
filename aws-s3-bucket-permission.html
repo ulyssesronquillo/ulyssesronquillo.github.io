@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>I was getting this error when downloading a file from a S3 bucket.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fatal error: An error occurred (403) when calling the HeadObject operation: Forbidden
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+fatal error: An error occurred (403) when calling the HeadObject operation: Forbidden
 </code></pre></div></div>
 
 <p>Turns out to be a permission issue. Use –acl bucket-owner-full-control.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># UPLOAD
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# UPLOAD
 aws s3 cp file.txt s3://bucket-name/dir/ --acl bucket-owner-full-control
 upload: .\file.txt to s3://bucket-name/dir/fw.sh
 # DOWNLOAD

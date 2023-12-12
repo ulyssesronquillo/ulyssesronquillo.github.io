@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Convert MP3 to Vorbis OGG format using ffmpeg.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i input.mp3 -c:a libvorbis -q:a 4 output.ogg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ffmpeg -i input.mp3 -c:a libvorbis -q:a 4 output.ogg
 </code></pre></div></div>
 
 <p>If you want multiple files, use a loop.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for f in ./*.mp3; do ffmpeg -i "$f" -c:a libvorbis -q:a 4 "${f/%mp3/ogg}"; done
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+for f in ./*.mp3; do ffmpeg -i "$f" -c:a libvorbis -q:a 4 "${f/%mp3/ogg}"; done
 </code></pre></div></div>
 
   </div><a class="u-url" href="/convert-mp3-to-ogg" hidden></a>

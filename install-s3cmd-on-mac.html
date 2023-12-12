@@ -52,17 +52,20 @@
 
 <p>How to Install</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo sudo python setup.py install
+</code></pre></div></div>
 
 <p>Configure</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ s3cmd --configure 
+</code></pre></div></div>
 
 <p>The configuration will ask you to provide your access key and secret key. You can get those keys from your AWS account or your AWS administrator.</p>
 
 <p>Once it’s configured and you have access to the S3, you can try the following commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ s3cmd ls 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# list the files
+$ s3cmd ls 
 # get file sizes in human form
 $ s3cmd du -H s3://yourbucket
 # create a new bucket

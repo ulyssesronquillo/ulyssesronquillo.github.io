@@ -50,23 +50,27 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to get a list of GCP projects.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud projects list 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud projects list 
 </code></pre></div></div>
 
 <p>Result:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROJECT_ID            NAME     PROJECT_NUMBER
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+PROJECT_ID            NAME     PROJECT_NUMBER
 your-project-id-xxxx  servers  xxxxxxxxxxxx
 </code></pre></div></div>
 
 <p>Use awk to display the project id only.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud projects list | awk '{print $1}'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud projects list | awk '{print $1}'
 </code></pre></div></div>
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PROJECT ID
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+PROJECT ID
 your-project-id-xxxx
 </code></pre></div></div>
 

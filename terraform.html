@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Hashicorp has a product called <a href="https://learn.hashicorp.com/terraform/">Terraform</a>, which is a provisioning tool for the cloud. It works with most major providers like AWS, GCP, Azure and many more. Unlike <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a>, <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/">Resource Manager</a> and <a href="https://cloud.google.com/deployment-manager/docs/">Deployment Manager</a>, Terraform will work with not just its own, but with many cloud providers. Here’s an example of how to provision a single instance to AWS, and assign an elastic IP to it. The cloud resources in the example were redacted. Placeholder values were placed instead for security purposes.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	access_key = "xxxxxxxx"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;provider "aws" {
+	access_key = "xxxxxxxx"
 	secret_key = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
 	region = "us-east-2"
 }
@@ -75,12 +76,14 @@ resource "aws_eip_association" "server1-eip" {
 
 <p>To provision an instance, just run:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform apply
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+terraform apply
 </code></pre></div></div>
 
 <p>When you are done, just run:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform destroy
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+terraform destroy
 </code></pre></div></div>
 
   </div><a class="u-url" href="/terraform" hidden></a>

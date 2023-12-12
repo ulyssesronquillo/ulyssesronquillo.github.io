@@ -52,14 +52,16 @@
 
 <p>Bulk Resize Pictures</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for filename in *.JPG; do 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+for filename in *.JPG; do 
   ffmpeg -i "$filename" -vf scale=-1:720 final/"$filename";
 done
 </code></pre></div></div>
 
 <p>Bulk Resize Video and Create Thumbnail</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for filename in *.MP4; do 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+for filename in *.MP4; do 
   ffmpeg -i "$filename" -s 1080x720 -pix_fmt yuv420p -crf 18 "$filename".mp4; 
   ffmpeg -ss 00:00:00 -i "$filename" -vframes 1 "$filename".jpg;
 done

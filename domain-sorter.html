@@ -52,12 +52,14 @@
 
 <p>Command:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat filename | perl -ple'$_=join".",reverse split/\./' | sort | perl -ple'$_=join".",reverse split/\./'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ cat filename | perl -ple'$_=join".",reverse split/\./' | sort | perl -ple'$_=join".",reverse split/\./'
 </code></pre></div></div>
 
 <p>What’s in the domains.txt?</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat domains.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ cat domains.txt
 domain.com
 abc.com
 xyz.com
@@ -70,7 +72,8 @@ gmail.com
 
 <p>Result:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat domains.txt | perl -ple'$_=join".",reverse split/\./' | sort | perl -ple'$_=join".",reverse split/\./'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ cat domains.txt | perl -ple'$_=join".",reverse split/\./' | sort | perl -ple'$_=join".",reverse split/\./'
 abc.com
 bbb.com
 domain.com
@@ -83,7 +86,8 @@ ess.sfss.org
 
 <p>You can also pipe the result to another file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat filename | perl -ple'$_=join".",reverse split/\./' | sort | perl -ple'$_=join".",reverse split/\./' &gt; output.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ cat filename | perl -ple'$_=join".",reverse split/\./' | sort | perl -ple'$_=join".",reverse split/\./' &gt; output.txt
 </code></pre></div></div>
 
 <p><a href="https://www.perlmonks.org/?node_id=299555">Source</a>.</p>

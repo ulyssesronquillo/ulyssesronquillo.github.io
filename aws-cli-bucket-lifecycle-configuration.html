@@ -50,13 +50,15 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>I was banging my head against the wall (not quite literally, but it was close) trying to come up with a S3 lifecycle configuration from scratch. I needed a JSON file that I can run in a bash script, so I can apply the lifecycle rules to a few dozen S3 buckets. Obviously, trying to create one from scratch wasn’t the wisest choice in my part. As it turns out, you can setup a temporary bucket and use the console to recreate the lifecycle, then export the lifecycle JSON file. Duh! Genius! Here’s the command to export the lifecycle configuration.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws s3api get-bucket-lifecycle-configuration \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws s3api get-bucket-lifecycle-configuration \
 --bucket bucket-name
 </code></pre></div></div>
 
 <p>The output would be in a JSON format similar to this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+{
     "Rules": [
         {
             "Status": "Enabled",

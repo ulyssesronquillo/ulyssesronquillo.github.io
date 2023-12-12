@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>MTU means maximum transmission unit. The default value is 1500 for Ethernet, which is also the standard for the Internet. If your application or network requires a different MTU size, you can set the MTU size by running the following commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Edit ifcfg-eth0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# Edit ifcfg-eth0
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
 
 #Add MTU, settings:

@@ -52,22 +52,26 @@
 
 <p>Download the image.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rockylinux/rockylinux
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+docker pull rockylinux/rockylinux
 </code></pre></div></div>
 
 <p>Create a Rocky Linux container called bullwinkle.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -it --name bullwinkle -d rockylinux/rockylinux
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+docker run -it --name bullwinkle -d rockylinux/rockylinux
 </code></pre></div></div>
 
 <p>Login to the container using bash.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it --user root bullwinkle /bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+docker exec -it --user root bullwinkle /bin/bash
 </code></pre></div></div>
 
 <p>When done, stop and delete the container.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+docker ps -a
 docker stop container_ID
 docker rm container_ID
 </code></pre></div></div>

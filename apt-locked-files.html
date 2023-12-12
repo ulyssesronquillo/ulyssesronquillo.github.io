@@ -50,18 +50,21 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>If you tried to run apt update and you get this error, try the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ apt update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ apt update
 E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable) [duplicate]
 </code></pre></div></div>
 
 <p>Kill the process.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo killall apt apt-get
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo killall apt apt-get
 </code></pre></div></div>
 
 <p>If that doesn’t work, remove the locked files.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo rm /var/lib/apt/lists/lock
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo rm /var/lib/apt/lists/lock
 $ sudo rm /var/cache/apt/archives/lock
 $ sudo rm /var/lib/dpkg/lock*
 </code></pre></div></div>

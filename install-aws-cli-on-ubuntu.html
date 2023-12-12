@@ -50,11 +50,13 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>The advantage of running Amazon Linux on AWS is that you already have the AWS CLI (command line interface) loaded as part of the image. In addition, Amazon Linux has rolling updates. It means you don’t have to perform major upgrades as you go to from one version to another. It’s all part of the process when you perform periodical updates. However, if you’re running Ubuntu, it’s no slouch. It’s a popular distro which many administrators have chosen to use due to its simplicity and robust repository. So, if you’re running Ubuntu, you might want to install the AWS CLI to give you the tools you need similar to what Amazon Linux has. Here’s how to install AWS CLI on Ubuntu.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo apt install awscli
+</code></pre></div></div>
 
 <p>You will need to run the configuration before you can start using AWS CLI. See example below.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 Default region name [None]: us-west-2
 Default output format [None]: json

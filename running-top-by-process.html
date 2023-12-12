@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to isolate a process via the top command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>top -c -p $(pgrep -f process_name | head -20 | tr "\\n" "," | sed 's/,$//')
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+top -c -p $(pgrep -f process_name | head -20 | tr "\\n" "," | sed 's/,$//')
 </code></pre></div></div>
 
   </div><a class="u-url" href="/running-top-by-process" hidden></a>

@@ -50,14 +50,16 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>When designing web applications, it’s important to sanitize data before storing them into the database. I use several PHP built-in functions namely trim, strip_tags, htmlspecialchars, and addslashes to sanitize my forms. This function has become a staple for all my web projects. So, here it is.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function sanitize($in) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+function sanitize($in) {
   return addslashes(htmlspecialchars(strip_tags(trim($in))));
 }
 </code></pre></div></div>
 
 <p>Whenever I need to sanitize a form input, I simply use the sanitize function before storing the data to the database.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$_POST['firstname'] = sanitize($_POST['firstname']);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$_POST['firstname'] = sanitize($_POST['firstname']);
 </code></pre></div></div>
 
   </div><a class="u-url" href="/sanitize-input" hidden></a>

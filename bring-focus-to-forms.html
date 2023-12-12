@@ -54,7 +54,8 @@
 
 <p>Let’s create a simple form with two fields called username and password. The goal is to bring the cursor to the “username” field when the page is loaded. First, we assign an “id” and “name” to the form. Let’s call it “login” for lack of a better name. Next, we need to assign an “id” and “tabindex” to each input. We will use “id=’username’” and “tabindex=’1′” for the first input, and “id=’password’” and “tabindex=’2′” to the second input. See the example below.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
 
 <form action="" id="login" method="post" name="login"> <label for="username">Username: </label> <input id="username" name="username" tabindex="1" type="text" />&lt;/input&gt;  
  <label for="password">Password: </label> <input id="password" name="password" tabindex="2" type="password" />&lt;/input&gt;  
@@ -63,7 +64,8 @@
 
 <p>We can then add a simple Javascript to the end of our form. This code will bring focus, or move the cursor, to a form called “login”, and to a field called “username.” That is it. Simple enough. This is how we bring focus to a form. Check out the demo below to see the result.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script language="”JavaScript”" type="”text/javascript”"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+&lt;script language="”JavaScript”" type="”text/javascript”"&gt;
 document.login.username.focus();
 &lt;/script&gt;
 </code></pre></div></div>

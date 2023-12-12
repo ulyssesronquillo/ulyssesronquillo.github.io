@@ -54,7 +54,8 @@
 
 <h4 id="heres-the-code">Here’s the Code</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function urr_filter_content($content) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+function urr_filter_content($content) {
   $format = get_post_type( get_the_ID() );
   if ( $format == 'books' ) : // your custom post-type
     $new_content  = '&lt;p&gt;Hello Bookworms!!!&lt;/p&gt;';

@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s an easy way to add Windows users in Powershell.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net user username 'password' /add
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+net user username 'password' /add
 </code></pre></div></div>
 
 <p>Passwords must meet <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements">requirements</a>. While you are at it, give it Admin rights.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>net localgroup Administrators username /add
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+net localgroup Administrators username /add
 </code></pre></div></div>
 
   </div><a class="u-url" href="/adding-new-users-in-powershell" hidden></a>

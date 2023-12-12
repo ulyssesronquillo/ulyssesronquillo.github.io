@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s the proper way to host multiple websites (domains) on single host with a single IP address. Technically, you can have multiple Apache configuration files that you can enable within Apache, but you can easily simplify and combine them into a single Apache configuration file. You can separate each domain by creating multiple virtualhost sections as shown in the example below.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;virtualhost&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+&lt;virtualhost&gt;
     DocumentRoot "/www/example1"
     ServerName www.example.com
     # Other directives here

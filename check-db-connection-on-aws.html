@@ -50,24 +50,28 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>When setting up your cloud infrastructure, you can check if your instances have access to the database by performing this command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nc -zv 10.0.0.45 3306
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ nc -zv 10.0.0.45 3306
 $ nc -zv domain.com 3306
 $ nc -zv endpoint.amazonaws.com 3306
 </code></pre></div></div>
 
 <p>If connection has succeeded, you’ll get a message like this in Linux and MacOS …</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Connection to endpoint.amazonaws.com 3306 port [tcp/mysql] succeeded!
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+Connection to endpoint.amazonaws.com 3306 port [tcp/mysql] succeeded!
 </code></pre></div></div>
 
 <p>On Windows, you can use Telnet to test your DB connection.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\&gt;telnet endpoint.amazonaws.com 3306
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+C:\&gt;telnet endpoint.amazonaws.com 3306
 </code></pre></div></div>
 
 <p>If connection has succeeded, the result is “no message.” If there’s a problem, you’ll get this ….</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Connecting To endpoint.amazonaws.com...Could not open 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+Connecting To endpoint.amazonaws.com...Could not open 
 connection to the host, on port 3306: Connect failed 
 </code></pre></div></div>
 

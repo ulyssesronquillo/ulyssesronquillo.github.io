@@ -52,22 +52,26 @@
 
 <p>Download the latest from https://golang.org/dl/.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
 </code></pre></div></div>
 
 <p>Check the checksum.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sha256sum go1.13.linux-amd64.tar.gz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sha256sum go1.13.linux-amd64.tar.gz
 </code></pre></div></div>
 
 <p>Extract the Go tarball to the /usr/local directory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
 </code></pre></div></div>
 
 <p>Edit your Bash profile to add Go’s path.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd ~
 vim ~/.profile
 # Add Go's path
 export PATH=$PATH:/usr/local/go/bin
@@ -77,12 +81,14 @@ source ~/.profile
 
 <p>Check if Go is installed.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>go version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+go version
 </code></pre></div></div>
 
 <p>Output.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>go version go1.13 linux/amd64
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+go version go1.13 linux/amd64
 </code></pre></div></div>
 
   </div><a class="u-url" href="/install-go-on-linux-mint-19-3" hidden></a>

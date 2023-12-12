@@ -52,28 +52,33 @@
 
 <p>Search for the current package.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo rpm -qa |  grep sdk
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo rpm -qa |  grep sdk
 google-cloud-sdk-365.0.1-1.x86_64
 </code></pre></div></div>
 
 <p>Install versionlock.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install yum-plugin-versionlock
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum install yum-plugin-versionlock
 </code></pre></div></div>
 
 <p>Lock a package.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum versionlock google-cloud-sdk-365.0.1-1.x86_64
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum versionlock google-cloud-sdk-365.0.1-1.x86_64
 </code></pre></div></div>
 
 <p>Display all locked versions.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum versionlock list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum versionlock list
 </code></pre></div></div>
 
 <p>Unlock and clear.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum versionlock clear
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum versionlock clear
 </code></pre></div></div>
 
   </div><a class="u-url" href="/lock-a-package-in-linux" hidden></a>

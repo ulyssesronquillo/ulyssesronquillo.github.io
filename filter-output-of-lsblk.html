@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s one way to display block devices, mountpoints and size using lsblk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk -a -p -n -d -e 230 -o NAME,MOUNTPOINT,SIZE
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+lsblk -a -p -n -d -e 230 -o NAME,MOUNTPOINT,SIZE
 </code></pre></div></div>
 
 <p>Here are the options.</p>
@@ -65,7 +66,8 @@
 
 <p>The output.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/sda             30G
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+/dev/sda             30G
 /dev/sdb /data       50G
 </code></pre></div></div>
 

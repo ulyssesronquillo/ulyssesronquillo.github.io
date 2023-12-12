@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Jekyll is a static website generator you can use for developing simple websites. If you are running Jekyll on your desktop, you can view your static website by running a local server. If you want the leave the web server up and running in the background all the time, you can run this command instead.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># normally you run this command
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# normally you run this command
 jekyll serve
 # running it in the background
 jekyll serve &gt; /dev/null 2&gt;&amp;1 &amp;
@@ -60,7 +61,8 @@ jekyll serve --incremental &gt; /dev/null 2&gt;&amp;1 &amp;
 
 <p>To kill the server, run the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># find jekyll server process
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# find jekyll server process
 ps -ef | grep jekyll
 # substitute pid# with process id
 kill -9 pid#

@@ -52,22 +52,26 @@
 
 <p>How to enable core dumps.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ulimit -S -c unlimited
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ulimit -S -c unlimited
 </code></pre></div></div>
 
 <p>Enable core dumps permanently. Edit /etc/security/limits.conf. Add the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* soft core unlimited
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+* soft core unlimited
 </code></pre></div></div>
 
 <p>Disable core dumps.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ulimit -S -c 0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ulimit -S -c 0
 </code></pre></div></div>
 
 <p>Disable core dumps permanently. Edit /etc/security/limits.conf. Add the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* soft core 0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+* soft core 0
 * hard core 0
 </code></pre></div></div>
 

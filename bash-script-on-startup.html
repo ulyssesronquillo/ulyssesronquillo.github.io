@@ -52,14 +52,16 @@
 
 <p>update-rc.d</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo cp /path/to/yourscript.sh /etc/init.d/yourscript.sh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo cp /path/to/yourscript.sh /etc/init.d/yourscript.sh
 sudo update-rc.d /etc/init.d/yourscript.sh defaults
 chmod +x /etc/init.d/yourscript.sh
 </code></pre></div></div>
 
 <p>Root Crontab</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo crontab -e
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo crontab -e
 @reboot /path/to/yourscript.sh
 </code></pre></div></div>
 

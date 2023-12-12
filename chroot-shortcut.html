@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s a quick way to setup a chrooted environment.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in proc sys dev; do mount o bind /$i /helper/$i; done
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;mkdir /helper
+for i in proc sys dev; do mount o bind /$i /helper/$i; done
 chroot /helper
 </code></pre></div></div>
 

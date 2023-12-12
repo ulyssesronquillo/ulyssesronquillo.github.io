@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s the AWS CLI command to set the Auto Scaling Group to a certain number for the minimum, maximum, and desired number of instances.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Format:  
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;#!/bin/bash
+# Format:  
 # ./autoscaling.sh 3
 # ./autoscaling.sh 0
 int=$1
@@ -64,7 +65,8 @@ aws autoscaling update-auto-scaling-group \
 
 <p>Format:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autoscaling.sh 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;./autoscaling.sh 0
+./autoscaling.sh 3
 </code></pre></div></div>
 
   </div><a class="u-url" href="/aws-cli-autoscaler-update" hidden></a>

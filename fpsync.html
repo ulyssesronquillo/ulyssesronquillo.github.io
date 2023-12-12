@@ -52,16 +52,19 @@
 
 <p>To install fpsync.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;apt install fpart
+</code></pre></div></div>
 
 <p>Fpsync with 8 parallel jobs.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fpsync -n 8 -v /root/tmp1/ /root/tmp2/ &gt;&gt; $log
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;log='/root/fpsync.log'
+fpsync -n 8 -v /root/tmp1/ /root/tmp2/ &gt;&gt; $log
 </code></pre></div></div>
 
 <p>A sample Script with timestamps to display elapse time.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>log='/root/fpsync.log'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;#!/bin/bash
+log='/root/fpsync.log'
 start=$(date)
 begin=$(date +%s)
 echo 'Start: '$start &gt; $log
@@ -101,7 +104,8 @@ show_time $elapse &gt;&gt; $log
 
 <p>For comparison, you can substitute fpsync with rysnc and see the performance difference.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># or
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;fpsync -n 8 -v /root/tmp1/ /root/tmp2/ &gt;&gt; $log
+# or
 rsync -av /root/tmp1 /root/tmp2/ &gt; /var/null
 </code></pre></div></div>
 

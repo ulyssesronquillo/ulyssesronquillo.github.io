@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to run Jekyll in a Docker container.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir blog
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mkdir blog
 cd blog
 docker run -v $(pwd):/site bretfisher/jekyll new .
 docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
@@ -58,7 +59,8 @@ docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
 
 <p>Another option is to use docker compose. Create a docker-compose.yml file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: 3.5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+version: 3.5
 services:
   jekyll:
     image: bretfisher/jekyll-serve
@@ -70,13 +72,15 @@ services:
 
 <p>Run Jekyll.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd blog
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd blog
 docker-compose up -d
 </code></pre></div></div>
 
 <p>Stop Jekyll.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd blog
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cd blog
 docker-compose down
 </code></pre></div></div>
 

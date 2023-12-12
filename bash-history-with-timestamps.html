@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>If you need to see Bash history with timestamps, use this command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HISTTIMEFORMAT="%d/%m/%y %T "
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+HISTTIMEFORMAT="%d/%m/%y %T "
 </code></pre></div></div>
 
 <p>To make it permanent, add it to your .bashrc.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo 'HISTTIMEFORMAT="%d/%m/%y %T "' &gt;&gt; ~/.bashrc
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+echo 'HISTTIMEFORMAT="%d/%m/%y %T "' &gt;&gt; ~/.bashrc
 source ~/.bashrc
 </code></pre></div></div>
 

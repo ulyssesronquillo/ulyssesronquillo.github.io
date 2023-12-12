@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>When uploading videos, Youtube gives you an option to upload your own thumbnails. If you want to use your own pics, you can format them to 1280×720 pixels and use it as a thumbnail. The script below will resize any image regardless of the original size to 1280×720 pixels using the convert utility of ImageMagick. The conversion may crop the edges of your image if it’s not 16:9 or 1.777 format. The script will also resize an image in portrait format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 cd /home/ulysses/Pictures/jpg
 image=$1
 test=`convert $image -format "%[fx:(w/h&gt;1)?1:0]" info:`

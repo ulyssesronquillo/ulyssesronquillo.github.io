@@ -52,7 +52,8 @@
 
 <p>Install Apache.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install httpd
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo yum install httpd
 sudo systemctl start httpd
 sudo systemctl enable httpd
 sudo systemctl status httpd
@@ -60,17 +61,20 @@ sudo systemctl status httpd
 
 <p>Install the repo packages.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install createrepo yum-utils
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo yum install createrepo yum-utils
 </code></pre></div></div>
 
 <p>Create repo directories.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir /var/www/html/{baseos,extras,appstream,epel}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo mkdir /var/www/html/{baseos,extras,appstream,epel}
 </code></pre></div></div>
 
 <p>Sync the repos.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum reposync -p=/var/www/html --repoid=baseos --download-metadata
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo yum reposync -p=/var/www/html --repoid=baseos --download-metadata
 sudo yum reposync -p=/var/www/html --repoid=extras --download-metadata
 sudo yum reposync -p=/var/www/html --repoid=appstream --download-metadata
 sudo yum reposync -p=/var/www/html --repoid=epel --download-metadata
@@ -78,17 +82,20 @@ sudo yum reposync -p=/var/www/html --repoid=epel --download-metadata
 
 <p>Create a new repo.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo createrepo /var/www/html/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo createrepo /var/www/html/
 </code></pre></div></div>
 
 <p>Setup a local repo.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/yum.repos.d/local.repo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo nano /etc/yum.repos.d/local.repo
 </code></pre></div></div>
 
 <p>Contents of local.repo.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>local-base]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+local-base]
 name=Yum Local Base
 baseurl=http://10.10.0.20:80/base
 enabled=1
@@ -112,7 +119,8 @@ gpgcheck=0
 
 <p>Confirm new repo is in the repolist.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum repolist
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo yum repolist
 </code></pre></div></div>
 
   </div><a class="u-url" href="/create-local-yum-repo" hidden></a>

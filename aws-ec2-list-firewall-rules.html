@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>AWS EC2 Firewall rules are defined within security groups. Security groups are attached to an instance. An instance can have up to 5 security groups. Essentially, this script gathers all the security groups associated with an instance, loops through them, and then outputs the ingress and egress rules of each security group to a file in a text format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 # set variables
 instanceid='i-xxxxxxxxxxxxxxxx'
 region='us-east-1'
@@ -92,6 +93,7 @@ done
 
 
 
+&lt;pre lang="bash"&gt;
 ============================================
 sg-xxxxxxxxxxxxxxx
 ============================================

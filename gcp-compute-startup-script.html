@@ -52,7 +52,8 @@
 
 <p>Startup Script</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-metadata servername \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances add-metadata servername \
 --project project-id \
 --zone us-central1-c \
 --metadata=startup-script='#! /bin/bash
@@ -62,7 +63,8 @@ echo "Time: $(date)" &gt;&gt; /tmp/date.txt'
 
 <p>Shutdown Script</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-metadata servername \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances add-metadata servername \
 --project project-id \
 --zone us-central1-c \
 --metadata=shutdown-script='#! /bin/bash

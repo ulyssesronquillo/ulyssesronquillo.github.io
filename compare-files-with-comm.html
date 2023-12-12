@@ -52,7 +52,8 @@
 
 <p>Let’s say file a.txt contains:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>one
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+one
 two
 three
 four
@@ -66,7 +67,8 @@ ten
 
 <p>And file b.txt contains:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>one
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+one
 three
 four
 five
@@ -75,12 +77,14 @@ nine
 
 <p>We then run comm command using the option -23.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comm -23 a.txt b.txt &gt; c.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+comm -23 a.txt b.txt &gt; c.txt
 </code></pre></div></div>
 
 <p>The contents of c.txt is:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>two
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+two
 six
 seven
 eight

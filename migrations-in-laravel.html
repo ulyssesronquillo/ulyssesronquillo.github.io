@@ -52,17 +52,20 @@
 
 <p>To migrate:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ php artisan migrate
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ php artisan migrate
 </code></pre></div></div>
 
 <p>To rollback:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ php artisan migrate:rollback
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ php artisan migrate:rollback
 </code></pre></div></div>
 
 <p>In addition, you can also create a new migration table.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ php artisan make:migration create_users_table --create="users"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ php artisan make:migration create_users_table --create="users"
 </code></pre></div></div>
 
 <p>It will create a file similar to this:</p>

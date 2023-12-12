@@ -57,7 +57,8 @@
 
 <p>Create a disk from snapshot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create "hostname-boot" \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute disks create "hostname-boot" \
 --project "project-id" \
 --zone "us-central1-a" \
 --source-snapshot "snapshot-name" \
@@ -67,7 +68,8 @@
 
 <p>Create an instance from disk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta compute instances create hostname \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud beta compute instances create hostname \
 --project=project-id \
 --zone=us-central1-a \
 --subnet=your-subnetwork \

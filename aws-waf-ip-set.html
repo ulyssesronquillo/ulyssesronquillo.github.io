@@ -50,19 +50,22 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to get the WAF rule.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--rule-id xxxxxxxxxxxxxxxxxxxxxxxxxxx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws waf-regional get-rule \
+--rule-id xxxxxxxxxxxxxxxxxxxxxxxxxxx
 </code></pre></div></div>
 
 <p>Here’s how to get the AWS WAF IP set.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--ip-set-id xxxxxxxxxxxxxxxxxxx \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws waf-regional get-ip-set \
+--ip-set-id xxxxxxxxxxxxxxxxxxx \
 --region us-east-1 \
 --profile your-profile
 </code></pre></div></div>
 
 <p>Here’s how to get the latest token.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws waf-regional get-change-token
+</code></pre></div></div>
 
 <p>Result is similar to this.</p>
 
@@ -95,7 +98,8 @@
 
 <p>Finally, here’s how to update the IP set.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--ip-set-id xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws waf-regional update-ip-set \
+--ip-set-id xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
 --change-token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
 --region us-east-1 \
 --profile default \

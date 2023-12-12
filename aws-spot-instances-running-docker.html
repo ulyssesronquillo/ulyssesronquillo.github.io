@@ -52,7 +52,8 @@
 
 <p>Here’s my Terraform script.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -88,6 +89,7 @@ resource "aws_spot_instance_request" "docker" {
 
 
 
+&lt;pre lang="bash"&gt;
 terraform init
 terraform apply
 
@@ -98,6 +100,7 @@ terraform apply
 
 
 
+&lt;pre lang="bash"&gt;
 terraform destroy
 
 

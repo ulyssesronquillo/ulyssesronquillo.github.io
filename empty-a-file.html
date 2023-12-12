@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>If you work with vi, nano or any other command line editor, deleting a line is a fairly easy thing to do. If the file is too large, deleting the content line by line is not fun. There’s a better way to empty a file without deleting it. Here are several ways.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ &gt; filename
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ &gt; filename
 $ truncate -s 0 filename
 $ echo "" &gt; filename
 </code></pre></div></div>

@@ -52,7 +52,8 @@
 
 <p>Here’s the original mount command I ran, but I was getting a wrong fs type error.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mkdir
 mount -t xfs /dev/nvme3n1p2 /recover
 mount: wrong fs type, bad option, bad superblock on /dev/nvme3n1p2,
        missing codepage or helper program, or other error
@@ -60,7 +61,8 @@ mount: wrong fs type, bad option, bad superblock on /dev/nvme3n1p2,
 
 <p>It turned out to be a duplicated uuid. To get around this problem, I ran -o nouuid.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount -t xfs -o nouuid /dev/nvme3n1p2 /recover
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mount -t xfs -o nouuid /dev/nvme3n1p2 /recover
 </code></pre></div></div>
 
 <p>Once the files were recovered, I unmounted volume and detached it from the instance.</p>

@@ -54,19 +54,22 @@
 
 <p>Requires an image id, instance count, instance type, key and security group.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type c4.2xlarge --key-name your-key  —security-group-ids sg-xxxxxxxx
+</code></pre></div></div>
 
 <p><strong>How to Associate an Elastic IP Address to an Instance</strong></p>
 
 <p>Requires an instance id and Elastic IP address.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 associate-address --instance-id i-xxxxxxxxxxxxxxxx --public-ip xxx.xxx.xxx.xxx
+</code></pre></div></div>
 
 <p><strong>How to Terminate an Instance</strong></p>
 
 <p>Requires an instance id(s).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 terminate-instances --instance-ids i-xxxxxxxxxxxxxxxx
+</code></pre></div></div>
 
   </div><a class="u-url" href="/start-ec2-ami-from-aws-cli" hidden></a>
 </article>

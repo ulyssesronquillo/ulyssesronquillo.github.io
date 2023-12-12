@@ -50,24 +50,28 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Services to check.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service rpcbind start
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;chkconfig nfs on
+service rpcbind start
 service nfs start
 mount -a
 </code></pre></div></div>
 
 <p>If missing, install it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;yum install nfs-utils nfs-utils-lib
+</code></pre></div></div>
 
 <p>Mount it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount -a
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mount -a
 mount 192.168.1.200:/home /mnt/nfs/home
 </code></pre></div></div>
 
 <p>Add to /etc/fstab.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;10.10.10.10:/home on /mnt/nfs/home type nfs (rw,noatime,nolock,bg,nfsvers=2,intr,tcp,actimeo=1800,addr=10.10.10.10)
+</code></pre></div></div>
 
   </div><a class="u-url" href="/nfs-client" hidden></a>
 </article>

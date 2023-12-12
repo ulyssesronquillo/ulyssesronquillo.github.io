@@ -50,17 +50,20 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>After logging in, I tried to run Terraform in GCP and received this error:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oauth2: cannot fetch token: 400 Bad Request
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+oauth2: cannot fetch token: 400 Bad Request
 </code></pre></div></div>
 
 <p>Here’s the fix. Login using application-default.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud auth application-default login
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud auth application-default login
 </code></pre></div></div>
 
 <p>You can then Terraform.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform apply
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+terraform apply
 </code></pre></div></div>
 
   </div><a class="u-url" href="/gcp-400-bad-request" hidden></a>

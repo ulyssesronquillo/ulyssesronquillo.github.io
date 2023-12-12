@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to import a SSL certificate into AWS Certificate Manager.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--certificate fileb://example.crt \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws acm import-certificate \
+--certificate fileb://example.crt \
 --private-key fileb://example.key \
 --certificate-chain fileb://example-bundle.crt \
 --tags Key=Name,Value=mydomain.com_20220107

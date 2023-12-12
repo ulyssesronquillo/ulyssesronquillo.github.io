@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s where the Wiki keeps its SSL certificate keys.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/pki/tls/certs/yourdomain.crt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+/etc/pki/tls/certs/yourdomain.crt
 /etc/pki/tls/private/yourdomain.key
 </code></pre></div></div>
 
@@ -58,7 +59,8 @@
 
 <p>Conversion</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl rsa -in /etc/pki/tls/private/yourdomain.key.new -out /etc/pki/tls/private/yourdomain.key.new_no_pass
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+openssl rsa -in /etc/pki/tls/private/yourdomain.key.new -out /etc/pki/tls/private/yourdomain.key.new_no_pass
 </code></pre></div></div>
 
   </div><a class="u-url" href="/wiki-ssl-certificate-location" hidden></a>

@@ -52,7 +52,8 @@
 
 <p>Install screen first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install screen
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum install screen
 dnf install screen
 apt install screen
 zypper install screen
@@ -60,19 +61,22 @@ zypper install screen
 
 <p>Start a new screen.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>screen -S one
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+screen -S one
 screen -S two
 screen -S three
 </code></pre></div></div>
 
 <p>Detach from screen.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+a+d
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+Ctrl+a+d
 </code></pre></div></div>
 
 <p>List active screens.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>screen -ls 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+screen -ls 
 There is a screen on:
         15575.one   (Detached)
         15581.two   (Detached)
@@ -82,19 +86,22 @@ There is a screen on:
 
 <p>Reattach to an existing screen.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>screen -r one
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+screen -r one
 screen -r two
 screen -r three
 </code></pre></div></div>
 
 <p>If there’s only one active screen, you can run screen -r without the name.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>screen -r 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+screen -r 
 </code></pre></div></div>
 
 <p>To exit or quit a screen, reattach and run exit.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>screen -r three
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+screen -r three
 # exit
 [screen is terminating]
 </code></pre></div></div>

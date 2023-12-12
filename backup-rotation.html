@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>After another downtime with my service provider, I wasn’t really happy with my backup strategy. Although, I have a backup plan in place, it’s not to the level of detail that I wanted. Back to the drawing board I went. I realized that what I really needed, was to back up my databases and keep copies of the last few days. Prior to that I was just relying on full file system backup and restore. Thankfully, backing up MySQL databases is not that difficult. The following pieces of code is the backup script I have put together to backup each MySQL database, as well rotate the backups and keep 5 days of copies of each database.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#! /bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#! /bin/bash
 
 # where sql files are stored
 cd /home/user/mysql

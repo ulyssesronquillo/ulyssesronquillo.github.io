@@ -50,17 +50,20 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>You can register multiple domains to a single SSL certificate. This is particularly useful if you are hosting multiple domains on one server. This command adds more domains to your existing certificate.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>certbot --expand -d existing.com -d newdomain1.com -d newdomain2.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+certbot --expand -d existing.com -d newdomain1.com -d newdomain2.com
 </code></pre></div></div>
 
 <p>Check if the domains were added.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>certbot certificates
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+certbot certificates
 </code></pre></div></div>
 
 <p>Certbot certificates are valid for 90 days, but they automatically renew themselves if expiration is less than 30 days. If you need to renew manually for some odd reason, you can run this command. You can also perform a dry-run before renewing.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>certbot renew
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+certbot renew
 certbot renew --dry-run
 </code></pre></div></div>
 

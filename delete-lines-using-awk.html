@@ -50,17 +50,20 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to delete a line from a file using awk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '!/Redhat/' sample.txt &gt; sample.tmp &amp;&amp; mv sample.tmp sample.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+awk '!/Redhat/' sample.txt &gt; sample.tmp &amp;&amp; mv sample.tmp sample.txt
 </code></pre></div></div>
 
 <p>The command above looks for ‘Redhat’ in a file and removes that line from the file.</p>
 
 <p>You can add the line in the crontab to run at reboot if you like.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -e
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+crontab -e
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@reboot awk '!/Redhat/' sample.txt &gt; sample.tmp &amp;&amp; mv sample.tmp sample.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+@reboot awk '!/Redhat/' sample.txt &gt; sample.tmp &amp;&amp; mv sample.tmp sample.txt
 </code></pre></div></div>
 
   </div><a class="u-url" href="/delete-lines-using-awk" hidden></a>

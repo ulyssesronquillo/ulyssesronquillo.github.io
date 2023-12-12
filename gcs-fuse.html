@@ -52,36 +52,46 @@
 
 <p>Setup repo</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo tee /etc/yum.repos.d/gcsfuse.repo &gt; /dev/null 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo tee /etc/yum.repos.d/gcsfuse.repo &gt; /dev/null 
 &lt;p&gt;Yum install&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 sudo yum install gcsfuse
 
 &lt;p&gt;For Ubuntu or Linux Mint, download the deb package.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 curl -L -O https://github.com/GoogleCloudPlatform/gcsfuse/releases/download/v0.39.2/gcsfuse_0.39.2_amd64.deb
 sudo dpkg --install gcsfuse_0.39.2_amd64.deb
 rm gcsfuse_0.39.2_amd64.deb
 
 &lt;p&gt;Check if installed.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 gcsfuse -v
 
 &lt;p&gt;Login.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 gcloud auth login
 gcloud auth application-default login
 
 &lt;p&gt;Setup mount.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 mkdir -p /path/to/mount
 chown username:username /path/to/mount
 
 &lt;p&gt;Mount it.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 gcsfuse my-bucket /path/to/mount
 
 &lt;p&gt;Alternative using service account key.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 gcsfuse my-bucket /path/to/mount --key-file /root/key.json --uid=xxx --gid=xxx -o rw,allow_other 
 
 &lt;p&gt;Automatic mount in /etc/fstab.&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 my-bucket /path/to/mount gcsfuse _netdev,allow_other,user,rw,uid=1000,gid=1000 0 0
 
 &lt;p&gt;Unmount&lt;/p&gt;
+&lt;pre lang="bash"&gt;
 fusermount -u /path/to/mount
 
 "&gt;

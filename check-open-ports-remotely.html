@@ -50,14 +50,16 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here are a few tools to check if ports are open from a remote host.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc -zvw10 192.168.0.1 22
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+nc -zvw10 192.168.0.1 22
 nmap 192.168.0.1 -p 22
 telnet 192.168.0.1 22
 </code></pre></div></div>
 
 <p>You may have to install netcat and nmap if missing in your distro.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install nc
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum install nc
 yum install nmap
 </code></pre></div></div>
 

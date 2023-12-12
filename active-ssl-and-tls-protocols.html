@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s the command to list what SSL and TLS protocols are active.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl ciphers -v | awk '{print $2}' | sort | uniq
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+openssl ciphers -v | awk '{print $2}' | sort | uniq
 </code></pre></div></div>
 
   </div><a class="u-url" href="/active-ssl-and-tls-protocols" hidden></a>

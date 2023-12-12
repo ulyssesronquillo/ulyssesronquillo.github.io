@@ -52,20 +52,23 @@
 
 <p>Locate aws.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ which aws
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ which aws
 /usr/local/bin/aws
 </code></pre></div></div>
 
 <p>Delete the symlinks.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -l /usr/local/bin/aws
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ ls -l /usr/local/bin/aws
 $ sudo rm /usr/local/bin/aws
 $ sudo rm /usr/local/bin/aws_completer
 </code></pre></div></div>
 
 <p>Delete the install directory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo rm -rf /usr/local/aws-cli
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo rm -rf /usr/local/aws-cli
 </code></pre></div></div>
 
 <p>Once deleted, you can reinstall awscli.</p>

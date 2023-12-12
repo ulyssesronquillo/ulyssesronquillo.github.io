@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>I tried running git after the Mac OS Catalina upgrade and got this error.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools),
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools),
 missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 </code></pre></div></div>
 
@@ -58,7 +59,8 @@ missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 
 <p>You will need to either reset it or install it again.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Try reset first
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# Try reset first
 xcode-select --reset
 # Or install it if reset doesn't work
 xcode-select --install

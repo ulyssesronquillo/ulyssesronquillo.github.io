@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here are several examples how to display GCP snapshots using Google SDK (CLI – command line interface).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# list snapshots
+gcloud compute snapshots list \
 --project my-project \
 --filter="name~'my-server-boot'"
 # limit 10

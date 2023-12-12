@@ -52,14 +52,16 @@
 
 <p>Create A Project Folder</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd wordpress
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ mkdir wordpress
+$ cd wordpress
 </code></pre></div></div>
 
 <p>Create a Docker Compose file</p>
 
 <p>The docker file for composing an image is called docker-compose.yml. It’s a YAML file that contains instructions on what to do and apps to use.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ nano docker-compose.yml
+</code></pre></div></div>
 
 <p>Type in the following configuration in the YAML file. In this example, I’m telling docker to install WordPress, MySQL and PHPMyAdmin and using the following TCP ports, credentials, and volumes.</p>
 
@@ -88,7 +90,8 @@ phpmyadmin:
 
 <p>Run Docker Compose</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ docker-compose up -d
+</code></pre></div></div>
 
 <p>The installation may take anywhere from 5-10 mins or longer. So, grab a cup of coffee.</p>
 
@@ -96,7 +99,8 @@ phpmyadmin:
 
 <p>Once installed, open up your browser and access WordPress and PHPMyadmin</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8181
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;http://localhost:8080
+http://localhost:8181
 </code></pre></div></div>
 
 <p>You can access the WordPress files from your project’s “wordpress/html” directory.</p>

@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Create a new interface via AWS CLI with static IP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--subnet-id subnet-xxxxxxx \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ aws ec2 create-network-interface \
+--subnet-id subnet-xxxxxxx \
 --description "second ip" \
 --groups sg-xxxxxxx \
 --private-ip-address 10.0.0.16

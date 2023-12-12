@@ -52,17 +52,20 @@
 
 <p>Stop all containers</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker kill $(docker ps -q)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ docker kill $(docker ps -q)
 </code></pre></div></div>
 
 <p>Remove all containers</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker rm $(docker ps -a -q)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ docker rm $(docker ps -a -q)
 </code></pre></div></div>
 
 <p>Delete all docker images</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker rmi $(docker images -q)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ docker rmi $(docker images -q)
 </code></pre></div></div>
 
   </div><a class="u-url" href="/stop-and-remove-all-docker-containers" hidden></a>

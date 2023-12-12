@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to start multiple instances using Bash and Google SDK.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 while IFS=', ' read -r a b c; do
   instance="${a//[[:blank:]]/}"
   project="${b//[[:blank:]]/}"
@@ -66,6 +67,7 @@ done
 
 
 
+&lt;pre lang="bash"&gt;server1,project1,us-central1-a
 server2,project2,us-central1-b
 server3,project3,us-central1-c
 

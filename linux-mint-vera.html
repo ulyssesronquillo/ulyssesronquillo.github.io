@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>I upgraded to Linux Mint Vera from Una.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>             ...-:::::-...                 ulysses@penguin 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ulysses@penguin:~/Code$ neofetch
+             ...-:::::-...                 ulysses@penguin 
           .-MMMMMMMMMMMMMMM-.              --------------- 
       .-MMMM`..-:::::::-..`MMMM-.          OS: Linux Mint 21.1 x86_64 
     .:MMMM.:MMMMMMMMMMMMMMM:.MMMM:.        Kernel: 5.15.0-56-generic 
@@ -81,7 +82,8 @@
 
 <p>To fix my audio issues, I have to restart pulseaudio.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 pulseaudio -k
 pulseaudio --start
 </code></pre></div></div>
@@ -90,7 +92,8 @@ pulseaudio --start
 
 <p>And here’s the command to connect my keyboard. I’ve provided commands how to scan, connect and pair.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 # bluetoothctl scan on
 # bluetoothctl connect 00:1F:20:A8:EE:1F
 # bluetoothctl pair 00:1F:20:A8:EE:1F
@@ -102,7 +105,8 @@ bluetoothctl connect 00:1F:20:A8:EE:1F
 
 <p>Output</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ulysses@penguin:~$ bluetoothctl connect 00:1F:20:A8:EE:1F
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ulysses@penguin:~$ bluetoothctl connect 00:1F:20:A8:EE:1F
 Attempting to connect to 00:1F:20:A8:EE:1F
 [DEL] Device 72:D9:FF:CC:41:78 72-D9-FF-CC-41-78
 [CHG] Device 00:1F:20:A8:EE:1F Connected: yes

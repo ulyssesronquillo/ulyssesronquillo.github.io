@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>The following are instructions on how to extend a disk volume with LVM.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># aws cli extend volume
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# aws cli extend volume
 aws ec2 modify-volume --region us-east-1 \
 --volume-id vol-xxxxxxxxxxxx --size 15 \
 --volume-type gp2

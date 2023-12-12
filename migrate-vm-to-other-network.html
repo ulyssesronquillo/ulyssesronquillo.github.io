@@ -52,14 +52,16 @@
 
 <p>Stop the VM.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances stop server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances stop server-name \
 --zone=us-central1-c \
 --project project-id
 </code></pre></div></div>
 
 <p>Migrate the VM. Use self link for network and subnetwork.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances network-interfaces update server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances network-interfaces update server-name \
 --zone=us-central1-c \
 --network-interface=nic0 \
 --network=your-network \
@@ -69,7 +71,8 @@
 
 <p>Start the VM.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances start server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances start server-name \
 --zone=us-central1-c \
 --project project-id
 </code></pre></div></div>

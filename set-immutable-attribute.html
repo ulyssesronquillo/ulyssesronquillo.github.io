@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>If you don’t want a file edited or deleted, you can set the immutable attribute to ON. If activated, not even root or the owner of the file can delete it. Users with write access can still read it, but they obviously will not be able to modify it. To unset it, just use the -i option.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chattr +i text.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# Set immutable attribute
+sudo chattr +i text.txt
 
 # Unset immutable attribute
 sudo chattr -i text.txt

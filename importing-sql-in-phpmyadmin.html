@@ -62,12 +62,14 @@
 
 <p>In Ubuntu, my php.ini is located in /etc/php5/apache2/php.ini.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/php5/apache2/php.ini
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo nano /etc/php5/apache2/php.ini
 </code></pre></div></div>
 
 <p>Look for the File Uploads text as displayed below. Change from 2M to 16M. Save file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>;;;;;;;;;;;;;;;;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+;;;;;;;;;;;;;;;;
 ; File Uploads ;
 ;;;;;;;;;;;;;;;;
 
@@ -76,7 +78,8 @@ upload_max_filesize = 16M
 
 <p>Finally, you need to reboot Apache for your changes take effect.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo /etc/init.d/apache restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo /etc/init.d/apache restart
 </code></pre></div></div>
 
   </div><a class="u-url" href="/importing-sql-in-phpmyadmin" hidden></a>

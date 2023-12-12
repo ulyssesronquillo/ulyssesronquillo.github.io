@@ -52,24 +52,28 @@
 
 <p>List block devices. Check disk sizes.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -h
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;lsblk
+df -h
 </code></pre></div></div>
 
 <p>Determine file system type: xfs, ext2, ext3 or ext4.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># or
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;file -s /dev/xvda1
+# or
 df -Th
 </code></pre></div></div>
 
 <p>Extend volume from the console or command line.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--volume-id vol-xxxxxxxxxxxx --size 10 \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 modify-volume --region us-east-1 \
+--volume-id vol-xxxxxxxxxxxx --size 10 \
 --volume-type gp2
 </code></pre></div></div>
 
 <p>Resize Linux partition.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># for /dev/xvda1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# for /dev/xvda1
 growpart /dev/xvda 1
 # for /dev/xvda2
 growpart /dev/xvda 2
@@ -82,7 +86,8 @@ xfs_growfs /dev/xvda1
 
 <p>Check if new file size is being displayed.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -Th
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;lsblk
+df -Th
 </code></pre></div></div>
 
   </div><a class="u-url" href="/extend-linux-boot" hidden></a>

@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>If you need to copy a snapshot from one region to another, here’s the AWS CLI command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 copy-snapshot \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws ec2 copy-snapshot \
     --region us-east-1 \
     --source-region us-east-2 \
     --source-snapshot-id snap-xxxxxxxxxxxxxxxxx \
@@ -59,7 +60,8 @@
 
 <p>Output:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+{
     "SnapshotId": "snap-xxxxxxxxxxxxxxxxx"
 }
 </code></pre></div></div>

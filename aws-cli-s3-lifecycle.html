@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to add a lifecycle management to S3 buckets via the CLI. In this example, expiration is set to 7 days. S3 will auto delete expired objects.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--bucket bucketname --lifecycle-configuration file://lifecycle.json
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$aws s3api put-bucket-lifecycle-configuration \
+--bucket bucketname --lifecycle-configuration file://lifecycle.json
 </code></pre></div></div>
 
 <p>The lifecycle is defined in this JSON file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "Rules": [ 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;{
+  "Rules": [ 
     {
        "ID": "Expires in 7 DAYS", 
        "Prefix": "", 

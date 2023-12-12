@@ -52,12 +52,14 @@
 
 <p>Add these 2 commands in crontab. The job runs every 5 mins.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*/5 * * * * /usr/bin/curl http://169.254.169.254/latest/meta-data/public-ipv4 &gt; /var/www/html/ip.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;*/5 * * * * /usr/bin/curl http://169.254.169.254/latest/meta-data/instance-id &gt; /var/www/html/id.txt
+*/5 * * * * /usr/bin/curl http://169.254.169.254/latest/meta-data/public-ipv4 &gt; /var/www/html/ip.txt
 </code></pre></div></div>
 
 <p>You can view on the site.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://yourdomain.com/ip.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# your domain
+http://yourdomain.com/ip.txt
 http://yourdomain.com/id.txt
 # your server ip address
 http://1.1.1.1/ip.txt

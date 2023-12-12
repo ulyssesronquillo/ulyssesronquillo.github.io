@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>How to set up umask for a Linux user.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sets umask for all users
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# sets umask for all users
 vi /etc/profile
 # sets umask for a user
 vi ~/.bashrc
@@ -58,7 +59,8 @@ vi ~/.bashrc
 
 <p>Add the following umask line to the file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>umask 0022
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+umask 0022
 </code></pre></div></div>
 
   </div><a class="u-url" href="/set-user-umask" hidden></a>

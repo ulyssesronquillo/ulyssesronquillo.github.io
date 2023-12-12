@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to create a regional SSL Certificate.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssl-certificates create my-ssl-cert \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute ssl-certificates create my-ssl-cert \
 --description "describe ssl certificate" \
 --domains=domain1.com,domain2.com \
 --certificate=cert.pem \
@@ -60,19 +61,22 @@
 
 <p>List the SSL certificates.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssl-certificates list --project=project-id
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute ssl-certificates list --project=project-id
 </code></pre></div></div>
 
 <p>Describe the SSL certificate.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssl-certificates describe my-ssl-cert \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute ssl-certificates describe my-ssl-cert \
 --region=us-central1 \
 --project=project-id
 </code></pre></div></div>
 
 <p>Delete SSL certificate.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssl-certificates delete my-ssl-cert \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute ssl-certificates delete my-ssl-cert \
 --region=us-central1 \
 --project=project-id
 </code></pre></div></div>

@@ -52,12 +52,14 @@
 
 <p>Create a Dockerfile. Place your web pages in the public-html directory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>COPY ./public-html/ /usr/local/apache2/htdocs/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;FROM httpd:2.4
+COPY ./public-html/ /usr/local/apache2/htdocs/
 </code></pre></div></div>
 
 <p>Build a container image for Google Container Registry (GCR).</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PROJECT_ID=[project_id]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# set your project
+export PROJECT_ID=[project_id]
 # build a container image
 docker build -t gcr.io/${PROJECT_ID}/your-app:v1 .
 # verify docker images
@@ -66,14 +68,16 @@ docker images
 
 <p>Upload the container image to GCR.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud auth configure-docker
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# authenticate
+gcloud auth configure-docker
 # upload image
 docker push gcr.io/${PROJECT_ID}/your-app:v1
 </code></pre></div></div>
 
 <p>Create a container GKE cluster.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud container clusters create your-app-cluster \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# create cluster
+gcloud container clusters create your-app-cluster \
 --num-nodes=2
 # check clusters
 gcloud compute instances list
@@ -81,7 +85,8 @@ gcloud compute instances list
 
 <p>Deploy your web application.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl create deployment your-app \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# create deployment
+kubectl create deployment your-app \
 --image=gcr.io/${PROJECT_ID}/your-app:v1
 # see the pods
 kubectl get pods
@@ -89,7 +94,8 @@ kubectl get pods
 
 <p>Expose your application to the Internet.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl expose deployment your-app \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# expose your application
+kubectl expose deployment your-app \
 --type=LoadBalancer \
 --port 80 \
 --target-port 80
@@ -99,14 +105,16 @@ kubectl get service
 
 <p>Scale your application.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl scale deployment your-app --replicas=3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# scale to 3 replicas
+kubectl scale deployment your-app --replicas=3
 # display the replicas
 kubectl get deployment your-app
 </code></pre></div></div>
 
 <p>Cleanup.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud container clusters delete your-app-cluster
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;kubectl delete service your-app
+gcloud container clusters delete your-app-cluster
 </code></pre></div></div>
 
   </div><a class="u-url" href="/static-website-on-gke" hidden></a>

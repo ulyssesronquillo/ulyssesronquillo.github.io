@@ -52,14 +52,16 @@
 
 <p>First create a snapshot of the disk.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--snapshot-names manual-snapshot-disk-1 \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute disks snapshot your-server \
+--snapshot-names manual-snapshot-disk-1 \
 --project your-project \
 --zone us-central1-c
 </code></pre></div></div>
 
 <p>Restore snapshot to SSD format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--source-snapshot manual-snapshot-disk-1 \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute disks create disk-1-ssd \
+--source-snapshot manual-snapshot-disk-1 \
 --project your-project \
 --zone us-central1-a \
 --type pd-ssd \

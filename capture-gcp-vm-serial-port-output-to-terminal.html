@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s the command to capture a GCP VM serial port output to your terminal.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances get-serial-port-output servername \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances get-serial-port-output servername \
 --zone us-central1-f \
 --project your-project \
 --port 1 
@@ -58,7 +59,8 @@
 
 <p>You can also send the output to a file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances get-serial-port-output servername \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances get-serial-port-output servername \
 --zone us-central1-f \
 --project your-project \
 --port 1 &gt; output.txt

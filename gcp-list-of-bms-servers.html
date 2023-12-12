@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to list Bare Metal Servers in Google Cloud Platform via gcloud.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud bms instances list --region REGION --project PROJECT
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud bms instances list --region REGION --project PROJECT
 </code></pre></div></div>
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME            ID                 PROJECT         REGION       MACHINE_TYPE           CLIENT_IPS    PRIVATE_IPS                    STATE
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+NAME            ID                 PROJECT         REGION       MACHINE_TYPE           CLIENT_IPS    PRIVATE_IPS                    STATE
 server-001      at-xxxxxxx-svr001  project-01      us-central1  o2-ultramem-896-metal  10.0.0.1      192.168.253.1,192.168.252.1    RUNNING
 server-002      at-xxxxxxx-svr002  project-02      us-central1  o2-ultramem-896-metal  10.0.0.2      192.168.253.2,192.168.252.2    RUNNING
 </code></pre></div></div>

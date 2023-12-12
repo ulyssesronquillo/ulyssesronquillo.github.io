@@ -52,7 +52,8 @@
 
 <p>Default display is in kB</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat /proc/meminfo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cat /proc/meminfo
 MemTotal:        7492768 kB
 MemFree:          427368 kB
 MemAvailable:    5424768 kB
@@ -60,7 +61,8 @@ MemAvailable:    5424768 kB
 
 <p>Display in MB</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '$3=="kB"{$2=$2/1024;$3="MB"} 1' /proc/meminfo | column -t
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+awk '$3=="kB"{$2=$2/1024;$3="MB"} 1' /proc/meminfo | column -t
 MemTotal:           7317.16      MB
 MemFree:            404.527      MB
 MemAvailable:       5285.4       MB
@@ -68,7 +70,8 @@ MemAvailable:       5285.4       MB
 
 <p>Output in GB</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+awk '$3=="kB"{$2=$2/1024^2;$3="GB";} 1' /proc/meminfo | column -t
 MemTotal:           7.14566      GB
 MemFree:            0.370392     GB
 MemAvailable:       5.13733      GB

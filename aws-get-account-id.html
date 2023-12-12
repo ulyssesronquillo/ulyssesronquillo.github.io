@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s a quick way to find the AWS Account ID via AWS CLI.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws sts get-caller-identity --query Account --output text
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws sts get-caller-identity --query Account --output text
 </code></pre></div></div>
 
 <p>Output is a 12 digit number (redacted)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xxxxxxxxxxxx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+xxxxxxxxxxxx
 </code></pre></div></div>
 
 <p>AWS Account ID is a 12 digit number unique to each AWS account. Occasionally, there are scripts and policies that need the ID of the account. The command above is one way of querying the account ID so they can be used for policies that need them.</p>

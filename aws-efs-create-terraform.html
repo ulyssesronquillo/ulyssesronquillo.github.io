@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to build an EFS file system using Terraform. Create a main.tf file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+terraform {
   required_providers {
     aws = {
       version = "&gt;= 3.22.0"
@@ -80,7 +81,8 @@ resource "aws_efs_mount_target" "efs-mt-example" {
 
 <p>To launch, run terraform.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform init
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+terraform init
 terraform apply
 </code></pre></div></div>
 

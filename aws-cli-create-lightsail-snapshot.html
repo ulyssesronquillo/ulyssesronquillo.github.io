@@ -50,14 +50,16 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s the AWS CLI for creating a LightSail snapshot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail create-instance-snapshot \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws lightsail create-instance-snapshot \
 --instance-snapshot-name test-snapshot \
 --instance-name your-server
 </code></pre></div></div>
 
 <p>Here’s how to delete a snapshot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail delete-instance-snapshot \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws lightsail delete-instance-snapshot \
 --instance-snapshot-name test-snapshot
 </code></pre></div></div>
 

@@ -52,22 +52,26 @@
 
 <p>1. Login to your Ubuntu Server via SSH. Substitute your own username and server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh ulysses@server.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ ssh ulysses@server.com
 </code></pre></div></div>
 
 <p>2. Add Icecast2 PPA to your sources list. Since I’m running Ubuntu 12.04, I’ll use the 12.04 repository here.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo sh -c "echo deb http://download.opensuse.org/repositories/home:/dm8tbr/xUbuntu_12.04 ./ &gt; /etc/apt/sources.list.d/icecast.list"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo sh -c "echo deb http://download.opensuse.org/repositories/home:/dm8tbr/xUbuntu_12.04 ./ &gt; /etc/apt/sources.list.d/icecast.list"
 </code></pre></div></div>
 
 <p>3. Add the GPG key to the apt sources keyring. I’ll use the 12.04 release key here as well.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget -qO - http://download.opensuse.org/repositories/home:/dm8tbr/xUbuntu_12.04/Release.key | sudo apt-key add -
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ wget -qO - http://download.opensuse.org/repositories/home:/dm8tbr/xUbuntu_12.04/Release.key | sudo apt-key add -
 </code></pre></div></div>
 
 <p>4. Run Update to begin the upgrade process to the latest version of Icecast2.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+$ sudo apt-get update
 $ sudo apt-get upgrade
 </code></pre></div></div>
 

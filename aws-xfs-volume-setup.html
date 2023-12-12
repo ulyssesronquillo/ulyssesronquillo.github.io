@@ -50,19 +50,22 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to setup a XFS volume.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file -s /dev/nvme2n1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+file -s /dev/nvme2n1
 mkfs -t xfs /dev/nvme2n1
 </code></pre></div></div>
 
 <p>Mount to /data.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /data
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mkdir /data
 mount /dev/nvme2n1 /data
 </code></pre></div></div>
 
 <p>Add to /etc/fstab.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim /etc/fstab
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+vim /etc/fstab
 #
 #
 UUID=xxxxxxxxxxxxxxxxxxxxxx /data  xfs  defaults 0 0

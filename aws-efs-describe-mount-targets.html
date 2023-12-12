@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to display mount targets of an EFS system via AWS CLI.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--file-system-id fs-xxxxxxxx \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt; aws efs describe-mount-targets \
+--file-system-id fs-xxxxxxxx \
 --profile default \
 --region us-east-1
 </code></pre></div></div>

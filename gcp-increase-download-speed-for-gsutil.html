@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>If you’re downloading large files, you can speed up download speeds by modifying gsutil. Decrease the number of threads and increase the number of components.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gsutil \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gsutil \
 -o "GSUtil:parallel_thread_count=1" \
 -o "GSUtil:parallel_process_count=8" \
 cp gs://bucket/source.dat /download/dest/file.dat

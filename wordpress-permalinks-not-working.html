@@ -56,7 +56,8 @@
   <li>Restart the Apache server.</li>
 </ol>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a2enmod rewrite
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;chmod 664 /var/www/domain.com/.htaccess
+a2enmod rewrite
 systemctl restart apache2
 </code></pre></div></div>
 

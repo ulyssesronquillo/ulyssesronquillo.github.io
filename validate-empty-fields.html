@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s a simple way to validate forms with empty fields. When working with forms, we want users to submit required fields. We can easily check by using the PHP empty() function. In this example, I will use a simple form, and check if “username” is empty. Since the action for the form is blank, the form will submit to itself. The the code you see for “value” is a shorthand PHP code to echo the field entry after a submit.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
 
 <form action="" method="post" name=""> <input name="username" type="text" value="&lt;?=$username;?" />&lt;/input&gt; /&gt; <input name="submit" type="submit" value="Submit" />&lt;/input&gt; </form>
 <p>Here’s the PHP code. First, we need to check if the form was submitted. We do this by checking $_POST[‘submit’]. Next, we will check if “username” is empty by using the empty() PHP function. If it’s empty, then we assign an error message to $errors. Finally, we will check if $errors is empty. If it is, then we can proceed with whatever we want to do. Otherwise, we echo the error messages.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$errors = array();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+$errors = array();
 if (isset($_POST['submit'])) :
  $username = $_POST['username'];
  if (empty($username)) $errors[] = "Empty username.";

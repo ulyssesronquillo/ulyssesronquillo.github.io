@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>How to add a startup-script to metadata. The script executes every time VM is started.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-metadata instance-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances add-metadata instance-name \
 --project your-project-id \
 --zone us-central1-c \
 --metadata=startup-script='#! /bin/bash

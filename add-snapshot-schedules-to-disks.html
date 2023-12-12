@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>How to add Snapshot Schedules to disks in Terraform. Add this to your existing VM.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resource "google_compute_disk_resource_policy_attachment" "hourly_attachment" {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+resource "google_compute_disk_resource_policy_attachment" "hourly_attachment" {
   name = "hourly-snapshots"
   disk = google_compute_instance.test.name
   zone = "us-central1-c"

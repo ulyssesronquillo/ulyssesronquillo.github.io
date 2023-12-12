@@ -52,18 +52,21 @@
 
 <p>First create a script. It this case, it will create a file called test.txt.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 &gt; /root/test.txt
 </code></pre></div></div>
 
 <p>Make the script executable.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod /root/test.sh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+chmod /root/test.sh
 </code></pre></div></div>
 
 <p>Now create a service in /etc/systemd/system/test.service</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># vi /etc/systemd/system/test.service
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+# vi /etc/systemd/system/test.service
 [Unit]
 Description=A test service
 After=network.target
@@ -77,22 +80,26 @@ WantedBy=default.target
 
 <p>Reload systemd.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl daemon-reload
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+systemctl daemon-reload
 </code></pre></div></div>
 
 <p>Enable the service.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl enable test.service
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+systemctl enable test.service
 </code></pre></div></div>
 
 <p>Start the service.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start test.service
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+systemctl start test.service
 </code></pre></div></div>
 
 <p>Reboot and test.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>reboot
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+reboot
 </code></pre></div></div>
 
 <p>Validate if the script ran. Check if the file was created.</p>

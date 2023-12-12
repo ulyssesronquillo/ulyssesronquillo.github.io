@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to list GCP’s manual snapshots. projectIds.txt contains a list of projects.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 ts=$(date +%Y%m%d-%H%M%S)
 log="manual-snapshots-logs-$ts"
 &gt;$log
@@ -68,7 +69,8 @@ done &gt; projectIds.txt
 
 <p>Another option.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+#!/bin/bash
 ts=$(date +%Y%m%d-%H%M%S)
 log="manual-snapshots-logs-$ts"
 &gt;$log

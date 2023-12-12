@@ -52,19 +52,22 @@
 
 <p>Set preserve_hostname to true in /etc/cloud/cloud.cfg.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>preserve_hostname: true
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+preserve_hostname: true
 </code></pre></div></div>
 
 <p>Set the hostname in /etc/sysconfig/network.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HOSTNAME=server.domain.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+HOSTNAME=server.domain.com
 NETWORKING=yes
 NOZEROCONF=yes
 </code></pre></div></div>
 
 <p>Reboot the server to make sure hostname sticks after a reboot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shutdown -r now
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+shutdown -r now
 </code></pre></div></div>
 
 <p>Login to confirm hostname sticks.</p>

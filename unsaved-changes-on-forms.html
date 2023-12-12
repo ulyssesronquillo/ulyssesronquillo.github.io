@@ -54,7 +54,8 @@
 
 <p>In this example, I created a simple form with one input called “username.” I’ve added “onchange=’needToConfirm=True’” to monitor the input field. I also added a save and cancel button, as well as an internal link for testing the form later. The save button calls the “needToConfirm” function when the save button is clicked. The cancel button simply reloads the same page when the cancel button is clicked. Here’s the HTML markup.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+</code></pre></div></div>
 
 <form action="" id="login" method="post"> <input name="username" onchange="needToConfirm=true" size="40" type="text" value="" />&lt;/input&gt;  
  <input name="save" onclick="needToConfirm=false;" type="Submit" value="Save" />&lt;/input&gt; <input onclick="window.location='confirm.html'" type="button" value="Cancel" />&lt;/input&gt; [Link](confirm.html)#### Javascript
@@ -62,6 +63,7 @@
 The unsaved changes feature is made possible using Javascript. The function starts out setting needToConfirm to false. A pop up window comes up notifying the user that they have unsaved changes on the form. The user is prompted whether to stay on the page or to leave the page. Add the following Javascript code at the end of the form. Go ahead, test the demo below.
 
 ```
+<pre lang="html">
 <script>
 needToConfirm = false;
 window.onbeforeunload = askConfirm;
@@ -77,7 +79,8 @@ function askConfirm()
 
 [Demo](http://uly.me/demo/confirm.html)
 
-</form>
+&lt;/form&gt;
+</pre></form>
 
   </div><a class="u-url" href="/unsaved-changes-on-forms" hidden></a>
 </article>

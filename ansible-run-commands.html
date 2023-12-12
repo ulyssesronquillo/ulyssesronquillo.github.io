@@ -52,7 +52,8 @@
 
 <p>First, here’s my /etc/ansible/hosts file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[servers]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[servers]
 server1
 server2
 [webservers]
@@ -68,7 +69,8 @@ server8
 
 <p>Here are the commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible servers -m ping
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ansible servers -m ping
 ansible webservers -m command -a "df -h"
 ansible appservers -m command -a "crontab -l"
 ansible dbservers -m command -a "cat /etc/hosts"

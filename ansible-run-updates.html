@@ -50,11 +50,13 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s a simple adhoc to run updates on systems in Ansible.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ansible servers -m apt -a "upgrade=yes update_cache=yes" -b
+</code></pre></div></div>
 
 <p>Results:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    "changed": false, 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;server | SUCCESS =&gt; {
+    "changed": false, 
     "msg": "Reading package lists...
      Building dependency tree...
      Reading state information...
@@ -79,7 +81,8 @@
 
 <p>If you want to reboot a remote server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ansible servers -m "reboot" -b
+</code></pre></div></div>
 
   </div><a class="u-url" href="/ansible-run-updates" hidden></a>
 </article>

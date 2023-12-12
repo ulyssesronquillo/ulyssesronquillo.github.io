@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>AWS has machine types that require ENA Support. You can run AWS CLI to find out if instance is ENA enabled.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 describe-instances \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+aws ec2 describe-instances \
 --instance-id i-xxxxxxxxxxxxxxxxx \
 --profile default \
 --region us-east-1 \
@@ -59,23 +60,27 @@
 
 <p>Login to the instance and verify.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo lspci | grep -i Amazon
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+sudo lspci | grep -i Amazon
 </code></pre></div></div>
 
 <p>List driver details.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modinfo nvme
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+modinfo nvme
 </code></pre></div></div>
 
 <p>Verify modules loaded at startup.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsmod | grep nvme
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+lsmod | grep nvme
 lsmod | grep ena
 </code></pre></div></div>
 
 <p>If ENA drivers are missing, install them.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install pciutils
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+yum install pciutils
 </code></pre></div></div>
 
   </div><a class="u-url" href="/aws-ec2-ena-support" hidden></a>

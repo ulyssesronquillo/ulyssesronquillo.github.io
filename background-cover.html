@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Adding background images to your designs is quite simple. All you need to do is assign CSS background-image to the body of your design. In addition, you can also assign a background color, just in case the background image is not rendered.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    background-image: url("path/to/the/background/image.gif");
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;body {
+    background-image: url("path/to/the/background/image.gif");
     background-color: #cccccc;
 }
 </code></pre></div></div>
@@ -59,13 +60,15 @@
 
 <p>To make your background image cover all monitor sizes, you need to use “background-cover.”</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    background-size: cover;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;body { 
+    background-size: cover;
 }
 </code></pre></div></div>
 
 <p>Here’s the entire code.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    background-image: url("path/to/the/background/image.gif");
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;body {
+    background-image: url("path/to/the/background/image.gif");
     background-color: #cccccc;
     background-size: cover;
 }

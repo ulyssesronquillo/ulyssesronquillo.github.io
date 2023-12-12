@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Add a yum repo manually by adding a configuration file in /etc/yum.repo.d/ directory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi newrepo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;cd /etc/yum.repos.d/
+vi newrepo
 </code></pre></div></div>
 
 <p>Add the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name=New Repo for RHEL/ CentOS $releasever - $basearch
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;[newrepo]
+name=New Repo for RHEL/ CentOS $releasever - $basearch
 baseurl=http://newrepo.domain.com/centos/$releasever/$basearch/
 enabled=1
 gpgcheck=1
@@ -64,11 +66,13 @@ gpgkey=http://newrepo.domain.com/RPM-GPG-KEY.txt
 
 <p>You may need to import the key.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;rpm --import http://newrepo.domain.com/RPM-GPG-KEY.txt
+</code></pre></div></div>
 
 <p>Finally, test the new repo by running the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install new-package
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;yum update -y
+yum install new-package
 </code></pre></div></div>
 
   </div><a class="u-url" href="/yum-add-repo-manually" hidden></a>

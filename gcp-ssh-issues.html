@@ -50,24 +50,28 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>There are a few issues that prop up every once in a while with gcloud compute ssh. gcloud compute ssh creates local user at first login. The account password has a default expiration of 90 days. If unable to login, you can try logging in as a different name (even a fictitious name) e.g. superheroes, etc. something unique.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssh username@servername --zone us-central1-c --project project-id --internal-ip
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute ssh username@servername --zone us-central1-c --project project-id --internal-ip
 </code></pre></div></div>
 
 <p>Once logged in, you can delete local users with expired passwords or perform other admin tasks.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>userdel -r username
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+userdel -r username
 </code></pre></div></div>
 
 <p>You can also try to run chage to adjust the password expiration.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chage -M 180 username ​ (extends expiration from 90 to 180 days)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt; 
+chage -M 180 username ​ (extends expiration from 90 to 180 days)
 </code></pre></div></div>
 
 <p>If you continue to have login issues, you can also delete Metadata SSH keys in both the instance and project levels.</p>
 
 <p>Last resort you can use force key overwrite which will regenerate a new key and overwrite broken ssh keys.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssh username@servername \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute ssh username@servername \
 --force-key-file-overwrite \
 --zone us-central1-c \
 --project project-id \

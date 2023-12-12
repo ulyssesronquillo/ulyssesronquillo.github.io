@@ -52,7 +52,8 @@
 
 <p>In Terraform 0.11.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resource "aws_instance" "example" {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+resource "aws_instance" "example" {
   ami           = "${var.ami}"
   instance_type = "${var.instance_type}"
 }
@@ -60,7 +61,8 @@
 
 <p>In Terraform 0.12.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resource "aws_instance" "example" {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+resource "aws_instance" "example" {
   ami           = var.ami
   instance_type = var.instance_type
 }

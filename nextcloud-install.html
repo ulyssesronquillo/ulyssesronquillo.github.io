@@ -52,27 +52,32 @@
 
 <p>Run Updates First</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get upgrade -y
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo apt-get update
+$ sudo apt-get upgrade -y
 $ sudo apt-get dist-upgrade -y
 </code></pre></div></div>
 
 <p>Install Apache</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo apt-get install apache2
+</code></pre></div></div>
 
 <p>Install MySQL Server</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mysql_secure_installation
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo apt-get install mysql-server mysql-client
+$ sudo mysql_secure_installation
 </code></pre></div></div>
 
 <p>Install PHP</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install php-json php-curl php-intl php-mcrypt php-imagick php-dom unzip
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo apt-get install php libapache2-mod-php php-mbstring php-zip php-xml php-mysql php-gd
+$ sudo apt-get install php-json php-curl php-intl php-mcrypt php-imagick php-dom unzip
 </code></pre></div></div>
 
 <p>Edit php.ini change the memory limit and upload and post file sizes to something bigger. Restart Apache.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>memory_limit = 512M
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo nano /etc/php/7.0/apache2/php.ini
+memory_limit = 512M
 upload_max_filesize = 500M
 post_max_size = 500M
 $ sudo service apache2 restart
@@ -80,7 +85,8 @@ $ sudo service apache2 restart
 
 <p>Create Database and User. Flush privileges.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql&gt; create database nextcloud;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ mysql -u root -p
+mysql&gt; create database nextcloud;
 mysql&gt; grant all privileges on nextcloud.* to 'ncuser'@'localhost' identified by 'password';
 mysql&gt; flush privileges;
 mysql&gt; exit;
@@ -88,14 +94,16 @@ mysql&gt; exit;
 
 <p>Download and Install the latest Nextcloud. Give permissions to Apache.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo wget https://download.nextcloud.com/server/releases/nextcloud-11.0.2.zip
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ cd /var/www/html
+$ sudo wget https://download.nextcloud.com/server/releases/nextcloud-11.0.2.zip
 $ sudo unzip nextcloud-11.0.2.zip
 $ sudo chown -R www-data:www-data nextcloud
 </code></pre></div></div>
 
 <p>Setup Apache</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo nano /etc/apache2/sites-available/nextcloud.conf
+
 Alias / "/var/www/html/nextcloud/"
 
  Options +FollowSymlinks
@@ -111,12 +119,14 @@ Alias / "/var/www/html/nextcloud/"
 
 <p>Enable Nextcloud. Disable default.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo a2dissite 000-default.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo a2ensite nextcloud.conf
+$ sudo a2dissite 000-default.conf
 </code></pre></div></div>
 
 <p>Enable the following</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo a2enmod headers
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;$ sudo a2enmod rewrite
+$ sudo a2enmod headers
 $ sudo a2enmod env
 $ sudo a2enmod dir
 $ sudo a2enmod mime

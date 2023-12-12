@@ -54,25 +54,29 @@
 
 <p>Check the date first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>date
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+date
 </code></pre></div></div>
 
 <p>Backup localtime. Set it to US Eastern Time.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv /etc/localtime /etc/localtime.backup
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+mv /etc/localtime /etc/localtime.backup
 ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 </code></pre></div></div>
 
 <p>Backup clock. Set it to US Eastern Time.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp -p /etc/sysconfig/clock /etc/sysconfig/clock.backup 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+cp -p /etc/sysconfig/clock /etc/sysconfig/clock.backup 
 &gt; /etc/sysconfig/clock
 echo ZONE=\"America/New_York\" &gt; /etc/sysconfig/clock
 </code></pre></div></div>
 
 <p>Run the date again to validate.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>date
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+date
 </code></pre></div></div>
 
   </div><a class="u-url" href="/set-timezone-permanently" hidden></a>

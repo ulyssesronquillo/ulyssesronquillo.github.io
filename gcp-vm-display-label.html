@@ -52,12 +52,14 @@
 
 <p>Display all labels.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances describe VM --zone ZONE --project PROJECT_ID --format="value(labels)"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances describe VM --zone ZONE --project PROJECT_ID --format="value(labels)"
 </code></pre></div></div>
 
 <p>Display a specific label.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances describe VM --zone ZONE --project PROJECT_ID --format="value(labels.key)"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute instances describe VM --zone ZONE --project PROJECT_ID --format="value(labels.key)"
 </code></pre></div></div>
 
   </div><a class="u-url" href="/gcp-vm-display-label" hidden></a>

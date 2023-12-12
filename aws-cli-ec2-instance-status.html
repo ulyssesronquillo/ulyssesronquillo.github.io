@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>How to display AWS EC2 instance statuses.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--query 'InstanceStatuses[].[InstanceId,SystemStatus.Status]' \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 describe-instance-status \
+--query 'InstanceStatuses[].[InstanceId,SystemStatus.Status]' \
 --include-all-instances \
 --region us-east-2
 --profile abcdef \
@@ -58,7 +59,8 @@
 
 <p>Query and Filter.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--query 'InstanceStatuses[].[InstanceId,SystemStatus.Status]' \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 describe-instance-status \
+--query 'InstanceStatuses[].[InstanceId,SystemStatus.Status]' \
 --filter 'Name=instance-state-name,Values=stopped' \
 --region us-east-2
 --profile abcdef \
@@ -66,7 +68,8 @@
 
 <p>Filter event.code equal to instance-reboot.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--query 'InstanceStatuses[].[InstanceId,SystemStatus.Status]' \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 describe-instance-status \
+--query 'InstanceStatuses[].[InstanceId,SystemStatus.Status]' \
 --filter 'Name=eventcode,Values=instance-reboot' \
 --region us-east-2
 --profile abcdef \

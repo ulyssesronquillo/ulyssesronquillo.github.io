@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>What’s in the /etc/sudoers.d/ directory? It’s a group of files with the following format as displayed in the code below. In the example, the file allows a Linux group or an AD group to assume the role of root, via the sudo command. As long as the group uses the correct format, and is located inside the /etc/sudoers.d/ directory, that group will have access to root.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;%groupname  ALL=(ALL)   NOPASSWD: ALL
+</code></pre></div></div>
 
   </div><a class="u-url" href="/sudoers-directory" hidden></a>
 </article>

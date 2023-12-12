@@ -50,19 +50,22 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here are a few utilities that monitor disk I/O performance.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iostat -d 5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+iostat -d 5
 pidstat -dl 20
 iotop --only
 </code></pre></div></div>
 
 <p>The alternative is atop, which you can set to run every 10 seconds for 3 hours. The output can be viewed later.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atop -a -w logfile.atop 10 10800 &amp;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+atop -a -w logfile.atop 10 10800 &amp;
 </code></pre></div></div>
 
 <p>Use atop to read the log file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atop -r /path/to/logfile.atop
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+atop -r /path/to/logfile.atop
 </code></pre></div></div>
 
   </div><a class="u-url" href="/monitor-disk-performance" hidden></a>

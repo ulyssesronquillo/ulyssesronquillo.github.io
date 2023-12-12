@@ -50,12 +50,14 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Check if there’s a runaway rpm process. This returns number of processes that are running.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps -ef | grep rpm | wc -l
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ps -ef | grep rpm | wc -l
 </code></pre></div></div>
 
 <p>Kill it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>killall -9 rpm
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+killall -9 rpm
 </code></pre></div></div>
 
 <p>You should be able to run yum updates from this point on.</p>

@@ -60,12 +60,14 @@
 
 <p>Read only.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SET GLOBAL read_only = ON;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;FLUSH TABLES WITH READ LOCK;
+SET GLOBAL read_only = ON;
 </code></pre></div></div>
 
 <p>Back to normal mode.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UNLOCK TABLES;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;SET GLOBAL read_only = OFF;
+UNLOCK TABLES;
 </code></pre></div></div>
 
 <p>You can run these MySQL commands within MySQL or via a bash terminal. Check out my previous post.</p>

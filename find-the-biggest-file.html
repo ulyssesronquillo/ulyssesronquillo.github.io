@@ -50,7 +50,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Find the biggest files in the current directory. Sort by from large to small. Display only the top 20. Display in human readable format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find -type f -exec du -Sh {} + | sort -rh | head -n 20
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+find -type f -exec du -Sh {} + | sort -rh | head -n 20
 </code></pre></div></div>
 
   </div><a class="u-url" href="/find-the-biggest-file" hidden></a>

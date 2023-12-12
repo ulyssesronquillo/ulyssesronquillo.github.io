@@ -52,11 +52,13 @@
 
 <p>Since I work mostly from the Terminal, I wanted to be able to launch Sublime Text 2 directly from the command line. In order to make this possible, I needed to create a symbolic link for easier access. The reason for this is because the Sublime Text 2 command is located in a directory that is hard to remember. So, here’s the command to create a symbolic link called ‘<strong>/bin/subl</strong>‘ for Sublime Text 2.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /bin/subl
+</code></pre></div></div>
 
 <p>From this point on, every time I needed to edit a file, I simply type the following in the commands from the Terminal:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ subl /etc/hosts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;$ subl archives.php
+$ subl /etc/hosts
 $ subl archives.php footer.php
 </code></pre></div></div>
 

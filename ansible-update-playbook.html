@@ -52,7 +52,8 @@
 
 <p>File: /etc/ansible/hosts</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[all:vars]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+[all:vars]
 ansible_user='ubuntu'
 ansible_become=yes
 ansible_become_method=sudo
@@ -96,7 +97,8 @@ ansible_python_interpreter=/usr/bin/python3
 
 <p>Here’s how I run my Ansible update playbook.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook -i /etc/ansible/hosts /etc/ansible/update.yml
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+ansible-playbook -i /etc/ansible/hosts /etc/ansible/update.yml
 </code></pre></div></div>
 
 <p>The advantage of using Ansible is, I can run a single playbook to update dozens of servers. It’s also a great tool for rolling out software as well as executing commands to a group of servers.</p>
