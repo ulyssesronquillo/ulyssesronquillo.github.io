@@ -42,7 +42,7 @@
 
 <p>Restore from snapshots:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute disks create webserver-boot-r \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create webserver-boot-r \
 --project=your-project \
 --source-snapshot=webserver-boot-190616 \
 --zone=us-central1-a
@@ -54,7 +54,7 @@ gcloud compute disks create webserver-data-r \
 
 <p>Stop instance. Detach and attach disks:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances detach-disk webserver --disk=webserver-boot --zone us-central1-a
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances detach-disk webserver --disk=webserver-boot --zone us-central1-a
 gcloud compute instances attach-disk webserver --disk=webserver-boot-r --zone us-central1-a --boot
 gcloud compute instances detach-disk webserver --disk=webserver-data --zone us-central1-a
 gcloud compute instances attach-disk webserver --disk=webserver-data-r --zone us-central1-a

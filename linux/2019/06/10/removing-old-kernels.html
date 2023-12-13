@@ -40,20 +40,17 @@
       <div class="wrapper">
         <p>How to check which kernel is running on your system</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-uname -sr
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uname -sr
 </code></pre></div></div>
 
 <p>List all kernels installed on the system.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-rpm -q kernel
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -q kernel
 </code></pre></div></div>
 
 <p>Removing old kernels using package-cleanup. This keeps 2 kernels on the system.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-yum install yum-utils
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install yum-utils
 package-cleanup --oldkernels --count=2
 </code></pre></div></div>
 

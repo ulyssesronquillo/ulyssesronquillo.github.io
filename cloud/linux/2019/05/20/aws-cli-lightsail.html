@@ -40,28 +40,24 @@
       <div class="wrapper">
         <p>Get instance details</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws lightsail get-instance --instance-name your-server
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail get-instance --instance-name your-server
 </code></pre></div></div>
 
 <p>Get instance state</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws lightsail get-instance-state --instance-name your-server
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail get-instance-state --instance-name your-server
 </code></pre></div></div>
 
 <p>Create a snapshot</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws lightsail create-instance-snapshot \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail create-instance-snapshot \
 --instance-snapshot-name your-server-new-snapshot-201905192200 \
 --instance-name your-server
 </code></pre></div></div>
 
 <p>Create disk from snapshot</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws lightsail create-disk-from-snapshot \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail create-disk-from-snapshot \
 --disk-name your-server-new-boot-disk \
 --disk-name your-server-new-snapshot-201905192200 \
 --availability-zone us-east-1a
@@ -70,8 +66,7 @@ aws lightsail create-disk-from-snapshot \
 
 <p>Attach Disk</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws lightsail attach-disk \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail attach-disk \
 --disk-name your-server-new-boot-disk \
 --instance-name your-server \
 --disk-path /dev/sda1
@@ -79,16 +74,14 @@ aws lightsail attach-disk \
 
 <p>Create instance from snapshot</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws lightsail create-instance-snapshot \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail create-instance-snapshot \
 --instance-snaphot-name your-server-new-snapshot-201905192200
 --instance-name your-server
 </code></pre></div></div>
 
 <p>Attach Static IP Address</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws lightsail attach-static-ip \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail attach-static-ip \
 --static-ip-name your-ip-name \
 --instance-name your-server
 </code></pre></div></div>

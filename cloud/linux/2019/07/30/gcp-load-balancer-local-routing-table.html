@@ -42,22 +42,22 @@
 
 <p>Assume the load balancer IP address is 10.1.2.99, and the VM is called vm-a1.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;curl http://10.1.2.99
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl http://10.1.2.99
 </code></pre></div></div>
 
 <p>The end result is …</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;Page served from: vm-a1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Page served from: vm-a1
 </code></pre></div></div>
 
 <p>Make sure there’s an entry in the local table that matches the IP of the load balancer.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ip route show table local | grep 10.1.2.99
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ip route show table local | grep 10.1.2.99
 </code></pre></div></div>
 
 <p>If not, add it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;ip route add to local 10.1.2.99/32 dev eth0 proto 66
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ip route add to local 10.1.2.99/32 dev eth0 proto 66
 </code></pre></div></div>
 
 <p><a href="https://cloud.google.com/load-balancing/docs/internal/setting-up-internal">Documentation</a></p>

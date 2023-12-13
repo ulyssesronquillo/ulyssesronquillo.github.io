@@ -48,7 +48,7 @@
   <li>See JSON file examples below</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;cd /path/to/scripts/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/scripts/
 # the command to switch to the elb
 aws route53 change-resource-record-sets --hosted-zone-id xxxxxxxxxxxxxx --change-batch file://elb.json
 # the command to switch to standard site
@@ -57,7 +57,7 @@ aws route53 change-resource-record-sets --hosted-zone-id xxxxxxxxxxxxxx --change
 
 <p>elb.json = points to AWS ELB (elastic load balancer)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
    "Comment": "back to elb",
    "Changes": [
       {
@@ -78,7 +78,7 @@ aws route53 change-resource-record-sets --hosted-zone-id xxxxxxxxxxxxxx --change
 
 <p>live.json = points to your standard site. Value is your IP Address.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
    "Comment": "back to live",
    "Changes": [
       {
