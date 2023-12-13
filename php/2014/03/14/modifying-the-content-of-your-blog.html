@@ -44,8 +44,7 @@
 
 <p>The Excerpt</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$item-&gt;content = substr($item-&gt;content,0,330);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$item-&gt;content = substr($item-&gt;content,0,330);
 echo $item-&gt;content;
 </code></pre></div></div>
 
@@ -53,8 +52,7 @@ echo $item-&gt;content;
 
 <p>Remove page breaks and new lines</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$item-&gt;content = str_replace(array('\r', '\n'), '', $item-&gt;content);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$item-&gt;content = str_replace(array('\r', '\n'), '', $item-&gt;content);
 echo $item-&gt;content;
 </code></pre></div></div>
 
@@ -62,15 +60,13 @@ echo $item-&gt;content;
 
 <p>Remove two spaces</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$item-&gt;content = str_replace('  ', '', $item-&gt;content);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$item-&gt;content = str_replace('  ', '', $item-&gt;content);
 echo $item-&gt;content;
 </code></pre></div></div>
 
 <p>Finally, adding Read More […]</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$item-&gt;content = $item-&gt;content . '&lt;a href="#"&gt;Read [...]&lt;/a&gt;';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$item-&gt;content = $item-&gt;content . '&lt;a href="#"&gt;Read [...]&lt;/a&gt;';
 echo $item-&gt;content;
 </code></pre></div></div>
 

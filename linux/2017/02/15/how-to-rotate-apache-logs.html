@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Apache comes with a logrotate utility. You can customize the way logrotate behaves by editing the /etc/logrotate.d/apache file. The logrotate utility has many options. In this example, we are rotating the log files that are located at the /var/www/domain.com/log/ directory. We are instructing the log files to rotate monthly for a total of 24 times. We are compressing the files by zipping them. We are using the date extension as part of the filename. We are also delaying the compression until the log has been rotated at least twice. Finally, Apache is restarted.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ sudo nano /etc/logrotate.d/apache
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /etc/logrotate.d/apache
 /var/www/domain.com/*.log {
   monthly
   missingok

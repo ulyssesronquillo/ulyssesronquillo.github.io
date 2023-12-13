@@ -42,8 +42,7 @@
 
 <p>If you’re getting a missing add-apt-repository command, just install the following:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ sudo apt-get install software-properties-common python-software-properties
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install software-properties-common python-software-properties
 </code></pre></div></div>
 
 <p>Once installed, you can then add other repositories that you want.</p>
@@ -52,24 +51,21 @@ $ sudo apt-get install software-properties-common python-software-properties
 
 <p>You can install Sublime Text 2 via the PPA route using the following.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ sudo add-apt-repository ppa:webupd8team/sublime-text-2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo add-apt-repository ppa:webupd8team/sublime-text-2
 $ sudo apt-get update
 $ sudo apt-get install sublime-text-2
 </code></pre></div></div>
 
 <p>Or install the latest Gimp release:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo add-apt-repository ppa:otto-kesselgulasch/gimp
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository ppa:otto-kesselgulasch/gimp
 sudo apt-get update
 sudo apt-get install gimp
 </code></pre></div></div>
 
 <p>To revert the changes:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo apt-get install ppa-purge
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ppa-purge
 sudo ppa-purge ppa:otto-kesselgulasch/gimp
 </code></pre></div></div>
 

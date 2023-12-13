@@ -42,47 +42,40 @@
 
 <p>How to install WP-CLI</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 </code></pre></div></div>
 
 <p>Make WP-CLI Executable</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ chmod +x wp-cli.phar
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod +x wp-cli.phar
 </code></pre></div></div>
 
 <p>Rename wp-cli.phar to wp and move to a folder where it can be executed globally.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ sudo mv wp-cli.phar /usr/local/bin/wp
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mv wp-cli.phar /usr/local/bin/wp
 </code></pre></div></div>
 
 <p>How to Install and Activate Theme from the command line</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ wp theme install twentytwelve
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wp theme install twentytwelve
 $ wp theme activate twentytwelve
 </code></pre></div></div>
 
 <p>How to Install, Activate, Deactivate a Plugin</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ wp plugin install hello-dolly
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wp plugin install hello-dolly
 $ wp plugin activate hello-dolly
 $ wp plugin deactivate hello-dolly
 </code></pre></div></div>
 
 <p>How to update WordPress to the latest core release</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ wp core update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wp core update
 </code></pre></div></div>
 
 <p>How to list the last 5 posts</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ wp post list --post_type=post --posts_per_page=5 --format=json
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wp post list --post_type=post --posts_per_page=5 --format=json
 </code></pre></div></div>
 
 <p>The command above will spit out an array in JSON format.</p>

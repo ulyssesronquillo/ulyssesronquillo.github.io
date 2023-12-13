@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>How to display tags of EFS file system.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws efs describe-tags \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws efs describe-tags \
 --file-system-id fs-xxxxxxxx \
 --query 'Tags[?Key==`tagname`].{Name:Key,Value:Value}'
 </code></pre></div></div>

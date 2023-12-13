@@ -1,7 +1,7 @@
 /**
  * Reset some basic elements
  */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&family=Source+Code+Pro&display=swap");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -191,6 +191,11 @@ ul#results-container li {
 
 .date {
   font-size: 14px;
+}
+
+.highlight code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
 }
 
 /**

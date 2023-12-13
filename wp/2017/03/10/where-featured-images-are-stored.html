@@ -44,24 +44,22 @@
 
 <p>Table: wp_postmeta</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-meta_id     post_id   meta_key         meta_value
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>meta_id     post_id   meta_key         meta_value
 544         110       _thumbnail_id    45
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="mysql"&gt;SELECT meta_value FROM wp_postmeta WHERE meta_key='_thumbnail_id' and post_id=110;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT meta_value FROM wp_postmeta WHERE meta_key='_thumbnail_id' and post_id=110;
 </code></pre></div></div>
 
 <p>The result is 45. Now that you have the meta_value, you can then search for the link from the wp_posts table.</p>
 
 <p>Table: wp_posts</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ID      post_type       guid
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ID      post_type       guid
 45      attachment      http://yourdomain.com/wp-content/uploads/2017/03/featured-image.jpg
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="mysql"&gt;SELECT guid FROM wp_posts WHERE post_type='attachment' and id=45;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT guid FROM wp_posts WHERE post_type='attachment' and id=45;
 </code></pre></div></div>
 
 <p>The result will be the URL of the image, e.g. http://yourdomain.com/wp-content/uploads/2017/03/featured-image.jpg.</p>

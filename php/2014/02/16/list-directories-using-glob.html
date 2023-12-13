@@ -40,41 +40,32 @@
       <div class="wrapper">
         <p>If there’s a need for you to list directories on the server, there’s a PHP function called <a href="http://us2.php.net/glob">Glob</a> which will find pathnames to match a certain pattern. To make glob read only directories on the server, we can specify in the glob function with the GLOB_ONLYDIR option which will return only directories and ignore files. The asterisk means it will accept any pattern.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;glob('*', GLOB_ONLYDIR);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>glob('*', GLOB_ONLYDIR);
 </code></pre></div></div>
 
 <p>In the example below, we will specify any directory by assigning an empty or a blank to the $dir variable. We will then use the foreach loop to display all directories found. If we have WordPress installed, we can ignore the WordPress directories by searching for them in the if statement. We will finally echo and print to the screen each individual directory found by our glob function.</p>
 
 <p>Here’s the entire script with HTML included.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-
-
-
-  &lt;title&gt;Glob - list directories&lt;/title&gt;
-  &lt;style&gt;
-    li { list-style-type:none; margin-left:-15px; }
-  &lt;/style&gt;
-
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;title&gt;Glob - list directories&lt;/title&gt;
+&lt;style&gt;
+  li { list-style-type:none; margin-left:-15px; }
+&lt;/style&gt;
 &lt;h1&gt;List directories using Glob&lt;/h1&gt;
 </code></pre></div></div>
 
-<p>&lt;?php // set to current directory 
-$dir = ‘’;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php // set to current directory 
+$dir = '';
 // directories only. ignore files, etc.
-foreach(glob($dir.’*’, GLOB_ONLYDIR) as $folder){ 
+foreach(glob($dir.'*', GLOB_ONLYDIR) as $folder){ 
   // do not include wordpress directories
-  if (($folder != ‘wp-admin’) &amp;&amp; ($folder != ‘wp-content’) &amp;&amp; ($folder != ‘wp-includes’)) { 
+  if (($folder != 'wp-admin') &amp;&amp; ($folder != 'wp-content') &amp;&amp; ($folder != 'wp-includes')) { 
     // list directories and their links
-    ??&gt;</p>
-<ul>
-  <li><a href="&lt;?php echo $dir.">“&gt;&lt;?php echo $folder;??&gt;</a>
+  ?&gt; - ["&amp;gt;&lt;?php echo $folder;??&gt;](&lt;&lt;?php echo $dir.&gt;)
  &lt;?php }
 } 
-??&gt;</li>
-</ul>
-
+?&gt;
+</code></pre></div></div>
 
       </div>
     </main><footer class="site-footer h-card">

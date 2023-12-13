@@ -42,17 +42,18 @@
 
 <p>Let’s create a new function called wednesday_afternoon(). We can use this function to check the date and time. The function checks for the current time and compares it if it’s Wednesday afternoon. It returns a true if it is, and a false if it falls outside those times.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-function wednesday_afternoon() {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function wednesday_afternoon() {
   date_default_timezone_set('America/Los_Angeles');
   $start_time = strtotime('Wednesday 1pm');
   $stop_time = strtotime('Wednesday 5pm');
   $current_time = strtotime('now');
   // return true if between start and stop times
   if ( $current_time &gt; $start_time &amp;&amp; $current_time 
-&lt;p&gt;A simple if statement decides what image to display based if it's Wednesday afternoon.&lt;/p&gt;
-&lt;pre lang="php"&gt;
-if (wednesday_afternoon()) {
+</code></pre></div></div>
+
+<p>A simple if statement decides what image to display based if it’s Wednesday afternoon.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (wednesday_afternoon()) {
   &lt;div class="wednesday_sale"&gt;
     &lt;img decoding="async" src="/path/to/our/image.png"&gt;&lt;/img&gt;
   &lt;/div&gt;
@@ -61,9 +62,9 @@ if (wednesday_afternoon()) {
     &lt;img decoding="async" src="/path/to/our/no/sale/image.png"&gt;&lt;/img&gt;
   &lt;/div&gt;
 }
-
-&lt;p&gt;I have posted a &lt;a href="https://gist.github.com/ulyssesr/520100748a5ef573f865"&gt;similar code&lt;/a&gt; GitHubGist.&lt;/p&gt;
 </code></pre></div></div>
+
+<p>I have posted a <a href="https://gist.github.com/ulyssesr/520100748a5ef573f865">similar code</a> GitHubGist.</p>
 
       </div>
     </main><footer class="site-footer h-card">

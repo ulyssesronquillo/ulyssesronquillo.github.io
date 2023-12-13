@@ -42,22 +42,19 @@
 
 <p>In the end, you can ping each hostname like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ ping one
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ping one
 $ ping two
 $ ping three
 </code></pre></div></div>
 
 <p>In addition, you can also use the hosts “one”, “two” or “three” on your browser URL if your host has a web interface. If there are no host entries, the ping command, as well as you browser will simply timeout. To make this all possible in your Mac OS, you’ll need to edit the <strong>/private/etc/hosts</strong> file, by opening the Terminal and typing:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo nano /private/etc/hosts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /private/etc/hosts
 </code></pre></div></div>
 
 <p>You need to add each host to the file in this format: ip_address hostname. See below:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-192.168.1.22 one
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>192.168.1.22 one
 192.168.5.56 two
 192.168.1.33 three
 </code></pre></div></div>
@@ -66,8 +63,7 @@ $ sudo nano /private/etc/hosts
 
 <p>Flush the DNS by typing:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ dscacheutil -flushcache
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ dscacheutil -flushcache
 </code></pre></div></div>
 
 <p>You can now ping and use the hostname anyway you want.</p>

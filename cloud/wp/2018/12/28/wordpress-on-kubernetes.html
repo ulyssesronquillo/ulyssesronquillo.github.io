@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p><a href="http://kubernetes.io">Kubernetes</a> has documentation on how to deploy <a href="http://wordpress.org">WordPress</a> on its platform. The setup is using Persistent Volumes for both WordPress and MySQL on <a href="https://github.com/kubernetes/minikube">MiniKube</a>. Although the setup is not recommended for a production environment, it is a good start to get yourself familiar with Kubernetes. For production environments, they do recommend running WordPress on a Kubernetes cluster using the <a href="https://github.com/helm/charts/tree/master/stable/wordpress">Helm</a> package manager. Here’s the WordPress-MySQL <a href="https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/">deployment on MiniKube.</a></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="yaml"&gt;apiVersion: v1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
 kind: Service
 metadata:
   name: wordpress-mysql

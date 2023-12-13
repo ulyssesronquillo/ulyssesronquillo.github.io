@@ -42,8 +42,7 @@
 
 <p>If the title is too long, it can sometimes wreak havoc to the layout of the theme. There are times that you may have to trim the title so it doesn’t become such an eyesore. If you need to truncate the title, there is a function in PHP called ‘substr’ which returns parts of a string. In WordPress, page titles can be retrieved using a function called the_title(). We can truncate this string, by creating a new function called truncate().</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-&lt;?php // lets create truncate function
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php // lets create truncate function
 function truncate($the_title) {
   $the_new_title = substr($the_title, 0, 70);
   if (strlen($the_title) ?&gt; 70) $the_new_title .= ' ...';

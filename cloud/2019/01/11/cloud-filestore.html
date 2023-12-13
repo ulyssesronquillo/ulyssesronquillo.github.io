@@ -42,8 +42,7 @@
 
 <p>Create a Filestore:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud beta filestore instances create nfs-server \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta filestore instances create nfs-server \
     --project=your-project-id \
     --location=your-region \
     --tier=STANDARD \
@@ -53,14 +52,12 @@ gcloud beta filestore instances create nfs-server \
 
 <p>Delete a Filestore:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud beta filestore instances delete nfs-server --project=your-project-id --location=your-region
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta filestore instances delete nfs-server --project=your-project-id --location=your-region
 </code></pre></div></div>
 
 <p>Instance clients can connect to the Filestore using a NFS client.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo apt-get -y update
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get -y update
 sudo apt-get -y install nfs-common
 sudo mkdir /mnt/test
 sudo mount 10.0.0.59:/vol1 /mnt/test

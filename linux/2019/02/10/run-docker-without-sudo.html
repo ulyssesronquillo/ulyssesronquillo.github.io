@@ -40,20 +40,19 @@
       <div class="wrapper">
         <p>Run Docker without sudo. Add user to docker group. Login as docker using newgrp.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;sudo gpasswd -a $user docker
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo gpasswd -a $user docker
 newgrp docker
 </code></pre></div></div>
 
 <p>You can now run the following commands without sudo.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;docker ps
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
 docker images
 </code></pre></div></div>
 
 <p>Every time you open a new terminal , just run.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-newgrp docker
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>newgrp docker
 </code></pre></div></div>
 
       </div>

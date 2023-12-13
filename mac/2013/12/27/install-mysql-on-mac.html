@@ -58,20 +58,17 @@
 
 <p>Add the MySQL path to your existing path so you can invoke MySQL commands from anywhere.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ export PATH=/usr/local/mysql/bin:$PATH
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export PATH=/usr/local/mysql/bin:$PATH
 </code></pre></div></div>
 
 <p>Secure the database. You’ll be prompted to provide a new MySQL password.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo mysql_secure_installation
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mysql_secure_installation
 </code></pre></div></div>
 
 <p>Make sure MySQL is connected to Apache and PHP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-cd /var 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var 
 sudo mkdir mysql 
 cd mysql 
 sudo ln -s /tmp/mysql.sock mysql.sock
@@ -79,14 +76,12 @@ sudo ln -s /tmp/mysql.sock mysql.sock
 
 <p>Access MySQL from the Terminal. Provide your password when prompted.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ mysql -u root -p
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mysql -u root -p
 </code></pre></div></div>
 
 <p>Once logged in, you can check the databases just to be sure you’re connected.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-mysql&gt; show databases;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql&gt; show databases;
 exit;
 </code></pre></div></div>
 

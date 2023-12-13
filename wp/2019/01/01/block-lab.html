@@ -47,14 +47,12 @@
 
 <p>The “block_field” function echoes the variables passed from the blocks to the template.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-&lt;h4&gt;&lt;?php block_field( 'heading' )??&gt;&lt;/h4&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h4&gt;&lt;?php block_field( 'heading' )??&gt;&lt;/h4&gt;
 </code></pre></div></div>
 
 <p>In some instances, you may have to mute the echo. In this example, I’m using the function in a comparison.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-&lt;h4&gt;&lt;?php if (block_field( 'heading', $echo = false ) == ""):
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h4&gt;&lt;?php if (block_field( 'heading', $echo = false ) == ""):
  else: block_field( 'heading' ); endif; ??&gt;&lt;/h4&gt;
 </code></pre></div></div>
 

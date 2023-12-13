@@ -44,14 +44,12 @@
 
 <p>Edit the /etc/phpmyadmin/config.inc.php file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ sudo nano /etc/phpmyadmin/config.inc.php
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /etc/phpmyadmin/config.inc.php
 </code></pre></div></div>
 
 <p>Add the following entries at the end of the file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$cfg['ProtectBinary'] = FALSE;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$cfg['ProtectBinary'] = FALSE;
 $cfg['DisplayBinaryAsHex'] = FALSE;
 $cfg['ShowBlob'] = TRUE;
 </code></pre></div></div>

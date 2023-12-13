@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>Extending a LVM logical volume can be tricky. Extending a physical volume especially a boot drive is even more challenging. To make things simple, you can just easily add a new physical disk to your physical volume group. Here are the steps:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# add disk to your instance. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># add disk to your instance. 
 fdisk /dev/sdh
 pvcreate /dev/sdh1
 vgextend system /dev/sdh1

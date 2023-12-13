@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>The Genesis theme is a WordPress theme from StudioPress. I recently worked on a project where there was a need to redirect the URL title to another URL. Essentially, there are two separate WordPress installs on the server, one install had WordPress on the root directory, the other on a sub-directory. The URL title of the WordPress on a sub-directory needed to point to the root directory. So, here’s the fix that you need to add in the functions.php for Genesis themes.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-//* Modify the header URL - HTML5 Version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//* Modify the header URL - HTML5 Version
 add_filter( 'genesis_seo_title', 'child_header_title', 10, 3 );
 function child_header_title( $title, $inside, $wrap ) {
     $inside = sprintf( '&lt;a href="http://example.com/" title="%s"&gt;%s&lt;/a&gt;', esc_attr( get_bloginfo( 'name' ) ), get_bloginfo( 'name' ) );

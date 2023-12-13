@@ -47,17 +47,19 @@
   <li>Delete the blogs you don’t want.</li>
   <li>Edit wp-config.php.</li>
   <li>Edit .htaccess.</li>
-  <li>Clean up your database.</li>
+  <li>
+    <p>Clean up your database.</p>
+  </li>
+  <li>
+    <p>Backing up your database — just in case. You can use several tools for backing up your blogs. You can use PHPMyAdmin or a WordPress backup plugin. You can also use the WordPress Export feature to save the blog in XML format in case you want to restore it in the future.</p>
+  </li>
+  <li>
+    <p>Delete the blogs you don’t want – Go to All blogs in the WordPress Dashboard. If you have multiple blogs, it will be listed here. Delete the ones you don’t want.</p>
+  </li>
+  <li>Edit wp-config.php. Remove the Multisite entries in wp-config.php.</li>
 </ol>
 
-<p>1. Backing up your database — just in case. You can use several tools for backing up your blogs. You can use PHPMyAdmin or a WordPress backup plugin. You can also use the WordPress Export feature to save the blog in XML format in case you want to restore it in the future.</p>
-
-<p>2. Delete the blogs you don’t want – Go to All blogs in the WordPress Dashboard. If you have multiple blogs, it will be listed here. Delete the ones you don’t want.</p>
-
-<p>3. Edit wp-config.php. Remove the Multisite entries in wp-config.php.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-define( 'MULTISITE', true );
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>define( 'MULTISITE', true );
 define( 'SUBDOMAIN_INSTALL', false );
 $base = '/wordpress/';
 define( 'DOMAIN_CURRENT_SITE', 'localhost' );
@@ -66,10 +68,11 @@ define( 'SITE_ID_CURRENT_SITE', 1 );
 define( 'BLOG_ID_CURRENT_SITE', 1 );
 </code></pre></div></div>
 
-<p>4. Change your .htaccess to the standard WordPress configuration.</p>
+<ol>
+  <li>Change your .htaccess to the standard WordPress configuration.</li>
+</ol>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-# BEGIN WordPress
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># BEGIN WordPress
 &lt;ifmodule mod_rewrite.c=""&gt;
 RewriteEngine On
 RewriteBase /
@@ -81,10 +84,11 @@ RewriteRule . /index.php [L]
 # END WordPress
 </code></pre></div></div>
 
-<p>5. Finally, remove the database tables that are no longer needed.</p>
+<ol>
+  <li>Finally, remove the database tables that are no longer needed.</li>
+</ol>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-wp_blogs
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wp_blogs
 wp_blog_versions
 wp_registration_log
 wp_signups

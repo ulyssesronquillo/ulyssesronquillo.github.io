@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>I modified an existing Icecast PHP class that I found online. I’ve added a couple of extra fields particularly the ‘status’ field where you’ll be able to determine if your Icecast server is streaming or not. I’ve initially set the status variable to ‘On Air’ and ‘Off Air.’ To use the class, take a look at the code below:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// include the class file
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// include the class file
 include( 'icecast.php' );
 
 // instantiate class
@@ -72,8 +71,7 @@ endif;
 
 <p>Here’s the Icecast class.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-class IceCast {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class IceCast {
     var $server = "http://yourdomain.com:8001";
     var $stats_file = "/status.xsl?mount=/yourmount.ogg";
     var $radio_info=array();

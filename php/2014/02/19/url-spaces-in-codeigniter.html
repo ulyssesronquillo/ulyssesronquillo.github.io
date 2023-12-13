@@ -44,8 +44,7 @@
 
 <h4 id="replace-20-with-dash-or-hypen">Replace %20 with dash or hypen</h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$name = 'John Doe';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$name = 'John Doe';
 $url = url_title($name);
 // produces 'John-Doe'
 
@@ -58,8 +57,7 @@ $url = url_title($name, '_');
 
 <p>Before performing a search, I use str_replace to remove the dash and put back the space so it matches the database entry. It’s essentially the reverse of what I did to display a friendly URL.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$url = 'John-Doe';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$url = 'John-Doe';
 $name = str_replace('-', ' ', $url);
 // perform your search function here
 </code></pre></div></div>

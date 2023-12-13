@@ -42,17 +42,17 @@
 
 <p>First of all, here are some details. The MySQL server runs on Ubuntu 12.04. The ODBC client, MS Access 2010, runs on a Windows 7 machine. Assuming MySQL is already installed, we just need to make sure the MySQL server ODBC library is installed first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;sudo apt-get install libmyodbc
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install libmyodbc
 </code></pre></div></div>
 
 <p>Now, let’s create an ODBC Data Source. Not sure if this step is required or optional. I did it anyways.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;sudo nano /etc/odbc.ini
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/odbc.ini
 </code></pre></div></div>
 
 <p>Add the following entries:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;[ODBC Data Sources]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ODBC Data Sources]
 testodbc = MyODBC 5.2.5 Driver DSN
 
 [testodbc]
@@ -69,12 +69,12 @@ Socket       =
 
 <p>Let’s secure your MySQL database by answering the following questions.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;sudo mysql_secure_installation
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mysql_secure_installation
 </code></pre></div></div>
 
 <p>Answer the following questions:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;Enter current password for root. Enter password.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter current password for root. Enter password.
 Change root password? [Y/n] n
 Remove anonymous users? [Y/n] Y
 Disallow root login remotely? [Y/n] n
@@ -84,7 +84,7 @@ Reload privilege tables now? [Y/n] Y
 
 <p>Allow remote login on MySQL</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;# Edit mysql configuration
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Edit mysql configuration
 sudo nano /etc/mysql/my.cnf
 
 # Comment out "skip-networking"

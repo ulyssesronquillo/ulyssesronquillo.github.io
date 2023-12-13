@@ -40,16 +40,14 @@
       <div class="wrapper">
         <p>Typically, you use the Subversion Import command to start or add a new project to a remote repository. Subversion recommends that you setup three directories called trunk, tags and branches under each project in a repository. Trunk will be the current version you are working on. Tags are for releases. Branches are when you fork projects based on one particular release. The following directory format under each project is recommended.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-repository/project/trunk
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>repository/project/trunk
                   /tags
                   /branches
 </code></pre></div></div>
 
 <p>Once the directories are setup, you can then perform the import command to upload a new project to the repository. Just the following command in the Terminal.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-svn import project http://repository -m "Place comments here."
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>svn import project http://repository -m "Place comments here."
 </code></pre></div></div>
 
       </div>

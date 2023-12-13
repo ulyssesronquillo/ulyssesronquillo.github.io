@@ -40,16 +40,14 @@
       <div class="wrapper">
         <p>To unlock a locked account, you need to run pam_tally2, which is a tool that keeps tracked of failed logins. Pam_tally2 is installed on most Linux systems. To unlock an account, just run the following commands:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-pam_tally2 --user=ulysses --reset
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pam_tally2 --user=ulysses --reset
 </code></pre></div></div>
 
 <p>Have the user login again. It should work.</p>
 
 <p>Some systems might be using an older pam_tally. The command for that will be.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-pam_tally --user=ulysses --reset=0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pam_tally --user=ulysses --reset=0
 </code></pre></div></div>
 
       </div>

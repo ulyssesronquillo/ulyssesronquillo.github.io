@@ -42,14 +42,12 @@
 
 <p>The old way was:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-&lt;link href="&lt;?php bloginfo('stylesheet_url'); ?&gt;" media="screen" rel="stylesheet" type="text/css"&gt;&lt;/link&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link href="&lt;?php bloginfo('stylesheet_url'); ?&gt;" media="screen" rel="stylesheet" type="text/css"&gt;&lt;/link&gt;
 </code></pre></div></div>
 
 <p>The new way uses wp_enqueue_scripts and the code is placed in functions.php.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-function sample_theme_scripts() {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function sample_theme_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'sample_theme_scripts' );

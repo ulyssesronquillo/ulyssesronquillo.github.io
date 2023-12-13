@@ -46,38 +46,44 @@
 
 <p>Most web servers nowadays can host multiple domains. I will make an assumption that you will be running multiple domains on your web server. A typical structure would be something similar to the one below. Each domain has its own subdirectory.</p>
 
-<p>/var/www/domain1.com/<br />
-/var/www/domain2.com/<br />
-/var/www/domain3.com/</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/www/domain1.com/  
+/var/www/domain2.com/  
+/var/www/domain3.com/
+</code></pre></div></div>
 
 <p>If you have a static website, the file structure would be something like this.</p>
 
-<p>/var/wwww/domain.com/index.html</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/wwww/domain.com/index.html
+</code></pre></div></div>
 
 <p>If you have a dynamic website, you have something similar to this.</p>
 
-<p>/var/www/domain.com/index.php<br />
-/var/www/domain.com/wp-content/</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/www/domain.com/index.php  
+/var/www/domain.com/wp-content/
+</code></pre></div></div>
 
 <p>By the way, “wp-content” is a WordPress folder where templates and plugins reside. The above structure is serviceable, but if you ever find yourself working with PHP Frameworks such as CodeIgniter, Zend Frameworks, or even Ruby on Rails, there are some additional directories and programs that you would want to hide from the public for security reasons. Here are some directories using the CodeIgniter example.</p>
 
-<p>/var/www/domain.com/index.php<br />
-/var/www/domain.com/application/<br />
-/var/www/domain.com/system/</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/www/domain.com/index.php  
+/var/www/domain.com/application/  
+/var/www/domain.com/system/
+</code></pre></div></div>
 
 <p>To make your application secure, we need to move the “application” and the “system” folders above the web root folder. With the current setup, this is where you begin to have some issues. Where exactly do we put your “application” and “system” folders if multiple domains need them. So, here’s my suggestion. We need to create a “www” folder under each domain. We will make the “www” folder the web root folder. The setup would look something like this.</p>
 
-<p>/var/www/domain1.com/www/<br />
-/var/www/domain2.com/www/</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/www/domain1.com/www/  
+/var/www/domain2.com/www/
+</code></pre></div></div>
 
 <p>Now, that we have the “www” folder created, we can then place the “application” and “system” folders on their own directory above the web root. The setup would look something like this.</p>
 
-<p>/var/www/domain1.com/www/index.php<br />
-/var/www/domain1.com/application/<br />
-/var/www/domain1.com/system/<br />
-/var/www/domain2.com/www/index.php<br />
-/var/www/domain2.com/application/<br />
-/var/www/domain2.com/system/</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/var/www/domain1.com/www/index.php  
+/var/www/domain1.com/application/  
+/var/www/domain1.com/system/  
+/var/www/domain2.com/www/index.php  
+/var/www/domain2.com/application/  
+/var/www/domain2.com/system/
+</code></pre></div></div>
 
 <p>So, the setup above is ideal for placing folders above the web root folder if you want a more secure application. At the same time, these folders are still under each domain. So, this is the web structure that I have implemented over the years. If there’s a better way of doing this, I would like to hear about it.</p>
 

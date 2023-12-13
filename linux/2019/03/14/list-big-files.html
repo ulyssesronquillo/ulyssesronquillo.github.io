@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Find out which files or directories are using up disk resources.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# display the biggest files
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># display the biggest files
 find -type f -exec du -Sh {} + | sort -rh | head -n 5
 # display the biggest directories
 du -Sh | sort -rh | head -5

@@ -42,8 +42,7 @@
 
 <p>Open your theme’s functions.php and add the following lines.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-if (function_exists('register_sidebar')) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (function_exists('register_sidebar')) {
   register_sidebar(array(
   'name' =&gt; 'Below Header Widgets',
   'id' =&gt; 'below-header-widgets',
@@ -58,8 +57,7 @@ if (function_exists('register_sidebar')) {
 
 <p>Save the file. Now that we added a new widget area to the functions.php file, we can now add this bit of code to our template. In this example, we will add the new widget area to our template’s header.php file. Notice the name ‘Below Header Widgets’ matches the ‘name’ in the code above.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-&lt;div class="below-header"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="below-header"&gt;
  &lt;ul&gt;
   &lt;?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Below Header Widgets')) : endif; ??&gt;
  &lt;/ul&gt;
@@ -68,8 +66,7 @@ if (function_exists('register_sidebar')) {
 
 <p>Now go to your Admin Dashboard &gt; Appearance &gt; Widgets menu. You should now see the new widget area in your theme. The last thing you’ll need to do is style your new widget area. If you want the text to display in inline, we can add the following CSS styles.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-.below-header ul li { float:left; display:inline; padding-right:10px; }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.below-header ul li { float:left; display:inline; padding-right:10px; }
 </code></pre></div></div>
 
 <p>The CSS above floats and displays each widget and its content inline, as well as add a 10px right padding.</p>

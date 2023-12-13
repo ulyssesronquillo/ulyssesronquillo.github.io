@@ -42,8 +42,7 @@
 
 <p>Passing Variables via URL</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// A variable is passed from one page to another via a link.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// A variable is passed from one page to another via a link.
 &lt;a href="page2.php?file=sample.txt"&gt;Link&lt;/a&gt;
 // Someone can traverse the directory and access system files.
 &lt;a href="page2.php?file=../../../../../etc/passwd"&gt;Link&lt;/a&gt;
@@ -51,8 +50,7 @@
 
 <p>Passing variables via Sessions</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// Page 1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Page 1
 // start a session
 session_start();
 // set filename
@@ -61,8 +59,7 @@ $_SESSION['file']=$file;
 &lt;a href="page2.php"&gt;Page 2&lt;/a&gt;
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// Page 2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Page 2
 // start a session
 session_start();
 $file=$_SESSION['file']);

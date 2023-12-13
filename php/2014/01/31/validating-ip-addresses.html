@@ -42,22 +42,19 @@
 
 <p>First things first, we need to sanitize the input. We can use the following PHP functions. We will assign the sanitized input to a variable.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// sanitize input from form
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// sanitize input from form
 $ip_address = addslashes(htmlspecialchars(strip_tags(trim($_POST['ip_address']))));
 </code></pre></div></div>
 
 <p>This is the regular expression that we will use that accepts valid IP addresses.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// the regular expression for valid ip addresses
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// the regular expression for valid ip addresses
 $reg_ex = '/^((?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))*$/';
 </code></pre></div></div>
 
 <p>We will now compare the two variables: $reg_ex and $ip_address to see if IP address passes the test.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// test input against the regular expression
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// test input against the regular expression
 if (preg_match($reg_ex, $ip_address)) { 
    return TRUE; // it's a valid ip address
 }
@@ -65,28 +62,21 @@ if (preg_match($reg_ex, $ip_address)) {
 
 <p>We will now place everything in a tidy function so we can use it anytime we want.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-function validate_ip_address($ip_address) {
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function validate_ip_address($ip_address) {
   // sanitized ip address
   $clean_ip_address = addslashes(htmlspecialchars(strip_tags(trim($ip_address))));
-
   // the regular expression for valid ip addresses
   $reg_ex = '/^((?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))*$/';
-
   // test input against the regular expression
   if (preg_match($reg_ex, $clean_ip_address)) { 
     return TRUE; // it's a valid ip address
   }
-
 }
 </code></pre></div></div>
 
 <p>Finally, it’s time to call our function.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$ip_address = $_POST['ip_address'];
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ip_address = $_POST['ip_address'];
 if (validate_ip_address($ip_address)) {
   echo "It's a valid IP address!";
 }

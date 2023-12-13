@@ -42,15 +42,13 @@
 
 <p>The reason is, it’s probably not a good idea to overwrite a file that you are editing. It’s much safer to send the output to another file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ awk '!seen[$0]++' filename.txt &gt; filename.temp
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ awk '!seen[$0]++' filename.txt &gt; filename.temp
 $ mv filename.temp filename.txt
 </code></pre></div></div>
 
 <p>A much cleaner approach is to use this. It will edit the file in place.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-awk -i inplace '!seen[$0]++' filename.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk -i inplace '!seen[$0]++' filename.txt
 </code></pre></div></div>
 
       </div>

@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>This article will show you how to make a WordPress Page viewable by the admin only. This is really quite handy if you’re creating a custom WordPress Template. You can make certain parts or the entire page viewable by the admin only by placing the code below in your WordPress Page Template.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;if ( current_user_can( 'manage_options' ) ) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( current_user_can( 'manage_options' ) ) {
     // display text here for user with admin privilege
 } else {
     // display text here for user without admin privilege
@@ -49,7 +49,7 @@
 
 <p>There has been some confusion whether to use <a href="https://codex.wordpress.org/Function_Reference/is_admin">is_admin()</a> instead of <a href="https://codex.wordpress.org/Function_Reference/current_user_can">current_user_can(‘manage_options’)</a>. is_admin() is a conditional to check if the user is in the Dashboard or in the Administration Panel. It’s just a boolean conditional that will return true if the URL being accessed is in the admin section.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;if ( is_admin() ) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( is_admin() ) {
     // returns true that user is in the admin panel
 } else {
     // returns false if otherwise

@@ -42,31 +42,27 @@
 
 <p>Here’s the code:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-if (!current_user_can(‘edit_posts’)) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (!current_user_can(‘edit_posts’)) {
   show_admin_bar(false);
 }
 </code></pre></div></div>
 
 <p>Here’s another:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-function my_function_admin_bar(){ return false; }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function my_function_admin_bar(){ return false; }
 add_filter( 'show_admin_bar' , 'my_function_admin_bar');
 </code></pre></div></div>
 
 <p>Here’s another for users that can’t manage options:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-if ( ! current_user_can( 'manage_options' ) ) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( ! current_user_can( 'manage_options' ) ) {
   show_admin_bar( false );
 }
 </code></pre></div></div>
 
 <p>And one more for good measure:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-add_action('set_current_user', 'csstricks_hide_admin_bar');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add_action('set_current_user', 'csstricks_hide_admin_bar');
 function csstricks_hide_admin_bar() {
   if (current_user_can('edit_posts')) {
     show_admin_bar(false);

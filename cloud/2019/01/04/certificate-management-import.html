@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>My previous post lightly talked about about adding SSL certificates via the AWS Console. This post talks about adding your own SSL certificate to Certificate Manager via the AWS CLI. The CLI which makes it super simple to manage. It also allows for automation as well.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws acm import-certificate \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws acm import-certificate \
 --certificate fileb://Certificate.pem \
 --certificate-chain fileb://CertificateChain.pem \
 --private-key fileb://PrivateKey.pem

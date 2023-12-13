@@ -45,31 +45,26 @@
 <p>We have a simple form with one input and a submit button. There are two Javascript functions in the input field. The blockNonNumbers function allow numbers only to be typed on the input field. Non-number characters are ignored. The extractNumber function formats the input to two decimal places.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+&lt;form action="" id="login" method="post"&gt; 
+&lt;input name="username" onblur="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);" onkeyup="extractNumber(this,2,false);" type="text" value=""&gt;&lt;/input&gt;
+&lt;/form&gt;#### Javascript
 </code></pre></div></div>
-
-<form action="" id="login" method="post"> <input name="username" onblur="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);" onkeyup="extractNumber(this,2,false);" type="text" value="" />&lt;/input&gt; </form>
-<h4 id="javascript">Javascript</h4>
 
 <p>I’ve included the <a href="http://uly.me/demo/validate.js">validate.js</a> Javascript code, which you can download. The code contains two functions: blockNonNumbers and extractNumber. In the markup, we can link to the Javascript file in the head section of the page using the following markup.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-&lt;script language="javascript" src="validate.js"&gt;&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script language="javascript" src="validate.js"&gt;&lt;/script&gt;
 </code></pre></div></div>
 
 <h4 id="all-together-now">All Together Now</h4>
 
 <p>Here’s the entire markup.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-
-
-
-&lt;script language="javascript" src="validate.js"&gt;&lt;/script&gt;
-
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script language="javascript" src="validate.js"&gt;&lt;/script&gt;
+&lt;form action="" id="login" method="post"&gt;
+&lt;input name="username" onblur="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);" onkeyup="extractNumber(this,2,false);" type="text" value=""&gt;&lt;/input&gt; 
+&lt;/form&gt;
 </code></pre></div></div>
 
-<form action="" id="login" method="post"> <input name="username" onblur="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);" onkeyup="extractNumber(this,2,false);" type="text" value="" />&lt;/input&gt; </form>
 <p><a href="http://uly.me/demo/numbers.html">Demo</a></p>
 
       </div>

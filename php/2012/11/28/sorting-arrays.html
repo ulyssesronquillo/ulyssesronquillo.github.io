@@ -40,27 +40,23 @@
       <div class="wrapper">
         <p>I was working on a client project last night. I had to sort a multidimensional array. I came across a neat PHP function called asort. In the end, I had to use arsort instead of asort to get a reverse sort order. This short article will show you how to sort arrays in normal and reverse order. Here’s our array.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$animals = array("a" =&gt; "Giraffe", "b" =&gt; "Elephant", "c" =&gt; "Lion");
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$animals = array("a" =&gt; "Giraffe", "b" =&gt; "Elephant", "c" =&gt; "Lion");
 </code></pre></div></div>
 
 <p>We will sort the array using the asort function. We print the array to view the results.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-asort($animals);
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>asort($animals);
 print_r($animals);
 </code></pre></div></div>
 
 <p>The asort output is:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-Array ( [b] =&gt; Elephant [a] =&gt; Giraffe [c] =&gt; Lion )
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array ( [b] =&gt; Elephant [a] =&gt; Giraffe [c] =&gt; Lion )
 </code></pre></div></div>
 
 <p>The arsort (reverse order) output is:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-Array ( [c] =&gt; Lion [a] =&gt; Giraffe [b] =&gt; Elephant )
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array ( [c] =&gt; Lion [a] =&gt; Giraffe [b] =&gt; Elephant )
 </code></pre></div></div>
 
       </div>

@@ -42,40 +42,34 @@
 
 <p>If you like to install PHP 5.6 stable release, all you need to do is run the following from the command line:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
 </code></pre></div></div>
 
 <p>If you feel adventurous, you can try PHP 7 stable release.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0
 </code></pre></div></div>
 
 <p>The installer packager will ask you for your password. PHP will be installed in /usr/local/php5.</p>
 
 <p>Edit your .profile and include the PATH of the new PHP version.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-nano ~/.profile
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano ~/.profile
 </code></pre></div></div>
 
 <p>Insert the following:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-export PATH=/usr/local/php5/bin:$PATH
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH=/usr/local/php5/bin:$PATH
 </code></pre></div></div>
 
 <p>To be sure your using the new version, check the PHP version:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-php -v 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php -v 
 </code></pre></div></div>
 
 <p>You should see something similar to this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-PHP 5.6.19 (cli) (built: Mar  4 2016 22:35:42) 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PHP 5.6.19 (cli) (built: Mar  4 2016 22:35:42) 
 Copyright (c) 1997-2016 The PHP Group
 Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
     with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies

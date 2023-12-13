@@ -47,8 +47,7 @@
 
 <p>Place the following code in your theme’s ‘functions.php’ file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-function urr_login_logo() { 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function urr_login_logo() { 
 }
 </code></pre></div></div>
 
@@ -62,8 +61,7 @@ function urr_login_logo() {
 
 <p>Now, place the following code in your theme’s ‘functions.php’ file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-function urr_custom_login_css() {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function urr_custom_login_css() {
 echo '';
 }
 add_action('login_head', 'urr_custom_login_css');
@@ -75,22 +73,19 @@ add_action('login_head', 'urr_custom_login_css');
 
 <p>Create a file called login-style.css and place it inside our theme’s directory under the ‘css’ folder. We can now style our login page. The code below will apply a background image ‘darkwood.jpg’ to the login page. The form and its inputs are darkened, except for the submit button which remains unchanged. In addition, we also rounded the corners of the form.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="css"&gt;body.login {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body.login {
   background: #000 url('http://uly.me/wp-content/themes/minimum/images/darkwood.jpg') no-repeat fixed center;
 }
-
 div#login form { 
   background-color:#111;
   border-radius: 10px;
 }
-
 div#login form input#user_pass, div#login form input#user_login, div#login form input#rememberme {
   color: #aaa;
   background-color:#333;
   border: 1px solid #000;
   border-radius: 3px;
 }
-
 div#login form input#user_pass, div#login form input#user_login, div#login form input#rememberme {
   color: #aaa;
   background-color:#333;

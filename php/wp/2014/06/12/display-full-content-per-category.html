@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>By the default, the Genesis child theme called Outreach Pro displays categories posts as excerpts. If you want to display the full content on just one category, <a href="http://sridharkatakam.com/author/sridhar/">Sridhar Katakam</a> talks about it in his blog post. I changed the function names to fit my own, so here’s my own version of the code:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// display full content on blog category
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// display full content on blog category
 add_action( 'genesis_before_loop', 'urr_full_content_specific_category' );
  
 function urr_full_content_specific_category() {

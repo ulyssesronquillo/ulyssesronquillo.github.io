@@ -42,8 +42,7 @@
 
 <p>If we were to look for an iPad for example, we need to perform the following commands:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$iPad   = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$iPad   = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
 if ($iPad) { 
   echo 'This is an iPad'; 
 } else { 
@@ -53,8 +52,7 @@ if ($iPad) {
 
 <p>Other Devices</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$user_agent = $_SERVER['HTTP_USER_AGENT'];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$user_agent = $_SERVER['HTTP_USER_AGENT'];
 
 $iPad   = stripos($user_agent,"iPad");
 $iPod   = stripos($user_agent,"iPod");
@@ -78,8 +76,7 @@ if ($AndroidTablet) {
 
 <p>Detect OS Type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$user_agent = $_SERVER['HTTP_USER_AGENT'];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$user_agent = $_SERVER['HTTP_USER_AGENT'];
 
 if (preg_match('/linux/i', $user_agent)) { $platform = 'linux'; }
 if (preg_match('/macintosh|mac os x/i', $user_agent)) { $platform = 'mac'; }
@@ -92,8 +89,7 @@ if ($platform == 'windows') {
 
 <p>Detect Browser Type</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-$user_agent = $_SERVER['HTTP_USER_AGENT'];
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$user_agent = $_SERVER['HTTP_USER_AGENT'];
 
 if (preg_match('/MSIE/i',$user_agent)) { $browser = 'Internet Explorer'; }
 if (preg_match('/Firefox/i',$user_agent)) { $browser = 'Mozilla Firefox'; }

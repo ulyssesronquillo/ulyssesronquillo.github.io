@@ -42,8 +42,7 @@
 
 <p>To install on Mac</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo easy_install pip
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo easy_install pip
 sudo pip install —ignore-installed six boto3
 </code></pre></div></div>
 
@@ -54,8 +53,7 @@ sudo pip install —ignore-installed six boto3
 
 <p>After it’s installed and configured, try using Boto3 to fetch your AWS S3 buckets.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="python"&gt;
-import boto3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import boto3
 s3 = boto3.resource('s3')
 for bucket in s3.buckets.all():
   print(bucket.name)

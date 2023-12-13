@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>I was working with PHP forms the other day which contained an email address. Validating email addresses is important. Occasionally, email addresses are used for activating accounts or resetting passwords. We can’t always guarantee that the email address provided is going to be valid, but at least, we can validate it’s going to be in the correct format. For pattern matching, I’m using a regex I found online. I like it because it’s very strict. I’m using the regex pattern with the preg_match function to determine a valid email address.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-function check_email($email) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function check_email($email) {
  $pattern = "/^([a-zA-Z0-9])+([a-zA-Z0-9\._+-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/";
  if (!preg_match($pattern, stripslashes(trim($email)))) :
   return false;
@@ -53,9 +52,7 @@ function check_email($email) {
 
 <p>To use the function, we can do this.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$email = "name@domain.com";
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$email = "name@domain.com";
 echo $message = (check_email($email) ? "Valid." : "Wrong format.");
 </code></pre></div></div>
 

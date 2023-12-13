@@ -42,7 +42,8 @@
 
 <p>Table format</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute snapshots list \
 --filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
 --format="table(sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
 --sort-by "~creationTimestamp" \
@@ -51,7 +52,8 @@
 
 <p>CSV format</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute snapshots list \
 --filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
 --format="csv[separator=','](sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
 --sort-by "~creationTimestamp" \
@@ -60,7 +62,8 @@
 
 <p>Output to file</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+gcloud compute snapshots list \
 --filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
 --format="csv[separator=','](sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
 --sort-by "~creationTimestamp" \

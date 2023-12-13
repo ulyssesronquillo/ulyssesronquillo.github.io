@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>I found this little nugget in the <a href="https://codex.wordpress.org/Function_Reference/wp_is_mobile">WordPress Codex</a> called wp_is_mobile(). It will detect the user browser’s agent and will return a true or a false if it’s a mobile device. This is helpful if you would like to customized code specifically for a mobile device. Let’s say you have a media player and you want it to have a specific width for desktops and another width for mobile devices. So, here’s the code to detect if it’s a mobile device.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-if ( wp_is_mobile() ) :
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( wp_is_mobile() ) :
   $player_width = '270';
 else :
   $player_width = '400';

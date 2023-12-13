@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Here’s a neat little PHP script that compares a set date/time to the current time. The time() function sets the $now variable to the current Unix timestamp. The strtotime() function converts a date string to a Unix timestamp. The result is assigned to the $setdate variable. The two variables containing Unix timestamps are then compared. A simple if-then statement determines if the date is in the past or future.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-date_default_timezone_set('America/Los_Angeles');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>date_default_timezone_set('America/Los_Angeles');
 $setdate = strtotime("May 9, 2017 12:27PM");
 $now = time();
 if ( $setdate &gt; $now ) : echo 'Future date'; else : echo 'Past date'; endif;

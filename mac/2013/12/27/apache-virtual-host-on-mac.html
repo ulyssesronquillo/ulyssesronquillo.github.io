@@ -48,28 +48,24 @@
 
 <p>Edit the <strong>/etc/apache2/httpd.conf</strong> file using the nano editor.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo nano /etc/apache2/httpd.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /etc/apache2/httpd.conf
 </code></pre></div></div>
 
 <p>Look for the text ‘# Virtual hosts’ located at the end of the file. Uncomment by removing # from the line that says:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-Include /private/etc/apache2/extra/httpd-vhosts.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Include /private/etc/apache2/extra/httpd-vhosts.conf
 </code></pre></div></div>
 
 <p>Save file and exit. If your not familiar with nano, it’s Ctrl-O for save, and Ctrl-X for exit.</p>
 
 <p>Now edit the https-vhosts.conf file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo nano /private/etc/apache2/extra/httpd-vhosts.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /private/etc/apache2/extra/httpd-vhosts.conf
 </code></pre></div></div>
 
 <p>Append the following at the end of the file:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-&lt;virtualhost&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;virtualhost&gt;
 	DocumentRoot "/Users/Ulysses/Sites/"
 	ServerName ulysses.dev
 	ErrorLog "/private/var/log/apache2/ulysses.dev.local-error_log"
@@ -86,36 +82,31 @@ $ sudo nano /private/etc/apache2/extra/httpd-vhosts.conf
 
 <p>The final step. Edit your hosts file to add your domain. This step is very important since we are using a made-up domain that doesn’t exist. By editing our hosts file, we are spoofing our system that a host does exist.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ nano /private/etc/hosts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nano /private/etc/hosts
 </code></pre></div></div>
 
 <p>Add the following domain at the end of the line. 127.0.0.1 is the loopback address of your system.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-127.0.0.1  ulysses.dev
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1  ulysses.dev
 </code></pre></div></div>
 
 <p>Save file and exit.</p>
 
 <p>Restart Apache</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo apachectl restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apachectl restart
 </code></pre></div></div>
 
 <p>From the terminal ping your domain.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ ping ulysses.dev
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ping ulysses.dev
 </code></pre></div></div>
 
 <p>Write permissions</p>
 
 <p>The Apache user on the Mac is _www and is part of the staff group. To make the Sites folder writeable to the Apache _www user, perform the following commands from the Terminal.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-cd /Users/Ulysses
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /Users/Ulysses
 $ sudo chown -R _www:staff Sites
 $ sudo chmod -R 755 Sites
 </code></pre></div></div>

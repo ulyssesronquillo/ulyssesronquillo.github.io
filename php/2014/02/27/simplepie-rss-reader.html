@@ -44,8 +44,7 @@
 
 <p>Next, we need to create a file and copy the code below. The code is pretty much self-explanatory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-&lt;?php // include SimplePie
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php // include SimplePie
 require_once('php/autoloader.php');
 
 // Create a new object called $feed
@@ -62,10 +61,8 @@ $feed-&gt;init();
 $feed-&gt;handle_content_type();
 ?&gt;
 
-
 &lt;a href="rssfeed.php?feed=http://news.yahoo.com/rss"&gt;Yahoo News&lt;/a&gt; | 
 &lt;a href="rssfeed.php?feed=http://feeds.reuters.com/reuters/topNews"&gt;Reuter News&lt;/a&gt;
-
 
 &lt;div class="header"&gt;
   &lt;h1&gt;&lt;a href="&lt;?php echo $feed-&gt;get_permalink(); ?&gt;"&gt;&lt;?php echo $feed-?&gt;get_title(); ?&gt;&lt;/a&gt;&lt;/h1&gt;
@@ -82,9 +79,9 @@ foreach ($feed-?&gt;get_items() as $item): ?&gt;
 &lt;?php endforeach;
 
 /* end of file */
-&lt;/pre?&gt;
-&lt;p&gt;See the &lt;a href="http://uly.me/demo/rssfeed.php"&gt;demo&lt;/a&gt;. Just add your own CSS stylesheet and you're ready to go.&lt;/p&gt;
 </code></pre></div></div>
+
+<p>See the <a href="http://uly.me/demo/rssfeed.php">demo</a>. Just add your own CSS stylesheet and you’re ready to go.</p>
 
       </div>
     </main><footer class="site-footer h-card">

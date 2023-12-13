@@ -42,8 +42,7 @@
 
 <p>This piece of code will NOT work in CloudFormation.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-Fn::Base64: !Sub |
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fn::Base64: !Sub |
 #!/bin/bash -xe
 yum update -y
 mkdir /data
@@ -55,8 +54,7 @@ initiate.sh
 
 <p>This is valid. It’s all about indentation.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-Fn::Base64: !Sub |
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fn::Base64: !Sub |
   #!/bin/bash -xe
   yum update -y
   mkdir /data

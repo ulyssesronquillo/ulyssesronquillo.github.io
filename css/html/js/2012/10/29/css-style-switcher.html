@@ -44,8 +44,7 @@
 
 <p>I’m using two very simple stylesheets. The default stylsheet is called <a href="http://uly.me/demo/styleswitcher/style.css">style.css</a>. The alternate stylesheet is called <a href="http://uly.me/demo/styleswitcher/black.css">black.css</a>. This code belongs in the head section of the HTML page.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-&lt;link href="style.css" rel="stylesheet" title="style" type="text/css"&gt;&lt;/link&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link href="style.css" rel="stylesheet" title="style" type="text/css"&gt;&lt;/link&gt;
 &lt;link href="black.css" rel="alternate stylesheet" title="black" type="text/css"&gt;&lt;/link&gt;
 </code></pre></div></div>
 
@@ -53,8 +52,7 @@
 
 <p>We are using <a href="https://developers.google.com/speed/libraries/devguide#jquery">Google’s JQuery CDN</a> by also linking it from within the head section of the HTML page. The second line is the Javascript code that actually performs the stylesheet switching. You can download the <a href="http://uly.me/demo/styleswitcher/styleswitcher.js">styleswitcher.js</a> code directly from my website.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"&gt;&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script src="styleswitcher.js" type="text/javascript"&gt;&lt;/script&gt;
 </code></pre></div></div>
 
@@ -62,8 +60,7 @@
 
 <p>We will provide two links where readers can switch stylesheets from default to black and vice versa. The links are standard HTML links and using Javascript’s onclick event.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-&lt;a href="#" onclick="setActiveStyleSheet('style');return false;"&gt;Default&lt;/a&gt; |
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="#" onclick="setActiveStyleSheet('style');return false;"&gt;Default&lt;/a&gt; |
 &lt;a href="#" onclick="setActiveStyleSheet('black');return false;"&gt;Black&lt;/a&gt;
 </code></pre></div></div>
 
@@ -71,19 +68,13 @@
 
 <p>Here’s the final code.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-
-
-&lt;title&gt;CSS Switcher&lt;/title&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;title&gt;CSS Switcher&lt;/title&gt;
 &lt;link href="”style.css”" rel="”stylesheet”" title="”style”" type="”text/css”"&gt;&lt;/link&gt;
 &lt;link href="”black.css”" rel="”alternate" stylesheet="" title="”black”" type="”text/css”"&gt;&lt;/link&gt;
 &lt;script src="”//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js”"&gt;&lt;/script&gt;
 &lt;script src="”styleswitcher.js”" type="”text/javascript”"&gt;&lt;/script&gt;
-
-
 &lt;a false="" href="”#”" onclick="”setActiveStyleSheet(‘style’);return"&gt;Default&lt;/a&gt; | 
 &lt;a false="" href="”#”" onclick="”setActiveStyleSheet(‘black’);return"&gt;Black&lt;/a&gt;
-
 </code></pre></div></div>
 
 <p>&lt;/body&gt;&lt;/html&gt;&lt;html&gt;&lt;p&gt;<a title="Subversion Checkout" href="http://uly.me/demo/styleswitcher/" target="_blank">Demo</a>&lt;/p&gt;</p>

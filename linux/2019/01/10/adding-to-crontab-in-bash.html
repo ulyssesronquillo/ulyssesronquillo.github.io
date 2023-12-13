@@ -40,14 +40,12 @@
       <div class="wrapper">
         <p>Here’s a neat command to append a job to a crontab within a Bash script.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-crontab -l | { cat; echo "0 1 * * * /dir/script.sh &gt; /logs/script.cronlog 2&gt;&amp;1"; } | crontab -
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -l | { cat; echo "0 1 * * * /dir/script.sh &gt; /logs/script.cronlog 2&gt;&amp;1"; } | crontab -
 </code></pre></div></div>
 
 <p>To validate, perform crontab -l to see if your changes are there.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-crontab -l
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -l
 </code></pre></div></div>
 
       </div>

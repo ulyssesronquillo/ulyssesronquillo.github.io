@@ -44,17 +44,15 @@
 
 <p>In this example, I created a simple form with one input called “username.” I’ve added “onchange=’needToConfirm=True’” to monitor the input field. I also added a save and cancel button, as well as an internal link for testing the form later. The save button calls the “needToConfirm” function when the save button is clicked. The cancel button simply reloads the same page when the cancel button is clicked. Here’s the HTML markup.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form action="" id="login" method="post"&gt; &lt;input name="username" onchange="needToConfirm=true" size="40" type="text" value=""&gt;&lt;/input&gt;  
+&lt;input name="save" onclick="needToConfirm=false;" type="Submit" value="Save"&gt;&lt;/input&gt;
+&lt;input onclick="window.location='confirm.html'" type="button" value="Cancel"&gt;&lt;/input&gt; [Link](confirm.html)#### Javascript
+&lt;/form&gt;
 </code></pre></div></div>
 
-<form action="" id="login" method="post"> <input name="username" onchange="needToConfirm=true" size="40" type="text" value="" />&lt;/input&gt;  
- <input name="save" onclick="needToConfirm=false;" type="Submit" value="Save" />&lt;/input&gt; <input onclick="window.location='confirm.html'" type="button" value="Cancel" />&lt;/input&gt; [Link](confirm.html)#### Javascript
+<p>The unsaved changes feature is made possible using Javascript. The function starts out setting needToConfirm to false. A pop up window comes up notifying the user that they have unsaved changes on the form. The user is prompted whether to stay on the page or to leave the page. Add the following Javascript code at the end of the form. Go ahead, test the demo below.</p>
 
-The unsaved changes feature is made possible using Javascript. The function starts out setting needToConfirm to false. A pop up window comes up notifying the user that they have unsaved changes on the form. The user is prompted whether to stay on the page or to leave the page. Add the following Javascript code at the end of the form. Go ahead, test the demo below.
-
-```
-<pre lang="html">
-<script>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
 needToConfirm = false;
 window.onbeforeunload = askConfirm;
 function askConfirm() 
@@ -64,13 +62,10 @@ function askConfirm()
  return "You have unsaved changes.";
  }       
 }
-</script>
-```
+&lt;/script&gt;
+</code></pre></div></div>
 
-[Demo](http://uly.me/demo/confirm.html)
-
-&lt;/form&gt;
-</pre></form>
+<p><a href="http://uly.me/demo/confirm.html">Demo</a></p>
 
       </div>
     </main><footer class="site-footer h-card">

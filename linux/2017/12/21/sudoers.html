@@ -40,14 +40,12 @@
       <div class="wrapper">
         <p>The /etc/sudoers file gives users the ability to run commands that are typically reserved for administrators. The commands require a password or no password, depending on how you set them up in the sudoers file. The sudoers file can’t be edited using any text editor. You have to use visudo.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ visudo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ visudo
 </code></pre></div></div>
 
 <p>Add groups to access sudo.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# Allow users in techgroup to run all commands
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Allow users in techgroup to run all commands
 %techgroup   ALL=(ALL)   NOPASSWD: ALL
 # Allow users in techgroup without a password
 %techgroup   ALL=(ALL)   NOPASSWD: ALL

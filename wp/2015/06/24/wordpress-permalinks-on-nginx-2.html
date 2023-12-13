@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>If you’re running WordPress on Nginx, you may have an issue with WordPress permalinks. This <a href="http://nginxlibrary.com/wordpress-permalinks/">article</a> explains nicely what you need to do to configure Nginx. What the article failed to do is mention the Nginx configuration filename and its location. The filename is nginx.conf, and it’s usually located in the directory /usr/local/nginx/conf, /etc/nginx, or /usr/local/etc/nginx, depending on your Linux distro.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# WordPress installed on root directory
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># WordPress installed on root directory
 location / {
   index index.php index.html index.htm;
   try_files $uri $uri/ /index.php?$args;
@@ -55,8 +54,7 @@ location /blog/ {
 
 <p>You need to reload Nginx for changes to take effect. For Ubuntu:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ sudo service nginx restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo service nginx restart
 # or
 $ sudo /etc/init.d/nginx restart
 </code></pre></div></div>

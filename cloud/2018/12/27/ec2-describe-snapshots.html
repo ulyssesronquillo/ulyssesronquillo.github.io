@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>If you have a ton of snapshots, they tend to be difficult to find within the AWS console. Although AWS has optimized the snapshot view, it’s still in beta. Filtering a volume id is still a problem. It might be faster just to use the AWS CLI to display snapshot information. Here’s an example of how to display snapshots given a certain volume id.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws ec2 describe-snapshots \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 describe-snapshots \
 --filters Name=volume-id,Values=vol-xxxxxxxxxxxxxx \
 --query "Snapshots[*].{ID:SnapshotId,Time:StartTime,Progress:Progress}" \
 --profile default
@@ -49,8 +48,7 @@ aws ec2 describe-snapshots \
 
 <p>The result is something like this.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
         "Progress": "99%",
         "ID": "snap-xxxxxxxxxxxxxxx",
         "Time": "2018-12-25T10:19:51.385Z"

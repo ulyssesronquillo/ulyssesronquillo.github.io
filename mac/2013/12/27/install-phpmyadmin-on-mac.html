@@ -52,33 +52,28 @@
 
 <p>Move the ‘phpmyadmin’ folder to ‘<strong>/usr/local/phpmyadmin</strong>.’</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo mv phpmyadmin /usr/local/phpmyadmin
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mv phpmyadmin /usr/local/phpmyadmin
 </code></pre></div></div>
 
 <p>Copy the config.sample.inc.php to config.inc.php.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ cd /usr/local/phpmyadmin
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /usr/local/phpmyadmin
 $ sudo cp config.sample.inc.php config.inc.php
 </code></pre></div></div>
 
 <p>Create a config file in ‘<strong>/etc/apache2/other</strong>.’</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo touch /etc/apache2/other/phpmyadmin.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo touch /etc/apache2/other/phpmyadmin.conf
 </code></pre></div></div>
 
 <p>Edit the config file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo nano /etc/apache2/other/phpmyadmin.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo nano /etc/apache2/other/phpmyadmin.conf
 </code></pre></div></div>
 
 <p>Add the following:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-Alias /phpmyadmin /usr/local/phpmyadmin
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alias /phpmyadmin /usr/local/phpmyadmin
 &lt;directory&gt;
     Options Indexes
     Order allow,deny
@@ -88,8 +83,7 @@ Alias /phpmyadmin /usr/local/phpmyadmin
 
 <p>Restart Apache</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-$ sudo apachectl restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apachectl restart
 </code></pre></div></div>
 
 <p>Finally, access PhpMyAdmin from your browser. Example: http://localhost/phpmyadmin</p>

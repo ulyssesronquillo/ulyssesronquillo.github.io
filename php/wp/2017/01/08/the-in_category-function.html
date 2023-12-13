@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>If you’re looking for a simple way to detect if a WordPress page belongs to a certain category, you can use a WordPress function called in_category(). In this example code below, the script will detect if a post belongs to the “news” category. If it does, it will send an output to the WordPress header. If it isn’t, it will send an alternate output.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-function urr_add_to_header() 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function urr_add_to_header() 
 {
   if ( in_category( 'news' )) 
   {

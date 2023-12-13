@@ -42,8 +42,7 @@
 
 <p>Let’s get started.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-// Today's date
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Today's date
 $day   = date("d");
 $month = date("m");
 $year  = date("Y");
@@ -81,8 +80,7 @@ echo $d;
 
 <p>You can then use any set of dates to calculate transactions on the database. For example.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="sql"&gt;
-SELECT price FROM product WHERE purchase_date BETWEEN $a AND $b;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT price FROM product WHERE purchase_date BETWEEN $a AND $b;
 </code></pre></div></div>
 
 <p>Read more about PHP’s <a href="http://www.php.net/manual/en/function.date.php">date</a> and <a href="http://www.php.net/manual/en/function.mktime.php">mktime</a> functions. See <a href="http://uly.me/demo/dates.php">demo</a>. Results are based on today’s date.</p>

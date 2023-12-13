@@ -44,14 +44,14 @@
 
 <p>In the WordPress Dashboard under Appearance, choose the Editor. On the top right-hand side of the page, select the Genesis parent theme from the dropdown menu to edit. Click on the ‘Theme Header’ to edit, and add this line of code on top of the header.php file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;touch('wp-content/themes/enterprise-pro/template.php');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch('wp-content/themes/enterprise-pro/template.php');
 </code></pre></div></div>
 
 <p>The command has to run once, so you’ll need to access the website at least once. Remove the line of code afterwards. The PHP ‘touch’ function will create a new empty file called template.php inside the Enterprise Pro theme. You can check it by navigating the editor once again, and selecting this time the ‘Enterprise Pro’ theme. Look for the new file called ‘template.php.’</p>
 
 <p>In my case, I decided to change the page template to another filename, so I ended running it for the second time by inserting the rename function on the header.php file once again. Here’s the command to rename template.php to newtemplate.php.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;rename('wp-content/themes/enterprise-pro/template.php', 'wp-content/themes/enterprise-pro/newtemplate.php');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rename('wp-content/themes/enterprise-pro/template.php', 'wp-content/themes/enterprise-pro/newtemplate.php');
 </code></pre></div></div>
 
 <p>Anyway, it works, but use this with extreme caution. If you’re not familiar with PHP and WordPress, you can render the entire website useless if you somehow inserted the wrong PHP code. There’s no FTP to back out the files. The WordPress Dashboard may no longer work. So, work on your own peril.</p>

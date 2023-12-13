@@ -42,7 +42,8 @@
 
 <p>Create a 30GB called temp_30GB_file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fallocate -l 30G temp_30GB_file
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
+fallocate -l 30G temp_30GB_file
 </code></pre></div></div>
 
 <p>Unlike dd which can take minutes depending on file size, fallocate is instantaneous.</p>

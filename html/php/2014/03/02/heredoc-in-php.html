@@ -42,19 +42,16 @@
 
 <p>Weaving in and out of PHP</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-&lt;?php // some PHP code here
-??&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php // some PHP code here ?&gt;
+&lt;form&gt; First name: &lt;input name="firstname" type="text"&gt;&lt;/input&gt;  
+ Last name: &lt;input name="lastname" type="text"&gt;&lt;/input&gt;
+&lt;/form&gt;
+&lt;?php // some more PHP code?&gt;
 </code></pre></div></div>
 
-<form> First name: <input name="firstname" type="text" />&lt;/input&gt;  
- Last name: <input name="lastname" type="text" />&lt;/input&gt; </form>
-<p>&lt;?php // some more PHP code
-??&gt;
-Staying within PHP and using the echo function. Quotes are escaped.</p>
+<p>Staying within PHP and using the echo function. Quotes are escaped.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-&lt;?php // some PHP code here
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php // some PHP code here
 echo "&lt;form?&gt;";
 echo "First name: &lt;input name="\"firstname\"" type="\"text\""&gt;&lt;/input&gt;&lt;br&gt;&lt;/br&gt;";
 echo "Last name: &lt;input name="\"lastname\"" type="\"text\""&gt;&lt;/input&gt;";
@@ -65,20 +62,18 @@ echo "";
 
 <p>Using single quotes and double quotes.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-&lt;?php // some PHP code here
-??&gt;
-echo '
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php // some PHP code here
+echo '&lt;form&gt;'; 
+echo 'First name: &lt;input name="firstname" type="text"&gt;&lt;/input&gt;'; 
+echo 'Last name: &lt;input name="lastname" type="text"&gt;&lt;/input&gt;';
+echo '&lt;/form&gt;';
+?&gt;
+&lt;?php // some more PHP code ?&gt;
 </code></pre></div></div>
 
-<form>'; echo 'First name: <input name="firstname" type="text" />&lt;/input&gt;  
-'; echo 'Last name: <input name="lastname" type="text" />&lt;/input&gt;'; echo '</form>
-<p>’; &lt;?php // some more PHP code
-??&gt;
-Using heredoc</p>
+<p>Using heredoc</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-&lt;?php // some PHP code here
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php // some PHP code here
 echo = &lt;&lt;&lt;HERE_DOC
 &lt;form?&gt;
 First name: &lt;input name="firstname" type="text"&gt;&lt;/input&gt;&lt;br&gt;&lt;/br&gt;

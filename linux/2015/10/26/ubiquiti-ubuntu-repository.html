@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>I’m running Ubiquiti’s Unifi Cotroller on one of my websites. I did the sudo apt-get update to perform an update recently and found out that the Ubiquiti’s repository is broken. As it turns out, Ubiquiti has changed the location of their repository to the following location:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="ssh"&gt;
-deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti
 </code></pre></div></div>
 
 <p>You have to edit the /etc/apt/sources.list file to change the previous entry with the one above.</p>
