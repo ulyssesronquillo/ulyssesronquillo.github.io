@@ -42,8 +42,7 @@
 
 <p>Setup your instances.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# Instance 1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Instance 1
 gcloud compute instances create www1 \
   --image-family debian-9 \
   --image-project debian-cloud \
@@ -83,15 +82,13 @@ gcloud compute instances create www3 \
 
 <p>Create a firewall to allow external traffic to reach port 80.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute firewall-rules create www-firewall-network-lb \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute firewall-rules create www-firewall-network-lb \
     --target-tags network-lb-tag --allow tcp:80
 </code></pre></div></div>
 
 <p>Configure your network load balancer.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# Create an external IP address.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Create an external IP address.
 gcloud compute addresses create network-lb-ip-1 \
     --region us-central1
 # Add a legacy HTTP health check.
@@ -113,8 +110,7 @@ gcloud compute forwarding-rules describe www-rule \
 
 <p>Finally, use the curl command to send traffic to the NLB external IP address.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-while true; do curl -m1 [IP_ADDRESS]; done
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while true; do curl -m1 [IP_ADDRESS]; done
 </code></pre></div></div>
 
       </div>

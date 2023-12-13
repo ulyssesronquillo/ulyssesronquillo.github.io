@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>Here’s how to search for AWS Security Groups containing this IP Cidr.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 describe-security-groups \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 describe-security-groups \
 --filter Name=egress.ip-permission.cidr,Values='10.8.8.8/32' \
 --query "SecurityGroups[*].{Name:GroupName}" \
 --output text \
@@ -50,7 +50,7 @@
 
 <p>Search with ports.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 describe-security-groups \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 describe-security-groups \
 --filter Name=egress.ip-permission.cidr,Values='10.8.8.8/32' \
          Name=egress.ip-permission.from-port,Values='22' \
          Name=egress.ip-permission.to-port,Values='22' \

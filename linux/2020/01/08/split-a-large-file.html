@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>How to split a large file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-split -b 500MB httpd.log
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>split -b 500MB httpd.log
 ll -lh
 total 1.9G
 -rw-r--r-- 1 root root 954M Mar 25 12:35 httpd.log
@@ -51,8 +50,7 @@ total 1.9G
 
 <p>Split with an output file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-split -b 200M httpd.log split.log
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>split -b 200M httpd.log split.log
 ll -lh
 total 1.9G
 -rw-r--r-- 1 root root 954M Mar 25 12:35 httpd.log

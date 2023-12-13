@@ -40,13 +40,13 @@
       <div class="wrapper">
         <p>Here’s how to get the WAF rule.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws waf-regional get-rule \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws waf-regional get-rule \
 --rule-id xxxxxxxxxxxxxxxxxxxxxxxxxxx
 </code></pre></div></div>
 
 <p>Here’s how to get the AWS WAF IP set.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws waf-regional get-ip-set \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws waf-regional get-ip-set \
 --ip-set-id xxxxxxxxxxxxxxxxxxx \
 --region us-east-1 \
 --profile your-profile
@@ -54,19 +54,19 @@
 
 <p>Here’s how to get the latest token.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws waf-regional get-change-token
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws waf-regional get-change-token
 </code></pre></div></div>
 
 <p>Result is similar to this.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="json"&gt;{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "ChangeToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 }
 </code></pre></div></div>
 
 <p>Create a JSON file called “change.json” to be used for updating the IP set. We will insert and delete an IP set.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="json"&gt;[
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
     {
         "Action": "INSERT",
         "IPSetDescriptor":
@@ -88,7 +88,7 @@
 
 <p>Finally, here’s how to update the IP set.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws waf-regional update-ip-set \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws waf-regional update-ip-set \
 --ip-set-id xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
 --change-token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \
 --region us-east-1 \

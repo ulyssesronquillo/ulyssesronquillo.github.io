@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>If you are using AWS CloudFront, you can avoid costly invalidations by using object versioning. Due to the nature of CloudFront, overwriting to the same file will not have any effect until caching is invalidated. The default timeout for CloudFront is 24 hours. If you have a website and you’ve overwritten your logo image, the updated image file will not be reflected on your site due to the caching timeout is 24 hours. To avoid invalidation, enable object versioning by adding a policy when overwriting files.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# Logo Image
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Logo Image
 &lt;a href="logo.png"&gt;Website Logo&lt;/a&gt;
 #
 # Implement object versioning. 

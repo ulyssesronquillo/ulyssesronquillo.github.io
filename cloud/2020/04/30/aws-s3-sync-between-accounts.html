@@ -49,8 +49,7 @@
 
 <p>Account A bucket permissions. Account and user are from Account B.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -69,14 +68,12 @@
 
 <p>Create IAM user (Jane) in Account B</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws iam create-user --user-name Jane
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws iam create-user --user-name Jane
 </code></pre></div></div>
 
 <p>Give IAM user (Jane) access to both buckets.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -108,8 +105,7 @@ aws iam create-user --user-name Jane
 
 <p>Sync the buckets</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws s3 sync s3://awsexamplesourcebucket s3://awsexampledestinationbucket
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws s3 sync s3://awsexamplesourcebucket s3://awsexampledestinationbucket
 </code></pre></div></div>
 
       </div>

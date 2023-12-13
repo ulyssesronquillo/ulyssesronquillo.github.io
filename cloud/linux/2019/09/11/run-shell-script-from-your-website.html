@@ -42,15 +42,13 @@
 
 <p>Here’s the contents of foo.php. Wrap your output with ‘pre’ for better formatting.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-&lt;?php $output = shell_exec('/var/www/html/bar.sh 2?&gt;&amp;1');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php $output = shell_exec('/var/www/html/bar.sh 2?&gt;&amp;1');
 echo "$output";
 </code></pre></div></div>
 
 <p>Here’s the content of bar.sh. Output will be displayed on web page.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 now="$(date +'%y%m%d')"
 echo $now
 aws s3 ls

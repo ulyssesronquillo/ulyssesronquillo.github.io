@@ -40,21 +40,20 @@
       <div class="wrapper">
         <p>Create a static IP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute addresses create your-app-static-ip \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute addresses create your-app-static-ip \
 --region us-central1
 </code></pre></div></div>
 
 <p>List static IP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute addresses list your-static-ip-name --region us-central1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute addresses list your-static-ip-name --region us-central1
 # or
 gcloud compute addresses list --filter="name=('live-tfc-static-ip-address')"
 </code></pre></div></div>
 
 <p>Release static IP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute addresses delete your-app-static-ip \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute addresses delete your-app-static-ip \
 --region us-central1
 </code></pre></div></div>
 

@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Here’s a standard template for SSL Apache found in /etc/apache2/sites-available/default-ssl.conf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-&lt;ifmodule mod_ssl.c=""&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ifmodule mod_ssl.c=""&gt;
 &lt;virtualhost _default_:443=""&gt;
    ServerAdmin your-email@your-domain.com
    ServerName www.yourdomain.com
@@ -63,7 +62,7 @@
 
 <p>Enable SSL.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# Enable SSL Module
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Enable SSL Module
 a2enmod ssl
 systemctl restart apache2.service
 # Enable SSL Apache Config

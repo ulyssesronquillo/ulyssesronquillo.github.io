@@ -42,8 +42,7 @@
 
 <p>Add this code to functions.php.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;
-function pagination($pages = '', $range = 4) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function pagination($pages = '', $range = 4) {
   $showitems = ($range * 2)+1;
   global $paged;
   if(empty($paged)) $paged = 1;
@@ -70,7 +69,7 @@ function pagination($pages = '', $range = 4) {
 
 <p>To display, comment out ‘the_post_navigation’ function and add the ‘pagination’ function instead in your template files.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="php"&gt;//the_posts_navigation();
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//the_posts_navigation();
 pagination();
 </code></pre></div></div>
 

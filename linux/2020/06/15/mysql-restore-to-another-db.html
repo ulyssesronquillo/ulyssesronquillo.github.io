@@ -40,14 +40,12 @@
       <div class="wrapper">
         <p>In order to restore a MySQL database to another database, use routines and triggers.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-mysqldump -p user -p --routines --triggers db1 &gt; db1.sql
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysqldump -p user -p --routines --triggers db1 &gt; db1.sql
 </code></pre></div></div>
 
 <p>To restore to another database, just use the normal command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-mysql -u user -p db2 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u user -p db2 
 </code></pre></div></div>
 
       </div>

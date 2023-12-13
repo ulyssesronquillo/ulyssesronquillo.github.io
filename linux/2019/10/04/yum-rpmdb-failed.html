@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>If you are getting an error similar to the yum error below, yum may be broken in your system.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;error: rpmdb: BDB0113 Thread/process 2196/139984719730496 failed: BDB1507 Thread died in Berkeley DB library
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>error: rpmdb: BDB0113 Thread/process 2196/139984719730496 failed: BDB1507 Thread died in Berkeley DB library
 error: db5 error(-30973) from dbenv-&gt;failchk: BDB0087 DB_RUNRECOVERY: Fatal error, run database recovery
 error: cannot open Packages index using db5 - (-30973)
 error: cannot open Packages database in /var/lib/rpm
@@ -51,7 +51,7 @@ Error: rpmdb open failed
 
 <p>Here’s the fix.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;mv /var/lib/rpm/__db* /tmp
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv /var/lib/rpm/__db* /tmp
 yum clean all
 </code></pre></div></div>
 

@@ -45,8 +45,7 @@
   <li>Use the GCloud Disk Move command.</li>
 </ol>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# Detach disk from instance
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Detach disk from instance
 gcloud compute instances detach-disk server --disk=server-boot
 # Move disk from us-central1-b to us-central1-f
 gcloud compute disks move example-disk-1 --zone us-central1-b --destination-zone us-central1-f

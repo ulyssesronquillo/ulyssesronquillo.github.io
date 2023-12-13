@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>Here’s a quick way to setup a chrooted environment.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;mkdir /helper
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /helper
 for i in proc sys dev; do mount o bind /$i /helper/$i; done
 chroot /helper
 </code></pre></div></div>

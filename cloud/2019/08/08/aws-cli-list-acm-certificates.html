@@ -40,14 +40,12 @@
       <div class="wrapper">
         <p>If you’ve imported or created a SSL certificate via AWS Certificate Manager, here’s the CLI to display a list of certificates.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws acm list-certificates
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws acm list-certificates
 </code></pre></div></div>
 
 <p>Once you have the arn, you can describe certificate. Get the arn from the output above.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws acm describe-certificate --certificate-arn arn-xxxxxxxxxxxxxxxxxx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws acm describe-certificate --certificate-arn arn-xxxxxxxxxxxxxxxxxx
 </code></pre></div></div>
 
       </div>

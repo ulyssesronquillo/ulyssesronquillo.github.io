@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>Here’s how to disable plugin in Yum repos.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# check which plugins are enabled
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># check which plugins are enabled
 yum repolist
 # disable plugins
 yum update --disableplugin=product-id,subscription-manager
@@ -50,14 +50,14 @@ yum repolist
 
 <p>If that doesn’t work, check the individual config files of each plugin.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;cd /etc/yum/pluginconf.d/
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /etc/yum/pluginconf.d/
 vim product-id.conf
 vim subscription-manager.conf
 </code></pre></div></div>
 
 <p>Disable it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;[main]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[main]
 enable=0
 </code></pre></div></div>
 

@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>Here’s a quick way to chroot another boot disk. Attach the rescued boot disk first. Run lsblk and mount.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;lsblk
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
 mount -t xfs -o nouuid /dev/xvdf2 /mnt
 mount --bind /proc /mnt/proc
 mount --bind /sys /mnt/sys
@@ -52,7 +52,7 @@ exit
 
 <p>Unmount when done.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;umount /mnt/proc
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>umount /mnt/proc
 umount /mnt/dev
 umount /mnt/sys
 umount /mnt

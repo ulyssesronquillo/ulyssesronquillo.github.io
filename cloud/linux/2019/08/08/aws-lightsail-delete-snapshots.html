@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Here’s my script to delete AWS LightSail snapshots. It can delete daily or weekly backups and scheduled via crontab. If you want longer or shorter retention, adjust the expired value. It’s in seconds. 604800 is 1 week. 2592000 is 1 month.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
 current=$(date +%s)
 
@@ -94,8 +93,7 @@ echo '-----------------------------------' &gt;&gt; $logfile
 
 <p>Schedule deletes via crontab.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# run daily at 5am
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># run daily at 5am
 0 5 * * * /bin/bash /root/snapshots/delete-snapshot.sh daily 2&gt;&amp;1
 # run weekly every sunday at 6am
 0 6 * * 0 /bin/bash /root/snapshots/delete-snapshot.sh weekly 2&gt;&amp;1
