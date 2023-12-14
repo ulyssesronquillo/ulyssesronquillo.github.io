@@ -42,16 +42,14 @@
 
 <p>Stop VM.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute instances stop $INSTANCE_NAME \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances stop $INSTANCE_NAME \
 --zone $ZONE_NAME \
 --project $PROJECT_ID
 </code></pre></div></div>
 
 <p>Move VM to another VPC.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute instances network-interfaces update $INSTANCE_NAME \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances network-interfaces update $INSTANCE_NAME \
 --zone $ZONE_NAME \
 --network-interface=nic0 \
 --network $YOUR_NETWORK \
@@ -61,8 +59,7 @@ gcloud compute instances network-interfaces update $INSTANCE_NAME \
 
 <p>Start VM.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute instances start $INSTANCE_NAME \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances start $INSTANCE_NAME \
 --zone $ZONE_NAME \
 --project $PROJECT_ID
 </code></pre></div></div>

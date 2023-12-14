@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Generate a map of your live streaming viewers by placing of your viewer’s IP into a file and then using IPInfo’s map tool.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-vim ipList
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ipList
 54.0.0.1
 54.0.0.2
 54.0.0.3
@@ -49,8 +48,7 @@ vim ipList
 
 <p>To plot the IPs on a map, pipe them to IPinfo.io.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-cat ipList | curl -XPOST --data-binary @- "ipinfo.io/map?cli=1"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat ipList | curl -XPOST --data-binary @- "ipinfo.io/map?cli=1"
 </code></pre></div></div>
 
 <p>The result is a URL of the map.</p>

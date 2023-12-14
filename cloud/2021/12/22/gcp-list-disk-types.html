@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>To list all disk types available in your project in all regions. Result is truncated.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ gcloud compute disk-types list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gcloud compute disk-types list
 NAME         ZONE                       VALID_DISK_SIZES
 pd-balanced                             10GB-65536GB
 pd-ssd                                  10GB-65536GB
@@ -52,8 +51,7 @@ pd-balanced                             10GB-65536GB
 
 <p>To list a specific region, use the filter option.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ gcloud compute disk-types list --filter="zone~'us-central1'"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gcloud compute disk-types list --filter="zone~'us-central1'"
 NAME         ZONE           VALID_DISK_SIZES
 pd-balanced  us-central1-a  10GB-65536GB
 pd-extreme   us-central1-a  500GB-65536GB
@@ -79,8 +77,7 @@ pd-standard  us-central1-d  10GB-65536GB
 
 <p>To a list a specific region and local SSDs only.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute disk-types list --filter="zone~'us-central1' AND name~'local-'"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disk-types list --filter="zone~'us-central1' AND name~'local-'"
 NAME       ZONE           VALID_DISK_SIZES
 local-ssd  us-central1-a  375GB-375GB
 local-ssd  us-central1-b  375GB-375GB

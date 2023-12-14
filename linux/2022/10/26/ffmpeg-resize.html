@@ -40,26 +40,22 @@
       <div class="wrapper">
         <p>How to resize JPEG using FFMPEG.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ffmpeg -i TREE.JPG -y -vf scale=iw*.2:ih*.2 tree.jpg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i TREE.JPG -y -vf scale=iw*.2:ih*.2 tree.jpg
 </code></pre></div></div>
 
 <p>Another option is to set resolution.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ffmpeg -i TREE.JPG -y -vf scale=-1:720 tree.jpg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i TREE.JPG -y -vf scale=-1:720 tree.jpg
 </code></pre></div></div>
 
 <p>How to resize video using FFMPEG.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ffmpeg -i TREE.MP4 -s 640x360 -pix_fmt yuv420p -crf 18 tree.mp4
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i TREE.MP4 -s 640x360 -pix_fmt yuv420p -crf 18 tree.mp4
 </code></pre></div></div>
 
 <p>How to create a thumbnail from a video.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ffmpeg -ss 00:00:00 -i tree.mp4 -vframes 1 tree.jpg
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -ss 00:00:00 -i tree.mp4 -vframes 1 tree.jpg
 </code></pre></div></div>
 
       </div>

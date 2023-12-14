@@ -44,22 +44,19 @@
 
 <p>The -R option is recursive and -m is for multi-threaded or multi-processing.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gsutil -m cp -R s3://bucket/ gs://bucket
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gsutil -m cp -R s3://bucket/ gs://bucket
 </code></pre></div></div>
 
 <p>You can also use rsync instead of cp. Just be aware that rsync does not copy empty directory trees</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gsutil -m rsync -r s3://bucket/ gs://bucket
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gsutil -m rsync -r s3://bucket/ gs://bucket
 </code></pre></div></div>
 
 <p>If you plan to use -d, Use it with caution since it deletes content.</p>
 
 <p>You may have to set the following to your defaults accounts.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-export AWS_PROFILE=yourprofile
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export AWS_PROFILE=yourprofile
 gcloud config set project your-project-id
 </code></pre></div></div>
 

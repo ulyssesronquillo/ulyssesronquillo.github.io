@@ -42,14 +42,12 @@
 
 <p>A 2GB swap file.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-dd if=/dev/zero of=/swapfile bs=1k count=2048k
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dd if=/dev/zero of=/swapfile bs=1k count=2048k
 </code></pre></div></div>
 
 <p>Activate.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-mkswap /swapfile
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkswap /swapfile
 chmod 0600 /swapfile
 systemctl daemon-reload
 swapon /swapfile
@@ -57,14 +55,12 @@ swapon /swapfile
 
 <p>To make swap permanent, add to /etc/fstab.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-/swapfile  swap   swap    defaults   0 0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/swapfile  swap   swap    defaults   0 0
 </code></pre></div></div>
 
 <p>Check if swap is working.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-cat /proc/swaps
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat /proc/swaps
 free -h
 </code></pre></div></div>
 

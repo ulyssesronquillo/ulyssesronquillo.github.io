@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Vintela is a utility for allowing AD users to login to Linux. Here are some basic troubleshooting tips.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-#check version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#check version
 vastool -v
 # check status
 vastool status
@@ -61,8 +60,7 @@ vastool -u username@domain.com -w password join -f -c OU=Linux,OU=linux,OU=Serve
 
 <p>Important files.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-/etc/opt/quest/vas/host.keytab      Encrypted host key
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/etc/opt/quest/vas/host.keytab      Encrypted host key
 /etc/opt/quest/vas/group-override   Maps accounts to groups
 /etc/opt/quest/vas/users.allow      Lists groups that are granted access to the server
 /etc/opt/quest/vas/xjoin.keytab     File used to join server to domain

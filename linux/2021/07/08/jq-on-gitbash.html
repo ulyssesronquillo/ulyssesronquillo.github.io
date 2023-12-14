@@ -44,20 +44,17 @@
 
 <p>To install on GitBash, unzip the file and copy the executable to /usr/bin.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-mv jq-win64.exe to /usr/bin/jq.exe
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv jq-win64.exe to /usr/bin/jq.exe
 </code></pre></div></div>
 
 <p>Create an alias. Edit ~/.bashrc.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-alias jq='/usr/bin/jq.exe'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias jq='/usr/bin/jq.exe'
 </code></pre></div></div>
 
 <p>Using JQ.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-jq --version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jq --version
 jq '.selfLink' vm.json
 </code></pre></div></div>
 

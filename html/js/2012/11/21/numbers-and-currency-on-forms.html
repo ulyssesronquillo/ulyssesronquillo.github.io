@@ -44,8 +44,7 @@
 
 <p>We have a simple form with one input and a submit button. There are two Javascript functions in the input field. The blockNonNumbers function allow numbers only to be typed on the input field. Non-number characters are ignored. The extractNumber function formats the input to two decimal places.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="html"&gt;
-&lt;form action="" id="login" method="post"&gt; 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form action="" id="login" method="post"&gt; 
 &lt;input name="username" onblur="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);" onkeyup="extractNumber(this,2,false);" type="text" value=""&gt;&lt;/input&gt;
 &lt;/form&gt;#### Javascript
 </code></pre></div></div>

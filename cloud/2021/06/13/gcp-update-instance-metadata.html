@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>How to update an instance metadata in GCP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute instances add-metadata instance-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-metadata instance-name \
 --metadata key-name=value \
 --project your-project-id \
 --zone us-central1-a
@@ -49,8 +48,7 @@ gcloud compute instances add-metadata instance-name \
 
 <p>In this example, we are adding enable-oslogin=TRUE.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute instances add-metadata instance-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-metadata instance-name \
 --metadata enable-oslogin=TRUE \
 --project your-project-id \
 --zone us-central1-a

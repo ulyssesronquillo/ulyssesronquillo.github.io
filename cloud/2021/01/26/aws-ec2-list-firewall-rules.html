@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>AWS EC2 Firewall rules are defined within security groups. Security groups are attached to an instance. An instance can have up to 5 security groups. Essentially, this script gathers all the security groups associated with an instance, loops through them, and then outputs the ingress and egress rules of each security group to a file in a text format.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 # set variables
 instanceid='i-xxxxxxxxxxxxxxxx'
 region='us-east-1'
@@ -76,15 +75,11 @@ while read -r id; do
   --output text \
   --query 'SecurityGroups[].IpPermissionsEgress[].[FromPort,ToPort,IpProtocol,IpRanges[].CidrIp[]|[0]]' &gt;&gt; $output
 done 
+</code></pre></div></div>
 
+<p>Here’s a sample output.</p>
 
-
-&lt;p&gt;Here's a sample output.&lt;/p&gt;
-
-
-
-&lt;pre lang="bash"&gt;
-============================================
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>============================================
 sg-xxxxxxxxxxxxxxx
 ============================================
 ---------------- INGRESS -------------------
@@ -96,7 +91,6 @@ sg-xxxxxxxxxxxxxxx
 3389    3389    tcp     10.0.0.96/32
 9389    9389    tcp     10.0.0.0/8
 5985    5986    tcp     10.0.0.96/32
-
 </code></pre></div></div>
 
       </div>

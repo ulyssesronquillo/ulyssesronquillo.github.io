@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Here’s how to copy an AMI to another region.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws ec2 copy-image \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 copy-image \
   --source-image-id ami-xxxxxxxxxxx \
   --source-region us-east-1 \
   --region us-east-2 \
@@ -50,8 +49,7 @@ aws ec2 copy-image \
 
 <p>Output:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "ImageId": "ami-xxxxxxxxxxx"
 }
 </code></pre></div></div>

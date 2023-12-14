@@ -40,12 +40,12 @@
       <div class="wrapper">
         <p>Here’s how to set the instance scope in GCP. Stop the server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances stop server-name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances stop server-name
 </code></pre></div></div>
 
 <p>Default scopes.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud beta compute instances set-scopes server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta compute instances set-scopes server-name \
 --service-account=your-service-account@gserviceaccount.com \
 --scopes=default \
 --project your-project-id \
@@ -54,7 +54,7 @@
 
 <p>Change scopes by adding storage-rw to default.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud alpha compute instances set-scopes servername \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud alpha compute instances set-scopes servername \
 --service-account=your-service-account@gserviceaccount.com \
 --scopes=default,storage-rw \
 --project your-project-id \
@@ -63,7 +63,7 @@
 
 <p>Start the server.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute instances start server-name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances start server-name
 </code></pre></div></div>
 
 <p>Possible scope values.</p>

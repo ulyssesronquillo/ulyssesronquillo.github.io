@@ -42,16 +42,14 @@
 
 <p>For all load balancers except target pool.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute backend-services get-health BACKEND_SERVICE_NAME \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute backend-services get-health BACKEND_SERVICE_NAME \
 --region us-central1 \
 --project project-id
 </code></pre></div></div>
 
 <p>For target pool load balancers, use this command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute target-pools get-health TARGET_POOL_NAME \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute target-pools get-health TARGET_POOL_NAME \
 --region us-central1 \
 --project project-id
 </code></pre></div></div>

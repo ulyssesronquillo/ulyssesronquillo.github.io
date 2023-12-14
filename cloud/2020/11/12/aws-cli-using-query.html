@@ -42,15 +42,13 @@
 
 <p>Here are the previous commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-/usr/bin/aws lightsail get-instance-snapshots --region us-east-1 --profile default &gt; $snaps
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/aws lightsail get-instance-snapshots --region us-east-1 --profile default &gt; $snaps
 cat $snaps | jq -r '.instanceSnapshots[] | .name' &gt; $names
 </code></pre></div></div>
 
 <p>Using query.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws lightsail get-instance-snapshots \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws lightsail get-instance-snapshots \
 --query 'instanceSnapshots[*].[name]' \
 --region us-east-1 \
 --profile default \

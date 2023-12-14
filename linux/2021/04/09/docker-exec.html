@@ -40,20 +40,17 @@
       <div class="wrapper">
         <p>If you want to SSH to a Docker container, use the Docker exec command.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-docker exec -it container_name bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it container_name bash
 </code></pre></div></div>
 
 <p>I’m using a Git Bash terminal, so I have to prefix the docker command with winpty.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-winpty docker exec -it container_name bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>winpty docker exec -it container_name bash
 </code></pre></div></div>
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-root@681bbe3f65f1:/var/www/html#
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@681bbe3f65f1:/var/www/html#
 </code></pre></div></div>
 
 <p>Ctrl-D to exit.</p>

@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>How to create AWS security groups using Terraform.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-resource "aws_security_group" "my-security-group" {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resource "aws_security_group" "my-security-group" {
   name        = "my-security-group"
   description = "allow ports"
   vpc_id      = aws_vpc.my-vpc.id

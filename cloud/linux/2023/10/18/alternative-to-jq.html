@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>If you don’t have JQ (JSON Parser) installed, you can use a combination of echo, grep and sed to pull out the data.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# create new credentials
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># create new credentials
 new_access_keys_json=$(aws iam create-access-key --user-name $user --profile $profile)
 new_access_key_id=$(echo "$new_access_keys_json" | grep -o '"AccessKeyId": "[^"]*' | sed 's/"AccessKeyId": "//')
 new_access_secret_key=$(echo "$new_access_keys_json" | grep -o '"SecretAccessKey": "[^"]*' | sed 's/"SecretAccessKey": "//')

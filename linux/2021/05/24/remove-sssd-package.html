@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>How to remove SSSD package.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 service sssd stop
 chkconfig sssd off
 rm -rf /var/lib/sss/db/*

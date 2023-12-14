@@ -42,8 +42,7 @@
 
 <p>Add these line in /etc/unbound/unbound.conf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-chroot: ""
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chroot: ""
 logfile: /var/log/unbound.log
 verbosity: 4
 log-queries: yes
@@ -51,27 +50,23 @@ log-queries: yes
 
 <p>Create the log file and set permissions.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-touch /var/log/unbound.log
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch /var/log/unbound.log
 chown unbound:unbound /var/log/unbound.log
 </code></pre></div></div>
 
 <p>Restart the unbound service.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-systemctl restart unbound
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl restart unbound
 </code></pre></div></div>
 
 <p>Check status.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-systemctl status unbound
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl status unbound
 </code></pre></div></div>
 
 <p>Finally, check the logs.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-tail -f /var/log/unbound.log
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tail -f /var/log/unbound.log
 </code></pre></div></div>
 
       </div>

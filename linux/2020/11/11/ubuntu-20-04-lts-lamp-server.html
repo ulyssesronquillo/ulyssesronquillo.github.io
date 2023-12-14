@@ -42,14 +42,14 @@
 
 <p>Install Apache.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;apt install apache2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install apache2
 systemctl status apache2
 systemctl is-enabled apache2
 </code></pre></div></div>
 
 <p>Install MariaDB.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;apt install mariadb-server mariadb-client
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install mariadb-server mariadb-client
 systemctl status mariadb
 systemctl is-enabled mariadb
 mysql_secure_installation
@@ -57,13 +57,13 @@ mysql_secure_installation
 
 <p>Install PHP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;apt install php libapache2-mod-php php-mysql
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install php libapache2-mod-php php-mysql
 systemctl restart apache2
 </code></pre></div></div>
 
 <p>Enable ssl and mod_rewrite.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;a2enmod ssl
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a2enmod ssl
 a2enmod rewrite
 systemctl restart apache2
 </code></pre></div></div>

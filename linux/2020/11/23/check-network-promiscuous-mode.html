@@ -42,8 +42,7 @@
 
 <p>Here’s the default mode.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo ip link show eth0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ip link show eth0
 2: eth0: &lt;broadcast&gt; mtu 1460 qdisc mq state UP mode DEFAULT group default qlen 1000
 link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff
 &lt;/broadcast&gt;
@@ -51,8 +50,7 @@ link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff
 
 <p>Here’s promiscuous mode. Look for PROMISC.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo ip link show eth0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ip link show eth0
 2: eth0: &lt;broadcast&gt; mtu 1460 qdisc mq state UP mode DEFAULT group default qlen 1000
 link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff
 &lt;/broadcast&gt;
@@ -60,8 +58,7 @@ link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff
 
 <p>The other command is netstat. Look for P flag.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-netstat -i
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>netstat -i
 Kernel Interface table
 Iface             MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
 eth0             1460 21895816      0      0 0      22645756      0      0      0 BMPRU
@@ -70,15 +67,13 @@ lo              65536    44129      0      0 0         44129      0      0      
 
 <p>Finally, if you want to enable promiscuous mode, run one of these commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo ip link set eth0 promisc on
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ip link set eth0 promisc on
 ifconfig eth0 promisc
 </code></pre></div></div>
 
 <p>To disable, use ifconfig.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ifconfig eth0 -promisc
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ifconfig eth0 -promisc
 </code></pre></div></div>
 
       </div>

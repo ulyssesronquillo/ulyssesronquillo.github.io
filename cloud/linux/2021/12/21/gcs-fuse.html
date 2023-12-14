@@ -42,49 +42,56 @@
 
 <p>Setup repo</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo tee /etc/yum.repos.d/gcsfuse.repo &gt; /dev/null 
-&lt;p&gt;Yum install&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-sudo yum install gcsfuse
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo tee /etc/yum.repos.d/gcsfuse.repo &gt; /dev/null 
+</code></pre></div></div>
 
-&lt;p&gt;For Ubuntu or Linux Mint, download the deb package.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-curl -L -O https://github.com/GoogleCloudPlatform/gcsfuse/releases/download/v0.39.2/gcsfuse_0.39.2_amd64.deb
+<p>Yum install</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install gcsfuse
+</code></pre></div></div>
+
+<p>For Ubuntu or Linux Mint, download the deb package.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -L -O https://github.com/GoogleCloudPlatform/gcsfuse/releases/download/v0.39.2/gcsfuse_0.39.2_amd64.deb
 sudo dpkg --install gcsfuse_0.39.2_amd64.deb
 rm gcsfuse_0.39.2_amd64.deb
+</code></pre></div></div>
 
-&lt;p&gt;Check if installed.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-gcsfuse -v
+<p>Check if installed.</p>
 
-&lt;p&gt;Login.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-gcloud auth login
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcsfuse -v
+</code></pre></div></div>
+
+<p>Login.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud auth login
 gcloud auth application-default login
+</code></pre></div></div>
 
-&lt;p&gt;Setup mount.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-mkdir -p /path/to/mount
+<p>Setup mount.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p /path/to/mount
 chown username:username /path/to/mount
+</code></pre></div></div>
 
-&lt;p&gt;Mount it.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-gcsfuse my-bucket /path/to/mount
+<p>Mount it.</p>
 
-&lt;p&gt;Alternative using service account key.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-gcsfuse my-bucket /path/to/mount --key-file /root/key.json --uid=xxx --gid=xxx -o rw,allow_other 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcsfuse my-bucket /path/to/mount
+</code></pre></div></div>
 
-&lt;p&gt;Automatic mount in /etc/fstab.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-my-bucket /path/to/mount gcsfuse _netdev,allow_other,user,rw,uid=1000,gid=1000 0 0
+<p>Alternative using service account key.</p>
 
-&lt;p&gt;Unmount&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-fusermount -u /path/to/mount
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcsfuse my-bucket /path/to/mount --key-file /root/key.json --uid=xxx --gid=xxx -o rw,allow_other 
+</code></pre></div></div>
 
-"&gt;
+<p>Automatic mount in /etc/fstab.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my-bucket /path/to/mount gcsfuse _netdev,allow_other,user,rw,uid=1000,gid=1000 0 0
+</code></pre></div></div>
+
+<p>Unmount</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fusermount -u /path/to/mount
 </code></pre></div></div>
 
       </div>

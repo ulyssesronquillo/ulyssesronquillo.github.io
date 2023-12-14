@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>If you have trouble logging in (SSH) to your GCP instance, you may have to enable OS Login.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute instances add-metadata server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-metadata server-name \
 --metadata enable-oslogin=TRUE \
 --zone us-central1-c \
 --project project-id

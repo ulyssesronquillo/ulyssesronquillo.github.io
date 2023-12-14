@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>I’ve been wanting to look at Wowza logs for a very long time. I just spent a couple of hours writing a Bash script that generates a stats report. It parses the Wowza log file for the IP addresses, and runs them and against a site called ipinfo.io to get the viewer’s geo location. The output is filtered, sorted, takes a count, and finally generates a webpage. Here’s the Bash script.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;# Can be placed in cron to run.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Can be placed in cron to run.
 create-wowza-report.sh wowzastreamingengine_access.log
 </code></pre></div></div>
 
@@ -82,14 +82,11 @@ cat output4.txt | sort &gt; output5.txt
 # get a count of connections
 count=$(wc -l  $filename.php
 
-
 &lt;title&gt;Wowza Streaming Stats on $date&lt;/title&gt;
-
 
 &lt;h1&gt;Live Streaming Stats&lt;/h1&gt;
 &lt;p&gt;Number of connections on $date: $count&lt;/p&gt;
 &lt;?php include('$filename.txt');??&gt;
-
 
 EOF
 

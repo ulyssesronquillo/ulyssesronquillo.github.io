@@ -40,14 +40,13 @@
       <div class="wrapper">
         <p>Check if package is on the system.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;rpm -q httpd
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -q httpd
 httpd-2.4.6-97.el7.centos.x86_64
 </code></pre></div></div>
 
 <p>Check the history logs.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-yum history list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum history list
 Loaded plugins: fastestmirror
 ID     | Login user               | Date and time    | Action(s)      | Altered
 -------------------------------------------------------------------------------
@@ -60,7 +59,7 @@ ID     | Login user               | Date and time    | Action(s)      | Altered
 
 <p>Check detail transaction id.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;yum history info 114 | grep python 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum history info 114 | grep python 
     Updated python-perf-3.10.0-1160.6.1.el7.x86_64          @updates
     Updated python-sss-1.16.5-10.el7_9.5.x86_64             @your-repo
     Updated python-sssdconfig-1.16.5-10.el7_9.5.noarch      @your-repo

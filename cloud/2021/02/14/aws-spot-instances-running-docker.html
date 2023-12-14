@@ -42,8 +42,7 @@
 
 <p>Here’s my Terraform script.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-terraform {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -64,40 +63,24 @@ resource "aws_spot_instance_request" "docker" {
   security_groups               = ["sg-xxxxxxxxxxxxxxxxxx"]
   associate_public_ip_address   = "true"
   user_data = 
-
-
-
-&lt;p&gt;I use "aws_ec2_tag" resource to tag the instance properly.&lt;/p&gt;
-
-
-
-&lt;p&gt;In addition, I use user_data to run a script, to set the hostname. &lt;/p&gt;
-
-
-
-&lt;p&gt;To launch via Terraform, I run the following commands.&lt;/p&gt;
-
-
-
-&lt;pre lang="bash"&gt;
-terraform init
-terraform apply
-
-
-
-
-&lt;p&gt;When done, I could stop the instance to stop incurring charges. Or just simply destroy it via Terraform.&lt;/p&gt;
-
-
-
-&lt;pre lang="bash"&gt;
-terraform destroy
-
-
-
-
-&lt;p&gt;It's not bad deal for an instance that costs only $0.0031 per hour.&lt;/p&gt;
 </code></pre></div></div>
+
+<p>I use “aws_ec2_tag” resource to tag the instance properly.</p>
+
+<p>In addition, I use user_data to run a script, to set the hostname.</p>
+
+<p>To launch via Terraform, I run the following commands.&lt;/p&gt;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform init
+terraform apply
+</code></pre></div></div>
+
+<p>When done, I could stop the instance to stop incurring charges. Or just simply destroy it via Terraform.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform destroy
+</code></pre></div></div>
+
+<p>It’s not bad deal for an instance that costs only $0.0031 per hour.</p>
 
       </div>
     </main><footer class="site-footer h-card">

@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>I’ve customized my breadcrumbs. Add code to functions.php.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;add_filter('genesis_breadcrumb_args', 'customize_breadcrumbs');
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add_filter('genesis_breadcrumb_args', 'customize_breadcrumbs');
 function customize_breadcrumbs($args) {
     $args['labels']['prefix'] = 'Home';
     $args['home'] = '';

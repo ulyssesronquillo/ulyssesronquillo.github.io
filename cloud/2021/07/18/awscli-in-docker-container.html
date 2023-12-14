@@ -44,20 +44,17 @@
 
 <p>Your current credentials in ~/.aws will be used.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli:latest
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli:latest
 </code></pre></div></div>
 
 <p>Create an alias for convenience.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-alias aws='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias aws='docker run --rm -ti -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
 </code></pre></div></div>
 
 <p>You can now run any aws cli after.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws --version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws --version
 aws-cli/2.2.20 Python/3.8.8 Linux/5.4.0-66-generic docker/x86_64.amzn.2 prompt/off
 </code></pre></div></div>
 

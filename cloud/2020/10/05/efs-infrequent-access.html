@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Just like in S3, you can have to up to 92% in savings if you use Infrequent Access or IA with AWS EFS (Elastic File Storage). You can create a lifecycle policy to move data from standard storage to infrequent access. Files that are not being used after x number of days are then moved to Infrequent Access. The downside is, the data in IA do not count towards gaining burst credits. You will need to keep a certain amount of standard storage to prevent depleting your burst credits.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws efs put-lifecycle-configuration \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws efs put-lifecycle-configuration \
 --file-system-id fs-xxxxxxxx \
 --lifecycle-policies TransitionToIA=AFTER_30_DAYS \
 --region us-east-1

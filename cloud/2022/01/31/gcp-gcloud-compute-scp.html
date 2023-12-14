@@ -42,14 +42,12 @@
 
 <p>Make sure you are authenticated.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud auth login
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud auth login
 </code></pre></div></div>
 
 <p>How to download.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute scp --recurse your-server:/home/username/yaml.tar.gz . \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute scp --recurse your-server:/home/username/yaml.tar.gz . \
 --project your-project-id \
 --zone us-central1-a \
 --internal-ip
@@ -57,8 +55,7 @@ gcloud compute scp --recurse your-server:/home/username/yaml.tar.gz . \
 
 <p>How to upload.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute scp --recurse yaml.tar.gz your-server:/home/username/ \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute scp --recurse yaml.tar.gz your-server:/home/username/ \
 --project your-project-id \
 --zone us-central1-a \
 --internal-ip

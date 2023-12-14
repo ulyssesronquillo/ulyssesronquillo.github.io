@@ -42,14 +42,12 @@
 
 <p>Stop the instance first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws ec2 stop-instances --instance-ids i-1234567890abcdef0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 stop-instances --instance-ids i-1234567890abcdef0
 </code></pre></div></div>
 
 <p>Create an AMI image.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws ec2 create-image \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 create-image \
 --instance-id i-1234567890abcdef0 \
 --name "my-ami" \
 --description "my-ami"
@@ -57,8 +55,7 @@ aws ec2 create-image \
 
 <p>Create EC2 instance using Terraform. The contents of main.tf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-terraform {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -86,8 +83,7 @@ resource "aws_instance" "ulysses" {
 
 <p>Launch it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-terraform init
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform init
 terraform plan
 terraform apply
 </code></pre></div></div>

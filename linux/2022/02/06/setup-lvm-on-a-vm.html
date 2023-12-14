@@ -42,14 +42,12 @@
 
 <p>Install LVM.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-yum install lvm2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install lvm2
 </code></pre></div></div>
 
 <p>Check the disks available. We are going to run LVM on /dev/sdb.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ lsblk
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lsblk
 NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda      8:0    0   20G  0 disk 
 ├─sda1   8:1    0  200M  0 part /boot/efi
@@ -59,30 +57,34 @@ sdb      8:16   0   20G  0 disk
 
 <p>Create a physical volume on /dev/sdb.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ pvcreate /dev/sdb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pvcreate /dev/sdb
   Physical volume "/dev/sdb" successfully created.
 $ pvs
   PV         VG Fmt  Attr PSize   PFree
   /dev/sdb   vg lvm2 a--  
-&lt;p&gt;Create a volume group called vg.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ vgcreate vg /dev/sdb
+</code></pre></div></div>
+
+<p>Create a volume group called vg.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vgcreate vg /dev/sdb
   Volume group "vg" successfully created
 $ vgs
   VG #PV #LV #SN Attr   VSize   VFree  
   vg   1   0   0 wz--n- 
-&lt;p&gt;Create a 10GB logical volume group called data.&lt;/p&gt;
-&lt;pre lang="bash"&gt;  
-$ lvcreate -L 10G -n data vg
+</code></pre></div></div>
+
+<p>Create a 10GB logical volume group called data.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lvcreate -L 10G -n data vg
   Logical volume "data" created.
 $ lvs
   LV   VG Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   data vg -wi-a----- 10.00g
+</code></pre></div></div>
 
-&lt;p&gt;Format the volume group and mount it.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ mkfs.xfs /dev/vg/data
+<p>Format the volume group and mount it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkfs.xfs /dev/vg/data
 meta-data=/dev/vg/data           isize=512    agcount=4, agsize=655360 blks
          =                       sectsz=4096  attr=2, projid32bit=1
          =                       crc=1        finobt=1, sparse=1, rmapbt=0
@@ -95,10 +97,11 @@ log      =internal log           bsize=4096   blocks=2560, version=2
 realtime =none                   extsz=4096   blocks=0, rtextents=0
 Discarding blocks...Done.
 $ mount /dev/vg/data /mnt
+</code></pre></div></div>
 
-&lt;p&gt;Check your logical volume. It says 10GB.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ df -Th
+<p>Check your logical volume. It says 10GB.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ df -Th
 Filesystem          Type      Size  Used Avail Use% Mounted on
 devtmpfs            devtmpfs  385M     0  385M   0% /dev
 tmpfs               tmpfs     403M     0  403M   0% /dev/shm
@@ -108,14 +111,17 @@ tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
 /dev/sda1           vfat      200M  5.8M  195M   3% /boot/efi
 tmpfs               tmpfs      81M     0   81M   0% /run/user/1000
 /dev/mapper/vg-data xfs        10G  104M  9.9G   2% /mnt
+</code></pre></div></div>
 
-&lt;p&gt;Let's now extend the logical volume to 20GB.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ lvextend -l +100%FREE /dev/vg/data
+<p>Let’s now extend the logical volume to 20GB.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lvextend -l +100%FREE /dev/vg/data
   Size of logical volume vg/data changed from 10.00 GiB (2560 extents) to 
-&lt;p&gt;Although lsblk says 20GB, our logical volume still says 10GB. &lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ lsblk
+</code></pre></div></div>
+
+<p>Although lsblk says 20GB, our logical volume still says 10GB</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lsblk
 NAME      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda         8:0    0   20G  0 disk 
 ├─sda1      8:1    0  200M  0 part /boot/efi
@@ -132,10 +138,11 @@ tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
 /dev/sda1           vfat      200M  5.8M  195M   3% /boot/efi
 tmpfs               tmpfs      81M     0   81M   0% /run/user/1000
 /dev/mapper/vg-data xfs        10G  104M  9.9G   2% /mnt
+</code></pre></div></div>
 
-&lt;p&gt;We need to grow the file system.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ xfs_growfs /dev/vg/data
+<p>We need to grow the file system.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xfs_growfs /dev/vg/data
 meta-data=/dev/mapper/vg-data    isize=512    agcount=4, agsize=655360 blks
          =                       sectsz=4096  attr=2, projid32bit=1
          =                       crc=1        finobt=1, sparse=1, rmapbt=0
@@ -147,10 +154,11 @@ log      =internal log           bsize=4096   blocks=2560, version=2
          =                       sectsz=4096  sunit=1 blks, lazy-count=1
 realtime =none                   extsz=4096   blocks=0, rtextents=0
 data blocks changed from 2621440 to 5241856
+</code></pre></div></div>
 
-&lt;p&gt;Let's check again.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ df -Th
+<p>Let’s check again.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ df -Th
 Filesystem          Type      Size  Used Avail Use% Mounted on
 devtmpfs            devtmpfs  385M     0  385M   0% /dev
 tmpfs               tmpfs     403M     0  403M   0% /dev/shm
@@ -160,9 +168,9 @@ tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
 /dev/sda1           vfat      200M  5.8M  195M   3% /boot/efi
 tmpfs               tmpfs      81M     0   81M   0% /run/user/1000
 /dev/mapper/vg-data xfs        20G  176M   20G   1% /mnt
-
-&lt;p&gt;It now says 20GB.&lt;/p&gt;
 </code></pre></div></div>
+
+<p>It now says 20GB.</p>
 
       </div>
     </main><footer class="site-footer h-card">

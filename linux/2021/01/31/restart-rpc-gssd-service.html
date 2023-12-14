@@ -42,8 +42,7 @@
 
 <p>Here’s an example of a key expire error due to a NFS client not authenticated properly.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-df -h
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -h
 df: '/data/dir1': Key has expired
 df: '/data/dir2': Key has expired
 df: '/data/dir3': Key has expired
@@ -51,14 +50,12 @@ df: '/data/dir3': Key has expired
 
 <p>Check if RPC GSSD service is healthy. Restart the service if there are credential errors.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-service rpc-gssd status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service rpc-gssd status
 </code></pre></div></div>
 
 <p>Here’s one with an authentication issue.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-[root@server ~]# service rpc-gssd status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@server ~]# service rpc-gssd status
 Redirecting to /bin/systemctl status rpc-gssd.service
 ● rpc-gssd.service - RPC security service for NFS client and server
    Loaded: loaded (/usr/lib/systemd/system/rpc-gssd.service; static; vendor preset: disabled)
@@ -76,15 +73,13 @@ Jan 31 03:17:10 server.domain.com rpc.gssd[710]: ERROR: No credentials found for
 
 <p>Restart the service.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-service rpc-gssd stop
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service rpc-gssd stop
 service rpc-gssd start
 </code></pre></div></div>
 
 <p>Here’s a service that’s healthy.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-[root@server ~]# service rpc-gssd status
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[root@server ~]# service rpc-gssd status
 Redirecting to /bin/systemctl status rpc-gssd.service
 ● rpc-gssd.service - RPC security service for NFS client and server
    Loaded: loaded (/usr/lib/systemd/system/rpc-gssd.service; static; vendor preset: disabled)

@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Here’s a Terraform script for launching an instance in Google Cloud Platform.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-provider "google" {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>provider "google" {
   project = "project-id"
   region  = "us-central1"
   zone    = "us-central1-a"
@@ -74,8 +73,7 @@ resource "google_compute_instance" "wiki" {
 
 <p>Here’s a few Terraform commands.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-terraform init
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform init
 terraform plan
 terraform apply
 terraform destroy

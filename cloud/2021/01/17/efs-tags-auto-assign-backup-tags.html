@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>Here’s a script that scans all EFS systems in several AWS accounts and regions and randomly assigns backup tags to EFS systems that are missing backup tags. This is assuming EFS is using AWS Backup service using tags to apply backup policies. If there are no backup tags, an EFS gets assigned a randomly picked backup policy.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 # log file
 output="test.log"
 tmpfil="temp.txt"
@@ -83,11 +82,7 @@ for i in "${account[@]}"; do
       else
         echo "No backup tag changes applied to $id." &gt;&gt; $output
       fi
-    done 
-
-
-
-&lt;p&gt;&lt;/p&gt;
+    done
 </code></pre></div></div>
 
       </div>

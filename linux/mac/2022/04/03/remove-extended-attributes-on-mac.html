@@ -42,21 +42,18 @@
 
 <p>Example.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ls -l
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -l
 -rwxr-xr-x@  4 username  staff   128 Mar 24 10:51 sample.txt
 </code></pre></div></div>
 
 <p>Remove extended attributes.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-xattr -c sample.txt
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xattr -c sample.txt
 </code></pre></div></div>
 
 <p>Result</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ls -l
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -l
 -rwxr-xr-x  4 username  staff   128 Mar 24 10:51 sample.txt
 </code></pre></div></div>
 

@@ -42,7 +42,7 @@
 
 <p>Here’s a query containing “?!contains().”</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 describe-instances \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 describe-instances \
 --query 'Reservations[*].Instances[?!contains(State.Name, `terminated`)].{Instance:InstanceId}'
 --output text
 </code></pre></div></div>

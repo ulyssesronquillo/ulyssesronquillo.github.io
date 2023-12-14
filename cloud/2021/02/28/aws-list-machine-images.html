@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>Here’s how to list AWS AMI (machine images) owned by yourself.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;aws ec2 describe-images \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 describe-images \
 --query "Images[*].[Name,PlatformDetails]" \
 --owners self \
 --profile default \
@@ -50,8 +50,7 @@
 
 <p>Output:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-icecast-0.1     Linux/UNIX
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>icecast-0.1     Linux/UNIX
 jekyll-0.3      Linux/UNIX
 docker-0.1      Linux/UNIX
 </code></pre></div></div>

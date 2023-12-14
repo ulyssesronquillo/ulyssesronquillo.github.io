@@ -42,8 +42,7 @@
 
 <p>Import SSL certificate</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws acm import-certificate \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws acm import-certificate \
 --certificate fileb://example.crt \
 --private-key fileb://example.key \
 --certificate-chain fileb://example-bundle.crt \
@@ -53,8 +52,7 @@ aws acm import-certificate \
 
 <p>Add SSL to a listener.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws elbv2 add-listener-certificates \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws elbv2 add-listener-certificates \
 --listener-arn arn:aws:elasticloadbalancing:us-east-1:xxxxxxxxxxxxx:listener/app/elbname/xxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx \
 --certificates CertificateArn=arn:aws:acm:us-east-1:xxxxxxxxxxxx:certificate/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx \
 --profile default
@@ -62,8 +60,7 @@ aws elbv2 add-listener-certificates \
 
 <p>Modify listener. Set SSL certificate as default.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws elbv2 modify-listener \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws elbv2 modify-listener \
 --listener-arn arn:aws:elasticloadbalancing:us-east-1:xxxxxxxxxxxxx:listener/app/elbname/xxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx \
 --certificates CertificateArn=arn:aws:acm:us-east-1:xxxxxxxxxxxx:certificate/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx \
 --profile default
@@ -71,8 +68,7 @@ aws elbv2 modify-listener \
 
 <p>Remove SSL from a listener.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws elbv2 remove-listener-certificates \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws elbv2 remove-listener-certificates \
 --listener-arn arn:aws:elasticloadbalancing:us-east-1:xxxxxxxxxxxxx:listener/app/elbname/xxxxxxxxxxxxxxxx/xxxxxxxxxxxxxxxx \
 --certificates CertificateArn=arn:aws:acm:us-east-1:xxxxxxxxxxxx:certificate/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx \
 --profile default

@@ -42,47 +42,52 @@
 
 <p>Extend the physical drive.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute disks resize data-drive --size=40GB
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks resize data-drive --size=40GB
 </code></pre></div></div>
 
 <p>SSH to a server and extend the physical volume.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ pvresize /dev/sdb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pvresize /dev/sdb
   Physical volume "/dev/sdb" changed
   1 physical volume(s) resized or updated / 0 physical volume(s) not resized
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ pvs
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pvs
   PV         VG Fmt  Attr PSize   PFree 
   /dev/sdb   vg lvm2 a--  
-&lt;pre lang="bash"&gt;
-$ vgs
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vgs
   VG #PV #LV #SN Attr   VSize   VFree 
   vg   1   1   0 wz--n- 
-&lt;pre lang="bash"&gt;
-$ lvs
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lvs
   LV   VG Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   data vg -wi-ao---- 
-&lt;p&gt;Extend the logical volume.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ lvresize -l +100%FREE /dev/vg/data
-  Size of logical volume vg/data changed from 
-&lt;p&gt;Check the volume size.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ lsblk
+</code></pre></div></div>
+
+<p>Extend the logical volume.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lvresize -l +100%FREE /dev/vg/data
+</code></pre></div></div>
+
+<p>Size of logical volume vg/data changed from</p>
+
+<p>Check the volume size.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lsblk
 NAME      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda         8:0    0   20G  0 disk 
 ├─sda1      8:1    0  200M  0 part /boot/efi
 └─sda2      8:2    0 19.8G  0 part /
 sdb         8:16   0   40G  0 disk 
 └─vg-data 253:0    0   40G  0 lvm  /mnt
+</code></pre></div></div>
 
-&lt;p&gt;Still at 30GB.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ df -Th
+<p>Still at 30GB.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ df -Th
 Filesystem          Type      Size  Used Avail Use% Mounted on
 devtmpfs            devtmpfs  385M     0  385M   0% /dev
 tmpfs               tmpfs     403M     0  403M   0% /dev/shm
@@ -92,10 +97,11 @@ tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
 /dev/sda1           vfat      200M  5.8M  195M   3% /boot/efi
 /dev/mapper/vg-data xfs        30G  247M   30G   1% /mnt
 tmpfs               tmpfs      81M     0   81M   0% /run/user/1001
+</code></pre></div></div>
 
-&lt;p&gt;Extend the file system.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ xfs_growfs /dev/vg/data
+<p>Extend the file system.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xfs_growfs /dev/vg/data
 meta-data=/dev/mapper/vg-data    isize=512    agcount=12, agsize=655360 blks
          =                       sectsz=4096  attr=2, projid32bit=1
          =                       crc=1        finobt=1, sparse=1, rmapbt=0
@@ -107,10 +113,11 @@ log      =internal log           bsize=4096   blocks=2560, version=2
          =                       sectsz=4096  sunit=1 blks, lazy-count=1
 realtime =none                   extsz=4096   blocks=0, rtextents=0
 data blocks changed from 7863296 to 10484736
+</code></pre></div></div>
 
-&lt;p&gt;Let's check again.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-$ df -Th
+<p>Let’s check again.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ df -Th
 Filesystem          Type      Size  Used Avail Use% Mounted on
 devtmpfs            devtmpfs  385M     0  385M   0% /dev
 tmpfs               tmpfs     403M     0  403M   0% /dev/shm
@@ -120,9 +127,9 @@ tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
 /dev/sda1           vfat      200M  5.8M  195M   3% /boot/efi
 /dev/mapper/vg-data xfs        40G  319M   40G   1% /mnt
 tmpfs               tmpfs      81M     0   81M   0% /run/user/1001
-
-&lt;p&gt;The logical volume is now at 40GB.&lt;/p&gt;
 </code></pre></div></div>
+
+<p>The logical volume is now at 40GB.</p>
 
       </div>
     </main><footer class="site-footer h-card">

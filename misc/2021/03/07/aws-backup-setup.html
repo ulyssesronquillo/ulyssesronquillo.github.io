@@ -42,8 +42,7 @@
 
 <p>Set up profile, region and Account ID first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 profile="default"
 region="us-east-1"
 id=$(aws sts get-caller-identity --query Account --output text)
@@ -51,8 +50,7 @@ id=$(aws sts get-caller-identity --query Account --output text)
 
 <p>Create a vault.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws backup create-backup-vault \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws backup create-backup-vault \
 --backup-vault-name my-vault \
 --profile $profile \
 --region $region
@@ -60,8 +58,7 @@ aws backup create-backup-vault \
 
 <p>Create a backup plan.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws backup create-backup-plan \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws backup create-backup-plan \
 --backup-plan file://back-plan.json \ 
 --profile $profile \
 --region $region
@@ -69,8 +66,7 @@ aws backup create-backup-plan \
 
 <p>backup-plan.json</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "BackupPlan": {
         "BackupPlanName": "efs-0000",
         "Rules": [
@@ -91,8 +87,7 @@ aws backup create-backup-plan \
 
 <p>Get the backup plan ID.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-planid=$(aws backup list-backup-plans \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planid=$(aws backup list-backup-plans \
   --query "BackupPlansList[?BackupPlanName=='efs-0000'].BackupPlanId" \
   --profile $profile \
   --region $region \
@@ -101,8 +96,7 @@ planid=$(aws backup list-backup-plans \
 
 <p>Create a backup selection.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# Create a backup selection
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Create a backup selection
 aws backup create-backup-selection \
 --backup-plan-id $planid \
 --cli-input-json file://backup-selection.json \
@@ -112,8 +106,7 @@ aws backup create-backup-selection \
 
 <p>backup-selection.json</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "BackupSelection": {
 		"SelectionName": "efs-0000",
         "IamRoleArn": "arn:aws:iam::xxxxxxxxxxxx:role/service-role/AWSBackupDefaultServiceRole",

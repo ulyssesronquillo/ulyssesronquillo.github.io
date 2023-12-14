@@ -40,15 +40,13 @@
       <div class="wrapper">
         <p>The /var/log/audit/audit.log files were not being rotated. The files in the directory grew so large that it created disk space issues on /. Here’s the fix. In the /etc/audit/auditd.conf file, change max_log_file_action from “ignore” to “rotate.” Instead of hundreds of files being kept, it will be rotated up to 5 files.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-max_log_file_action = rotate
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>max_log_file_action = rotate
 num_logs = 5
 </code></pre></div></div>
 
 <p>Restart service to take effect. The old files will be deleted.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-service auditd stop
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service auditd stop
 service auditd start
 service auditd status
 </code></pre></div></div>

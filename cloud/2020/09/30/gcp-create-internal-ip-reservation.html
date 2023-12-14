@@ -40,7 +40,7 @@
       <div class="wrapper">
         <p>Here’s how to create an internal IP reservation in GCP.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute addresses create my-private-ip-reservation \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute addresses create my-private-ip-reservation \
 --addresses 10.128.0.15 \
 --region us-central1 \
 --subnet default \
@@ -49,7 +49,7 @@
 
 <p>To list your reserved IPs.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;gcloud compute addresses list \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute addresses list \
 --project project-id
 </code></pre></div></div>
 

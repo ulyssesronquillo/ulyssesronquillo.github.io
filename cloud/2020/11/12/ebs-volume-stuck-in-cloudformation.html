@@ -40,24 +40,21 @@
       <div class="wrapper">
         <p>When running CloudFormation, all the resources are being created with no problem. However it seems to be getting stuck at creating or mounting a volume. The CloudFormation fails and initiates a rollback. This is the error I am getting.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-Volume attachment between volume-id vol-xxxxxxxx and instance-id i-xxxxxxx at device /dev/xvda is attaching
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Volume attachment between volume-id vol-xxxxxxxx and instance-id i-xxxxxxx at device /dev/xvda is attaching
 </code></pre></div></div>
 
 <p>This turned out to be a conflict on HVM EC2 instances because /dev/sda1 is being remapped to /dev/xvda. My second drive is also mapped to /dev/xvda. The fix was to simply to map it slightly different to avoid mapping conflict.</p>
 
 <p>Here’s the original mapping.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-Boot:   /dev/xvda
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Boot:   /dev/xvda
 Device: /dev/xvda
 Device: /dev/xvdb
 </code></pre></div></div>
 
 <p>Here’s the fix.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-Boot:   /dev/xvda
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Boot:   /dev/xvda
 Device: /dev/xvdb
 Device: /dev/xvdc
 </code></pre></div></div>

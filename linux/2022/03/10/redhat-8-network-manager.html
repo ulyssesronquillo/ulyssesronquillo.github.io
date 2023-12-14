@@ -40,15 +40,13 @@
       <div class="wrapper">
         <p>In Redhat 8, every time you the Network Manager get’s restarted it overwrites /etc/resolv.conf. To prevent that from hapenning, create a new file called /etc/NetworkManager/conf.d/90-dns-none.conf and add the following lines. Restart Network Manager. Your /etc/resolv.conf should be unchanged.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-[main]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[main]
 dns=none
 </code></pre></div></div>
 
 <p>Restart Network Manager</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-$ systemctl reload NetworkManager
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl reload NetworkManager
 </code></pre></div></div>
 
       </div>

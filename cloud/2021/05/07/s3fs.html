@@ -42,40 +42,34 @@
 
 <p>Install s3fs.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-sudo apt install s3fs
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install s3fs
 </code></pre></div></div>
 
 <p>Setup credentials.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-echo ACCESS_KEY_ID:SECRET_ACCESS_KEY &gt; /etc/.passwd-s3fs
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo ACCESS_KEY_ID:SECRET_ACCESS_KEY &gt; /etc/.passwd-s3fs
 chmod 400 ${HOME}/.passwd-s3fs
 </code></pre></div></div>
 
 <p>Setup mount directory.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-mkdir -p /mountpoint
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p /mountpoint
 chown username:username /mountpoint
 </code></pre></div></div>
 
 <p>Mount it.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-s3fs bucketname /mountpoint -o passwd_file=/etc/.passwd-s3fs
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s3fs bucketname /mountpoint -o passwd_file=/etc/.passwd-s3fs
 </code></pre></div></div>
 
 <p>Mount it automatically.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-bucketname /mountpoint fuse.s3fs _netdev,allow_other,passwd_file=/etc/.passwd-s3fs,rw,uid=1000,gid=1000,umask=022 0 0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bucketname /mountpoint fuse.s3fs _netdev,allow_other,passwd_file=/etc/.passwd-s3fs,rw,uid=1000,gid=1000,umask=022 0 0
 </code></pre></div></div>
 
 <p>Alternative.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-s3fs#bucketname /mountpoint fuse _netdev,allow_other,use_cache=/root/cache,uid=1000,gid=1000,umask=022 0 0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s3fs#bucketname /mountpoint fuse _netdev,allow_other,use_cache=/root/cache,uid=1000,gid=1000,umask=022 0 0
 </code></pre></div></div>
 
       </div>

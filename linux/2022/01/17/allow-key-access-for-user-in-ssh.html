@@ -42,24 +42,23 @@
 
 <p>Disable the password authentication for one user in your SSH config. Edit /etc/ssh/sshd_config.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-Match User username
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Match User username
   PasswordAuthentication no
 </code></pre></div></div>
 
 <p>Restart the SSH service.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-service ssh restart
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service ssh restart
 </code></pre></div></div>
 
 <p>Copy user’s public key to the destination server’s authorized file in ~/.ssh/authorized_keys.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-ssh-rsa AAAAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-&lt;p&gt;Back on your client, login via SSH. User will not be prompted for password since public key is already authorized on server.&lt;/p&gt;
-&lt;pre lang="bash"&gt;
-ssh username@server
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-rsa AAAAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+</code></pre></div></div>
+
+<p>Back on your client, login via SSH. User will not be prompted for password since public key is already authorized on server.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh username@server
 
 </code></pre></div></div>
 

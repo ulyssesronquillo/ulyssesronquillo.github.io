@@ -42,21 +42,18 @@
 
 <p>Restore old config.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-cp /etc/sssd/sssd.conf-xxxxxxx /etc/sssd/sssd.conf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp /etc/sssd/sssd.conf-xxxxxxx /etc/sssd/sssd.conf
 cp /etc/krb5.conf-xxxxxxx /etc/krb5.conf
 </code></pre></div></div>
 
 <p>Disable SSSD. Authconfig creates /etc/nswitch.conf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-authconfig --disablesssd --disablesssdauth --updateall
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>authconfig --disablesssd --disablesssdauth --updateall
 </code></pre></div></div>
 
 <p>Start Winbind.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-service winbind start; service smb start; service nmb start
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service winbind start; service smb start; service nmb start
 </code></pre></div></div>
 
       </div>

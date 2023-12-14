@@ -40,20 +40,17 @@
       <div class="wrapper">
         <p>Run Terraform in a Docker container.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-docker run --rm -it --name terraform -v ~/.aws:/root/.aws -v $(pwd):/workspace -w /workspace hashicorp/terraform:latest
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --rm -it --name terraform -v ~/.aws:/root/.aws -v $(pwd):/workspace -w /workspace hashicorp/terraform:latest
 </code></pre></div></div>
 
 <p>Create an alias.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-alias terraform='docker run --rm -it --name terraform -v ~/.aws:/root/.aws -v $(pwd):/workspace -w /workspace hashicorp/terraform:latest'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias terraform='docker run --rm -it --name terraform -v ~/.aws:/root/.aws -v $(pwd):/workspace -w /workspace hashicorp/terraform:latest'
 </code></pre></div></div>
 
 <p>Run the command</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-terraform --version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform --version
 Terraform v1.0.2
 on linux_amd64
 </code></pre></div></div>

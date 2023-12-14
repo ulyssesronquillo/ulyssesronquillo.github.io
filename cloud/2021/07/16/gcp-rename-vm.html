@@ -42,16 +42,14 @@
 
 <p>You must stop instance first.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute instances stop server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances stop server-name \
 --zone us-central1-c \
 --project your-project-id
 </code></pre></div></div>
 
 <p>Rename the instance.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud beta compute instances set-name old-server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta compute instances set-name old-server-name \
 --new-name=new-server-name \
 --zone us-central1-c \
 --project your-project-id
@@ -59,16 +57,14 @@ gcloud beta compute instances set-name old-server-name \
 
 <p>Start the instance.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute instances start server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances start server-name \
 --zone us-central1-c \
 --project your-project-id
 </code></pre></div></div>
 
 <p>Login.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-gcloud compute ssh server-name \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute ssh server-name \
 --zone us-central1-c \
 --project your-project-id \
 --internal-ip &amp;

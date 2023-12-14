@@ -40,8 +40,7 @@
       <div class="wrapper">
         <p>How to lock a package or software in RedHat.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-# For RHEL 5
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># For RHEL 5
 yum install yum-versionlock
 # For RHEL 6 and 7
 yum install yum-plugin-versionlock
@@ -51,14 +50,12 @@ yum install python3-dnf-plugin-versionlock
 
 <p>Locking a package</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-yum versionlock gcc-*
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum versionlock gcc-*
 </code></pre></div></div>
 
 <p>List locked packages</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-yum versionlock list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum versionlock list
 </code></pre></div></div>
 
       </div>

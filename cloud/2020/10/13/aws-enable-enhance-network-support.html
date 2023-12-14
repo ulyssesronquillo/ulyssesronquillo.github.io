@@ -40,14 +40,12 @@
       <div class="wrapper">
         <p>When changing machine types, you may be asked to enable the latest ENA driver for Enhanced Network Support on an Amazon EC2 instance. There are several instructions depending on the Linux OS flavor. Here are the instructions to <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking-ena.html#enhanced-networking-ena-linux">enable</a>. In some cases, you may need to <a href="https://aws.amazon.com/premiumsupport/knowledge-center/install-ena-driver-rhel-ec2/">rebuild the kernel module</a>. To verify that the ena module is installed, use the modinfo command as shown in the following example.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-modinfo ena
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modinfo ena
 </code></pre></div></div>
 
 <p>You also may have to enable the enhanced networking attribute on the instance.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="bash"&gt;
-aws ec2 modify-instance-attribute --instance-id instance_id --ena-support
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws ec2 modify-instance-attribute --instance-id instance_id --ena-support
 </code></pre></div></div>
 
       </div>

@@ -42,14 +42,12 @@
 
 <p>Declare the machine image in terraform.tfvars.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="yaml"&gt;
-image-family = "centos-7"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>image-family = "centos-7"
 </code></pre></div></div>
 
 <p>Declare data type for the machine image in maint.tf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="yaml"&gt;
-data "google_compute_image" "my_image" {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data "google_compute_image" "my_image" {
   family  = var.image-family
   project = "your-project-id"
 }
@@ -57,8 +55,7 @@ data "google_compute_image" "my_image" {
 
 <p>In main.tf use “google_compute_instance” under boot disk section in main.tf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;pre lang="yaml"&gt;
-boot_disk {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>boot_disk {
   initialize_params {
     image = data.google_compute_image.my_image.self_link
   }
