@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "PHP can not run gcloud commands via shell_exec",
+      "url"      : "/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html",
+      "category" : "",
+      "tags"     : "php, shell_exec, permissions, config",
+      "date"     : "2023-12-15 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "Hiding Passwords Using OpenSSL",
       "url"      : "/linux/2023/10/31/hiding-passwords-using-openssl.html",
       "category" : "",

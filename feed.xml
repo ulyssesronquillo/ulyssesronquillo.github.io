@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-15T15:30:50+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Hiding Passwords Using OpenSSL</title><link href="http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl.html" rel="alternate" type="text/html" title="Hiding Passwords Using OpenSSL" /><published>2023-10-31T17:06:54+00:00</published><updated>2023-10-31T17:06:54+00:00</updated><id>http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl.html"><![CDATA[<p>How to hide main password on Linux using OpenSSL.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-15T19:43:17+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">PHP can not run gcloud commands via shell_exec</title><link href="http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html" rel="alternate" type="text/html" title="PHP can not run gcloud commands via shell_exec" /><published>2023-12-15T00:00:00+00:00</published><updated>2023-12-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html"><![CDATA[<p>I ran into an issue with PHP calling gcloud commands via shell_exec. It turned out to be a permission issue.</p>
+
+<p>I ended up giving the apache user access to /usr/share/httpd/.config directory which was missing.</p>
+
+<p>Gcloud SDK needs write access to this directory which was missing and it didn’t have permissions.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /usr/share/httpd/.config
+</code></pre></div></div>
+
+<p>After creating it, I gave it permissions.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chown apache:root /usr/share/httpd/.config
+</code></pre></div></div>
+
+<p>It works.</p>]]></content><author><name>ulysses</name></author><category term="Cloud" /><category term="php" /><category term="shell_exec" /><category term="permissions" /><category term="config" /><summary type="html"><![CDATA[I ran into an issue with PHP calling gcloud commands via shell_exec. It turned out to be a permission issue.]]></summary></entry><entry><title type="html">Hiding Passwords Using OpenSSL</title><link href="http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl.html" rel="alternate" type="text/html" title="Hiding Passwords Using OpenSSL" /><published>2023-10-31T17:06:54+00:00</published><updated>2023-10-31T17:06:54+00:00</updated><id>http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl.html"><![CDATA[<p>How to hide main password on Linux using OpenSSL.</p>
 
 <p>Run this on a web server once.</p>
 
@@ -192,20 +206,4 @@ done
 </code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="csv" /><category term="format" /><category term="gcloud" /><category term="gcp" /><category term="output" /><category term="table" /><summary type="html"><![CDATA[Differences using gcloud table vs CSV format.]]></summary></entry><entry><title type="html">GCP Cloud Shell Format</title><link href="http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format.html" rel="alternate" type="text/html" title="GCP Cloud Shell Format" /><published>2023-09-18T19:53:48+00:00</published><updated>2023-09-18T19:53:48+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format.html"><![CDATA[<p>If you are getting funky formatting in GCP Cloud Shell, run this to set the format.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud config set accessibility/screen_reader False
-</code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="cloud" /><category term="format" /><category term="gcp" /><category term="set" /><category term="shell" /><summary type="html"><![CDATA[If you are getting funky formatting in GCP Cloud Shell, run this to set the format.]]></summary></entry><entry><title type="html">Display Asterisks When Typing Passwords in Bash</title><link href="http://0.0.0.0:4000/linux/2023/09/18/display-asterisks-when-typing-passwords-in-bash.html" rel="alternate" type="text/html" title="Display Asterisks When Typing Passwords in Bash" /><published>2023-09-18T15:56:58+00:00</published><updated>2023-09-18T15:56:58+00:00</updated><id>http://0.0.0.0:4000/linux/2023/09/18/display-asterisks-when-typing-passwords-in-bash</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/09/18/display-asterisks-when-typing-passwords-in-bash.html"><![CDATA[<p>Here’s how to display asterisks when typing passwords in Bash.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
-unset password
-prompt="Enter Password:"
-while IFS= read -p "$prompt" -r -s -n 1 char
-do
-    if [[ $char == $'\0' ]]
-    then
-        break
-    fi
-    prompt='*'
-    password+="$char"
-done
-echo
-echo "Done. Password=$password"
-</code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Linux" /><category term="asterisks" /><category term="bash" /><category term="display" /><category term="password" /><category term="typing" /><summary type="html"><![CDATA[Here’s how to display asterisks when typing passwords in Bash.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="cloud" /><category term="format" /><category term="gcp" /><category term="set" /><category term="shell" /><summary type="html"><![CDATA[If you are getting funky formatting in GCP Cloud Shell, run this to set the format.]]></summary></entry></feed>
