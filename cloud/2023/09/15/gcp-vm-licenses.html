@@ -52,7 +52,8 @@ while read -r project; do
         --project $project \
         --zone $zone \
         --format="table[no-heading](name,zone.basename(),disks[0].licenses[0].basename())" | tee -a $log
-    done 
+    done &lt; instances.list
+done &lt; projectIds.list
 </code></pre></div></div>
 
       </div>
