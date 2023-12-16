@@ -8,8 +8,8 @@
 <meta property="og:title" content="PHP can not run gcloud commands via shell_exec" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I ran into an issue with PHP calling gcloud commands via shell_exec. It turned out to be a permission issue." />
-<meta property="og:description" content="I ran into an issue with PHP calling gcloud commands via shell_exec. It turned out to be a permission issue." />
+<meta name="description" content="I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue." />
+<meta property="og:description" content="I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue." />
 <link rel="canonical" href="http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html" />
 <meta property="og:url" content="http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html" />
 <meta property="og:site_name" content="uly.me" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="PHP can not run gcloud commands via shell_exec" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-15T00:00:00+00:00","datePublished":"2023-12-15T00:00:00+00:00","description":"I ran into an issue with PHP calling gcloud commands via shell_exec. It turned out to be a permission issue.","headline":"PHP can not run gcloud commands via shell_exec","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html"},"url":"http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-15T00:00:00+00:00","datePublished":"2023-12-15T00:00:00+00:00","description":"I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.","headline":"PHP can not run gcloud commands via shell_exec","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html"},"url":"http://0.0.0.0:4000/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -48,11 +48,11 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>I ran into an issue with PHP calling gcloud commands via shell_exec. It turned out to be a permission issue.</p>
+    <p>I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.</p>
 
-<p>I ended up giving the <strong>apache</strong> user access to <strong>/usr/share/httpd/.config</strong> directory which was missing.</p>
+<p>I ended up granting the <strong>apache</strong> user access to <strong>/usr/share/httpd/.config</strong> directory which was missing.</p>
 
-<p>The gcloud SDK needs write access to this directory. I ran the commands below. It worked after.</p>
+<p>Google SDK needs write access to this directory. I ran the commands below and it worked after the changes.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /usr/share/httpd/.config
 chown apache:root /usr/share/httpd/.config
