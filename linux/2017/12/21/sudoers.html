@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>The /etc/sudoers file gives users the ability to run commands that are typically reserved for administrators. The commands require a password or no password, depending on how you set them up in the sudoers file. The sudoers file can’t be edited using any text editor. You have to use visudo.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Sudoers</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-12-21T14:42:59+00:00" itemprop="datePublished">Dec 21, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The /etc/sudoers file gives users the ability to run commands that are typically reserved for administrators. The commands require a password or no password, depending on how you set them up in the sudoers file. The sudoers file can’t be edited using any text editor. You have to use visudo.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ visudo
 </code></pre></div></div>
@@ -56,6 +66,9 @@
 
 <p>Typically you have to add your groups in the sudoers file. Notice the last line. Sudoers will include config files found under the /etc/sudoers.d directory. In certain circumstances, there are others pieces of software such as compliance software CFEngine that writes over changes in the sudoers file. If this is the case, then you have to add your groups in a file inside the /etc/sudoers.d directory.</p>
 
+  </div><a class="u-url" href="/linux/2017/12/21/sudoers.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -65,7 +78,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

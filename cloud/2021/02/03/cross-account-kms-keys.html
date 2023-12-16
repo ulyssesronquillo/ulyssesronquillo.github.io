@@ -38,13 +38,26 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you have multiple AWS accounts, you can setup a customer-managed KMS (key management service) in the AWS Key Management Service, to secure requests or services between the two AWS accounts. The customer-managed KMS key is tied to an identity such as an IAM user or role. In addition to users and roles, other AWS accounts can be added to grant access. KMS can be symmetric or asymmetric. It’s symmetric be default. To grant access to the other account, you need to add the AWS Account Id to the key. It’s 12 digit number unique to each AWS account.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Cross Account KMS keys</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-02-03T02:26:23+00:00" itemprop="datePublished">Feb 3, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you have multiple AWS accounts, you can setup a customer-managed KMS (key management service) in the AWS Key Management Service, to secure requests or services between the two AWS accounts. The customer-managed KMS key is tied to an identity such as an IAM user or role. In addition to users and roles, other AWS accounts can be added to grant access. KMS can be symmetric or asymmetric. It’s symmetric be default. To grant access to the other account, you need to add the AWS Account Id to the key. It’s 12 digit number unique to each AWS account.</p>
 
 <p><img src="https://uly.me/wp-content/uploads/2021/02/kms-accounts.png" alt="" /></p>
 
 <p><img src="https://uly.me/wp-content/uploads/2021/02/kms-accounts.png" alt="" /></p>
 
 <p>Once a key is created, the valid key ID can be used in a AWS SDK to access resources from the other AWS account.</p>
+
+  </div><a class="u-url" href="/cloud/2021/02/03/cross-account-kms-keys.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -55,7 +68,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

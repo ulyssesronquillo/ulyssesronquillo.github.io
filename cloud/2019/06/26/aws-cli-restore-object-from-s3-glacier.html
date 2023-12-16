@@ -38,13 +38,26 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>How to restore an object from Amazon S3 Glacier via the AWS CLI.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AWS CLI Restore Object from S3 Glacier</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-06-26T19:43:46+00:00" itemprop="datePublished">Jun 26, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>How to restore an object from Amazon S3 Glacier via the AWS CLI.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws s3api restore-object \
 --bucket awsexamplebucket \
 --key dir1/example.obj \
 --restore-request '{"Days":25,"GlacierJobParameters":{"Tier":"Standard"}}'
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/cloud/2019/06/26/aws-cli-restore-object-from-s3-glacier.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -55,7 +68,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

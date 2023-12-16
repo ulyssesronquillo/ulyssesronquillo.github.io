@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p><a href="http://kubernetes.io">Kubernetes</a> has documentation on how to deploy <a href="http://wordpress.org">WordPress</a> on its platform. The setup is using Persistent Volumes for both WordPress and MySQL on <a href="https://github.com/kubernetes/minikube">MiniKube</a>. Although the setup is not recommended for a production environment, it is a good start to get yourself familiar with Kubernetes. For production environments, they do recommend running WordPress on a Kubernetes cluster using the <a href="https://github.com/helm/charts/tree/master/stable/wordpress">Helm</a> package manager. Here’s the WordPress-MySQL <a href="https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/">deployment on MiniKube.</a></p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">WordPress on Kubernetes</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-12-28T12:38:36+00:00" itemprop="datePublished">Dec 28, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="http://kubernetes.io">Kubernetes</a> has documentation on how to deploy <a href="http://wordpress.org">WordPress</a> on its platform. The setup is using Persistent Volumes for both WordPress and MySQL on <a href="https://github.com/kubernetes/minikube">MiniKube</a>. Although the setup is not recommended for a production environment, it is a good start to get yourself familiar with Kubernetes. For production environments, they do recommend running WordPress on a Kubernetes cluster using the <a href="https://github.com/helm/charts/tree/master/stable/wordpress">Helm</a> package manager. Here’s the WordPress-MySQL <a href="https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/">deployment on MiniKube.</a></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
 kind: Service
@@ -107,6 +117,9 @@ spec:
           claimName: mysql-pv-claim
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/wp/2018/12/28/wordpress-on-kubernetes.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -116,7 +129,7 @@ spec:
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

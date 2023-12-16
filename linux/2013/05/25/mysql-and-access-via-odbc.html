@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>A client of mine had a request to connect Microsoft Access to MySQL via an ODBC connector. The MySQL ODBC setup is not very common, but is entirely possible. MySQL does provide an ODBC connector for other database clients. The setup is a bit tricky. Unfortunately, there’s not a lot of information and documentation online for this type of setup. After some trial and error, I got it to work.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">MySQL and Access via ODBC</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-05-25T01:26:39+00:00" itemprop="datePublished">May 25, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>A client of mine had a request to connect Microsoft Access to MySQL via an ODBC connector. The MySQL ODBC setup is not very common, but is entirely possible. MySQL does provide an ODBC connector for other database clients. The setup is a bit tricky. Unfortunately, there’s not a lot of information and documentation online for this type of setup. After some trial and error, I got it to work.</p>
 
 <p>First of all, here are some details. The MySQL server runs on Ubuntu 12.04. The ODBC client, MS Access 2010, runs on a Windows 7 machine. Assuming MySQL is already installed, we just need to make sure the MySQL server ODBC library is installed first.</p>
 
@@ -125,6 +135,9 @@ $ telnet 192.168.0.10 3306
 
 <p>You should have connected to the MySQL by now.</p>
 
+  </div><a class="u-url" href="/linux/2013/05/25/mysql-and-access-via-odbc.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -134,7 +147,7 @@ $ telnet 192.168.0.10 3306
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

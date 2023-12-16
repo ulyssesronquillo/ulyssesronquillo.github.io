@@ -38,7 +38,20 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I recently moved my website hosting from Linode to AWS LightSail. Part of the move was working with Route 53 for DNS, as well as setting up my domain’s email, e.g. the MX record. I’m using ProtonMail for email and they require that I add multiple TXT records. Part of the problem is Route 53 will not allow duplicate TXT records. After a few searches, I learned that you can enter in multiple values in the TXT record as long as you place them on multiple lines. That solved the problem for me.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Multiple TXT DNS Records</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-06-10T20:51:05+00:00" itemprop="datePublished">Jun 10, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I recently moved my website hosting from Linode to AWS LightSail. Part of the move was working with Route 53 for DNS, as well as setting up my domain’s email, e.g. the MX record. I’m using ProtonMail for email and they require that I add multiple TXT records. Part of the problem is Route 53 will not allow duplicate TXT records. After a few searches, I learned that you can enter in multiple values in the TXT record as long as you place them on multiple lines. That solved the problem for me.</p>
+
+  </div><a class="u-url" href="/cloud/misc/2018/06/10/multiple-txt-dns-records.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -49,7 +62,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

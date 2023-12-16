@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you need to see Bash history with timestamps, use this command.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Bash History With Timestamps</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-10-31T12:43:20+00:00" itemprop="datePublished">Oct 31, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you need to see Bash history with timestamps, use this command.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HISTTIMEFORMAT="%d/%m/%y %T "
 </code></pre></div></div>
@@ -51,6 +61,9 @@ source ~/.bashrc
 
 <p>Timestamps accuracy is retroactively, meaning it will not be accurate for commands performed prior to the history time format being set.</p>
 
+  </div><a class="u-url" href="/linux/2019/10/31/bash-history-with-timestamps.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -60,7 +73,7 @@ source ~/.bashrc
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

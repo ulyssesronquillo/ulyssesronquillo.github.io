@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I found this little nugget in the <a href="https://codex.wordpress.org/Function_Reference/wp_is_mobile">WordPress Codex</a> called wp_is_mobile(). It will detect the user browser’s agent and will return a true or a false if it’s a mobile device. This is helpful if you would like to customized code specifically for a mobile device. Let’s say you have a media player and you want it to have a specific width for desktops and another width for mobile devices. So, here’s the code to detect if it’s a mobile device.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">WordPress Mobile Detect</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-03-09T18:19:45+00:00" itemprop="datePublished">Mar 9, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I found this little nugget in the <a href="https://codex.wordpress.org/Function_Reference/wp_is_mobile">WordPress Codex</a> called wp_is_mobile(). It will detect the user browser’s agent and will return a true or a false if it’s a mobile device. This is helpful if you would like to customized code specifically for a mobile device. Let’s say you have a media player and you want it to have a specific width for desktops and another width for mobile devices. So, here’s the code to detect if it’s a mobile device.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if ( wp_is_mobile() ) :
   $player_width = '270';
@@ -49,6 +59,9 @@ endif;
 
 <p>You can then use the variable <strong>$player_width</strong> in your media player configuration to set the width of the player. However, if you read the Codex, it says that tablets are considered as mobile devices, which is perfectly fine for my purposes here. It’s ok to use this tiny little function in your WordPress templates, but it’s not recommended for media queries.</p>
 
+  </div><a class="u-url" href="/php/wp/2017/03/09/wordpress-mobile-detect.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -58,7 +71,7 @@ endif;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

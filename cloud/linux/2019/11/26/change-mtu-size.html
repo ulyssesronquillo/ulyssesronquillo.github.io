@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>MTU means maximum transmission unit. The default value is 1500 for Ethernet, which is also the standard for the Internet. If your application or network requires a different MTU size, you can set the MTU size by running the following commands.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Change MTU Size</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-11-26T18:40:25+00:00" itemprop="datePublished">Nov 26, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>MTU means maximum transmission unit. The default value is 1500 for Ethernet, which is also the standard for the Internet. If your application or network requires a different MTU size, you can set the MTU size by running the following commands.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Edit ifcfg-eth0
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
@@ -50,6 +60,9 @@ MTU="1460"
 service network restart
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/linux/2019/11/26/change-mtu-size.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -59,7 +72,7 @@ service network restart
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

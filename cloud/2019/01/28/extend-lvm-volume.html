@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Extending a LVM logical volume can be tricky. Extending a physical volume especially a boot drive is even more challenging. To make things simple, you can just easily add a new physical disk to your physical volume group. Here are the steps:</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Extend LVM volume</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-01-28T20:56:03+00:00" itemprop="datePublished">Jan 28, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Extending a LVM logical volume can be tricky. Extending a physical volume especially a boot drive is even more challenging. To make things simple, you can just easily add a new physical disk to your physical volume group. Here are the steps:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># add disk to your instance. 
 fdisk /dev/sdh
@@ -52,6 +62,9 @@ resize2fs /dev/system/opt
 
 <p>The rest are pretty much self explanatory. It’s about creating a physical volume, extending the volume group, extending the logical volume, and then finally resizing the file system.</p>
 
+  </div><a class="u-url" href="/cloud/2019/01/28/extend-lvm-volume.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -61,7 +74,7 @@ resize2fs /dev/system/opt
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

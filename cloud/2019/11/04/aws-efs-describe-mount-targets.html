@@ -38,13 +38,26 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s how to display mount targets of an EFS system via AWS CLI.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AWS EFS Describe Mount Targets</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-11-04T21:45:32+00:00" itemprop="datePublished">Nov 4, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s how to display mount targets of an EFS system via AWS CLI.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws efs describe-mount-targets \
 --file-system-id fs-xxxxxxxx \
 --profile default \
 --region us-east-1
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/cloud/2019/11/04/aws-efs-describe-mount-targets.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -55,7 +68,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

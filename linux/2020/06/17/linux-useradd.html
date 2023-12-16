@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s the command to add a Linux user.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Linux Useradd</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-06-17T06:49:28+00:00" itemprop="datePublished">Jun 17, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s the command to add a Linux user.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useradd -m -s $(which bash) -G sudo ulysses
 </code></pre></div></div>
 
 <p>-m creates a home directory. -s selects a shell. -G adds user to a sudo group.</p>
+
+  </div><a class="u-url" href="/linux/2020/06/17/linux-useradd.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

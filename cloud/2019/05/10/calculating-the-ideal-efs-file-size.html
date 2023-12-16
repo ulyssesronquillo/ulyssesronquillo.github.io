@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>AWS EFS runs on burst credits when choosing burst mode, which is about 99% of most implementations. The reason for this is that provisioned throughput is very expensive. It’s a $6000 per month commitment. In burst mode, if the EFS volume is too small with heavy IO usage, the burst credits will nose dive. You will eventually run out of burst credits resulting in very poor IO performance. It will be slower than a floppy disk drive. We all know how old that technology is. In order to sustain your burst credits, you’ll need to add data, because more data means you’ll earn burst credits at a higher clip. Here’s how to calculate the ideal file size for an EFS system.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Calculating the Ideal EFS File Size</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-05-10T04:47:41+00:00" itemprop="datePublished">May 10, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>AWS EFS runs on burst credits when choosing burst mode, which is about 99% of most implementations. The reason for this is that provisioned throughput is very expensive. It’s a $6000 per month commitment. In burst mode, if the EFS volume is too small with heavy IO usage, the burst credits will nose dive. You will eventually run out of burst credits resulting in very poor IO performance. It will be slower than a floppy disk drive. We all know how old that technology is. In order to sustain your burst credits, you’ll need to add data, because more data means you’ll earn burst credits at a higher clip. Here’s how to calculate the ideal file size for an EFS system.</p>
 
 <ol>
   <li>Identify your throughput needs by looking at your historical usage. From the Amazon CloudWatch console, check the sum statistic of the TotalIOBytes metric with daily aggregation, for the past 14 days. Identify the day with the largest value for TotalIOBytes.</li>
@@ -54,6 +64,9 @@
 
 <p>You will need about 121 GB of EFS volume size to maintain your burst credits.</p>
 
+  </div><a class="u-url" href="/cloud/2019/05/10/calculating-the-ideal-efs-file-size.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -63,7 +76,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

@@ -38,21 +38,29 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I ran into an issue with PHP calling gcloud commands via shell_exec. It turned out to be a permission issue.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p>I ended up giving the apache user access to /usr/share/httpd/.config directory which was missing.</p>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">PHP can not run gcloud commands via shell_exec</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-12-15T00:00:00+00:00" itemprop="datePublished">Dec 15, 2023
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
 
-<p>Gcloud SDK needs write access to this directory which was missing and it didn’t have permissions.</p>
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I ran into an issue with PHP calling gcloud commands via shell_exec. It turned out to be a permission issue.</p>
+
+<p>I ended up giving the <strong>apache</strong> user access to <strong>/usr/share/httpd/.config</strong> directory which was missing.</p>
+
+<p>The gcloud SDK needs write access to this directory. I ran the commands below. It worked after.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /usr/share/httpd/.config
+chown apache:root /usr/share/httpd/.config
 </code></pre></div></div>
 
-<p>After creating it, I gave it permissions.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chown apache:root /usr/share/httpd/.config
-</code></pre></div></div>
-
-<p>It works.</p>
+  </div><a class="u-url" href="/cloud/2023/12/15/php-cant-run-gcloud-via-shell-exec.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -63,7 +71,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

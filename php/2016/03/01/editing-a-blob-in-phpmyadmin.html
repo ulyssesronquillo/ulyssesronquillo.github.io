@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>One of my projects this week requires editing a blob. A blob is a binary large object used primarily for storing images, audio and other media types in the database. Unfortunately, the application didn’t allow me to edit a blob. So off to the PHPMyAdmin I went. PHPMyAdmin is a MySQL administration tool.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Editing a Blob in PHPMyAdmin</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2016-03-01T19:28:51+00:00" itemprop="datePublished">Mar 1, 2016
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>One of my projects this week requires editing a blob. A blob is a binary large object used primarily for storing images, audio and other media types in the database. Unfortunately, the application didn’t allow me to edit a blob. So off to the PHPMyAdmin I went. PHPMyAdmin is a MySQL administration tool.</p>
 
 <p>By default, the blob entries in PHPMyAdmin can’t be edited. Simple texts in blobs are sometimes scrambled. In order to make changes to the blob entries, we need to reconfigure PHPMyAdmin by editing the configuration file.</p>
 
@@ -56,6 +66,9 @@ $cfg['ShowBlob'] = TRUE;
 
 <p>There is no need to restart any services. Changes are automatically reflected in PHPMyAdmin.</p>
 
+  </div><a class="u-url" href="/php/2016/03/01/editing-a-blob-in-phpmyadmin.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -65,7 +78,7 @@ $cfg['ShowBlob'] = TRUE;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

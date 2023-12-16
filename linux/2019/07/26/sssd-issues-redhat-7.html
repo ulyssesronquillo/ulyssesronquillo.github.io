@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Some cache to clear.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SSSD Issues Redhat 7</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-07-26T02:57:15+00:00" itemprop="datePublished">Jul 26, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Some cache to clear.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service sssd stop
 rm -r /var/lib/sss/db/*
@@ -47,6 +57,9 @@ service sssd start
 </code></pre></div></div>
 
 <p>Rejoin domain. Run sssd script. Restart sssd.</p>
+
+  </div><a class="u-url" href="/linux/2019/07/26/sssd-issues-redhat-7.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -57,7 +70,7 @@ service sssd start
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

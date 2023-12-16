@@ -38,13 +38,26 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I recently started playing around with <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Serverless Jekyll on AWS</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-07-21T14:14:55+00:00" itemprop="datePublished">Jul 21, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I recently started playing around with <a href="https://jekyllrb.com/">Jekyll</a>.</p>
 
 <p>Jekyll is a flat-file CMS that doesn’t need a database. You don’t even need to know HTML to work with it. You just write your content using the Markdown language on any text editor. Once you’re done editing, you run “jekyll build” and Jekyll takes care of the rest. Since Jekyll files are stored on flat-files, you have quite a few choices where to host your website. You can host it on just about any hosting provider. You can have it hosted on <a href="http://github.com">Github</a> for free, or better yet can run it as a serverless website on <a href="https://aws.amazon.com/s3/">Amazon S3</a>. Serverless meaning, it’s not running on a web server since S3 can host static files. In addition, you can take advantage of <a href="https://aws.amazon.com/cloudfront/?nc2=h_m1">Cloudfront</a> for its content distribution to speed up your website, and give it high availability.</p>
 
 <p>So, here’s a <a href="http://ulyssesronquillo.com/">demo</a> of Jekyll running on AWS S3 and Cloudfront.</p>
 
 <p>You can learn more about Jekyll by visiting their <a href="https://jekyllrb.com/">website</a>.</p>
+
+  </div><a class="u-url" href="/cloud/2017/07/21/serverless-jekyll-on-aws.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -55,7 +68,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

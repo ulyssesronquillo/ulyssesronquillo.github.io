@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s a simple way to search for a RDS instance in AWS via CLI.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AWS Search for RDS</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-01-03T14:52:11+00:00" itemprop="datePublished">Jan 3, 2022
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s a simple way to search for a RDS instance in AWS via CLI.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws rds describe-db-instances \
 --db-instance-identifier rds-instance-name \
@@ -47,6 +57,9 @@
 </code></pre></div></div>
 
 <p>You may have to cycle through accounts and regions to find it.</p>
+
+  </div><a class="u-url" href="/cloud/2022/01/03/aws-search-for-rds.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -57,7 +70,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

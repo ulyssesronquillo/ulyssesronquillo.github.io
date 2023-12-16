@@ -38,11 +38,24 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I have a Linux box with a 1TB drive. I divided it into 4 different partitions at 250GB each. It’s currently running Linux Mint, Gitlab, Nextcloud and the Unifi Cloud Controller on each partition. Obviously, I can’t run all 4 partitions at the same time. I have to choose one from a selection in the Grub, a multi-boot loader. It would have been easier to run Virtualbox on just one Linux install, but it’s older CPU. I don’t think it could handle multiple OS running at the same time.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Not Marked For Formatting</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-03-01T22:38:18+00:00" itemprop="datePublished">Mar 1, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I have a Linux box with a 1TB drive. I divided it into 4 different partitions at 250GB each. It’s currently running Linux Mint, Gitlab, Nextcloud and the Unifi Cloud Controller on each partition. Obviously, I can’t run all 4 partitions at the same time. I have to choose one from a selection in the Grub, a multi-boot loader. It would have been easier to run Virtualbox on just one Linux install, but it’s older CPU. I don’t think it could handle multiple OS running at the same time.</p>
 
 <p>Unfortunately, one of the partitions got corrupted. I tried running the utility called badblocks to figure out if there are any bad sectors on the drive that can be marked bad, but the test result turned out to be surprisingly good. There were absolutely no errors and no bad blocks. Next, I tried using the recovery process, but that didn’t work either. It seems the only way to fix the problem was to reinstall Linux. A bummer.</p>
 
 <p>During the install, I ran into the problem with the partition not being properly marked for formatting. It seems the only way to get around that issue was to delete the partition and to repartition it. Nevertheless, it would have been an interesting dilemma if I had any important data on that partition. It’s a good thing that I didn’t. So, if you ever get into a problem where it says “your partition is not marked for formatting”, you may have to go through the process of deleting the partition and then recreating one, in order to proceed with a fresh install.</p>
+
+  </div><a class="u-url" href="/linux/2017/03/01/not-marked-for-formatting.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -53,7 +66,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

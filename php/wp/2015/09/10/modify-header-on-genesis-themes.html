@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>The Genesis theme is a WordPress theme from StudioPress. I recently worked on a project where there was a need to redirect the URL title to another URL. Essentially, there are two separate WordPress installs on the server, one install had WordPress on the root directory, the other on a sub-directory. The URL title of the WordPress on a sub-directory needed to point to the root directory. So, here’s the fix that you need to add in the functions.php for Genesis themes.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Modify Header on Genesis Themes</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-09-10T21:52:10+00:00" itemprop="datePublished">Sep 10, 2015
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The Genesis theme is a WordPress theme from StudioPress. I recently worked on a project where there was a need to redirect the URL title to another URL. Essentially, there are two separate WordPress installs on the server, one install had WordPress on the root directory, the other on a sub-directory. The URL title of the WordPress on a sub-directory needed to point to the root directory. So, here’s the fix that you need to add in the functions.php for Genesis themes.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//* Modify the header URL - HTML5 Version
 add_filter( 'genesis_seo_title', 'child_header_title', 10, 3 );
@@ -50,6 +60,9 @@ function child_header_title( $title, $inside, $wrap ) {
 
 <p>Just add this piece of code to the functions.php file of your Genesis child theme.</p>
 
+  </div><a class="u-url" href="/php/wp/2015/09/10/modify-header-on-genesis-themes.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -59,7 +72,7 @@ function child_header_title( $title, $inside, $wrap ) {
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

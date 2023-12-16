@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>The title of an article is one of the most important factors for SEO. It’s second only to the content itself. The title has to be catchy, concise and relevant to the content. If you look at Google search results, they show roughly 70 characters of the title on the results page. If the title is too long, you’ll see 3 dots or ellipses as they’re appropriately called. There’s really no ideal length for titles, as long as they best describe the content of the page. They can be short or long and must contain certain keywords.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Truncating Page Titles</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-01-29T18:23:16+00:00" itemprop="datePublished">Jan 29, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The title of an article is one of the most important factors for SEO. It’s second only to the content itself. The title has to be catchy, concise and relevant to the content. If you look at Google search results, they show roughly 70 characters of the title on the results page. If the title is too long, you’ll see 3 dots or ellipses as they’re appropriately called. There’s really no ideal length for titles, as long as they best describe the content of the page. They can be short or long and must contain certain keywords.</p>
 
 <p>If the title is too long, it can sometimes wreak havoc to the layout of the theme. There are times that you may have to trim the title so it doesn’t become such an eyesore. If you need to truncate the title, there is a function in PHP called ‘substr’ which returns parts of a string. In WordPress, page titles can be retrieved using a function called the_title(). We can truncate this string, by creating a new function called truncate().</p>
 
@@ -58,6 +68,9 @@ echo truncate($the_title);
 
 <p>In this example above, we created a new function called truncate(). We passed a variable containing the title to the function. Substr will trim the title string starting at location 0, and will preserve it for the next 70 characters. The strlen function counts the string, and adds ellipses at the end if the string is longer than 70 characters. The truncated value is then returned. It can be echoed for display if we want. We can place this new function anywhere in our theme files. We can insert it in the main WordPress loop or on single pages.</p>
 
+  </div><a class="u-url" href="/php/wp/2014/01/29/truncating-page-titles.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -67,7 +80,7 @@ echo truncate($the_title);
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

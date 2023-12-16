@@ -38,13 +38,26 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I’ve been using Mac OS 10.9 Mavericks for a couple of weeks now. So far, so good. No issues whatsoever. There were several updates that followed the OS upgrade. Updates to iTunes, iMovie, iPhoto were the obvious ones, plus a couple of other small applications that were also updated as a result of the OS upgrade.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Xcode Reinstall on Mavericks</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-11-13T09:51:50+00:00" itemprop="datePublished">Nov 13, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I’ve been using Mac OS 10.9 Mavericks for a couple of weeks now. So far, so good. No issues whatsoever. There were several updates that followed the OS upgrade. Updates to iTunes, iMovie, iPhoto were the obvious ones, plus a couple of other small applications that were also updated as a result of the OS upgrade.</p>
 
 <p>I happen to use Git for version control for my software projects. One thing I noticed after upgrading to Mavericks, Git stopped working completely. I tried to do a git pull, and I was met with this error, “xcode-select: note: no developer tools were found at ‘/Applications/Xcode.app’, requesting install. Choose an option in the dialog to download the command line developer tools.”</p>
 
 <p>The cool part about all this is, Mavericks immediately recognized the problem and offered to correct it by asking the user to proceed with Xcode installation. I gladly clicked Update/Install. The update took less than 5 minutes to complete. After the install, I issued git pull command again, and sure enough the my git repository updated nicely.</p>
 
 <p>I’m glad to report that after two weeks running on Mac OS Mavericks, I haven’t had any major problems, except for this relatively minor inconvenience of reinstalling Xcode.</p>
+
+  </div><a class="u-url" href="/git/2013/11/13/xcode-reinstall-on-mavericks.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -55,7 +68,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

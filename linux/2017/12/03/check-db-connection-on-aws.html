@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>When setting up your cloud infrastructure, you can check if your instances have access to the database by performing this command.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Check DB Connection on AWS</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-12-03T22:28:47+00:00" itemprop="datePublished">Dec 3, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>When setting up your cloud infrastructure, you can check if your instances have access to the database by performing this command.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nc -zv 10.0.0.45 3306
 $ nc -zv domain.com 3306
@@ -61,6 +71,9 @@ $ nc -zv endpoint.amazonaws.com 3306
 connection to the host, on port 3306: Connect failed 
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/linux/2017/12/03/check-db-connection-on-aws.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -70,7 +83,7 @@ connection to the host, on port 3306: Connect failed
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

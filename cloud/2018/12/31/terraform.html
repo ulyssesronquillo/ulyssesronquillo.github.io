@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Hashicorp has a product called <a href="https://learn.hashicorp.com/terraform/">Terraform</a>, which is a provisioning tool for the cloud. It works with most major providers like AWS, GCP, Azure and many more. Unlike <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a>, <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/">Resource Manager</a> and <a href="https://cloud.google.com/deployment-manager/docs/">Deployment Manager</a>, Terraform will work with not just its own, but with many cloud providers. Here’s an example of how to provision a single instance to AWS, and assign an elastic IP to it. The cloud resources in the example were redacted. Placeholder values were placed instead for security purposes.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Terraform</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-12-31T02:03:40+00:00" itemprop="datePublished">Dec 31, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Hashicorp has a product called <a href="https://learn.hashicorp.com/terraform/">Terraform</a>, which is a provisioning tool for the cloud. It works with most major providers like AWS, GCP, Azure and many more. Unlike <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a>, <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/">Resource Manager</a> and <a href="https://cloud.google.com/deployment-manager/docs/">Deployment Manager</a>, Terraform will work with not just its own, but with many cloud providers. Here’s an example of how to provision a single instance to AWS, and assign an elastic IP to it. The cloud resources in the example were redacted. Placeholder values were placed instead for security purposes.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>provider "aws" {
 	access_key = "xxxxxxxx"
@@ -74,6 +84,9 @@ resource "aws_eip_association" "server1-eip" {
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform destroy
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/2018/12/31/terraform.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -83,7 +96,7 @@ resource "aws_eip_association" "server1-eip" {
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

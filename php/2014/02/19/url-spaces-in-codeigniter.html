@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I ran into some issues with a piece of code I wrote several years ago in CodeIgniter. I’m using names of people as part of the URL. When someone enters a name with spaces on the database, the spaces are converted to %20 in the resulting URL. The URL doesn’t look pretty and definitely not SEO friendly. It needs to be cleaned up by replacing spaces with either a dash or an underscore.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">URL Spaces in CodeIgniter</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-02-19T21:35:01+00:00" itemprop="datePublished">Feb 19, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I ran into some issues with a piece of code I wrote several years ago in CodeIgniter. I’m using names of people as part of the URL. When someone enters a name with spaces on the database, the spaces are converted to %20 in the resulting URL. The URL doesn’t look pretty and definitely not SEO friendly. It needs to be cleaned up by replacing spaces with either a dash or an underscore.</p>
 
 <p>The other issue is when performing a search, the database doesn’t really know that ‘John Doe’ is essentially the same as ‘John%20Doe.’ So, I ended up using a CodeIgniter function called url_title. The function strips the spaces and replaces it with a dash or a hyphen. In the case of ‘John%20Doe’, it now displays as ‘John-Doe.’ You can also use an underscore. See example below.</p>
 
@@ -64,6 +74,9 @@ $name = str_replace('-', ' ', $url);
 
 <p>If you’re not familiar with CodeIgniter, check how <a href="http://ellislab.com/codeigniter%20/user-guide/general/routing.html">URI routing</a> and <a href="http://ellislab.com/codeigniter%20/user-guide/helpers/url_helper.html">url_title</a> are handled.</p>
 
+  </div><a class="u-url" href="/php/2014/02/19/url-spaces-in-codeigniter.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -73,7 +86,7 @@ $name = str_replace('-', ' ', $url);
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

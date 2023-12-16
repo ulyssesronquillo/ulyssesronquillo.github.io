@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you have video files that are formatted in MPEG-2, video files with a .m2ts extension, you can convert them to MP4 using ffmpeg.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">FFMPEG Convert TS to MP4</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-12-04T12:55:05+00:00" itemprop="datePublished">Dec 4, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you have video files that are formatted in MPEG-2, video files with a .m2ts extension, you can convert them to MP4 using ffmpeg.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i input.ts -c:v libx264 -c:a aac output.mp4
 </code></pre></div></div>
 
 <p>The video is encoded using open format H.264, while audio is encoded using AAC.</p>
+
+  </div><a class="u-url" href="/linux/misc/2019/12/04/ffmpeg-convert-ts-to-mp4.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

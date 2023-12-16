@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you’re a Mac user, you can open up a file by right-clicking on it, and choosing “Open With,” and selecting an application. If you see duplicates, you can remove multiple entries by running the following script. The script restarts the Launch Register called lsregister and removes the duplicates.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Open With Application Duplicate</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-08-31T06:38:06+00:00" itemprop="datePublished">Aug 31, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you’re a Mac user, you can open up a file by right-clicking on it, and choosing “Open With,” and selecting an application. If you see duplicates, you can remove multiple entries by running the following script. The script restarts the Launch Register called lsregister and removes the duplicates.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 </code></pre></div></div>
 
 <p>Right click the file again. The duplicates should be gone.</p>
+
+  </div><a class="u-url" href="/mac/2013/08/31/open-with-application-duplicate.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

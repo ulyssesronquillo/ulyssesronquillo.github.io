@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s a simple way to validate forms with empty fields. When working with forms, we want users to submit required fields. We can easily check by using the PHP empty() function. In this example, I will use a simple form, and check if “username” is empty. Since the action for the form is blank, the form will submit to itself. The the code you see for “value” is a shorthand PHP code to echo the field entry after a submit.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Validate Empty Fields</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-12-06T03:14:40+00:00" itemprop="datePublished">Dec 6, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s a simple way to validate forms with empty fields. When working with forms, we want users to submit required fields. We can easily check by using the PHP empty() function. In this example, I will use a simple form, and check if “username” is empty. Since the action for the form is blank, the form will submit to itself. The the code you see for “value” is a shorthand PHP code to echo the field entry after a submit.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form action="" method="post" name=""&gt; 
 &lt;input name="username" type="text" value="&lt;?=$username;?"&gt;&lt;/input&gt;
@@ -65,6 +75,9 @@ endif;
 
 <p>And one more thing. Place this PHP code above your form. The reason for this is, we want to redisplay the form just below the error messages. Users will be able to see the error messages right away, and the form is right there in front of the user ready for editing again.</p>
 
+  </div><a class="u-url" href="/html/php/2012/12/06/validate-empty-fields.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -74,7 +87,7 @@ endif;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

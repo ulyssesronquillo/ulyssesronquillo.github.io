@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Passive FTP is a FTP mode that alleviates the issues with client firewalls. The client initiates a call to the server. The return traffic is allowed as long as the client has initiated it. In addition, the server sends a port command along with an ephemeral port that the client can connect to. The client initiates a call on that ephemeral port, and the connection is then established.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Passive FTP Firewall</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-11-19T03:16:21+00:00" itemprop="datePublished">Nov 19, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Passive FTP is a FTP mode that alleviates the issues with client firewalls. The client initiates a call to the server. The return traffic is allowed as long as the client has initiated it. In addition, the server sends a port command along with an ephemeral port that the client can connect to. The client initiates a call on that ephemeral port, and the connection is then established.</p>
 
 <p>Egress port 21 and ephemeral ports 1024-65535 needs to be opened from the client side.</p>
 
@@ -47,6 +57,9 @@ tcp:21
 # From the client side, ephemeral ports from port 1024 to 165535 must be open.
 tcp:1024-165535
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/cloud/2019/11/19/passive-ftp-firewall.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -57,7 +70,7 @@ tcp:1024-165535
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

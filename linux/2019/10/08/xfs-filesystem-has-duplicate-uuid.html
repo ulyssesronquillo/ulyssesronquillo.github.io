@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s how to fix a duplicate UUID on a XFS file system.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">XFS Filesystem has duplicate UUID</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-10-08T05:17:15+00:00" itemprop="datePublished">Oct 8, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s how to fix a duplicate UUID on a XFS file system.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount -o rw,nouuid /dev/sda1  /data
 </code></pre></div></div>
@@ -53,6 +63,9 @@ writing all SBs
 new UUID = xxxxx-xxxx-xxxx-xxxxxxxxx
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/linux/2019/10/08/xfs-filesystem-has-duplicate-uuid.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -62,7 +75,7 @@ new UUID = xxxxx-xxxx-xxxx-xxxxxxxxx
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

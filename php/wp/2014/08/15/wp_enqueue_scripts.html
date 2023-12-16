@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>There’s a new way to load WordPress stylesheets from within your templates. In the older versions of WordPress, the stylesheets were hard coded on the theme’s header file. The proper way to load your stylesheets is via the functions.php file. Here are the differences.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Wp_enqueue_scripts</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-08-15T15:52:36+00:00" itemprop="datePublished">Aug 15, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>There’s a new way to load WordPress stylesheets from within your templates. In the older versions of WordPress, the stylesheets were hard coded on the theme’s header file. The proper way to load your stylesheets is via the functions.php file. Here are the differences.</p>
 
 <p>The old way was:</p>
 
@@ -57,6 +67,9 @@ add_action( 'wp_enqueue_scripts', 'sample_theme_scripts' );
 
 <p>If you use multiple stylesheets and JQuery at the same time, then you can use wp_enqueue_scripts to load them all at once. Using wp_enqueue_scripts will help you avoid conflicts from loading multiple copies of the same script. For example, you can deregister the standard WordPress JQuery and use your own JQuery version. This method is particularly helpful when you are writing your own plugins, much more so than using it on themes. Nevertheless, it’s good practice to use wp_enqueue_scripts to load stylesheets.</p>
 
+  </div><a class="u-url" href="/php/wp/2014/08/15/wp_enqueue_scripts.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -66,7 +79,7 @@ add_action( 'wp_enqueue_scripts', 'sample_theme_scripts' );
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

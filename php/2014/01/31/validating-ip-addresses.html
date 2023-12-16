@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you have a form that accepts IP addresses, you might want to validate it to make sure it really is a valid IP address. I’m talking about IPv4 since IPv6 is not yet universally implemented. A valid IPv4 IP addresses should fall between the numbers 0.0.0.0 and 255.255.255.255. In this example, we will use a regular expression and a pattern matching function in PHP to see if it’s a real IP address.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Validating IP Addresses</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-01-31T22:58:04+00:00" itemprop="datePublished">Jan 31, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you have a form that accepts IP addresses, you might want to validate it to make sure it really is a valid IP address. I’m talking about IPv4 since IPv6 is not yet universally implemented. A valid IPv4 IP addresses should fall between the numbers 0.0.0.0 and 255.255.255.255. In this example, we will use a regular expression and a pattern matching function in PHP to see if it’s a real IP address.</p>
 
 <p>First things first, we need to sanitize the input. We can use the following PHP functions. We will assign the sanitized input to a variable.</p>
 
@@ -82,6 +92,9 @@ if (validate_ip_address($ip_address)) {
 }
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/php/2014/01/31/validating-ip-addresses.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -91,7 +104,7 @@ if (validate_ip_address($ip_address)) {
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

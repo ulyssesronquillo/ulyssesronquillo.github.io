@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Although PHP comes with its own email() function, it lack features. There’s an alternative called PHPMailer that’s easy to implement. PHPMailer is a library class used by many popular PHP projects. In this article, I’ll show how PHPMailer is used to send out notification emails via GMail’s STMP server. Using GMail SMTP server requires an account as well as the need to authenticate. So, here’s the code using PHPMailer and GMail SMTP server.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">PHPMailer and GMail SMTP</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-08-22T23:51:40+00:00" itemprop="datePublished">Aug 22, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Although PHP comes with its own email() function, it lack features. There’s an alternative called PHPMailer that’s easy to implement. PHPMailer is a library class used by many popular PHP projects. In this article, I’ll show how PHPMailer is used to send out notification emails via GMail’s STMP server. Using GMail SMTP server requires an account as well as the need to authenticate. So, here’s the code using PHPMailer and GMail SMTP server.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// email class
 require_once('class.phpmailer.php');
@@ -73,6 +83,9 @@ if(!$mail-&gt;Send()) {
 
 <p>Include the code in your projects. You can also create a function and call the function each time you need to send out an email notification. Off course, you’ll need to pass variables such as recipients, body message, etc to complete your function.</p>
 
+  </div><a class="u-url" href="/php/2013/08/22/phpmailer-and-gmail-smtp.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -82,7 +95,7 @@ if(!$mail-&gt;Send()) {
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

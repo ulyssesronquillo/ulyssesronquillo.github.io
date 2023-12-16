@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you’re thinking about adding syndication to your website, consider using SimplePie, a super fast and easy-to-use feed parser written in PHP. With SimplePie, adding a RSS feed to your site couldn’t be more easier. In this article, I will show you how to create a RSS page that will display a feed. It will display my blog’s RSS feed as default when nothing is clicked. I’ve included a couple of links that are clickable. When the links are clicked, the RSS feed for that link will be displayed.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SimplePie RSS Reader</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-02-27T21:01:36+00:00" itemprop="datePublished">Feb 27, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you’re thinking about adding syndication to your website, consider using SimplePie, a super fast and easy-to-use feed parser written in PHP. With SimplePie, adding a RSS feed to your site couldn’t be more easier. In this article, I will show you how to create a RSS page that will display a feed. It will display my blog’s RSS feed as default when nothing is clicked. I’ve included a couple of links that are clickable. When the links are clicked, the RSS feed for that link will be displayed.</p>
 
 <p>First, download <a href="http://simplepie.org/downloads/">SimplePie</a>.</p>
 
@@ -83,6 +93,9 @@ foreach ($feed-?&gt;get_items() as $item): ?&gt;
 
 <p>See the <a href="http://uly.me/demo/rssfeed.php">demo</a>. Just add your own CSS stylesheet and you’re ready to go.</p>
 
+  </div><a class="u-url" href="/php/2014/02/27/simplepie-rss-reader.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -92,7 +105,7 @@ foreach ($feed-?&gt;get_items() as $item): ?&gt;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

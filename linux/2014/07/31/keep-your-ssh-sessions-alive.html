@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you work on servers via Terminal using SSH (secure shell), one of the more annoying things that happens quite regularly are timeouts. If there’s no activity between your SSH client and the server, your terminal is closed because your session has timed out. You’ll need to login again. If you do this at least 6 times a day, then you can see how taxing this whole exercise can be.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Keep Your SSH Sessions Alive</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-07-31T19:13:07+00:00" itemprop="datePublished">Jul 31, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you work on servers via Terminal using SSH (secure shell), one of the more annoying things that happens quite regularly are timeouts. If there’s no activity between your SSH client and the server, your terminal is closed because your session has timed out. You’ll need to login again. If you do this at least 6 times a day, then you can see how taxing this whole exercise can be.</p>
 
 <p>To avoid Terminal timeouts, you can set the SSH client, your terminal, to keep the connection alive by sending a null signal to the server every few seconds. I’ve set mine to 2 minutes. Since I’m on Mac OS, I’ll need to configure my SSH client. The configuration file is located in your home directory under .ssh/config. If the file doesn’t exist, just create one.</p>
 
@@ -54,6 +64,9 @@ ServerAliveInterval 120
 
 <p>I’ve set mine to 120 seconds or 2 minutes. This value works for me while connected to an Ubuntu Server. You may have to play around with this value on other Linux systems. I think this is a better approach as opposed to configuring the SSH server on every server you are connected to. You may not have root access to some servers. Changing the settings on your SSH client is the better approach.</p>
 
+  </div><a class="u-url" href="/linux/2014/07/31/keep-your-ssh-sessions-alive.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -63,7 +76,7 @@ ServerAliveInterval 120
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

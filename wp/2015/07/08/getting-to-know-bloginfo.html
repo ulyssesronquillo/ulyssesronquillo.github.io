@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Bloginfo is a WordPress function that you can use on WordPress templates to display a number of things such as the home page, the blog description, the main feed, comments feed, admin email address, template directory, site url, pingback url, etc. You can display bloginfo via PHP just like this:</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Getting to know Bloginfo</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-07-08T21:58:52+00:00" itemprop="datePublished">Jul 8, 2015
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Bloginfo is a WordPress function that you can use on WordPress templates to display a number of things such as the home page, the blog description, the main feed, comments feed, admin email address, template directory, site url, pingback url, etc. You can display bloginfo via PHP just like this:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?php bloginfo('url'); ??&gt;
 </code></pre></div></div>
@@ -72,6 +82,9 @@ wpurl                = http://www.example.com/home/wp
 
 <p>As mentioned previously, you can use the bloginfo function anywhere within your WordPress templates.</p>
 
+  </div><a class="u-url" href="/wp/2015/07/08/getting-to-know-bloginfo.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -81,7 +94,7 @@ wpurl                = http://www.example.com/home/wp
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

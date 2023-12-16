@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s how to check if instances are running in GCP.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">GCP Check Instances Running</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-01-19T02:25:25+00:00" itemprop="datePublished">Jan 19, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s how to check if instances are running in GCP.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 while IFS=', ' read -r a b c; do
@@ -53,6 +63,9 @@ done
 
 <p>Instances are read from an external file. File is comma delimited with instance name, project id and zone data.</p>
 
+  </div><a class="u-url" href="/cloud/2020/01/19/gcp-check-instances-running.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -62,7 +75,7 @@ done
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

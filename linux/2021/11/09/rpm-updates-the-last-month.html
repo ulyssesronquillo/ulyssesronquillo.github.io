@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s the software packages updated the last month.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">RPM Updates the last month</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-11-09T17:06:42+00:00" itemprop="datePublished">Nov 9, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s the software packages updated the last month.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rpm -qa --last | grep -w "$(date --date='1 month ago' +'%b %Y')"
 </code></pre></div></div>
@@ -56,6 +66,9 @@ bind-export-libs-9.11.4-26.P2.el7_9.7.x86_64  Mon 04 Oct 2021 01:03:22 AM UTC
 # ... truncated output
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/linux/2021/11/09/rpm-updates-the-last-month.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -65,7 +78,7 @@ bind-export-libs-9.11.4-26.P2.el7_9.7.x86_64  Mon 04 Oct 2021 01:03:22 AM UTC
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

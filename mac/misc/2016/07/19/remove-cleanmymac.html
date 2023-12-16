@@ -38,13 +38,26 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Several months ago, I’ve installed an app called <a href="http://macpaw.com/cleanmymac">CleanMyMac</a>. Big mistake. I didn’t like it much. I deleted it shortly after. The uninstall didn’t quite exactly remove everything. This morning, I updated my computer with the latest Mac updates. It required a reboot. Sure enough, the CleanMyMac notifications came back. Apparently, there’s some pieces of the app that are still running on my machine.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Remove CleanMyMac</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2016-07-19T17:10:52+00:00" itemprop="datePublished">Jul 19, 2016
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Several months ago, I’ve installed an app called <a href="http://macpaw.com/cleanmymac">CleanMyMac</a>. Big mistake. I didn’t like it much. I deleted it shortly after. The uninstall didn’t quite exactly remove everything. This morning, I updated my computer with the latest Mac updates. It required a reboot. Sure enough, the CleanMyMac notifications came back. Apparently, there’s some pieces of the app that are still running on my machine.</p>
 
 <p>The only way I was able to delete anything related to the CleanMyMac app was to use a couple of tools. One is called <a href="http://apps.tempel.org/FindAnyFile/">Find Any File</a>, a handy utility for finding obscure files in your OS. The other is the handy tool called the <a href="https://en.wikipedia.org/wiki/Terminal_(OS_X)">Terminal</a>. Start with the Find Any File app and search for files that contain the words “CleanMyMac” and “macaw.” The Find Any File app will show you a list of files and their locations. You should be able to delete the files directly from the app. However, there are some files that are write-protected. They can be deleted using a sudo account on the Terminal.</p>
 
 <p>Open up your Terminal and start deleting the files using “<a href="https://help.ubuntu.com/community/DeletingFiles">sudo rm</a>” command. You’ll be ask to provide the admin password. Don’t forget to empty the Trash.</p>
 
 <p>That should do the trick.</p>
+
+  </div><a class="u-url" href="/mac/misc/2016/07/19/remove-cleanmymac.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -55,7 +68,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

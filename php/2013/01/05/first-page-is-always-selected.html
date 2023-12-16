@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I had a little trouble with CodeIgniter pagination today. The pagination function is working fine, but Page 1 is always selected regardless which page I select. The data seems to be correct as I go from one page to another, but the page number doesn’t move at all. Well, after trial and error, the problem turned out to be a configuration issue.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">First Page Is Always Selected</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-01-05T01:26:51+00:00" itemprop="datePublished">Jan 5, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I had a little trouble with CodeIgniter pagination today. The pagination function is working fine, but Page 1 is always selected regardless which page I select. The data seems to be correct as I go from one page to another, but the page number doesn’t move at all. Well, after trial and error, the problem turned out to be a configuration issue.</p>
 
 <p>CodeIgniter typically uses the following URI format:</p>
 
@@ -50,6 +60,9 @@
 
 <p>If you need help with pagination, please refer to the <a href="http://ellislab.com/codeigniter/user-guide/libraries/pagination.html">Pagination</a> class from the CodeIgniter <a href="http://ellislab.com/codeigniter/user-guide/index.html">User Guide</a>.</p>
 
+  </div><a class="u-url" href="/php/2013/01/05/first-page-is-always-selected.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -59,7 +72,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

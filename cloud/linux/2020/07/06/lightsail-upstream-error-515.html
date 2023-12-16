@@ -38,9 +38,22 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you use LightSail, AWS provides an easy way for you to connect to LightSail instances via Web SSH. I normally use a terminal (ssh client) to connect to LightSail instances, but using Web SSH is very convenient. If you try to do an OS upgrade, for example from Ubuntu 18.04 LTS to Ubuntu 20.04 LTS, you will break Web SSH. AWS has added a special Web SSH configuration on LightSail base images. The error you’ll get is “Upstream Error 515.” The only way to fix this is to get AWS Support to help you apply the fix. It’s not a make or break it deal, but it can be a nuisance if you prefer to use AWS Web SSH instead of a terminal. If you need a more secure SSH connection, consider uploading your ssh-key to the server, and disable password login.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LightSail Upstream Error 515</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-07-06T15:49:28+00:00" itemprop="datePublished">Jul 6, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you use LightSail, AWS provides an easy way for you to connect to LightSail instances via Web SSH. I normally use a terminal (ssh client) to connect to LightSail instances, but using Web SSH is very convenient. If you try to do an OS upgrade, for example from Ubuntu 18.04 LTS to Ubuntu 20.04 LTS, you will break Web SSH. AWS has added a special Web SSH configuration on LightSail base images. The error you’ll get is “Upstream Error 515.” The only way to fix this is to get AWS Support to help you apply the fix. It’s not a make or break it deal, but it can be a nuisance if you prefer to use AWS Web SSH instead of a terminal. If you need a more secure SSH connection, consider uploading your ssh-key to the server, and disable password login.</p>
 
 <p><img src="https://uly.me/wp-content/uploads/2020/07/webssh.png" alt="webssh" /></p>
+
+  </div><a class="u-url" href="/cloud/linux/2020/07/06/lightsail-upstream-error-515.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -51,7 +64,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

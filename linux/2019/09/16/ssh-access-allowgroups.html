@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If unable to login via SSH, check the /etc/ssh/sshd_config for AllowGroups.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SSH Access AllowGroups</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-09-16T16:46:55+00:00" itemprop="datePublished">Sep 16, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If unable to login via SSH, check the /etc/ssh/sshd_config for AllowGroups.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AllowGroups root groupname
 </code></pre></div></div>
 
 <p>It’s case sensitive.</p>
+
+  </div><a class="u-url" href="/linux/2019/09/16/ssh-access-allowgroups.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

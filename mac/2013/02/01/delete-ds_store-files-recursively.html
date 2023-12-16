@@ -38,13 +38,26 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you work with MacOS and you FTP files to a Linux server, you probably have seen this pesky and ubiquitous hidden files named .DS_Store. They seem to be in every folder known to man. The .DS_Store files are hidden MacOS files used to store the attributes of a folder such as position of icons and choice of background images, etc. Although they are not harmful, they probably don’t belong on the web server. Instead of deleting them one by one, there’s a faster way of deleting them recursively. You can invoke this command from the Linux terminal on your webroot folder.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Delete .DS_Store Files Recursively</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-02-01T04:04:52+00:00" itemprop="datePublished">Feb 1, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you work with MacOS and you FTP files to a Linux server, you probably have seen this pesky and ubiquitous hidden files named .DS_Store. They seem to be in every folder known to man. The .DS_Store files are hidden MacOS files used to store the attributes of a folder such as position of icons and choice of background images, etc. Although they are not harmful, they probably don’t belong on the web server. Instead of deleting them one by one, there’s a faster way of deleting them recursively. You can invoke this command from the Linux terminal on your webroot folder.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /var/www/
 find . "-name" ".DS_Store" -exec rm {} \;
 </code></pre></div></div>
 
 <p>The .DS_Store files will be deleted recursively.</p>
+
+  </div><a class="u-url" href="/mac/2013/02/01/delete-ds_store-files-recursively.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -55,7 +68,7 @@ find . "-name" ".DS_Store" -exec rm {} \;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>How to add a startup-script to metadata. The script executes every time VM is started.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">GCP Compute add startup-script to metadata</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2022-02-02T19:56:05+00:00" itemprop="datePublished">Feb 2, 2022
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>How to add a startup-script to metadata. The script executes every time VM is started.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-metadata instance-name \
 --project your-project-id \
@@ -47,6 +57,9 @@
 sudo -i
 echo "Time: $(date)" &gt;&gt; /tmp/date.txt'
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/cloud/2022/02/02/gcp-compute-add-startup-script-to-metadata.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -57,7 +70,7 @@ echo "Time: $(date)" &gt;&gt; /tmp/date.txt'
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

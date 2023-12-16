@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p><a href="http://manpages.ubuntu.com/manpages/bionic/man1/fpsync.1.html">Fpsync</a> is command line tool for synchronizing directories in parallel using fpart and <a href="https://linux.die.net/man/1/rsync">rsync</a> tools. You can specify a number of concurrent sync jobs, number of files per sync job, and the maximum byte size per sync among other things. Fpsync is believed to be 4 to 5 times faster than rsync. Fpsync makes sense when syncing massive drives with thousands of directories and small files.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Fpsync</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-09-24T03:59:49+00:00" itemprop="datePublished">Sep 24, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="http://manpages.ubuntu.com/manpages/bionic/man1/fpsync.1.html">Fpsync</a> is command line tool for synchronizing directories in parallel using fpart and <a href="https://linux.die.net/man/1/rsync">rsync</a> tools. You can specify a number of concurrent sync jobs, number of files per sync job, and the maximum byte size per sync among other things. Fpsync is believed to be 4 to 5 times faster than rsync. Fpsync makes sense when syncing massive drives with thousands of directories and small files.</p>
 
 <p>To install fpsync.</p>
 
@@ -99,6 +109,9 @@ show_time $elapse &gt;&gt; $log
 rsync -av /root/tmp1 /root/tmp2/ &gt; /var/null
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/linux/2019/09/24/fpsync.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -108,7 +121,7 @@ rsync -av /root/tmp1 /root/tmp2/ &gt; /var/null
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

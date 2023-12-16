@@ -38,9 +38,22 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you have an existing EFS that’s unencrypted, you can encrypt it be creating a snapshot using AWS Backup, and then restoring the file system to a new EFS with encryption. If you choose to restore in a directory in the same file system, it will not be encrypted. It has to be a new EFS. In addition, you’ll be asked to select which encryption key to use. The default key will work, unless you have your own.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">EFS Encryption</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-12-03T16:19:50+00:00" itemprop="datePublished">Dec 3, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you have an existing EFS that’s unencrypted, you can encrypt it be creating a snapshot using AWS Backup, and then restoring the file system to a new EFS with encryption. If you choose to restore in a directory in the same file system, it will not be encrypted. It has to be a new EFS. In addition, you’ll be asked to select which encryption key to use. The default key will work, unless you have your own.</p>
 
 <p><img src="https://uly.me/wp-content/uploads/2020/12/efs-encryption.png" alt="" /></p>
+
+  </div><a class="u-url" href="/cloud/2020/12/03/efs-encryption.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -51,7 +64,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

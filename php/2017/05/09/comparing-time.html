@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s a neat little PHP script that compares a set date/time to the current time. The time() function sets the $now variable to the current Unix timestamp. The strtotime() function converts a date string to a Unix timestamp. The result is assigned to the $setdate variable. The two variables containing Unix timestamps are then compared. A simple if-then statement determines if the date is in the past or future.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Comparing Time</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-05-09T20:02:19+00:00" itemprop="datePublished">May 9, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s a neat little PHP script that compares a set date/time to the current time. The time() function sets the $now variable to the current Unix timestamp. The strtotime() function converts a date string to a Unix timestamp. The result is assigned to the $setdate variable. The two variables containing Unix timestamps are then compared. A simple if-then statement determines if the date is in the past or future.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>date_default_timezone_set('America/Los_Angeles');
 $setdate = strtotime("May 9, 2017 12:27PM");
@@ -47,6 +57,9 @@ if ( $setdate &gt; $now ) : echo 'Future date'; else : echo 'Past date'; endif;
 </code></pre></div></div>
 
 <p>You may have to change the default timezone if your server is in a different timezone.</p>
+
+  </div><a class="u-url" href="/php/2017/05/09/comparing-time.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -57,7 +70,7 @@ if ( $setdate &gt; $now ) : echo 'Future date'; else : echo 'Past date'; endif;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

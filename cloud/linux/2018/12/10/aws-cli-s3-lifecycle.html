@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s how to add a lifecycle management to S3 buckets via the CLI. In this example, expiration is set to 7 days. S3 will auto delete expired objects.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AWS CLI S3 Lifecycle</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-12-10T03:43:50+00:00" itemprop="datePublished">Dec 10, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s how to add a lifecycle management to S3 buckets via the CLI. In this example, expiration is set to 7 days. S3 will auto delete expired objects.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$aws s3api put-bucket-lifecycle-configuration \
 --bucket bucketname --lifecycle-configuration file://lifecycle.json
@@ -60,6 +70,9 @@
 }
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/linux/2018/12/10/aws-cli-s3-lifecycle.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -69,7 +82,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

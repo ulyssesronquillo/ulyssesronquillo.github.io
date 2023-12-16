@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>There are situations when you have to do a mass find and replace on your database. Let’s say you’re really, really bad speller. You just recently found out that you’ve been spelling a word for wrongly for years. To avoid embarrassment, you decide to do a search and replace. Unfortunately, you found out that there are hundreds of posts that contains that misspelled word. Instead of editing each post which is time consuming, you decide to run a mass find and replace against the database. In this example, we will replace the word ‘dawg’ with ‘dog.’</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Mass Find and Replace</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-03-09T23:24:09+00:00" itemprop="datePublished">Mar 9, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>There are situations when you have to do a mass find and replace on your database. Let’s say you’re really, really bad speller. You just recently found out that you’ve been spelling a word for wrongly for years. To avoid embarrassment, you decide to do a search and replace. Unfortunately, you found out that there are hundreds of posts that contains that misspelled word. Instead of editing each post which is time consuming, you decide to run a mass find and replace against the database. In this example, we will replace the word ‘dawg’ with ‘dog.’</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPDATE wp_posts SET post_content = REPLACE ( post_content, 'dawg', 'dog');
 </code></pre></div></div>
 
 <p>I highly recommend that you back up your database first. I also recommend that you run it on a test database first before running it on a production environment, because a mass update is quite dangerous if you’re not sure what you are doing. If you’re a WordPress user, there’s a plugin called Search and Replace that will do the same thing. That might be easier for most people who don’t have access to MySQL command line or PHPMyAdmin.</p>
+
+  </div><a class="u-url" href="/php/wp/2017/03/09/mass-find-and-replace.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

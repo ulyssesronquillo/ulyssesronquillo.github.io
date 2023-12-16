@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I’m working on a client site running WordPress but without any access to FTP. It’s an interesting dilemma because WordPress will allow you to add new themes and plugins via its interface. It does so by allowing you to upload zipped files of the themes and plugins. Obviously, you don’t want to keep doing this especially you want to add just one file to the theme.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Add Files in WordPress Without FTP</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2016-03-22T14:48:22+00:00" itemprop="datePublished">Mar 22, 2016
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I’m working on a client site running WordPress but without any access to FTP. It’s an interesting dilemma because WordPress will allow you to add new themes and plugins via its interface. It does so by allowing you to upload zipped files of the themes and plugins. Obviously, you don’t want to keep doing this especially you want to add just one file to the theme.</p>
 
 <p>I needed to create a new page template on the Genesis platform. My client is using the Enterprise Pro child theme. There’s a command in PHP called ‘touch’ which allows you to create a new file. You can insert this command on the top of your theme’s header file in WordPress. Since I’m using Genesis, the child theme doesn’t have a header, therefore I had to do insert the command in the parent theme.</p>
 
@@ -56,6 +66,9 @@
 
 <p>Anyway, it works, but use this with extreme caution. If you’re not familiar with PHP and WordPress, you can render the entire website useless if you somehow inserted the wrong PHP code. There’s no FTP to back out the files. The WordPress Dashboard may no longer work. So, work on your own peril.</p>
 
+  </div><a class="u-url" href="/wp/2016/03/22/add-files-in-wordpress-without-ftp.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -65,7 +78,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>When you exhausted all efforts trying to login to a VM and there’s no other way to log in to the server, here’s a breakglass method to allow you to log in to a VM via a startup script. Just add the following bash script to the VM startup section. Change the username and password to your liking. Restart the server to trigger the startup script. After reboot, it should give you access to the server. In addition, you will also have sudo access so you can switch as root.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">GCP VM Breakglass SSH</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-08-28T14:21:18+00:00" itemprop="datePublished">Aug 28, 2023
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>When you exhausted all efforts trying to login to a VM and there’s no other way to log in to the server, here’s a breakglass method to allow you to log in to a VM via a startup script. Just add the following bash script to the VM startup section. Change the username and password to your liking. Restart the server to trigger the startup script. After reboot, it should give you access to the server. In addition, you will also have sudo access so you can switch as root.</p>
 
 <p>1. Edit the VM.<br />
 2. Go to the Startup script section and add the following.</p>
@@ -61,6 +71,9 @@ fi
 6. Remove user.<br />
 7. Remove the startup script.</p>
 
+  </div><a class="u-url" href="/cloud/linux/2023/08/28/gcp-vm-breakglass-ssh.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -70,7 +83,7 @@ fi
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

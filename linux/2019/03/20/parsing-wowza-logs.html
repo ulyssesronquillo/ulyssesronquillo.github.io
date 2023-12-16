@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I’ve been wanting to look at Wowza logs for a very long time. I just spent a couple of hours writing a Bash script that generates a stats report. It parses the Wowza log file for the IP addresses, and runs them and against a site called ipinfo.io to get the viewer’s geo location. The output is filtered, sorted, takes a count, and finally generates a webpage. Here’s the Bash script.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Parsing Wowza Logs</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-03-20T06:01:07+00:00" itemprop="datePublished">Mar 20, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I’ve been wanting to look at Wowza logs for a very long time. I just spent a couple of hours writing a Bash script that generates a stats report. It parses the Wowza log file for the IP addresses, and runs them and against a site called ipinfo.io to get the viewer’s geo location. The output is filtered, sorted, takes a count, and finally generates a webpage. Here’s the Bash script.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Can be placed in cron to run.
 create-wowza-report.sh wowzastreamingengine_access.log
@@ -98,6 +108,9 @@ rm output*.txt
 rm ips.txt
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/linux/2019/03/20/parsing-wowza-logs.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -107,7 +120,7 @@ rm ips.txt
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

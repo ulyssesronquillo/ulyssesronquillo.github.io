@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>SCP is a secure copy utility in Linux. You’ll need access to your system. In this example, a pem key is used to authenticate to a host. SCP copies filename.ext to the home directory of ec2-user. It’s important to add the target directory, otherwise it will not work.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SCP with a Key</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-10-22T13:54:56+00:00" itemprop="datePublished">Oct 22, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>SCP is a secure copy utility in Linux. You’ll need access to your system. In this example, a pem key is used to authenticate to a host. SCP copies filename.ext to the home directory of ec2-user. It’s important to add the target directory, otherwise it will not work.</p>
 
 <p>Here’s how to use SCP with a key from local to server.</p>
 
@@ -50,6 +60,9 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp user@server:/home/user/file.txt /local/directory
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/linux/2020/10/22/scp-with-a-key.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -59,7 +72,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

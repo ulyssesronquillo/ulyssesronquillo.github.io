@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s a quick way to chroot another boot disk. Attach the rescued boot disk first. Run lsblk and mount.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Chroot A Boot Disk</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-08-20T06:44:44+00:00" itemprop="datePublished">Aug 20, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s a quick way to chroot another boot disk. Attach the rescued boot disk first. Run lsblk and mount.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
 mount -t xfs -o nouuid /dev/xvdf2 /mnt
@@ -58,6 +68,9 @@ umount /mnt/sys
 umount /mnt
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/linux/2019/08/20/chroot-a-boot-disk.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -67,7 +80,7 @@ umount /mnt
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

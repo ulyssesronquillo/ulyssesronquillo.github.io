@@ -38,10 +38,23 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>You can use the curl command to test if your load balancer is working as expected. The curl command will alternately and randomly access several instances in your load balancer. If you have 3 instances behind your load balancer, it will be cycled across all 3. The -m1 command means max time is set to 1 second.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Use Curl on Load Balancers</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-12-18T18:27:32+00:00" itemprop="datePublished">Dec 18, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>You can use the curl command to test if your load balancer is working as expected. The curl command will alternately and randomly access several instances in your load balancer. If you have 3 instances behind your load balancer, it will be cycled across all 3. The -m1 command means max time is set to 1 second.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while true; do curl -m1 [IP_ADDRESS]; done
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/cloud/2019/12/18/use-curl-on-load-balancers.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -52,7 +65,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

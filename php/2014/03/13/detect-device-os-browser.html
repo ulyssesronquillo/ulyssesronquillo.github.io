@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you like to deliver specific content to a certain device type, you can use PHP’s server environment settings to know what type of device, operating systems, and browser type is being used. The server environment setting we are interested in is ‘HTTP_USER_AGENT.’ This index contains a string that is given off by the user agent, the browser in this case. All devices pass down pieces of information identifying themselves, including the type of device, operating system, and browser that is being used.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Detect Device, OS, Browser</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-03-13T01:23:43+00:00" itemprop="datePublished">Mar 13, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you like to deliver specific content to a certain device type, you can use PHP’s server environment settings to know what type of device, operating systems, and browser type is being used. The server environment setting we are interested in is ‘HTTP_USER_AGENT.’ This index contains a string that is given off by the user agent, the browser in this case. All devices pass down pieces of information identifying themselves, including the type of device, operating system, and browser that is being used.</p>
 
 <p>If we were to look for an iPad for example, we need to perform the following commands:</p>
 
@@ -105,6 +115,9 @@ if ($browser == 'Google Chrome') {
 
 <p>With the sample code above, you can pretty much single out any device and deliver specific content to it.</p>
 
+  </div><a class="u-url" href="/php/2014/03/13/detect-device-os-browser.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -114,7 +127,7 @@ if ($browser == 'Google Chrome') {
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

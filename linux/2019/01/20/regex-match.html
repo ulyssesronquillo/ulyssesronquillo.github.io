@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Regex is really cool. You can do amazing things with it, but if you’re starting new, it’s quite daunting task. If you ever find one that works, you better hang on to it for dear life. Here’s one that I know is working. It reads data from a file, and compares and matches a variable to a certain pattern. In the example below, the variable I’m searching for, must contain a string with the following characters “server-w.” They also must be followed by at least one number or a set of numbers.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Regex Match</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-01-20T04:47:42+00:00" itemprop="datePublished">Jan 20, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Regex is really cool. You can do amazing things with it, but if you’re starting new, it’s quite daunting task. If you ever find one that works, you better hang on to it for dear life. Here’s one that I know is working. It reads data from a file, and compares and matches a variable to a certain pattern. In the example below, the variable I’m searching for, must contain a string with the following characters “server-w.” They also must be followed by at least one number or a set of numbers.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat filename | while read LINE; do
   if [[ $LINE =~ server-w-*.[0-9] ]]; then
@@ -53,6 +63,9 @@ done
 
 <p><a href="https://regexr.com/"></a></p>
 
+  </div><a class="u-url" href="/linux/2019/01/20/regex-match.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -62,7 +75,7 @@ done
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

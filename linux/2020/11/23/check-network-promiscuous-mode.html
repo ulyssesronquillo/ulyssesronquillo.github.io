@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Promiscuous mode is a mode for a network interface where the controller to passes all traffic it receives to the CPU instead of passing the frames to the controller. This is helpful if you want to capture all traffic as part of troubleshooting. The question is, how can you tell if your network interface is in a promiscuous mode? Here’s a couple of commands.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Check Network Promiscuous Mode</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-11-23T22:31:58+00:00" itemprop="datePublished">Nov 23, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Promiscuous mode is a mode for a network interface where the controller to passes all traffic it receives to the CPU instead of passing the frames to the controller. This is helpful if you want to capture all traffic as part of troubleshooting. The question is, how can you tell if your network interface is in a promiscuous mode? Here’s a couple of commands.</p>
 
 <p>Here’s the default mode.</p>
 
@@ -76,6 +86,9 @@ ifconfig eth0 promisc
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ifconfig eth0 -promisc
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/linux/2020/11/23/check-network-promiscuous-mode.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -85,7 +98,7 @@ ifconfig eth0 promisc
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

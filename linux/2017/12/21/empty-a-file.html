@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you work with vi, nano or any other command line editor, deleting a line is a fairly easy thing to do. If the file is too large, deleting the content line by line is not fun. There’s a better way to empty a file without deleting it. Here are several ways.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Empty A File</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-12-21T19:34:49+00:00" itemprop="datePublished">Dec 21, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you work with vi, nano or any other command line editor, deleting a line is a fairly easy thing to do. If the file is too large, deleting the content line by line is not fun. There’s a better way to empty a file without deleting it. Here are several ways.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ &gt; filename
 $ truncate -s 0 filename
 $ echo "" &gt; filename
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/linux/2017/12/21/empty-a-file.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@ $ echo "" &gt; filename
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

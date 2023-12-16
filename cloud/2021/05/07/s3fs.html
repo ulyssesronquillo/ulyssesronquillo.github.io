@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>s3fs allows Linux to mount S3 buckets as a file system.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">S3FS</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-05-07T03:11:36+00:00" itemprop="datePublished">May 7, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>s3fs allows Linux to mount S3 buckets as a file system.</p>
 
 <p>Install s3fs.</p>
 
@@ -72,6 +82,9 @@ chown username:username /mountpoint
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s3fs#bucketname /mountpoint fuse _netdev,allow_other,use_cache=/root/cache,uid=1000,gid=1000,umask=022 0 0
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/2021/05/07/s3fs.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -81,7 +94,7 @@ chown username:username /mountpoint
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

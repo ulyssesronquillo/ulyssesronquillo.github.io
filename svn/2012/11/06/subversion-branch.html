@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Subversion Branch creates a new branch in the local working directory. In the example below, a copy of the project directory is forked and given a new name. The new branch will be treated as a separate branch.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Subversion Branch</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-11-06T16:08:42+00:00" itemprop="datePublished">Nov 6, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Subversion Branch creates a new branch in the local working directory. In the example below, a copy of the project directory is forked and given a new name. The new branch will be treated as a separate branch.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>svn copy http://repository/project/trunk \ 
          http://repository/project/branch/newbranch 
          \ -m "Place comments here."
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/svn/2012/11/06/subversion-branch.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

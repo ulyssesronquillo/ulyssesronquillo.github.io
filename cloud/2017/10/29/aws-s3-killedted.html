@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I was trying to copy a large file from AWS S3 bucket to the smallest Amazon Lightsail instance using the AWS CLI. It was throwing out an error saying “Killedted 3.8 Mib/113.4 Mib (5.0 Mib/s) with 1 file(s) remaining.” For some reason, the copy was being killed or terminated. I was thinking that maybe the small instance was not enough to copy or move large files. I’m glad I found a <a href="https://github.com/aws/aws-cli/issues/1775">workaround</a>. Here’s the command I was doing, and the fix.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AWS S3 Killedted</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-10-29T10:53:35+00:00" itemprop="datePublished">Oct 29, 2017
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I was trying to copy a large file from AWS S3 bucket to the smallest Amazon Lightsail instance using the AWS CLI. It was throwing out an error saying “Killedted 3.8 Mib/113.4 Mib (5.0 Mib/s) with 1 file(s) remaining.” For some reason, the copy was being killed or terminated. I was thinking that maybe the small instance was not enough to copy or move large files. I’m glad I found a <a href="https://github.com/aws/aws-cli/issues/1775">workaround</a>. Here’s the command I was doing, and the fix.</p>
 
 <p>The Error</p>
 
@@ -53,6 +63,9 @@ $ Killedted 3.8 MiB/113.4 MiB (5.0 MiB/s) with 1 file(s) remaining
 
 <p>The default is 10 which was too much for a small instance.</p>
 
+  </div><a class="u-url" href="/cloud/2017/10/29/aws-s3-killedted.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -62,7 +75,7 @@ $ Killedted 3.8 MiB/113.4 MiB (5.0 MiB/s) with 1 file(s) remaining
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

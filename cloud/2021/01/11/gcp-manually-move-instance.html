@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Here’s how to move a VM instance from one zone to another. Moving an instance will involve destroying the instance from the source zone, and then recreating a replacement instance in the destination zone. To make the move easier, we will use a machine image to recreate the instance. We will also take advantage of the compute and IP address reservations to guarantee that we use the same IP address machine type. Some large machine types are hard to come by.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">GCP Manually Move Instance</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-01-11T05:53:58+00:00" itemprop="datePublished">Jan 11, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Here’s how to move a VM instance from one zone to another. Moving an instance will involve destroying the instance from the source zone, and then recreating a replacement instance in the destination zone. To make the move easier, we will use a machine image to recreate the instance. We will also take advantage of the compute and IP address reservations to guarantee that we use the same IP address machine type. Some large machine types are hard to come by.</p>
 
 <p>Get a list of compute and IP reservations.</p>
 
@@ -84,6 +94,9 @@ gcloud compute reservations delete centos-us-central1-b --zone us-central1-b
 gcloud beta compute machine-images delete centos-image-00
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/2021/01/11/gcp-manually-move-instance.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -93,7 +106,7 @@ gcloud beta compute machine-images delete centos-image-00
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

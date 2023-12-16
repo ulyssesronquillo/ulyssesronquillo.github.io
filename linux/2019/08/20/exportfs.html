@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>What’s a stale file handle? A file handle becomes stale when the file or directory referenced by the handle is removed by another host/server, while our client still holds an active reference to the object file/directory. A typical example occurs when the current directory of a process, running on our client, is removed on the server (either by a process running on the server or on another client).</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Exportfs</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-08-20T18:44:23+00:00" itemprop="datePublished">Aug 20, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>What’s a stale file handle? A file handle becomes stale when the file or directory referenced by the handle is removed by another host/server, while our client still holds an active reference to the object file/directory. A typical example occurs when the current directory of a process, running on our client, is removed on the server (either by a process running on the server or on another client).</p>
 
 <p>If your NFS file handles are stale, run this command.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/exportfs -a
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/linux/2019/08/20/exportfs.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

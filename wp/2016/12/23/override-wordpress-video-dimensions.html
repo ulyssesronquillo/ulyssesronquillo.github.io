@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>WordPress comes with its own media player. It supports M4a, MP4, OGG, WebM, FLV, WMV, MP3, WAV and WMA formats. In addition, you can also embed videos from a dozen external sites such as YouTube, Vimeo, etc. WordPress will automatically embed the video when you add it to your post. You can change the dimensions of your videos by overriding the width and the height of the media player.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Override WordPress Video Dimensions</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2016-12-23T19:36:34+00:00" itemprop="datePublished">Dec 23, 2016
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>WordPress comes with its own media player. It supports M4a, MP4, OGG, WebM, FLV, WMV, MP3, WAV and WMA formats. In addition, you can also embed videos from a dozen external sites such as YouTube, Vimeo, etc. WordPress will automatically embed the video when you add it to your post. You can change the dimensions of your videos by overriding the width and the height of the media player.</p>
 
 <p>Edit the functions.php file, and add the following code.</p>
 
@@ -54,6 +64,9 @@ add_filter( 'shortcode_atts_video', 'override_video_dimensions', 10, 3 );
 
 <iframe width="720" height="420" src="https://www.youtube.com/embed/siBwMJ32iy8?feature=oembed"></iframe>
 
+  </div><a class="u-url" href="/wp/2016/12/23/override-wordpress-video-dimensions.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -63,7 +76,7 @@ add_filter( 'shortcode_atts_video', 'override_video_dimensions', 10, 3 );
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

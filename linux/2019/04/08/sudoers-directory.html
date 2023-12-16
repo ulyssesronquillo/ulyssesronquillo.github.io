@@ -38,10 +38,23 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>What’s in the /etc/sudoers.d/ directory? It’s a group of files with the following format as displayed in the code below. In the example, the file allows a Linux group or an AD group to assume the role of root, via the sudo command. As long as the group uses the correct format, and is located inside the /etc/sudoers.d/ directory, that group will have access to root.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Sudoers Directory</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-04-08T21:28:23+00:00" itemprop="datePublished">Apr 8, 2019
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>What’s in the /etc/sudoers.d/ directory? It’s a group of files with the following format as displayed in the code below. In the example, the file allows a Linux group or an AD group to assume the role of root, via the sudo command. As long as the group uses the correct format, and is located inside the /etc/sudoers.d/ directory, that group will have access to root.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%groupname  ALL=(ALL)   NOPASSWD: ALL
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/linux/2019/04/08/sudoers-directory.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -52,7 +65,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

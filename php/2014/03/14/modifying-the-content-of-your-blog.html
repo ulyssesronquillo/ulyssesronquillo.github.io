@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I wrote a custom blog in CodeIgniter two years ago. I revisited the code to change the content format a bit. I’ve noticed that there were several pieces of code that were commented out. At the time, I was playing around with what I could potentially do with the content. I thought I would share it here, because it will show you how you could drastically change the content of a blog by manipulating the content.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Modifying the content of your blog</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-03-14T20:25:54+00:00" itemprop="datePublished">Mar 14, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I wrote a custom blog in CodeIgniter two years ago. I revisited the code to change the content format a bit. I’ve noticed that there were several pieces of code that were commented out. At the time, I was playing around with what I could potentially do with the content. I thought I would share it here, because it will show you how you could drastically change the content of a blog by manipulating the content.</p>
 
 <p>Let’s say the content of your blog is assigned to a variable called $item-&gt;content. We can alter the content by passing PHP functions to it. Let’s say we want to limit the content to just the first 330 characters. We can use a PHP function called substr. Substr returns a portion of the string from a specified start and length.</p>
 
@@ -72,6 +82,9 @@ echo $item-&gt;content;
 
 <p>I appended to content a link with the anchor of ‘Read […].’</p>
 
+  </div><a class="u-url" href="/php/2014/03/14/modifying-the-content-of-your-blog.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -81,7 +94,7 @@ echo $item-&gt;content;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

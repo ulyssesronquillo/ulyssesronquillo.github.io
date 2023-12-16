@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I have an Ansible playbook that will patch all Ansible clients defined in the Ansible hosts file. The following are contents of my hosts file, and the update playbook.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Ansible Update Playbook</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-08-02T02:39:58+00:00" itemprop="datePublished">Aug 2, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I have an Ansible playbook that will patch all Ansible clients defined in the Ansible hosts file. The following are contents of my hosts file, and the update playbook.</p>
 
 <p>File: /etc/ansible/hosts</p>
 
@@ -90,6 +100,9 @@ ansible_python_interpreter=/usr/bin/python3
 
 <p>The advantage of using Ansible is, I can run a single playbook to update dozens of servers. It’s also a great tool for rolling out software as well as executing commands to a group of servers.</p>
 
+  </div><a class="u-url" href="/linux/2020/08/02/ansible-update-playbook.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -99,7 +112,7 @@ ansible_python_interpreter=/usr/bin/python3
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

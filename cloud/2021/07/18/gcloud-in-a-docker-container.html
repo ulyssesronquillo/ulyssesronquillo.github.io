@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>You can run a gcloud commands in a Docker container.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">GCloud in a Docker Container</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-07-18T04:19:05+00:00" itemprop="datePublished">Jul 18, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>You can run a gcloud commands in a Docker container.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -ti --name gcloud-config google/cloud-sdk gcloud auth login
 </code></pre></div></div>
@@ -77,6 +87,9 @@ pubsub-emulator 0.4.1
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias gsutil='docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk:latest gsutil'
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/2021/07/18/gcloud-in-a-docker-container.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -86,7 +99,7 @@ pubsub-emulator 0.4.1
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

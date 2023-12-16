@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>When setting up your Ubuntu server, you can allow regular Linux accounts to access your web root directory via FTP or secure shell. In this case, you want users to access /var/www directory. One of the first things you’ll need to do is give permissions to the Apache user www-data.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">User Access To Web Root</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-05-17T02:37:45+00:00" itemprop="datePublished">May 17, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>When setting up your Ubuntu server, you can allow regular Linux accounts to access your web root directory via FTP or secure shell. In this case, you want users to access /var/www directory. One of the first things you’ll need to do is give permissions to the Apache user www-data.</p>
 
 <p>Change the group name to /var/www.</p>
 
@@ -62,6 +72,9 @@
 
 <p>This will now allow you to use a regular user account via FTP or SSH with write permissions to the /var/www directory. This is much more secure way than using the www-data user account.</p>
 
+  </div><a class="u-url" href="/linux/2013/05/17/user-access-to-web-root.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -71,7 +84,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

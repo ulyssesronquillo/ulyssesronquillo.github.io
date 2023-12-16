@@ -38,12 +38,25 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you create scripts in Windows, editors sometimes add a carriage return in addition to the line feed.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Dos2unix Alternative</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-07-02T14:07:51+00:00" itemprop="datePublished">Jul 2, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you create scripts in Windows, editors sometimes add a carriage return in addition to the line feed.</p>
 
 <p>You can use dos2unix to remove the extra characters. Or you can use sed.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed -i -e 's/\r$//' script.sh
 </code></pre></div></div>
+
+  </div><a class="u-url" href="/linux/2021/07/02/dos2unix-alternative.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -54,7 +67,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

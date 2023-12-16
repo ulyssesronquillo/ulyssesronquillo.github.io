@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>Calculating and formatting dates is an important function when writing software applications. You might be needing to perform a database search of all transactions a month ago, six months ago, etc. To make this all possible, you need to be able to figure out how to calculate dates based from today’s date. PHP has a couple of date functions called date() and mktime(). I use the date() function primarily for formatting dates, and mktime() function for calculating dates since mktime() is the actual Unix timestamp. With these two functions, you can do some pretty amazing date calculations.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Calculating Dates in PHP</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-02-26T21:59:21+00:00" itemprop="datePublished">Feb 26, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Calculating and formatting dates is an important function when writing software applications. You might be needing to perform a database search of all transactions a month ago, six months ago, etc. To make this all possible, you need to be able to figure out how to calculate dates based from today’s date. PHP has a couple of date functions called date() and mktime(). I use the date() function primarily for formatting dates, and mktime() function for calculating dates since mktime() is the actual Unix timestamp. With these two functions, you can do some pretty amazing date calculations.</p>
 
 <p>Let’s get started.</p>
 
@@ -85,6 +95,9 @@ echo $d;
 
 <p>Read more about PHP’s <a href="http://www.php.net/manual/en/function.date.php">date</a> and <a href="http://www.php.net/manual/en/function.mktime.php">mktime</a> functions. See <a href="http://uly.me/demo/dates.php">demo</a>. Results are based on today’s date.</p>
 
+  </div><a class="u-url" href="/php/2014/02/26/calculating-dates-in-php.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -94,7 +107,7 @@ echo $d;
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

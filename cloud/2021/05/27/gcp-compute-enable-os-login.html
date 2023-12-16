@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>If you have trouble logging in (SSH) to your GCP instance, you may have to enable OS Login.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">GCP Compute Enable OS Login</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-05-27T17:48:12+00:00" itemprop="datePublished">May 27, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you have trouble logging in (SSH) to your GCP instance, you may have to enable OS Login.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute instances add-metadata server-name \
 --metadata enable-oslogin=TRUE \
@@ -47,6 +57,9 @@
 </code></pre></div></div>
 
 <p>When done, you can set it back to FALSE.</p>
+
+  </div><a class="u-url" href="/cloud/2021/05/27/gcp-compute-enable-os-login.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
@@ -57,7 +70,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>

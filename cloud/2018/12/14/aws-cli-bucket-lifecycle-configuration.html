@@ -38,7 +38,17 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <p>I was banging my head against the wall (not quite literally, but it was close) trying to come up with a S3 lifecycle configuration from scratch. I needed a JSON file that I can run in a bash script, so I can apply the lifecycle rules to a few dozen S3 buckets. Obviously, trying to create one from scratch wasn’t the wisest choice in my part. As it turns out, you can setup a temporary bucket and use the console to recreate the lifecycle, then export the lifecycle JSON file. Duh! Genius! Here’s the command to export the lifecycle configuration.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">AWS CLI Bucket Lifecycle Configuration</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-12-14T19:12:42+00:00" itemprop="datePublished">Dec 14, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I was banging my head against the wall (not quite literally, but it was close) trying to come up with a S3 lifecycle configuration from scratch. I needed a JSON file that I can run in a bash script, so I can apply the lifecycle rules to a few dozen S3 buckets. Obviously, trying to create one from scratch wasn’t the wisest choice in my part. As it turns out, you can setup a temporary bucket and use the console to recreate the lifecycle, then export the lifecycle JSON file. Duh! Genius! Here’s the command to export the lifecycle configuration.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aws s3api get-bucket-lifecycle-configuration \
 --bucket bucket-name
@@ -74,6 +84,9 @@
 }
 </code></pre></div></div>
 
+  </div><a class="u-url" href="/cloud/2018/12/14/aws-cli-bucket-lifecycle-configuration.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
@@ -83,7 +96,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://0.0.0.0:4000/feed.xml">
+          <a href="/feed.xml">
             <svg class="svg-icon orange">
               <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>
