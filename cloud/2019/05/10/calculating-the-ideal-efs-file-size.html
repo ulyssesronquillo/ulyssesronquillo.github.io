@@ -6,7 +6,7 @@
 <title>Calculating the Ideal EFS File Size | uly.me</title>
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Calculating the Ideal EFS File Size" />
-<meta name="author" content="Ulysses" />
+<meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="AWS EFS runs on burst credits when choosing burst mode, which is about 99% of most implementations. The reason for this is that provisioned throughput is very expensive. It’s a $6000 per month commitment. In burst mode, if the EFS volume is too small with heavy IO usage, the burst credits will nose dive. You will eventually run out of burst credits resulting in very poor IO performance. It will be slower than a floppy disk drive. We all know how old that technology is. In order to sustain your burst credits, you’ll need to add data, because more data means you’ll earn burst credits at a higher clip. Here’s how to calculate the ideal file size for an EFS system." />
 <meta property="og:description" content="AWS EFS runs on burst credits when choosing burst mode, which is about 99% of most implementations. The reason for this is that provisioned throughput is very expensive. It’s a $6000 per month commitment. In burst mode, if the EFS volume is too small with heavy IO usage, the burst credits will nose dive. You will eventually run out of burst credits resulting in very poor IO performance. It will be slower than a floppy disk drive. We all know how old that technology is. In order to sustain your burst credits, you’ll need to add data, because more data means you’ll earn burst credits at a higher clip. Here’s how to calculate the ideal file size for an EFS system." />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Calculating the Ideal EFS File Size" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ulysses"},"dateModified":"2019-05-10T04:47:41+00:00","datePublished":"2019-05-10T04:47:41+00:00","description":"AWS EFS runs on burst credits when choosing burst mode, which is about 99% of most implementations. The reason for this is that provisioned throughput is very expensive. It’s a $6000 per month commitment. In burst mode, if the EFS volume is too small with heavy IO usage, the burst credits will nose dive. You will eventually run out of burst credits resulting in very poor IO performance. It will be slower than a floppy disk drive. We all know how old that technology is. In order to sustain your burst credits, you’ll need to add data, because more data means you’ll earn burst credits at a higher clip. Here’s how to calculate the ideal file size for an EFS system.","headline":"Calculating the Ideal EFS File Size","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/cloud/2019/05/10/calculating-the-ideal-efs-file-size.html"},"url":"http://0.0.0.0:4000/cloud/2019/05/10/calculating-the-ideal-efs-file-size.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2019-05-10T04:47:41+00:00","datePublished":"2019-05-10T04:47:41+00:00","description":"AWS EFS runs on burst credits when choosing burst mode, which is about 99% of most implementations. The reason for this is that provisioned throughput is very expensive. It’s a $6000 per month commitment. In burst mode, if the EFS volume is too small with heavy IO usage, the burst credits will nose dive. You will eventually run out of burst credits resulting in very poor IO performance. It will be slower than a floppy disk drive. We all know how old that technology is. In order to sustain your burst credits, you’ll need to add data, because more data means you’ll earn burst credits at a higher clip. Here’s how to calculate the ideal file size for an EFS system.","headline":"Calculating the Ideal EFS File Size","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/cloud/2019/05/10/calculating-the-ideal-efs-file-size.html"},"url":"http://0.0.0.0:4000/cloud/2019/05/10/calculating-the-ideal-efs-file-size.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -46,7 +46,7 @@
         May 10, 2019
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">Ulysses</span></span></p>
+            <span class="p-author h-card" itemprop="name">ulysses</span></span></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
