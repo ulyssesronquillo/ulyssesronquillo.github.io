@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-16T06:31:59+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">PHP not able to run gcloud commands via shell_exec</title><link href="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html" rel="alternate" type="text/html" title="PHP not able to run gcloud commands via shell_exec" /><published>2023-12-15T00:00:00+00:00</published><updated>2023-12-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html"><![CDATA[<p>I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T02:02:01+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">switching-from-wordpress-to-jekyll</title><link href="http://0.0.0.0:4000/wordpress/2023/12/16/switching-from-wordpress-to-jekyll.html" rel="alternate" type="text/html" title="switching-from-wordpress-to-jekyll" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/wordpress/2023/12/16/switching-from-wordpress-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/wordpress/2023/12/16/switching-from-wordpress-to-jekyll.html"><![CDATA[<p>I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:</p>
+
+<ul>
+  <li>Cost</li>
+  <li>Speed</li>
+  <li>Security</li>
+</ul>
+
+<ol>
+  <li>Cost. Jekyll generates static website, meaning it can be hosted freely at Github. No more hosted VM’s. A savings of $120 per year.</li>
+  <li>Speed. Since Jekyll pages are static HTML pages, the website loads much faster. No more PHP, plugins or databases slowing down the pages.</li>
+  <li>Security. Since Jekyll pages are static HTML pages, it does not need a LAMP stack. No more PHP or MySQL databases to securely maintain.</li>
+</ol>
+
+<p>The migration was quick and easy, but not entirely 100% bug-free. I had to tweak the Jekyll templates here and there to get it to look the way I wanted it.</p>
+
+<p>There are a ton of articles out there that covers the Jeklly to WordPress migration. So, I’m not going to cover the migration process step by step here.</p>
+
+<p>To quickly summarize, you need to install a Jekyll exporter plugin in WordPress to export, then import your posts into Jekyll. That’s it in a nutshell.</p>]]></content><author><name>ulysses</name></author><category term="Wordpress" /><category term="wordpress" /><category term="switching" /><category term="jekyll" /><summary type="html"><![CDATA[I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:]]></summary></entry><entry><title type="html">PHP not able to run gcloud commands via shell_exec</title><link href="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html" rel="alternate" type="text/html" title="PHP not able to run gcloud commands via shell_exec" /><published>2023-12-15T00:00:00+00:00</published><updated>2023-12-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html"><![CDATA[<p>I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.</p>
 
 <p>I ended up granting the <strong>apache</strong> user access to <strong>/usr/share/httpd/.config</strong> directory which was missing.</p>
 
@@ -197,7 +215,4 @@ done
 --format="csv[separator=','](sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
 --sort-by "~creationTimestamp" \
 --project="$PROJECT" &gt; output.csv
-</code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="csv" /><category term="format" /><category term="gcloud" /><category term="gcp" /><category term="output" /><category term="table" /><summary type="html"><![CDATA[Differences using gcloud table vs CSV format.]]></summary></entry><entry><title type="html">GCP Cloud Shell Format</title><link href="http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format.html" rel="alternate" type="text/html" title="GCP Cloud Shell Format" /><published>2023-09-18T19:53:48+00:00</published><updated>2023-09-18T19:53:48+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/09/18/gcp-cloud-shell-format.html"><![CDATA[<p>If you are getting funky formatting in GCP Cloud Shell, run this to set the format.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud config set accessibility/screen_reader False
-</code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="cloud" /><category term="format" /><category term="gcp" /><category term="set" /><category term="shell" /><summary type="html"><![CDATA[If you are getting funky formatting in GCP Cloud Shell, run this to set the format.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Ulysses</name></author><category term="Cloud" /><category term="csv" /><category term="format" /><category term="gcloud" /><category term="gcp" /><category term="output" /><category term="table" /><summary type="html"><![CDATA[Differences using gcloud table vs CSV format.]]></summary></entry></feed>
