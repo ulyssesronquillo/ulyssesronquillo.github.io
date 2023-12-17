@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T09:07:34+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Editing multiple files</title><link href="http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files.html" rel="alternate" type="text/html" title="Editing multiple files" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files.html"><![CDATA[<p>Editing 1000+ files is not fun. Here’s a script that cycles through certain files in a directory and performs a search and replace.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T13:21:41+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Using internal links</title><link href="http://0.0.0.0:4000/linux/2023/12/17/using-internal-links.html" rel="alternate" type="text/html" title="Using internal links" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/17/using-internal-links</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/17/using-internal-links.html"><![CDATA[<p>Here’s how to use internal links within Jekyll. Use this format.</p>
+
+<p><strong>[Some Link]({% post_url 2010-07-21-name-of-post %})</strong></p>
+
+<p>I had to convert code to HTML characters to render properly.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="jekyll" /><category term="internal" /><category term="links" /><summary type="html"><![CDATA[Here’s how to use internal links within Jekyll. Use this format.]]></summary></entry><entry><title type="html">Editing multiple files</title><link href="http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files.html" rel="alternate" type="text/html" title="Editing multiple files" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files.html"><![CDATA[<p>Editing 1000+ files is not fun. Here’s a script that cycles through certain files in a directory and performs a search and replace.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 for filename in 20*.md; do
@@ -8,7 +12,9 @@ done
 
 <p>In this particular script, it looks for files starting with 20 with an extension of .md.</p>
 
-<p>The script uses the <strong>sed command</strong> to perform search and replace.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="edit" /><category term="multiple" /><category term="files" /><category term="sed" /><summary type="html"><![CDATA[Editing 1000+ files is not fun. Here’s a script that cycles through certain files in a directory and performs a search and replace.]]></summary></entry><entry><title type="html">Switching from wordpress to jekyll</title><link href="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html" rel="alternate" type="text/html" title="Switching from wordpress to jekyll" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"><![CDATA[<p>I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:</p>
+<p>The script uses the <strong>sed command</strong> to perform search and replace.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="edit" /><category term="multiple" /><category term="files" /><category term="sed" /><summary type="html"><![CDATA[Editing 1000+ files is not fun. Here’s a script that cycles through certain files in a directory and performs a search and replace.]]></summary></entry><entry><title type="html">Switching from wordpress to jekyll</title><link href="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html" rel="alternate" type="text/html" title="Switching from wordpress to jekyll" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"><![CDATA[<p>I recently migrated this blog from WordPress to Jekyll due to several reasons.</p>
+
+<p>It came down to these three reasons:</p>
 
 <ul>
   <li>Cost</li>
@@ -17,16 +23,14 @@ done
 </ul>
 
 <ol>
-  <li>Cost. Jekyll generates static website, meaning it can be hosted freely at Github. No more hosted VM’s. A savings of $120 per year.</li>
-  <li>Speed. Since Jekyll pages are static HTML pages, the website loads much faster. No more PHP, plugins or databases slowing down the pages.</li>
-  <li>Security. Since Jekyll pages are static HTML pages, it does not need a LAMP stack. No more PHP or MySQL databases to securely maintain.</li>
+  <li>Cost. Jekyll generates static websites, meaning it can be hosted freely at Github. No more hosted VM’s. That’s a savings of $120 per year.</li>
+  <li>Speed. Since Jekyll pages are static HTML pages, websites loads much faster. There are no more PHP, extra plugins or databases that slow down pages.</li>
+  <li>Security. Since Jekyll pages are static files, they do not need a LAMP stack. So no more OS, PHP, plugins or MySQL databases to securely maintain.</li>
 </ol>
 
-<p>The migration was quick and easy, but not entirely 100% bug-free. I had to tweak the Jekyll templates here and there to get it to look the way I wanted it.</p>
+<p>It’s a win win. The migration was quick and easy, but not it’s not entirely a 100% bug-free. I had to tweak Jekyll templates here and there to get it to look the way I wanted it. There are a ton of articles out there that covers the Jeklly to WordPress migration. I’m not going to cover the migration process here step by step. To quickly summarize, you’ll need to install a Jekyll exporter plugin in WordPress to export your posts. You can then import your posts into Jekyll and tweak Jekyll the way you want it. That’s it in a nutshell.</p>
 
-<p>There are a ton of articles out there that covers the Jeklly to WordPress migration. So, I’m not going to cover the migration process step by step here.</p>
-
-<p>To quickly summarize, you need to install a Jekyll exporter plugin in WordPress to export, then import your posts into Jekyll. That’s it in a nutshell.</p>]]></content><author><name>ulysses</name></author><category term="wp" /><category term="wordpress" /><category term="switching" /><category term="jekyll" /><summary type="html"><![CDATA[I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:]]></summary></entry><entry><title type="html">PHP not able to run gcloud commands via shell_exec</title><link href="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html" rel="alternate" type="text/html" title="PHP not able to run gcloud commands via shell_exec" /><published>2023-12-15T00:00:00+00:00</published><updated>2023-12-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html"><![CDATA[<p>I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.</p>
+<p>By the way, I’m running Jekyll in a Docker. If you are interested, here are the <a href="/linux/2022/08/31/jekyll-on-docker-container.html">instructions</a> to run Jekyll in a Docker container.</p>]]></content><author><name>ulysses</name></author><category term="wp" /><category term="wordpress" /><category term="switching" /><category term="jekyll" /><summary type="html"><![CDATA[I recently migrated this blog from WordPress to Jekyll due to several reasons.]]></summary></entry><entry><title type="html">PHP not able to run gcloud commands via shell_exec</title><link href="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html" rel="alternate" type="text/html" title="PHP not able to run gcloud commands via shell_exec" /><published>2023-12-15T00:00:00+00:00</published><updated>2023-12-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html"><![CDATA[<p>I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.</p>
 
 <p>I ended up granting the <strong>apache</strong> user access to <strong>/usr/share/httpd/.config</strong> directory which was missing.</p>
 
@@ -169,33 +173,4 @@ new_access_key_id=$(echo "$new_access_keys_json" | grep -o '"AccessKeyId": "[^"]
 new_access_secret_key=$(echo "$new_access_keys_json" | grep -o '"SecretAccessKey": "[^"]*' | sed 's/"SecretAccessKey": "//')
 </code></pre></div></div>
 
-<p>In this example, we are creating new AWS IAM credentials. AccessKeyID and secretKey are extracted from JSON.</p>]]></content><author><name>ulysses</name></author><category term="Cloud" /><category term="Linux" /><category term="alternative" /><category term="aws" /><category term="grep" /><category term="jq" /><category term="json" /><category term="parser" /><category term="sed" /><summary type="html"><![CDATA[If you don’t have JQ (JSON Parser) installed, you can use a combination of echo, grep and sed to pull out the data.]]></summary></entry><entry><title type="html">Bash Split A String With Delimiter</title><link href="http://0.0.0.0:4000/linux/2023/09/18/bash-split-a-string-with-delimiter.html" rel="alternate" type="text/html" title="Bash Split A String With Delimiter" /><published>2023-09-18T22:33:33+00:00</published><updated>2023-09-18T22:33:33+00:00</updated><id>http://0.0.0.0:4000/linux/2023/09/18/bash-split-a-string-with-delimiter</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/09/18/bash-split-a-string-with-delimiter.html"><![CDATA[<p>Here’s how to split a string that contains a delimeter.</p>
-
-<p>String</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server-boot;server-data
-</code></pre></div></div>
-
-<p>Split the string and print on every line.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data="server-boot;server-data"
-for i in $(echo $data | tr ";" "\n"); do
-  echo $i
-done
-</code></pre></div></div>
-
-<p>Result</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server-boot
-server-data
-</code></pre></div></div>
-
-<p>Send output to a file</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file="output.txt"
-&gt; $file
-data="server-boot;server-data"
-for i in $(echo $data | tr ";" "\n"); do
-  echo $i &gt;&gt; $file
-done
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="bash" /><category term="delimeter" /><category term="lines" /><category term="multiple" /><category term="output" /><category term="split" /><category term="string" /><summary type="html"><![CDATA[Here’s how to split a string that contains a delimeter.]]></summary></entry></feed>
+<p>In this example, we are creating new AWS IAM credentials. AccessKeyID and secretKey are extracted from JSON.</p>]]></content><author><name>ulysses</name></author><category term="Cloud" /><category term="Linux" /><category term="alternative" /><category term="aws" /><category term="grep" /><category term="jq" /><category term="json" /><category term="parser" /><category term="sed" /><summary type="html"><![CDATA[If you don’t have JQ (JSON Parser) installed, you can use a combination of echo, grep and sed to pull out the data.]]></summary></entry></feed>

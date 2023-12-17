@@ -8,8 +8,8 @@
 <meta property="og:title" content="Switching from wordpress to jekyll" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:" />
-<meta property="og:description" content="I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:" />
+<meta name="description" content="I recently migrated this blog from WordPress to Jekyll due to several reasons." />
+<meta property="og:description" content="I recently migrated this blog from WordPress to Jekyll due to several reasons." />
 <link rel="canonical" href="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html" />
 <meta property="og:url" content="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html" />
 <meta property="og:site_name" content="uly.me" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Switching from wordpress to jekyll" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-16T00:00:00+00:00","datePublished":"2023-12-16T00:00:00+00:00","description":"I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:","headline":"Switching from wordpress to jekyll","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"},"url":"http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-16T00:00:00+00:00","datePublished":"2023-12-16T00:00:00+00:00","description":"I recently migrated this blog from WordPress to Jekyll due to several reasons.","headline":"Switching from wordpress to jekyll","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"},"url":"http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -50,7 +50,9 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:</p>
+    <p>I recently migrated this blog from WordPress to Jekyll due to several reasons.</p>
+
+<p>It came down to these three reasons:</p>
 
 <ul>
   <li>Cost</li>
@@ -59,16 +61,14 @@
 </ul>
 
 <ol>
-  <li>Cost. Jekyll generates static website, meaning it can be hosted freely at Github. No more hosted VM’s. A savings of $120 per year.</li>
-  <li>Speed. Since Jekyll pages are static HTML pages, the website loads much faster. No more PHP, plugins or databases slowing down the pages.</li>
-  <li>Security. Since Jekyll pages are static HTML pages, it does not need a LAMP stack. No more PHP or MySQL databases to securely maintain.</li>
+  <li>Cost. Jekyll generates static websites, meaning it can be hosted freely at Github. No more hosted VM’s. That’s a savings of $120 per year.</li>
+  <li>Speed. Since Jekyll pages are static HTML pages, websites loads much faster. There are no more PHP, extra plugins or databases that slow down pages.</li>
+  <li>Security. Since Jekyll pages are static files, they do not need a LAMP stack. So no more OS, PHP, plugins or MySQL databases to securely maintain.</li>
 </ol>
 
-<p>The migration was quick and easy, but not entirely 100% bug-free. I had to tweak the Jekyll templates here and there to get it to look the way I wanted it.</p>
+<p>It’s a win win. The migration was quick and easy, but not it’s not entirely a 100% bug-free. I had to tweak Jekyll templates here and there to get it to look the way I wanted it. There are a ton of articles out there that covers the Jeklly to WordPress migration. I’m not going to cover the migration process here step by step. To quickly summarize, you’ll need to install a Jekyll exporter plugin in WordPress to export your posts. You can then import your posts into Jekyll and tweak Jekyll the way you want it. That’s it in a nutshell.</p>
 
-<p>There are a ton of articles out there that covers the Jeklly to WordPress migration. So, I’m not going to cover the migration process step by step here.</p>
-
-<p>To quickly summarize, you need to install a Jekyll exporter plugin in WordPress to export, then import your posts into Jekyll. That’s it in a nutshell.</p>
+<p>By the way, I’m running Jekyll in a Docker. If you are interested, here are the <a href="/linux/2022/08/31/jekyll-on-docker-container.html">instructions</a> to run Jekyll in a Docker container.</p>
 
   </div><a class="u-url" href="/wp/2023/12/16/switching-from-wordpress-to-jekyll.html" hidden></a>
 </article>

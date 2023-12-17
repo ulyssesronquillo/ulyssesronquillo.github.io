@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "Using internal links",
+      "url"      : "/linux/2023/12/17/using-internal-links.html",
+      "category" : "",
+      "tags"     : "jekyll, internal, links",
+      "date"     : "2023-12-17 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "Switching from wordpress to jekyll",
       "url"      : "/wp/2023/12/16/switching-from-wordpress-to-jekyll.html",
       "category" : "",
