@@ -12,6 +12,16 @@
   
     {
 
+      "title"    : "Editing multiple files",
+      "url"      : "/linux/2023/12/16/editing-multiple-files.html",
+      "category" : "",
+      "tags"     : "edit, multiple, files, sed",
+      "date"     : "2023-12-16 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "Php not able to run gcloud commands via shell_exec",
       "url"      : "/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html",
       "category" : "",

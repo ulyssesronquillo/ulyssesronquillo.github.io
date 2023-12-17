@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T02:59:28+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Switching from wordpress to jekyll</title><link href="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html" rel="alternate" type="text/html" title="Switching from wordpress to jekyll" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"><![CDATA[<p>I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T09:07:34+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Editing multiple files</title><link href="http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files.html" rel="alternate" type="text/html" title="Editing multiple files" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/16/editing-multiple-files.html"><![CDATA[<p>Editing 1000+ files is not fun. Here’s a script that cycles through certain files in a directory and performs a search and replace.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+for filename in 20*.md; do
+  sed -i -e 's/author: Ulysses/author: ulysses/g' $filename
+done
+</code></pre></div></div>
+
+<p>In this particular script, it looks for files starting with 20 with an extension of .md.</p>
+
+<p>The script uses the <strong>sed command</strong> to perform search and replace.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="edit" /><category term="multiple" /><category term="files" /><category term="sed" /><summary type="html"><![CDATA[Editing 1000+ files is not fun. Here’s a script that cycles through certain files in a directory and performs a search and replace.]]></summary></entry><entry><title type="html">Switching from wordpress to jekyll</title><link href="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html" rel="alternate" type="text/html" title="Switching from wordpress to jekyll" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"><![CDATA[<p>I recently migrated this blog from WordPress to Jekyll due to several reasons. They were:</p>
 
 <ul>
   <li>Cost</li>
@@ -188,31 +198,4 @@ data="server-boot;server-data"
 for i in $(echo $data | tr ";" "\n"); do
   echo $i &gt;&gt; $file
 done
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="bash" /><category term="delimeter" /><category term="lines" /><category term="multiple" /><category term="output" /><category term="split" /><category term="string" /><summary type="html"><![CDATA[Here’s how to split a string that contains a delimeter.]]></summary></entry><entry><title type="html">Gcloud Table vs CSV Format</title><link href="http://0.0.0.0:4000/cloud/2023/09/18/gcloud-table-vs-csv-format.html" rel="alternate" type="text/html" title="Gcloud Table vs CSV Format" /><published>2023-09-18T20:36:45+00:00</published><updated>2023-09-18T20:36:45+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/09/18/gcloud-table-vs-csv-format</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/09/18/gcloud-table-vs-csv-format.html"><![CDATA[<p>Differences using gcloud table vs CSV format.</p>
-
-<p>Table format</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
---filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
---format="table(sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
---sort-by "~creationTimestamp" \
---project="$PROJECT"
-</code></pre></div></div>
-
-<p>CSV format</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
---filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
---format="csv[separator=','](sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
---sort-by "~creationTimestamp" \
---project="$PROJECT"
-</code></pre></div></div>
-
-<p>Output to file</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute snapshots list \
---filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
---format="csv[separator=','](sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
---sort-by "~creationTimestamp" \
---project="$PROJECT" &gt; output.csv
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="Cloud" /><category term="csv" /><category term="format" /><category term="gcloud" /><category term="gcp" /><category term="output" /><category term="table" /><summary type="html"><![CDATA[Differences using gcloud table vs CSV format.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="bash" /><category term="delimeter" /><category term="lines" /><category term="multiple" /><category term="output" /><category term="split" /><category term="string" /><summary type="html"><![CDATA[Here’s how to split a string that contains a delimeter.]]></summary></entry></feed>
