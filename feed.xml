@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T23:24:44+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Multiple github accounts</title><link href="http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html" rel="alternate" type="text/html" title="Multiple github accounts" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html"><![CDATA[<p>I have two Github accounts. The first account was cloned using HTTPS. Instead of messing around with multiple accounts with your credentials, I’ve decided to just clone the second repo using SSH. This was mainly done to avoid setting up multiple accounts and simplify use.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-18T18:17:11+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Strip new lines on variables</title><link href="http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables.html" rel="alternate" type="text/html" title="Strip new lines on variables" /><published>2023-12-18T00:00:00+00:00</published><updated>2023-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables.html"><![CDATA[<p>I had problems echoing four variables into one line. There seem to be some carriage return or new line somewhere that’s not visible.</p>
+
+<p>So, here’s a line of code that will strip any new line or carriage return in the variable, and then use printf to display the variables on one line.</p>
+
+<p>Strip the new lines.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>efs="${efs//$'\n'/ }"
+name="${name//$'\n'/}"
+total="${total//$'\n'/ }"
+mesg="${mesg//$'\n'/}"
+</code></pre></div></div>
+
+<p>Now print them using printf on one line.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>printf "%-30s %-40s %-20s %-30s\n" "$efs" "$new" "$total" "$mesg"
+</code></pre></div></div>
+
+<p>With that code, I’m now able to format my report nicely without the extra new lines.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="strip" /><category term="new lines" /><category term="variables" /><category term="bash" /><category term="echo" /><summary type="html"><![CDATA[I had problems echoing four variables into one line. There seem to be some carriage return or new line somewhere that’s not visible.]]></summary></entry><entry><title type="html">Multiple github accounts</title><link href="http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html" rel="alternate" type="text/html" title="Multiple github accounts" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html"><![CDATA[<p>I have two Github accounts. The first account was cloned using HTTPS. Instead of messing around with multiple accounts with your credentials, I’ve decided to just clone the second repo using SSH. This was mainly done to avoid setting up multiple accounts and simplify use.</p>
 
 <ul>
   <li>First repo - cloned using HTTPS</li>
@@ -123,55 +140,4 @@ Matt 25
 Matt 25
 </code></pre></div></div>
 
-<p>You can easily adjust this to other columns.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="awk" /><category term="bash" /><category term="column" /><category term="display" /><category term="search" /><category term="second" /><summary type="html"><![CDATA[How to search the second column for string starting with.]]></summary></entry><entry><title type="html">Lambda Function List EC2 Instances</title><link href="http://0.0.0.0:4000/cloud/2023/10/18/lambda-function-list-ec2-instances.html" rel="alternate" type="text/html" title="Lambda Function List EC2 Instances" /><published>2023-10-18T20:26:19+00:00</published><updated>2023-10-18T20:26:19+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/10/18/lambda-function-list-ec2-instances</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/10/18/lambda-function-list-ec2-instances.html"><![CDATA[<p>This is a Lambda function code that list EC2 instances from multiple regions and write the output to a S3 bucket.</p>
-
-<p>Include name and IP address on the output.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import boto3
-import json
-import os
-from botocore.exceptions import NoCredentialsError
-
-# Set the AWS regions you want to query
-regions = ['us-east-1', 'us-west-2', 'eu-west-1']
-
-# Set the S3 bucket and object key for storing the output
-s3_bucket = 'your-s3-bucket-name'
-s3_object_key = 'ec2-instances-list.txt'
-
-def lambda_handler(event, context):
-    ec2_instances = []
-
-    for region in regions:
-        try:
-            # Create an EC2 client for the specified region
-            ec2 = boto3.client('ec2', region_name=region)
-
-            # Describe EC2 instances in the region
-            response = ec2.describe_instances()
-
-            for reservation in response['Reservations']:
-                for instance in reservation['Instances']:
-                    # Extract instance information
-                    instance_name = "N/A"
-                    instance_ip = "N/A"
-                    for tag in instance.get('Tags', []):
-                        if tag['Key'] == 'Name':
-                            instance_name = tag['Value']
-                    if instance.get('PublicIpAddress'):
-                        instance_ip = instance['PublicIpAddress']
-
-                    ec2_instances.append(f"Region: {region}, Name: {instance_name}, IP: {instance_ip}")
-
-        except NoCredentialsError:
-            return "No AWS credentials found."
-
-    # Store the EC2 instance information in an S3 object
-    s3 = boto3.client('s3')
-    s3.put_object(Bucket=s3_bucket, Key=s3_object_key, Body='\n'.join(ec2_instances), ContentType='text/plain')
-
-    return {
-        "statusCode": 200,
-        "body": json.dumps("EC2 instance information has been saved to S3.")
-    }
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="Cloud" /><category term="bucket" /><category term="ec2" /><category term="instances" /><category term="lambda" /><category term="list" /><category term="python" /><category term="s3" /><summary type="html"><![CDATA[This is a Lambda function code that list EC2 instances from multiple regions and write the output to a S3 bucket.]]></summary></entry></feed>
+<p>You can easily adjust this to other columns.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="awk" /><category term="bash" /><category term="column" /><category term="display" /><category term="search" /><category term="second" /><summary type="html"><![CDATA[How to search the second column for string starting with.]]></summary></entry></feed>
