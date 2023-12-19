@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-18T18:17:11+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Strip new lines on variables</title><link href="http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables.html" rel="alternate" type="text/html" title="Strip new lines on variables" /><published>2023-12-18T00:00:00+00:00</published><updated>2023-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables.html"><![CDATA[<p>I had problems echoing four variables into one line. There seem to be some carriage return or new line somewhere that’s not visible.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-19T12:47:38+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Gcp vm list all snapshots</title><link href="http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots.html" rel="alternate" type="text/html" title="Gcp vm list all snapshots" /><published>2023-12-19T00:00:00+00:00</published><updated>2023-12-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots.html"><![CDATA[<p>Here’s how to list all the snapshots for a particular VM in GCP.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+if [ "$#" -ne 3 ]
+then
+  echo "Usage: ./gcp-list-all-snapshots.sh project server policy"
+  exit
+fi
+
+# Set the name of the snapshot schedule policy and the disk name to filter by
+PROJECT=$1            # PROJECT="projectId"
+SERVER=$2             # DISK_NAME="hostname"
+POLICY=$3             # POLICY_NAME="hourly or daily"
+
+disks=$(gcloud compute disks list --project $PROJECT --filter="name~$SERVER" --format="value(name)") 
+
+for disk in $disks; do
+
+  # List all snapshots created by the snapshot schedule policy
+  gcloud compute snapshots list \
+  --filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
+  --format="table(sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
+  --sort-by "~creationTimestamp" \
+  --project="$PROJECT"
+
+done
+</code></pre></div></div>
+
+<p>The script requires three arguments: projectId, hostname and policy.</p>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gpc" /><category term="vm" /><category term="list" /><category term="snapshots" /><summary type="html"><![CDATA[Here’s how to list all the snapshots for a particular VM in GCP.]]></summary></entry><entry><title type="html">Strip new lines on variables</title><link href="http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables.html" rel="alternate" type="text/html" title="Strip new lines on variables" /><published>2023-12-18T00:00:00+00:00</published><updated>2023-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables.html"><![CDATA[<p>I had problems echoing four variables into one line. There seem to be some carriage return or new line somewhere that’s not visible.</p>
 
 <p>So, here’s a line of code that will strip any new line or carriage return in the variable, and then use printf to display the variables on one line.</p>
 
@@ -118,26 +147,4 @@ else
 fi
 </code></pre></div></div>
 
-<p>Enjoy.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="convert" /><category term="imagemagick" /><category term="thumbnail" /><category term="upload" /><category term="youtube" /><summary type="html"><![CDATA[When uploading videos, Youtube gives you an option to upload your own thumbnails. If you want to use your own pics, you can format them to 1280×720 pixels and use it as a thumbnail. The script below will resize any image regardless of the original size to 1280×720 pixels using the convert utility of ImageMagick. The conversion may crop the edges of your image if it’s not 16:9 or 1.777 format. The script will also resize an image in portrait format.]]></summary></entry><entry><title type="html">Search Second Column for Characters</title><link href="http://0.0.0.0:4000/linux/2023/10/24/search-second-column-for-characters.html" rel="alternate" type="text/html" title="Search Second Column for Characters" /><published>2023-10-24T19:42:05+00:00</published><updated>2023-10-24T19:42:05+00:00</updated><id>http://0.0.0.0:4000/linux/2023/10/24/search-second-column-for-characters</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/10/24/search-second-column-for-characters.html"><![CDATA[<p>How to search the second column for string starting with.</p>
-
-<p>Here are the contents of results.txt.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>John 10
-Mario 12
-Derek 15
-Mark 20
-Matt 25
-</code></pre></div></div>
-
-<p>Display only individuals that are older than 20 using awk.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk '$2 ~ /^20/' results.txt
-</code></pre></div></div>
-
-<p>Result.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mark 20
-Matt 25
-</code></pre></div></div>
-
-<p>You can easily adjust this to other columns.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="awk" /><category term="bash" /><category term="column" /><category term="display" /><category term="search" /><category term="second" /><summary type="html"><![CDATA[How to search the second column for string starting with.]]></summary></entry></feed>
+<p>Enjoy.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="convert" /><category term="imagemagick" /><category term="thumbnail" /><category term="upload" /><category term="youtube" /><summary type="html"><![CDATA[When uploading videos, Youtube gives you an option to upload your own thumbnails. If you want to use your own pics, you can format them to 1280×720 pixels and use it as a thumbnail. The script below will resize any image regardless of the original size to 1280×720 pixels using the convert utility of ImageMagick. The conversion may crop the edges of your image if it’s not 16:9 or 1.777 format. The script will also resize an image in portrait format.]]></summary></entry></feed>
