@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "Jekyll new post script",
+      "url"      : "/linux/2023/12/19/jekyll-new-post-script.html",
+      "category" : "",
+      "tags"     : "jekyll, new, post, script",
+      "date"     : "2023-12-19 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "Gcp vm list all snapshots",
       "url"      : "/cloud/2023/12/19/gcp-vm-list-all-snapshots.html",
       "category" : "",

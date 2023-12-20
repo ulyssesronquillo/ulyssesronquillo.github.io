@@ -208,8 +208,8 @@ strong {
  */
 .wrapper {
   font-size: 18px;
-  max-width: -webkit-calc(1500px - (30px * 2));
-  max-width: 1440px;
+  max-width: -webkit-calc(1280px - (30px * 2));
+  max-width: 1220px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
@@ -218,8 +218,8 @@ strong {
 
 @media screen and (max-width: 1200px) {
   .wrapper {
-    max-width: -webkit-calc(1500px - (30px));
-    max-width: 1470px;
+    max-width: -webkit-calc(1280px - (30px));
+    max-width: 1250px;
     padding-right: 15px;
     padding-left: 15px;
   }
