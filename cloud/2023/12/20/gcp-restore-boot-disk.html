@@ -57,6 +57,7 @@
 read -p "projectId : " project
 read -p "instance  : " instance
 read -p "zone      : " zone
+read -p "policy    : " policy
 read -p "snapback  : " snapback
 
 function checkLogin() {
@@ -96,7 +97,7 @@ function getSnaps() {
 
     echo "Listing snapshots to restore for $instance ... "
  
-    snap=$(gcloud compute snapshots list --filter="sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+    snap=$(gcloud compute snapshots list --filter="sourceSnapshotSchedulePolicy ~ $policy AND sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
     echo "$disk: $snap" 
 
 
