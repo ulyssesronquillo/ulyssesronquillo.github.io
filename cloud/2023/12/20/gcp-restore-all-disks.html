@@ -101,7 +101,8 @@ function getSnaps() {
 
     for disk in $disks; do
 
-        snap=$(gcloud compute snapshots list --filter="sourceSnapshotSchedulePolicy ~ $policy AND sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+        snap=$(gcloud compute snapshots list --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+
         echo "$disk: $snap" 
 
     done 

@@ -97,9 +97,9 @@ function getSnaps() {
 
     echo "Listing snapshots to restore for $instance ... "
  
-    snap=$(gcloud compute snapshots list --filter="sourceSnapshotSchedulePolicy ~ $policy AND sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
-    echo "$disk: $snap" 
+    snap=$(gcloud compute snapshots list --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
 
+    echo "$disk: $snap" 
 
 }
 
