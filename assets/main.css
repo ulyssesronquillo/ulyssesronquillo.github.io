@@ -133,7 +133,7 @@ blockquote > :last-child {
  */
 pre,
 code {
-  font-size: 14px;
+  font-size: 13px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
   background-color: #eef;
@@ -196,7 +196,7 @@ ul#results-container li {
 
 .highlight code {
   font-family: "Source Code Pro", monospace;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 strong {

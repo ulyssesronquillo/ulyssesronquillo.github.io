@@ -1,4 +1,291 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-20T04:08:54+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Gcp vm list all snapshots</title><link href="http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots.html" rel="alternate" type="text/html" title="Gcp vm list all snapshots" /><published>2023-12-19T00:00:00+00:00</published><updated>2023-12-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots.html"><![CDATA[<p>Here’s how to list all the snapshots for a particular VM in GCP.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-20T17:24:42+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Gcp restore all disks</title><link href="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks.html" rel="alternate" type="text/html" title="Gcp restore all disks" /><published>2023-12-20T00:00:00+00:00</published><updated>2023-12-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks.html"><![CDATA[<p>Here’s my latest script on how to restore all disks of a VM in GCP.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+read -p "projectId : " project
+read -p "instance  : " instance
+read -p "zone      : " zone
+read -p "snapback  : " snapback
+
+function checkLogin() {
+
+    user=$(gcloud config list account --format "value(core.account)")
+    user=$(echo $user | cut -d@ -f1)
+    user=${user/./-}
+
+    if [ -z "$user" ]; then
+    echo "You're not logged in to Google SDK."
+    exit
+    fi
+
+}
+
+function displayHeader() {
+
+    echo "######################################################"
+    echo "Starting the restore process for $instance "
+    echo "######################################################"
+
+}
+
+function getDisks() {
+
+    disks=$(gcloud compute disks list --filter="users:$instance" --format="value(name)" --project "$project")
+
+    echo "Listing disks for $instance ... "
+
+    for disk in $disks; do
+
+        echo $disk
+    
+    done
+
+}
+
+function getSnaps() {
+
+    echo "Listing snapshots to restore for $instance ... "
+
+    for disk in $disks; do
+
+        snap=$(gcloud compute snapshots list --filter="sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+        echo "$disk: $snap" 
+
+    done 
+
+}
+
+function stopServer() {
+
+    echo "Stopping server ..."
+
+    gcloud compute instances stop $instance --zone="$zone" --project="$project"
+
+}
+
+function detachDisks() {
+
+    echo "Detaching disks ..."
+
+    for disk in $disks; do
+
+        gcloud compute instances detach-disk $instance --disk="$disk" --zone="$zone" --project="$project"
+
+    done 
+
+}
+
+function deleteDisks() {
+
+    echo "Deleting disks ..."
+
+    for disk in $disks; do
+
+        gcloud compute disks delete "$disk" --zone="$zone" --project="$project"
+
+    done
+
+}
+
+function createDisks() {
+
+    echo "Creating disks ..."
+
+    for disk in $disks; do
+
+        snap=$(gcloud compute snapshots list --filter="sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+
+        gcloud compute disks create "$disk" --source-snapshot="$snap" --zone="$zone" --project="$project"
+
+    done
+
+}
+
+function attachDisks() {
+
+    echo "Attaching disks ..."
+
+    count=1
+
+    for disk in $disks; do
+
+        if [ $count == 1 ]; then 
+            gcloud compute instances attach-disk "$instance" --disk="$disk" --device-name="$disk" --zone="$zone" --project="$project" --boot
+        else 
+            gcloud compute instances attach-disk "$instance" --disk="$disk" --device-name="$disk" --zone="$zone" --project="$project"
+        fi
+
+        count=$count+1
+
+    done 
+
+}
+
+function setAutodelete() {
+
+    echo "Setting autodelete on disks ..."
+
+    for disk in $disks; do
+
+        gcloud compute instances set-disk-auto-delete "$instance" --auto-delete --disk="$disk" --zone="$zone" --project="$project"
+
+    done 
+
+}
+
+function startServer() {
+
+    echo "Starting server ..."
+
+    gcloud compute instances start "$instance" --zone="$zone" --project="$project"
+
+}
+
+checkLogin
+displayHeader
+getDisks
+getSnaps 
+
+read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    stopServer
+    detachDisks
+    deleteDisks
+    createDisks
+    attachDisks
+    setAutodelete
+    startServer
+fi
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="compute" /><category term="restore" /><category term="all" /><category term="disks" /><summary type="html"><![CDATA[Here’s my latest script on how to restore all disks of a VM in GCP.]]></summary></entry><entry><title type="html">Gcp restore boot disk</title><link href="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk.html" rel="alternate" type="text/html" title="Gcp restore boot disk" /><published>2023-12-20T00:00:00+00:00</published><updated>2023-12-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk.html"><![CDATA[<p>Here’s my latest script to restore the boot disk of a VM in GCP.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+read -p "projectId : " project
+read -p "instance  : " instance
+read -p "zone      : " zone
+read -p "snapback  : " snapback
+
+function checkLogin() {
+
+    user=$(gcloud config list account --format "value(core.account)")
+    user=$(echo $user | cut -d@ -f1)
+    user=${user/./-}
+
+    if [ -z "$user" ]; then
+    echo "You're not logged in to Google SDK."
+    exit
+    fi
+
+}
+
+function displayHeader() {
+
+    echo "######################################################"
+    echo "Starting the restore process for $instance "
+    echo "######################################################"
+
+}
+
+function getDisks() {
+
+    disks=$(gcloud compute instances describe $instance --project $project --zone $zone --format='get(disks[0].source)')
+
+    echo "Listing disks for $instance ... "
+
+    disk=$(echo ${disks##*/})
+
+    echo $disk
+
+}
+
+function getSnaps() {
+
+    echo "Listing snapshots to restore for $instance ... "
+ 
+    snap=$(gcloud compute snapshots list --filter="sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+    echo "$disk: $snap" 
+
+
+}
+
+function stopServer() {
+
+    echo "Stopping server ..."
+
+    gcloud compute instances stop $instance --zone="$zone" --project="$project"
+
+}
+
+function detachDisks() {
+
+    echo "Detaching disks ..."
+
+    gcloud compute instances detach-disk $instance --disk="$disk" --zone="$zone" --project="$project"
+
+}
+
+function deleteDisks() {
+
+    echo "Deleting disks ..."
+
+    gcloud compute disks delete "$disk" --zone="$zone" --project="$project"
+
+}
+
+function createDisks() {
+
+    echo "Creating disks ..."
+
+    snap=$(gcloud compute snapshots list --filter="sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+
+    gcloud compute disks create "$disk" --source-snapshot="$snap" --zone="$zone" --project="$project"
+
+}
+
+function attachDisks() {
+
+    echo "Attaching disks ..."
+
+    gcloud compute instances attach-disk "$instance" --disk="$disk" --device-name="$disk" --zone="$zone" --project="$project" --boot
+
+}
+
+function setAutodelete() {
+
+    echo "Setting autodelete on disks ..."
+
+    gcloud compute instances set-disk-auto-delete "$instance" --auto-delete --disk="$disk" --zone="$zone" --project="$project"
+
+}
+
+function startServer() {
+
+    echo "Starting server ..."
+
+    gcloud compute instances start "$instance" --zone="$zone" --project="$project"
+
+}
+
+checkLogin
+displayHeader
+getDisks
+getSnaps 
+
+read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    stopServer
+    detachDisks
+    deleteDisks
+    createDisks
+    attachDisks
+    setAutodelete
+    startServer
+fi
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="restore" /><category term="vm" /><category term="boot" /><category term="disk" /><summary type="html"><![CDATA[Here’s my latest script to restore the boot disk of a VM in GCP.]]></summary></entry><entry><title type="html">Gcp vm list all snapshots</title><link href="http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots.html" rel="alternate" type="text/html" title="Gcp vm list all snapshots" /><published>2023-12-19T00:00:00+00:00</published><updated>2023-12-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots.html"><![CDATA[<p>Here’s how to list all the snapshots for a particular VM in GCP.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -122,45 +409,4 @@ done
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /usr/share/httpd/.config
 chown apache:root /usr/share/httpd/.config
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="Cloud" /><category term="php" /><category term="shell_exec" /><category term="permissions" /><category term="config" /><summary type="html"><![CDATA[I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.]]></summary></entry><entry><title type="html">Hiding Passwords Using OpenSSL</title><link href="http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl.html" rel="alternate" type="text/html" title="Hiding Passwords Using OpenSSL" /><published>2023-10-31T17:06:54+00:00</published><updated>2023-10-31T17:06:54+00:00</updated><id>http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/10/31/hiding-passwords-using-openssl.html"><![CDATA[<p>How to hide main password on Linux using OpenSSL.</p>
-
-<p>Run this on a web server once.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo "SecretPassword" | openssl enc -aes-256-cbc -md sha512 -a -salt -pass pass:NotSoSecretPassword &gt; secret.txt  
-$ chmod 600 secret.txt
-</code></pre></div></div>
-
-<p>On client machine, download the secret file.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl https://webserver/some/dir/secret.txt --output -s secret.txt
-</code></pre></div></div>
-
-<p>To retrieve the secret password, run the code below. For added measure, delete secret.txt file afterwards.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat secret.txt | openssl enc -aes-256-cbc -md sha512 -a -d -salt -pass pass:NotSoSecretPassword
-$rm -f secret.txt
-</code></pre></div></div>
-
-<p>In addition, you can rotate the NotSoSecretPassword to make it more secure.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="hide" /><category term="obfuscate" /><category term="openssl" /><category term="password" /><summary type="html"><![CDATA[How to hide main password on Linux using OpenSSL.]]></summary></entry><entry><title type="html">Install Latest Terraform via Homebrew</title><link href="http://0.0.0.0:4000/linux/2023/10/27/install-latest-terraform-via-homebrew.html" rel="alternate" type="text/html" title="Install Latest Terraform via Homebrew" /><published>2023-10-27T14:40:49+00:00</published><updated>2023-10-27T14:40:49+00:00</updated><id>http://0.0.0.0:4000/linux/2023/10/27/install-latest-terraform-via-homebrew</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/10/27/install-latest-terraform-via-homebrew.html"><![CDATA[<p>As of this writing, the latest Terraform version supported by Homebrew is version 1.5.7. It’s a bit outdated considering the latest Terraform version is 1.6.2. To force Homebrew to install the latest version of Terraform, run the following commands from your MacOS Terminal. But prior to that, check your version first.</p>
-
-<p>Check current version</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform --version
-Terraform v1.5.7
-on darwin_amd64
-</code></pre></div></div>
-
-<p>Upgrade Terraform</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew tap hashicorp/tap
-$ brew install hashicorp/tap/terraform
-</code></pre></div></div>
-
-<p>Check version again</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform --version
-Terraform v1.6.2
-on darwin_amd64
-</code></pre></div></div>
-
-<p>That’s it.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="homebrew" /><category term="install" /><category term="latest" /><category term="terraform" /><summary type="html"><![CDATA[As of this writing, the latest Terraform version supported by Homebrew is version 1.5.7. It’s a bit outdated considering the latest Terraform version is 1.6.2. To force Homebrew to install the latest version of Terraform, run the following commands from your MacOS Terminal. But prior to that, check your version first.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="Cloud" /><category term="php" /><category term="shell_exec" /><category term="permissions" /><category term="config" /><summary type="html"><![CDATA[I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.]]></summary></entry></feed>
