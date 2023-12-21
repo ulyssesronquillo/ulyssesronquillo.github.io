@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "search replace lowercase",
+      "url"      : "/linux/2023/12/21/search-replace-lowercase.html",
+      "category" : "",
+      "tags"     : "search, replace, lowercase",
+      "date"     : "2023-12-21 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "gcp restore boot disk",
       "url"      : "/cloud/2023/12/20/gcp-restore-boot-disk.html",
       "category" : "",

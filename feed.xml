@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-21T04:29:11+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gcp restore all disks</title><link href="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks.html" rel="alternate" type="text/html" title="gcp restore all disks" /><published>2023-12-20T00:00:00+00:00</published><updated>2023-12-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks.html"><![CDATA[<p>Here’s my latest script on how to restore all disks of a VM in GCP.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-21T06:20:18+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Search replace lowercase</title><link href="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html" rel="alternate" type="text/html" title="Search replace lowercase" /><published>2023-12-21T00:00:00+00:00</published><updated>2023-12-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html"><![CDATA[<p>Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash 
+cd ~/Code/docker/ulyme/_posts
+function searchReplace() {
+    for filename in 20*.md; do
+        sed -i -e 's/title:.*/\L&amp;/g' $filename
+    done
+}
+searchReplace
+
+</code></pre></div></div>
+
+<p>It took a mere 2-3 seconds to convert all titles on over 1000 files.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="search" /><category term="replace" /><category term="lowercase" /><summary type="html"><![CDATA[Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.]]></summary></entry><entry><title type="html">gcp restore all disks</title><link href="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks.html" rel="alternate" type="text/html" title="gcp restore all disks" /><published>2023-12-20T00:00:00+00:00</published><updated>2023-12-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks.html"><![CDATA[<p>Here’s my latest script on how to restore all disks of a VM in GCP.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -469,12 +482,4 @@ done
 
 <p>It’s a win win. The migration was quick and easy, but not it’s not entirely a 100% bug-free. I had to tweak Jekyll templates here and there to get it to look the way I wanted it. There are a ton of articles out there that covers the Jeklly to WordPress migration. I’m not going to cover the migration process here step by step. To quickly summarize, you’ll need to install a Jekyll exporter plugin in WordPress to export your posts. You can then import your posts into Jekyll and tweak Jekyll the way you want it. That’s it in a nutshell.</p>
 
-<p>By the way, I’m running Jekyll in a Docker. If you are interested, here are the <a href="/linux/2022/08/31/jekyll-on-docker-container.html">instructions</a> to run Jekyll in a Docker container.</p>]]></content><author><name>ulysses</name></author><category term="wp" /><category term="wordpress" /><category term="switching" /><category term="jekyll" /><summary type="html"><![CDATA[I recently migrated this blog from WordPress to Jekyll due to several reasons.]]></summary></entry><entry><title type="html">php not able to run gcloud commands via shell_exec</title><link href="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html" rel="alternate" type="text/html" title="php not able to run gcloud commands via shell_exec" /><published>2023-12-15T00:00:00+00:00</published><updated>2023-12-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/15/php-not-able-to-run-gcloud-via-shell-exec.html"><![CDATA[<p>I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.</p>
-
-<p>I ended up granting the <strong>apache</strong> user access to <strong>/usr/share/httpd/.config</strong> directory which was missing.</p>
-
-<p>Google SDK needs write access to this directory. I ran the commands below and it worked after the changes.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /usr/share/httpd/.config
-chown apache:root /usr/share/httpd/.config
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="Cloud" /><category term="php" /><category term="shell_exec" /><category term="permissions" /><category term="config" /><summary type="html"><![CDATA[I ran into an issue with PHP not able to run gcloud commands via shell_exec. It turned out to be a permission issue.]]></summary></entry></feed>
+<p>By the way, I’m running Jekyll in a Docker. If you are interested, here are the <a href="/linux/2022/08/31/jekyll-on-docker-container.html">instructions</a> to run Jekyll in a Docker container.</p>]]></content><author><name>ulysses</name></author><category term="wp" /><category term="wordpress" /><category term="switching" /><category term="jekyll" /><summary type="html"><![CDATA[I recently migrated this blog from WordPress to Jekyll due to several reasons.]]></summary></entry></feed>
