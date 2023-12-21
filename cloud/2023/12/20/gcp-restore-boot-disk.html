@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Gcp restore boot disk | uly.me</title>
+<title>gcp restore boot disk | uly.me</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Gcp restore boot disk" />
+<meta property="og:title" content="gcp restore boot disk" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Here’s my latest script to restore the boot disk of a VM in GCP." />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-12-20T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Gcp restore boot disk" />
+<meta property="twitter:title" content="gcp restore boot disk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-20T00:00:00+00:00","datePublished":"2023-12-20T00:00:00+00:00","description":"Here’s my latest script to restore the boot disk of a VM in GCP.","headline":"Gcp restore boot disk","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk.html"},"url":"http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-20T00:00:00+00:00","datePublished":"2023-12-20T00:00:00+00:00","description":"Here’s my latest script to restore the boot disk of a VM in GCP.","headline":"gcp restore boot disk","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk.html"},"url":"http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -83,7 +83,10 @@ function displayHeader() {
 
 function getDisks() {
 
-    disks=$(gcloud compute instances describe $instance --project $project --zone $zone --format='get(disks[0].source)')
+    disks=$(gcloud compute instances describe $instance \
+      --project="$project" \
+      --zone="$zone" \
+      --format="get(disks[0].source)")
 
     echo "Listing disks for $instance ... "
 
@@ -97,7 +100,11 @@ function getSnaps() {
 
     echo "Listing snapshots to restore for $instance ... "
  
-    snap=$(gcloud compute snapshots list --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+    snap=$(gcloud compute snapshots list \
+      --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" \
+      --format="value(name)" \
+      --project="$project" \
+      --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
 
     echo "$disk: $snap" 
 
@@ -107,7 +114,9 @@ function stopServer() {
 
     echo "Stopping server ..."
 
-    gcloud compute instances stop $instance --zone="$zone" --project="$project"
+    gcloud compute instances stop $instance \
+      --zone="$zone" \
+      --project="$project"
 
 }
 
@@ -115,7 +124,10 @@ function detachDisks() {
 
     echo "Detaching disks ..."
 
-    gcloud compute instances detach-disk $instance --disk="$disk" --zone="$zone" --project="$project"
+    gcloud compute instances detach-disk $instance \
+      --disk="$disk" \
+      --zone="$zone" \
+      --project="$project"
 
 }
 
@@ -123,7 +135,9 @@ function deleteDisks() {
 
     echo "Deleting disks ..."
 
-    gcloud compute disks delete "$disk" --zone="$zone" --project="$project"
+    gcloud compute disks delete $disk \
+      --zone="$zone" \
+      --project="$project"
 
 }
 
@@ -131,9 +145,16 @@ function createDisks() {
 
     echo "Creating disks ..."
 
-    snap=$(gcloud compute snapshots list --filter="sourceDisk~$disk" --format="value(name)" --project "$project" --sort-by "~creationTimestamp" | head -n $snapback | tail -n 1)
+    snap=$(gcloud compute snapshots list \
+      --filter="sourceDisk~$disk" \
+      --format="value(name)" \
+      --project="$project" \
+      --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
 
-    gcloud compute disks create "$disk" --source-snapshot="$snap" --zone="$zone" --project="$project"
+    gcloud compute disks create $disk \
+      --source-snapshot="$snap" \
+      --zone="$zone" \
+      --project="$project"
 
 }
 
@@ -141,7 +162,12 @@ function attachDisks() {
 
     echo "Attaching disks ..."
 
-    gcloud compute instances attach-disk "$instance" --disk="$disk" --device-name="$disk" --zone="$zone" --project="$project" --boot
+    gcloud compute instances attach-disk $instance \
+      --disk="$disk" \
+      --device-name="$disk" \
+      --zone="$zone" \
+      --project="$project" \
+      --boot
 
 }
 
@@ -149,7 +175,11 @@ function setAutodelete() {
 
     echo "Setting autodelete on disks ..."
 
-    gcloud compute instances set-disk-auto-delete "$instance" --auto-delete --disk="$disk" --zone="$zone" --project="$project"
+    gcloud compute instances set-disk-auto-delete $instance \
+      --auto-delete \
+      --disk="$disk" \
+      --zone="$zone" \
+      --project="$project"
 
 }
 
@@ -157,7 +187,9 @@ function startServer() {
 
     echo "Starting server ..."
 
-    gcloud compute instances start "$instance" --zone="$zone" --project="$project"
+    gcloud compute instances start $instance \
+      --zone="$zone" \
+      --project="$project"
 
 }
 
