@@ -134,9 +134,10 @@ blockquote > :last-child {
 pre,
 code {
   font-size: 13px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #f7f7f7;
   border-radius: 3px;
   background-color: #eef;
+  background-color: #f2f2f2;
 }
 
 code {
@@ -200,7 +201,8 @@ ul#results-container li {
 }
 
 strong {
-  #background-color: #d7d7d7;
+  color: green;
+  font-weight: bold;
 }
 
 /**
@@ -534,6 +536,7 @@ table td {
 
 .highlighter-rouge .highlight {
   background: #eef;
+  background: #f2f2f2;
 }
 
 .highlight .c {
