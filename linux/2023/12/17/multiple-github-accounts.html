@@ -8,8 +8,8 @@
 <meta property="og:title" content="multiple github accounts" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I have two Github accounts. The first account was cloned using HTTPS. Instead of messing around with multiple accounts with your credentials, I’ve decided to just clone the second repo using SSH. This was mainly done to avoid setting up multiple accounts and simplify use." />
-<meta property="og:description" content="I have two Github accounts. The first account was cloned using HTTPS. Instead of messing around with multiple accounts with your credentials, I’ve decided to just clone the second repo using SSH. This was mainly done to avoid setting up multiple accounts and simplify use." />
+<meta name="description" content="I have two Github accounts. The first one was cloned using HTTPS. When it was time to add a second one, I really didn’t want to mess around with multiple Github accounts and dealing with multiple credentials. I’ve decided to just clone the second account using SSH. I decided to do this mainly to simplify setup and the headaches with setting up multiple accounts in the config." />
+<meta property="og:description" content="I have two Github accounts. The first one was cloned using HTTPS. When it was time to add a second one, I really didn’t want to mess around with multiple Github accounts and dealing with multiple credentials. I’ve decided to just clone the second account using SSH. I decided to do this mainly to simplify setup and the headaches with setting up multiple accounts in the config." />
 <link rel="canonical" href="http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html" />
 <meta property="og:url" content="http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html" />
 <meta property="og:site_name" content="uly.me" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="multiple github accounts" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-17T00:00:00+00:00","datePublished":"2023-12-17T00:00:00+00:00","description":"I have two Github accounts. The first account was cloned using HTTPS. Instead of messing around with multiple accounts with your credentials, I’ve decided to just clone the second repo using SSH. This was mainly done to avoid setting up multiple accounts and simplify use.","headline":"multiple github accounts","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html"},"url":"http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-17T00:00:00+00:00","datePublished":"2023-12-17T00:00:00+00:00","description":"I have two Github accounts. The first one was cloned using HTTPS. When it was time to add a second one, I really didn’t want to mess around with multiple Github accounts and dealing with multiple credentials. I’ve decided to just clone the second account using SSH. I decided to do this mainly to simplify setup and the headaches with setting up multiple accounts in the config.","headline":"multiple github accounts","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html"},"url":"http://0.0.0.0:4000/linux/2023/12/17/multiple-github-accounts.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -50,16 +50,14 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>I have two Github accounts. The first account was cloned using HTTPS. Instead of messing around with multiple accounts with your credentials, I’ve decided to just clone the second repo using SSH. This was mainly done to avoid setting up multiple accounts and simplify use.</p>
+    <p>I have two Github accounts. The first one was cloned using HTTPS. When it was time to add a second one, I really didn’t want to mess around with multiple Github accounts and dealing with multiple credentials. I’ve decided to just clone the second account using SSH. I decided to do this mainly to simplify setup and the headaches with setting up multiple accounts in the config.</p>
 
 <ul>
-  <li>First repo - cloned using HTTPS</li>
-  <li>Second repo - cloned using SSH</li>
+  <li>First repo - was cloned using HTTPS</li>
+  <li>Second repo - was cloned using SSH</li>
 </ul>
 
-<p>The first repo requires a github key. The first time a repo is cloned, you’ll be prompted to supply the key. It’s kept in the <strong>~/.git-credentials</strong> on the local desktop.</p>
-
-<p>The second repo requires a ssh key to be generated locally on your desktop which will need to be uploaded to github for authentication.</p>
+<p>The first repo which uses HTTPS requires a github key which will need to be generated on Github. The first time a repo is cloned, you’ll be prompted to supply the key. This key is kept in the <strong>~/.git-credentials</strong> file on the local desktop. The second repo which uses SSH requires a ssh key to be generated locally on your desktop, which will then be needed to be uploaded to github to allow authentication. Two separate ways of cloning repos without stepping on each other.</p>
 
   </div><a class="u-url" href="/linux/2023/12/17/multiple-github-accounts.html" hidden></a>
 </article>

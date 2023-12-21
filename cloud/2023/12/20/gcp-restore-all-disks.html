@@ -83,7 +83,10 @@ function displayHeader() {
 
 function getDisks() {
 
-    disks=$(gcloud compute disks list --filter="users:$instance" --format="value(name)" --project "$project")
+    disks=$(gcloud compute disks list \
+      --filter="users:$instance" \
+      --format="value(name)" \
+      --project="$project")
 
     echo "Listing disks for $instance ... "
 
