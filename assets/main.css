@@ -200,6 +200,7 @@ ul#results-container li {
 }
 
 strong {
+  font-weight: bold;
   color: blue;
 }
 
