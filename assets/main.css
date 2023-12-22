@@ -15,7 +15,6 @@ dl, dd, ol, ul, figure {
 body {
   /*font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
   font-family: "Fira Sans", sans-serif;
-  font-style: italic;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -121,7 +120,6 @@ blockquote {
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
-  font-style: italic;
 }
 
 blockquote > :last-child {
@@ -202,7 +200,6 @@ ul#results-container li {
 
 strong {
   color: blue;
-  font-weight: bold;
 }
 
 /**
