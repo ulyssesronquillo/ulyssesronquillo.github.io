@@ -87,18 +87,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
   color: darkred;
   text-decoration: none;
 }
 
 a:visited {
-  color: #1756a9;
   color: darkred;
 }
 
 a:hover {
-  color: #111;
   color: #777;
   text-decoration: underline;
 }
@@ -199,7 +196,7 @@ ul#results-container li {
 
 strong {
   font-weight: bold;
-  color: #500;
+  color: blueviolet;
 }
 
 /**
@@ -434,6 +431,14 @@ table td {
   }
 }
 @media screen and (max-width: 600px) {
+  .numbers {
+    display: none;
+  }
+  .footer-col-right {
+    float: none;
+    margin-bottom: 15px;
+    padding-left: 15px;
+  }
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (30px / 2));
