@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-24T04:59:42+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Search replace lowercase</title><link href="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html" rel="alternate" type="text/html" title="Search replace lowercase" /><published>2023-12-21T00:00:00+00:00</published><updated>2023-12-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html"><![CDATA[<p>Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-24T13:01:54+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Bash function within a function</title><link href="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html" rel="alternate" type="text/html" title="Bash function within a function" /><published>2023-12-24T00:00:00+00:00</published><updated>2023-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html"><![CDATA[<p>How to make a function call within a function in Bash.</p>
+
+<p>We will use our last example.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function main() {
+
+  checkLogin
+  displayHeader
+  getDisks
+  getSnaps 
+
+  read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
+  echo    # (optional) move to a new line
+  if [[ $REPLY =~ ^[Yy]$ ]]
+  then
+    stopServer
+    detachDisks
+    deleteDisks
+    createDisks
+    attachDisks
+    setAutodelete
+    startServer
+  fi
+}
+
+main 
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash" /><category term="function" /><category term="call" /><category term="within" /><category term="function" /><summary type="html"><![CDATA[How to make a function call within a function in Bash.]]></summary></entry><entry><title type="html">Search replace lowercase</title><link href="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html" rel="alternate" type="text/html" title="Search replace lowercase" /><published>2023-12-21T00:00:00+00:00</published><updated>2023-12-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html"><![CDATA[<p>Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash 
 cd ~/Code/docker/ulyme/_posts
@@ -467,22 +493,4 @@ done
 
 <p>In this particular script, it looks for files starting with 20 with an extension of .md.</p>
 
-<p>The script uses the <strong>sed command</strong> to perform search and replace.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="edit" /><category term="multiple" /><category term="files" /><category term="sed" /><summary type="html"><![CDATA[Editing 1000+ files is not fun. Here’s a script that cycles through certain files in a directory and performs a search and replace.]]></summary></entry><entry><title type="html">switching from wordpress to jekyll</title><link href="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html" rel="alternate" type="text/html" title="switching from wordpress to jekyll" /><published>2023-12-16T00:00:00+00:00</published><updated>2023-12-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/wp/2023/12/16/switching-from-wordpress-to-jekyll.html"><![CDATA[<p>I recently migrated this blog from WordPress to Jekyll due to several reasons.</p>
-
-<p>It came down to these three reasons:</p>
-
-<ul>
-  <li>Cost</li>
-  <li>Speed</li>
-  <li>Security</li>
-</ul>
-
-<ol>
-  <li>Cost. Jekyll generates static websites, meaning it can be hosted freely at Github. No more hosted VM’s. That’s a savings of $120 per year.</li>
-  <li>Speed. Since Jekyll pages are static HTML pages, websites loads much faster. There are no more PHP, extra plugins or databases that slow down pages.</li>
-  <li>Security. Since Jekyll pages are static files, they do not need a LAMP stack. So no more OS, PHP, plugins or MySQL databases to securely maintain.</li>
-</ol>
-
-<p>It’s a win win. The migration was quick and easy, but not it’s not entirely a 100% bug-free. I had to tweak Jekyll templates here and there to get it to look the way I wanted it. There are a ton of articles out there that covers the Jeklly to WordPress migration. I’m not going to cover the migration process here step by step. To quickly summarize, you’ll need to install a Jekyll exporter plugin in WordPress to export your posts. You can then import your posts into Jekyll and tweak Jekyll the way you want it. That’s it in a nutshell.</p>
-
-<p>By the way, I’m running Jekyll in a Docker. If you are interested, here are the <a href="/linux/2022/08/31/jekyll-on-docker-container.html">instructions</a> to run Jekyll in a Docker container.</p>]]></content><author><name>ulysses</name></author><category term="wp" /><category term="wordpress" /><category term="switching" /><category term="jekyll" /><summary type="html"><![CDATA[I recently migrated this blog from WordPress to Jekyll due to several reasons.]]></summary></entry></feed>
+<p>The script uses the <strong>sed command</strong> to perform search and replace.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="edit" /><category term="multiple" /><category term="files" /><category term="sed" /><summary type="html"><![CDATA[Editing 1000+ files is not fun. Here’s a script that cycles through certain files in a directory and performs a search and replace.]]></summary></entry></feed>

@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "bash function within a function",
+      "url"      : "/linux/2023/12/24/bash-function-within-a-function.html",
+      "category" : "",
+      "tags"     : "bash, function, call, within, function",
+      "date"     : "2023-12-24 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "search replace lowercase",
       "url"      : "/linux/2023/12/21/search-replace-lowercase.html",
       "category" : "",
