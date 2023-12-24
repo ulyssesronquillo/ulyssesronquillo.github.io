@@ -203,7 +203,7 @@ strong {
  * Wrapper
  */
 .wrapper {
-  font-size: 18px;
+  font-size: 17px;
   max-width: -webkit-calc(1280px - (30px * 2));
   max-width: 1220px;
   margin-right: auto;
