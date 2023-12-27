@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-25T01:49:52+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Bash function within a function</title><link href="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html" rel="alternate" type="text/html" title="Bash function within a function" /><published>2023-12-24T00:00:00+00:00</published><updated>2023-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html"><![CDATA[<p>How to make a function call within a function in Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-27T13:12:17+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Bash function within a function</title><link href="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html" rel="alternate" type="text/html" title="Bash function within a function" /><published>2023-12-24T00:00:00+00:00</published><updated>2023-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html"><![CDATA[<p>How to make a function call within a function in Bash.</p>
 
 <p>In my previous <a href="/cloud/2023/12/20/gcp-restore-boot-disk.html">post</a>, I used several functions. We will call them in the main function below.</p>
 
@@ -26,7 +26,8 @@
 main 
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash" /><category term="function" /><category term="call" /><category term="within" /><category term="function" /><summary type="html"><![CDATA[How to make a function call within a function in Bash.]]></summary></entry><entry><title type="html">Random words from array</title><link href="http://0.0.0.0:4000/linux/2023/12/24/random-words-from-array.html" rel="alternate" type="text/html" title="Random words from array" /><published>2023-12-24T00:00:00+00:00</published><updated>2023-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/24/random-words-from-array</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/24/random-words-from-array.html"><![CDATA[<p>Here’s how to to generate random words from an array in Bash using shuf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal'); shuf -e ${FOOD[@]}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal')
+shuf -e ${FOOD[@]}
 Milk
 Grits
 Sausage
@@ -38,11 +39,12 @@ Eggs
 
 <p>You can limit output to 3 by piping output using head -n 3.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal'); shuf -e ${FOOD[@]} | head -n 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal')
+shuf -e ${FOOD[@]} | head -n 3
 Bread
 Sausage
 Eggs
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="random" /><category term="words" /><category term="array" /><category term="bash" /><summary type="html"><![CDATA[Here’s how to to generate random words from an array in Bash using shuf.]]></summary></entry><entry><title type="html">Search replace lowercase</title><link href="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html" rel="alternate" type="text/html" title="Search replace lowercase" /><published>2023-12-21T00:00:00+00:00</published><updated>2023-12-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html"><![CDATA[<p>Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="random" /><category term="words" /><category term="array" /><category term="bash" /><category term="shuf" /><summary type="html"><![CDATA[Here’s how to to generate random words from an array in Bash using shuf.]]></summary></entry><entry><title type="html">Search replace lowercase</title><link href="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html" rel="alternate" type="text/html" title="Search replace lowercase" /><published>2023-12-21T00:00:00+00:00</published><updated>2023-12-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html"><![CDATA[<p>Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash 
 cd ~/Code/docker/ulyme/_posts
@@ -204,7 +206,7 @@ function attachDisks() {
               --project="$project"
         fi
 
-        count=$count+1
+        count=$((count+1))
 
     done 
 

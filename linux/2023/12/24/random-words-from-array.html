@@ -52,7 +52,8 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Here’s how to to generate random words from an array in Bash using shuf.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal'); shuf -e ${FOOD[@]}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal')
+shuf -e ${FOOD[@]}
 Milk
 Grits
 Sausage
@@ -64,12 +65,12 @@ Eggs
 
 <p>You can limit output to 3 by piping output using head -n 3.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal'); shuf -e ${FOOD[@]} | head -n 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal')
+shuf -e ${FOOD[@]} | head -n 3
 Bread
 Sausage
 Eggs
 </code></pre></div></div>
-
 
   </div><a class="u-url" href="/linux/2023/12/24/random-words-from-array.html" hidden></a>
 </article>
