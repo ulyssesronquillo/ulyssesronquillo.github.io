@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T22:03:51+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash input options</title><link href="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" rel="alternate" type="text/html" title="bash input options" /><published>2023-12-27T00:00:00+00:00</published><updated>2023-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/27/bash-input-options</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"><![CDATA[<p>Here are input options that you can use in Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T22:38:02+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash input options</title><link href="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" rel="alternate" type="text/html" title="bash input options" /><published>2023-12-27T00:00:00+00:00</published><updated>2023-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/27/bash-input-options</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"><![CDATA[<p>Here are input options that you can use in Bash.</p>
 
 <ol>
   <li>You can set variables within the script.</li>
@@ -21,31 +21,23 @@
 # snapback=3
 
 # Format (requires all 5 arguments): ./script.sh project host zone policy snapback
-
 # If no arguments are provided or less than 5 arguments, you will be prompted to enter your options.
 
 if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
-
     if  [ "$#" -eq 5 ]; then
-
         project=$1
         instance=$2
         zone=$3
         policy=$4
         snapback=$5
-
     else 
-
         read -p "projectId : " project
         read -p "instance  : " instance
         read -p "zone      : " zone
         read -p "policy    : " policy
         read -p "snapback  : " snapback
-
     fi
-
 fi
-
 echo $project $instance $zone $policy $snapback
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash" /><category term="input" /><category term="options" /><category term="arguments" /><category term="variables" /><summary type="html"><![CDATA[Here are input options that you can use in Bash.]]></summary></entry><entry><title type="html">Bash function within a function</title><link href="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html" rel="alternate" type="text/html" title="Bash function within a function" /><published>2023-12-24T00:00:00+00:00</published><updated>2023-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html"><![CDATA[<p>How to make a function call within a function in Bash.</p>
 

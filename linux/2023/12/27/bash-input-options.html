@@ -73,31 +73,23 @@
 # snapback=3
 
 # Format (requires all 5 arguments): ./script.sh project host zone policy snapback
-
 # If no arguments are provided or less than 5 arguments, you will be prompted to enter your options.
 
 if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
-
     if  [ "$#" -eq 5 ]; then
-
         project=$1
         instance=$2
         zone=$3
         policy=$4
         snapback=$5
-
     else 
-
         read -p "projectId : " project
         read -p "instance  : " instance
         read -p "zone      : " zone
         read -p "policy    : " policy
         read -p "snapback  : " snapback
-
     fi
-
 fi
-
 echo $project $instance $zone $policy $snapback
 </code></pre></div></div>
 

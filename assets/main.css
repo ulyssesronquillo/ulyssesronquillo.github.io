@@ -458,7 +458,9 @@ table td {
 }
 
 .page-content h4 {
-  line-height: 0.5;
+  line-height: 1.3;
+  padding: 0;
+  margin: 2px 0;
 }
 
 .page-heading {
