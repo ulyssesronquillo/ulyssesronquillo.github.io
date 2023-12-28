@@ -195,7 +195,6 @@ ul#results-container li {
 }
 
 strong {
-  font-weight: bold;
   color: blueviolet;
 }
 
@@ -451,6 +450,14 @@ table td {
 .page-content {
   padding: 30px 0;
   flex: 1;
+}
+
+.page-content h1 {
+  font-size: 32px;
+}
+
+.page-content h4 {
+  line-height: 0.5;
 }
 
 .page-heading {
