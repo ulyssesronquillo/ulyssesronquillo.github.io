@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T05:35:09+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash input options</title><link href="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" rel="alternate" type="text/html" title="bash input options" /><published>2023-12-27T00:00:00+00:00</published><updated>2023-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/27/bash-input-options</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"><![CDATA[<p>Here are input options that you can use in Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T12:36:51+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash input options</title><link href="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" rel="alternate" type="text/html" title="bash input options" /><published>2023-12-27T00:00:00+00:00</published><updated>2023-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/27/bash-input-options</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"><![CDATA[<p>Here are input options that you can use in Bash.</p>
 
 <ol>
   <li>You can set variables within the script.</li>
@@ -6,12 +6,12 @@
   <li>You can prompt the user to input data.</li>
 </ol>
 
-<p>Or you create a script that will incorporate all three.</p>
+<p>Or you create a script that incorporates all three.</p>
 
 <ol>
-  <li>If you want to set the variables manually, just remove the comments in the script.</li>
-  <li>If you want to pass arguments via command, use this format: ./script.sh project instance zone policy snapback.</li>
-  <li>If you don’t pass any arguments, you will be prompted to input all 5 options.</li>
+  <li>Remove comments if you want to set the variables in the script.</li>
+  <li>Pass arguments via command line using the format provided.</li>
+  <li>Or be prompted to enter all your arguments one at a time.</li>
 </ol>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># project="projectid"
@@ -21,7 +21,8 @@
 # snapback=3
 
 # Format (requires all 5 arguments): ./script.sh project host zone policy snapback
-# If no arguments are provided or less than 5 arguments, you will be prompted to input options.
+
+# If no arguments are provided or less than 5 arguments, you will be prompted to enter your options.
 
 if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
 
