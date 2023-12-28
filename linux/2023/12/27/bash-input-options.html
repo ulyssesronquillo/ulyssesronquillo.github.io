@@ -72,6 +72,9 @@
 # policy="hourly"
 # snapback=3
 
+# Format (requires all 5 arguments): ./script.sh project host zone policy snapback
+# If no arguments are provided or less than 5 arguments, you will be prompted to input options.
+
 if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
 
     if  [ "$#" -eq 5 ]; then
@@ -84,7 +87,6 @@ if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ]
 
     else 
 
-        echo "You need all 5 arguments. Input options below instead."
         read -p "projectId : " project
         read -p "instance  : " instance
         read -p "zone      : " zone
@@ -92,10 +94,6 @@ if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ]
         read -p "snapback  : " snapback
 
     fi
-
-else 
-
-    echo "Variables were manually set in the script."
 
 fi
 

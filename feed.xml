@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T05:15:03+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash input options</title><link href="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" rel="alternate" type="text/html" title="bash input options" /><published>2023-12-27T00:00:00+00:00</published><updated>2023-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/27/bash-input-options</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"><![CDATA[<p>Here are input options that you can use in Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T05:35:09+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash input options</title><link href="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" rel="alternate" type="text/html" title="bash input options" /><published>2023-12-27T00:00:00+00:00</published><updated>2023-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/27/bash-input-options</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"><![CDATA[<p>Here are input options that you can use in Bash.</p>
 
 <ol>
   <li>You can set variables within the script.</li>
@@ -20,6 +20,9 @@
 # policy="hourly"
 # snapback=3
 
+# Format (requires all 5 arguments): ./script.sh project host zone policy snapback
+# If no arguments are provided or less than 5 arguments, you will be prompted to input options.
+
 if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
 
     if  [ "$#" -eq 5 ]; then
@@ -32,7 +35,6 @@ if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ]
 
     else 
 
-        echo "You need all 5 arguments. Input options below instead."
         read -p "projectId : " project
         read -p "instance  : " instance
         read -p "zone      : " zone
@@ -40,10 +42,6 @@ if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ]
         read -p "snapback  : " snapback
 
     fi
-
-else 
-
-    echo "Variables were manually set in the script."
 
 fi
 
