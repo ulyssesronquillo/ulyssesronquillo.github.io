@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "bash input options",
+      "url"      : "/linux/2023/12/27/bash-input-options.html",
+      "category" : "",
+      "tags"     : "bash, input, options, arguments, variables",
+      "date"     : "2023-12-27 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "random words from array",
       "url"      : "/linux/2023/12/24/random-words-from-array.html",
       "category" : "",
@@ -8652,7 +8662,7 @@
   
     {
 
-      "title"    : "can&amp;#8217;t empty the trash can",
+      "title"    : "could not empty the trash can",
       "url"      : "/linux/mac/2016/11/09/cant-empty-the-trash-can.html",
       "category" : "",
       "tags"     : "app in use, rm -rf, terminal, trash",

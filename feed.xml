@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-27T13:12:17+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">Bash function within a function</title><link href="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html" rel="alternate" type="text/html" title="Bash function within a function" /><published>2023-12-24T00:00:00+00:00</published><updated>2023-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html"><![CDATA[<p>How to make a function call within a function in Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T05:15:03+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash input options</title><link href="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" rel="alternate" type="text/html" title="bash input options" /><published>2023-12-27T00:00:00+00:00</published><updated>2023-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/27/bash-input-options</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"><![CDATA[<p>Here are input options that you can use in Bash.</p>
+
+<ol>
+  <li>You can set variables within the script.</li>
+  <li>You can pass the arguments via command line.</li>
+  <li>You can prompt the user to input data.</li>
+</ol>
+
+<p>Or you create a script that will incorporate all three.</p>
+
+<ol>
+  <li>If you want to set the variables manually, just remove the comments in the script.</li>
+  <li>If you want to pass arguments via command, use this format: ./script.sh project instance zone policy snapback.</li>
+  <li>If you don’t pass any arguments, you will be prompted to input all 5 options.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># project="projectid"
+# instance="hostname"
+# zone="us-central1-c"
+# policy="hourly"
+# snapback=3
+
+if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
+
+    if  [ "$#" -eq 5 ]; then
+
+        project=$1
+        instance=$2
+        zone=$3
+        policy=$4
+        snapback=$5
+
+    else 
+
+        echo "You need all 5 arguments. Input options below instead."
+        read -p "projectId : " project
+        read -p "instance  : " instance
+        read -p "zone      : " zone
+        read -p "policy    : " policy
+        read -p "snapback  : " snapback
+
+    fi
+
+else 
+
+    echo "Variables were manually set in the script."
+
+fi
+
+echo $project $instance $zone $policy $snapback
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash" /><category term="input" /><category term="options" /><category term="arguments" /><category term="variables" /><summary type="html"><![CDATA[Here are input options that you can use in Bash.]]></summary></entry><entry><title type="html">Bash function within a function</title><link href="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html" rel="alternate" type="text/html" title="Bash function within a function" /><published>2023-12-24T00:00:00+00:00</published><updated>2023-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/24/bash-function-within-a-function.html"><![CDATA[<p>How to make a function call within a function in Bash.</p>
 
 <p>In my previous <a href="/cloud/2023/12/20/gcp-restore-boot-disk.html">post</a>, I used several functions. We will call them in the main function below.</p>
 
@@ -499,8 +549,4 @@ mesg="${mesg//$'\n'/}"
 
 <p>The first repo which uses HTTPS requires a github key which will need to be generated on Github. The first time a repo is cloned, you’ll be prompted to supply the key. This key is kept in the <strong>~/.git-credentials</strong> file on the local desktop. The second repo which uses SSH requires a ssh key to be generated locally on your desktop, which you will then need to upload to github to allow authentication.</p>
 
-<p>So here we go. Two separate ways of cloning repos without stepping on each other.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="github" /><category term="multiple" /><category term="accounts" /><summary type="html"><![CDATA[I have two Github accounts. The first one was cloned using HTTPS. When it was time to add a second one, I really didn’t want to mess around with multiple Github accounts and dealing with multiple credentials. I’ve decided to just clone the second account using SSH. I decided to do this mainly to simplify setup and to avoid the headaches with setting up multiple accounts in the config.]]></summary></entry><entry><title type="html">using internal links</title><link href="http://0.0.0.0:4000/linux/2023/12/17/using-internal-links.html" rel="alternate" type="text/html" title="using internal links" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/17/using-internal-links</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/17/using-internal-links.html"><![CDATA[<p>Here’s how to use internal links within Jekyll. Use this format.</p>
-
-<p><strong>[Some Link]({% post_url 2010-07-21-name-of-post %})</strong></p>
-
-<p>I had to convert code to HTML characters to render properly.</p>]]></content><author><name>ulysses</name></author><category term="Linux" /><category term="jekyll" /><category term="internal" /><category term="links" /><summary type="html"><![CDATA[Here’s how to use internal links within Jekyll. Use this format.]]></summary></entry></feed>
+<p>So here we go. Two separate ways of cloning repos without stepping on each other.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="github" /><category term="multiple" /><category term="accounts" /><summary type="html"><![CDATA[I have two Github accounts. The first one was cloned using HTTPS. When it was time to add a second one, I really didn’t want to mess around with multiple Github accounts and dealing with multiple credentials. I’ve decided to just clone the second account using SSH. I decided to do this mainly to simplify setup and to avoid the headaches with setting up multiple accounts in the config.]]></summary></entry></feed>

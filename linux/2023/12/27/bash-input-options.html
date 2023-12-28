@@ -3,22 +3,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>could not empty the trash can | uly.me</title>
+<title>bash input options | uly.me</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="could not empty the trash can" />
+<meta property="og:title" content="bash input options" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="If you have trouble emptying the trash this morning, here’s a helpful tip." />
-<meta property="og:description" content="If you have trouble emptying the trash this morning, here’s a helpful tip." />
-<link rel="canonical" href="http://0.0.0.0:4000/linux/mac/2016/11/09/cant-empty-the-trash-can.html" />
-<meta property="og:url" content="http://0.0.0.0:4000/linux/mac/2016/11/09/cant-empty-the-trash-can.html" />
+<meta name="description" content="Here are input options that you can use in Bash." />
+<meta property="og:description" content="Here are input options that you can use in Bash." />
+<link rel="canonical" href="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html" />
 <meta property="og:site_name" content="uly.me" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2016-11-09T17:23:04+00:00" />
+<meta property="article:published_time" content="2023-12-27T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="could not empty the trash can" />
+<meta property="twitter:title" content="bash input options" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2016-11-09T17:23:04+00:00","datePublished":"2016-11-09T17:23:04+00:00","description":"If you have trouble emptying the trash this morning, here’s a helpful tip.","headline":"could not empty the trash can","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/mac/2016/11/09/cant-empty-the-trash-can.html"},"url":"http://0.0.0.0:4000/linux/mac/2016/11/09/cant-empty-the-trash-can.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-27T00:00:00+00:00","datePublished":"2023-12-27T00:00:00+00:00","description":"Here are input options that you can use in Bash.","headline":"bash input options","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"},"url":"http://0.0.0.0:4000/linux/2023/12/27/bash-input-options.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -41,29 +41,68 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">could not empty the trash can</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2016-11-09T17:23:04+00:00" itemprop="datePublished">
-        Nov 9, 2016
+    <h1 class="post-title p-name" itemprop="name headline">bash input options</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-12-27T00:00:00+00:00" itemprop="datePublished">
+        Dec 27, 2023
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="p-author h-card" itemprop="name">ulysses</span></span></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>If you have trouble emptying the trash this morning, here’s a helpful tip.</p>
+    <p>Here are input options that you can use in Bash.</p>
 
-<p>Your OS is essentially telling you the file is in use, but the application is close.</p>
+<ol>
+  <li>You can set variables within the script.</li>
+  <li>You can pass the arguments via command line.</li>
+  <li>You can prompt the user to input data.</li>
+</ol>
 
-<p>Nothing like running rm -rf on the trash folder.</p>
+<p>Or you create a script that will incorporate all three.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Go the trash directory and delete all!
-cd ~/.Trash
-rm -rf *
+<ol>
+  <li>If you want to set the variables manually, just remove the comments in the script.</li>
+  <li>If you want to pass arguments via command, use this format: ./script.sh project instance zone policy snapback.</li>
+  <li>If you don’t pass any arguments, you will be prompted to input all 5 options.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># project="projectid"
+# instance="hostname"
+# zone="us-central1-c"
+# policy="hourly"
+# snapback=3
+
+if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
+
+    if  [ "$#" -eq 5 ]; then
+
+        project=$1
+        instance=$2
+        zone=$3
+        policy=$4
+        snapback=$5
+
+    else 
+
+        echo "You need all 5 arguments. Input options below instead."
+        read -p "projectId : " project
+        read -p "instance  : " instance
+        read -p "zone      : " zone
+        read -p "policy    : " policy
+        read -p "snapback  : " snapback
+
+    fi
+
+else 
+
+    echo "Variables were manually set in the script."
+
+fi
+
+echo $project $instance $zone $policy $snapback
 </code></pre></div></div>
 
-<p>The file is gone!</p>
-
-  </div><a class="u-url" href="/linux/mac/2016/11/09/cant-empty-the-trash-can.html" hidden></a>
+  </div><a class="u-url" href="/linux/2023/12/27/bash-input-options.html" hidden></a>
 </article>
 
       </div>
