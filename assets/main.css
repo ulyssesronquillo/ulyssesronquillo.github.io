@@ -186,6 +186,7 @@ ul#results-container li {
 }
 
 .date {
+  color: #aaa;
   font-size: 14px;
 }
 
@@ -202,7 +203,7 @@ strong {
  * Wrapper
  */
 .wrapper {
-  font-size: 17px;
+  font-size: 16px;
   max-width: -webkit-calc(1280px - (30px * 2));
   max-width: 1220px;
   margin-right: auto;
