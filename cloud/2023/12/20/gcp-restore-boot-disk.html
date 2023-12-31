@@ -216,23 +216,29 @@ startServer() {
 
 }
 
-checkLogin
-displayHeader
-getDisks
-getSnaps 
+main() {
 
-read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    stopServer
-    detachDisks
-    deleteDisks
-    createDisks
-    attachDisks
-    setAutodelete
-    startServer
-fi
+    checkLogin
+    displayHeader
+    getDisks
+    getSnaps 
+
+    read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        stopServer
+        detachDisks
+        deleteDisks
+        createDisks
+        attachDisks
+        setAutodelete
+        startServer
+    fi
+    
+}
+
+main
 </code></pre></div></div>
 
   </div><a class="u-url" href="/cloud/2023/12/20/gcp-restore-boot-disk.html" hidden></a>

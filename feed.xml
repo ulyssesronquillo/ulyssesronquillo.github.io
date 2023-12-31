@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-31T07:26:05+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">how to shred a volume</title><link href="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html" rel="alternate" type="text/html" title="how to shred a volume" /><published>2023-12-29T00:00:00+00:00</published><updated>2023-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html"><![CDATA[<p>If you have a disk drive, SSD or NVME storage device that need to be wiped clean, I recommend that you use the shred command.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-31T07:30:00+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">how to shred a volume</title><link href="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html" rel="alternate" type="text/html" title="how to shred a volume" /><published>2023-12-29T00:00:00+00:00</published><updated>2023-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html"><![CDATA[<p>If you have a disk drive, SSD or NVME storage device that need to be wiped clean, I recommend that you use the shred command.</p>
 
 <p>In this example, I’m cleaning up the contents of my NVME device at /dev/nvme0n1.</p>
 
@@ -318,23 +318,29 @@ startServer() {
 
 }
 
-checkLogin
-displayHeader
-getDisks
-getSnaps 
+main() {
 
-read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    stopServer
-    detachDisks
-    deleteDisks
-    createDisks
-    attachDisks
-    setAutodelete
-    startServer
-fi
+    checkLogin
+    displayHeader
+    getDisks
+    getSnaps 
+
+    read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        stopServer
+        detachDisks
+        deleteDisks
+        createDisks
+        attachDisks
+        setAutodelete
+        startServer
+    fi
+    
+}
+
+main
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="compute" /><category term="restore" /><category term="all" /><category term="disks" /><summary type="html"><![CDATA[Here’s my latest script on how to restore all disks of a VM in GCP.]]></summary></entry><entry><title type="html">gcp restore boot disk</title><link href="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk.html" rel="alternate" type="text/html" title="gcp restore boot disk" /><published>2023-12-20T00:00:00+00:00</published><updated>2023-12-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-boot-disk.html"><![CDATA[<p>Here’s my latest script to restore the boot disk of a VM in GCP.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
@@ -501,23 +507,29 @@ startServer() {
 
 }
 
-checkLogin
-displayHeader
-getDisks
-getSnaps 
+main() {
 
-read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    stopServer
-    detachDisks
-    deleteDisks
-    createDisks
-    attachDisks
-    setAutodelete
-    startServer
-fi
+    checkLogin
+    displayHeader
+    getDisks
+    getSnaps 
+
+    read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        stopServer
+        detachDisks
+        deleteDisks
+        createDisks
+        attachDisks
+        setAutodelete
+        startServer
+    fi
+    
+}
+
+main
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="restore" /><category term="vm" /><category term="boot" /><category term="disk" /><summary type="html"><![CDATA[Here’s my latest script to restore the boot disk of a VM in GCP.]]></summary></entry><entry><title type="html">gcp vm list all snapshots</title><link href="http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots.html" rel="alternate" type="text/html" title="gcp vm list all snapshots" /><published>2023-12-19T00:00:00+00:00</published><updated>2023-12-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/19/gcp-vm-list-all-snapshots.html"><![CDATA[<p>Here’s how to list all the snapshots for a particular VM in GCP.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
