@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "format new volume",
+      "url"      : "/2023/12/31/format-new-volume.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2023-12-31 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "how to shred a volume",
       "url"      : "/linux/2023/12/29/how-to-shred-a-volume.html",
       "category" : "",

@@ -1,4 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-31T07:30:00+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">how to shred a volume</title><link href="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html" rel="alternate" type="text/html" title="how to shred a volume" /><published>2023-12-29T00:00:00+00:00</published><updated>2023-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html"><![CDATA[<p>If you have a disk drive, SSD or NVME storage device that need to be wiped clean, I recommend that you use the shred command.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-31T08:21:05+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">format new volume</title><link href="http://0.0.0.0:4000/2023/12/31/format-new-volume.html" rel="alternate" type="text/html" title="format new volume" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/12/31/format-new-volume</id><content type="html" xml:base="http://0.0.0.0:4000/2023/12/31/format-new-volume.html"><![CDATA[<p>I recently bought a new 2TB NVME SSD drive which is going to be installed on my Linux Mint desktop. I have been taking a ton of pictures lately with my old Nikon D700 DSLR camera and can use the extra space. Since the new drive is unformatted, here are the steps I did to get it working on my Linux desktop. Assuming you have successfully installed the NVME drive on your motherboard.</p>
+
+<p>First, find out what the device name is. It shows up as a 1.8TB disk on mine.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+nvme0n1 259:0    0   1.8T  0 disk
+</code></pre></div></div>
+
+<p>Check if it’s formatted.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo file -s /dev/nvme0n1 
+</code></pre></div></div>
+
+<p>If it’s a new drive, there should be no file system on the device. If previously used, it will say XFS on a system formatted with XFS.</p>
+
+<p>If empty.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/nvme0n1: data
+</code></pre></div></div>
+
+<p>Formatted with XFS.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/nvme0n1: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
+</code></pre></div></div>
+
+<p>Format the drive. I will use the XFS file system.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfs -t xfs /dev/nvme0n1 
+</code></pre></div></div>
+
+<p>Mount the drive. I will use the Nikon directory in my home directory as the mount volume.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/Nikon
+sudo mount /dev/nvme0n1 /home/ulysses/Nikon
+</code></pre></div></div>
+
+<p>I will add an entry to the /etc/fstab file to make the mount permanent after each reboot. Get the blkid. You will need this in the /etc/fstab file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo blkid 
+</code></pre></div></div>
+
+<p>Now edit the /etc/fstab file to add the new volume.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/fstab
+</code></pre></div></div>
+
+<p>Entry will look similar to this. The UUID has been replaced with x’s.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx /home/ulysses/Nikon          xfs        defaults            0 0
+</code></pre></div></div>
+
+<p>Test it by mounting all.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mount -a 
+</code></pre></div></div>
+
+<p>If there are no errors, mount was successful. You can safely reboot.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo shutdown -r 
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I recently bought a new 2TB NVME SSD drive which is going to be installed on my Linux Mint desktop. I have been taking a ton of pictures lately with my old Nikon D700 DSLR camera and can use the extra space. Since the new drive is unformatted, here are the steps I did to get it working on my Linux desktop. Assuming you have successfully installed the NVME drive on your motherboard.]]></summary></entry><entry><title type="html">how to shred a volume</title><link href="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html" rel="alternate" type="text/html" title="how to shred a volume" /><published>2023-12-29T00:00:00+00:00</published><updated>2023-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html"><![CDATA[<p>If you have a disk drive, SSD or NVME storage device that need to be wiped clean, I recommend that you use the shred command.</p>
 
 <p>In this example, I’m cleaning up the contents of my NVME device at /dev/nvme0n1.</p>
 
@@ -588,21 +647,4 @@ tags:
 EOF
 
 echo "vi ~/Code/docker/ulyme/_posts/$filename"
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="jekyll" /><category term="new" /><category term="post" /><category term="script" /><summary type="html"><![CDATA[Here’s my bash script that creates a new Jekyll post template. Once created, use vi to edit the post.]]></summary></entry><entry><title type="html">strip new lines on variables</title><link href="http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables.html" rel="alternate" type="text/html" title="strip new lines on variables" /><published>2023-12-18T00:00:00+00:00</published><updated>2023-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/18/strip-new-lines-on-variables.html"><![CDATA[<p>I had problems echoing four variables into one line. There seem to be some carriage return or new line somewhere that’s not visible.</p>
-
-<p>So, here’s a line of code that will strip any new line or carriage return in the variable, and then use printf to display the variables on one line.</p>
-
-<p>Strip the new lines.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>efs="${efs//$'\n'/ }"
-name="${name//$'\n'/}"
-total="${total//$'\n'/ }"
-mesg="${mesg//$'\n'/}"
-</code></pre></div></div>
-
-<p>Now print them using printf on one line.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>printf "%-30s %-40s %-20s %-30s\n" "$efs" "$new" "$total" "$mesg"
-</code></pre></div></div>
-
-<p>With that code, I’m now able to format my report nicely without the extra new lines.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="strip" /><category term="new lines" /><category term="variables" /><category term="bash" /><category term="echo" /><summary type="html"><![CDATA[I had problems echoing four variables into one line. There seem to be some carriage return or new line somewhere that’s not visible.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="jekyll" /><category term="new" /><category term="post" /><category term="script" /><summary type="html"><![CDATA[Here’s my bash script that creates a new Jekyll post template. Once created, use vi to edit the post.]]></summary></entry></feed>
