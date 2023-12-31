@@ -52,7 +52,7 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>I recently bought a new 2TB NVME SSD drive which is going to be installed on my Linux Mint desktop. I have been taking a ton of pictures lately with my old Nikon D700 DSLR camera and can use the extra space. Since the new drive is unformatted, here are the steps I did to get it working on my Linux desktop. Assuming you have successfully installed the NVME drive on your motherboard.</p>
 
-<p>First, find out what the device name is. It shows up as a 1.8TB disk on mine.</p>
+<p>First, find out the device name. It shows up as a 1.8TB disk on my desktop.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
 nvme0n1 259:0    0   1.8T  0 disk
@@ -63,35 +63,35 @@ nvme0n1 259:0    0   1.8T  0 disk
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo file -s /dev/nvme0n1 
 </code></pre></div></div>
 
-<p>If it’s a new drive, there should be no file system on the device. If previously used, it will say XFS on a system formatted with XFS.</p>
+<p>If should be empty since it’s new. If it was previously used, it will say what file system.</p>
 
 <p>If empty.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/nvme0n1: data
 </code></pre></div></div>
 
-<p>Formatted with XFS.</p>
+<p>In this example, it’s formatted with XFS.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/nvme0n1: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
 </code></pre></div></div>
 
-<p>Format the drive. I will use the XFS file system.</p>
+<p>Let’s format the drive. I will use XFS as the file system.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfs -t xfs /dev/nvme0n1 
 </code></pre></div></div>
 
-<p>Mount the drive. I will use the Nikon directory in my home directory as the mount volume.</p>
+<p>Let’s mount the drive. I will use the Nikon directory in my home directory as the mount volume.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/Nikon
 sudo mount /dev/nvme0n1 /home/ulysses/Nikon
 </code></pre></div></div>
 
-<p>I will add an entry to the /etc/fstab file to make the mount permanent after each reboot. Get the blkid. You will need this in the /etc/fstab file.</p>
+<p>I will add an entry to the /etc/fstab file to make the mount permanent after each reboot. First, get the blkid. You will need this in the /etc/fstab file.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo blkid 
 </code></pre></div></div>
 
-<p>Now edit the /etc/fstab file to add the new volume.</p>
+<p>Now edit the /etc/fstab file to add the new volume entry.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/fstab
 </code></pre></div></div>
@@ -106,7 +106,12 @@ sudo mount /dev/nvme0n1 /home/ulysses/Nikon
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mount -a 
 </code></pre></div></div>
 
-<p>If there are no errors, mount was successful. You can safely reboot.</p>
+<p>If there are no errors, mount was successful. You can check by running this command.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -Th
+</code></pre></div></div>
+
+<p>You can now safely reboot.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo shutdown -r 
 </code></pre></div></div>
