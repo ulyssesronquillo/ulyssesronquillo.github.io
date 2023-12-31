@@ -54,7 +54,7 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash 
 cd ~/Code/docker/ulyme/_posts
-function searchReplace() {
+searchReplace() {
     for filename in 20*.md; do
         sed -i -e 's/title:.*/\L&amp;/g' $filename
     done

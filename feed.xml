@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-29T16:14:37+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">how to shred a volume</title><link href="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html" rel="alternate" type="text/html" title="how to shred a volume" /><published>2023-12-29T00:00:00+00:00</published><updated>2023-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html"><![CDATA[<p>If you have a disk drive, SSD or NVME storage device that need to be wiped clean, I recommend that you use the shred command.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-12-31T07:26:05+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">how to shred a volume</title><link href="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html" rel="alternate" type="text/html" title="how to shred a volume" /><published>2023-12-29T00:00:00+00:00</published><updated>2023-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html"><![CDATA[<p>If you have a disk drive, SSD or NVME storage device that need to be wiped clean, I recommend that you use the shred command.</p>
 
 <p>In this example, I’m cleaning up the contents of my NVME device at /dev/nvme0n1.</p>
 
@@ -59,7 +59,7 @@ echo $project $instance $zone $policy $snapback
 
 <p>In my previous <a href="/cloud/2023/12/20/gcp-restore-boot-disk.html">post</a>, I used several functions. We will call them in the main function below.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function main() {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main() {
 
   checkLogin
   displayHeader
@@ -105,7 +105,7 @@ Eggs
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash 
 cd ~/Code/docker/ulyme/_posts
-function searchReplace() {
+searchReplace() {
     for filename in 20*.md; do
         sed -i -e 's/title:.*/\L&amp;/g' $filename
     done
@@ -118,26 +118,49 @@ searchReplace
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
-read -p "projectId : " project
-read -p "instance  : " instance
-read -p "zone      : " zone
-read -p "policy    : " policy
-read -p "snapback  : " snapback
+# project="projectid"
+# instance="hostname"
+# zone="us-central1-c"
+# policy="hourly"
+# snapback=3
 
-function checkLogin() {
+# Format (requires all 5 arguments): ./script.sh project host zone policy snapback
+# If no arguments are provided or less than 5 arguments, you will be prompted to enter your options.
+
+if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
+
+    if  [ "$#" -eq 5 ]; then
+        project=$1
+        instance=$2
+        zone=$3
+        policy=$4
+        snapback=$5
+    else 
+        read -p "projectId : " project
+        read -p "instance  : " instance
+        read -p "zone      : " zone
+        read -p "policy    : " policy
+        read -p "snapback  : " snapback
+    fi
+
+fi
+
+echo $project $instance $zone $policy $snapback
+
+checkLogin() {
 
     user=$(gcloud config list account --format "value(core.account)")
     user=$(echo $user | cut -d@ -f1)
     user=${user/./-}
 
     if [ -z "$user" ]; then
-    echo "You're not logged in to Google SDK."
-    exit
+        echo "You're not logged in to Google SDK."
+        exit
     fi
 
 }
 
-function displayHeader() {
+displayHeader() {
 
     echo "######################################################"
     echo "Starting the restore process for $instance "
@@ -145,12 +168,12 @@ function displayHeader() {
 
 }
 
-function getDisks() {
+getDisks() {
 
     disks=$(gcloud compute disks list \
-      --filter="users:$instance" \
-      --format="value(name)" \
-      --project="$project")
+        --filter="users:$instance" \
+        --format="value(name)" \
+        --project="$project")
 
     echo "Listing disks for $instance ... "
 
@@ -162,17 +185,17 @@ function getDisks() {
 
 }
 
-function getSnaps() {
+getSnaps() {
 
     echo "Listing snapshots to restore for $instance ... "
 
     for disk in $disks; do
 
         snap=$(gcloud compute snapshots list \
-          --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" \
-          --format="value(name)" \
-          --project="$project" \
-          --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
+            --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" \
+            --format="value(name)" \
+            --project="$project" \
+            --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
 
         echo "$disk: $snap" 
 
@@ -180,67 +203,67 @@ function getSnaps() {
 
 }
 
-function stopServer() {
+stopServer() {
 
     echo "Stopping server ..."
 
     gcloud compute instances stop $instance \
-      --zone="$zone" \
-      --project="$project"
+        --zone="$zone" \
+        --project="$project"
 
 }
 
-function detachDisks() {
+detachDisks() {
 
     echo "Detaching disks ..."
 
     for disk in $disks; do
 
         gcloud compute instances detach-disk $instance \
-          --disk="$disk" \
-          --zone="$zone" \
-          --project="$project"
+            --disk="$disk" \
+            --zone="$zone" \
+            --project="$project"
 
     done 
 
 }
 
-function deleteDisks() {
+deleteDisks() {
 
     echo "Deleting disks ..."
 
     for disk in $disks; do
 
         gcloud compute disks delete $disk \
-          --zone="$zone" \
-          --project="$project"
+            --zone="$zone" \
+            --project="$project"
 
     done
 
 }
 
-function createDisks() {
+createDisks() {
 
     echo "Creating disks ..."
 
     for disk in $disks; do
 
         snap=$(gcloud compute snapshots list \
-          --filter="sourceDisk~$disk" \
-          --format="value(name)" \
-          --project="$project" \
-          --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
+            --filter="sourceDisk~$disk" \
+            --format="value(name)" \
+            --project="$project" \
+            --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
 
         gcloud compute disks create $disk \
-          --source-snapshot="$snap" \
-          --zone="$zone" \
-          --project="$project"
+            --source-snapshot="$snap" \
+            --zone="$zone" \
+            --project="$project"
 
     done
 
 }
 
-function attachDisks() {
+attachDisks() {
 
     echo "Attaching disks ..."
 
@@ -250,17 +273,17 @@ function attachDisks() {
 
         if [ $count == 1 ]; then 
             gcloud compute instances attach-disk $instance \
-              --disk="$disk" \
-              --device-name="$disk" \
-              --zone="$zone" \
-              --project="$project" \
-              --boot
+                --disk="$disk" \
+                --device-name="$disk" \
+                --zone="$zone" \
+                --project="$project" \
+                --boot
         else 
             gcloud compute instances attach-disk $instance \
-              --disk="$disk" \
-              --device-name="$disk" \
-              --zone="$zone" \
-              --project="$project"
+                --disk="$disk" \
+                --device-name="$disk" \
+                --zone="$zone" \
+                --project="$project"
         fi
 
         count=$((count+1))
@@ -269,29 +292,29 @@ function attachDisks() {
 
 }
 
-function setAutodelete() {
+setAutodelete() {
 
     echo "Setting autodelete on disks ..."
 
     for disk in $disks; do
 
         gcloud compute instances set-disk-auto-delete $instance \
-          --auto-delete \
-          --disk="$disk" \
-          --zone="$zone" \
-          --project="$project"
+            --auto-delete \
+            --disk="$disk" \
+            --zone="$zone" \
+            --project="$project"
 
     done 
 
 }
 
-function startServer() {
+startServer() {
 
     echo "Starting server ..."
 
     gcloud compute instances start $instance \
-      --zone="$zone" \
-      --project="$project"
+        --zone="$zone" \
+        --project="$project"
 
 }
 
@@ -316,26 +339,49 @@ fi
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
-read -p "projectId : " project
-read -p "instance  : " instance
-read -p "zone      : " zone
-read -p "policy    : " policy
-read -p "snapback  : " snapback
+# project="projectid"
+# instance="hostname"
+# zone="us-central1-c"
+# policy="hourly"
+# snapback=3
 
-function checkLogin() {
+# Format (requires all 5 arguments): ./script.sh project host zone policy snapback
+# If no arguments are provided or if less than 5 arguments, then you will be prompted to enter options.
+
+if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
+
+    if  [ "$#" -eq 5 ]; then
+        project=$1
+        instance=$2
+        zone=$3
+        policy=$4
+        snapback=$5
+    else 
+        read -p "projectId : " project
+        read -p "instance  : " instance
+        read -p "zone      : " zone
+        read -p "policy    : " policy
+        read -p "snapback  : " snapback
+    fi
+
+fi
+
+echo $project $instance $zone $policy $snapback
+
+checkLogin() {
 
     user=$(gcloud config list account --format "value(core.account)")
     user=$(echo $user | cut -d@ -f1)
     user=${user/./-}
 
     if [ -z "$user" ]; then
-    echo "You're not logged in to Google SDK."
-    exit
+        echo "You're not logged in to Google SDK."
+        exit
     fi
 
 }
 
-function displayHeader() {
+displayHeader() {
 
     echo "######################################################"
     echo "Starting the restore process for $instance "
@@ -343,12 +389,12 @@ function displayHeader() {
 
 }
 
-function getDisks() {
+getDisks() {
 
     disks=$(gcloud compute instances describe $instance \
-      --project="$project" \
-      --zone="$zone" \
-      --format="get(disks[0].source)")
+        --project="$project" \
+        --zone="$zone" \
+        --format="get(disks[0].source)")
 
     echo "Listing disks for $instance ... "
 
@@ -358,100 +404,100 @@ function getDisks() {
 
 }
 
-function getSnaps() {
+getSnaps() {
 
     echo "Listing snapshots to restore for $instance ... "
  
     snap=$(gcloud compute snapshots list \
-      --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" \
-      --format="value(name)" \
-      --project="$project" \
-      --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
+        --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" \
+        --format="value(name)" \
+        --project="$project" \
+        --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
 
     echo "$disk: $snap" 
 
 }
 
-function stopServer() {
+stopServer() {
 
     echo "Stopping server ..."
 
     gcloud compute instances stop $instance \
-      --zone="$zone" \
-      --project="$project"
+        --zone="$zone" \
+        --project="$project"
 
 }
 
-function detachDisks() {
+detachDisks() {
 
     echo "Detaching disks ..."
 
     gcloud compute instances detach-disk $instance \
-      --disk="$disk" \
-      --zone="$zone" \
-      --project="$project"
+        --disk="$disk" \
+        --zone="$zone" \
+        --project="$project"
 
 }
 
-function deleteDisks() {
+deleteDisks() {
 
     echo "Deleting disks ..."
 
     gcloud compute disks delete $disk \
-      --zone="$zone" \
-      --project="$project"
+        --zone="$zone" \
+        --project="$project"
 
 }
 
-function createDisks() {
+createDisks() {
 
     echo "Creating disks ..."
 
     snap=$(gcloud compute snapshots list \
-      --filter="sourceDisk~$disk" \
-      --format="value(name)" \
-      --project="$project" \
-      --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
+        --filter="sourceDisk~$disk" \
+        --format="value(name)" \
+        --project="$project" \
+        --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
 
     gcloud compute disks create $disk \
-      --source-snapshot="$snap" \
-      --zone="$zone" \
-      --project="$project"
+        --source-snapshot="$snap" \
+        --zone="$zone" \
+        --project="$project"
 
 }
 
-function attachDisks() {
+attachDisks() {
 
     echo "Attaching disks ..."
 
     gcloud compute instances attach-disk $instance \
-      --disk="$disk" \
-      --device-name="$disk" \
-      --zone="$zone" \
-      --project="$project" \
-      --boot
+        --disk="$disk" \
+        --device-name="$disk" \
+        --zone="$zone" \
+        --project="$project" \
+        --boot
 
 }
 
-function setAutodelete() {
+setAutodelete() {
 
     echo "Setting autodelete on disks ..."
 
     gcloud compute instances set-disk-auto-delete $instance \
-      --auto-delete \
-      --disk="$disk" \
-      --zone="$zone" \
-      --project="$project"
+        --auto-delete \
+        --disk="$disk" \
+        --zone="$zone" \
+        --project="$project"
 
 }
 
-function startServer() {
+startServer() {
 
     echo "Starting server ..."
 
     gcloud compute instances start $instance \
-      --zone="$zone" \
-      --project="$project"
+        --zone="$zone" \
+        --project="$project"
 
 }
 

@@ -54,26 +54,49 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
-read -p "projectId : " project
-read -p "instance  : " instance
-read -p "zone      : " zone
-read -p "policy    : " policy
-read -p "snapback  : " snapback
+# project="projectid"
+# instance="hostname"
+# zone="us-central1-c"
+# policy="hourly"
+# snapback=3
 
-function checkLogin() {
+# Format (requires all 5 arguments): ./script.sh project host zone policy snapback
+# If no arguments are provided or less than 5 arguments, you will be prompted to enter your options.
+
+if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
+
+    if  [ "$#" -eq 5 ]; then
+        project=$1
+        instance=$2
+        zone=$3
+        policy=$4
+        snapback=$5
+    else 
+        read -p "projectId : " project
+        read -p "instance  : " instance
+        read -p "zone      : " zone
+        read -p "policy    : " policy
+        read -p "snapback  : " snapback
+    fi
+
+fi
+
+echo $project $instance $zone $policy $snapback
+
+checkLogin() {
 
     user=$(gcloud config list account --format "value(core.account)")
     user=$(echo $user | cut -d@ -f1)
     user=${user/./-}
 
     if [ -z "$user" ]; then
-    echo "You're not logged in to Google SDK."
-    exit
+        echo "You're not logged in to Google SDK."
+        exit
     fi
 
 }
 
-function displayHeader() {
+displayHeader() {
 
     echo "######################################################"
     echo "Starting the restore process for $instance "
@@ -81,12 +104,12 @@ function displayHeader() {
 
 }
 
-function getDisks() {
+getDisks() {
 
     disks=$(gcloud compute disks list \
-      --filter="users:$instance" \
-      --format="value(name)" \
-      --project="$project")
+        --filter="users:$instance" \
+        --format="value(name)" \
+        --project="$project")
 
     echo "Listing disks for $instance ... "
 
@@ -98,17 +121,17 @@ function getDisks() {
 
 }
 
-function getSnaps() {
+getSnaps() {
 
     echo "Listing snapshots to restore for $instance ... "
 
     for disk in $disks; do
 
         snap=$(gcloud compute snapshots list \
-          --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" \
-          --format="value(name)" \
-          --project="$project" \
-          --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
+            --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" \
+            --format="value(name)" \
+            --project="$project" \
+            --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
 
         echo "$disk: $snap" 
 
@@ -116,67 +139,67 @@ function getSnaps() {
 
 }
 
-function stopServer() {
+stopServer() {
 
     echo "Stopping server ..."
 
     gcloud compute instances stop $instance \
-      --zone="$zone" \
-      --project="$project"
+        --zone="$zone" \
+        --project="$project"
 
 }
 
-function detachDisks() {
+detachDisks() {
 
     echo "Detaching disks ..."
 
     for disk in $disks; do
 
         gcloud compute instances detach-disk $instance \
-          --disk="$disk" \
-          --zone="$zone" \
-          --project="$project"
+            --disk="$disk" \
+            --zone="$zone" \
+            --project="$project"
 
     done 
 
 }
 
-function deleteDisks() {
+deleteDisks() {
 
     echo "Deleting disks ..."
 
     for disk in $disks; do
 
         gcloud compute disks delete $disk \
-          --zone="$zone" \
-          --project="$project"
+            --zone="$zone" \
+            --project="$project"
 
     done
 
 }
 
-function createDisks() {
+createDisks() {
 
     echo "Creating disks ..."
 
     for disk in $disks; do
 
         snap=$(gcloud compute snapshots list \
-          --filter="sourceDisk~$disk" \
-          --format="value(name)" \
-          --project="$project" \
-          --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
+            --filter="sourceDisk~$disk" \
+            --format="value(name)" \
+            --project="$project" \
+            --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
 
         gcloud compute disks create $disk \
-          --source-snapshot="$snap" \
-          --zone="$zone" \
-          --project="$project"
+            --source-snapshot="$snap" \
+            --zone="$zone" \
+            --project="$project"
 
     done
 
 }
 
-function attachDisks() {
+attachDisks() {
 
     echo "Attaching disks ..."
 
@@ -186,17 +209,17 @@ function attachDisks() {
 
         if [ $count == 1 ]; then 
             gcloud compute instances attach-disk $instance \
-              --disk="$disk" \
-              --device-name="$disk" \
-              --zone="$zone" \
-              --project="$project" \
-              --boot
+                --disk="$disk" \
+                --device-name="$disk" \
+                --zone="$zone" \
+                --project="$project" \
+                --boot
         else 
             gcloud compute instances attach-disk $instance \
-              --disk="$disk" \
-              --device-name="$disk" \
-              --zone="$zone" \
-              --project="$project"
+                --disk="$disk" \
+                --device-name="$disk" \
+                --zone="$zone" \
+                --project="$project"
         fi
 
         count=$((count+1))
@@ -205,29 +228,29 @@ function attachDisks() {
 
 }
 
-function setAutodelete() {
+setAutodelete() {
 
     echo "Setting autodelete on disks ..."
 
     for disk in $disks; do
 
         gcloud compute instances set-disk-auto-delete $instance \
-          --auto-delete \
-          --disk="$disk" \
-          --zone="$zone" \
-          --project="$project"
+            --auto-delete \
+            --disk="$disk" \
+            --zone="$zone" \
+            --project="$project"
 
     done 
 
 }
 
-function startServer() {
+startServer() {
 
     echo "Starting server ..."
 
     gcloud compute instances start $instance \
-      --zone="$zone" \
-      --project="$project"
+        --zone="$zone" \
+        --project="$project"
 
 }
 
@@ -249,7 +272,6 @@ then
     startServer
 fi
 </code></pre></div></div>
-
 
   </div><a class="u-url" href="/cloud/2023/12/20/gcp-restore-all-disks.html" hidden></a>
 </article>
