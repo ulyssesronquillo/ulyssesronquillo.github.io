@@ -57,9 +57,11 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>post.title | downcase | truncate: 40, ' ...'
 </code></pre></div></div>
 
-<p>The downcase filter converts everything to lowercase.</p>
+<p>The downcase filter converts post.title to lowercase.</p>
 
-<p>The truncate filter requires 2 parameters: the length of the string and the characters to append to the string.</p>
+<p>The truncate filter truncates post.title longer than 40 characters and adds 3 dots at the end.</p>
+
+<p>Truncate requires 2 parameters: the length of the string and the characters to append to the string.</p>
 
   </div><a class="u-url" href="/2024/01/01/truncate-titles-in-jekyll.html" hidden></a>
 </article>
