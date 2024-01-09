@@ -3452,7 +3452,7 @@
   
     {
 
-      "title"    : "httpd on redhat &amp;#038; centos",
+      "title"    : "httpd on redhat and centos",
       "url"      : "/linux/2020/12/04/httpd-on-redhat-centos.html",
       "category" : "",
       "tags"     : "centos, enable, redhat, start, status, stop",
@@ -6232,7 +6232,7 @@
   
     {
 
-      "title"    : "display instance id &amp;#038; ip address",
+      "title"    : "display instance id and ip address",
       "url"      : "/cloud/2019/07/07/display-instance-id-ip-address.html",
       "category" : "",
       "tags"     : "aws, crontab, ec2, instance-id, ip address, metadata",
@@ -6252,7 +6252,7 @@
   
     {
 
-      "title"    : "apache &amp;#038; webroot",
+      "title"    : "apache webroot",
       "url"      : "/linux/2019/07/05/apache-webroot.html",
       "category" : "",
       "tags"     : "apache, centos, debian, fedora, mint, redhat, ubuntu, webroot",
@@ -6472,7 +6472,7 @@
   
     {
 
-      "title"    : "vim page up &amp;#038; down",
+      "title"    : "vim page up and down",
       "url"      : "/linux/2019/06/17/vim-page-up-down.html",
       "category" : "",
       "tags"     : "page down, page up, vim",
@@ -6802,7 +6802,7 @@
   
     {
 
-      "title"    : "who&amp;#8217;s logged in?",
+      "title"    : "who is logged in?",
       "url"      : "/linux/2019/04/03/whos-logged-in.html",
       "category" : "",
       "tags"     : "logged in, who",
@@ -10092,7 +10092,7 @@
   
     {
 
-      "title"    : "can&amp;#8217;t connect to mysql server",
+      "title"    : "cant connect to mysql server",
       "url"      : "/linux/2013/06/28/cant-connect-to-mysql-server.html",
       "category" : "",
       "tags"     : "bind-address, mysql, static ip, ubuntu",
