@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-09T01:51:33+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">terraform local variables</title><link href="http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables.html" rel="alternate" type="text/html" title="terraform local variables" /><published>2024-01-08T00:00:00+00:00</published><updated>2024-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables.html"><![CDATA[<p>If you find yourself entering the same value multiple times in your Terraform script, you can save yourself some time by declaring local variables inside a locals block and reuse them throughout your script or module.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-09T19:47:56+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">scp multiple files</title><link href="http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files.html" rel="alternate" type="text/html" title="scp multiple files" /><published>2024-01-09T00:00:00+00:00</published><updated>2024-01-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files.html"><![CDATA[<p>scp is an excellent utility for copying files to and from a server without the need for running a ftp server or some sort of file transfer service on the server. scp uses your existing ssh access to copy files to and from a server. You will need permissions to the remote server otherwise scp copy will fail. Whether pulling down a file or pushing a file to a server, scp can be invoked from a client regardless of file direction. You can copy a single file or multiple files. The examples below demonstrate this.</p>
+
+<p>scp copy a single file to a server.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp file.ext username@server:/home/homedir/
+</code></pre></div></div>
+
+<p>scp copy multiple local files to a server.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp file1.ext file2.ext file3.ext username@server:/home/homedir/
+</code></pre></div></div>
+
+<p>scp copy a single file from a server to the desktop.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp username@server:/home/homedir/file.ext .
+</code></pre></div></div>
+
+<p>scp copy multiple files from a server to the desktop.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp username@server:/home/homedir/*.{txt,doc} . 
+</code></pre></div></div>
+
+<p>Here’s a script that I wrote to upload multiple files to a server. It looks for text and php files in the current directory and then uploads them to the server.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+# create temp file
+temp="temp"
+&gt;$temp
+# loop through selected files in the current directory
+for file in *.{txt,php}; do
+    # put all files in one row
+    echo -n "$file " &gt;&gt; $temp 
+done
+# add new line at the end
+echo "" &gt;&gt; $temp
+# assign the list to a variable called $files
+files=$(cat $temp)
+# scp the files to the cloudreporting server
+scp $files username@server:/home/homedir
+# delete temp file
+rm -f $temp
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="scp" /><category term="multiple" /><category term="files" /><summary type="html"><![CDATA[scp is an excellent utility for copying files to and from a server without the need for running a ftp server or some sort of file transfer service on the server. scp uses your existing ssh access to copy files to and from a server. You will need permissions to the remote server otherwise scp copy will fail. Whether pulling down a file or pushing a file to a server, scp can be invoked from a client regardless of file direction. You can copy a single file or multiple files. The examples below demonstrate this.]]></summary></entry><entry><title type="html">terraform local variables</title><link href="http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables.html" rel="alternate" type="text/html" title="terraform local variables" /><published>2024-01-08T00:00:00+00:00</published><updated>2024-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables.html"><![CDATA[<p>If you find yourself entering the same value multiple times in your Terraform script, you can save yourself some time by declaring local variables inside a locals block and reuse them throughout your script or module.</p>
 
 <p>Here’s a locals block.</p>
 
@@ -304,231 +345,4 @@ searchReplace
 
 </code></pre></div></div>
 
-<p>It took a mere 2-3 seconds to convert all titles on over 1000 files.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="search" /><category term="replace" /><category term="lowercase" /><summary type="html"><![CDATA[Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.]]></summary></entry><entry><title type="html">gcp restore all disks</title><link href="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks.html" rel="alternate" type="text/html" title="gcp restore all disks" /><published>2023-12-20T00:00:00+00:00</published><updated>2023-12-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2023/12/20/gcp-restore-all-disks.html"><![CDATA[<p>Here’s my latest script on how to restore all disks of a VM in GCP.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
-
-# project="projectid"
-# instance="hostname"
-# zone="us-central1-c"
-# policy="hourly"
-# snapback=3
-
-# Format (requires all 5 arguments): ./script.sh project host zone policy snapback
-# If no arguments are provided or less than 5 arguments, you will be prompted to enter your options.
-
-if [ -z "$project" ] || [ -z "$instance" ] || [ -z "$zone" ] || [ -z "$policy" ] || [ -z "$snapback" ]; then
-
-    if  [ "$#" -eq 5 ]; then
-        project=$1
-        instance=$2
-        zone=$3
-        policy=$4
-        snapback=$5
-    else 
-        read -p "projectId : " project
-        read -p "instance  : " instance
-        read -p "zone      : " zone
-        read -p "policy    : " policy
-        read -p "snapback  : " snapback
-    fi
-
-fi
-
-echo $project $instance $zone $policy $snapback
-
-checkLogin() {
-
-    user=$(gcloud config list account --format "value(core.account)")
-    user=$(echo $user | cut -d@ -f1)
-    user=${user/./-}
-
-    if [ -z "$user" ]; then
-        echo "You're not logged in to Google SDK."
-        exit
-    fi
-
-}
-
-displayHeader() {
-
-    echo "######################################################"
-    echo "Starting the restore process for $instance "
-    echo "######################################################"
-
-}
-
-getDisks() {
-
-    disks=$(gcloud compute disks list \
-        --filter="users:$instance" \
-        --format="value(name)" \
-        --project="$project")
-
-    echo "Listing disks for $instance ... "
-
-    for disk in $disks; do
-
-        echo $disk
-    
-    done
-
-}
-
-getSnaps() {
-
-    echo "Listing snapshots to restore for $instance ... "
-
-    for disk in $disks; do
-
-        snap=$(gcloud compute snapshots list \
-            --filter="sourceSnapshotSchedulePolicy~$policy AND sourceDisk~$disk" \
-            --format="value(name)" \
-            --project="$project" \
-            --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
-
-        echo "$disk: $snap" 
-
-    done 
-
-}
-
-stopServer() {
-
-    echo "Stopping server ..."
-
-    gcloud compute instances stop $instance \
-        --zone="$zone" \
-        --project="$project"
-
-}
-
-detachDisks() {
-
-    echo "Detaching disks ..."
-
-    for disk in $disks; do
-
-        gcloud compute instances detach-disk $instance \
-            --disk="$disk" \
-            --zone="$zone" \
-            --project="$project"
-
-    done 
-
-}
-
-deleteDisks() {
-
-    echo "Deleting disks ..."
-
-    for disk in $disks; do
-
-        gcloud compute disks delete $disk \
-            --zone="$zone" \
-            --project="$project"
-
-    done
-
-}
-
-createDisks() {
-
-    echo "Creating disks ..."
-
-    for disk in $disks; do
-
-        snap=$(gcloud compute snapshots list \
-            --filter="sourceDisk~$disk" \
-            --format="value(name)" \
-            --project="$project" \
-            --sort-by="~creationTimestamp" | head -n $snapback | tail -n 1)
-
-        gcloud compute disks create $disk \
-            --source-snapshot="$snap" \
-            --zone="$zone" \
-            --project="$project"
-
-    done
-
-}
-
-attachDisks() {
-
-    echo "Attaching disks ..."
-
-    count=1
-
-    for disk in $disks; do
-
-        if [ $count == 1 ]; then 
-            gcloud compute instances attach-disk $instance \
-                --disk="$disk" \
-                --device-name="$disk" \
-                --zone="$zone" \
-                --project="$project" \
-                --boot
-        else 
-            gcloud compute instances attach-disk $instance \
-                --disk="$disk" \
-                --device-name="$disk" \
-                --zone="$zone" \
-                --project="$project"
-        fi
-
-        count=$((count+1))
-
-    done 
-
-}
-
-setAutodelete() {
-
-    echo "Setting autodelete on disks ..."
-
-    for disk in $disks; do
-
-        gcloud compute instances set-disk-auto-delete $instance \
-            --auto-delete \
-            --disk="$disk" \
-            --zone="$zone" \
-            --project="$project"
-
-    done 
-
-}
-
-startServer() {
-
-    echo "Starting server ..."
-
-    gcloud compute instances start $instance \
-        --zone="$zone" \
-        --project="$project"
-
-}
-
-main() {
-
-    checkLogin
-    displayHeader
-    getDisks
-    getSnaps 
-
-    read -p "Do you want to proceed with restore? Are you sure? " -n 1 -r
-    echo    # (optional) move to a new line
-    if [[ $REPLY =~ ^[Yy]$ ]]
-    then
-        stopServer
-        detachDisks
-        deleteDisks
-        createDisks
-        attachDisks
-        setAutodelete
-        startServer
-    fi
-    
-}
-
-main
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="compute" /><category term="restore" /><category term="all" /><category term="disks" /><summary type="html"><![CDATA[Here’s my latest script on how to restore all disks of a VM in GCP.]]></summary></entry></feed>
+<p>It took a mere 2-3 seconds to convert all titles on over 1000 files.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="search" /><category term="replace" /><category term="lowercase" /><summary type="html"><![CDATA[Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.]]></summary></entry></feed>
