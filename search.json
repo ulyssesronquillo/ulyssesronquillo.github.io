@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "terraform local variables",
+      "url"      : "/cloud/2024/01/08/terraform-local-variables.html",
+      "category" : "",
+      "tags"     : "terraform, local, variables",
+      "date"     : "2024-01-08 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "display elapse time",
       "url"      : "/linux/2024/01/03/display-elapse-time.html",
       "category" : "",
