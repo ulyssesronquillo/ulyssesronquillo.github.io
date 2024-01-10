@@ -1,7 +1,7 @@
 /**
  * Reset some basic elements
  */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&family=Source+Code+Pro&display=swap");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -15,6 +15,7 @@ dl, dd, ol, ul, figure {
 body {
   /*font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
   font-family: "Fira Sans", sans-serif;
+  font-style: italic;
   color: #000;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
