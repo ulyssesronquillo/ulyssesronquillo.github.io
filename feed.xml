@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-11T06:44:32+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">jekyll target blank</title><link href="http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank.html" rel="alternate" type="text/html" title="jekyll target blank" /><published>2024-01-11T00:00:00+00:00</published><updated>2024-01-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank.html"><![CDATA[<p>I found a really nice gem that sets all external links to open to a new tab. It’s called jekyll-target-blank. To add, just run the following.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-11T18:25:45+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">install xrdp</title><link href="http://0.0.0.0:4000/linux/2024/01/11/install-xrdp.html" rel="alternate" type="text/html" title="install xrdp" /><published>2024-01-11T00:00:00+00:00</published><updated>2024-01-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/11/install-xrdp</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/11/install-xrdp.html"><![CDATA[<p>xrdp is a package that allows another desktop to connect to another using the rdp desktop software.</p>
+
+<p>Install xrdp.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install xrdp
+</code></pre></div></div>
+
+<p>Add another user since you can’t use the default user. Also create a home directory.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo useradd -m john
+</code></pre></div></div>
+
+<p>Give user sudo access. This is optional, but is nice to have.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -a -G sudo john
+</code></pre></div></div>
+
+<p>Set user’s password.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo passwd john
+</code></pre></div></div>
+
+<p>You can now connect from a rdp client to your desktop using username john.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="install" /><category term="xrdp" /><category term="remote" /><category term="desktop" /><summary type="html"><![CDATA[xrdp is a package that allows another desktop to connect to another using the rdp desktop software.]]></summary></entry><entry><title type="html">jekyll target blank</title><link href="http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank.html" rel="alternate" type="text/html" title="jekyll target blank" /><published>2024-01-11T00:00:00+00:00</published><updated>2024-01-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank.html"><![CDATA[<p>I found a really nice gem that sets all external links to open to a new tab. It’s called jekyll-target-blank. To add, just run the following.</p>
 
 <p>Edit Gemfile and add this line.</p>
 
@@ -336,24 +358,4 @@ echo $project $instance $zone $policy $snapback
 }
 
 main 
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash" /><category term="function" /><category term="call" /><category term="within" /><category term="function" /><summary type="html"><![CDATA[How to make a function call within a function in Bash.]]></summary></entry><entry><title type="html">Random words from array</title><link href="http://0.0.0.0:4000/linux/2023/12/24/random-words-from-array.html" rel="alternate" type="text/html" title="Random words from array" /><published>2023-12-24T00:00:00+00:00</published><updated>2023-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/24/random-words-from-array</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/24/random-words-from-array.html"><![CDATA[<p>Here’s how to to generate random words from an array in Bash using shuf.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal')
-shuf -e ${FOOD[@]}
-Milk
-Grits
-Sausage
-Oatmeal
-Bread
-Banana
-Eggs
-</code></pre></div></div>
-
-<p>You can limit output to 3 by piping output using head -n 3.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FOOD=('Milk' 'Bread' 'Eggs' 'Sausage' 'Grits' 'Banana' 'Oatmeal')
-shuf -e ${FOOD[@]} | head -n 3
-Bread
-Sausage
-Eggs
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="random" /><category term="words" /><category term="array" /><category term="bash" /><category term="shuf" /><summary type="html"><![CDATA[Here’s how to to generate random words from an array in Bash using shuf.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash" /><category term="function" /><category term="call" /><category term="within" /><category term="function" /><summary type="html"><![CDATA[How to make a function call within a function in Bash.]]></summary></entry></feed>
