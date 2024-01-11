@@ -54,22 +54,22 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>xrdp is a package that allows another desktop to connect to another using the rdp desktop software.</p>
 
-<p>Install xrdp.</p>
+<p>Install xrdp on the target desktop.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install xrdp
 </code></pre></div></div>
 
-<p>Add another user since you can’t use the default user. Also create a home directory.</p>
+<p>Add a second user since you can’t use the default user. Use -m to create a home directory.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo useradd -m john
 </code></pre></div></div>
 
-<p>Give user sudo access. This is optional, but is nice to have.</p>
+<p>Give new user sudo access. This is optional, but is nice to have if running root commands.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -a -G sudo john
 </code></pre></div></div>
 
-<p>Set user’s password.</p>
+<p>Set the user’s password.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo passwd john
 </code></pre></div></div>
