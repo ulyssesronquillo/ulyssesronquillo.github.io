@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "jekyll target blank",
+      "url"      : "/linux/2024/01/11/jekyll-target-blank.html",
+      "category" : "",
+      "tags"     : "jekyll, link, target, blank",
+      "date"     : "2024-01-11 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "scp multiple files",
       "url"      : "/linux/2024/01/09/scp-multiple-files.html",
       "category" : "",

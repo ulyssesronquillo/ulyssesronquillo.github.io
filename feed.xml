@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-11T04:42:51+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">scp multiple files</title><link href="http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files.html" rel="alternate" type="text/html" title="scp multiple files" /><published>2024-01-09T00:00:00+00:00</published><updated>2024-01-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files.html"><![CDATA[<p>scp is an excellent utility for copying files to and from a server without the need for running a ftp server or some sort of file transfer service on the server. scp uses your existing ssh access to copy files to and from a server. You will need permissions to the remote server otherwise scp copy will fail. Whether pulling down a file or pushing a file to a server, scp can be invoked from a client regardless of file direction. You can copy a single file or multiple files. The examples below demonstrate this.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-11T06:44:32+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">jekyll target blank</title><link href="http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank.html" rel="alternate" type="text/html" title="jekyll target blank" /><published>2024-01-11T00:00:00+00:00</published><updated>2024-01-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/11/jekyll-target-blank.html"><![CDATA[<p>I found a really nice gem that sets all external links to open to a new tab. It’s called jekyll-target-blank. To add, just run the following.</p>
+
+<p>Edit Gemfile and add this line.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'jekyll-target-blank'
+</code></pre></div></div>
+
+<p>Edit the _config.yml file and add this line.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins:
+  - jekyll-target-blank
+</code></pre></div></div>
+
+<p>Run bundle install.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle install
+</code></pre></div></div>
+
+<p>Because I’m running Jekyll in a docker container, I had to restart it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose stop
+docker-compose up -d
+</code></pre></div></div>
+
+<p>Check your external links. They should open up to a new tab.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="jekyll" /><category term="link" /><category term="target" /><category term="blank" /><summary type="html"><![CDATA[I found a really nice gem that sets all external links to open to a new tab. It’s called jekyll-target-blank. To add, just run the following.]]></summary></entry><entry><title type="html">scp multiple files</title><link href="http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files.html" rel="alternate" type="text/html" title="scp multiple files" /><published>2024-01-09T00:00:00+00:00</published><updated>2024-01-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files.html"><![CDATA[<p>scp is an excellent utility for copying files to and from a server without the need for running a ftp server or some sort of file transfer service on the server. scp uses your existing ssh access to copy files to and from a server. You will need permissions to the remote server otherwise scp copy will fail. Whether pulling down a file or pushing a file to a server, scp can be invoked from a client regardless of file direction. You can copy a single file or multiple files. The examples below demonstrate this.</p>
 
 <p>scp copy a single file to a server.</p>
 
@@ -332,17 +356,4 @@ shuf -e ${FOOD[@]} | head -n 3
 Bread
 Sausage
 Eggs
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="random" /><category term="words" /><category term="array" /><category term="bash" /><category term="shuf" /><summary type="html"><![CDATA[Here’s how to to generate random words from an array in Bash using shuf.]]></summary></entry><entry><title type="html">Search replace lowercase</title><link href="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html" rel="alternate" type="text/html" title="Search replace lowercase" /><published>2023-12-21T00:00:00+00:00</published><updated>2023-12-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/21/search-replace-lowercase.html"><![CDATA[<p>Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash 
-cd ~/Code/docker/ulyme/_posts
-searchReplace() {
-    for filename in 20*.md; do
-        sed -i -e 's/title:.*/\L&amp;/g' $filename
-    done
-}
-searchReplace
-
-</code></pre></div></div>
-
-<p>It took a mere 2-3 seconds to convert all titles on over 1000 files.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="search" /><category term="replace" /><category term="lowercase" /><summary type="html"><![CDATA[Here’s a script I use to edit over 1000 files to convert my post titles to all lowercase.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="random" /><category term="words" /><category term="array" /><category term="bash" /><category term="shuf" /><summary type="html"><![CDATA[Here’s how to to generate random words from an array in Bash using shuf.]]></summary></entry></feed>

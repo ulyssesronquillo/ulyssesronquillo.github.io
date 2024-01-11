@@ -23,18 +23,20 @@
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
         <label for="nav-trigger">
           <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
             </svg>
           </span>
         </label>
 
         <div class="trigger"><a class="page-link" href="/about.html">about</a></div>
-      </nav></div>
+      </nav>
+</div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -50,7 +52,7 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Hashicorp has a product called <a href="https://learn.hashicorp.com/terraform/">Terraform</a>, which is a provisioning tool for the cloud. It works with most major providers like AWS, GCP, Azure and many more. Unlike <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a>, <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/">Resource Manager</a> and <a href="https://cloud.google.com/deployment-manager/docs/">Deployment Manager</a>, Terraform will work with not just its own, but with many cloud providers. Here’s an example of how to provision a single instance to AWS, and assign an elastic IP to it. The cloud resources in the example were redacted. Placeholder values were placed instead for security purposes.</p>
+    <p>Hashicorp has a product called <a href="https://learn.hashicorp.com/terraform/" target="_blank" rel="noopener noreferrer">Terraform</a>, which is a provisioning tool for the cloud. It works with most major providers like AWS, GCP, Azure and many more. Unlike <a href="https://aws.amazon.com/cloudformation/" target="_blank" rel="noopener noreferrer">CloudFormation</a>, <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/" target="_blank" rel="noopener noreferrer">Resource Manager</a> and <a href="https://cloud.google.com/deployment-manager/docs/" target="_blank" rel="noopener noreferrer">Deployment Manager</a>, Terraform will work with not just its own, but with many cloud providers. Here’s an example of how to provision a single instance to AWS, and assign an elastic IP to it. The cloud resources in the example were redacted. Placeholder values were placed instead for security purposes.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>provider "aws" {
 	access_key = "xxxxxxxx"
@@ -86,7 +88,8 @@ resource "aws_eip_association" "server1-eip" {
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform destroy
 </code></pre></div></div>
 
-  </div><a class="u-url" href="/cloud/2018/12/31/terraform.html" hidden></a>
+  </div>
+<a class="u-url" href="/cloud/2018/12/31/terraform.html" hidden></a>
 </article>
 
       </div>
@@ -106,11 +109,12 @@ resource "aws_eip_association" "server1-eip" {
         </p>
       </div>
       <div class="footer-col-right">
-        <p>Copyright &copy; 2024</p>
+        <p>Copyright © 2024</p>
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"></ul>
+    <div class="social-links">
+<ul class="social-media-list"></ul>
 </div>
 
   </div>
