@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "terraform gcp vm alias ip",
+      "url"      : "/cloud/2024/01/12/terraform-gcp-vm-alias-ip.html",
+      "category" : "",
+      "tags"     : "gcp, vm, alias, ip",
+      "date"     : "2024-01-12 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "jekyll target blank",
       "url"      : "/linux/2024/01/11/jekyll-target-blank.html",
       "category" : "",
