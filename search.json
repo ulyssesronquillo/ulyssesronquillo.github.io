@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "gcloud vm alias ip",
+      "url"      : "/cloud/2024/01/13/gcloud-vm-alias-ip.html",
+      "category" : "",
+      "tags"     : "gcloud, vm, ip, alias",
+      "date"     : "2024-01-13 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "terraform gcp vm alias ip",
       "url"      : "/cloud/2024/01/12/terraform-gcp-vm-alias-ip.html",
       "category" : "",
