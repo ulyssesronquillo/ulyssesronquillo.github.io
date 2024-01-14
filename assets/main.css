@@ -88,12 +88,12 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: purple;
+  color: blue;
   text-decoration: none;
 }
 
 a:visited {
-  color: purple;
+  color: darkblue;
 }
 
 a:hover {
@@ -198,7 +198,7 @@ ul#results-container li {
 }
 
 strong {
-  color: darkblue;
+  color: purple;
   font-style: bold;
 }
 
