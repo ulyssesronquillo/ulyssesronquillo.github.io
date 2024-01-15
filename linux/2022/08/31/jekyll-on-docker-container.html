@@ -57,10 +57,13 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir blog
 cd blog
 docker run -v $(pwd):/site bretfisher/jekyll new .
-docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
+</code></pre></div></div>
+<p>Start jekyll.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
 </code></pre></div></div>
 
-<p>Another option is to use docker compose. Create a docker-compose.yml file.</p>
+<p>Another option is to use docker compose. Just create a docker-compose.yml file.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: 3.5
 services:
@@ -72,7 +75,7 @@ services:
       - '4000:4000'
 </code></pre></div></div>
 
-<p>Run Jekyll.</p>
+<p>Start Jekyll by using docker-compose up. -d means detach or run in the background.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd blog
 docker-compose up -d
