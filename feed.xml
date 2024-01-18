@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-15T16:44:56+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gcloud vm alias ip</title><link href="http://0.0.0.0:4000/cloud/2024/01/13/gcloud-vm-alias-ip.html" rel="alternate" type="text/html" title="gcloud vm alias ip" /><published>2024-01-13T00:00:00+00:00</published><updated>2024-01-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/13/gcloud-vm-alias-ip</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/13/gcloud-vm-alias-ip.html"><![CDATA[<p>In my <a href="/cloud/2024/01/12/terraform-gcp-vm-alias-ip.html">previous post</a>, I’ve provisioned a vm with an alias ip using terraform. In this post, I will do the same but will use gcloud commands.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-18T04:36:50+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">vim navigation commands</title><link href="http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands.html" rel="alternate" type="text/html" title="vim navigation commands" /><published>2024-01-17T00:00:00+00:00</published><updated>2024-01-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands.html"><![CDATA[<p>Here’s some common vim commands.</p>
+
+<p>Cursor movement</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>h - move cursor left 
+l - move cursor right
+k - move cursor up
+j - move cursor down
+
+H - move cursor to top of screen
+M - move cursor to middle of screen
+L - move cursor to bottom of screen
+
+w - jump forward to the start of a word 
+e - jump forward to the end of a word
+b - jump backwards to the start of a word 
+
+0 - jump to the start of the line
+$ - jump to the end of the line 
+
+gg - go to the first line of the document 
+G - go the last line of the decoment
+</code></pre></div></div>
+
+<p>Insert mode</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i - insert before cursor
+I - insert at the beginning of the line 
+a - insert after the cursor
+A - insert at the end of the line 
+</code></pre></div></div>
+
+<p>Full list of <a href="https://vim.rtorr.com/">shortcuts</a>.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="vim" /><category term="navigation" /><category term="common" /><category term="commands" /><summary type="html"><![CDATA[Here’s some common vim commands.]]></summary></entry><entry><title type="html">gcloud vm alias ip</title><link href="http://0.0.0.0:4000/cloud/2024/01/13/gcloud-vm-alias-ip.html" rel="alternate" type="text/html" title="gcloud vm alias ip" /><published>2024-01-13T00:00:00+00:00</published><updated>2024-01-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/13/gcloud-vm-alias-ip</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/13/gcloud-vm-alias-ip.html"><![CDATA[<p>In my <a href="/cloud/2024/01/12/terraform-gcp-vm-alias-ip.html">previous post</a>, I’ve provisioned a vm with an alias ip using terraform. In this post, I will do the same but will use gcloud commands.</p>
 
 <p>First, let’s reserve an internal ip address.</p>
 
@@ -344,20 +376,4 @@ sudo mount /dev/nvme0n1 /home/ulysses/Nikon
 <p>Since everything looks good, I can now safely reboot.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo shutdown -r 
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I recently bought a 2TB NVME SSD drive which I plan to install on my Linux Mint desktop. I have been taking a ton of pictures lately with my old Nikon D700 DSLR camera and I can use the extra space. Since the new drive is unformatted, here were the steps that I took to get it working on my desktop. This how-to assumes that I have installed the new NVME drive on your motherboard successfully.]]></summary></entry><entry><title type="html">how to shred a volume</title><link href="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html" rel="alternate" type="text/html" title="how to shred a volume" /><published>2023-12-29T00:00:00+00:00</published><updated>2023-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2023/12/29/how-to-shred-a-volume.html"><![CDATA[<p>If you have a disk drive, SSD or NVME storage device that need to be wiped clean, I recommend that you use the shred command.</p>
-
-<p>In this example, I’m cleaning up the contents of my NVME device at /dev/nvme0n1.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo shred -v -n 1 --random-source=/dev/urandom -z /dev/nvme0n1
-</code></pre></div></div>
-
-<p>I’m using these options and their explanation.</p>
-
-<ul>
-  <li>-v is verbose</li>
-  <li>-n is the number of iterations. Mine is set to 1. You can increase it, but it can take hours.</li>
-  <li>–random-source is set to /dev/urandom which is the kernel’s random number generator.</li>
-  <li>-z means everything gets overwritten by zeros.</li>
-</ul>
-
-<p>Shred will make it nearly impossible to steal your data.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="shred" /><category term="volume" /><category term="wipe" /><category term="clean" /><category term="erase" /><summary type="html"><![CDATA[If you have a disk drive, SSD or NVME storage device that need to be wiped clean, I recommend that you use the shred command.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I recently bought a 2TB NVME SSD drive which I plan to install on my Linux Mint desktop. I have been taking a ton of pictures lately with my old Nikon D700 DSLR camera and I can use the extra space. Since the new drive is unformatted, here were the steps that I took to get it working on my desktop. This how-to assumes that I have installed the new NVME drive on your motherboard successfully.]]></summary></entry></feed>
