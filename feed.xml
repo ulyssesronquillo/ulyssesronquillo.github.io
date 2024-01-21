@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-20T23:35:41+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">vim navigation commands</title><link href="http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands.html" rel="alternate" type="text/html" title="vim navigation commands" /><published>2024-01-17T00:00:00+00:00</published><updated>2024-01-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands.html"><![CDATA[<p>Vim is a terminal editor in Linux, Mac and Windows system if it’s installed. To be really efficient in using vim, you’ll need to master a few very important keystrokes. So, here’s a list of common vim keystrokes that can improve your vim experience.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-21T00:00:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">date and title</title><link href="http://0.0.0.0:4000/linux/2024/01/20/date-and-title.html" rel="alternate" type="text/html" title="date and title" /><published>2024-01-20T00:00:00+00:00</published><updated>2024-01-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/20/date-and-title</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/20/date-and-title.html"><![CDATA[<p>Previously, I was showing both dates and titles on the main index page. Here’s the date format if I’ll ever need it again.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ post.date | date: "%Y-%m-%d" }}
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="jekyll" /><category term="display" /><category term="date" /><category term="title" /><summary type="html"><![CDATA[Previously, I was showing both dates and titles on the main index page. Here’s the date format if I’ll ever need it again.]]></summary></entry><entry><title type="html">vim navigation commands</title><link href="http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands.html" rel="alternate" type="text/html" title="vim navigation commands" /><published>2024-01-17T00:00:00+00:00</published><updated>2024-01-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/17/vim-navigation-commands.html"><![CDATA[<p>Vim is a terminal editor in Linux, Mac and Windows system if it’s installed. To be really efficient in using vim, you’ll need to master a few very important keystrokes. So, here’s a list of common vim keystrokes that can improve your vim experience.</p>
 
 <p>Cursor movement</p>
 
@@ -304,76 +307,4 @@ Stop: Wed Jan 3 13:16:54 EST 2024
 
 <p>The truncate filter truncates post.title longer than 40 characters and adds 3 dots at the end.</p>
 
-<p>Truncate requires 2 parameters: the length of the string and the characters to append to the string.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I switched to a slightly different format in the home page to display the date first followed by the post titles. In addition to the format change, I wanted to truncate the titles that are longer than 40 characters to display only the first 40 characters followed by 3 dots or “…” at the end. The key to making this possible was to use Jekyll’s advanced filters, and in particular, using the truncate filter. Swapping the order of date and post titles was the easy part, but the key was using the truncate filter.]]></summary></entry><entry><title type="html">format new volume</title><link href="http://0.0.0.0:4000/2023/12/31/format-new-volume.html" rel="alternate" type="text/html" title="format new volume" /><published>2023-12-31T00:00:00+00:00</published><updated>2023-12-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2023/12/31/format-new-volume</id><content type="html" xml:base="http://0.0.0.0:4000/2023/12/31/format-new-volume.html"><![CDATA[<p>I recently bought a 2TB NVME SSD drive which I plan to install on my Linux Mint desktop. I have been taking a ton of pictures lately with my old Nikon D700 DSLR camera and I can use the extra space. Since the new drive is unformatted, here were the steps that I took to get it working on my desktop. This how-to assumes that I have installed the new NVME drive on your motherboard successfully.</p>
-
-<p>The first thing to do is to find out the device name. It shows up as a 1.8TB disk on my desktop.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
-nvme0n1 259:0    0   1.8T  0 disk
-</code></pre></div></div>
-
-<p>Check if it’s formatted. It should be empty. If not, it will display the file system type.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo file -s /dev/nvme0n1 
-</code></pre></div></div>
-
-<p>If empty.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/nvme0n1: data
-</code></pre></div></div>
-
-<p>If formatted with XFS.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/nvme0n1: SGI XFS filesystem data (blksz 4096, inosz 512, v2 dirs)
-</code></pre></div></div>
-
-<p>Since it’s empty, let’s format the drive. I will use XFS as the file system.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfs -t xfs /dev/nvme0n1 
-</code></pre></div></div>
-
-<p>Let’s mount the drive after formatting. I will use the Nikon directory in my home directory as the mount volume.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/Nikon
-sudo mount /dev/nvme0n1 /home/ulysses/Nikon
-</code></pre></div></div>
-
-<p>Let’s unmount it temporarily.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo umount /home/ulysses/Nikon
-</code></pre></div></div>
-
-<p>Next, I will add an entry to the /etc/fstab to make the drive mount permanent after each reboot. Get the UUID of the new drive using the blkid command.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo blkid 
-</code></pre></div></div>
-
-<p>Now edit the /etc/fstab file to add the new volume entry.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/fstab
-</code></pre></div></div>
-
-<p>The entry will look similar to this. Enter the UUID by replacing the x’s.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx /home/ulysses/Nikon          xfs        defaults            0 0
-</code></pre></div></div>
-
-<p>Test it by mounting all.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mount -a 
-</code></pre></div></div>
-
-<p>If there are no errors, mount was successful. You can check by running the df command.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -Th
-</code></pre></div></div>
-
-<p>It should display something similar to below. I already have 5% data on the drive.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/nvme0n1        xfs        1.9T   83G  1.8T   5% /home/ulysses/Nikon
-</code></pre></div></div>
-
-<p>Since everything looks good, I can now safely reboot.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo shutdown -r 
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I recently bought a 2TB NVME SSD drive which I plan to install on my Linux Mint desktop. I have been taking a ton of pictures lately with my old Nikon D700 DSLR camera and I can use the extra space. Since the new drive is unformatted, here were the steps that I took to get it working on my desktop. This how-to assumes that I have installed the new NVME drive on your motherboard successfully.]]></summary></entry></feed>
+<p>Truncate requires 2 parameters: the length of the string and the characters to append to the string.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I switched to a slightly different format in the home page to display the date first followed by the post titles. In addition to the format change, I wanted to truncate the titles that are longer than 40 characters to display only the first 40 characters followed by 3 dots or “…” at the end. The key to making this possible was to use Jekyll’s advanced filters, and in particular, using the truncate filter. Swapping the order of date and post titles was the easy part, but the key was using the truncate filter.]]></summary></entry></feed>

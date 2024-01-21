@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "date and title",
+      "url"      : "/linux/2024/01/20/date-and-title.html",
+      "category" : "",
+      "tags"     : "jekyll, display, date, title",
+      "date"     : "2024-01-20 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "vim navigation commands",
       "url"      : "/linux/2024/01/17/vim-navigation-commands.html",
       "category" : "",
