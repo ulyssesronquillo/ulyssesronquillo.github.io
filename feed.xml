@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-23T04:12:06+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gcp check login</title><link href="http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login.html" rel="alternate" type="text/html" title="gcp check login" /><published>2024-01-22T00:00:00+00:00</published><updated>2024-01-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login.html"><![CDATA[<p>If you are running a gcloud commands, it will be good to know if a user is still logged in. In some corporate settings, authentication is set to time out after a number of hours. The following lines of code checks if a user is still loggedin and displays a message to reauthenticate if logged out. In reality the script runs a list of GCP projects, but limits the output to just one line. The output is sent to a file. If the first line is equal to “Reauthentication required.”, then there’s a message telling the user to login again.  If the first line has an error, it means the user is not logged in. It also tells the user to login again. Here’s the code.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-23T19:05:26+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">display dashes across screen</title><link href="http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen.html" rel="alternate" type="text/html" title="display dashes across screen" /><published>2024-01-23T00:00:00+00:00</published><updated>2024-01-23T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen.html"><![CDATA[<p>Here’s the traditional way of displaying a list of dashes across the screen.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "===================="
+</code></pre></div></div>
+
+<p>Here’s the short cut.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>printf -- '=%.s' {1..20}; echo
+</code></pre></div></div>
+
+<p>Explanation:</p>
+
+<ul>
+  <li>first I’m using printf instead of echo. printf is a little bit better when it comes to formatting.</li>
+  <li>The – option tells printf to ignore the rest of the remaining arguments so it renders properly.</li>
+  <li>The character before the % percentage is the one being repeated. In this case, we are repeating “=.”</li>
+  <li>1-20 is the number of times the character before the % percentage is repeated.</li>
+</ul>
+
+<p>That’s it.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="print" /><category term="echo" /><category term="dashes" /><category term="across" /><category term="screen" /><category term="multiple" /><summary type="html"><![CDATA[Here’s the traditional way of displaying a list of dashes across the screen.]]></summary></entry><entry><title type="html">gcp check login</title><link href="http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login.html" rel="alternate" type="text/html" title="gcp check login" /><published>2024-01-22T00:00:00+00:00</published><updated>2024-01-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login.html"><![CDATA[<p>If you are running a gcloud commands, it will be good to know if a user is still logged in. In some corporate settings, authentication is set to time out after a number of hours. The following lines of code checks if a user is still loggedin and displays a message to reauthenticate if logged out. In reality the script runs a list of GCP projects, but limits the output to just one line. The output is sent to a file. If the first line is equal to “Reauthentication required.”, then there’s a message telling the user to login again.  If the first line has an error, it means the user is not logged in. It also tells the user to login again. Here’s the code.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>checkLogin() {
 
@@ -219,33 +238,4 @@ files=$(cat $temp)
 scp $files username@server:/home/homedir
 # delete temp file
 rm -f $temp
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="scp" /><category term="multiple" /><category term="files" /><summary type="html"><![CDATA[scp is an excellent utility for copying files to and from a server without the need for running a ftp server or some sort of file transfer service on the server. scp uses your existing ssh access to copy files to and from a server. You will need permissions to the remote server otherwise scp copy will fail. Whether pulling down a file or pushing a file to a server, scp can be invoked from a client regardless of file direction. You can copy a single file or multiple files. The examples below demonstrate this.]]></summary></entry><entry><title type="html">terraform local variables</title><link href="http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables.html" rel="alternate" type="text/html" title="terraform local variables" /><published>2024-01-08T00:00:00+00:00</published><updated>2024-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/08/terraform-local-variables.html"><![CDATA[<p>If you find yourself entering the same value multiple times in your Terraform script, you can save yourself some time by declaring local variables inside a locals block and reuse them throughout your script or module.</p>
-
-<p>Here’s a locals block.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>locals {
-  project          = "your_project_id"
-  hostname         = "your_hostname"
-  machine_image    = "your_machine_image"
-}
-</code></pre></div></div>
-
-<p>Once the local variables are declared, you can reuse them anywhere and as many times as you want in your Terraform script or module.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>provider "google" {
-  project = local.project
-}
-
-data "google_compute_image" "boot-image" {
-  family  = local.machine_image
-  project = local.project
-}
-
-resource "google_compute_instance" "instance" {
-  name         = local.hostname
-  machine_type = local.machine_type
-  ...
-}
-</code></pre></div></div>
-
-<p>Local variables are helpful if you’re repeating the same values throughout your configuration. You can make a change in one place and it will apply to multiple locations. The only gotcha is to not overdo it, because it will make your code harder to read. Use it in moderation.</p>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="terraform" /><category term="local" /><category term="variables" /><summary type="html"><![CDATA[If you find yourself entering the same value multiple times in your Terraform script, you can save yourself some time by declaring local variables inside a locals block and reuse them throughout your script or module.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="scp" /><category term="multiple" /><category term="files" /><summary type="html"><![CDATA[scp is an excellent utility for copying files to and from a server without the need for running a ftp server or some sort of file transfer service on the server. scp uses your existing ssh access to copy files to and from a server. You will need permissions to the remote server otherwise scp copy will fail. Whether pulling down a file or pushing a file to a server, scp can be invoked from a client regardless of file direction. You can copy a single file or multiple files. The examples below demonstrate this.]]></summary></entry></feed>
