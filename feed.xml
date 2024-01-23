@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-21T00:28:31+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">date and title</title><link href="http://0.0.0.0:4000/linux/2024/01/20/date-and-title.html" rel="alternate" type="text/html" title="date and title" /><published>2024-01-20T00:00:00+00:00</published><updated>2024-01-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/20/date-and-title</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/20/date-and-title.html"><![CDATA[<p>Previously, I was showing both dates and titles on the main index page. Here’s the date format if I’ll ever need it again.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-23T04:12:06+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gcp check login</title><link href="http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login.html" rel="alternate" type="text/html" title="gcp check login" /><published>2024-01-22T00:00:00+00:00</published><updated>2024-01-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login.html"><![CDATA[<p>If you are running a gcloud commands, it will be good to know if a user is still logged in. In some corporate settings, authentication is set to time out after a number of hours. The following lines of code checks if a user is still loggedin and displays a message to reauthenticate if logged out. In reality the script runs a list of GCP projects, but limits the output to just one line. The output is sent to a file. If the first line is equal to “Reauthentication required.”, then there’s a message telling the user to login again.  If the first line has an error, it means the user is not logged in. It also tells the user to login again. Here’s the code.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>checkLogin() {
+
+    gcloud projects list --format="value[](name)" --limit 1 &gt; reauth.txt 2&gt;&amp;1
+    ok=$(cat reauth.txt | head -n 1)
+    
+    if [[ "$ok" == "Reauthentication required." ]]; then 
+        echo "You're not logged in to Google SDK. Please login, then try again."
+        exit
+    elif [[ "$ok" =~ "ERROR" ]]; then
+        echo "You're not logged in to Google SDK. Please login, then try again."
+        exit
+    fi
+
+    rm -f reauth.txt
+
+}
+</code></pre></div></div>
+
+<p>Just call it at the top of the script.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>checkLogin
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="check" /><category term="login" /><category term="auth" /><summary type="html"><![CDATA[If you are running a gcloud commands, it will be good to know if a user is still logged in. In some corporate settings, authentication is set to time out after a number of hours. The following lines of code checks if a user is still loggedin and displays a message to reauthenticate if logged out. In reality the script runs a list of GCP projects, but limits the output to just one line. The output is sent to a file. If the first line is equal to “Reauthentication required.”, then there’s a message telling the user to login again. If the first line has an error, it means the user is not logged in. It also tells the user to login again. Here’s the code.]]></summary></entry><entry><title type="html">date and title</title><link href="http://0.0.0.0:4000/linux/2024/01/20/date-and-title.html" rel="alternate" type="text/html" title="date and title" /><published>2024-01-20T00:00:00+00:00</published><updated>2024-01-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/20/date-and-title</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/20/date-and-title.html"><![CDATA[<p>Previously, I was showing both dates and titles on the main index page. Here’s the date format if I’ll ever need it again.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ post.date | date: "%Y-%m-%d" }}
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="jekyll" /><category term="display" /><category term="date" /><category term="title" /><summary type="html"><![CDATA[Previously, I was showing both dates and titles on the main index page. Here’s the date format if I’ll ever need it again.]]></summary></entry><entry><title type="html">display markdown code</title><link href="http://0.0.0.0:4000/2024/01/20/display-markdown-code.html" rel="alternate" type="text/html" title="display markdown code" /><published>2024-01-20T00:00:00+00:00</published><updated>2024-01-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/01/20/display-markdown-code</id><content type="html" xml:base="http://0.0.0.0:4000/2024/01/20/display-markdown-code.html"><![CDATA[<p>One of the nuances in working with Jekyll is dealing with markdown language. The challenge is how to display markdown code within a post to show off your work without Jekyll interpreting it. After a few searches, I found a cool little trick that will make the markdown language visible in your code section of the post. The key is to use raw bracketing between your code as displayed below.</p>
@@ -225,82 +248,4 @@ resource "google_compute_instance" "instance" {
 }
 </code></pre></div></div>
 
-<p>Local variables are helpful if you’re repeating the same values throughout your configuration. You can make a change in one place and it will apply to multiple locations. The only gotcha is to not overdo it, because it will make your code harder to read. Use it in moderation.</p>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="terraform" /><category term="local" /><category term="variables" /><summary type="html"><![CDATA[If you find yourself entering the same value multiple times in your Terraform script, you can save yourself some time by declaring local variables inside a locals block and reuse them throughout your script or module.]]></summary></entry><entry><title type="html">display elapse time</title><link href="http://0.0.0.0:4000/linux/2024/01/03/display-elapse-time.html" rel="alternate" type="text/html" title="display elapse time" /><published>2024-01-03T00:00:00+00:00</published><updated>2024-01-03T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/03/display-elapse-time</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/03/display-elapse-time.html"><![CDATA[<p>Here’s a simple Bash script that displays how long it takes for a script to run from beginning to end. This is perfect tool for long running scripts that run for hours, and where you need to know much time it took to run from beginning to end. This is ideal for a script that you’ll run unattended.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
-
-log='elapse.log'
-&gt;$log
-
-start() {
-
-    start=$(date)
-    begin=$(date +%s)
-    echo 'Start: '$start | tee -a $log
-
-}
-
-stop() {
-
-    stop=$(date)
-    end=$(date +%s)
-    echo 'Stop: '$stop | tee -a $log
-    elapse=$((end-begin))
-
-}
-
-show_time() {
-    num=$elapse
-    min=0
-    hour=0
-    day=0
-    if((num&gt;59));then
-        ((sec=num%60))
-        ((num=num/60))
-        if((num&gt;59));then
-            ((min=num%60))
-            ((num=num/60))
-            if((num&gt;23));then
-                ((hour=num%24))
-                ((day=num/24))
-            else
-                ((hour=num))
-            fi
-        else
-            ((min=num))
-        fi
-    else
-        ((sec=num))
-    fi
-    echo "$day"d "$hour"h "$min"m "$sec"s | tee -a $log
-}
-
-script() {
-
-    echo "running script now..." | tee -a $log
-    sleep 10
-
-}
-
-start
-script
-stop
-show_time
-</code></pre></div></div>
-
-<p>In the example above, I’m running a script that echoes text and sleeps for 10s. Here’s the output.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Start: Wed Jan 3 13:16:44 EST 2024
-running script now...
-Stop: Wed Jan 3 13:16:54 EST 2024
-0d 0h 0m 10s
-</code></pre></div></div>
-
-<p>The result says it ran for 10s. You can also view the elapse.log file.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat elapse.log
-Start: Wed Jan 3 13:16:44 EST 2024
-running script now...
-Stop: Wed Jan 3 13:16:54 EST 2024
-0d 0h 0m 10s
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="elapse" /><category term="time" /><category term="bash" /><category term="script" /><summary type="html"><![CDATA[Here’s a simple Bash script that displays how long it takes for a script to run from beginning to end. This is perfect tool for long running scripts that run for hours, and where you need to know much time it took to run from beginning to end. This is ideal for a script that you’ll run unattended.]]></summary></entry></feed>
+<p>Local variables are helpful if you’re repeating the same values throughout your configuration. You can make a change in one place and it will apply to multiple locations. The only gotcha is to not overdo it, because it will make your code harder to read. Use it in moderation.</p>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="terraform" /><category term="local" /><category term="variables" /><summary type="html"><![CDATA[If you find yourself entering the same value multiple times in your Terraform script, you can save yourself some time by declaring local variables inside a locals block and reuse them throughout your script or module.]]></summary></entry></feed>

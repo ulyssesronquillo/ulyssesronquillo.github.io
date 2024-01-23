@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "gcp check login",
+      "url"      : "/cloud/2024/01/22/gcp-check-login.html",
+      "category" : "",
+      "tags"     : "gcp, check, login, auth",
+      "date"     : "2024-01-22 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "display markdown code",
       "url"      : "/2024/01/20/display-markdown-code.html",
       "category" : "",
