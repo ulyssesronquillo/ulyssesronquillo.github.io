@@ -56,7 +56,7 @@
 
 <p>Show me! In this example, we will filter the WordPress content called the_content by passing a custom function to it. The custom function will pass the content and checks to see if the post type is equal to ‘books.’ If the post type is equal to ‘books’, it will prepend a paragraph saying, ‘Hello Bookworms!!!’ before the content. If the post type is not equal to ‘books’, it will simply return the original content.</p>
 
-<h4 id="heres-the-code">Here’s the Code</h4>
+<p>Here’s the Code</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function urr_filter_content($content) {
   $format = get_post_type( get_the_ID() );
