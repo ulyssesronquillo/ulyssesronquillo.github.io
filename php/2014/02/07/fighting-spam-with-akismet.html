@@ -56,11 +56,11 @@
 
 <p>Akismet is open-source and free for personal use. Akismet offers professional and enterprise plans for a modest fee. To start using Akismet on your website, you first need an Akismet key which you can get from WordPress.com. Just register. A key will be automatically generated for you. In addition, you also need to download the Akismet class library which you’ll need to include in your web projects.</p>
 
-<h2 id="how-to-use-akismet">How to use Akismet</h2>
+<p>How to use Akismet</p>
 
 <p>In this example, we will use Akismet’s PHP class library. <a href="https://code.google.com/p/akismet-php4/downloads/list" target="_blank" rel="noopener noreferrer">Download</a>. So, let’s assume you have a comment form or a contact page on your website. When your form is submitted, Akismet will check if the comment is spam or not. The API accesses the Akismet servers and it will return either a yes or a no. Simple enough. How Akismet filters out the spam is not known. They say it’s in the “secret sauce.”</p>
 
-<h2 id="our-html-form">Our HTML Form</h2>
+<p>Our HTML Form</p>
 
 <p>We will keep our form simple. We will use the post method. Our form will call itself after submission. We are taking the proper precautions to avoid cross-site scripting attacks, etc. by using the htmlspecialchars function and the $_SERVER[“PHP_SELF”] variable itself.</p>
 
@@ -73,7 +73,7 @@
 &lt;/form&gt;
 </code></pre></div></div>
 
-<h2 id="our-php-code">Our PHP Code</h2>
+<p>Our PHP Code</p>
 
 <p>This is the PHP code that we can place at top of our page. The code will start a new session. It will check if the form is submitted. We will then create a new Akismet object and check if our comment data is spam or not. The Akismet class will contact the Akismet servers. It will determine if our comment is spam or not. If it is, it will mark it as spam. We can either ignore it or save it to the database. If it’s a good comment, we definitely need to keep it and mark it as good comment.</p>
 
@@ -121,7 +121,7 @@ if(isset($_POST['submit'])) {
 ?&gt;
 </code></pre></div></div>
 
-<h4 id="making-a-correction">Making a Correction</h4>
+<p>Making a Correction</p>
 
 <p>Occasionally, not very often, Akismet screws up, and marks a good comment as spam, and vice versa. We can tell Akismet, “Hey, what’s the matter! Please correct these comments!” We can correct Akismet by running these two methods.</p>
 

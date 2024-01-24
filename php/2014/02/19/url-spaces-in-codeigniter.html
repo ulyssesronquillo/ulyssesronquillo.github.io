@@ -56,7 +56,7 @@
 
 <p>The other issue is when performing a search, the database doesn’t really know that ‘John Doe’ is essentially the same as ‘John%20Doe.’ So, I ended up using a CodeIgniter function called url_title. The function strips the spaces and replaces it with a dash or a hyphen. In the case of ‘John%20Doe’, it now displays as ‘John-Doe.’ You can also use an underscore. See example below.</p>
 
-<h4 id="replace-20-with-dash-or-hypen">Replace %20 with dash or hypen</h4>
+<p>Replace %20 with dash or hypen</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$name = 'John Doe';
 $url = url_title($name);
@@ -67,7 +67,7 @@ $url = url_title($name, '_');
 // produces 'John_Doe'
 </code></pre></div></div>
 
-<h4 id="put-the-space-before-the-search">Put the space before the search</h4>
+<p>Put the space before the search</p>
 
 <p>Before performing a search, I use str_replace to remove the dash and put back the space so it matches the database entry. It’s essentially the reverse of what I did to display a friendly URL.</p>
 

@@ -54,7 +54,7 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>Years ago, I implemented an <a href="http://www.alistapart.com/articles/alternate/" target="_blank" rel="noopener noreferrer">alternative style switcher</a> I found at <a href="http://alistapart.com" target="_blank" rel="noopener noreferrer">A List Apart</a>. But, that solution is quite old now. It was published eleven years ago, back in 2001. Now, I’m looking for something a little bit more modern, perhaps a solution that uses JQuery. The idea is to let the readers choose a CSS stylesheet of their liking by simply clicking on a link. So, here’s the finished product. <a href="http://uly.me/demo/styleswitcher/" target="_blank" rel="noopener noreferrer">Demo</a>.</p>
 
-<h4 id="the-stylesheet">The Stylesheet</h4>
+<p>The Stylesheet</p>
 
 <p>I’m using two very simple stylesheets. The default stylsheet is called <a href="http://uly.me/demo/styleswitcher/style.css" target="_blank" rel="noopener noreferrer">style.css</a>. The alternate stylesheet is called <a href="http://uly.me/demo/styleswitcher/black.css" target="_blank" rel="noopener noreferrer">black.css</a>. This code belongs in the head section of the HTML page.</p>
 
@@ -62,7 +62,7 @@
 &lt;link href="black.css" rel="alternate stylesheet" title="black" type="text/css"&gt;&lt;/link&gt;
 </code></pre></div></div>
 
-<h4 id="jquery">JQuery</h4>
+<p>JQuery</p>
 
 <p>We are using <a href="https://developers.google.com/speed/libraries/devguide#jquery" target="_blank" rel="noopener noreferrer">Google’s JQuery CDN</a> by also linking it from within the head section of the HTML page. The second line is the Javascript code that actually performs the stylesheet switching. You can download the <a href="http://uly.me/demo/styleswitcher/styleswitcher.js" target="_blank" rel="noopener noreferrer">styleswitcher.js</a> code directly from my website.</p>
 
@@ -70,7 +70,7 @@
 &lt;script src="styleswitcher.js" type="text/javascript"&gt;&lt;/script&gt;
 </code></pre></div></div>
 
-<h4 id="css-switch">CSS Switch</h4>
+<p>CSS Switch</p>
 
 <p>We will provide two links where readers can switch stylesheets from default to black and vice versa. The links are standard HTML links and using Javascript’s onclick event.</p>
 
@@ -78,7 +78,7 @@
 &lt;a href="#" onclick="setActiveStyleSheet('black');return false;"&gt;Black&lt;/a&gt;
 </code></pre></div></div>
 
-<h4 id="putting-it-all-together">Putting It All Together</h4>
+<p>Putting It All Together</p>
 
 <p>Here’s the final code.</p>
 

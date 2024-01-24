@@ -54,12 +54,12 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>You can ignore specific files in Git by placing a .gitignore file at the root of your local repository. The files listed in .gitignore will not be tracked by Git. Why would you do this? Well, there are certain OS generated files placed in system folders such as .DS_Store or Thumbs.db that are not really part of your code.</p>
 
-<h4 id="create-a-gitignore-file">Create a .gitignore file</h4>
+<p>Create a .gitignore file</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch .gitignore
 </code></pre></div></div>
 
-<h4 id="edit-the-gitignore-file">Edit the .gitignore file</h4>
+<p>Edit the .gitignore file</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano .gitignore
 </code></pre></div></div>
@@ -71,7 +71,7 @@ Thumbs.db
 *.log
 </code></pre></div></div>
 
-<h4 id="commit-and-push">Commit and Push</h4>
+<p>Commit and Push</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -m "adding .gitignore file" -a
 git push

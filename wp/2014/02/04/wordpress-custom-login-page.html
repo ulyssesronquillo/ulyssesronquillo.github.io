@@ -56,7 +56,7 @@
 
 <p><img src="http://uly.me/wp-content/uploads/2014/02/wp-login.png" alt="wp-login"></p>
 
-<h2 id="changing-the-wordpress-logo">Changing the WordPress Logo</h2>
+<p>Changing the WordPress Logo</p>
 
 <p>We can replace the WordPress logo located on top of the login form by calling a WordPress hook called ‘login_enqueue_scripts.’ This hook is responsible for enqueuing items to the login page. In this example, we are assigning an image to ‘body.login div#login h1 a.’</p>
 
@@ -70,7 +70,7 @@
 
 <p>By the way, the image needs to be 80×80 pixels in size.</p>
 
-<h2 id="adding-a-background-image">Adding a Background Image</h2>
+<p>Adding a Background Image</p>
 
 <p>How do we add a background image to the login page? Well, one thing worth noting, WordPress does not load your theme’s stylesheet when the login page is loaded. To style to the login page, we need to add our own custom stylesheet. It will be loaded when the login page is displayed.</p>
 
@@ -84,7 +84,7 @@ add_action('login_head', 'urr_custom_login_css');
 
 <p>This code above loads a stylesheet when the login page is loaded. It’s using the ‘login_head’ hook.</p>
 
-<h2 id="our-stylesheet">Our Stylesheet</h2>
+<p>Our Stylesheet</p>
 
 <p>Create a file called login-style.css and place it inside our theme’s directory under the ‘css’ folder. We can now style our login page. The code below will apply a background image ‘darkwood.jpg’ to the login page. The form and its inputs are darkened, except for the submit button which remains unchanged. In addition, we also rounded the corners of the form.</p>
 
