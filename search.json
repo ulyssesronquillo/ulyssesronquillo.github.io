@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "display ip addresses",
+      "url"      : "/linux/2024/02/04/display-ip-addresses.html",
+      "category" : "",
+      "tags"     : "display, ip, addresses, internal, external",
+      "date"     : "2024-02-04 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "display dashes across screen",
       "url"      : "/linux/2024/01/23/display-dashes-across-screen.html",
       "category" : "",

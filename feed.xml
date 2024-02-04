@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-02-03T14:02:52+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">display dashes across screen</title><link href="http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen.html" rel="alternate" type="text/html" title="display dashes across screen" /><published>2024-01-23T00:00:00+00:00</published><updated>2024-01-23T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen.html"><![CDATA[<p>Here’s the traditional way of displaying a list of dashes across the screen.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-02-04T14:41:51+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">display ip addresses</title><link href="http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses.html" rel="alternate" type="text/html" title="display ip addresses" /><published>2024-02-04T00:00:00+00:00</published><updated>2024-02-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses.html"><![CDATA[<p>Here’s a little script to display my internal and external IP addresses.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+main() {
+
+  my_int_ip=$(ip addr show enp4s0 | grep -w 'inet' | awk '{print $2}')
+  my_ext_ip=$(curl -s -4 ifconfig.me)
+
+  echo 'External IP: ' $my_ext_ip 
+  echo 'Internal IP: ' $my_int_ip
+
+}
+
+main
+</code></pre></div></div>
+
+<p>Output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>External IP: xxx.xxx.xxx.xxx
+Internal IP: 192.168.0.100
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="display" /><category term="ip" /><category term="addresses" /><category term="internal" /><category term="external" /><summary type="html"><![CDATA[Here’s a little script to display my internal and external IP addresses.]]></summary></entry><entry><title type="html">display dashes across screen</title><link href="http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen.html" rel="alternate" type="text/html" title="display dashes across screen" /><published>2024-01-23T00:00:00+00:00</published><updated>2024-01-23T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen.html"><![CDATA[<p>Here’s the traditional way of displaying a list of dashes across the screen.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "===================="
 </code></pre></div></div>
@@ -197,45 +218,4 @@ A - insert at the end of the line
 docker-compose up -d
 </code></pre></div></div>
 
-<p>Check your external links. They should open up to a new tab.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="jekyll" /><category term="link" /><category term="target" /><category term="blank" /><summary type="html"><![CDATA[I found a really nice gem that sets all external links to open to a new tab. It’s called jekyll-target-blank. To add, just run the following.]]></summary></entry><entry><title type="html">scp multiple files</title><link href="http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files.html" rel="alternate" type="text/html" title="scp multiple files" /><published>2024-01-09T00:00:00+00:00</published><updated>2024-01-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/09/scp-multiple-files.html"><![CDATA[<p>scp is an excellent utility for copying files to and from a server without the need for running a ftp server or some sort of file transfer service on the server. scp uses your existing ssh access to copy files to and from a server. You will need permissions to the remote server otherwise scp copy will fail. Whether pulling down a file or pushing a file to a server, scp can be invoked from a client regardless of file direction. You can copy a single file or multiple files. The examples below demonstrate this.</p>
-
-<p>scp copy a single file to a server.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp file.ext username@server:/home/homedir/
-</code></pre></div></div>
-
-<p>scp copy multiple local files to a server.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp file1.ext file2.ext file3.ext username@server:/home/homedir/
-</code></pre></div></div>
-
-<p>scp copy a single file from a server to the desktop.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp username@server:/home/homedir/file.ext .
-</code></pre></div></div>
-
-<p>scp copy multiple files from a server to the desktop.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scp username@server:/home/homedir/*.{txt,doc} . 
-</code></pre></div></div>
-
-<p>Here’s a script that I wrote to upload multiple files to a server. It looks for text and php files in the current directory and then uploads them to the server.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
-# create temp file
-temp="temp"
-&gt;$temp
-# loop through selected files in the current directory
-for file in *.{txt,php}; do
-    # put all files in one row
-    echo -n "$file " &gt;&gt; $temp 
-done
-# add new line at the end
-echo "" &gt;&gt; $temp
-# assign the list to a variable called $files
-files=$(cat $temp)
-# scp the files to the cloudreporting server
-scp $files username@server:/home/homedir
-# delete temp file
-rm -f $temp
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="scp" /><category term="multiple" /><category term="files" /><summary type="html"><![CDATA[scp is an excellent utility for copying files to and from a server without the need for running a ftp server or some sort of file transfer service on the server. scp uses your existing ssh access to copy files to and from a server. You will need permissions to the remote server otherwise scp copy will fail. Whether pulling down a file or pushing a file to a server, scp can be invoked from a client regardless of file direction. You can copy a single file or multiple files. The examples below demonstrate this.]]></summary></entry></feed>
+<p>Check your external links. They should open up to a new tab.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="jekyll" /><category term="link" /><category term="target" /><category term="blank" /><summary type="html"><![CDATA[I found a really nice gem that sets all external links to open to a new tab. It’s called jekyll-target-blank. To add, just run the following.]]></summary></entry></feed>

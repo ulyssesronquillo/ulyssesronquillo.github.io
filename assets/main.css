@@ -196,6 +196,7 @@ ul#results-container li {
 .highlight code {
   font-family: "Source Code Pro", monospace;
   font-size: 14px;
+  line-height: 0.5em;
 }
 
 strong {
