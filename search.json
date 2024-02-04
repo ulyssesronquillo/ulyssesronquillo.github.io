@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "openwrt",
+      "url"      : "/linux/2024/02/04/openwrt.html",
+      "category" : "",
+      "tags"     : "router, openwrt, linksys, e4200",
+      "date"     : "2024-02-04 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "display ip addresses",
       "url"      : "/linux/2024/02/04/display-ip-addresses.html",
       "category" : "",
