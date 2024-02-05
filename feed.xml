@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-02-04T21:06:51+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">display ip addresses</title><link href="http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses.html" rel="alternate" type="text/html" title="display ip addresses" /><published>2024-02-04T00:00:00+00:00</published><updated>2024-02-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses.html"><![CDATA[<p>Here’s a little script to display my internal and external IP addresses.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-02-05T23:50:42+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gcp create hyperdisks</title><link href="http://0.0.0.0:4000/cloud/2024/02/05/gcp-create-hyperdisks.html" rel="alternate" type="text/html" title="gcp create hyperdisks" /><published>2024-02-05T00:00:00+00:00</published><updated>2024-02-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/02/05/gcp-create-hyperdisks</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/02/05/gcp-create-hyperdisks.html"><![CDATA[<p>GCP has new generation of disks for demanding and mission-critical applications. Hyperdisks is not available on all VMs, but they are usually available on large machine types. You create a Hyperdisk from scratch and attach it to an existing VM or convert a current disk by way of a snapshot. Here’s the script to convert it an existing disk to Hyperdisk from a snapshot.</p>
+
+<p>There are 3 types of Hyperdisks</p>
+
+<ol>
+  <li>Hyperdisk Balanced</li>
+  <li>Hyperdisk Extreme</li>
+  <li>Hyperdisk Throughput</li>
+</ol>
+
+<p>Convert from snapshot.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create $disk \
+  --source-snapshot="$snap" \
+  --type="hyperdisk-extreme" \
+  --zone="$zone" \
+  --project="$project"
+</code></pre></div></div>
+
+<p>Or create a new one.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create $disk \
+   --zone="$zone" \
+   --size=100 \
+   --type="hyperdisk-extreme" \
+   --project="$project" 
+</code></pre></div></div>
+
+<p>IOPS and Throughput are optional values. You can let GCP decide the default or override it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   --provisioned-iops=IOPS_LIMIT
+   --provisioned-throughput=THROUGHPUT_LIMIT
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="create" /><category term="hyperdisk" /><summary type="html"><![CDATA[GCP has new generation of disks for demanding and mission-critical applications. Hyperdisks is not available on all VMs, but they are usually available on large machine types. You create a Hyperdisk from scratch and attach it to an existing VM or convert a current disk by way of a snapshot. Here’s the script to convert it an existing disk to Hyperdisk from a snapshot.]]></summary></entry><entry><title type="html">display ip addresses</title><link href="http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses.html" rel="alternate" type="text/html" title="display ip addresses" /><published>2024-02-04T00:00:00+00:00</published><updated>2024-02-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses.html"><![CDATA[<p>Here’s a little script to display my internal and external IP addresses.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -172,26 +204,4 @@ A - insert at the end of the line
   }
 </code></pre></div></div>
 
-<p>The script will reserve an internal ip address and attach it the vm as an alias ip.</p>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="vm" /><category term="alias" /><category term="ip" /><summary type="html"><![CDATA[How to build a VM in GCP with a secondary alias IP. Assuming that you already have a compute and a local block in your Terraform file.]]></summary></entry><entry><title type="html">install xrdp</title><link href="http://0.0.0.0:4000/linux/2024/01/11/install-xrdp.html" rel="alternate" type="text/html" title="install xrdp" /><published>2024-01-11T00:00:00+00:00</published><updated>2024-01-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/11/install-xrdp</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/11/install-xrdp.html"><![CDATA[<p>xrdp is a package that allows another desktop to connect to another using the rdp desktop software.</p>
-
-<p>Install xrdp on the target desktop.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install xrdp
-</code></pre></div></div>
-
-<p>Add a second user since you can’t use the default user. Use -m to create a home directory.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo useradd -m john
-</code></pre></div></div>
-
-<p>Give new user sudo access. This is optional, but is nice to have if running root commands.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -a -G sudo john
-</code></pre></div></div>
-
-<p>Set the user’s password.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo passwd john
-</code></pre></div></div>
-
-<p>You can now connect from a rdp client to your desktop using username john.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="install" /><category term="xrdp" /><category term="remote" /><category term="desktop" /><summary type="html"><![CDATA[xrdp is a package that allows another desktop to connect to another using the rdp desktop software.]]></summary></entry></feed>
+<p>The script will reserve an internal ip address and attach it the vm as an alias ip.</p>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="vm" /><category term="alias" /><category term="ip" /><summary type="html"><![CDATA[How to build a VM in GCP with a secondary alias IP. Assuming that you already have a compute and a local block in your Terraform file.]]></summary></entry></feed>
