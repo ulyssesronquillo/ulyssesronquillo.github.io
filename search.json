@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "convert nef to jpg",
+      "url"      : "/linux/2024/02/12/convert-nef-to-jpg.html",
+      "category" : "",
+      "tags"     : "convert, nef, to, jpg, python",
+      "date"     : "2024-02-12 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "oh my posh",
       "url"      : "/linux/2024/02/11/oh-my-posh.html",
       "category" : "",
