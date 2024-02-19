@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-02-19T23:36:24+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">black and white</title><link href="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html" rel="alternate" type="text/html" title="black and white" /><published>2024-02-13T00:00:00+00:00</published><updated>2024-02-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/13/black-and-white</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html"><![CDATA[<p>Here’s a Python code to convert JPG pictures to black and white.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-02-19T23:49:47+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">brigthen</title><link href="http://0.0.0.0:4000/brighten/image/2024/02/19/brigthen.html" rel="alternate" type="text/html" title="brigthen" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/brighten/image/2024/02/19/brigthen</id><content type="html" xml:base="http://0.0.0.0:4000/brighten/image/2024/02/19/brigthen.html"><![CDATA[<p>A little Python script to brighten an image.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+from PIL import ImageEnhance, Image
+
+def brightenImage(input_dir, output_dir):
+    os.makedirs(output_dir, exist_ok=True)                                          # output directory
+    for filename in os.listdir(input_dir):                                          # loop through files
+        if filename.lower().endswith('.jpg'):                                       # check if jpg
+            with Image.open(os.path.join(input_dir, filename)) as img:              # open jpg  
+                enhanced_img = ImageEnhance.Contrast(img).enhance(1.25)             # enhance contrast
+                enhanced_img = ImageEnhance.Brightness(enhanced_img).enhance(1.5)   # enhance brightness
+                enhanced_img.save(os.path.join(output_dir, filename))               # save output
+
+if __name__ == '__main__':
+    input_directory = '.'                                                           # input directory
+    output_directory = 'output'                                                     # output directory
+    brightenImage(input_directory, output_directory)                                # brighten image
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="brighten" /><category term="image" /><category term="brigthen" /><category term="image" /><category term="jpg" /><summary type="html"><![CDATA[A little Python script to brighten an image.]]></summary></entry><entry><title type="html">black and white</title><link href="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html" rel="alternate" type="text/html" title="black and white" /><published>2024-02-13T00:00:00+00:00</published><updated>2024-02-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/13/black-and-white</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html"><![CDATA[<p>Here’s a Python code to convert JPG pictures to black and white.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
 from PIL import Image
@@ -130,27 +148,4 @@ Internal IP: 192.168.0.100
   <li>1-20 is the number of times the character before the % percentage is repeated.</li>
 </ul>
 
-<p>That’s it.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="print" /><category term="echo" /><category term="dashes" /><category term="across" /><category term="screen" /><category term="multiple" /><summary type="html"><![CDATA[Here’s the traditional way of displaying a list of dashes across the screen.]]></summary></entry><entry><title type="html">gcp check login</title><link href="http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login.html" rel="alternate" type="text/html" title="gcp check login" /><published>2024-01-22T00:00:00+00:00</published><updated>2024-01-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/01/22/gcp-check-login.html"><![CDATA[<p>If you are running a gcloud commands, it will be good to know if a user is still logged in. In some corporate settings, authentication is set to time out after a number of hours. The following lines of code checks if a user is still loggedin and displays a message to reauthenticate if logged out. In reality the script runs a list of GCP projects, but limits the output to just one line. The output is sent to a file. If the first line is equal to “Reauthentication required.”, then there’s a message telling the user to login again.  If the first line has an error, it means the user is not logged in. It also tells the user to login again. Here’s the code.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>checkLogin() {
-
-    gcloud projects list --format="value[](name)" --limit 1 &gt; reauth.txt 2&gt;&amp;1
-    ok=$(cat reauth.txt | head -n 1)
-    
-    if [[ "$ok" == "Reauthentication required." ]]; then 
-        echo "You're not logged in to Google SDK. Please login, then try again."
-        exit
-    elif [[ "$ok" =~ "ERROR" ]]; then
-        echo "You're not logged in to Google SDK. Please login, then try again."
-        exit
-    fi
-
-    rm -f reauth.txt
-
-}
-</code></pre></div></div>
-
-<p>Just call it at the top of the script.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>checkLogin
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="check" /><category term="login" /><category term="auth" /><summary type="html"><![CDATA[If you are running a gcloud commands, it will be good to know if a user is still logged in. In some corporate settings, authentication is set to time out after a number of hours. The following lines of code checks if a user is still loggedin and displays a message to reauthenticate if logged out. In reality the script runs a list of GCP projects, but limits the output to just one line. The output is sent to a file. If the first line is equal to “Reauthentication required.”, then there’s a message telling the user to login again. If the first line has an error, it means the user is not logged in. It also tells the user to login again. Here’s the code.]]></summary></entry></feed>
+<p>That’s it.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="print" /><category term="echo" /><category term="dashes" /><category term="across" /><category term="screen" /><category term="multiple" /><summary type="html"><![CDATA[Here’s the traditional way of displaying a list of dashes across the screen.]]></summary></entry></feed>
