@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>convert nef to jpg | uly.me</title>
+<title>nef to jpg | uly.me</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="convert nef to jpg" />
+<meta property="og:title" content="nef to jpg" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="If you have a Nikon DSLR camera and you shoot in RAW format, you’ll end up with a NEF file. You can easily convert several NEF files to JPG by running a Python script. It’s fast and works fairly well. If you want to run in a controlled Python environment, I suggest that you create a virtual environment. You can group all your imaging scripts in one virtual environment." />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-02-12T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="convert nef to jpg" />
+<meta property="twitter:title" content="nef to jpg" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2024-02-12T00:00:00+00:00","datePublished":"2024-02-12T00:00:00+00:00","description":"If you have a Nikon DSLR camera and you shoot in RAW format, you’ll end up with a NEF file. You can easily convert several NEF files to JPG by running a Python script. It’s fast and works fairly well. If you want to run in a controlled Python environment, I suggest that you create a virtual environment. You can group all your imaging scripts in one virtual environment.","headline":"convert nef to jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2024/02/12/convert-nef-to-jpg.html"},"url":"http://0.0.0.0:4000/linux/2024/02/12/convert-nef-to-jpg.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2024-02-12T00:00:00+00:00","datePublished":"2024-02-12T00:00:00+00:00","description":"If you have a Nikon DSLR camera and you shoot in RAW format, you’ll end up with a NEF file. You can easily convert several NEF files to JPG by running a Python script. It’s fast and works fairly well. If you want to run in a controlled Python environment, I suggest that you create a virtual environment. You can group all your imaging scripts in one virtual environment.","headline":"nef to jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2024/02/12/convert-nef-to-jpg.html"},"url":"http://0.0.0.0:4000/linux/2024/02/12/convert-nef-to-jpg.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -43,7 +43,7 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">convert nef to jpg</h1>
+    <h1 class="post-title p-name" itemprop="name headline">nef to jpg</h1>
     <p class="post-meta"><time class="dt-published" datetime="2024-02-12T00:00:00+00:00" itemprop="datePublished">
         Feb 12, 2024
       </time>• 
@@ -56,21 +56,35 @@
 
 <p>Here’s the code to convert NEF files to JPG.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
-from PIL import Image
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import glob
+import rawpy
+import imageio
 
-def blackWhite(input_dir, output_dir):
-    os.makedirs(output_dir, exist_ok=True)                                  # output directory
-    for filename in os.listdir(input_dir):                                  # loop all files
-        if filename.lower().endswith('.jpg'):                               # Check if JPG image
-            with Image.open(os.path.join(input_dir, filename)) as img:      # Open image file
-                bw_img = img.convert('L')                                   # Convert to bw
-                bw_img.save(os.path.join(output_dir, filename))             # Save bw
+def nef2jpg():
+
+    directory = "."                                                     # set directory
+    pathnef = glob.glob(f"{directory}/*.nef")                           # list of nef files
+    pathNEF = glob.glob(f"{directory}/*.NEF")                           # list of NEF files
+    count = 0
+    number_files = len(pathnef) + len(pathNEF)
+    print("Total Number of Images: ", number_files)
+
+    for path in pathnef:
+        with rawpy.imread(path) as raw:
+            rgb = raw.postprocess()
+            imageio.imwrite(path.replace('.nef', '') + '.jpg', rgb)     # convert nef to jpg
+            count = count + 1
+        print(count, '/', number_files)
+
+    for path in pathNEF:
+        with rawpy.imread(path) as raw:
+            rgb = raw.postprocess()
+            imageio.imwrite(path.replace('.NEF', '') + '.jpg', rgb)     # convert NEF to jpg
+            count = count + 1
+        print(count, '/', number_files)
 
 if __name__ == '__main__':
-    input_directory = '.'                                                   # input directory
-    output_directory = 'output'                                             # output directory
-    blackWhite(input_directory, output_directory)                           # conver to bw
+    nef2jpg()
 </code></pre></div></div>
 
 <p>The script uses rawpy and imageio to convert files.</p>

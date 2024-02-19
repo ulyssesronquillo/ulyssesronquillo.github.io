@@ -2,8 +2,8 @@
   
     {
 
-      "title"    : "convert to black and white",
-      "url"      : "/linux/2024/02/13/convert-to-black-and-white.html",
+      "title"    : "black and white",
+      "url"      : "/linux/2024/02/13/black-and-white.html",
       "category" : "",
       "tags"     : "python, convert, black, white",
       "date"     : "2024-02-13 00:00:00 +0000"
@@ -12,7 +12,7 @@
   
     {
 
-      "title"    : "convert nef to jpg",
+      "title"    : "nef to jpg",
       "url"      : "/linux/2024/02/12/convert-nef-to-jpg.html",
       "category" : "",
       "tags"     : "convert, nef, to, jpg, python",
