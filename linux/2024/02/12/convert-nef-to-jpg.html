@@ -56,31 +56,21 @@
 
 <p>Here’s the code to convert NEF files to JPG.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import glob
-import rawpy
-import imageio
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+from PIL import Image
 
-def main():
-    directory = "."
-    pathnef = glob.glob(f"{directory}/*.nef")
-    pathNEF = glob.glob(f"{directory}/*.NEF")
-    count = 0
-    number_files = len(pathnef) + len(pathNEF)
-    print("Total Number of Images: ", number_files)
-    for path in pathnef:
-        with rawpy.imread(path) as raw:
-            rgb = raw.postprocess()
-            imageio.imwrite(path.replace('.nef', '') + '.jpg', rgb)
-            count = count + 1
-        print(count, '/', number_files)
-    for path in pathNEF:
-        with rawpy.imread(path) as raw:
-            rgb = raw.postprocess()
-            imageio.imwrite(path.replace('.NEF', '') + '.jpg', rgb)
-            count = count + 1
-        print(count, '/', number_files)
+def blackWhite(input_dir, output_dir):
+    os.makedirs(output_dir, exist_ok=True)                                  # output directory
+    for filename in os.listdir(input_dir):                                  # loop all files
+        if filename.lower().endswith('.jpg'):                               # Check if JPG image
+            with Image.open(os.path.join(input_dir, filename)) as img:      # Open image file
+                bw_img = img.convert('L')                                   # Convert to bw
+                bw_img.save(os.path.join(output_dir, filename))             # Save bw
+
 if __name__ == '__main__':
-    main()
+    input_directory = '.'                                                   # input directory
+    output_directory = 'output'                                             # output directory
+    blackWhite(input_directory, output_directory)                           # conver to bw
 </code></pre></div></div>
 
 <p>The script uses rawpy and imageio to convert files.</p>
