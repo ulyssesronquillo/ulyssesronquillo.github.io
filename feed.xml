@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-02-19T23:51:39+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">brigthen</title><link href="http://0.0.0.0:4000/linux/2024/02/19/brigthen.html" rel="alternate" type="text/html" title="brigthen" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/brigthen</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/brigthen.html"><![CDATA[<p>A little Python script to brighten an image.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-02-20T00:02:27+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">brigthen</title><link href="http://0.0.0.0:4000/linux/2024/02/19/brigthen.html" rel="alternate" type="text/html" title="brigthen" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/brigthen</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/brigthen.html"><![CDATA[<p>A little Python script to brighten an image.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
 from PIL import ImageEnhance, Image
@@ -16,7 +16,91 @@ if __name__ == '__main__':
     input_directory = '.'                                                           # input directory
     output_directory = 'output'                                                     # output directory
     brightenImage(input_directory, output_directory)                                # brighten image
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="brigthen" /><category term="image" /><category term="jpg" /><summary type="html"><![CDATA[A little Python script to brighten an image.]]></summary></entry><entry><title type="html">black and white</title><link href="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html" rel="alternate" type="text/html" title="black and white" /><published>2024-02-13T00:00:00+00:00</published><updated>2024-02-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/13/black-and-white</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html"><![CDATA[<p>Here’s a Python code to convert JPG pictures to black and white.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="brigthen" /><category term="image" /><category term="jpg" /><summary type="html"><![CDATA[A little Python script to brighten an image.]]></summary></entry><entry><title type="html">enhance</title><link href="http://0.0.0.0:4000/linux/2024/02/19/enhance.html" rel="alternate" type="text/html" title="enhance" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/enhance</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/enhance.html"><![CDATA[<p>Here’s a litte Python script that enhance a jpg image.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+from PIL import ImageEnhance, Image
+
+def enhance(input_dir, output_dir, factor=1.75):
+    os.makedirs(output_dir, exist_ok=True)                                  # Create output directory   
+    for filename in os.listdir(input_dir):                                  # Loop through all files
+        if filename.lower().endswith('.jpg'):                               # Check if JPG image
+            with Image.open(os.path.join(input_dir, filename)) as img:      # Open the image file
+                enhanced_img = ImageEnhance.Color(img).enhance(factor)      # Enhance image
+                enhanced_img.save(os.path.join(output_dir, filename))       # Save image
+
+if __name__ == '__main__':
+    input_directory = '.'                                                   # input directory
+    output_directory = 'output'                                             # output directory
+    enhance(input_directory, output_directory)                              # enhance
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="enhance" /><category term="jpg" /><summary type="html"><![CDATA[Here’s a litte Python script that enhance a jpg image.]]></summary></entry><entry><title type="html">resize</title><link href="http://0.0.0.0:4000/linux/2024/02/19/resize.html" rel="alternate" type="text/html" title="resize" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/resize</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/resize.html"><![CDATA[<p>Here’s a little Python script that creates thumbnails.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+from PIL import Image
+
+def resize(input_dir, output_dir, thumbnail_size=(720, 720)):               # set to 720p
+    os.makedirs(output_dir, exist_ok=True)                                  # output directory 
+    for filename in os.listdir(input_dir):                                  # loop through files 
+        if filename.lower().endswith('.jpg'):                               # check if JPG
+            with Image.open(os.path.join(input_dir, filename)) as img:      # open image
+                img.thumbnail(thumbnail_size)                               # reduce to thumbnail
+                img.save(os.path.join(output_dir, filename))                # save thumbnail
+
+if __name__ == '__main__':
+    input_directory = '.'                                                   # input directory
+    output_directory = 'output'                                             # output directory
+    resize(input_directory, output_directory)                               # resize images
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="resize" /><category term="thumbnail" /><category term="images" /><category term="jpg" /><summary type="html"><![CDATA[Here’s a little Python script that creates thumbnails.]]></summary></entry><entry><title type="html">vintage</title><link href="http://0.0.0.0:4000/linux/2024/02/19/vintage.html" rel="alternate" type="text/html" title="vintage" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/vintage</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/vintage.html"><![CDATA[<p>Here’s a little Python script that makes vintage pictures.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+from PIL import Image, ImageFilter, ImageOps, ImageEnhance
+
+def vintage(input_dir, output_dir):
+    os.makedirs(output_dir, exist_ok=True)                                  # output directory
+    for filename in os.listdir(input_dir):                                  # Loop through files
+        if filename.lower().endswith('.jpg'):                               # Check if JPG
+
+            with Image.open(os.path.join(input_dir, filename)) as img:      # Open jpg
+                img = img.convert("RGB")                                    # vintage effects
+                img = ImageOps.grayscale(img)
+                img = img.filter(ImageFilter.SMOOTH_MORE)
+                img = ImageOps.posterize(img, 8)
+                img = ImageEnhance.Contrast(img).enhance(1.4)
+                img = ImageEnhance.Brightness(img).enhance(1.75)
+                img = ImageOps.colorize(img, "#704214", "#eeeeee")
+                img = ImageEnhance.Color(img).enhance(0.8)
+                img.save(os.path.join(output_dir, filename))                # Save image
+
+
+if __name__ == '__main__':
+    input_directory = '.'                                                   # input directory
+    output_directory = 'output'                                             # output directory
+    vintage(input_directory, output_directory)                              # make vintage
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="vintage" /><category term="jpg" /><category term="images" /><summary type="html"><![CDATA[Here’s a little Python script that makes vintage pictures.]]></summary></entry><entry><title type="html">white balance</title><link href="http://0.0.0.0:4000/linux/2024/02/19/white-balance.html" rel="alternate" type="text/html" title="white balance" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/white-balance</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/white-balance.html"><![CDATA[<p>Here’s a little Python script that corrects white balance.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
+from PIL import Image
+
+def whiteBalance(input_dir, output_dir, red_ratio=1.0, blue_ratio=1.0):
+    os.makedirs(output_dir, exist_ok=True)                                                          # output directory
+    for filename in os.listdir(input_dir):                                                          # Loop through files
+        if filename.lower().endswith(('.jpg', '.jpeg', '.png')):                                    # Check if image 
+            with Image.open(os.path.join(input_dir, filename)) as img:                              # Open the image
+                red_channel = img.getchannel('R')                                                   # wb correction
+                green_channel = img.getchannel('G')
+                blue_channel = img.getchannel('B')
+                red_channel = red_channel.point(lambda p: min(int(p * red_ratio), 255))             # Adjust colors
+                blue_channel = blue_channel.point(lambda p: min(int(p * blue_ratio), 255))
+                corrected_img = Image.merge('RGB', (red_channel, green_channel, blue_channel))      # merge colors
+                corrected_img.save(os.path.join(output_dir, filename))                              # Save image
+
+if __name__ == '__main__':
+    input_directory = '.'                                                                           # input directory
+    output_directory = 'output'                                                                     # output directory
+    red_ratio = 0.9                                                                                 # Adjust red 
+    blue_ratio = 1.5                                                                                # Adjust blue
+    whiteBalance(input_directory, output_directory, red_ratio, blue_ratio)                          # Correct wb
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="white" /><category term="balance" /><summary type="html"><![CDATA[Here’s a little Python script that corrects white balance.]]></summary></entry><entry><title type="html">black and white</title><link href="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html" rel="alternate" type="text/html" title="black and white" /><published>2024-02-13T00:00:00+00:00</published><updated>2024-02-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/13/black-and-white</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html"><![CDATA[<p>Here’s a Python code to convert JPG pictures to black and white.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
 from PIL import Image
@@ -76,76 +160,4 @@ if __name__ == '__main__':
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>supportconfig -o OFILES,CRASH,FILES,PROC,NFS,LDAP,SSSD
 </code></pre></div></div>
-<p>Hope that helps.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="suse" /><category term="sles" /><category term="supportconfig" /><summary type="html"><![CDATA[I ran supportconfig on a system the other day and it took all night. I gave up and killed it.]]></summary></entry><entry><title type="html">gcp create hyperdisks</title><link href="http://0.0.0.0:4000/cloud/2024/02/05/gcp-create-hyperdisks.html" rel="alternate" type="text/html" title="gcp create hyperdisks" /><published>2024-02-05T00:00:00+00:00</published><updated>2024-02-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/02/05/gcp-create-hyperdisks</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/02/05/gcp-create-hyperdisks.html"><![CDATA[<p>GCP has new generation of disks for demanding and mission-critical applications. Hyperdisks is not available on all VMs, but they are usually available on large machine types. You create a Hyperdisk from scratch and attach it to an existing VM or convert a current disk by way of a snapshot. Here’s the script to convert it an existing disk to Hyperdisk from a snapshot.</p>
-
-<p>There are 3 types of Hyperdisks</p>
-
-<ol>
-  <li>Hyperdisk Balanced</li>
-  <li>Hyperdisk Extreme</li>
-  <li>Hyperdisk Throughput</li>
-</ol>
-
-<p>Convert from snapshot.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create $disk \
-  --source-snapshot="$snap" \
-  --type="hyperdisk-extreme" \
-  --zone="$zone" \
-  --project="$project"
-</code></pre></div></div>
-
-<p>Or create a new one.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud compute disks create $disk \
-   --zone="$zone" \
-   --size=100 \
-   --type="hyperdisk-extreme" \
-   --project="$project" 
-</code></pre></div></div>
-
-<p>IOPS and Throughput are optional values. You can let GCP decide the default or override it.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   --provisioned-iops=IOPS_LIMIT
-   --provisioned-throughput=THROUGHPUT_LIMIT
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcp" /><category term="create" /><category term="hyperdisk" /><summary type="html"><![CDATA[GCP has new generation of disks for demanding and mission-critical applications. Hyperdisks is not available on all VMs, but they are usually available on large machine types. You create a Hyperdisk from scratch and attach it to an existing VM or convert a current disk by way of a snapshot. Here’s the script to convert it an existing disk to Hyperdisk from a snapshot.]]></summary></entry><entry><title type="html">display ip addresses</title><link href="http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses.html" rel="alternate" type="text/html" title="display ip addresses" /><published>2024-02-04T00:00:00+00:00</published><updated>2024-02-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/04/display-ip-addresses.html"><![CDATA[<p>Here’s a little script to display my internal and external IP addresses.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
-
-main() {
-
-  my_int_ip=$(ip addr show enp4s0 | grep -w 'inet' | awk '{print $2}')
-  my_ext_ip=$(curl -s -4 ifconfig.me)
-
-  echo 'External IP: ' $my_ext_ip 
-  echo 'Internal IP: ' $my_int_ip
-
-}
-
-main
-</code></pre></div></div>
-
-<p>Output:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>External IP: xxx.xxx.xxx.xxx
-Internal IP: 192.168.0.100
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="display" /><category term="ip" /><category term="addresses" /><category term="internal" /><category term="external" /><summary type="html"><![CDATA[Here’s a little script to display my internal and external IP addresses.]]></summary></entry><entry><title type="html">openwrt</title><link href="http://0.0.0.0:4000/linux/2024/02/04/openwrt.html" rel="alternate" type="text/html" title="openwrt" /><published>2024-02-04T00:00:00+00:00</published><updated>2024-02-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/04/openwrt</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/04/openwrt.html"><![CDATA[<p>My Ubiquiti router stopped working several months ago after many years of working almost flawlessly. I replaced it with an older Linksys E4200 router that I found in a plastic container in in the garage. The Linksys router has been stable, but it’s showing its age. It was released back in January of 2011. I thought about replacing my router with another Ubiquiti, but I can’t complain since the Linksys E4200 is working just fine. The other night I upgraded and changed the firmware and installed OpenWrt, an open-source firmware based on a Linux operating system that runs on many older routers. OpenWrt gives my router extensibility by providing features that you typically find only on high-end devices. It also gives me higher security since there are many added features. Firmware updates are published regularly which you’ll never receive on older routers since many hardware manufacturers no longer support their old routers. Performance is much better. Stability is another plus. And most of all, the price is right. OpenWrt is free. If you want to give an old router some life, give OpenWrt a try. By the way, you can get an old E4200 router in eBay for $15.00.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="router" /><category term="openwrt" /><category term="linksys" /><category term="e4200" /><summary type="html"><![CDATA[My Ubiquiti router stopped working several months ago after many years of working almost flawlessly. I replaced it with an older Linksys E4200 router that I found in a plastic container in in the garage. The Linksys router has been stable, but it’s showing its age. It was released back in January of 2011. I thought about replacing my router with another Ubiquiti, but I can’t complain since the Linksys E4200 is working just fine. The other night I upgraded and changed the firmware and installed OpenWrt, an open-source firmware based on a Linux operating system that runs on many older routers. OpenWrt gives my router extensibility by providing features that you typically find only on high-end devices. It also gives me higher security since there are many added features. Firmware updates are published regularly which you’ll never receive on older routers since many hardware manufacturers no longer support their old routers. Performance is much better. Stability is another plus. And most of all, the price is right. OpenWrt is free. If you want to give an old router some life, give OpenWrt a try. By the way, you can get an old E4200 router in eBay for $15.00.]]></summary></entry><entry><title type="html">display dashes across screen</title><link href="http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen.html" rel="alternate" type="text/html" title="display dashes across screen" /><published>2024-01-23T00:00:00+00:00</published><updated>2024-01-23T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/01/23/display-dashes-across-screen.html"><![CDATA[<p>Here’s the traditional way of displaying a list of dashes across the screen.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "===================="
-</code></pre></div></div>
-
-<p>Here’s the short cut.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>printf -- '=%.s' {1..20}; echo
-</code></pre></div></div>
-
-<p>Explanation:</p>
-
-<ul>
-  <li>first I’m using printf instead of echo. printf is a little bit better when it comes to formatting.</li>
-  <li>The – option tells printf to ignore the rest of the remaining arguments so it renders properly.</li>
-  <li>The character before the % percentage is the one being repeated. In this case, we are repeating “=.”</li>
-  <li>1-20 is the number of times the character before the % percentage is repeated.</li>
-</ul>
-
-<p>That’s it.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="print" /><category term="echo" /><category term="dashes" /><category term="across" /><category term="screen" /><category term="multiple" /><summary type="html"><![CDATA[Here’s the traditional way of displaying a list of dashes across the screen.]]></summary></entry></feed>
+<p>Hope that helps.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="suse" /><category term="sles" /><category term="supportconfig" /><summary type="html"><![CDATA[I ran supportconfig on a system the other day and it took all night. I gave up and killed it.]]></summary></entry></feed>

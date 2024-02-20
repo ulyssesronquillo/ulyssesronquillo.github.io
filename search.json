@@ -2,6 +2,46 @@
   
     {
 
+      "title"    : "white balance",
+      "url"      : "/linux/2024/02/19/white-balance.html",
+      "category" : "",
+      "tags"     : "python, white, balance",
+      "date"     : "2024-02-19 00:00:00 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "vintage",
+      "url"      : "/linux/2024/02/19/vintage.html",
+      "category" : "",
+      "tags"     : "python, vintage, jpg, images",
+      "date"     : "2024-02-19 00:00:00 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "resize",
+      "url"      : "/linux/2024/02/19/resize.html",
+      "category" : "",
+      "tags"     : "python, resize, thumbnail, images, jpg",
+      "date"     : "2024-02-19 00:00:00 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "enhance",
+      "url"      : "/linux/2024/02/19/enhance.html",
+      "category" : "",
+      "tags"     : "enhance, jpg",
+      "date"     : "2024-02-19 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "brigthen",
       "url"      : "/linux/2024/02/19/brigthen.html",
       "category" : "",
