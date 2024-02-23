@@ -3,22 +3,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>vintage | uly.me</title>
+<title>ddwrt | uly.me</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="vintage" />
+<meta property="og:title" content="ddwrt" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Here’s a little Python script that makes vintage pictures." />
-<meta property="og:description" content="Here’s a little Python script that makes vintage pictures." />
-<link rel="canonical" href="http://0.0.0.0:4000/linux/2024/02/19/vintage.html" />
-<meta property="og:url" content="http://0.0.0.0:4000/linux/2024/02/19/vintage.html" />
+<meta name="description" content="After a few weeks with OpenWRT, I decided to switch to DDWRT. Nothing wrong with OpenWRT other than DDWRT is much simpler." />
+<meta property="og:description" content="After a few weeks with OpenWRT, I decided to switch to DDWRT. Nothing wrong with OpenWRT other than DDWRT is much simpler." />
+<link rel="canonical" href="http://0.0.0.0:4000/linux/2024/02/22/ddwrt.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/linux/2024/02/22/ddwrt.html" />
 <meta property="og:site_name" content="uly.me" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-02-19T00:00:00+00:00" />
+<meta property="article:published_time" content="2024-02-22T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="vintage" />
+<meta property="twitter:title" content="ddwrt" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2024-02-19T00:00:00+00:00","datePublished":"2024-02-19T00:00:00+00:00","description":"Here’s a little Python script that makes vintage pictures.","headline":"vintage","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2024/02/19/vintage.html"},"url":"http://0.0.0.0:4000/linux/2024/02/19/vintage.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2024-02-22T00:00:00+00:00","datePublished":"2024-02-22T00:00:00+00:00","description":"After a few weeks with OpenWRT, I decided to switch to DDWRT. Nothing wrong with OpenWRT other than DDWRT is much simpler.","headline":"ddwrt","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2024/02/22/ddwrt.html"},"url":"http://0.0.0.0:4000/linux/2024/02/22/ddwrt.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -43,44 +43,19 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">vintage</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2024-02-19T00:00:00+00:00" itemprop="datePublished">
-        Feb 19, 2024
+    <h1 class="post-title p-name" itemprop="name headline">ddwrt</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2024-02-22T00:00:00+00:00" itemprop="datePublished">
+        Feb 22, 2024
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="p-author h-card" itemprop="name">ulysses</span></span></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Here’s a little Python script that makes vintage pictures.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
-from PIL import Image, ImageFilter, ImageOps, ImageEnhance
-
-def vintage(input_dir, output_dir):
-    os.makedirs(output_dir, exist_ok=True)                                  # output directory
-    for filename in os.listdir(input_dir):                                  # Loop through files
-        if filename.lower().endswith('.jpg'):                               # Check if JPG
-
-            with Image.open(os.path.join(input_dir, filename)) as img:      # Open jpg
-                img = img.convert("RGB")                                    # vintage effects
-                img = ImageOps.grayscale(img)
-                img = img.filter(ImageFilter.SMOOTH_MORE)
-                img = ImageOps.posterize(img, 8)
-                img = ImageEnhance.Contrast(img).enhance(1.4)
-                img = ImageEnhance.Brightness(img).enhance(1.75)
-                img = ImageOps.colorize(img, "#704214", "#eeeeee")
-                img = ImageEnhance.Color(img).enhance(0.8)
-                img.save(os.path.join(output_dir, filename))                # Save image
-
-if __name__ == '__main__':
-    input_directory = '.'                                                   # input directory
-    output_directory = 'output'                                             # output directory
-    vintage(input_directory, output_directory)                              # make vintage
-</code></pre></div></div>
+    <p>After a few weeks with OpenWRT, I decided to switch to DDWRT. Nothing wrong with OpenWRT other than DDWRT is much simpler.</p>
 
   </div>
-<a class="u-url" href="/linux/2024/02/19/vintage.html" hidden></a>
+<a class="u-url" href="/linux/2024/02/22/ddwrt.html" hidden></a>
 </article>
 
       </div>
