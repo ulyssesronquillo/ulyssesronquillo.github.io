@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-03-17T14:14:35+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">add to crontab with no duplicate</title><link href="http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate.html" rel="alternate" type="text/html" title="add to crontab with no duplicate" /><published>2024-03-17T00:00:00+00:00</published><updated>2024-03-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate.html"><![CDATA[<p>How to add to a crontab without creating duplicates.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-04-05T18:58:28+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash function comments</title><link href="http://0.0.0.0:4000/linux/2024/04/05/bash-function-comments.html" rel="alternate" type="text/html" title="bash function comments" /><published>2024-04-05T00:00:00+00:00</published><updated>2024-04-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/04/05/bash-function-comments</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/04/05/bash-function-comments.html"><![CDATA[<p>Here’s a good way to add comments to a Bash function.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Function    : calculate_average
+# Description : Calculates the average of a list of numbers.
+# Parameters  : List of numbers separated by spaces
+# Returns     : The average value of the input numbers
+calculate_average() {
+  ...
+}
+
+# Function    : calculate_sum
+# Description : Calculates the sum of a list of numbers.
+# Parameters  : List of numbers separated by spaces
+# Returns     : The sum value of the input numbers
+calculate_sum() {
+  ...
+}
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash" /><category term="functions" /><category term="comments" /><summary type="html"><![CDATA[Here’s a good way to add comments to a Bash function.]]></summary></entry><entry><title type="html">add to crontab with no duplicate</title><link href="http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate.html" rel="alternate" type="text/html" title="add to crontab with no duplicate" /><published>2024-03-17T00:00:00+00:00</published><updated>2024-03-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate.html"><![CDATA[<p>How to add to a crontab without creating duplicates.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -l | grep 'myscript.sh' || (crontab -l 2&gt;/dev/null; echo "45 10 * * * /path/to/myscript.sh") | crontab -
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="add" /><category term="crontab" /><category term="duplicates" /><summary type="html"><![CDATA[How to add to a crontab without creating duplicates.]]></summary></entry><entry><title type="html">diff files in two directories</title><link href="http://0.0.0.0:4000/linux/2024/03/07/diff-files-in-two-directories.html" rel="alternate" type="text/html" title="diff files in two directories" /><published>2024-03-07T00:00:00+00:00</published><updated>2024-03-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/03/07/diff-files-in-two-directories</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/03/07/diff-files-in-two-directories.html"><![CDATA[<p>Here’s a good way to compare two directories to see if both directories contain similar files.</p>
@@ -136,23 +153,4 @@ if __name__ == '__main__':
     red_ratio = 0.9                                                                                 # Adjust red 
     blue_ratio = 1.5                                                                                # Adjust blue
     whiteBalance(input_directory, output_directory, red_ratio, blue_ratio)                          # Correct wb
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="white" /><category term="balance" /><summary type="html"><![CDATA[Here’s a little Python script that corrects white balance.]]></summary></entry><entry><title type="html">black and white</title><link href="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html" rel="alternate" type="text/html" title="black and white" /><published>2024-02-13T00:00:00+00:00</published><updated>2024-02-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/13/black-and-white</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/13/black-and-white.html"><![CDATA[<p>Here’s a Python code to convert JPG pictures to black and white.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
-from PIL import Image
-
-# black and white
-
-def blackWhite(input_dir, output_dir):
-    os.makedirs(output_dir, exist_ok=True)                                  # output directory
-    for filename in os.listdir(input_dir):                                  # loop all files
-        if filename.lower().endswith('.jpg'):                               # Check if JPG image
-            with Image.open(os.path.join(input_dir, filename)) as img:      # Open image file
-                bw_img = img.convert('L')                                   # Convert to bw
-                bw_img.save(os.path.join(output_dir, filename))             # Save bw
-
-if __name__ == '__main__':
-    input_directory = '.'                                                   # input directory
-    output_directory = 'output'                                             # output directory
-    blackWhite(input_directory, output_directory)                           # conver to bw
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="convert" /><category term="black" /><category term="white" /><summary type="html"><![CDATA[Here’s a Python code to convert JPG pictures to black and white.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="white" /><category term="balance" /><summary type="html"><![CDATA[Here’s a little Python script that corrects white balance.]]></summary></entry></feed>

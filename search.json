@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "bash function comments",
+      "url"      : "/linux/2024/04/05/bash-function-comments.html",
+      "category" : "",
+      "tags"     : "bash, functions, comments",
+      "date"     : "2024-04-05 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "add to crontab with no duplicate",
       "url"      : "/linux/2024/03/17/add-to-crontab-with-no-duplicate.html",
       "category" : "",
