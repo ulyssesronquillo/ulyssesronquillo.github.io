@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "gcp exit serial console",
+      "url"      : "/linux/2024/04/11/gcp-exit-serial-console.html",
+      "category" : "",
+      "tags"     : "gcp, exit, serial, console",
+      "date"     : "2024-04-11 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "bash function comments",
       "url"      : "/linux/2024/04/05/bash-function-comments.html",
       "category" : "",
