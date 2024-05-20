@@ -90,15 +90,18 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: #ECF87F;
+  color: #8a6fdf;
   text-decoration: none;
 }
 
 a:visited {
   color: #ECF87F;
+  color: #8a6fdf;
 }
 
 a:hover {
   color: #777;
+  color: #ffdb15;
   text-decoration: underline;
 }
 
@@ -134,6 +137,7 @@ code {
   border: 1px solid #222;
   border-radius: 3px;
   color: #ECF87F;
+  color: #a8e10c;
   background-color: #171717;
 }
 
@@ -305,6 +309,7 @@ table td {
 
 .site-title, .site-title:visited {
   color: #ECF87F;
+  color: #ffdb15;
 }
 
 .site-nav {
@@ -322,6 +327,7 @@ table td {
 
 .site-nav .page-link {
   color: #ECF87F;
+  color: #ffdb15;
   line-height: 1.5;
 }
 
