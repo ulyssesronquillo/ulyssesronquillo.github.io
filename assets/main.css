@@ -186,12 +186,12 @@ pre > code {
 }
 
 ul#results-container {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 ul#results-container li {
-  margin-left: -20px;
-  margin-top: 10px;
+  margin: 0 0 0 -30px;
+  padding: 0px;
   list-style-type: none;
 }
 
