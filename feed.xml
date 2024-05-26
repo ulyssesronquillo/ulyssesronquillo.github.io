@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-05-22T12:11:06+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gcp exit serial console</title><link href="http://0.0.0.0:4000/linux/2024/04/11/gcp-exit-serial-console.html" rel="alternate" type="text/html" title="gcp exit serial console" /><published>2024-04-11T00:00:00+00:00</published><updated>2024-04-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/04/11/gcp-exit-serial-console</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/04/11/gcp-exit-serial-console.html"><![CDATA[<p>How to exit gracefully from GCP’s serial console.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-05-26T12:30:58+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ULY.ME</title><subtitle></subtitle><entry><title type="html">linux mint dummy output</title><link href="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html" rel="alternate" type="text/html" title="linux mint dummy output" /><published>2024-05-26T00:00:00+00:00</published><updated>2024-05-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html"><![CDATA[<p>How to fix audio issues on Linux Mint. If you are seeing no sound devices and ‘dummy output’ only.</p>
+
+<p>Here are the commands I took to fix it.</p>
+
+<p>Validate you have sound devices on your system.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aplay -l
+</code></pre></div></div>
+
+<p>Or install Alsa.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install alsa-utils 
+alsamixer -c 1
+</code></pre></div></div>
+
+<p>Remove and purge pulseaudio.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -r ~/.config/pulse/
+pulseaudio -k
+killall pulseaudio
+apt remove pulseaudio
+apt purge pulseaudio 
+reboot
+</code></pre></div></div>
+
+<p>Reinstall pulseaudio.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install pulseaudio
+</code></pre></div></div>
+
+<p>Enable and start pulseaudio.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl --user enable pulseaudio
+systemctl --user start pulseaudio
+systemctl --user status pulseaudio
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="mint" /><category term="dummy" /><category term="output" /><category term="sound" /><summary type="html"><![CDATA[How to fix audio issues on Linux Mint. If you are seeing no sound devices and ‘dummy output’ only.]]></summary></entry><entry><title type="html">gcp exit serial console</title><link href="http://0.0.0.0:4000/linux/2024/04/11/gcp-exit-serial-console.html" rel="alternate" type="text/html" title="gcp exit serial console" /><published>2024-04-11T00:00:00+00:00</published><updated>2024-04-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/04/11/gcp-exit-serial-console</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/04/11/gcp-exit-serial-console.html"><![CDATA[<p>How to exit gracefully from GCP’s serial console.</p>
 
 <p>Type on the keyboard tilde followed by dot.</p>
 
@@ -114,29 +149,4 @@ if __name__ == '__main__':
     input_directory = '.'                                                   # input directory
     output_directory = 'output'                                             # output directory
     resize(input_directory, output_directory)                               # resize images
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="resize" /><category term="thumbnail" /><category term="images" /><category term="jpg" /><summary type="html"><![CDATA[Here’s a little Python script that creates thumbnails.]]></summary></entry><entry><title type="html">vintage</title><link href="http://0.0.0.0:4000/linux/2024/02/19/vintage.html" rel="alternate" type="text/html" title="vintage" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/vintage</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/vintage.html"><![CDATA[<p>Here’s a little Python script that makes vintage pictures.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
-from PIL import Image, ImageFilter, ImageOps, ImageEnhance
-
-def vintage(input_dir, output_dir):
-    os.makedirs(output_dir, exist_ok=True)                                  # output directory
-    for filename in os.listdir(input_dir):                                  # Loop through files
-        if filename.lower().endswith('.jpg'):                               # Check if JPG
-
-            with Image.open(os.path.join(input_dir, filename)) as img:      # Open jpg
-                img = img.convert("RGB")                                    # vintage effects
-                img = ImageOps.grayscale(img)
-                img = img.filter(ImageFilter.SMOOTH_MORE)
-                img = ImageOps.posterize(img, 8)
-                img = ImageEnhance.Contrast(img).enhance(1.4)
-                img = ImageEnhance.Brightness(img).enhance(1.75)
-                img = ImageOps.colorize(img, "#704214", "#eeeeee")
-                img = ImageEnhance.Color(img).enhance(0.8)
-                img.save(os.path.join(output_dir, filename))                # Save image
-
-if __name__ == '__main__':
-    input_directory = '.'                                                   # input directory
-    output_directory = 'output'                                             # output directory
-    vintage(input_directory, output_directory)                              # make vintage
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="vintage" /><category term="jpg" /><category term="images" /><summary type="html"><![CDATA[Here’s a little Python script that makes vintage pictures.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="resize" /><category term="thumbnail" /><category term="images" /><category term="jpg" /><summary type="html"><![CDATA[Here’s a little Python script that creates thumbnails.]]></summary></entry></feed>

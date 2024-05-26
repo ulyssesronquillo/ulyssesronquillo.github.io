@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "linux mint dummy output",
+      "url"      : "/linux/2024/05/26/linux-mint-dummy-output.html",
+      "category" : "",
+      "tags"     : "mint, dummy, output, sound",
+      "date"     : "2024-05-26 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "gcp exit serial console",
       "url"      : "/linux/2024/04/11/gcp-exit-serial-console.html",
       "category" : "",
