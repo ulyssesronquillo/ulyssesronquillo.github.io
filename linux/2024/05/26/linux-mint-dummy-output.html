@@ -8,8 +8,8 @@
 <meta property="og:title" content="linux mint dummy output" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="How to fix audio issues on Linux Mint. If you are seeing no sound devices and ‘dummy output’ only." />
-<meta property="og:description" content="How to fix audio issues on Linux Mint. If you are seeing no sound devices and ‘dummy output’ only." />
+<meta name="description" content="Somehow I lost my audio devices in Linux Mint. Instead, the only audio device present in the system is the ‘dummy output.’ Googling for answers was not clear cut. After many trials and errors I was able to get my sound fixed. Here are the commands I took to get my audio devices back in the fold in Linux Mint. Your mileage may vary." />
+<meta property="og:description" content="Somehow I lost my audio devices in Linux Mint. Instead, the only audio device present in the system is the ‘dummy output.’ Googling for answers was not clear cut. After many trials and errors I was able to get my sound fixed. Here are the commands I took to get my audio devices back in the fold in Linux Mint. Your mileage may vary." />
 <link rel="canonical" href="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html" />
 <meta property="og:url" content="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html" />
 <meta property="og:site_name" content="ULY.ME" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="linux mint dummy output" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2024-05-26T00:00:00+00:00","datePublished":"2024-05-26T00:00:00+00:00","description":"How to fix audio issues on Linux Mint. If you are seeing no sound devices and ‘dummy output’ only.","headline":"linux mint dummy output","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html"},"url":"http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2024-05-26T00:00:00+00:00","datePublished":"2024-05-26T00:00:00+00:00","description":"Somehow I lost my audio devices in Linux Mint. Instead, the only audio device present in the system is the ‘dummy output.’ Googling for answers was not clear cut. After many trials and errors I was able to get my sound fixed. Here are the commands I took to get my audio devices back in the fold in Linux Mint. Your mileage may vary.","headline":"linux mint dummy output","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html"},"url":"http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="ULY.ME" /></head>
 <body><header class="site-header" role="banner">
@@ -52,22 +52,20 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>How to fix audio issues on Linux Mint. If you are seeing no sound devices and ‘dummy output’ only.</p>
+    <p>Somehow I lost my audio devices in Linux Mint. Instead, the only audio device present in the system is the ‘dummy output.’ Googling for answers was not clear cut. After many trials and errors I was able to get my sound fixed. Here are the commands I took to get my audio devices back in the fold in Linux Mint. Your mileage may vary.</p>
 
-<p>Here are the commands I took to fix it.</p>
-
-<p>Validate you have sound devices on your system.</p>
+<p>First, validate your sound devices are still present or being recognized on your system.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aplay -l
 </code></pre></div></div>
 
-<p>Or install Alsa.</p>
+<p>You can try also Alsa. You may have to install it first.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install alsa-utils 
 alsamixer -c 1
 </code></pre></div></div>
 
-<p>Remove and purge pulseaudio.</p>
+<p>Then remove and purge pulseaudio and start fresh.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -r ~/.config/pulse/
 pulseaudio -k
@@ -77,17 +75,19 @@ apt purge pulseaudio
 reboot
 </code></pre></div></div>
 
-<p>Reinstall pulseaudio.</p>
+<p>After reboot, reinstall pulseaudio.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install pulseaudio
 </code></pre></div></div>
 
-<p>Enable and start pulseaudio.</p>
+<p>Make sure to enable and to start pulseaudio on bootup.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl --user enable pulseaudio
 systemctl --user start pulseaudio
 systemctl --user status pulseaudio
 </code></pre></div></div>
+
+<p>Your sound devices should load. You should be able to hear again.</p>
 
   </div>
 <a class="u-url" href="/linux/2024/05/26/linux-mint-dummy-output.html" hidden></a>

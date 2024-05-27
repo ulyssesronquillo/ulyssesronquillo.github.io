@@ -18,7 +18,7 @@ body {
   font-style: italic;
   line-height: 1.6em;
   color: #ddd;
-  background-color: #111;
+  background-color: #000;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -91,17 +91,20 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #ECF87F;
   color: #8a6fdf;
+  color: #5d7772;
   text-decoration: none;
 }
 
 a:visited {
   color: #ECF87F;
   color: #8a6fdf;
+  color: #5d7772;
 }
 
 a:hover {
   color: #777;
   color: #ffdb15;
+  color: #b6e2d3;
   text-decoration: underline;
 }
 
@@ -138,6 +141,7 @@ code {
   border-radius: 3px;
   color: #ECF87F;
   color: #a8e10c;
+  color: #b6e2d3;
   background-color: #171717;
 }
 
@@ -182,7 +186,7 @@ pre > code {
   margin: 0px;
   color: white;
   background-color: #171717;
-  border: 1px solid #222;
+  border: 1px solid #111;
 }
 
 ul#results-container {
@@ -209,6 +213,7 @@ ul#results-container li {
 
 strong {
   color: yellow;
+  color: #5d7772;
   font-style: bold;
 }
 
@@ -310,6 +315,7 @@ table td {
 .site-title, .site-title:visited {
   color: #ECF87F;
   color: #ffdb15;
+  color: #B6E2D3;
 }
 
 .site-nav {
@@ -328,6 +334,7 @@ table td {
 .site-nav .page-link {
   color: #ECF87F;
   color: #ffdb15;
+  color: #B6E2D3;
   line-height: 1.5;
 }
 
