@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "PULSEAUDIO AUTO START",
+      "url"      : "/linux/2024/06/04/pulseaudio-auto-start.html",
+      "category" : "",
+      "tags"     : "pulseaudio, auto, start",
+      "date"     : "2024-06-04 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "LINUX MINT DUMMY OUTPUT",
       "url"      : "/linux/2024/05/26/linux-mint-dummy-output.html",
       "category" : "",

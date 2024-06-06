@@ -91,20 +91,20 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #ECF87F;
   color: #8a6fdf;
-  color: #5d7772;
+  color: #b6e2d3;
   text-decoration: none;
 }
 
 a:visited {
   color: #ECF87F;
   color: #8a6fdf;
-  color: #5d7772;
+  color: #b6e2d3;
 }
 
 a:hover {
   color: #777;
   color: #ffdb15;
-  color: #b6e2d3;
+  color: #8977D7;
   text-decoration: underline;
 }
 
@@ -141,7 +141,7 @@ code {
   border-radius: 3px;
   color: #ECF87F;
   color: #a8e10c;
-  color: #b6e2d3;
+  color: #77D7B9;
   background-color: #171717;
 }
 

@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-05-28T11:24:46+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ULY.ME</title><subtitle></subtitle><entry><title type="html">linux mint dummy output</title><link href="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html" rel="alternate" type="text/html" title="linux mint dummy output" /><published>2024-05-26T00:00:00+00:00</published><updated>2024-05-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html"><![CDATA[<p>Somehow I lost my audio devices in Linux Mint. Instead, the only audio device present in the system is the ‘dummy output.’ Googling for answers was not clear cut. After many trials and errors I was able to get my sound fixed. Here are the commands I took to get my audio devices back in the fold in Linux Mint. Your mileage may vary.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-06-06T01:49:11+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ULY.ME</title><subtitle></subtitle><entry><title type="html">pulseaudio auto start</title><link href="http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start.html" rel="alternate" type="text/html" title="pulseaudio auto start" /><published>2024-06-04T00:00:00+00:00</published><updated>2024-06-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start.html"><![CDATA[<p>I’m trying to figure out why my audio is not automatically starting on Linux.</p>
+
+<p>After some trial and error, here’s the fix.</p>
+
+<p>Edit the /etc/pulse/client.conf file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/pulse/client.conf
+</code></pre></div></div>
+
+<p>Change “autospawn=no” to “autospawn=yes.”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>autospawn=yes
+</code></pre></div></div>
+
+<p>Make sure to take out ‘;’ or ‘#” to remove the comment.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pulseaudio --start 
+</code></pre></div></div>
+
+<p>Once you modified the file, restart pulseaudio.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pulseaudio --start
+</code></pre></div></div>
+
+<p>Reboot your machine to check if audio is working on boot.</p>
+
+<p>If that doesn’t work, delete the cookie.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -f ~/.config/pulse/cookie
+</code></pre></div></div>
+
+<p>You can restart the service.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl --user restart pulseaudio
+</code></pre></div></div>
+
+<p>In addition, running this command worked if audio does not load automatically.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pulseaudio -k
+</code></pre></div></div>
+
+<p>In my case, I added the following to my Startup Applications because it wasn’t loading properly.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl --user restart pulseaudio
+</code></pre></div></div>
+
+<p>Enjoy.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="pulseaudio" /><category term="auto" /><category term="start" /><summary type="html"><![CDATA[I’m trying to figure out why my audio is not automatically starting on Linux.]]></summary></entry><entry><title type="html">linux mint dummy output</title><link href="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html" rel="alternate" type="text/html" title="linux mint dummy output" /><published>2024-05-26T00:00:00+00:00</published><updated>2024-05-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html"><![CDATA[<p>Somehow I lost my audio devices in Linux Mint. Instead, the only audio device present in the system is the ‘dummy output.’ Googling for answers was not clear cut. After many trials and errors I was able to get my sound fixed. Here are the commands I took to get my audio devices back in the fold in Linux Mint. Your mileage may vary.</p>
 
 <p>First, validate your sound devices are still present or being recognized on your system.</p>
 
@@ -138,21 +184,4 @@ if __name__ == '__main__':
     input_directory = '.'                                                   # input directory
     output_directory = 'output'                                             # output directory
     enhance(input_directory, output_directory)                              # enhance
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="enhance" /><category term="jpg" /><summary type="html"><![CDATA[Here’s a litte Python script that enhance a jpg image.]]></summary></entry><entry><title type="html">resize</title><link href="http://0.0.0.0:4000/linux/2024/02/19/resize.html" rel="alternate" type="text/html" title="resize" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/resize</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/resize.html"><![CDATA[<p>Here’s a little Python script that creates thumbnails.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
-from PIL import Image
-
-def resize(input_dir, output_dir, thumbnail_size=(720, 720)):               # set to 720p
-    os.makedirs(output_dir, exist_ok=True)                                  # output directory 
-    for filename in os.listdir(input_dir):                                  # loop through files 
-        if filename.lower().endswith('.jpg'):                               # check if JPG
-            with Image.open(os.path.join(input_dir, filename)) as img:      # open image
-                img.thumbnail(thumbnail_size)                               # reduce to thumbnail
-                img.save(os.path.join(output_dir, filename))                # save thumbnail
-
-if __name__ == '__main__':
-    input_directory = '.'                                                   # input directory
-    output_directory = 'output'                                             # output directory
-    resize(input_directory, output_directory)                               # resize images
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="python" /><category term="resize" /><category term="thumbnail" /><category term="images" /><category term="jpg" /><summary type="html"><![CDATA[Here’s a little Python script that creates thumbnails.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="enhance" /><category term="jpg" /><summary type="html"><![CDATA[Here’s a litte Python script that enhance a jpg image.]]></summary></entry></feed>
