@@ -2,6 +2,26 @@
   
     {
 
+      "title"    : "fixing apache errors",
+      "url"      : "/linux/2024/08/04/fixing-apache-errors.html",
+      "category" : "",
+      "tags"     : "apache2, errors, fix",
+      "date"     : "2024-08-04 00:00:00 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "git undo last commit",
+      "url"      : "/linux/2024/06/12/git-undo-last-commit.html",
+      "category" : "",
+      "tags"     : "git, undo, last, commit",
+      "date"     : "2024-06-12 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "pulseaudio auto start",
       "url"      : "/linux/2024/06/04/pulseaudio-auto-start.html",
       "category" : "",

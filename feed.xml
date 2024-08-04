@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-06-12T00:37:12+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">pulseaudio auto start</title><link href="http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start.html" rel="alternate" type="text/html" title="pulseaudio auto start" /><published>2024-06-04T00:00:00+00:00</published><updated>2024-06-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start.html"><![CDATA[<p>I’m trying to figure out why my audio is not automatically starting on Linux.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-08-04T18:38:26+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">fixing apache errors</title><link href="http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors.html" rel="alternate" type="text/html" title="fixing apache errors" /><published>2024-08-04T00:00:00+00:00</published><updated>2024-08-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors.html"><![CDATA[<p>I was getting an Apache error on startup and during a restart after upgrading to Linux Mint 22.</p>
+
+<p>As it turned out, the module that’s enabled is php8.1. It should be 8.3.</p>
+
+<p>Here’s the fix:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo a2dismod php8.1
+sudo systemctl restart apache2
+</code></pre></div></div>
+
+<p>This did the trick, but I was getting another error during restarting services.</p>
+
+<p>The error says “could not reliably determin the server fully qualified domain.”</p>
+
+<p>Here’s the fix for that.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vi /etc/apache2/apache2.conf
+</code></pre></div></div>
+
+<p>Insert</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ServerName localhost
+</code></pre></div></div>
+
+<p>Restart Apache</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo systemctl restart apache2 
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="apache2" /><category term="errors" /><category term="fix" /><summary type="html"><![CDATA[I was getting an Apache error on startup and during a restart after upgrading to Linux Mint 22.]]></summary></entry><entry><title type="html">git undo last commit</title><link href="http://0.0.0.0:4000/linux/2024/06/12/git-undo-last-commit.html" rel="alternate" type="text/html" title="git undo last commit" /><published>2024-06-12T00:00:00+00:00</published><updated>2024-06-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/06/12/git-undo-last-commit</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/06/12/git-undo-last-commit.html"><![CDATA[<p>How to undo git’s last commit.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --soft HEAD~
+</code></pre></div></div>
+
+<p>Undo the last 2 commits.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --soft HEAD~2
+</code></pre></div></div>
+
+<p>Undo local changes.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --hard abcd543
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="git" /><category term="undo" /><category term="last" /><category term="commit" /><summary type="html"><![CDATA[How to undo git’s last commit.]]></summary></entry><entry><title type="html">pulseaudio auto start</title><link href="http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start.html" rel="alternate" type="text/html" title="pulseaudio auto start" /><published>2024-06-04T00:00:00+00:00</published><updated>2024-06-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start.html"><![CDATA[<p>I’m trying to figure out why my audio is not automatically starting on Linux.</p>
 
 <p>After some trial and error, here’s the fix.</p>
 
@@ -149,39 +189,4 @@ list_snapshots "$volume_name"
 
 <p>I think that was a great decision while still using old router hardware, a Linksys E4200 circa 2011 (release date).</p>
 
-<p>One of these days I will have to purchase a new router, but why fix something that not broken.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="ddwrt" /><category term="router" /><summary type="html"><![CDATA[After a few weeks with OpenWRT, I decided to switch over to DDWRT. There is nothing wrong with OpenWRT. DDWRT is a much simpler interface.]]></summary></entry><entry><title type="html">brigthen</title><link href="http://0.0.0.0:4000/linux/2024/02/19/brigthen.html" rel="alternate" type="text/html" title="brigthen" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/brigthen</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/brigthen.html"><![CDATA[<p>A little Python script to brighten an image.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
-from PIL import ImageEnhance, Image
-
-def brightenImage(input_dir, output_dir):
-    os.makedirs(output_dir, exist_ok=True)                                          # output directory
-    for filename in os.listdir(input_dir):                                          # loop through files
-        if filename.lower().endswith('.jpg'):                                       # check if jpg
-            with Image.open(os.path.join(input_dir, filename)) as img:              # open jpg  
-                enhanced_img = ImageEnhance.Contrast(img).enhance(1.25)             # enhance contrast
-                enhanced_img = ImageEnhance.Brightness(enhanced_img).enhance(1.5)   # enhance brightness
-                enhanced_img.save(os.path.join(output_dir, filename))               # save output
-
-if __name__ == '__main__':
-    input_directory = '.'                                                           # input directory
-    output_directory = 'output'                                                     # output directory
-    brightenImage(input_directory, output_directory)                                # brighten image
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="brigthen" /><category term="image" /><category term="jpg" /><summary type="html"><![CDATA[A little Python script to brighten an image.]]></summary></entry><entry><title type="html">enhance</title><link href="http://0.0.0.0:4000/linux/2024/02/19/enhance.html" rel="alternate" type="text/html" title="enhance" /><published>2024-02-19T00:00:00+00:00</published><updated>2024-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/19/enhance</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/19/enhance.html"><![CDATA[<p>Here’s a litte Python script that enhance a jpg image.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import os
-from PIL import ImageEnhance, Image
-
-def enhance(input_dir, output_dir, factor=1.75):
-    os.makedirs(output_dir, exist_ok=True)                                  # Create output directory   
-    for filename in os.listdir(input_dir):                                  # Loop through all files
-        if filename.lower().endswith('.jpg'):                               # Check if JPG image
-            with Image.open(os.path.join(input_dir, filename)) as img:      # Open the image file
-                enhanced_img = ImageEnhance.Color(img).enhance(factor)      # Enhance image
-                enhanced_img.save(os.path.join(output_dir, filename))       # Save image
-
-if __name__ == '__main__':
-    input_directory = '.'                                                   # input directory
-    output_directory = 'output'                                             # output directory
-    enhance(input_directory, output_directory)                              # enhance
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="enhance" /><category term="jpg" /><summary type="html"><![CDATA[Here’s a litte Python script that enhance a jpg image.]]></summary></entry></feed>
+<p>One of these days I will have to purchase a new router, but why fix something that not broken.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="ddwrt" /><category term="router" /><summary type="html"><![CDATA[After a few weeks with OpenWRT, I decided to switch over to DDWRT. There is nothing wrong with OpenWRT. DDWRT is a much simpler interface.]]></summary></entry></feed>
