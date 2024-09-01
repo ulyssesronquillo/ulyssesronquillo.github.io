@@ -2,6 +2,7 @@
  * Reset some basic elements
  */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -14,8 +15,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   /*font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
-  font-family: "Fira Sans", sans-serif;
-  font-style: italic;
+  font-family: "Mulish", sans-serif;
   line-height: 1.6em;
   color: #000;
   background-color: #fff;
@@ -139,7 +139,7 @@ blockquote > :last-child {
  */
 pre,
 code {
-  font-size: 16px;
+  font-size: 17px;
   border: 1px solid #ddd;
   border-radius: 3px;
   color: #ECF87F;
@@ -204,14 +204,14 @@ ul#results-container li {
 }
 
 .date {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Mulish", sans-serif;
   color: #999;
   font-size: 14px;
 }
 
 .highlight code {
-  font-family: "Source Code Pro", monospace;
-  font-size: 14px;
+  font-family: "Fira Sans", monospace;
+  font-size: 17px;
   line-height: 0.5em;
 }
 
@@ -226,7 +226,7 @@ strong {
  * Wrapper
  */
 .wrapper {
-  font-size: 16px;
+  font-size: 17px;
   max-width: -webkit-calc(1280px - (30px * 2));
   max-width: 1220px;
   margin-right: auto;
