@@ -1,9 +1,8 @@
 /**
  * Reset some basic elements
  */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&family=Source+Code+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -16,7 +15,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   /*font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
-  font-family: "Mulish", sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
   line-height: 1.6em;
   color: #000;
   background-color: #fff;
@@ -90,24 +90,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #ECF87F;
-  color: #8a6fdf;
-  color: #b6e2d3;
-  color: #000080;
+  color: #0000EE;
   text-decoration: none;
 }
 
 a:visited {
-  color: #ECF87F;
-  color: #8a6fdf;
-  color: #b6e2d3;
-  color: #000080;
+  color: #551A8B;
 }
 
 a:hover {
-  color: #777;
-  color: #ffdb15;
-  color: #8977D7;
   color: #000080;
   text-decoration: underline;
 }
@@ -140,12 +131,9 @@ blockquote > :last-child {
  */
 pre,
 code {
-  font-size: 17px;
+  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 3px;
-  color: #ECF87F;
-  color: #a8e10c;
-  color: #77D7B9;
   color: #000000;
   background-color: #eee;
 }
@@ -205,20 +193,19 @@ ul#results-container li {
 }
 
 .date {
-  font-family: "Mulish", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   color: #999;
   font-size: 14px;
 }
 
 .highlight code {
   font-family: "Fira Code", monospace;
+  font-weight: 400;
   font-size: 15px;
   line-height: 0.5em;
 }
 
 strong {
-  color: yellow;
-  color: #5d7772;
   color: #000080;
   font-style: bold;
 }
@@ -227,7 +214,7 @@ strong {
  * Wrapper
  */
 .wrapper {
-  font-size: 20px;
+  font-size: 17px;
   max-width: -webkit-calc(1280px - (30px * 2));
   max-width: 1220px;
   margin-right: auto;
@@ -319,9 +306,6 @@ table td {
 }
 
 .site-title, .site-title:visited {
-  color: #ECF87F;
-  color: #ffdb15;
-  color: #B6E2D3;
   color: #000080;
 }
 
@@ -339,9 +323,6 @@ table td {
 }
 
 .site-nav .page-link {
-  color: #ECF87F;
-  color: #ffdb15;
-  color: #B6E2D3;
   color: #000080;
   line-height: 1.5;
 }
