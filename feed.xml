@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-09-07T05:43:49+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">fixing apache errors</title><link href="http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors.html" rel="alternate" type="text/html" title="fixing apache errors" /><published>2024-08-04T00:00:00+00:00</published><updated>2024-08-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors.html"><![CDATA[<p>I was getting an Apache error on startup and during a restart after upgrading to Linux Mint 22.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-09-11T12:09:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">lower to upper vice versa</title><link href="http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa.html" rel="alternate" type="text/html" title="lower to upper vice versa" /><published>2024-09-11T00:00:00+00:00</published><updated>2024-09-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa.html"><![CDATA[<p>How to convert uppercase to lowercase and vice versa.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>upper_project=$(echo "$project" | tr '[:lower:]' '[:upper:]')
+</code></pre></div></div>
+
+<p>Vice versa</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lower_project=$(echo "$project" | tr '[:upper:]' '[:lower:]')
+</code></pre></div></div>
+
+<p>Display output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo $upper_project
+echo $lower_project
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash," /><category term="uppercase," /><category term="lowercase," /><category term="conversion" /><summary type="html"><![CDATA[How to convert uppercase to lowercase and vice versa.]]></summary></entry><entry><title type="html">fixing apache errors</title><link href="http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors.html" rel="alternate" type="text/html" title="fixing apache errors" /><published>2024-08-04T00:00:00+00:00</published><updated>2024-08-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors.html"><![CDATA[<p>I was getting an Apache error on startup and during a restart after upgrading to Linux Mint 22.</p>
 
 <p>As it turned out, the module that’s enabled is php8.1. It should be 8.3.</p>
 
@@ -183,10 +197,4 @@ calculate_sum() {
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>volume_name="$1"
 list_snapshots "$volume_name"
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="timestamp" /><category term="timezone" /><category term="conversion" /><summary type="html"><![CDATA[Here’s a function that will convert a timestamp from one timezone to another, in this case from UTC to ET timezone.]]></summary></entry><entry><title type="html">ddwrt</title><link href="http://0.0.0.0:4000/linux/2024/02/22/ddwrt.html" rel="alternate" type="text/html" title="ddwrt" /><published>2024-02-22T00:00:00+00:00</published><updated>2024-02-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/22/ddwrt</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/22/ddwrt.html"><![CDATA[<p>After a few weeks with OpenWRT, I decided to switch over to DDWRT. There is nothing wrong with OpenWRT. DDWRT is a much simpler interface.</p>
-
-<p>It seems to be very stable as well. I don’t recall any reboots other than service provider having an internet issue.</p>
-
-<p>I think that was a great decision while still using old router hardware, a Linksys E4200 circa 2011 (release date).</p>
-
-<p>One of these days I will have to purchase a new router, but why fix something that not broken.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="ddwrt" /><category term="router" /><summary type="html"><![CDATA[After a few weeks with OpenWRT, I decided to switch over to DDWRT. There is nothing wrong with OpenWRT. DDWRT is a much simpler interface.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="timestamp" /><category term="timezone" /><category term="conversion" /><summary type="html"><![CDATA[Here’s a function that will convert a timestamp from one timezone to another, in this case from UTC to ET timezone.]]></summary></entry></feed>
