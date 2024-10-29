@@ -90,16 +90,16 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #0000EE;
+  color: #47682C;
   text-decoration: none;
 }
 
 a:visited {
-  color: #551A8B;
+  color: #8C7051;
 }
 
 a:hover {
-  color: #000080;
+  color: #EF3054;
   text-decoration: underline;
 }
 
@@ -206,7 +206,7 @@ ul#results-container li {
 }
 
 strong {
-  color: #000080;
+  color: #47682C;
   font-style: bold;
 }
 
@@ -214,7 +214,7 @@ strong {
  * Wrapper
  */
 .wrapper {
-  font-size: 20px;
+  font-size: 18px;
   max-width: -webkit-calc(1280px - (30px * 2));
   max-width: 1220px;
   margin-right: auto;
@@ -306,7 +306,11 @@ table td {
 }
 
 .site-title, .site-title:visited {
-  color: #000080;
+  color: #47682C;
+}
+
+.site-title:hover {
+  color: #EF3054;
 }
 
 .site-nav {
@@ -323,7 +327,12 @@ table td {
 }
 
 .site-nav .page-link {
-  color: #000080;
+  color: #47682C;
+  line-height: 1.5;
+}
+
+.site-nav:hover .page-link:hover {
+  color: #EF3054;
   line-height: 1.5;
 }
 
