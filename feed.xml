@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-10-29T08:39:49+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">lower to upper vice versa</title><link href="http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa.html" rel="alternate" type="text/html" title="lower to upper vice versa" /><published>2024-09-11T00:00:00+00:00</published><updated>2024-09-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa.html"><![CDATA[<p>How to convert uppercase to lowercase and vice versa.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-11-08T07:15:40+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">generating a bash script</title><link href="http://0.0.0.0:4000/2024/11/08/generating-a-bash-script.html" rel="alternate" type="text/html" title="generating a bash script" /><published>2024-11-08T00:00:00+00:00</published><updated>2024-11-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/11/08/generating-a-bash-script</id><content type="html" xml:base="http://0.0.0.0:4000/2024/11/08/generating-a-bash-script.html"><![CDATA[<p>Here’s the code for a bash script that generates another bash script and then executes it, as well as deletes it in the end.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+# Define the script content
+script_content='#!/bin/bash
+echo "Hello, this is the generated script!"
+echo "The current date and time is: $(date)"
+'
+
+# Define the name of the new script
+new_script="generated_script.sh"
+
+# Write the content to the new script file
+echo "$script_content" &gt; "$new_script"
+
+# Make the new script executable
+chmod +x "$new_script"
+
+# Execute the new script
+./"$new_script"
+
+rm -f $new_script
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s the code for a bash script that generates another bash script and then executes it, as well as deletes it in the end.]]></summary></entry><entry><title type="html">lower to upper vice versa</title><link href="http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa.html" rel="alternate" type="text/html" title="lower to upper vice versa" /><published>2024-09-11T00:00:00+00:00</published><updated>2024-09-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa.html"><![CDATA[<p>How to convert uppercase to lowercase and vice versa.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>upper_project=$(echo "$project" | tr '[:lower:]' '[:upper:]')
 </code></pre></div></div>
@@ -168,33 +191,4 @@ calculate_sum() {
 <p>This is essential if you want to combine two directories into one.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diff -qr dir1 dir2 | sort
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="diff" /><category term="files" /><category term="two" /><category term="directories" /><summary type="html"><![CDATA[Here’s a good way to compare two directories to see if both directories contain similar files.]]></summary></entry><entry><title type="html">timestamp timezone conversion</title><link href="http://0.0.0.0:4000/linux/2024/02/24/timestamp-timezone-conversion.html" rel="alternate" type="text/html" title="timestamp timezone conversion" /><published>2024-02-24T00:00:00+00:00</published><updated>2024-02-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/02/24/timestamp-timezone-conversion</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/02/24/timestamp-timezone-conversion.html"><![CDATA[<p>Here’s a function that will convert a timestamp from one timezone to another, in this case from UTC to ET timezone.</p>
-
-<p>Get a list of snapshots</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list_snapshots() {
-    volume_name="$1"
-    snapshots=$(gcloud compute snapshots list --filter="sourceDisk=$volume_name" --format="value(name,creationTimestamp.date('%s'))")
-    while read -r snapshot; do
-        snapshot_name=$(echo "$snapshot" | cut -d' ' -f1)
-        creation_timestamp=$(echo "$snapshot" | cut -d' ' -f2)
-        et_creation_timestamp=$(convert_to_et "$creation_timestamp")
-        echo "Snapshot: $snapshot_name, Creation Time (ET): $et_creation_timestamp"
-    done &lt;&lt;&lt; "$snapshots"
-}
-</code></pre></div></div>
-
-<p>The function to convert to ET timezone.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert_to_et() {
-    timestamp="$1"
-    et_timestamp=$(date --date="@${timestamp}" +"%Y-%m-%d %H:%M:%S %Z" -u)
-    echo "$et_timestamp"
-}
-</code></pre></div></div>
-
-<p>Finally, call the function.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>volume_name="$1"
-list_snapshots "$volume_name"
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="timestamp" /><category term="timezone" /><category term="conversion" /><summary type="html"><![CDATA[Here’s a function that will convert a timestamp from one timezone to another, in this case from UTC to ET timezone.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="diff" /><category term="files" /><category term="two" /><category term="directories" /><summary type="html"><![CDATA[Here’s a good way to compare two directories to see if both directories contain similar files.]]></summary></entry></feed>
