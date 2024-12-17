@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-11-08T07:15:40+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">generating a bash script</title><link href="http://0.0.0.0:4000/2024/11/08/generating-a-bash-script.html" rel="alternate" type="text/html" title="generating a bash script" /><published>2024-11-08T00:00:00+00:00</published><updated>2024-11-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/11/08/generating-a-bash-script</id><content type="html" xml:base="http://0.0.0.0:4000/2024/11/08/generating-a-bash-script.html"><![CDATA[<p>Here’s the code for a bash script that generates another bash script and then executes it, as well as deletes it in the end.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-17T12:20:06+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">python copy files gcs bucket</title><link href="http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket.html" rel="alternate" type="text/html" title="python copy files gcs bucket" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket.html"><![CDATA[<p>I have a Python script that copies files from a local directory to a GCS bucket and down a couple of directories.</p>
+
+<p>The script was tested in a Python virtual environment. Google Cloud Storage module is required which can be installed via pip.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install google-cloud-storage
+</code></pre></div></div>
+
+<p>If you have trouble running pip, you may have to run this on Linux Mint (Ubuntu) to update the virtual environment.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install python3.12-venv
+</code></pre></div></div>
+
+<p>For authentication, you will need to download the service account credentials key that has write access to the GCS bucket.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export GOOGLE_APPLICATION_CREDENTIALS="key.json"
+</code></pre></div></div>
+
+<p>Finally, here’s the Python script …</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!bin/python
+
+from google.cloud import storage
+import os
+
+def upload_files_to_gcs(bucket_name, directory, destination_directory):
+    """Uploads files from a local directory to a GCS bucket.
+
+    Args:
+        bucket_name: The name of the GCS bucket.
+        directory: The local directory containing the files to upload.
+        destination_directory: The directory in the GCS bucket where the files will be uploaded.
+    """
+
+    storage_client = storage.Client()
+    bucket = storage_client.bucket(bucket_name)
+
+    for file_name in os.listdir(directory):
+        file_path = os.path.join(directory, file_name)
+
+        if os.path.isfile(file_path):
+            blob = bucket.blob(os.path.join(destination_directory, file_name))
+            blob.upload_from_filename(file_path)
+
+            print(f"Uploaded {file_name} to {bucket_name}/{destination_directory}")
+
+if __name__ == "__main__":
+    bucket_name = "ulysses-test-bucket"
+    directory = "/home/ulysses/Code/python/gcs/upload"
+    destination_directory = "upload/test/"
+
+    upload_files_to_gcs(bucket_name, directory, destination_directory)
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I have a Python script that copies files from a local directory to a GCS bucket and down a couple of directories.]]></summary></entry><entry><title type="html">generating a bash script</title><link href="http://0.0.0.0:4000/2024/11/08/generating-a-bash-script.html" rel="alternate" type="text/html" title="generating a bash script" /><published>2024-11-08T00:00:00+00:00</published><updated>2024-11-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/11/08/generating-a-bash-script</id><content type="html" xml:base="http://0.0.0.0:4000/2024/11/08/generating-a-bash-script.html"><![CDATA[<p>Here’s the code for a bash script that generates another bash script and then executes it, as well as deletes it in the end.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -186,9 +237,4 @@ calculate_sum() {
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash" /><category term="functions" /><category term="comments" /><summary type="html"><![CDATA[Here’s a good way to add comments to a Bash function.]]></summary></entry><entry><title type="html">add to crontab with no duplicate</title><link href="http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate.html" rel="alternate" type="text/html" title="add to crontab with no duplicate" /><published>2024-03-17T00:00:00+00:00</published><updated>2024-03-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/03/17/add-to-crontab-with-no-duplicate.html"><![CDATA[<p>How to add to a crontab without creating duplicates.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab -l | grep 'myscript.sh' || (crontab -l 2&gt;/dev/null; echo "45 10 * * * /path/to/myscript.sh") | crontab -
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="add" /><category term="crontab" /><category term="duplicates" /><summary type="html"><![CDATA[How to add to a crontab without creating duplicates.]]></summary></entry><entry><title type="html">diff files in two directories</title><link href="http://0.0.0.0:4000/linux/2024/03/07/diff-files-in-two-directories.html" rel="alternate" type="text/html" title="diff files in two directories" /><published>2024-03-07T00:00:00+00:00</published><updated>2024-03-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/03/07/diff-files-in-two-directories</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/03/07/diff-files-in-two-directories.html"><![CDATA[<p>Here’s a good way to compare two directories to see if both directories contain similar files.</p>
-
-<p>This is essential if you want to combine two directories into one.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>diff -qr dir1 dir2 | sort
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="diff" /><category term="files" /><category term="two" /><category term="directories" /><summary type="html"><![CDATA[Here’s a good way to compare two directories to see if both directories contain similar files.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="add" /><category term="crontab" /><category term="duplicates" /><summary type="html"><![CDATA[How to add to a crontab without creating duplicates.]]></summary></entry></feed>
