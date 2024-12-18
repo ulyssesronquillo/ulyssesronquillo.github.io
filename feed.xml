@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-18T03:27:01+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">fixed my logitech keyboard bluetooth issues</title><link href="http://0.0.0.0:4000/2024/12/17/fixed-my-logitech-keyboard-bluetooth-issues.html" rel="alternate" type="text/html" title="fixed my logitech keyboard bluetooth issues" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/fixed-my-logitech-keyboard-bluetooth-issues</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/fixed-my-logitech-keyboard-bluetooth-issues.html"><![CDATA[<p>I fixed my Bluetooth issues with my Logitech K811 keyboard.</p>
-
-<p>Here are the steps I took to fix it in the following order.</p>
-
-<p>Take note of ID of your device.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bluetoothctl 
-scan on
-remove ID
-connect ID
-trust ID
-pair ID
-</code></pre></div></div>
-
-<p>That’s it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I fixed my Bluetooth issues with my Logitech K811 keyboard.]]></summary></entry><entry><title type="html">gsutil copy local recursively to bucket</title><link href="http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket.html" rel="alternate" type="text/html" title="gsutil copy local recursively to bucket" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket.html"><![CDATA[<p>Here’s a gsutil command to copy a directory recursively to a GCS bucket via parallel uploads.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-18T12:38:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gsutil copy local recursively to bucket</title><link href="http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket.html" rel="alternate" type="text/html" title="gsutil copy local recursively to bucket" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket.html"><![CDATA[<p>Here’s a gsutil command to copy a directory recursively to a GCS bucket via parallel uploads.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Define source and destination
 SOURCE_DIR="/path/to/local/directory"
@@ -20,7 +6,39 @@ DEST_BUCKET="gs://your-bucket-name"
 
 # Use gsutil with the -m flag for parallel uploads
 gsutil -m cp -r "$SOURCE_DIR" "$DEST_BUCKET"
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a gsutil command to copy a directory recursively to a GCS bucket via parallel uploads.]]></summary></entry><entry><title type="html">python copy files gcs bucket</title><link href="http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket.html" rel="alternate" type="text/html" title="python copy files gcs bucket" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket.html"><![CDATA[<p>I have a Python script that copies files from a local directory to a GCS bucket and down a couple of directories.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a gsutil command to copy a directory recursively to a GCS bucket via parallel uploads.]]></summary></entry><entry><title type="html">logitech keyboard bluetooth issues</title><link href="http://0.0.0.0:4000/2024/12/17/logitech-keyboard-bluetooth-issues.html" rel="alternate" type="text/html" title="logitech keyboard bluetooth issues" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/logitech-keyboard-bluetooth-issues</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/logitech-keyboard-bluetooth-issues.html"><![CDATA[<p>I fixed my Bluetooth issues with my Logitech K811 keyboard on Linux Mint</p>
+
+<p>Take note of your device ID in a similar format as a MAC Address.</p>
+
+<p>Here are the steps I took to fix the pairing issue.</p>
+
+<p>Run bluetoothctl, you will get a special prompt.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bluetoothctl 
+</code></pre></div></div>
+
+<p>Perform a scan. Copy the device ID.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scan on
+</code></pre></div></div>
+
+<p>Remove the device.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remove ID
+</code></pre></div></div>
+
+<p>Finally reconnect device.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>connect ID
+trust ID
+pair ID
+</code></pre></div></div>
+
+<p>You may be prompted to enter the pairing code.</p>
+
+<p>Simply enter the numbers.</p>
+
+<p>That’s it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I fixed my Bluetooth issues with my Logitech K811 keyboard on Linux Mint]]></summary></entry><entry><title type="html">python copy files gcs bucket</title><link href="http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket.html" rel="alternate" type="text/html" title="python copy files gcs bucket" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket.html"><![CDATA[<p>I have a Python script that copies files from a local directory to a GCS bucket and down a couple of directories.</p>
 
 <p>The script was tested in a Python virtual environment. Google Cloud Storage module is required which can be installed via pip.</p>
 
