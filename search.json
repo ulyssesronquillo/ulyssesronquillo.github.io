@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "gcp create image with license",
+      "url"      : "/2024/12/18/gcp-create-image-with-license.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2024-12-18 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "python copy files gcs bucket",
       "url"      : "/2024/12/17/python-copy-files-gcs-bucket.html",
       "category" : "",
