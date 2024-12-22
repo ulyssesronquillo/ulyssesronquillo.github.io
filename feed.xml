@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-18T14:37:23+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gcp create image with license</title><link href="http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license.html" rel="alternate" type="text/html" title="gcp create image with license" /><published>2024-12-18T00:00:00+00:00</published><updated>2024-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license.html"><![CDATA[<p>Here’s the gcloud command to create a new image with an extended license with an option to add family type.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-22T18:48:02+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">tar multiple directories to targz</title><link href="http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz.html" rel="alternate" type="text/html" title="tar multiple directories to targz" /><published>2024-12-22T00:00:00+00:00</published><updated>2024-12-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz.html"><![CDATA[<p>Tar multiple directories to a single tar.gz file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -czvf /home/ulysses/Code/backup.tar.gz ~/Documents/ ~/Downloads ~/Git/gcloud/ ~/Pictures ~/Videos
+</code></pre></div></div>
+
+<p>To list files inside the tar.gz file, run this.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -tzvf /home/ulysses/Code/backup.tar.gz
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Tar multiple directories to a single tar.gz file.]]></summary></entry><entry><title type="html">gcp create image with license</title><link href="http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license.html" rel="alternate" type="text/html" title="gcp create image with license" /><published>2024-12-18T00:00:00+00:00</published><updated>2024-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license.html"><![CDATA[<p>Here’s the gcloud command to create a new image with an extended license with an option to add family type.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta compute images create new-image-with-license \
 --source-image=this-is-the-source-image \
@@ -221,39 +229,4 @@ sudo systemctl restart apache2
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl --user restart pulseaudio
 </code></pre></div></div>
 
-<p>Enjoy.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="pulseaudio" /><category term="auto" /><category term="start" /><summary type="html"><![CDATA[I’m trying to figure out why my audio is not automatically starting on Linux.]]></summary></entry><entry><title type="html">linux mint dummy output</title><link href="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html" rel="alternate" type="text/html" title="linux mint dummy output" /><published>2024-05-26T00:00:00+00:00</published><updated>2024-05-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/05/26/linux-mint-dummy-output.html"><![CDATA[<p>Somehow I lost my audio devices in Linux Mint. Instead, the only audio device present in the system is the ‘dummy output.’ Googling for answers was not clear cut. After many trials and errors I was able to get my sound fixed. Here are the commands I took to get my audio devices back in the fold in Linux Mint. Your mileage may vary.</p>
-
-<p>First, validate your sound devices are still present or being recognized on your system.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aplay -l
-</code></pre></div></div>
-
-<p>You can try also Alsa. You may have to install it first.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install alsa-utils 
-alsamixer -c 1
-</code></pre></div></div>
-
-<p>Then remove and purge pulseaudio and start fresh.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -r ~/.config/pulse/
-pulseaudio -k
-killall pulseaudio
-apt remove pulseaudio
-apt purge pulseaudio 
-reboot
-</code></pre></div></div>
-
-<p>After reboot, reinstall pulseaudio.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install pulseaudio
-</code></pre></div></div>
-
-<p>Make sure to enable and to start pulseaudio on bootup.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl --user enable pulseaudio
-systemctl --user start pulseaudio
-systemctl --user status pulseaudio
-</code></pre></div></div>
-
-<p>Your sound devices should load. You should be able to hear again.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="mint" /><category term="dummy" /><category term="output" /><category term="sound" /><summary type="html"><![CDATA[Somehow I lost my audio devices in Linux Mint. Instead, the only audio device present in the system is the ‘dummy output.’ Googling for answers was not clear cut. After many trials and errors I was able to get my sound fixed. Here are the commands I took to get my audio devices back in the fold in Linux Mint. Your mileage may vary.]]></summary></entry></feed>
+<p>Enjoy.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="pulseaudio" /><category term="auto" /><category term="start" /><summary type="html"><![CDATA[I’m trying to figure out why my audio is not automatically starting on Linux.]]></summary></entry></feed>

@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "tar multiple directories to targz",
+      "url"      : "/2024/12/22/tar-multiple-directories-to-targz.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2024-12-22 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "gcp create image with license",
       "url"      : "/2024/12/18/gcp-create-image-with-license.html",
       "category" : "",
