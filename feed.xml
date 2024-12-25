@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-22T18:48:02+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">tar multiple directories to targz</title><link href="http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz.html" rel="alternate" type="text/html" title="tar multiple directories to targz" /><published>2024-12-22T00:00:00+00:00</published><updated>2024-12-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz.html"><![CDATA[<p>Tar multiple directories to a single tar.gz file.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-25T21:46:24+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">copy files from directory to directory</title><link href="http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory.html" rel="alternate" type="text/html" title="copy files from directory to directory" /><published>2024-12-25T00:00:00+00:00</published><updated>2024-12-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory.html"><![CDATA[<p>How to copy files from source to the target directory. Copy only if file is not present in the target.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+source="/home/ulysses/Cameras/fujifilm"
+target="/home/ulysses/Cameras/Fujifilm"
+
+output="output.txt"
+&gt; $output
+
+# Check if source directory exists
+if [ ! -d "$source" ]; then
+    echo "Error: Directory '$source' does not exist."
+    exit 1
+fi
+
+# Find all JPG files in the source directory
+find "$source" -type f -iname "*.JPG" | while read -r file; do
+
+    # Get the basename.
+    filename=$(basename "$file")
+
+    # Check if filename is in target directory.
+    if find "$target" -type f -name "$filename" -print -quit | grep -q .; then
+        true
+    else
+        # Copy file from source to target.
+        cp $source/$filename $target/100_FUJI/
+        echo "Copying $file to $target/100_FUJI." | tee -a $output
+    fi
+done
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to copy files from source to the target directory. Copy only if file is not present in the target.]]></summary></entry><entry><title type="html">tar multiple directories to targz</title><link href="http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz.html" rel="alternate" type="text/html" title="tar multiple directories to targz" /><published>2024-12-22T00:00:00+00:00</published><updated>2024-12-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz.html"><![CDATA[<p>Tar multiple directories to a single tar.gz file.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -czvf /home/ulysses/Code/backup.tar.gz ~/Documents/ ~/Downloads ~/Git/gcloud/ ~/Pictures ~/Videos
 </code></pre></div></div>
@@ -183,50 +214,4 @@ sudo systemctl restart apache2
 <p>Undo local changes.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --hard abcd543
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="git" /><category term="undo" /><category term="last" /><category term="commit" /><summary type="html"><![CDATA[How to undo git’s last commit.]]></summary></entry><entry><title type="html">pulseaudio auto start</title><link href="http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start.html" rel="alternate" type="text/html" title="pulseaudio auto start" /><published>2024-06-04T00:00:00+00:00</published><updated>2024-06-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/06/04/pulseaudio-auto-start.html"><![CDATA[<p>I’m trying to figure out why my audio is not automatically starting on Linux.</p>
-
-<p>After some trial and error, here’s the fix.</p>
-
-<p>Edit the /etc/pulse/client.conf file.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/pulse/client.conf
-</code></pre></div></div>
-
-<p>Change “autospawn=no” to “autospawn=yes.”</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>autospawn=yes
-</code></pre></div></div>
-
-<p>Make sure to take out ‘;’ or ‘#” to remove the comment.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pulseaudio --start 
-</code></pre></div></div>
-
-<p>Once you modified the file, restart pulseaudio.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pulseaudio --start
-</code></pre></div></div>
-
-<p>Reboot your machine to check if audio is working on boot.</p>
-
-<p>If that doesn’t work, delete the cookie.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -f ~/.config/pulse/cookie
-</code></pre></div></div>
-
-<p>You can restart the service.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl --user restart pulseaudio
-</code></pre></div></div>
-
-<p>In addition, running this command worked if audio does not load automatically.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pulseaudio -k
-</code></pre></div></div>
-
-<p>In my case, I added the following to my Startup Applications because it wasn’t loading properly.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl --user restart pulseaudio
-</code></pre></div></div>
-
-<p>Enjoy.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="pulseaudio" /><category term="auto" /><category term="start" /><summary type="html"><![CDATA[I’m trying to figure out why my audio is not automatically starting on Linux.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="git" /><category term="undo" /><category term="last" /><category term="commit" /><summary type="html"><![CDATA[How to undo git’s last commit.]]></summary></entry></feed>
