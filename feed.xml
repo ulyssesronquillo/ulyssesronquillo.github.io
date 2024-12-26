@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-25T21:46:24+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">copy files from directory to directory</title><link href="http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory.html" rel="alternate" type="text/html" title="copy files from directory to directory" /><published>2024-12-25T00:00:00+00:00</published><updated>2024-12-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory.html"><![CDATA[<p>How to copy files from source to the target directory. Copy only if file is not present in the target.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-26T16:19:52+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">split file into multiple files</title><link href="http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files.html" rel="alternate" type="text/html" title="split file into multiple files" /><published>2024-12-26T00:00:00+00:00</published><updated>2024-12-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files.html"><![CDATA[<p>How to split a file into multiple files. In this example, it’s split in lines of 100.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+# Input file name
+input_file="$1"
+
+# Lines per file
+lines_per_file=100
+
+# Check if input file exists
+if [ ! -f "$input_file" ]; then
+  echo "Error: Input file '$input_file' not found."
+  exit 1
+fi
+
+# Get the number of lines in the input file
+total_lines=$(wc -l &lt; "$input_file")
+
+# Calculate the number of output files needed
+num_files=$(( (total_lines + lines_per_file - 1) / lines_per_file ))
+
+# Loop through the input file and split it into multiple files
+for ((i=1; i&lt;=num_files; i++)); do
+  # Output file name
+  output_file="${input_file}_part${i}"
+
+  # Extract lines from the input file
+  head -n "$((i * lines_per_file))" "$input_file" | tail -n "$lines_per_file" &gt; "$output_file"
+done
+
+echo "File '$input_file' split into $num_files files."
+
+exit 0
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to split a file into multiple files. In this example, it’s split in lines of 100.]]></summary></entry><entry><title type="html">copy files from directory to directory</title><link href="http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory.html" rel="alternate" type="text/html" title="copy files from directory to directory" /><published>2024-12-25T00:00:00+00:00</published><updated>2024-12-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory.html"><![CDATA[<p>How to copy files from source to the target directory. Copy only if file is not present in the target.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -201,17 +235,4 @@ sudo systemctl restart apache2
 <p>Restart Apache</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo systemctl restart apache2 
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="apache2" /><category term="errors" /><category term="fix" /><summary type="html"><![CDATA[I was getting an Apache error on startup and during a restart after upgrading to Linux Mint 22.]]></summary></entry><entry><title type="html">git undo last commit</title><link href="http://0.0.0.0:4000/linux/2024/06/12/git-undo-last-commit.html" rel="alternate" type="text/html" title="git undo last commit" /><published>2024-06-12T00:00:00+00:00</published><updated>2024-06-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/06/12/git-undo-last-commit</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/06/12/git-undo-last-commit.html"><![CDATA[<p>How to undo git’s last commit.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --soft HEAD~
-</code></pre></div></div>
-
-<p>Undo the last 2 commits.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --soft HEAD~2
-</code></pre></div></div>
-
-<p>Undo local changes.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset --hard abcd543
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="git" /><category term="undo" /><category term="last" /><category term="commit" /><summary type="html"><![CDATA[How to undo git’s last commit.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="apache2" /><category term="errors" /><category term="fix" /><summary type="html"><![CDATA[I was getting an Apache error on startup and during a restart after upgrading to Linux Mint 22.]]></summary></entry></feed>
