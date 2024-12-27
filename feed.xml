@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-26T16:19:52+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">split file into multiple files</title><link href="http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files.html" rel="alternate" type="text/html" title="split file into multiple files" /><published>2024-12-26T00:00:00+00:00</published><updated>2024-12-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files.html"><![CDATA[<p>How to split a file into multiple files. In this example, it’s split in lines of 100.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-27T15:46:45+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">logitech keyboard bluetooth linux</title><link href="http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux.html" rel="alternate" type="text/html" title="logitech keyboard bluetooth linux" /><published>2024-12-27T00:00:00+00:00</published><updated>2024-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux.html"><![CDATA[<p>These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.</p>
+
+<p>Run bluetoothctl</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bluetoothctl
+</code></pre></div></div>
+
+<p>In the bluetoothctl command line run these commands. Replace with your own device number.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remove 00:XX:XX:XX:XX:1F
+scan on
+pair 00:XX:XX:XX:XX:1F
+connect 00:XX:XX:XX:XX:1F
+trust 00:XX:XX:XX:XX:1F
+</code></pre></div></div>
+
+<p>You may be asked to type a six digit code to pair the device.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.]]></summary></entry><entry><title type="html">split file into multiple files</title><link href="http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files.html" rel="alternate" type="text/html" title="split file into multiple files" /><published>2024-12-26T00:00:00+00:00</published><updated>2024-12-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files.html"><![CDATA[<p>How to split a file into multiple files. In this example, it’s split in lines of 100.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -208,31 +224,4 @@ rm -f $new_script
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo $upper_project
 echo $lower_project
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash," /><category term="uppercase," /><category term="lowercase," /><category term="conversion" /><summary type="html"><![CDATA[How to convert uppercase to lowercase and vice versa.]]></summary></entry><entry><title type="html">fixing apache errors</title><link href="http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors.html" rel="alternate" type="text/html" title="fixing apache errors" /><published>2024-08-04T00:00:00+00:00</published><updated>2024-08-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/08/04/fixing-apache-errors.html"><![CDATA[<p>I was getting an Apache error on startup and during a restart after upgrading to Linux Mint 22.</p>
-
-<p>As it turned out, the module that’s enabled is php8.1. It should be 8.3.</p>
-
-<p>Here’s the fix:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo a2dismod php8.1
-sudo systemctl restart apache2
-</code></pre></div></div>
-
-<p>This did the trick, but I was getting another error during restarting services.</p>
-
-<p>The error says “could not reliably determin the server fully qualified domain.”</p>
-
-<p>Here’s the fix for that.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vi /etc/apache2/apache2.conf
-</code></pre></div></div>
-
-<p>Insert</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ServerName localhost
-</code></pre></div></div>
-
-<p>Restart Apache</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo systemctl restart apache2 
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="apache2" /><category term="errors" /><category term="fix" /><summary type="html"><![CDATA[I was getting an Apache error on startup and during a restart after upgrading to Linux Mint 22.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash," /><category term="uppercase," /><category term="lowercase," /><category term="conversion" /><summary type="html"><![CDATA[How to convert uppercase to lowercase and vice versa.]]></summary></entry></feed>
