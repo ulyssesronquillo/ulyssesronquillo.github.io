@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-27T15:46:45+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">logitech keyboard bluetooth linux</title><link href="http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux.html" rel="alternate" type="text/html" title="logitech keyboard bluetooth linux" /><published>2024-12-27T00:00:00+00:00</published><updated>2024-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux.html"><![CDATA[<p>These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-30T15:17:18+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">install azure cli</title><link href="http://0.0.0.0:4000/2024/12/30/install-azure-cli.html" rel="alternate" type="text/html" title="install azure cli" /><published>2024-12-30T00:00:00+00:00</published><updated>2024-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/30/install-azure-cli</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/30/install-azure-cli.html"><![CDATA[<p>Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+</code></pre></div></div>
+
+<p>Validate Azure CLI is installed</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az --version
+</code></pre></div></div>
+
+<p>To upgrade</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az upgrade
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.]]></summary></entry><entry><title type="html">logitech keyboard bluetooth linux</title><link href="http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux.html" rel="alternate" type="text/html" title="logitech keyboard bluetooth linux" /><published>2024-12-27T00:00:00+00:00</published><updated>2024-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux.html"><![CDATA[<p>These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.</p>
 
 <p>Run bluetoothctl</p>
 
@@ -210,18 +223,4 @@ chmod +x "$new_script"
 ./"$new_script"
 
 rm -f $new_script
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s the code for a bash script that generates another bash script and then executes it, as well as deletes it in the end.]]></summary></entry><entry><title type="html">lower to upper vice versa</title><link href="http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa.html" rel="alternate" type="text/html" title="lower to upper vice versa" /><published>2024-09-11T00:00:00+00:00</published><updated>2024-09-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/09/11/lower-to-upper-vice-versa.html"><![CDATA[<p>How to convert uppercase to lowercase and vice versa.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>upper_project=$(echo "$project" | tr '[:lower:]' '[:upper:]')
-</code></pre></div></div>
-
-<p>Vice versa</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lower_project=$(echo "$project" | tr '[:upper:]' '[:lower:]')
-</code></pre></div></div>
-
-<p>Display output</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo $upper_project
-echo $lower_project
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bash," /><category term="uppercase," /><category term="lowercase," /><category term="conversion" /><summary type="html"><![CDATA[How to convert uppercase to lowercase and vice versa.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s the code for a bash script that generates another bash script and then executes it, as well as deletes it in the end.]]></summary></entry></feed>
