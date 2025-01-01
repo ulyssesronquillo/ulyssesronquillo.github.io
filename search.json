@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "delete files recursively",
+      "url"      : "/2025/01/01/delete-files-recursively.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2025-01-01 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "install azure cli",
       "url"      : "/2024/12/30/install-azure-cli.html",
       "category" : "",

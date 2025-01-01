@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-12-30T15:45:46+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">install azure cli</title><link href="http://0.0.0.0:4000/2024/12/30/install-azure-cli.html" rel="alternate" type="text/html" title="install azure cli" /><published>2024-12-30T00:00:00+00:00</published><updated>2024-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/30/install-azure-cli</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/30/install-azure-cli.html"><![CDATA[<p>Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-01T19:20:57+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">delete files recursively</title><link href="http://0.0.0.0:4000/2025/01/01/delete-files-recursively.html" rel="alternate" type="text/html" title="delete files recursively" /><published>2025-01-01T00:00:00+00:00</published><updated>2025-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/01/01/delete-files-recursively</id><content type="html" xml:base="http://0.0.0.0:4000/2025/01/01/delete-files-recursively.html"><![CDATA[<p>Here’s how to delete certain files recursively from a specific directory.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/ulysses/photos/
+find . -name "*.pp3" -type f -delete
+</code></pre></div></div>
+
+<p>The command is very fast. The files are gone within seconds.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s how to delete certain files recursively from a specific directory.]]></summary></entry><entry><title type="html">install azure cli</title><link href="http://0.0.0.0:4000/2024/12/30/install-azure-cli.html" rel="alternate" type="text/html" title="install azure cli" /><published>2024-12-30T00:00:00+00:00</published><updated>2024-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/30/install-azure-cli</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/30/install-azure-cli.html"><![CDATA[<p>Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 </code></pre></div></div>
@@ -200,27 +206,4 @@ if __name__ == "__main__":
     destination_directory = "upload/test/"
 
     upload_files_to_gcs(bucket_name, directory, destination_directory)
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I have a Python script that copies files from a local directory to a GCS bucket and down a couple of directories.]]></summary></entry><entry><title type="html">generating a bash script</title><link href="http://0.0.0.0:4000/2024/11/08/generating-a-bash-script.html" rel="alternate" type="text/html" title="generating a bash script" /><published>2024-11-08T00:00:00+00:00</published><updated>2024-11-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/11/08/generating-a-bash-script</id><content type="html" xml:base="http://0.0.0.0:4000/2024/11/08/generating-a-bash-script.html"><![CDATA[<p>Here’s the code for a bash script that generates another bash script and then executes it, as well as deletes it in the end.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
-
-# Define the script content
-script_content='#!/bin/bash
-echo "Hello, this is the generated script!"
-echo "The current date and time is: $(date)"
-'
-
-# Define the name of the new script
-new_script="generated_script.sh"
-
-# Write the content to the new script file
-echo "$script_content" &gt; "$new_script"
-
-# Make the new script executable
-chmod +x "$new_script"
-
-# Execute the new script
-./"$new_script"
-
-rm -f $new_script
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s the code for a bash script that generates another bash script and then executes it, as well as deletes it in the end.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I have a Python script that copies files from a local directory to a GCS bucket and down a couple of directories.]]></summary></entry></feed>
