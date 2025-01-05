@@ -200,7 +200,7 @@ ul#results-container li {
 .highlight code {
   font-family: "Fira Code", monospace;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 0.5em;
 }
 
@@ -213,7 +213,7 @@ strong {
  * Wrapper
  */
 .wrapper {
-  font-size: 18px;
+  font-size: 16px;
   max-width: -webkit-calc(1280px - (30px * 2));
   max-width: 1220px;
   margin-right: auto;
