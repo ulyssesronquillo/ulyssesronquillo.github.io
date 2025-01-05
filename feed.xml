@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-05T07:42:30+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">delete files recursively</title><link href="http://0.0.0.0:4000/2025/01/01/delete-files-recursively.html" rel="alternate" type="text/html" title="delete files recursively" /><published>2025-01-01T00:00:00+00:00</published><updated>2025-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/01/01/delete-files-recursively</id><content type="html" xml:base="http://0.0.0.0:4000/2025/01/01/delete-files-recursively.html"><![CDATA[<p>Here’s one way to delete files recursively in the current directory in Linux.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-05T16:54:37+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">generate qrcode</title><link href="http://0.0.0.0:4000/2025/01/05/generate-qrcode.html" rel="alternate" type="text/html" title="generate qrcode" /><published>2025-01-05T00:00:00+00:00</published><updated>2025-01-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/01/05/generate-qrcode</id><content type="html" xml:base="http://0.0.0.0:4000/2025/01/05/generate-qrcode.html"><![CDATA[<p>This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pyqrcode 
+from pyqrcode import QRCode 
+  
+# String which represent the QR code 
+s = "https://uly.me"
+  
+# Generate QR code 
+url = pyqrcode.create(s) 
+  
+# Create and save the png file naming "myqr.png" 
+url.svg("site.svg", scale = 8)
+</code></pre></div></div>
+
+<p>I use Python’s virtual environment for my programs so each one is isolated. Here’s the command to start one.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m venv qrcode
+</code></pre></div></div>
+
+<p>Activate</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd qrcode
+source bin/activate
+</code></pre></div></div>
+
+<p>You’ll need the pyqrcode module before running the program.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pyqrcode
+</code></pre></div></div>
+
+<p>Finally, run it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 qrcode.py
+</code></pre></div></div>
+
+<p>Output is site.svg.</p>
+
+<p><img src="/wp-content/uploads/2025/01/site.svg" alt="qrcode" /></p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.]]></summary></entry><entry><title type="html">delete files recursively</title><link href="http://0.0.0.0:4000/2025/01/01/delete-files-recursively.html" rel="alternate" type="text/html" title="delete files recursively" /><published>2025-01-01T00:00:00+00:00</published><updated>2025-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/01/01/delete-files-recursively</id><content type="html" xml:base="http://0.0.0.0:4000/2025/01/01/delete-files-recursively.html"><![CDATA[<p>Here’s one way to delete files recursively in the current directory in Linux.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/ulysses/photos/
 find . -name "*.pp3" -type f -delete
@@ -155,55 +193,4 @@ pair ID
 
 <p>Simply enter the numbers.</p>
 
-<p>That’s it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I fixed my Bluetooth issues with my Logitech K811 keyboard on Linux Mint]]></summary></entry><entry><title type="html">python copy files gcs bucket</title><link href="http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket.html" rel="alternate" type="text/html" title="python copy files gcs bucket" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/python-copy-files-gcs-bucket.html"><![CDATA[<p>I have a Python script that copies files from a local directory to a GCS bucket and down a couple of directories.</p>
-
-<p>The script was tested in a Python virtual environment. Google Cloud Storage module is required which can be installed via pip.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install google-cloud-storage
-</code></pre></div></div>
-
-<p>If you have trouble running pip, you may have to run this on Linux Mint (Ubuntu) to update the virtual environment.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install python3.12-venv
-</code></pre></div></div>
-
-<p>For authentication, you will need to download the service account credentials key that has write access to the GCS bucket.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export GOOGLE_APPLICATION_CREDENTIALS="key.json"
-</code></pre></div></div>
-
-<p>Finally, here’s the Python script …</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!bin/python
-
-from google.cloud import storage
-import os
-
-def upload_files_to_gcs(bucket_name, directory, destination_directory):
-    """Uploads files from a local directory to a GCS bucket.
-
-    Args:
-        bucket_name: The name of the GCS bucket.
-        directory: The local directory containing the files to upload.
-        destination_directory: The directory in the GCS bucket where the files will be uploaded.
-    """
-
-    storage_client = storage.Client()
-    bucket = storage_client.bucket(bucket_name)
-
-    for file_name in os.listdir(directory):
-        file_path = os.path.join(directory, file_name)
-
-        if os.path.isfile(file_path):
-            blob = bucket.blob(os.path.join(destination_directory, file_name))
-            blob.upload_from_filename(file_path)
-
-            print(f"Uploaded {file_name} to {bucket_name}/{destination_directory}")
-
-if __name__ == "__main__":
-    bucket_name = "ulysses-test-bucket"
-    directory = "/home/ulysses/Code/python/gcs/upload"
-    destination_directory = "upload/test/"
-
-    upload_files_to_gcs(bucket_name, directory, destination_directory)
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I have a Python script that copies files from a local directory to a GCS bucket and down a couple of directories.]]></summary></entry></feed>
+<p>That’s it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I fixed my Bluetooth issues with my Logitech K811 keyboard on Linux Mint]]></summary></entry></feed>
