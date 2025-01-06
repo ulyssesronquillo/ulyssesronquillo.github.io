@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-05T16:54:37+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">generate qrcode</title><link href="http://0.0.0.0:4000/2025/01/05/generate-qrcode.html" rel="alternate" type="text/html" title="generate qrcode" /><published>2025-01-05T00:00:00+00:00</published><updated>2025-01-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/01/05/generate-qrcode</id><content type="html" xml:base="http://0.0.0.0:4000/2025/01/05/generate-qrcode.html"><![CDATA[<p>This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-06T12:44:11+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">convert mp3 to wav</title><link href="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html" rel="alternate" type="text/html" title="convert mp3 to wav" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html"><![CDATA[<p>How to convert a MP3 file to WAV using Python.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from pydub import AudioSegment
+
+def convert_mp3_to_wav(mp3_file, wav_file):
+    """Converts an MP3 file to WAV format."""
+
+    sound = AudioSegment.from_mp3(mp3_file)
+    sound.export(wav_file, format="wav")
+
+if __name__ == "__main__":
+    mp3_file = "gettysburg10.mp3"  # Replace with your MP3 file
+    wav_file = "output.wav"  # Replace with desired output WAV filename
+
+    convert_mp3_to_wav(mp3_file, wav_file)
+    print(f"Conversion complete: {mp3_file} -&gt; {wav_file}")
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="python" /><category term="convert" /><category term="mp3" /><category term="wav" /><summary type="html"><![CDATA[How to convert a MP3 file to WAV using Python.]]></summary></entry><entry><title type="html">generate qrcode</title><link href="http://0.0.0.0:4000/python/2025/01/05/generate-qrcode.html" rel="alternate" type="text/html" title="generate qrcode" /><published>2025-01-05T00:00:00+00:00</published><updated>2025-01-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/05/generate-qrcode</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/05/generate-qrcode.html"><![CDATA[<p>This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pyqrcode 
 from pyqrcode import QRCode 
@@ -36,13 +52,13 @@ source bin/activate
 
 <p>Output is site.svg.</p>
 
-<p><img src="/wp-content/uploads/2025/01/site.svg" alt="qrcode" /></p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.]]></summary></entry><entry><title type="html">delete files recursively</title><link href="http://0.0.0.0:4000/2025/01/01/delete-files-recursively.html" rel="alternate" type="text/html" title="delete files recursively" /><published>2025-01-01T00:00:00+00:00</published><updated>2025-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/01/01/delete-files-recursively</id><content type="html" xml:base="http://0.0.0.0:4000/2025/01/01/delete-files-recursively.html"><![CDATA[<p>Here’s one way to delete files recursively in the current directory in Linux.</p>
+<p><img src="/wp-content/uploads/2025/01/site.svg" alt="qrcode" /></p>]]></content><author><name>ulysses</name></author><category term="python" /><category term="generate" /><category term="qrcode" /><summary type="html"><![CDATA[This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.]]></summary></entry><entry><title type="html">delete files recursively</title><link href="http://0.0.0.0:4000/linux/2025/01/01/delete-files-recursively.html" rel="alternate" type="text/html" title="delete files recursively" /><published>2025-01-01T00:00:00+00:00</published><updated>2025-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/01/delete-files-recursively</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/01/delete-files-recursively.html"><![CDATA[<p>Here’s one way to delete files recursively in the current directory in Linux.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/ulysses/photos/
 find . -name "*.pp3" -type f -delete
 </code></pre></div></div>
 
-<p>The run command with delete is fast. The files are gone in seconds.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s one way to delete files recursively in the current directory in Linux.]]></summary></entry><entry><title type="html">install azure cli</title><link href="http://0.0.0.0:4000/2024/12/30/install-azure-cli.html" rel="alternate" type="text/html" title="install azure cli" /><published>2024-12-30T00:00:00+00:00</published><updated>2024-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/30/install-azure-cli</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/30/install-azure-cli.html"><![CDATA[<p>Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.</p>
+<p>The run command with delete is fast. The files are gone in seconds.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="delete" /><category term="files" /><category term="recursively" /><category term="find" /><summary type="html"><![CDATA[Here’s one way to delete files recursively in the current directory in Linux.]]></summary></entry><entry><title type="html">install azure cli</title><link href="http://0.0.0.0:4000/cloud/2024/12/30/install-azure-cli.html" rel="alternate" type="text/html" title="install azure cli" /><published>2024-12-30T00:00:00+00:00</published><updated>2024-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/12/30/install-azure-cli</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/12/30/install-azure-cli.html"><![CDATA[<p>Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 </code></pre></div></div>
@@ -55,7 +71,7 @@ find . -name "*.pp3" -type f -delete
 <p>To upgrade</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az upgrade
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.]]></summary></entry><entry><title type="html">logitech keyboard bluetooth linux</title><link href="http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux.html" rel="alternate" type="text/html" title="logitech keyboard bluetooth linux" /><published>2024-12-27T00:00:00+00:00</published><updated>2024-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/27/logitech-keyboard-bluetooth-linux.html"><![CDATA[<p>These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="azure" /><category term="cli" /><category term="install" /><summary type="html"><![CDATA[Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.]]></summary></entry><entry><title type="html">logitech keyboard bluetooth linux</title><link href="http://0.0.0.0:4000/linux/2024/12/27/logitech-keyboard-bluetooth-linux.html" rel="alternate" type="text/html" title="logitech keyboard bluetooth linux" /><published>2024-12-27T00:00:00+00:00</published><updated>2024-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/12/27/logitech-keyboard-bluetooth-linux</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/12/27/logitech-keyboard-bluetooth-linux.html"><![CDATA[<p>These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.</p>
 
 <p>Run bluetoothctl</p>
 
@@ -71,7 +87,7 @@ connect 00:XX:XX:XX:XX:1F
 trust 00:XX:XX:XX:XX:1F
 </code></pre></div></div>
 
-<p>You may be asked to type a six digit code to pair the device.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.]]></summary></entry><entry><title type="html">split file into multiple files</title><link href="http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files.html" rel="alternate" type="text/html" title="split file into multiple files" /><published>2024-12-26T00:00:00+00:00</published><updated>2024-12-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/26/split-file-into-multiple-files.html"><![CDATA[<p>How to split a file into multiple files. In this example, it’s split in lines of 100.</p>
+<p>You may be asked to type a six digit code to pair the device.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bluetooth" /><category term="logitech" /><category term="keyboard" /><category term="k811" /><summary type="html"><![CDATA[These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.]]></summary></entry><entry><title type="html">split file into multiple files</title><link href="http://0.0.0.0:4000/linux/2024/12/26/split-file-into-multiple-files.html" rel="alternate" type="text/html" title="split file into multiple files" /><published>2024-12-26T00:00:00+00:00</published><updated>2024-12-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/12/26/split-file-into-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/12/26/split-file-into-multiple-files.html"><![CDATA[<p>How to split a file into multiple files. In this example, it’s split in lines of 100.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -105,7 +121,7 @@ done
 echo "File '$input_file' split into $num_files files."
 
 exit 0
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to split a file into multiple files. In this example, it’s split in lines of 100.]]></summary></entry><entry><title type="html">copy files from directory to directory</title><link href="http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory.html" rel="alternate" type="text/html" title="copy files from directory to directory" /><published>2024-12-25T00:00:00+00:00</published><updated>2024-12-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/25/copy-files-from-directory-to-directory.html"><![CDATA[<p>How to copy files from source to the target directory. Copy only if file is not present in the target.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="split" /><category term="multiple" /><category term="files" /><summary type="html"><![CDATA[How to split a file into multiple files. In this example, it’s split in lines of 100.]]></summary></entry><entry><title type="html">copy files from directory to directory</title><link href="http://0.0.0.0:4000/linux/2024/12/25/copy-files-from-directory-to-directory.html" rel="alternate" type="text/html" title="copy files from directory to directory" /><published>2024-12-25T00:00:00+00:00</published><updated>2024-12-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/12/25/copy-files-from-directory-to-directory</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/12/25/copy-files-from-directory-to-directory.html"><![CDATA[<p>How to copy files from source to the target directory. Copy only if file is not present in the target.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -136,7 +152,7 @@ find "$source" -type f -iname "*.JPG" | while read -r file; do
         echo "Copying $file to $target/100_FUJI." | tee -a $output
     fi
 done
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to copy files from source to the target directory. Copy only if file is not present in the target.]]></summary></entry><entry><title type="html">tar multiple directories to targz</title><link href="http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz.html" rel="alternate" type="text/html" title="tar multiple directories to targz" /><published>2024-12-22T00:00:00+00:00</published><updated>2024-12-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/22/tar-multiple-directories-to-targz.html"><![CDATA[<p>Tar multiple directories to a single tar.gz file.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="copy" /><category term="files" /><category term="not" /><category term="exist" /><summary type="html"><![CDATA[How to copy files from source to the target directory. Copy only if file is not present in the target.]]></summary></entry><entry><title type="html">tar multiple directories to targz</title><link href="http://0.0.0.0:4000/linux/2024/12/22/tar-multiple-directories-to-targz.html" rel="alternate" type="text/html" title="tar multiple directories to targz" /><published>2024-12-22T00:00:00+00:00</published><updated>2024-12-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/12/22/tar-multiple-directories-to-targz</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/12/22/tar-multiple-directories-to-targz.html"><![CDATA[<p>Tar multiple directories to a single tar.gz file.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -czvf /home/ulysses/Code/backup.tar.gz ~/Documents/ ~/Downloads ~/Git/gcloud/ ~/Pictures ~/Videos
 </code></pre></div></div>
@@ -144,7 +160,7 @@ done
 <p>To list files inside the tar.gz file, run this.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -tzvf /home/ulysses/Code/backup.tar.gz
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Tar multiple directories to a single tar.gz file.]]></summary></entry><entry><title type="html">gcp create image with license</title><link href="http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license.html" rel="alternate" type="text/html" title="gcp create image with license" /><published>2024-12-18T00:00:00+00:00</published><updated>2024-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/18/gcp-create-image-with-license.html"><![CDATA[<p>Here’s the gcloud command to create a new image with an extended license with an option to add family type.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="tar" /><category term="create" /><category term="list" /><summary type="html"><![CDATA[Tar multiple directories to a single tar.gz file.]]></summary></entry><entry><title type="html">gcp create image with license</title><link href="http://0.0.0.0:4000/cloud/2024/12/18/gcp-create-image-with-license.html" rel="alternate" type="text/html" title="gcp create image with license" /><published>2024-12-18T00:00:00+00:00</published><updated>2024-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/12/18/gcp-create-image-with-license</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/12/18/gcp-create-image-with-license.html"><![CDATA[<p>Here’s the gcloud command to create a new image with an extended license with an option to add family type.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta compute images create new-image-with-license \
 --source-image=this-is-the-source-image \
@@ -153,7 +169,7 @@ done
 --user-licenses=https://www.googleapis.com/compute/v1/projects/rhel-cloud/global/licenses/rhel-7-els
 </code></pre></div></div>
 
-<p>Any VM provisioned using this image will now have the extended license.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s the gcloud command to create a new image with an extended license with an option to add family type.]]></summary></entry><entry><title type="html">gsutil copy local recursively to bucket</title><link href="http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket.html" rel="alternate" type="text/html" title="gsutil copy local recursively to bucket" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/gsutil-copy-local-recursively-to-bucket.html"><![CDATA[<p>Here’s a gsutil command to copy a directory recursively to a GCS bucket via parallel uploads.</p>
+<p>Any VM provisioned using this image will now have the extended license.</p>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="create" /><category term="image" /><category term="license" /><summary type="html"><![CDATA[Here’s the gcloud command to create a new image with an extended license with an option to add family type.]]></summary></entry><entry><title type="html">gsutil copy local recursively to bucket</title><link href="http://0.0.0.0:4000/cloud/2024/12/17/gsutil-copy-local-recursively-to-bucket.html" rel="alternate" type="text/html" title="gsutil copy local recursively to bucket" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/12/17/gsutil-copy-local-recursively-to-bucket</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/12/17/gsutil-copy-local-recursively-to-bucket.html"><![CDATA[<p>Here’s a gsutil command to copy a directory recursively to a GCS bucket via parallel uploads.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Define source and destination
 SOURCE_DIR="/path/to/local/directory"
@@ -161,36 +177,4 @@ DEST_BUCKET="gs://your-bucket-name"
 
 # Use gsutil with the -m flag for parallel uploads
 gsutil -m cp -r "$SOURCE_DIR" "$DEST_BUCKET"
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a gsutil command to copy a directory recursively to a GCS bucket via parallel uploads.]]></summary></entry><entry><title type="html">logitech keyboard bluetooth issues</title><link href="http://0.0.0.0:4000/2024/12/17/logitech-keyboard-bluetooth-issues.html" rel="alternate" type="text/html" title="logitech keyboard bluetooth issues" /><published>2024-12-17T00:00:00+00:00</published><updated>2024-12-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2024/12/17/logitech-keyboard-bluetooth-issues</id><content type="html" xml:base="http://0.0.0.0:4000/2024/12/17/logitech-keyboard-bluetooth-issues.html"><![CDATA[<p>I fixed my Bluetooth issues with my Logitech K811 keyboard on Linux Mint</p>
-
-<p>Take note of your device ID in a similar format as a MAC Address.</p>
-
-<p>Here are the steps I took to fix the pairing issue.</p>
-
-<p>Run bluetoothctl, you will get a special prompt.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bluetoothctl 
-</code></pre></div></div>
-
-<p>Perform a scan. Copy the device ID.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scan on
-</code></pre></div></div>
-
-<p>Remove the device.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remove ID
-</code></pre></div></div>
-
-<p>Finally reconnect device.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>connect ID
-trust ID
-pair ID
-</code></pre></div></div>
-
-<p>You may be prompted to enter the pairing code.</p>
-
-<p>Simply enter the numbers.</p>
-
-<p>That’s it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I fixed my Bluetooth issues with my Logitech K811 keyboard on Linux Mint]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="gcs" /><category term="bucket" /><category term="copy" /><category term="recursively" /><summary type="html"><![CDATA[Here’s a gsutil command to copy a directory recursively to a GCS bucket via parallel uploads.]]></summary></entry></feed>

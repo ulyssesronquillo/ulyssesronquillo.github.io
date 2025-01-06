@@ -2,10 +2,20 @@
   
     {
 
-      "title"    : "generate qrcode",
-      "url"      : "/2025/01/05/generate-qrcode.html",
+      "title"    : "convert mp3 to wav",
+      "url"      : "/python/2025/01/06/convert-mp3-to-wav.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "convert, mp3, wav",
+      "date"     : "2025-01-06 00:00:00 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "generate qrcode",
+      "url"      : "/python/2025/01/05/generate-qrcode.html",
+      "category" : "",
+      "tags"     : "generate, qrcode",
       "date"     : "2025-01-05 00:00:00 +0000"
 
     } ,
@@ -13,9 +23,9 @@
     {
 
       "title"    : "delete files recursively",
-      "url"      : "/2025/01/01/delete-files-recursively.html",
+      "url"      : "/linux/2025/01/01/delete-files-recursively.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "delete, files, recursively, find",
       "date"     : "2025-01-01 00:00:00 +0000"
 
     } ,
@@ -23,9 +33,9 @@
     {
 
       "title"    : "install azure cli",
-      "url"      : "/2024/12/30/install-azure-cli.html",
+      "url"      : "/cloud/2024/12/30/install-azure-cli.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "azure, cli, install",
       "date"     : "2024-12-30 00:00:00 +0000"
 
     } ,
@@ -33,9 +43,9 @@
     {
 
       "title"    : "logitech keyboard bluetooth linux",
-      "url"      : "/2024/12/27/logitech-keyboard-bluetooth-linux.html",
+      "url"      : "/linux/2024/12/27/logitech-keyboard-bluetooth-linux.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "bluetooth, logitech, keyboard, k811",
       "date"     : "2024-12-27 00:00:00 +0000"
 
     } ,
@@ -43,9 +53,9 @@
     {
 
       "title"    : "split file into multiple files",
-      "url"      : "/2024/12/26/split-file-into-multiple-files.html",
+      "url"      : "/linux/2024/12/26/split-file-into-multiple-files.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "split, multiple, files",
       "date"     : "2024-12-26 00:00:00 +0000"
 
     } ,
@@ -53,9 +63,9 @@
     {
 
       "title"    : "copy files from directory to directory",
-      "url"      : "/2024/12/25/copy-files-from-directory-to-directory.html",
+      "url"      : "/linux/2024/12/25/copy-files-from-directory-to-directory.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "copy, files, not, exist",
       "date"     : "2024-12-25 00:00:00 +0000"
 
     } ,
@@ -63,9 +73,9 @@
     {
 
       "title"    : "tar multiple directories to targz",
-      "url"      : "/2024/12/22/tar-multiple-directories-to-targz.html",
+      "url"      : "/linux/2024/12/22/tar-multiple-directories-to-targz.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "tar, create, list",
       "date"     : "2024-12-22 00:00:00 +0000"
 
     } ,
@@ -73,9 +83,9 @@
     {
 
       "title"    : "gcp create image with license",
-      "url"      : "/2024/12/18/gcp-create-image-with-license.html",
+      "url"      : "/cloud/2024/12/18/gcp-create-image-with-license.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "create, image, license",
       "date"     : "2024-12-18 00:00:00 +0000"
 
     } ,
@@ -83,9 +93,9 @@
     {
 
       "title"    : "python copy files gcs bucket",
-      "url"      : "/2024/12/17/python-copy-files-gcs-bucket.html",
+      "url"      : "/python/2024/12/17/python-copy-files-gcs-bucket.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "gcs, bucket, copy, recursively, directories",
       "date"     : "2024-12-17 00:00:00 +0000"
 
     } ,
@@ -93,9 +103,9 @@
     {
 
       "title"    : "logitech keyboard bluetooth issues",
-      "url"      : "/2024/12/17/logitech-keyboard-bluetooth-issues.html",
+      "url"      : "/linux/2024/12/17/logitech-keyboard-bluetooth-issues.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "bluetooth, pair, connect, issues",
       "date"     : "2024-12-17 00:00:00 +0000"
 
     } ,
@@ -103,9 +113,9 @@
     {
 
       "title"    : "gsutil copy local recursively to bucket",
-      "url"      : "/2024/12/17/gsutil-copy-local-recursively-to-bucket.html",
+      "url"      : "/cloud/2024/12/17/gsutil-copy-local-recursively-to-bucket.html",
       "category" : "",
-      "tags"     : "",
+      "tags"     : "gcs, bucket, copy, recursively",
       "date"     : "2024-12-17 00:00:00 +0000"
 
     } ,
