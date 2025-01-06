@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-06T12:56:56+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">convert mp3 to wav</title><link href="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html" rel="alternate" type="text/html" title="convert mp3 to wav" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html"><![CDATA[<p>How to convert a MP3 file to WAV using Python.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-06T12:58:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">convert mp3 to wav</title><link href="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html" rel="alternate" type="text/html" title="convert mp3 to wav" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html"><![CDATA[<p>How to convert a MP3 file to WAV using Python.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from pydub import AudioSegment
 
@@ -50,7 +50,72 @@ if __name__ == "__main__":
     print(f"Converted {wav_file} to {mp3_file}")
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="python" /><category term="convert" /><category term="wav" /><category term="mp3" /><summary type="html"><![CDATA[Here’s how to convert a WAV file to MP3 in Python.]]></summary></entry><entry><title type="html">hls player</title><link href="http://0.0.0.0:4000/linux/2025/01/06/hls-player.html" rel="alternate" type="text/html" title="hls player" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/06/hls-player</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/06/hls-player.html"><![CDATA[<p>Here’s an HLS video player using hls.js.</p>
 
-<p>```</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="hls" /><category term="player" /><category term="video" /><category term="streaming" /><summary type="html"><![CDATA[Here’s an HLS video player using hls.js.]]></summary></entry><entry><title type="html">generate qrcode</title><link href="http://0.0.0.0:4000/python/2025/01/05/generate-qrcode.html" rel="alternate" type="text/html" title="generate qrcode" /><published>2025-01-05T00:00:00+00:00</published><updated>2025-01-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/05/generate-qrcode</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/05/generate-qrcode.html"><![CDATA[<p>This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.5.14/hls.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;video id="video" controls muted autoplay style="width: 80%"&gt;&lt;/video&gt;&lt;/p&gt;
+
+    &lt;script&gt;
+        var video = document.getElementById('video');
+        var videoSrc = '/bunny/output.m3u8';
+    
+        // Initialize HLS.js if supported
+        if (Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                video.muted = true;
+                video.play();
+            });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = videoSrc;
+        }
+    
+        // Assuming you have a reference to your video element
+        const videoElement = document.getElementById('video');
+    
+        // Style the video element to center it both horizontally and vertically
+        videoElement.style.display = 'block'; // Ensure it behaves like a block element
+        videoElement.style.margin = '0 auto'; // Center it horizontally
+        videoElement.style.position = 'absolute'; // Position it absolutely to center vertically
+        videoElement.style.top = '50%'; // Vertically center
+        videoElement.style.left = '50%'; // Horizontally center
+        videoElement.style.transform = 'translate(-50%, -50%)'; // Adjust for exact centering
+        videoElement.style.maxWidth = '90%'; // Optional: limit the video size to 90% of the screen width
+        videoElement.style.maxHeight = '80vh'; // Optional: limit the video height to 80% of the viewport height
+    
+        // Create a button to unmute the player
+        const unmuteButton = document.createElement('button');
+        unmuteButton.textContent = 'Unmute';
+    
+        // Style the button to make it bigger
+        unmuteButton.style.fontSize = '30px'; // Larger font size
+        unmuteButton.style.padding = '20px 40px'; // Larger button size
+        unmuteButton.style.backgroundColor = '#007BFF'; // Button color
+        unmuteButton.style.color = 'white'; // Text color
+        unmuteButton.style.border = 'none'; // Remove border
+        unmuteButton.style.borderRadius = '10px'; // Rounded corners
+        unmuteButton.style.cursor = 'pointer'; // Pointer cursor on hover
+        unmuteButton.style.position = 'absolute'; // Absolute positioning
+        unmuteButton.style.top = '50%'; // Vertically center
+        unmuteButton.style.left = '50%'; // Horizontally center
+        unmuteButton.style.transform = 'translate(-50%, -50%)'; // Adjust for exact centering
+    
+        // Add an event listener to the button
+        unmuteButton.addEventListener('click', () =&gt; {
+            videoElement.muted = false; // Unmute the video
+            unmuteButton.remove(); // Remove the button once clicked
+        });
+ 
+        // Add the button to the DOM
+        document.body.appendChild(unmuteButton);
+ 
+   &lt;/script&gt;
+  &lt;/body&gt;
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="hls" /><category term="player" /><category term="video" /><category term="streaming" /><summary type="html"><![CDATA[Here’s an HLS video player using hls.js.]]></summary></entry><entry><title type="html">generate qrcode</title><link href="http://0.0.0.0:4000/python/2025/01/05/generate-qrcode.html" rel="alternate" type="text/html" title="generate qrcode" /><published>2025-01-05T00:00:00+00:00</published><updated>2025-01-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/05/generate-qrcode</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/05/generate-qrcode.html"><![CDATA[<p>This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pyqrcode 
 from pyqrcode import QRCode 
