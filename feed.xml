@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-06T17:51:19+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">convert mp3 to wav</title><link href="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html" rel="alternate" type="text/html" title="convert mp3 to wav" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html"><![CDATA[<p>How to convert a MP3 file to WAV using Python.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-09T02:57:05+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">live stream player</title><link href="http://0.0.0.0:4000/linux/2025/01/08/live-stream-player.html" rel="alternate" type="text/html" title="live stream player" /><published>2025-01-08T00:00:00+00:00</published><updated>2025-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/08/live-stream-player</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/08/live-stream-player.html"><![CDATA[<p>Here’s a live stream player based on video.js.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+&lt;head&gt;
+   &lt;link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;video
+      id="my-video"
+      class="video-js vjs-big-play-centered vjs-theme-sea"
+      controls
+      preload="auto"
+      fluid="true"
+      poster="https://www.tutorialspoint.com/videos/sample.png"
+      data-setup='{}'
+   &gt;
+   &lt;/video&gt;
+   &lt;script src="https://vjs.zencdn.net/7.17.0/video.min.js"&gt;
+   &lt;/script&gt;
+   &lt;script src="https://unpkg.com/videojs-contribhls/dist/videojs-contrib-hls.js"&gt;&lt;/script&gt;
+   &lt;script&gt;
+        var player = videojs('my-video');
+        player.src({
+           src: 'http://localhost:8090/hls/stream.m3u8',
+           type: 'application/x-mpegURL'
+        });
+
+        // Assuming you have a reference to your video element
+        const videoElement = document.getElementById('my-video');
+    
+        // Style the video element to center it both horizontally and vertically
+        videoElement.style.display = 'block'; // Ensure it behaves like a block element
+        videoElement.style.margin = '0 auto'; // Center it horizontally
+        videoElement.style.position = 'absolute'; // Position it absolutely to center vertically
+        videoElement.style.top = '50%'; // Vertically center
+        videoElement.style.left = '50%'; // Horizontally center
+        videoElement.style.transform = 'translate(-50%, -50%)'; // Adjust for exact centering
+        videoElement.style.maxWidth = '90%'; // Optional: limit the video size to 90% of the screen width
+        videoElement.style.maxHeight = '80vh'; // Optional: limit the video height to 80% of the viewport height
+    
+   &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="live" /><category term="stream" /><category term="player" /><summary type="html"><![CDATA[Here’s a live stream player based on video.js.]]></summary></entry><entry><title type="html">nginx rtmp streaming docker</title><link href="http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker.html" rel="alternate" type="text/html" title="nginx rtmp streaming docker" /><published>2025-01-08T00:00:00+00:00</published><updated>2025-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker.html"><![CDATA[<p>Create a nginx.conf file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+rtmp {
+    server {
+        listen 1935;
+        chunk_size 4096;
+
+        application live {
+            live on;
+            record off;
+            hls on;
+            hls_path /hls;
+        }
+    }
+}
+
+http {
+    server {
+        listen 80;
+        root /hls;
+
+        location / {
+            add_header 'Access-Control-Allow-Origin' '*';
+            index index.html index.htm;
+        }
+
+        location /hls {
+            types {
+                application/vnd.apple.mpegurl m3u8;
+                video/mp2t ts;
+            }
+            add_header 'Access-Control-Allow-Origin' '*';
+            alias /hls;
+        }
+    }
+}
+</code></pre></div></div>
+
+<p>Create a docker-compose.yml file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3.7"
+
+services:
+  nginx:
+    image: tiangolo/nginx-rtmp
+    restart: always
+    ports:
+      - "1935:1935" # RTMP port
+      - "8090:80"   # HTTP port for HLS playback
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+</code></pre></div></div>
+
+<p>Start the RTMP server.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div></div>
+
+<p>Stop the RTMP server.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose down
+</code></pre></div></div>
+
+<p>Livestream a MP4 video to your RTMP server using ffmpeg.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -re -i bunny.mp4 -c:v libx264 -c:a aac -f flv rtmp://localhost:1935/live/stream
+</code></pre></div></div>
+
+<p>Point your player to the RTMP service.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8090/hls/stream.m3u8
+</code></pre></div></div>
+<p>See my previos post.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="nginx" /><category term="rtmp" /><category term="streaming" /><category term="docker" /><summary type="html"><![CDATA[Create a nginx.conf file.]]></summary></entry><entry><title type="html">convert mp3 to wav</title><link href="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html" rel="alternate" type="text/html" title="convert mp3 to wav" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html"><![CDATA[<p>How to convert a MP3 file to WAV using Python.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from pydub import AudioSegment
 
@@ -190,54 +311,4 @@ find . -name "*.pp3" -type f -delete
 <p>To upgrade</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az upgrade
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="azure" /><category term="cli" /><category term="install" /><summary type="html"><![CDATA[Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.]]></summary></entry><entry><title type="html">logitech keyboard bluetooth linux</title><link href="http://0.0.0.0:4000/linux/2024/12/27/logitech-keyboard-bluetooth-linux.html" rel="alternate" type="text/html" title="logitech keyboard bluetooth linux" /><published>2024-12-27T00:00:00+00:00</published><updated>2024-12-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/12/27/logitech-keyboard-bluetooth-linux</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/12/27/logitech-keyboard-bluetooth-linux.html"><![CDATA[<p>These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.</p>
-
-<p>Run bluetoothctl</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bluetoothctl
-</code></pre></div></div>
-
-<p>In the bluetoothctl command line run these commands. Replace with your own device number.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>remove 00:XX:XX:XX:XX:1F
-scan on
-pair 00:XX:XX:XX:XX:1F
-connect 00:XX:XX:XX:XX:1F
-trust 00:XX:XX:XX:XX:1F
-</code></pre></div></div>
-
-<p>You may be asked to type a six digit code to pair the device.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="bluetooth" /><category term="logitech" /><category term="keyboard" /><category term="k811" /><summary type="html"><![CDATA[These are the steps taken to make my Logitech K811 keyboard to connect via Bluetooth in Linux Mint.]]></summary></entry><entry><title type="html">split file into multiple files</title><link href="http://0.0.0.0:4000/linux/2024/12/26/split-file-into-multiple-files.html" rel="alternate" type="text/html" title="split file into multiple files" /><published>2024-12-26T00:00:00+00:00</published><updated>2024-12-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2024/12/26/split-file-into-multiple-files</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2024/12/26/split-file-into-multiple-files.html"><![CDATA[<p>How to split a file into multiple files. In this example, it’s split in lines of 100.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
-
-# Input file name
-input_file="$1"
-
-# Lines per file
-lines_per_file=100
-
-# Check if input file exists
-if [ ! -f "$input_file" ]; then
-  echo "Error: Input file '$input_file' not found."
-  exit 1
-fi
-
-# Get the number of lines in the input file
-total_lines=$(wc -l &lt; "$input_file")
-
-# Calculate the number of output files needed
-num_files=$(( (total_lines + lines_per_file - 1) / lines_per_file ))
-
-# Loop through the input file and split it into multiple files
-for ((i=1; i&lt;=num_files; i++)); do
-  # Output file name
-  output_file="${input_file}_part${i}"
-
-  # Extract lines from the input file
-  head -n "$((i * lines_per_file))" "$input_file" | tail -n "$lines_per_file" &gt; "$output_file"
-done
-
-echo "File '$input_file' split into $num_files files."
-
-exit 0
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="split" /><category term="multiple" /><category term="files" /><summary type="html"><![CDATA[How to split a file into multiple files. In this example, it’s split in lines of 100.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="azure" /><category term="cli" /><category term="install" /><summary type="html"><![CDATA[Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.]]></summary></entry></feed>
