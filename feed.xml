@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-09T02:57:05+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">live stream player</title><link href="http://0.0.0.0:4000/linux/2025/01/08/live-stream-player.html" rel="alternate" type="text/html" title="live stream player" /><published>2025-01-08T00:00:00+00:00</published><updated>2025-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/08/live-stream-player</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/08/live-stream-player.html"><![CDATA[<p>Here’s a live stream player based on video.js.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-10T12:03:51+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash script that exits if previous command failed</title><link href="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html" rel="alternate" type="text/html" title="bash script that exits if previous command failed" /><published>2025-01-10T00:00:00+00:00</published><updated>2025-01-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html"><![CDATA[<p>Here’s a bit of bash code that will exit if the previous command failed.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+ls /nonexistentdirectory
+if [ $? -ne 0 ]; then
+  echo "Previous command failed. Exiting."
+  exit 1
+fi
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="exit" /><category term="command" /><category term="failed" /><summary type="html"><![CDATA[Here’s a bit of bash code that will exit if the previous command failed.]]></summary></entry><entry><title type="html">fujifilm simulations on the nikon d700</title><link href="http://0.0.0.0:4000/personal/2025/01/09/fujifilm-simulations-on-the-nikon-d700.html" rel="alternate" type="text/html" title="fujifilm simulations on the nikon d700" /><published>2025-01-09T00:00:00+00:00</published><updated>2025-01-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/personal/2025/01/09/fujifilm-simulations-on-the-nikon-d700</id><content type="html" xml:base="http://0.0.0.0:4000/personal/2025/01/09/fujifilm-simulations-on-the-nikon-d700.html"><![CDATA[<p>You can add film simulation like features on the old Nikon D700.</p>
+
+<p>Just head over to <a href="nikonpc.com">nikonpc.com</a> and download the presets.</p>
+
+<p>Follow the instructions tp activate on your camera.</p>
+
+<p>Here are the simulations I’ve downloaded and tried.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B&amp;W Contrast
+B&amp;W Portrait
+Fuji Astia
+Fuji Provia
+Fuji SReala Skin
+Fuji Velvia
+Kodak Gold 100
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="personal" /><category term="fujifilm" /><category term="simulations" /><category term="nikon" /><category term="d700" /><summary type="html"><![CDATA[You can add film simulation like features on the old Nikon D700.]]></summary></entry><entry><title type="html">live stream player</title><link href="http://0.0.0.0:4000/linux/2025/01/08/live-stream-player.html" rel="alternate" type="text/html" title="live stream player" /><published>2025-01-08T00:00:00+00:00</published><updated>2025-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/08/live-stream-player</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/08/live-stream-player.html"><![CDATA[<p>Here’s a live stream player based on video.js.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
 &lt;head&gt;
@@ -24,10 +47,8 @@
            src: 'http://localhost:8090/hls/stream.m3u8',
            type: 'application/x-mpegURL'
         });
-
         // Assuming you have a reference to your video element
         const videoElement = document.getElementById('my-video');
-    
         // Style the video element to center it both horizontally and vertically
         videoElement.style.display = 'block'; // Ensure it behaves like a block element
         videoElement.style.margin = '0 auto'; // Center it horizontally
@@ -37,23 +58,19 @@
         videoElement.style.transform = 'translate(-50%, -50%)'; // Adjust for exact centering
         videoElement.style.maxWidth = '90%'; // Optional: limit the video size to 90% of the screen width
         videoElement.style.maxHeight = '80vh'; // Optional: limit the video height to 80% of the viewport height
-    
    &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="live" /><category term="stream" /><category term="player" /><summary type="html"><![CDATA[Here’s a live stream player based on video.js.]]></summary></entry><entry><title type="html">nginx rtmp streaming docker</title><link href="http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker.html" rel="alternate" type="text/html" title="nginx rtmp streaming docker" /><published>2025-01-08T00:00:00+00:00</published><updated>2025-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker.html"><![CDATA[<p>Create a nginx.conf file.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>worker_processes  1;
-
 events {
     worker_connections  1024;
 }
-
 rtmp {
     server {
         listen 1935;
         chunk_size 4096;
-
         application live {
             live on;
             record off;
@@ -62,17 +79,14 @@ rtmp {
         }
     }
 }
-
 http {
     server {
         listen 80;
         root /hls;
-
         location / {
             add_header 'Access-Control-Allow-Origin' '*';
             index index.html index.htm;
         }
-
         location /hls {
             types {
                 application/vnd.apple.mpegurl m3u8;
@@ -88,7 +102,6 @@ http {
 <p>Create a docker-compose.yml file.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3.7"
-
 services:
   nginx:
     image: tiangolo/nginx-rtmp
@@ -99,22 +112,18 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
 </code></pre></div></div>
-
 <p>Start the RTMP server.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
 </code></pre></div></div>
-
 <p>Stop the RTMP server.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose down
 </code></pre></div></div>
-
 <p>Livestream a MP4 video to your RTMP server using ffmpeg.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -re -i bunny.mp4 -c:v libx264 -c:a aac -f flv rtmp://localhost:1935/live/stream
 </code></pre></div></div>
-
 <p>Point your player to the RTMP service.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8090/hls/stream.m3u8
@@ -292,23 +301,4 @@ source bin/activate
 
 <p>Output is site.svg.</p>
 
-<p><img src="/wp-content/uploads/2025/01/site.svg" alt="qrcode" /></p>]]></content><author><name>ulysses</name></author><category term="python" /><category term="generate" /><category term="qrcode" /><summary type="html"><![CDATA[This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.]]></summary></entry><entry><title type="html">delete files recursively</title><link href="http://0.0.0.0:4000/linux/2025/01/01/delete-files-recursively.html" rel="alternate" type="text/html" title="delete files recursively" /><published>2025-01-01T00:00:00+00:00</published><updated>2025-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/01/delete-files-recursively</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/01/delete-files-recursively.html"><![CDATA[<p>Here’s one way to delete files recursively in the current directory in Linux.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/ulysses/photos/
-find . -name "*.pp3" -type f -delete
-</code></pre></div></div>
-
-<p>The run command with delete is fast. The files are gone in seconds.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="delete" /><category term="files" /><category term="recursively" /><category term="find" /><summary type="html"><![CDATA[Here’s one way to delete files recursively in the current directory in Linux.]]></summary></entry><entry><title type="html">install azure cli</title><link href="http://0.0.0.0:4000/cloud/2024/12/30/install-azure-cli.html" rel="alternate" type="text/html" title="install azure cli" /><published>2024-12-30T00:00:00+00:00</published><updated>2024-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/cloud/2024/12/30/install-azure-cli</id><content type="html" xml:base="http://0.0.0.0:4000/cloud/2024/12/30/install-azure-cli.html"><![CDATA[<p>Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-</code></pre></div></div>
-
-<p>Validate Azure CLI is installed</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az --version
-</code></pre></div></div>
-
-<p>To upgrade</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az upgrade
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="cloud" /><category term="azure" /><category term="cli" /><category term="install" /><summary type="html"><![CDATA[Install the Azure CLI on a Linux Desktop. This one of 2 options, but this is by far the easiest.]]></summary></entry></feed>
+<p><img src="/wp-content/uploads/2025/01/site.svg" alt="qrcode" /></p>]]></content><author><name>ulysses</name></author><category term="python" /><category term="generate" /><category term="qrcode" /><summary type="html"><![CDATA[This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.]]></summary></entry></feed>

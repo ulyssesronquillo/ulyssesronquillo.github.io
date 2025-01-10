@@ -2,6 +2,26 @@
   
     {
 
+      "title"    : "bash script that exits if previous command failed",
+      "url"      : "/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html",
+      "category" : "",
+      "tags"     : "exit, command, failed",
+      "date"     : "2025-01-10 00:00:00 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "fujifilm simulations on the nikon d700",
+      "url"      : "/personal/2025/01/09/fujifilm-simulations-on-the-nikon-d700.html",
+      "category" : "",
+      "tags"     : "fujifilm, simulations, nikon, d700",
+      "date"     : "2025-01-09 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "nginx rtmp streaming docker",
       "url"      : "/linux/2025/01/08/nginx-rtmp-streaming-docker.html",
       "category" : "",
