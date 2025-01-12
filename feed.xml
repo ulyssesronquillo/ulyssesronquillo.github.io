@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-12T15:16:04+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">handbrake cli</title><link href="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" rel="alternate" type="text/html" title="handbrake cli" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"><![CDATA[<p>Handbrake is a compression program for multimedia. I use it to compress videos.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-12T15:25:12+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">handbrake cli</title><link href="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" rel="alternate" type="text/html" title="handbrake cli" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"><![CDATA[<p>Handbrake is a compression program for multimedia. I use it to compress videos.</p>
 
 <p>Handbrake has a CLI. Here’s my script.</p>
 
@@ -16,12 +16,12 @@ fi
 HandBrakeCLI -i $input -o $output -e x265 -Z "Very Fast 1080p30"
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="handbrake" /><category term="cli" /><category term="compress" /><category term="video" /><summary type="html"><![CDATA[Handbrake is a compression program for multimedia. I use it to compress videos.]]></summary></entry><entry><title type="html">keychron k3 keyboard sleep modes</title><link href="http://0.0.0.0:4000/linux/2025/01/12/keychron-k3-keyboard-sleep-modes.html" rel="alternate" type="text/html" title="keychron k3 keyboard sleep modes" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/keychron-k3-keyboard-sleep-modes</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/keychron-k3-keyboard-sleep-modes.html"><![CDATA[<p>I recently bought a KeyChron K3 mechanical keyboard.</p>
 
-<p>Here are the sleep modes:</p>
+<p>Here are the sleep modes. Hold for 3 seconds.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disable sleep. Hold for 3 seconds. 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disable sleep.
 fn + S + O
 
-# Enable sleep mode. Hold for 3 seconds.
+# Enable sleep mode.
 fn + S + 0
 
 # Sleep for 30 mins. Hold for 3 seconds.
