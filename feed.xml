@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-10T12:03:51+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">bash script that exits if previous command failed</title><link href="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html" rel="alternate" type="text/html" title="bash script that exits if previous command failed" /><published>2025-01-10T00:00:00+00:00</published><updated>2025-01-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html"><![CDATA[<p>Here’s a bit of bash code that will exit if the previous command failed.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-12T13:17:51+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">handbrake cli</title><link href="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" rel="alternate" type="text/html" title="handbrake cli" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"><![CDATA[<p>Handbrake is a compression program for multimedia. I use it mostly to make video files smaller.</p>
+
+<p>You can run handbrake from the CLI. I use this tiny script to do my video compression.</p>
+
+<p>```</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="handbrake" /><category term="cli" /><category term="compress" /><category term="video" /><summary type="html"><![CDATA[Handbrake is a compression program for multimedia. I use it mostly to make video files smaller.]]></summary></entry><entry><title type="html">bash script that exits if previous command failed</title><link href="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html" rel="alternate" type="text/html" title="bash script that exits if previous command failed" /><published>2025-01-10T00:00:00+00:00</published><updated>2025-01-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html"><![CDATA[<p>Here’s a bit of bash code that will exit if the previous command failed.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 ls /nonexistentdirectory
@@ -263,42 +267,4 @@ chown -R apache:apache /usr/share/httpd/.config
  
    &lt;/script&gt;
   &lt;/body&gt;
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="hls" /><category term="player" /><category term="video" /><category term="streaming" /><summary type="html"><![CDATA[Here’s an HLS video player using hls.js.]]></summary></entry><entry><title type="html">generate qrcode</title><link href="http://0.0.0.0:4000/python/2025/01/05/generate-qrcode.html" rel="alternate" type="text/html" title="generate qrcode" /><published>2025-01-05T00:00:00+00:00</published><updated>2025-01-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/05/generate-qrcode</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/05/generate-qrcode.html"><![CDATA[<p>This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import pyqrcode 
-from pyqrcode import QRCode 
-  
-# String which represent the QR code 
-s = "https://uly.me"
-  
-# Generate QR code 
-url = pyqrcode.create(s) 
-  
-# Create and save the png file naming "myqr.png" 
-url.svg("site.svg", scale = 8)
-</code></pre></div></div>
-
-<p>I use Python’s virtual environment for my programs so each one is isolated. Here’s the command to start one.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m venv qrcode
-</code></pre></div></div>
-
-<p>Activate</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd qrcode
-source bin/activate
-</code></pre></div></div>
-
-<p>You’ll need the pyqrcode module before running the program.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pyqrcode
-</code></pre></div></div>
-
-<p>Finally, run it.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 qrcode.py
-</code></pre></div></div>
-
-<p>Output is site.svg.</p>
-
-<p><img src="/wp-content/uploads/2025/01/site.svg" alt="qrcode" /></p>]]></content><author><name>ulysses</name></author><category term="python" /><category term="generate" /><category term="qrcode" /><summary type="html"><![CDATA[This is a Python code that generates QR Codes. Save file as qrcode.py. Provide a URL and you’re good to go.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="hls" /><category term="player" /><category term="video" /><category term="streaming" /><summary type="html"><![CDATA[Here’s an HLS video player using hls.js.]]></summary></entry></feed>
