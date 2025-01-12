@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-12T14:05:13+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">handbrake cli</title><link href="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" rel="alternate" type="text/html" title="handbrake cli" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"><![CDATA[<p>Handbrake is a compression program for multimedia. I use it to compress videos.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-12T15:16:04+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">handbrake cli</title><link href="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" rel="alternate" type="text/html" title="handbrake cli" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"><![CDATA[<p>Handbrake is a compression program for multimedia. I use it to compress videos.</p>
 
 <p>Handbrake has a CLI. Here’s my script.</p>
 
@@ -14,7 +14,21 @@ if [ -z "$input" ] || [ -z "$output" ]; then
   fi
 fi
 HandBrakeCLI -i $input -o $output -e x265 -Z "Very Fast 1080p30"
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="handbrake" /><category term="cli" /><category term="compress" /><category term="video" /><summary type="html"><![CDATA[Handbrake is a compression program for multimedia. I use it to compress videos.]]></summary></entry><entry><title type="html">bash script that exits if previous command failed</title><link href="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html" rel="alternate" type="text/html" title="bash script that exits if previous command failed" /><published>2025-01-10T00:00:00+00:00</published><updated>2025-01-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html"><![CDATA[<p>Here’s a bit of bash code that will exit if the previous command failed.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="handbrake" /><category term="cli" /><category term="compress" /><category term="video" /><summary type="html"><![CDATA[Handbrake is a compression program for multimedia. I use it to compress videos.]]></summary></entry><entry><title type="html">keychron k3 keyboard sleep modes</title><link href="http://0.0.0.0:4000/linux/2025/01/12/keychron-k3-keyboard-sleep-modes.html" rel="alternate" type="text/html" title="keychron k3 keyboard sleep modes" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/keychron-k3-keyboard-sleep-modes</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/keychron-k3-keyboard-sleep-modes.html"><![CDATA[<p>I recently bought a KeyChron K3 mechanical keyboard.</p>
+
+<p>Here are the sleep modes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Disable sleep. Hold for 3 seconds. 
+fn + S + O
+
+# Enable sleep mode. Hold for 3 seconds.
+fn + S + 0
+
+# Sleep for 30 mins. Hold for 3 seconds.
+fn + S + L + Y
+</code></pre></div></div>
+
+<p>For a comprehensive list of key shortcuts, visit KeyChron’s <a href="https://www.keychron.com/blogs/news/k3-key-combinations">site</a>.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="keychron" /><category term="keyboard" /><category term="k3" /><category term="sleep" /><category term="modes" /><summary type="html"><![CDATA[I recently bought a KeyChron K3 mechanical keyboard.]]></summary></entry><entry><title type="html">bash script that exits if previous command failed</title><link href="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html" rel="alternate" type="text/html" title="bash script that exits if previous command failed" /><published>2025-01-10T00:00:00+00:00</published><updated>2025-01-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/10/bash-script-that-exits-if-previous-command-failed.html"><![CDATA[<p>Here’s a bit of bash code that will exit if the previous command failed.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 ls /nonexistentdirectory
@@ -212,71 +226,4 @@ Please verify that you have permissions to write to the parent directory.
 chown -R apache:apache /usr/share/httpd/.config 
 </code></pre></div></div>
 
-<p>Create the directory and change ownership to apache:apache.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="gcloud" /><category term="setup" /><category term="log" /><category term="files" /><summary type="html"><![CDATA[I was getting this error whenever Apache runs a gcloud command.]]></summary></entry><entry><title type="html">hls player</title><link href="http://0.0.0.0:4000/linux/2025/01/06/hls-player.html" rel="alternate" type="text/html" title="hls player" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/06/hls-player</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/06/hls-player.html"><![CDATA[<p>Here’s an HLS video player using hls.js.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.5.14/hls.js"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;&lt;video id="video" controls muted autoplay style="width: 80%"&gt;&lt;/video&gt;&lt;/p&gt;
-
-    &lt;script&gt;
-        var video = document.getElementById('video');
-        var videoSrc = '/bunny/output.m3u8';
-    
-        // Initialize HLS.js if supported
-        if (Hls.isSupported()) {
-            var hls = new Hls();
-            hls.loadSource(videoSrc);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function () {
-                video.muted = true;
-                video.play();
-            });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = videoSrc;
-        }
-    
-        // Assuming you have a reference to your video element
-        const videoElement = document.getElementById('video');
-    
-        // Style the video element to center it both horizontally and vertically
-        videoElement.style.display = 'block'; // Ensure it behaves like a block element
-        videoElement.style.margin = '0 auto'; // Center it horizontally
-        videoElement.style.position = 'absolute'; // Position it absolutely to center vertically
-        videoElement.style.top = '50%'; // Vertically center
-        videoElement.style.left = '50%'; // Horizontally center
-        videoElement.style.transform = 'translate(-50%, -50%)'; // Adjust for exact centering
-        videoElement.style.maxWidth = '90%'; // Optional: limit the video size to 90% of the screen width
-        videoElement.style.maxHeight = '80vh'; // Optional: limit the video height to 80% of the viewport height
-    
-        // Create a button to unmute the player
-        const unmuteButton = document.createElement('button');
-        unmuteButton.textContent = 'Unmute';
-    
-        // Style the button to make it bigger
-        unmuteButton.style.fontSize = '30px'; // Larger font size
-        unmuteButton.style.padding = '20px 40px'; // Larger button size
-        unmuteButton.style.backgroundColor = '#007BFF'; // Button color
-        unmuteButton.style.color = 'white'; // Text color
-        unmuteButton.style.border = 'none'; // Remove border
-        unmuteButton.style.borderRadius = '10px'; // Rounded corners
-        unmuteButton.style.cursor = 'pointer'; // Pointer cursor on hover
-        unmuteButton.style.position = 'absolute'; // Absolute positioning
-        unmuteButton.style.top = '50%'; // Vertically center
-        unmuteButton.style.left = '50%'; // Horizontally center
-        unmuteButton.style.transform = 'translate(-50%, -50%)'; // Adjust for exact centering
-    
-        // Add an event listener to the button
-        unmuteButton.addEventListener('click', () =&gt; {
-            videoElement.muted = false; // Unmute the video
-            unmuteButton.remove(); // Remove the button once clicked
-        });
- 
-        // Add the button to the DOM
-        document.body.appendChild(unmuteButton);
- 
-   &lt;/script&gt;
-  &lt;/body&gt;
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="hls" /><category term="player" /><category term="video" /><category term="streaming" /><summary type="html"><![CDATA[Here’s an HLS video player using hls.js.]]></summary></entry></feed>
+<p>Create the directory and change ownership to apache:apache.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="gcloud" /><category term="setup" /><category term="log" /><category term="files" /><summary type="html"><![CDATA[I was getting this error whenever Apache runs a gcloud command.]]></summary></entry></feed>
