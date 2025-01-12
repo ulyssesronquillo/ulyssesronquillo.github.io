@@ -9,8 +9,8 @@
 <meta property="og:title" content="handbrake cli" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Handbrake is a compression program for multimedia. I use it mostly to make video files smaller." />
-<meta property="og:description" content="Handbrake is a compression program for multimedia. I use it mostly to make video files smaller." />
+<meta name="description" content="Handbrake is a compression program for multimedia. I use it to compress videos." />
+<meta property="og:description" content="Handbrake is a compression program for multimedia. I use it to compress videos." />
 <link rel="canonical" href="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" />
 <meta property="og:url" content="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" />
 <meta property="og:site_name" content="uly.me" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="handbrake cli" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2025-01-12T00:00:00+00:00","datePublished":"2025-01-12T00:00:00+00:00","description":"Handbrake is a compression program for multimedia. I use it mostly to make video files smaller.","headline":"handbrake cli","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"},"url":"http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2025-01-12T00:00:00+00:00","datePublished":"2025-01-12T00:00:00+00:00","description":"Handbrake is a compression program for multimedia. I use it to compress videos.","headline":"handbrake cli","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"},"url":"http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -53,12 +53,23 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Handbrake is a compression program for multimedia. I use it mostly to make video files smaller.</p>
+    <p>Handbrake is a compression program for multimedia. I use it to compress videos.</p>
 
-<p>You can run handbrake from the CLI. I use this tiny script to do my video compression.</p>
+<p>Handbrake has a CLI. I use this tiny script to do my video compression.</p>
 
-<p>```</p>
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+echo "Format $0 input.mp4 output.mp4"
+if [ -z "$input" ] || [ -z "$output" ]; then
+  if [ "$#" -eq 2 ]; then
+     input=$1
+     output=$2
+  else
+     read -p "inputFile  : " $input
+     read -p "outputFile : " $output 
+  fi
+fi
+HandBrakeCLI -i $input -o $output -e x265 -Z "Very Fast 1080p30"
+</code></pre></div></div>
 
   </div>
 <a class="u-url" href="/linux/2025/01/12/handbrake-cli.html" hidden></a>
