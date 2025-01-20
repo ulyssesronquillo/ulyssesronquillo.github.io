@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-12T15:25:12+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">handbrake cli</title><link href="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" rel="alternate" type="text/html" title="handbrake cli" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"><![CDATA[<p>Handbrake is a compression program for multimedia. I use it to compress videos.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-01-20T14:35:37+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">linux mint 22 xia</title><link href="http://0.0.0.0:4000/linux/2025/01/20/linux-mint-22-xia.html" rel="alternate" type="text/html" title="linux mint 22 xia" /><published>2025-01-20T00:00:00+00:00</published><updated>2025-01-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/20/linux-mint-22-xia</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/20/linux-mint-22-xia.html"><![CDATA[<p>I upgraded my Linux Mint desktop to the latest Mint 22 Xia.</p>
+
+<p>So far so good. Subtle differences, but can’t see major changes.</p>
+
+<p>The current version is now supported until the year 2029.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="mint" /><category term="22" /><category term="xia" /><summary type="html"><![CDATA[I upgraded my Linux Mint desktop to the latest Mint 22 Xia.]]></summary></entry><entry><title type="html">handbrake cli</title><link href="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html" rel="alternate" type="text/html" title="handbrake cli" /><published>2025-01-12T00:00:00+00:00</published><updated>2025-01-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/12/handbrake-cli.html"><![CDATA[<p>Handbrake is a compression program for multimedia. I use it to compress videos.</p>
 
 <p>Handbrake has a CLI. Here’s my script.</p>
 
@@ -24,7 +28,7 @@ fn + S + O
 # Enable sleep mode.
 fn + S + 0
 
-# Sleep for 30 mins. Hold for 3 seconds.
+# Sleep for 30 mins.
 fn + S + L + Y
 </code></pre></div></div>
 
@@ -208,22 +212,4 @@ if __name__ == "__main__":
     mp3_file = "output.mp3"
     convert_wav_to_mp3(wav_file, mp3_file)
     print(f"Converted {wav_file} to {mp3_file}")
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="python" /><category term="convert" /><category term="wav" /><category term="mp3" /><summary type="html"><![CDATA[Here’s how to convert a WAV file to MP3 in Python.]]></summary></entry><entry><title type="html">gcloud could not setup log file</title><link href="http://0.0.0.0:4000/linux/2025/01/06/gcloud-could-not-setup-log-file.html" rel="alternate" type="text/html" title="gcloud could not setup log file" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/06/gcloud-could-not-setup-log-file</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/06/gcloud-could-not-setup-log-file.html"><![CDATA[<p>I was getting this error whenever Apache runs a gcloud command.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WARNING: Could not setup log file in /usr/share/httpd/.config/gcloud/logs, 
-(Error: Could not create directory [/usr/share/httpd/.config/gcloud/logs/2025.01.06]: Permission denied.
-
-Please verify that you have permissions to write to the parent directory..
-The configuration directory may not be writable. To learn more, see https://cloud.google.com/sdk/docs/configurations#creating_a_configuration
-ERROR: (gcloud.compute.disks.list) Could not create directory [/usr/share/httpd/.config/gcloud]: Permission denied.
-
-Please verify that you have permissions to write to the parent directory.
-</code></pre></div></div>
-
-<p>So, here’s the fix. The .config directory under /usr/share/httpd/ is missing.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir /usr/share/httpd/.config
-chown -R apache:apache /usr/share/httpd/.config 
-</code></pre></div></div>
-
-<p>Create the directory and change ownership to apache:apache.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="gcloud" /><category term="setup" /><category term="log" /><category term="files" /><summary type="html"><![CDATA[I was getting this error whenever Apache runs a gcloud command.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="python" /><category term="convert" /><category term="wav" /><category term="mp3" /><summary type="html"><![CDATA[Here’s how to convert a WAV file to MP3 in Python.]]></summary></entry></feed>
