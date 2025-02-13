@@ -167,10 +167,16 @@ pre > code {
 }
 
 .pager ul.pagination li {
+  font-family: "Arial", sans-serif;
   float: left;
   list-style-type: none;
-  padding: 0px;
+  padding: 0 0 0 0;
   background-color: #f0f0f0;
+}
+
+.pagination {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
 }
 
 #search-container input {
