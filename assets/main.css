@@ -131,7 +131,7 @@ blockquote > :last-child {
  */
 pre,
 code {
-  font-size: 14px;
+  font-size: 13px;
   border: 1px solid #ddd;
   border-radius: 3px;
   color: #444;
@@ -207,7 +207,7 @@ ul#results-container li {
 .highlight code {
   font-family: "Fira Code", serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 0.5em;
 }
 
@@ -220,7 +220,7 @@ strong {
  * Wrapper
  */
 .wrapper {
-  font-size: 16px;
+  font-size: 14px;
   max-width: -webkit-calc(1280px - (30px * 2));
   max-width: 1220px;
   margin-right: auto;
@@ -490,7 +490,7 @@ table td {
 }
 
 .page-content h4 a {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .page-heading {
