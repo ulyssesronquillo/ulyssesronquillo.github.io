@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-02-14T20:34:01+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">tmux on macos iterm2 vscode</title><link href="http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode.html" rel="alternate" type="text/html" title="tmux on macos iterm2 vscode" /><published>2025-01-23T00:00:00+00:00</published><updated>2025-01-23T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode.html"><![CDATA[<p>The other day I started using tmux terminal emulator on my mac desktop. I’m using iterm2 inside Visual Code Editor. If you’re not familiar with tmux, it contains sessions. Inside each session, you can have multiple windows. Inside each window, you can have multiple panes. Switching across sessions, windows or panes is easy. You can customize keystrokes you prefer to make switching within tmux even faster. I modified my tmux configuration by creating a file called ~/.tmux.conf.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-02-19T12:49:19+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">ffmpeg convert mk4 to mp4</title><link href="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html" rel="alternate" type="text/html" title="ffmpeg convert mk4 to mp4" /><published>2025-02-19T00:00:00+00:00</published><updated>2025-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html"><![CDATA[<p>Here’s a simple ffmpeg command to convert from mk4 to mp4 videos.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i coffee.mkv -codec copy coffee.mp4
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="ffmpeg" /><category term="convert" /><category term="mk4" /><category term="mp4" /><summary type="html"><![CDATA[Here’s a simple ffmpeg command to convert from mk4 to mp4 videos.]]></summary></entry><entry><title type="html">tmux on macos iterm2 vscode</title><link href="http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode.html" rel="alternate" type="text/html" title="tmux on macos iterm2 vscode" /><published>2025-01-23T00:00:00+00:00</published><updated>2025-01-23T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode.html"><![CDATA[<p>The other day I started using tmux terminal emulator on my mac desktop. I’m using iterm2 inside Visual Code Editor. If you’re not familiar with tmux, it contains sessions. Inside each session, you can have multiple windows. Inside each window, you can have multiple panes. Switching across sessions, windows or panes is easy. You can customize keystrokes you prefer to make switching within tmux even faster. I modified my tmux configuration by creating a file called ~/.tmux.conf.</p>
 
 <p>Here’s my setup.</p>
 
@@ -225,23 +228,4 @@ if __name__ == "__main__":
 
     convert_mp3_to_wav(mp3_file, wav_file)
     print(f"Conversion complete: {mp3_file} -&gt; {wav_file}")
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="python" /><category term="convert" /><category term="mp3" /><category term="wav" /><summary type="html"><![CDATA[How to convert a MP3 file to WAV using Python.]]></summary></entry><entry><title type="html">convert mp4 to hls</title><link href="http://0.0.0.0:4000/python/2025/01/06/convert-mp4-to-hls.html" rel="alternate" type="text/html" title="convert mp4 to hls" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/06/convert-mp4-to-hls</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/06/convert-mp4-to-hls.html"><![CDATA[<p>Here’s how to convert MP4 to HLS video format.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import ffmpeg
-
-def convert_to_hls(input_file, output_file):
-    """Converts an MP4 file to HLS format."""
-
-    output_file = f"{output_dir}/output.m3u8"
-
-    stream = ffmpeg.input(input_file)
-    stream = ffmpeg.output(stream, output_file, format='hls', 
-                           hls_time=10, hls_list_size=0, 
-                           start_number=0) 
-    ffmpeg.run(stream)
-
-if __name__ == "__main__":
-    input_file = "bunny.mp4"  
-    output_dir = "files"   
-    convert_to_hls(input_file, output_dir)
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="python" /><category term="convert" /><category term="video" /><category term="mp4" /><category term="hls" /><summary type="html"><![CDATA[Here’s how to convert MP4 to HLS video format.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="python" /><category term="convert" /><category term="mp3" /><category term="wav" /><summary type="html"><![CDATA[How to convert a MP3 file to WAV using Python.]]></summary></entry></feed>
