@@ -1,8 +1,7 @@
 /**
  * Reset some basic elements
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -15,7 +14,7 @@ dl, dd, ol, ul, figure {
  */
 body {
   /*font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
-  font-family: "Fira Code", serif;
+  font-family: "Roboto", serif;
   font-weight: 400;
   line-height: 1.6em;
   color: #000;
@@ -131,6 +130,7 @@ blockquote > :last-child {
  */
 pre,
 code {
+  font-family: "Fira Code", serif;
   font-size: 13px;
   border: 1px solid #ddd;
   border-radius: 3px;
@@ -148,6 +148,7 @@ pre {
 }
 
 pre > code {
+  font-family: "Fira Code", serif;
   border: 0;
   padding-right: 0;
   padding-left: 0;
@@ -199,13 +200,13 @@ ul#results-container li {
 }
 
 .date {
-  font-family: "Fira Code", serif;
+  #font-family: "Fira Code", serif;
   color: #999;
   font-size: 14px;
 }
 
 .highlight code {
-  font-family: "Fira Code", serif;
+  #font-family: "Fira Code", serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 0.5em;
