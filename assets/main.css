@@ -2,6 +2,7 @@
  * Reset some basic elements
  */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Oxygen:wght@300;400;700&display=swap");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -13,7 +14,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: "Roboto", serif;
+  font-family: "Oxygen", sans-serif;
   font-weight: 400;
   line-height: 1.6em;
   color: #ECDFCC;
@@ -195,7 +196,7 @@ ul#results-container {
 ul#results-container li {
   margin: 0;
   padding: 0;
-  margin-top: -5px;
+  margin-top: -3px;
   list-style-type: none;
 }
 
@@ -221,7 +222,7 @@ strong {
  * Wrapper
  */
 .wrapper {
-  font-size: 16px;
+  font-size: 18px;
   max-width: -webkit-calc(1280px - (30px * 2));
   max-width: 1220px;
   margin-right: auto;
@@ -491,7 +492,7 @@ table td {
 }
 
 .page-content h4 a {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .page-heading {
