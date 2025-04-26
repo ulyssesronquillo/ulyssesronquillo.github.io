@@ -14,7 +14,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Fira Code", serif;
   font-weight: 400;
   line-height: 1.6em;
   color: #ECDFCC;
