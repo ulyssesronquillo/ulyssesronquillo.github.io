@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "coffee grind settings",
+      "url"      : "/misc/2025/05/13/coffee-grind-settings.html",
+      "category" : "",
+      "tags"     : "coffee, grind",
+      "date"     : "2025-05-13 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "ffmpeg convert mk4 to mp4",
       "url"      : "/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html",
       "category" : "",

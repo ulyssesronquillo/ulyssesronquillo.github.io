@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-05-06T14:35:30+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">ffmpeg convert mk4 to mp4</title><link href="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html" rel="alternate" type="text/html" title="ffmpeg convert mk4 to mp4" /><published>2025-02-19T00:00:00+00:00</published><updated>2025-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html"><![CDATA[<p>Here’s a simple ffmpeg command to convert from mk4 to mp4 videos.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-05-13T11:31:40+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">coffee grind settings</title><link href="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html" rel="alternate" type="text/html" title="coffee grind settings" /><published>2025-05-13T00:00:00+00:00</published><updated>2025-05-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings</id><content type="html" xml:base="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html"><![CDATA[<p>Dosage is set to 17 grams for double shots and 8.7 for single shots.</p>
+
+<p>The following coffee have these grind settings:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Coffee</th>
+      <th style="text-align: left">Grind Settings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">stauff’s breakfast</td>
+      <td style="text-align: left">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">stauff’s baba budan</td>
+      <td style="text-align: left">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">stauff’s peru</td>
+      <td style="text-align: left">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">stauff’s cerrado</td>
+      <td style="text-align: left">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">brioso espresso blend</td>
+      <td style="text-align: left">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">roaming goat espresson blend</td>
+      <td style="text-align: left">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lifeboost emboldened dark roast</td>
+      <td style="text-align: left">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">crimson cup dark reign</td>
+      <td style="text-align: left">6</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodsam connected day</td>
+      <td style="text-align: left">8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">beast dark roast</td>
+      <td style="text-align: left">10</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>ulysses</name></author><category term="misc" /><category term="coffee" /><category term="grind" /><summary type="html"><![CDATA[Dosage is set to 17 grams for double shots and 8.7 for single shots.]]></summary></entry><entry><title type="html">ffmpeg convert mk4 to mp4</title><link href="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html" rel="alternate" type="text/html" title="ffmpeg convert mk4 to mp4" /><published>2025-02-19T00:00:00+00:00</published><updated>2025-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html"><![CDATA[<p>Here’s a simple ffmpeg command to convert from mk4 to mp4 videos.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i coffee.mkv -codec copy coffee.mp4
 </code></pre></div></div>
@@ -214,20 +267,4 @@ services:
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8090/hls/stream.m3u8
 </code></pre></div></div>
-<p>See my previos post.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="nginx" /><category term="rtmp" /><category term="streaming" /><category term="docker" /><summary type="html"><![CDATA[Create a nginx.conf file.]]></summary></entry><entry><title type="html">convert mp3 to wav</title><link href="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html" rel="alternate" type="text/html" title="convert mp3 to wav" /><published>2025-01-06T00:00:00+00:00</published><updated>2025-01-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav</id><content type="html" xml:base="http://0.0.0.0:4000/python/2025/01/06/convert-mp3-to-wav.html"><![CDATA[<p>How to convert a MP3 file to WAV using Python.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from pydub import AudioSegment
-
-def convert_mp3_to_wav(mp3_file, wav_file):
-    """Converts an MP3 file to WAV format."""
-
-    sound = AudioSegment.from_mp3(mp3_file)
-    sound.export(wav_file, format="wav")
-
-if __name__ == "__main__":
-    mp3_file = "gettysburg10.mp3"  # Replace with your MP3 file
-    wav_file = "output.wav"  # Replace with desired output WAV filename
-
-    convert_mp3_to_wav(mp3_file, wav_file)
-    print(f"Conversion complete: {mp3_file} -&gt; {wav_file}")
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="python" /><category term="convert" /><category term="mp3" /><category term="wav" /><summary type="html"><![CDATA[How to convert a MP3 file to WAV using Python.]]></summary></entry></feed>
+<p>See my previos post.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="nginx" /><category term="rtmp" /><category term="streaming" /><category term="docker" /><summary type="html"><![CDATA[Create a nginx.conf file.]]></summary></entry></feed>
