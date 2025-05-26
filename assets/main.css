@@ -77,6 +77,14 @@ li > ol {
   margin-bottom: 0;
 }
 
+ul li {
+  margin-left: 15px;
+}
+
+ol li {
+  margin-left: 25px;
+}
+
 /**
  * Headings
  */
