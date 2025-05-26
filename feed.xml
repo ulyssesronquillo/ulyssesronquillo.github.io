@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-05-25T17:44:44+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">coffee grind settings</title><link href="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html" rel="alternate" type="text/html" title="coffee grind settings" /><published>2025-05-13T00:00:00+00:00</published><updated>2025-05-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings</id><content type="html" xml:base="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html"><![CDATA[<p>Here are my espresso settings for the Breville Barista Express.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-05-26T02:13:13+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">my camera setup</title><link href="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html" rel="alternate" type="text/html" title="my camera setup" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup</id><content type="html" xml:base="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html"><![CDATA[<p>Here’s my camera setup:</p>
+
+<ul>
+  <li>Nikon D90</li>
+  <li>Nikon D700</li>
+  <li>Fujifilm XT30 ii</li>
+</ul>
+
+<p>Lenses:</p>
+
+<ul>
+  <li>Nikon 24mm f2.8 AF-D FX</li>
+  <li>Nikon 35mm f2 AF-D FX</li>
+  <li>Nikon 50mm F1.8 AF-D FX</li>
+  <li>Nikon 50mm F1.4 AF-D FX</li>
+  <li>Nikon 24-85mm F3.5-4.5 G VR</li>
+  <li>Nikon 18-200mm F3.5-5.6 G ED VR</li>
+  <li>TTArtisan 27mm F2.8 AF</li>
+  <li>Fujifilm XC 15-45mm F3.5-5.6 OIS PZ</li>
+</ul>]]></content><author><name>ulysses</name></author><category term="photography" /><category term="nikon," /><category term="photos," /><category term="lens," /><category term="body" /><summary type="html"><![CDATA[Here’s my camera setup:]]></summary></entry><entry><title type="html">coffee grind settings</title><link href="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html" rel="alternate" type="text/html" title="coffee grind settings" /><published>2025-05-13T00:00:00+00:00</published><updated>2025-05-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings</id><content type="html" xml:base="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html"><![CDATA[<p>Here are my espresso settings for the Breville Barista Express.</p>
 
 <p>Double shots are 17 grams while single shots are 8.75 grams.</p>
 
@@ -204,71 +223,4 @@ Kodak Gold 100
    &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="live" /><category term="stream" /><category term="player" /><summary type="html"><![CDATA[Here’s a live stream player based on video.js.]]></summary></entry><entry><title type="html">nginx rtmp streaming docker</title><link href="http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker.html" rel="alternate" type="text/html" title="nginx rtmp streaming docker" /><published>2025-01-08T00:00:00+00:00</published><updated>2025-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/08/nginx-rtmp-streaming-docker.html"><![CDATA[<p>Create a nginx.conf file.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>worker_processes  1;
-events {
-    worker_connections  1024;
-}
-rtmp {
-    server {
-        listen 1935;
-        chunk_size 4096;
-        application live {
-            live on;
-            record off;
-            hls on;
-            hls_path /hls;
-        }
-    }
-}
-http {
-    server {
-        listen 80;
-        root /hls;
-        location / {
-            add_header 'Access-Control-Allow-Origin' '*';
-            index index.html index.htm;
-        }
-        location /hls {
-            types {
-                application/vnd.apple.mpegurl m3u8;
-                video/mp2t ts;
-            }
-            add_header 'Access-Control-Allow-Origin' '*';
-            alias /hls;
-        }
-    }
-}
-</code></pre></div></div>
-
-<p>Create a docker-compose.yml file.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3.7"
-services:
-  nginx:
-    image: tiangolo/nginx-rtmp
-    restart: always
-    ports:
-      - "1935:1935" # RTMP port
-      - "8090:80"   # HTTP port for HLS playback
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-</code></pre></div></div>
-<p>Start the RTMP server.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
-</code></pre></div></div>
-<p>Stop the RTMP server.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose down
-</code></pre></div></div>
-<p>Livestream a MP4 video to your RTMP server using ffmpeg.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -re -i bunny.mp4 -c:v libx264 -c:a aac -f flv rtmp://localhost:1935/live/stream
-</code></pre></div></div>
-<p>Point your player to the RTMP service.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8090/hls/stream.m3u8
-</code></pre></div></div>
-<p>See my previos post.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="nginx" /><category term="rtmp" /><category term="streaming" /><category term="docker" /><summary type="html"><![CDATA[Create a nginx.conf file.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="live" /><category term="stream" /><category term="player" /><summary type="html"><![CDATA[Here’s a live stream player based on video.js.]]></summary></entry></feed>
