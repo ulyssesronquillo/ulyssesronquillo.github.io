@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-05-31T04:47:37+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">my camera setup</title><link href="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html" rel="alternate" type="text/html" title="my camera setup" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup</id><content type="html" xml:base="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html"><![CDATA[<p>Here’s my camera setup:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-06-01T05:02:09+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">my camera setup</title><link href="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html" rel="alternate" type="text/html" title="my camera setup" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup</id><content type="html" xml:base="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html"><![CDATA[<p>Here’s my camera setup:</p>
 
 <ol>
   <li>Nikon D90</li>
@@ -8,7 +8,7 @@
   <li>Nikon 18-200mm F3.5-5.6 G ED DX VR</li>
 </ul>
 
-<p>APS-C lenses are not 100% fully compatible with a full frame cameras and are typically not recommended. You can mount APS-C lenses on full frame cameras, but you will see heavy vignetting in the corners. You will have to crop your images to make them usuable.</p>
+<p>This is my first Nikon APS-C camera.</p>
 
 <ol>
   <li>Nikon D700</li>
@@ -22,7 +22,7 @@
   <li>Nikon 24-85mm F3.5-4.5 G FX VR</li>
 </ul>
 
-<p>You can use full frame lenses and in APS-C cameras, but it’s typically cheaper to buy APS-C lenses if you have crop sensor cameras mainly due since they are designed specifically for APS-C cameras. Full frame lenses will work on crop sensor cameras just fine since they are deemed downward compatible.</p>
+<p>The legendary full frame Nikon D700. Started out with a nifty 50. A zoom and a few prime lenses later.</p>
 
 <ol>
   <li>Fujifilm XT30 ii</li>
@@ -33,9 +33,9 @@
   <li>Fujifilm XC 15-45mm F3.5-5.6 OIS PZ</li>
 </ul>
 
-<p>All Fujifilm cameras are APS-C, therefore all lenses are APS-C as well.</p>
+<p>Finally, a mirrorless digital camera. Light and ideal for travel.</p>
 
-<p>What lens to get next?</p>
+<p>What lens is next?</p>
 
 <ul>
   <li>Fuji 70-300mm XF f/4-5.6 R LM OIS WR</li>
@@ -91,7 +91,7 @@
     </tr>
     <tr>
       <td style="text-align: left">beast dark roast</td>
-      <td style="text-align: left">10</td>
+      <td style="text-align: left">4</td>
     </tr>
   </tbody>
 </table>
