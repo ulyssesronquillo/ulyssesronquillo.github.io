@@ -16,8 +16,8 @@ body {
   font-family: "Fira Code", serif;
   font-weight: 400;
   line-height: 1.6em;
-  color: #ECDFCC;
-  background-color: #181C14;
+  color: #ffffff;
+  background-color: #19181A;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -96,16 +96,16 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #73BBA3;
+  color: #cebc81;
   text-decoration: none;
 }
 
 a:visited {
-  color: #73BBA3;
+  color: #b19f9e;
 }
 
 a:hover {
-  color: #697565;
+  color: #a16e83;
   text-decoration: underline;
 }
 
@@ -141,8 +141,8 @@ code {
   font-size: 13px;
   border: 1px solid #222;
   border-radius: 3px;
-  color: #ECDFCC;
-  background-color: #111;
+  color: #479761;
+  background-color: #100b0d;
 }
 
 code {
@@ -191,8 +191,8 @@ pre > code {
   width: 40%;
   padding: 10px;
   margin: 0;
-  color: #ECDFCC;
-  background-color: #181C14;
+  color: #cebc81;
+  background-color: #100b0d;
   border: 1px solid #333;
 }
 
@@ -292,13 +292,13 @@ table th, table td {
 }
 
 table th {
-  background-color: #3c3d37;
-  border: 1px solid #dedede;
-  border-bottom-color: #c9c9c9;
+  background-color: #302f31;
+  border: 1px solid #100b0d;
+  border-bottom-color: #100b0d;
 }
 
 table td {
-  border: 1px solid #e8e8e8;
+  border: 1px solid #302f31;
 }
 
 /**
@@ -321,11 +321,11 @@ table td {
 }
 
 .site-title, .site-title:visited {
-  color: #ECDFCC;
+  color: #ffffff;
 }
 
 .site-title:hover {
-  color: #697565;
+  color: #b19f9e;
 }
 
 .site-nav {
@@ -342,12 +342,12 @@ table td {
 }
 
 .site-nav .page-link {
-  color: #ECDFCC;
+  color: #ffffff;
   line-height: 1.5;
 }
 
 .site-nav:hover .page-link:hover {
-  color: #697565;
+  color: #b19f9e;
   line-height: 1.5;
 }
 
@@ -582,11 +582,11 @@ table td {
  * Syntax highlighting styles
  */
 .highlight {
-  background: #111;
+  background: #100b0d;
 }
 
 .highlighter-rouge .highlight {
-  background: #111;
+  background: #100b0d;
 }
 
 .highlight .c {
