@@ -16,8 +16,8 @@ body {
   font-family: "Fira Code", serif;
   font-weight: 400;
   line-height: 1.6em;
-  color: #ffffff;
-  background-color: #19181A;
+  color: #FFFFFF;
+  background-color: #353535;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -96,16 +96,16 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #cebc81;
+  color: #94C4C7;
   text-decoration: none;
 }
 
 a:visited {
-  color: #b19f9e;
+  color: #94C4C7;
 }
 
 a:hover {
-  color: #a16e83;
+  color: #D9D9D9;
   text-decoration: underline;
 }
 
@@ -141,8 +141,8 @@ code {
   font-size: 13px;
   border: 1px solid #222;
   border-radius: 3px;
-  color: #479761;
-  background-color: #100b0d;
+  color: #B7D2E1;
+  background-color: #070D0D;
 }
 
 code {
@@ -189,8 +189,8 @@ pre > code {
   width: 40%;
   padding: 10px;
   margin: 0;
-  color: #cebc81;
-  background-color: #100b0d;
+  color: #94C4C7;
+  background-color: #141414;
   border: 1px solid #333;
 }
 
@@ -274,7 +274,8 @@ strong {
  */
 table {
   margin-bottom: 30px;
-  color: #ecdfcc;
+  color: #FFFFFF;
+  background-color: #141414;
   width: 100%;
   text-align: left;
   border-collapse: collapse;
@@ -282,7 +283,7 @@ table {
 }
 
 table tr:nth-child(even) {
-  background-color: #111;
+  background-color: #474747;
 }
 
 table th, table td {
@@ -290,7 +291,7 @@ table th, table td {
 }
 
 table th {
-  background-color: #302f31;
+  background-color: #000000;
   border: 1px solid #100b0d;
   border-bottom-color: #100b0d;
 }
@@ -323,7 +324,7 @@ table td {
 }
 
 .site-title:hover {
-  color: #b19f9e;
+  color: #D9D9D9;
 }
 
 .site-nav {
@@ -345,7 +346,7 @@ table td {
 }
 
 .site-nav:hover .page-link:hover {
-  color: #b19f9e;
+  color: #D9D9D9;
   line-height: 1.5;
 }
 
@@ -580,11 +581,11 @@ table td {
  * Syntax highlighting styles
  */
 .highlight {
-  background: #100b0d;
+  background: #070D0D;
 }
 
 .highlighter-rouge .highlight {
-  background: #100b0d;
+  background: #070D0D;
 }
 
 .highlight .c {
