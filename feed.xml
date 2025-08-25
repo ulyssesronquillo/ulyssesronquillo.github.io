@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-08-08T05:20:59+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">my camera setup</title><link href="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html" rel="alternate" type="text/html" title="my camera setup" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup</id><content type="html" xml:base="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html"><![CDATA[<p>Here’s my camera setup:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-08-24T19:23:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">viltrox 27mm f1.2</title><link href="http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2.html" rel="alternate" type="text/html" title="viltrox 27mm f1.2" /><published>2025-08-16T00:00:00+00:00</published><updated>2025-08-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2</id><content type="html" xml:base="http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2.html"><![CDATA[<p>Just started shooting on a Viltrox 27mm f1.2.</p>
+
+<p>Here are pros and cons.</p>
+
+<p>Pros:</p>
+<ul>
+  <li>sharp all around from 1.2 all the way to f11 before defraction takes over</li>
+  <li>no barrel or pin cushion distortion</li>
+  <li>no chromatic abberation</li>
+</ul>
+
+<p>Cons:</p>
+<ul>
+  <li>heavy lens especially if fitted on a smaller camera</li>
+  <li>vignetting at f1.2. it goes away at around f4.</li>
+  <li>little bit of flare when shot directly at a light</li>
+</ul>
+
+<p>Otherwise, fantastic lens with super sharp results.</p>]]></content><author><name>ulysses</name></author><category term="fuji" /><summary type="html"><![CDATA[Just started shooting on a Viltrox 27mm f1.2.]]></summary></entry><entry><title type="html">my camera setup</title><link href="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html" rel="alternate" type="text/html" title="my camera setup" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup</id><content type="html" xml:base="http://0.0.0.0:4000/photography/2025/05/25/my-camera-setup.html"><![CDATA[<p>Here’s my camera setup:</p>
 
 <p>Nikon D90. My first Nikon camera.</p>
 
@@ -206,44 +224,4 @@ Fuji Provia
 Fuji SReala Skin
 Fuji Velvia
 Kodak Gold 100
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="personal" /><category term="fujifilm" /><category term="simulations" /><category term="nikon" /><category term="d700" /><summary type="html"><![CDATA[You can add film simulation like features on the old Nikon D700.]]></summary></entry><entry><title type="html">live stream player</title><link href="http://0.0.0.0:4000/linux/2025/01/08/live-stream-player.html" rel="alternate" type="text/html" title="live stream player" /><published>2025-01-08T00:00:00+00:00</published><updated>2025-01-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/08/live-stream-player</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/08/live-stream-player.html"><![CDATA[<p>Here’s a live stream player based on video.js.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
-&lt;head&gt;
-   &lt;link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-   &lt;video
-      id="my-video"
-      class="video-js vjs-big-play-centered vjs-theme-sea"
-      controls
-      preload="auto"
-      fluid="true"
-      poster="https://www.tutorialspoint.com/videos/sample.png"
-      data-setup='{}'
-   &gt;
-   &lt;/video&gt;
-   &lt;script src="https://vjs.zencdn.net/7.17.0/video.min.js"&gt;
-   &lt;/script&gt;
-   &lt;script src="https://unpkg.com/videojs-contribhls/dist/videojs-contrib-hls.js"&gt;&lt;/script&gt;
-   &lt;script&gt;
-        var player = videojs('my-video');
-        player.src({
-           src: 'http://localhost:8090/hls/stream.m3u8',
-           type: 'application/x-mpegURL'
-        });
-        // Assuming you have a reference to your video element
-        const videoElement = document.getElementById('my-video');
-        // Style the video element to center it both horizontally and vertically
-        videoElement.style.display = 'block'; // Ensure it behaves like a block element
-        videoElement.style.margin = '0 auto'; // Center it horizontally
-        videoElement.style.position = 'absolute'; // Position it absolutely to center vertically
-        videoElement.style.top = '50%'; // Vertically center
-        videoElement.style.left = '50%'; // Horizontally center
-        videoElement.style.transform = 'translate(-50%, -50%)'; // Adjust for exact centering
-        videoElement.style.maxWidth = '90%'; // Optional: limit the video size to 90% of the screen width
-        videoElement.style.maxHeight = '80vh'; // Optional: limit the video height to 80% of the viewport height
-   &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="live" /><category term="stream" /><category term="player" /><summary type="html"><![CDATA[Here’s a live stream player based on video.js.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="personal" /><category term="fujifilm" /><category term="simulations" /><category term="nikon" /><category term="d700" /><summary type="html"><![CDATA[You can add film simulation like features on the old Nikon D700.]]></summary></entry></feed>
