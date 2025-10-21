@@ -393,6 +393,7 @@ table td {
     padding-bottom: 5px;
   }
   .site-nav .page-link {
+    color: #000;
     display: block;
     padding: 5px 10px;
     margin-left: 20px;
@@ -539,10 +540,6 @@ table td {
   font-size: 20px;
   letter-spacing: -1px;
   line-height: 1;
-}
-
-.site-nav .page-link {
-  color: #fff;
 }
 
 @media screen and (max-width: 800px) {
