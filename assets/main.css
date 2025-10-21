@@ -341,7 +341,7 @@ table td {
 }
 
 .site-nav .page-link {
-  color: #ffffff;
+  color: red;
   line-height: 1.5;
 }
 
@@ -393,7 +393,6 @@ table td {
     padding-bottom: 5px;
   }
   .site-nav .page-link {
-    color: #000;
     display: block;
     padding: 5px 10px;
     margin-left: 20px;
