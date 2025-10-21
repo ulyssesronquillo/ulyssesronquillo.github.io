@@ -382,8 +382,7 @@ table td {
     text-align: center;
   }
   .site-nav .menu-icon > svg {
-    fill: #424242;
-    fill: green;
+    fill: #94C4C7;
   }
   .site-nav input ~ .trigger {
     clear: both;
