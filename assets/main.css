@@ -383,6 +383,7 @@ table td {
   }
   .site-nav .menu-icon > svg {
     fill: #424242;
+    fill: green;
   }
   .site-nav input ~ .trigger {
     clear: both;
