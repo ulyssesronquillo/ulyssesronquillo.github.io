@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-10-22T03:30:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">list file types</title><link href="http://0.0.0.0:4000/2025/10/21/list-file-types.html" rel="alternate" type="text/html" title="list file types" /><published>2025-10-21T00:00:00+00:00</published><updated>2025-10-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/21/list-file-types</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/21/list-file-types.html"><![CDATA[<p>How to list file types in the current directory.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-10-22T11:44:30+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">list file types</title><link href="http://0.0.0.0:4000/2025/10/21/list-file-types.html" rel="alternate" type="text/html" title="list file types" /><published>2025-10-21T00:00:00+00:00</published><updated>2025-10-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/21/list-file-types</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/21/list-file-types.html"><![CDATA[<p>How to list file types in the current directory.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 fileTypes=("/*.NEF" "/*.JPG")
@@ -52,11 +52,7 @@ done
 
 <ul>
   <li>Fuji 70-300 XF f4-5.6 R LM OIS</li>
-</ul>]]></content><author><name>ulysses</name></author><category term="photography" /><category term="nikon," /><category term="photos," /><category term="lens," /><category term="fuji" /><summary type="html"><![CDATA[Here’s are my cameras and lenses:]]></summary></entry><entry><title type="html">coffee grind settings</title><link href="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html" rel="alternate" type="text/html" title="coffee grind settings" /><published>2025-05-13T00:00:00+00:00</published><updated>2025-05-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings</id><content type="html" xml:base="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html"><![CDATA[<p>Here are my espresso settings for the Breville Barista Express.</p>
-
-<p>The double shots are always set to 17 grams while the single shots are 8.75 grams.</p>
-
-<p>I make slight adjustments to the grind settings on my Breville Smart Grinder to dial in the shots.</p>
+</ul>]]></content><author><name>ulysses</name></author><category term="photography" /><category term="nikon," /><category term="photos," /><category term="lens," /><category term="fuji" /><summary type="html"><![CDATA[Here’s are my cameras and lenses:]]></summary></entry><entry><title type="html">coffee grind settings</title><link href="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html" rel="alternate" type="text/html" title="coffee grind settings" /><published>2025-05-13T00:00:00+00:00</published><updated>2025-05-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings</id><content type="html" xml:base="http://0.0.0.0:4000/misc/2025/05/13/coffee-grind-settings.html"><![CDATA[<p>Listed below are my espresso settings for the different coffee brands on the Breville Barista Express. Double shots are always 17 grams while single shots are only 8.5 grams. I use the Breville Smart Grinder to dial in the shots and make slight adjustments as needed.</p>
 
 <p>Here are the grind settings:</p>
 
@@ -75,6 +71,10 @@ done
     <tr>
       <td style="text-align: left">cafe cubano roast</td>
       <td style="text-align: left">6</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">heirloom fire poppy blend</td>
+      <td style="text-align: left">8</td>
     </tr>
     <tr>
       <td style="text-align: left">stauff’s breakfast</td>
@@ -115,7 +115,7 @@ done
   </tbody>
 </table>
 
-<p>Updated July 25, 2025.</p>]]></content><author><name>ulysses</name></author><category term="misc" /><category term="coffee" /><category term="grind" /><summary type="html"><![CDATA[Here are my espresso settings for the Breville Barista Express.]]></summary></entry><entry><title type="html">ffmpeg convert mk4 to mp4</title><link href="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html" rel="alternate" type="text/html" title="ffmpeg convert mk4 to mp4" /><published>2025-02-19T00:00:00+00:00</published><updated>2025-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html"><![CDATA[<p>Here’s a simple ffmpeg command to convert from mk4 to mp4 videos.</p>
+<p>Updated July 25, 2025.</p>]]></content><author><name>ulysses</name></author><category term="misc" /><category term="coffee" /><category term="grind" /><summary type="html"><![CDATA[Listed below are my espresso settings for the different coffee brands on the Breville Barista Express. Double shots are always 17 grams while single shots are only 8.5 grams. I use the Breville Smart Grinder to dial in the shots and make slight adjustments as needed.]]></summary></entry><entry><title type="html">ffmpeg convert mk4 to mp4</title><link href="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html" rel="alternate" type="text/html" title="ffmpeg convert mk4 to mp4" /><published>2025-02-19T00:00:00+00:00</published><updated>2025-02-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/02/19/ffmpeg-convert-mk4-to-mp4.html"><![CDATA[<p>Here’s a simple ffmpeg command to convert from mk4 to mp4 videos.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i coffee.mkv -codec copy coffee.mp4
 </code></pre></div></div>
