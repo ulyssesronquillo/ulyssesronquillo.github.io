@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-10-22T01:53:19+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">viltrox 27mm f1.2</title><link href="http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2.html" rel="alternate" type="text/html" title="viltrox 27mm f1.2" /><published>2025-08-16T00:00:00+00:00</published><updated>2025-08-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2</id><content type="html" xml:base="http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2.html"><![CDATA[<p>Just started shooting on a Viltrox 27mm f1.2.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-10-22T03:30:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">list file types</title><link href="http://0.0.0.0:4000/2025/10/21/list-file-types.html" rel="alternate" type="text/html" title="list file types" /><published>2025-10-21T00:00:00+00:00</published><updated>2025-10-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/21/list-file-types</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/21/list-file-types.html"><![CDATA[<p>How to list file types in the current directory.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+fileTypes=("/*.NEF" "/*.JPG")
+for i in "${fileTypes[@]}" ; do
+  echo $i
+done
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to list file types in the current directory.]]></summary></entry><entry><title type="html">viltrox 27mm f1.2</title><link href="http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2.html" rel="alternate" type="text/html" title="viltrox 27mm f1.2" /><published>2025-08-16T00:00:00+00:00</published><updated>2025-08-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2</id><content type="html" xml:base="http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2.html"><![CDATA[<p>Just started shooting on a Viltrox 27mm f1.2.</p>
 
 <p>Here are pros and cons.</p>
 
@@ -202,19 +209,4 @@ if [ $? -ne 0 ]; then
   echo "Previous command failed. Exiting."
   exit 1
 fi
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="exit" /><category term="command" /><category term="failed" /><summary type="html"><![CDATA[Here’s a bit of bash code that will exit if the previous command failed.]]></summary></entry><entry><title type="html">fujifilm simulations on the nikon d700</title><link href="http://0.0.0.0:4000/personal/2025/01/09/fujifilm-simulations-on-the-nikon-d700.html" rel="alternate" type="text/html" title="fujifilm simulations on the nikon d700" /><published>2025-01-09T00:00:00+00:00</published><updated>2025-01-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/personal/2025/01/09/fujifilm-simulations-on-the-nikon-d700</id><content type="html" xml:base="http://0.0.0.0:4000/personal/2025/01/09/fujifilm-simulations-on-the-nikon-d700.html"><![CDATA[<p>You can add film simulation like features on the old Nikon D700.</p>
-
-<p>Just head over to <a href="nikonpc.com">nikonpc.com</a> and download the presets.</p>
-
-<p>Follow the instructions tp activate on your camera.</p>
-
-<p>Here are the simulations I’ve downloaded and tried.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B&amp;W Contrast
-B&amp;W Portrait
-Fuji Astia
-Fuji Provia
-Fuji SReala Skin
-Fuji Velvia
-Kodak Gold 100
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="personal" /><category term="fujifilm" /><category term="simulations" /><category term="nikon" /><category term="d700" /><summary type="html"><![CDATA[You can add film simulation like features on the old Nikon D700.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="exit" /><category term="command" /><category term="failed" /><summary type="html"><![CDATA[Here’s a bit of bash code that will exit if the previous command failed.]]></summary></entry></feed>
