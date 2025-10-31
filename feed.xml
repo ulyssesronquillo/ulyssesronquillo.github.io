@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-10-31T13:07:20+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">fujifilm simulation cc muted</title><link href="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html" rel="alternate" type="text/html" title="fujifilm simulation cc muted" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html"><![CDATA[<p>I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-10-31T14:50:37+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">nikon to fuji adapter</title><link href="http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter.html" rel="alternate" type="text/html" title="nikon to fuji adapter" /><published>2025-10-31T00:00:00+00:00</published><updated>2025-10-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter.html"><![CDATA[<p>Two months ago, I bought a K&amp;F lens adapter that will allow me to use Nikon lenses on a Fuji camera.</p>
+
+<p>I have several Nikon prime lenses that I can use on a Fuji camera.</p>
+
+<ul>
+  <li>Nikon 24mm F2.8D</li>
+  <li>Nikon 35mm F2D</li>
+  <li>Nikon 50mm F1.4D</li>
+</ul>
+
+<p>I also have a couple of Nikon G lenses.</p>
+
+<ul>
+  <li>Nikon 24-85mm F3.5-4.5G</li>
+  <li>Nikon 18-200mm F3.5-5.6G</li>
+</ul>
+
+<p>It’s not 100% compatible. It’s all manual focus on the Fuji camera even though the lenses are autofocus.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Two months ago, I bought a K&amp;F lens adapter that will allow me to use Nikon lenses on a Fuji camera.]]></summary></entry><entry><title type="html">fujifilm simulation cc muted</title><link href="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html" rel="alternate" type="text/html" title="fujifilm simulation cc muted" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html"><![CDATA[<p>I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome.</p>
 
 <p>Here’s the recipe.</p>
 
@@ -208,8 +225,4 @@ bind-key y set-window-option synchronize-panes\; display-message "Toggle syncron
 
 # Reload tmux config
 bind r source-file ~/.tmux.conf\; display-message "Load tmux configuration."
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="tmux" /><category term="macos" /><category term="iterm2" /><category term="vscode" /><summary type="html"><![CDATA[The other day I started using tmux terminal emulator on my mac desktop. I’m using iterm2 inside Visual Code Editor. If you’re not familiar with tmux, it contains sessions. Inside each session, you can have multiple windows. Inside each window, you can have multiple panes. Switching across sessions, windows or panes is easy. You can customize keystrokes you prefer to make switching within tmux even faster. I modified my tmux configuration by creating a file called ~/.tmux.conf.]]></summary></entry><entry><title type="html">linux mint 22 xia</title><link href="http://0.0.0.0:4000/linux/2025/01/20/linux-mint-22-xia.html" rel="alternate" type="text/html" title="linux mint 22 xia" /><published>2025-01-20T00:00:00+00:00</published><updated>2025-01-20T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/20/linux-mint-22-xia</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/20/linux-mint-22-xia.html"><![CDATA[<p>I upgraded my Linux Mint desktop to the latest Mint 22 Xia.</p>
-
-<p>So far so good. Subtle differences, but can’t see major changes.</p>
-
-<p>The current version is now supported until the year 2029.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="mint" /><category term="22" /><category term="xia" /><summary type="html"><![CDATA[I upgraded my Linux Mint desktop to the latest Mint 22 Xia.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="tmux" /><category term="macos" /><category term="iterm2" /><category term="vscode" /><summary type="html"><![CDATA[The other day I started using tmux terminal emulator on my mac desktop. I’m using iterm2 inside Visual Code Editor. If you’re not familiar with tmux, it contains sessions. Inside each session, you can have multiple windows. Inside each window, you can have multiple panes. Switching across sessions, windows or panes is easy. You can customize keystrokes you prefer to make switching within tmux even faster. I modified my tmux configuration by creating a file called ~/.tmux.conf.]]></summary></entry></feed>
