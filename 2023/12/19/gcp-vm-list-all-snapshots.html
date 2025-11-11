@@ -4,22 +4,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>fujifilm simulation cc muted | uly.me</title>
+<title>gcp vm list all snapshots | uly.me</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="fujifilm simulation cc muted" />
+<meta property="og:title" content="gcp vm list all snapshots" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome." />
-<meta property="og:description" content="I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome." />
-<link rel="canonical" href="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html" />
-<meta property="og:url" content="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html" />
+<meta name="description" content="Here’s how to list all the snapshots for a particular VM in GCP." />
+<meta property="og:description" content="Here’s how to list all the snapshots for a particular VM in GCP." />
+<link rel="canonical" href="http://0.0.0.0:4000/2023/12/19/gcp-vm-list-all-snapshots.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/2023/12/19/gcp-vm-list-all-snapshots.html" />
 <meta property="og:site_name" content="uly.me" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-10-26T00:00:00+00:00" />
+<meta property="article:published_time" content="2023-12-19T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="fujifilm simulation cc muted" />
+<meta property="twitter:title" content="gcp vm list all snapshots" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2025-10-26T00:00:00+00:00","datePublished":"2025-10-26T00:00:00+00:00","description":"I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome.","headline":"fujifilm simulation cc muted","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html"},"url":"http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2023-12-19T00:00:00+00:00","datePublished":"2023-12-19T00:00:00+00:00","description":"Here’s how to list all the snapshots for a particular VM in GCP.","headline":"gcp vm list all snapshots","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2023/12/19/gcp-vm-list-all-snapshots.html"},"url":"http://0.0.0.0:4000/2023/12/19/gcp-vm-list-all-snapshots.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -46,36 +46,48 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">fujifilm simulation cc muted</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2025-10-26T00:00:00+00:00" itemprop="datePublished">
-        Oct 26, 2025
+    <h1 class="post-title p-name" itemprop="name headline">gcp vm list all snapshots</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-12-19T00:00:00+00:00" itemprop="datePublished">
+        Dec 19, 2023
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="p-author h-card" itemprop="name">ulysses</span></span></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome.</p>
+    <p>Here’s how to list all the snapshots for a particular VM in GCP.</p>
 
-<p>Here’s the recipe.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
-<ul>
-  <li>Film Simulation: Classic Chrome</li>
-  <li>Grain Effect: Off</li>
-  <li>Color Chrome Effect: Off</li>
-  <li>Color Chrome FX Blue: Off</li>
-  <li>White Balance: Auto</li>
-  <li>Dynamic Range: DR400</li>
-  <li>D Range Priority: Off</li>
-  <li>Tone Curve: H -1, S +1</li>
-  <li>Color: -3</li>
-  <li>Sharpness: +1</li>
-  <li>Hign ISO NR: 0</li>
-  <li>Clarity: 0</li>
-</ul>
+if [ "$#" -ne 3 ]
+then
+  echo "Usage: ./gcp-list-all-snapshots.sh project server policy"
+  exit
+fi
+
+# Set the name of the snapshot schedule policy and the disk name to filter by
+PROJECT=$1            # PROJECT="projectId"
+SERVER=$2             # DISK_NAME="hostname"
+POLICY=$3             # POLICY_NAME="hourly or daily"
+
+disks=$(gcloud compute disks list --project $PROJECT --filter="name~$SERVER" --format="value(name)") 
+
+for disk in $disks; do
+
+  # List all snapshots created by the snapshot schedule policy
+  gcloud compute snapshots list \
+  --filter="sourceSnapshotSchedulePolicy ~ $POLICY AND sourceDisk~$disk$" \
+  --format="table(sourceDisk.basename(),name,creationTimestamp,sourceSnapshotSchedulePolicy.basename())" \
+  --sort-by "~creationTimestamp" \
+  --project="$PROJECT"
+
+done
+</code></pre></div></div>
+
+<p>The script requires three arguments: projectId, hostname and policy.</p>
 
   </div>
-<a class="u-url" href="/2025/10/26/fujifilm-simulation-cc-muted.html" hidden></a>
+<a class="u-url" href="/2023/12/19/gcp-vm-list-all-snapshots.html" hidden></a>
 </article>
 
       </div>

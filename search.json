@@ -63,7 +63,7 @@
     {
 
       "title"    : "cameras and lenses",
-      "url"      : "/photography/2025/05/25/cameras-lenses.html",
+      "url"      : "/2025/05/25/cameras-lenses.html",
       "category" : "",
       "tags"     : "nikon,, photos,, lens,, fuji",
       "date"     : "2025-05-25 00:00:00 +0000"
@@ -73,7 +73,7 @@
     {
 
       "title"    : "coffee grind settings",
-      "url"      : "/misc/2025/05/13/coffee-grind-settings.html",
+      "url"      : "/2025/05/13/coffee-grind-settings.html",
       "category" : "",
       "tags"     : "coffee, grind",
       "date"     : "2025-05-13 00:00:00 +0000"
@@ -143,7 +143,7 @@
     {
 
       "title"    : "fujifilm simulations on the nikon d700",
-      "url"      : "/personal/2025/01/09/fujifilm-simulations-on-the-nikon-d700.html",
+      "url"      : "/2025/01/09/fujifilm-simulations-on-the-nikon-d700.html",
       "category" : "",
       "tags"     : "fujifilm, simulations, nikon, d700",
       "date"     : "2025-01-09 00:00:00 +0000"
@@ -243,7 +243,7 @@
     {
 
       "title"    : "install azure cli",
-      "url"      : "/cloud/2024/12/30/install-azure-cli.html",
+      "url"      : "/2024/12/30/install-azure-cli.html",
       "category" : "",
       "tags"     : "azure, cli, install",
       "date"     : "2024-12-30 00:00:00 +0000"
@@ -293,7 +293,7 @@
     {
 
       "title"    : "gcp create image with license",
-      "url"      : "/cloud/2024/12/18/gcp-create-image-with-license.html",
+      "url"      : "/2024/12/18/gcp-create-image-with-license.html",
       "category" : "",
       "tags"     : "create, image, license",
       "date"     : "2024-12-18 00:00:00 +0000"
@@ -323,7 +323,7 @@
     {
 
       "title"    : "gsutil copy local recursively to bucket",
-      "url"      : "/cloud/2024/12/17/gsutil-copy-local-recursively-to-bucket.html",
+      "url"      : "/2024/12/17/gsutil-copy-local-recursively-to-bucket.html",
       "category" : "",
       "tags"     : "gcs, bucket, copy, recursively",
       "date"     : "2024-12-17 00:00:00 +0000"
@@ -543,7 +543,7 @@
     {
 
       "title"    : "jump start power supply",
-      "url"      : "/misc/2024/02/06/jump-start-power-supply.html",
+      "url"      : "/2024/02/06/jump-start-power-supply.html",
       "category" : "",
       "tags"     : "jump, start, power, supply",
       "date"     : "2024-02-06 00:00:00 +0000"
@@ -553,7 +553,7 @@
     {
 
       "title"    : "gcp create hyperdisks",
-      "url"      : "/cloud/2024/02/05/gcp-create-hyperdisks.html",
+      "url"      : "/2024/02/05/gcp-create-hyperdisks.html",
       "category" : "",
       "tags"     : "gcp, create, hyperdisk",
       "date"     : "2024-02-05 00:00:00 +0000"
@@ -593,7 +593,7 @@
     {
 
       "title"    : "gcp check login",
-      "url"      : "/cloud/2024/01/22/gcp-check-login.html",
+      "url"      : "/2024/01/22/gcp-check-login.html",
       "category" : "",
       "tags"     : "gcp, check, login, auth",
       "date"     : "2024-01-22 00:00:00 +0000"
@@ -633,7 +633,7 @@
     {
 
       "title"    : "gcloud vm alias ip",
-      "url"      : "/cloud/2024/01/13/gcloud-vm-alias-ip.html",
+      "url"      : "/2024/01/13/gcloud-vm-alias-ip.html",
       "category" : "",
       "tags"     : "gcloud, vm, ip, alias",
       "date"     : "2024-01-13 00:00:00 +0000"
@@ -643,7 +643,7 @@
     {
 
       "title"    : "terraform gcp vm alias ip",
-      "url"      : "/cloud/2024/01/12/terraform-gcp-vm-alias-ip.html",
+      "url"      : "/2024/01/12/terraform-gcp-vm-alias-ip.html",
       "category" : "",
       "tags"     : "gcp, vm, alias, ip",
       "date"     : "2024-01-12 00:00:00 +0000"
@@ -683,7 +683,7 @@
     {
 
       "title"    : "terraform local variables",
-      "url"      : "/cloud/2024/01/08/terraform-local-variables.html",
+      "url"      : "/2024/01/08/terraform-local-variables.html",
       "category" : "",
       "tags"     : "terraform, local, variables",
       "date"     : "2024-01-08 00:00:00 +0000"
@@ -773,7 +773,7 @@
     {
 
       "title"    : "gcp restore boot disk",
-      "url"      : "/cloud/2023/12/20/gcp-restore-boot-disk.html",
+      "url"      : "/2023/12/20/gcp-restore-boot-disk.html",
       "category" : "",
       "tags"     : "gcp, restore, vm, boot, disk",
       "date"     : "2023-12-20 00:00:00 +0000"
@@ -783,7 +783,7 @@
     {
 
       "title"    : "gcp restore all disks",
-      "url"      : "/cloud/2023/12/20/gcp-restore-all-disks.html",
+      "url"      : "/2023/12/20/gcp-restore-all-disks.html",
       "category" : "",
       "tags"     : "gcp, compute, restore, all, disks",
       "date"     : "2023-12-20 00:00:00 +0000"
@@ -803,7 +803,7 @@
     {
 
       "title"    : "gcp vm list all snapshots",
-      "url"      : "/cloud/2023/12/19/gcp-vm-list-all-snapshots.html",
+      "url"      : "/2023/12/19/gcp-vm-list-all-snapshots.html",
       "category" : "",
       "tags"     : "gcp, vm, list, snapshots, policy",
       "date"     : "2023-12-19 00:00:00 +0000"
