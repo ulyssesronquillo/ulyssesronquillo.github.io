@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-11-11T12:35:54+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">nikon to fuji adapter</title><link href="http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter.html" rel="alternate" type="text/html" title="nikon to fuji adapter" /><published>2025-10-31T00:00:00+00:00</published><updated>2025-10-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter.html"><![CDATA[<p>Two months ago, I bought a <a href="https://www.kentfaith.com/KF06.443_new-product-kf-m18115-nikon-nik-g-fx-pro-20-year-high-precision-lens-adapter-orange">K&amp;F Nikon to Fujifilm lens adapter</a> that will allow Nikon lenses to be used on a Fuji camera.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-11-17T12:49:43+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">nodejs web server docker</title><link href="http://0.0.0.0:4000/2025/11/17/nodejs-web-server-docker.html" rel="alternate" type="text/html" title="nodejs web server docker" /><published>2025-11-17T00:00:00+00:00</published><updated>2025-11-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/11/17/nodejs-web-server-docker</id><content type="html" xml:base="http://0.0.0.0:4000/2025/11/17/nodejs-web-server-docker.html"><![CDATA[<p>Create a node.js web server running on docker.</p>
+
+<p>create an index.js.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// index.js
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) =&gt; {
+  res.send('Hello from Node.js in Docker!');
+});
+
+app.listen(port, () =&gt; {
+  console.log(`App listening at http://localhost:${port}`);
+});
+</code></pre></div></div>
+
+<p>install node</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install npm
+npm init -y
+npm install express
+</code></pre></div></div>
+
+<p>create a Dockerfile</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Dockerfile
+FROM node:alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["node", "index.js"]
+</code></pre></div></div>
+
+<p>create docker-compose.yml file</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># docker-compose.yml
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      NODE_ENV: development # Or production
+</code></pre></div></div>
+
+<p>finally, start the node.js web application in a docker container</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Create a node.js web server running on docker.]]></summary></entry><entry><title type="html">nikon to fuji adapter</title><link href="http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter.html" rel="alternate" type="text/html" title="nikon to fuji adapter" /><published>2025-10-31T00:00:00+00:00</published><updated>2025-10-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter.html"><![CDATA[<p>Two months ago, I bought a <a href="https://www.kentfaith.com/KF06.443_new-product-kf-m18115-nikon-nik-g-fx-pro-20-year-high-precision-lens-adapter-orange">K&amp;F Nikon to Fujifilm lens adapter</a> that will allow Nikon lenses to be used on a Fuji camera.</p>
 
 <p>I have several Nikon prime lenses for the picking.</p>
 
@@ -178,51 +233,4 @@ done
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg -i coffee.mkv -codec copy coffee.mp4
 </code></pre></div></div>
 
-<p>It works on other formats as well such as mov, wmv, avi, mkv, webm to name just a few.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="ffmpeg" /><category term="convert" /><category term="mk4" /><category term="mp4" /><summary type="html"><![CDATA[Here’s a simple ffmpeg command to convert from mk4 to mp4 videos.]]></summary></entry><entry><title type="html">tmux on macos iterm2 vscode</title><link href="http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode.html" rel="alternate" type="text/html" title="tmux on macos iterm2 vscode" /><published>2025-01-23T00:00:00+00:00</published><updated>2025-01-23T00:00:00+00:00</updated><id>http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode</id><content type="html" xml:base="http://0.0.0.0:4000/linux/2025/01/23/tmux-on-macos-iterm2-vscode.html"><![CDATA[<p>The other day I started using tmux terminal emulator on my mac desktop. I’m using iterm2 inside Visual Code Editor. If you’re not familiar with tmux, it contains sessions. Inside each session, you can have multiple windows. Inside each window, you can have multiple panes. Switching across sessions, windows or panes is easy. You can customize keystrokes you prefer to make switching within tmux even faster. I modified my tmux configuration by creating a file called ~/.tmux.conf.</p>
-
-<p>Here’s my setup.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Status bar colors
-set -g default-terminal "screen-256color"
-set-window-option -g xterm-keys on
-set -g status-bg default
-set -g status-fg default
-
-# Change prefix
-unbind C-b
-set-option -g prefix `
-bind ` send-prefix
-
-# Weather
-set -g status-interval 120
-WEATHER='#(curl -s wttr.in/Hilliard\?format\="%%l:+%%c%%20%%t%%20%%f%%20%%h%%20%%w%%20&amp;period=60&amp;u")'
-set -g status-right " tmux iTerm2 MacOS | $WEATHER | %b %d %Y %l:%M %p  "
-set -g status-right-length 130
-
-# Mouse mode
-set -g mouse on
-
-# Alt-arrows
-bind -n M-Left select-pane -L
-bind -n M-Right select-pane -R
-bind -n M-Up select-pane -U
-bind -n M-Down select-pane -D
-
-# Split keys
-bind-key v split-window -h
-bind-key h split-window -v
-
-# Shift arrows
-bind -n S-Left previous-window
-bind -n S-Right next-window
-
-# Swap windows
-bind-key -n C-S-Left swap-window -t -1; select-window -t -1
-bind-key -n C-S-Right swap-window -t +1; select-window -t +1
-
-# Sync panes
-bind-key y set-window-option synchronize-panes\; display-message "Toggle syncronize mode."
-
-# Reload tmux config
-bind r source-file ~/.tmux.conf\; display-message "Load tmux configuration."
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="tmux" /><category term="macos" /><category term="iterm2" /><category term="vscode" /><summary type="html"><![CDATA[The other day I started using tmux terminal emulator on my mac desktop. I’m using iterm2 inside Visual Code Editor. If you’re not familiar with tmux, it contains sessions. Inside each session, you can have multiple windows. Inside each window, you can have multiple panes. Switching across sessions, windows or panes is easy. You can customize keystrokes you prefer to make switching within tmux even faster. I modified my tmux configuration by creating a file called ~/.tmux.conf.]]></summary></entry></feed>
+<p>It works on other formats as well such as mov, wmv, avi, mkv, webm to name just a few.</p>]]></content><author><name>ulysses</name></author><category term="linux" /><category term="ffmpeg" /><category term="convert" /><category term="mk4" /><category term="mp4" /><summary type="html"><![CDATA[Here’s a simple ffmpeg command to convert from mk4 to mp4 videos.]]></summary></entry></feed>
