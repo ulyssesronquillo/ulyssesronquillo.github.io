@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "new gallery",
+      "url"      : "/2025/11/19/new-gallery.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2025-11-19 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "nodejs web server docker",
       "url"      : "/2025/11/17/nodejs-web-server-docker.html",
       "category" : "",
