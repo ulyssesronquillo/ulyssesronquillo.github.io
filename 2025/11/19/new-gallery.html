@@ -9,8 +9,8 @@
 <meta property="og:title" content="new gallery" />
 <meta name="author" content="ulysses" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Just built a new photo gallery with some help from Javascript render the gallery. The gallery pages are justified and are rendered on the fly when the browser is resized. The script is generated from a combination of node.js and shell script to create the index.html files. The gallery is hosted on AWS S3. Here’s the link. To build a new gallery, simply create a new directory, drop in the images in that same directory, and run a couple of scripts to generate the index files. Upload the index.html files and images to S3. That’s all she wrote." />
-<meta property="og:description" content="Just built a new photo gallery with some help from Javascript render the gallery. The gallery pages are justified and are rendered on the fly when the browser is resized. The script is generated from a combination of node.js and shell script to create the index.html files. The gallery is hosted on AWS S3. Here’s the link. To build a new gallery, simply create a new directory, drop in the images in that same directory, and run a couple of scripts to generate the index files. Upload the index.html files and images to S3. That’s all she wrote." />
+<meta name="description" content="I just built a new photo gallery from scratch with some help from node.js and lightbox modal to render the galleries and images. I use docker-compose to install node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and galleries." />
+<meta property="og:description" content="I just built a new photo gallery from scratch with some help from node.js and lightbox modal to render the galleries and images. I use docker-compose to install node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and galleries." />
 <link rel="canonical" href="http://0.0.0.0:4000/2025/11/19/new-gallery.html" />
 <meta property="og:url" content="http://0.0.0.0:4000/2025/11/19/new-gallery.html" />
 <meta property="og:site_name" content="uly.me" />
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="new gallery" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2025-11-19T00:00:00+00:00","datePublished":"2025-11-19T00:00:00+00:00","description":"Just built a new photo gallery with some help from Javascript render the gallery. The gallery pages are justified and are rendered on the fly when the browser is resized. The script is generated from a combination of node.js and shell script to create the index.html files. The gallery is hosted on AWS S3. Here’s the link. To build a new gallery, simply create a new directory, drop in the images in that same directory, and run a couple of scripts to generate the index files. Upload the index.html files and images to S3. That’s all she wrote.","headline":"new gallery","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2025/11/19/new-gallery.html"},"url":"http://0.0.0.0:4000/2025/11/19/new-gallery.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2025-11-19T00:00:00+00:00","datePublished":"2025-11-19T00:00:00+00:00","description":"I just built a new photo gallery from scratch with some help from node.js and lightbox modal to render the galleries and images. I use docker-compose to install node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and galleries.","headline":"new gallery","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2025/11/19/new-gallery.html"},"url":"http://0.0.0.0:4000/2025/11/19/new-gallery.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
 <body><header class="site-header" role="banner">
@@ -55,7 +55,16 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Just built a new photo gallery with some help from Javascript render the gallery. The gallery pages are justified and are rendered on the fly when the browser is resized. The script is generated from a combination of node.js and shell script to create the index.html files. The gallery is hosted on AWS S3. Here’s the <a href="https://s3.us-east-2.amazonaws.com/javison.com/index.html" target="_blank" rel="noopener noreferrer">link</a>. To build a new gallery, simply create a new directory, drop in the images in that same directory, and run a couple of scripts to generate the index files. Upload the index.html files and images to S3. That’s all she wrote.</p>
+    <p>I just built a new photo gallery from scratch with some help from node.js and lightbox modal to render the galleries and images. I use docker-compose to install node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and galleries.</p>
+
+<ul>
+  <li>createIndex.js - scans the root directory for any galleries and adds them to the index.html file.</li>
+  <li>createGallery.js - scans the targeted gallery directory for JPG image files, creates a gallery and saves it as index.html.</li>
+</ul>
+
+<p>The gallery pages are justified and are rendered on the fly when the browser is resized. To build a new galleries, simply create a new directory, drop the images in that directory, and run a couple of scripts to generate the index and gallery files. Once the gallery files are generated, I simply upload to AWS S3 bucket using a couple of custom shell scripts.</p>
+
+<p>The gallery is hosted on AWS <a href="https://s3.us-east-2.amazonaws.com/javison.com/index.html" target="_blank" rel="noopener noreferrer">S3</a>.</p>
 
   </div>
 <a class="u-url" href="/2025/11/19/new-gallery.html" hidden></a>
