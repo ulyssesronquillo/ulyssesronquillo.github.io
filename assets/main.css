@@ -202,7 +202,7 @@ ul#results-container li {
   margin: 0;
   padding: 0;
   margin-top: -3px;
-  list-style-type: none;
+  margin-left: 20px;
 }
 
 .date {
