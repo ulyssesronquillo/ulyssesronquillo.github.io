@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-11-30T16:39:26+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">gallery</title><link href="http://0.0.0.0:4000/2025/11/19/gallery.html" rel="alternate" type="text/html" title="gallery" /><published>2025-11-19T00:00:00+00:00</published><updated>2025-11-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/11/19/gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/11/19/gallery.html"><![CDATA[<p>I just built a photo gallery from scratch with some help from node.js and lightbox modal to render the images and the galleries. I use docker-compose to install the node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and gallery files.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-02T15:10:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">file upload</title><link href="http://0.0.0.0:4000/2025/12/02/file-upload.html" rel="alternate" type="text/html" title="file upload" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/02/file-upload</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/02/file-upload.html"><![CDATA[<p>I created an upload file page using HTML, PHP, CSS and Javascript.</p>
+
+<ul>
+  <li>HTML &amp; PHP handles the input form</li>
+  <li>Javascript provides the spinning gif</li>
+  <li>CSS provides the styling</li>
+  <li>Using Google fonts</li>
+</ul>
+
+<p>I also tweak the /etc/php.ini settings to allow large files.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file_uploads = On
+upload_max_filesize = 200M
+post_max_size = 200M
+max_file_uploads = 20
+</code></pre></div></div>
+
+<p>Here’s the code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap');
+body {
+   font-family: Roboto, sans-serif;
+   font-optical-sizing: normal;
+   font-weight: 400;
+   font-style: normal;
+   background-color: #222;
+   color: #000;
+}
+.content {
+   width: 1080px;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: #fff;
+   min-height: 90vh;
+}
+.loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  display: none; /* Hide loader by default */
+  margin-left: 10px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+hr {
+  border: 1px solid #777;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="content"&gt;
+&lt;h2&gt;Uploading Files to CloudReporting&lt;/h2&gt;
+&lt;h3&gt;Upload Files:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Click on the "Choose Files" button.&lt;/li&gt;
+&lt;li&gt;You can select one or multiple files to upload.&lt;/li&gt;
+&lt;li&gt;Once files are selected, click on the Upload button to begin the upload process.&lt;/li&gt;
+&lt;li&gt;Depending on file size(s), the upload process could take a few seconds to a few minutes. Please be patient.&lt;/li&gt;
+&lt;li&gt;If uploads are successful, there will be a message saying 'files uploaded successfully.'&lt;/li&gt;
+&lt;/ol&gt;
+&lt;form id="uploadForm" action="" method="post" enctype="multipart/form-data"&gt;
+    &lt;label&gt;Select files to upload:&lt;/label&gt;
+    &lt;input id="fileInput" type="file" name="files[]" multiple required&gt;
+    &lt;button type="submit"&gt;Upload&lt;/button&gt;
+&lt;/form&gt;
+&lt;div class="loader" id="loader"&gt;&lt;/div&gt;
+&lt;?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $uploadDir = 'uploads/';
+    // Ensure the directory exists
+    if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0755, true);
+    }
+    // Check if files were uploaded
+    if (isset($_FILES['files'])) {
+        $totalFiles = count($_FILES['files']['name']);
+        for ($i = 0; $i &lt; $totalFiles; $i++) {
+            if ($_FILES['files']['error'][$i] === UPLOAD_ERR_OK) {
+                $fileName = basename($_FILES['files']['name'][$i]);
+                $targetFile = $uploadDir . $fileName;
+                if (move_uploaded_file($_FILES['files']['tmp_name'][$i], $targetFile)) {
+                    echo "File uploaded successfully: " . htmlspecialchars($fileName) . "&lt;br&gt;";
+                } else {
+                    echo "Error uploading file: " . htmlspecialchars($fileName) . "&lt;br&gt;";
+                }
+            } else {
+                echo "Error with file: " . htmlspecialchars($_FILES['files']['name'][$i]) . "&lt;br&gt;";
+            }
+        }
+    } else {
+        echo "No files uploaded.";
+    }
+}
+?&gt;
+&lt;script&gt;
+document.getElementById('uploadForm').addEventListener('submit', function() {
+    // Show loader when form is submitted
+    document.getElementById('loader').style.display = 'block';
+});
+&lt;/script&gt;
+&lt;h3&gt;Upload More Files:&lt;/h3&gt;
+&lt;p&gt;&lt;button onclick="document.location='upload.php'"&gt;Reload Page To Start Another Upload&lt;/button&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I created an upload file page using HTML, PHP, CSS and Javascript.]]></summary></entry><entry><title type="html">gallery</title><link href="http://0.0.0.0:4000/2025/11/19/gallery.html" rel="alternate" type="text/html" title="gallery" /><published>2025-11-19T00:00:00+00:00</published><updated>2025-11-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/11/19/gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/11/19/gallery.html"><![CDATA[<p>I just built a photo gallery from scratch with some help from node.js and lightbox modal to render the images and the galleries. I use docker-compose to install the node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and gallery files.</p>
 
 <p>2 node.js scripts:</p>
 
@@ -174,69 +287,4 @@ done
 
 <ul>
   <li>Fuji 70-300 XF f4-5.6 R LM OIS</li>
-</ul>]]></content><author><name>ulysses</name></author><category term="nikon," /><category term="photos," /><category term="lens," /><category term="fuji" /><summary type="html"><![CDATA[Here’s are my cameras and lenses:]]></summary></entry><entry><title type="html">coffee grind settings</title><link href="http://0.0.0.0:4000/2025/05/13/coffee-grind-settings.html" rel="alternate" type="text/html" title="coffee grind settings" /><published>2025-05-13T00:00:00+00:00</published><updated>2025-05-13T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/05/13/coffee-grind-settings</id><content type="html" xml:base="http://0.0.0.0:4000/2025/05/13/coffee-grind-settings.html"><![CDATA[<ul>
-  <li>Espresso settings for the different brands of coffee.</li>
-  <li>Double shots are 17 grams and single shots are 9.</li>
-  <li>Grind settings are for Breville Smart Grinder.</li>
-</ul>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Coffee</th>
-      <th style="text-align: left">Grind #</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">stauff’s baba budan</td>
-      <td style="text-align: left">6</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">cafe cubano roast</td>
-      <td style="text-align: left">6</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">heirloom fire poppy blend</td>
-      <td style="text-align: left">8</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">stauff’s breakfast</td>
-      <td style="text-align: left">6</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">crimson cup dark reign</td>
-      <td style="text-align: left">5</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">goodsam connected day</td>
-      <td style="text-align: left">8</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">beast dark roast</td>
-      <td style="text-align: left">4</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">brioso espresso blend</td>
-      <td style="text-align: left">8</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">roaming goat espresso blend</td>
-      <td style="text-align: left">8</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">lifeboost emboldened dark roast</td>
-      <td style="text-align: left">6</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">stauff’s peru</td>
-      <td style="text-align: left">10</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">stauff’s cerrado</td>
-      <td style="text-align: left">10</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Updated October 22, 2025.</p>]]></content><author><name>ulysses</name></author><category term="coffee" /><category term="grind" /><summary type="html"><![CDATA[Espresso settings for the different brands of coffee. Double shots are 17 grams and single shots are 9. Grind settings are for Breville Smart Grinder.]]></summary></entry></feed>
+</ul>]]></content><author><name>ulysses</name></author><category term="nikon," /><category term="photos," /><category term="lens," /><category term="fuji" /><summary type="html"><![CDATA[Here’s are my cameras and lenses:]]></summary></entry></feed>
