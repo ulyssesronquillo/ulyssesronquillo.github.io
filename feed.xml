@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-02T15:43:47+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">file upload</title><link href="http://0.0.0.0:4000/2025/12/02/file-upload.html" rel="alternate" type="text/html" title="file upload" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/02/file-upload</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/02/file-upload.html"><![CDATA[<p>I created an upload file page using HTML, PHP, CSS and Javascript.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-02T15:50:01+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">file upload</title><link href="http://0.0.0.0:4000/2025/12/02/file-upload.html" rel="alternate" type="text/html" title="file upload" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/02/file-upload</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/02/file-upload.html"><![CDATA[<p>I created a page for uploading file using HTML, PHP, CSS and Javascript.</p>
 
 <ul>
   <li>HTML displays the page</li>
   <li>PHP handles the input form</li>
   <li>Javascript displays the upload status</li>
-  <li>CSS provides the spinning image</li>
-  <li>Using the Robot Google font</li>
+  <li>CSS provides styling and spinning status</li>
+  <li>Using the Roboto Google font</li>
 </ul>
 
 <p>In addition, I also had to tweak the /etc/php.ini settings to allow upload of large files.</p>
@@ -16,7 +16,7 @@ post_max_size = 200M
 max_file_uploads = 20
 </code></pre></div></div>
 
-<p>Here’s the code in a single file.</p>
+<p>Here’s the code all wrapped in a single file.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
 &lt;head&gt;
@@ -111,7 +111,7 @@ document.getElementById('uploadForm').addEventListener('submit', function() {
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I created an upload file page using HTML, PHP, CSS and Javascript.]]></summary></entry><entry><title type="html">gallery</title><link href="http://0.0.0.0:4000/2025/11/19/gallery.html" rel="alternate" type="text/html" title="gallery" /><published>2025-11-19T00:00:00+00:00</published><updated>2025-11-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/11/19/gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/11/19/gallery.html"><![CDATA[<p>I just built a photo gallery from scratch with some help from node.js and lightbox modal to render the images and the galleries. I use docker-compose to install the node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and gallery files.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I created a page for uploading file using HTML, PHP, CSS and Javascript.]]></summary></entry><entry><title type="html">gallery</title><link href="http://0.0.0.0:4000/2025/11/19/gallery.html" rel="alternate" type="text/html" title="gallery" /><published>2025-11-19T00:00:00+00:00</published><updated>2025-11-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/11/19/gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/11/19/gallery.html"><![CDATA[<p>I just built a photo gallery from scratch with some help from node.js and lightbox modal to render the images and the galleries. I use docker-compose to install the node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and gallery files.</p>
 
 <p>2 node.js scripts:</p>
 
