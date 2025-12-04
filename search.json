@@ -852,6 +852,36 @@
   
     {
 
+      "title"    : "Using internal links",
+      "url"      : "/2023/12/17/using-internal-links.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2023-12-17 00:00:00 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "Multiple github accounts",
+      "url"      : "/2023/12/17/multiple-github-accounts.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2023-12-17 00:00:00 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "Switching from wordpress to jekyll",
+      "url"      : "/2023/12/16/switching-from-wordpress-to-jekyll.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2023-12-16 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "Editing multiple files",
       "url"      : "/2023/12/16/editing-multiple-files.html",
       "category" : "",
@@ -1733,10 +1763,10 @@
     {
 
       "title"    : "Jekyll on docker container",
-      "url"      : "/2022/08/30/jekyll-on-docker-container.html",
+      "url"      : "/2022/08/31/jekyll-on-docker-container.html",
       "category" : "",
       "tags"     : "",
-      "date"     : "2022-08-30 00:00:00 +0000"
+      "date"     : "2022-08-31 00:00:00 +0000"
 
     } ,
   
