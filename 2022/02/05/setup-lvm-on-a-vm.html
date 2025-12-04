@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>setup lvm on a vm | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="setup lvm on a vm" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="How to setup Logical Volume Manager on a VM." />
+<meta property="og:description" content="How to setup Logical Volume Manager on a VM." />
+<link rel="canonical" href="http://0.0.0.0:4000/2022/02/05/setup-lvm-on-a-vm.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/2022/02/05/setup-lvm-on-a-vm.html" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-02-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="setup lvm on a vm" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2022-02-05T00:00:00+00:00","datePublished":"2022-02-05T00:00:00+00:00","description":"How to setup Logical Volume Manager on a VM.","headline":"setup lvm on a vm","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2022/02/05/setup-lvm-on-a-vm.html"},"url":"http://0.0.0.0:4000/2022/02/05/setup-lvm-on-a-vm.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484l0,12.031c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,14.515,0,13.85,0,13.031V1.484 C0,0.665,0.665,0,1.484,0h15.032C17.335,0,18,0.665,18,1.484z"></path>
+              <path d="M9,3c-1.657,0-3,1.343-3,3s1.343,3,3,3s3-1.343,3-3S10.657,3,9,3z"></path>
+              <path d="M9,15.891c-4.274,0-8-1.343-8-3s3.726-3,8-3c0.537,0,1.074,0.041,1.605,0.117c0.376,1.371,1.453,2.408,2.77,2.408 c1.317,0,2.395-1.037,2.77-2.408C16.926,11.949,17.463,11.99,18,11.891c4.274,0,8,1.343,8,3s-3.726,3-8,3z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/blog/">blog</a><a class="page-link" href="/docs.html">docs</a><a class="page-link" href="/read.html">read</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">setup lvm on a vm</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2022-02-05T00:00:00+00:00" itemprop="datePublished">
+        Feb 5, 2022
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>How to setup Logical Volume Manager on a VM.</p>
+
+<p>Install LVM.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install lvm2
+</code></pre></div></div>
+
+<p>Check the disks available. We are going to run LVM on /dev/sdb.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   20G  0 disk 
+├─sda1   8:1    0  200M  0 part /boot/efi
+└─sda2   8:2    0 19.8G  0 part /
+sdb      8:16   0   20G  0 disk
+</code></pre></div></div>
+
+<p>Create a physical volume on /dev/sdb.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pvcreate /dev/sdb
+  Physical volume "/dev/sdb" successfully created.
+$ pvs
+  PV         VG Fmt  Attr PSize   PFree
+  /dev/sdb   vg lvm2 a--  
+</code></pre></div></div>
+
+<p>Create a volume group called vg.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vgcreate vg /dev/sdb
+  Volume group "vg" successfully created
+$ vgs
+  VG #PV #LV #SN Attr   VSize   VFree  
+  vg   1   0   0 wz--n- 
+</code></pre></div></div>
+
+<p>Create a 10GB logical volume group called data.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lvcreate -L 10G -n data vg
+  Logical volume "data" created.
+$ lvs
+  LV   VG Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  data vg -wi-a----- 10.00g
+</code></pre></div></div>
+
+<p>Format the volume group and mount it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkfs.xfs /dev/vg/data
+meta-data=/dev/vg/data           isize=512    agcount=4, agsize=655360 blks
+         =                       sectsz=4096  attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1
+data     =                       bsize=4096   blocks=2621440, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=4096  sunit=1 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+Discarding blocks...Done.
+$ mount /dev/vg/data /mnt
+</code></pre></div></div>
+
+<p>Check your logical volume. It says 10GB.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ df -Th
+Filesystem          Type      Size  Used Avail Use% Mounted on
+devtmpfs            devtmpfs  385M     0  385M   0% /dev
+tmpfs               tmpfs     403M     0  403M   0% /dev/shm
+tmpfs               tmpfs     403M  5.5M  398M   2% /run
+tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
+/dev/sda2           xfs        20G  2.9G   17G  15% /
+/dev/sda1           vfat      200M  5.8M  195M   3% /boot/efi
+tmpfs               tmpfs      81M     0   81M   0% /run/user/1000
+/dev/mapper/vg-data xfs        10G  104M  9.9G   2% /mnt
+</code></pre></div></div>
+
+<p>Let’s now extend the logical volume to 20GB.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lvextend -l +100%FREE /dev/vg/data
+  Size of logical volume vg/data changed from 10.00 GiB (2560 extents) to 
+</code></pre></div></div>
+
+<p>Although lsblk says 20GB, our logical volume still says 10GB</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ lsblk
+NAME      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda         8:0    0   20G  0 disk 
+├─sda1      8:1    0  200M  0 part /boot/efi
+└─sda2      8:2    0 19.8G  0 part /
+sdb         8:16   0   20G  0 disk 
+└─vg-data 253:0    0   20G  0 lvm  /mnt
+$ df -Th
+Filesystem          Type      Size  Used Avail Use% Mounted on
+devtmpfs            devtmpfs  385M     0  385M   0% /dev
+tmpfs               tmpfs     403M     0  403M   0% /dev/shm
+tmpfs               tmpfs     403M  5.5M  398M   2% /run
+tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
+/dev/sda2           xfs        20G  2.9G   17G  15% /
+/dev/sda1           vfat      200M  5.8M  195M   3% /boot/efi
+tmpfs               tmpfs      81M     0   81M   0% /run/user/1000
+/dev/mapper/vg-data xfs        10G  104M  9.9G   2% /mnt
+</code></pre></div></div>
+
+<p>We need to grow the file system.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xfs_growfs /dev/vg/data
+meta-data=/dev/mapper/vg-data    isize=512    agcount=4, agsize=655360 blks
+         =                       sectsz=4096  attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1
+data     =                       bsize=4096   blocks=2621440, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=4096  sunit=1 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 2621440 to 5241856
+</code></pre></div></div>
+
+<p>Let’s check again.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ df -Th
+Filesystem          Type      Size  Used Avail Use% Mounted on
+devtmpfs            devtmpfs  385M     0  385M   0% /dev
+tmpfs               tmpfs     403M     0  403M   0% /dev/shm
+tmpfs               tmpfs     403M  5.5M  398M   2% /run
+tmpfs               tmpfs     403M     0  403M   0% /sys/fs/cgroup
+/dev/sda2           xfs        20G  2.9G   17G  15% /
+/dev/sda1           vfat      200M  5.8M  195M   3% /boot/efi
+tmpfs               tmpfs      81M     0   81M   0% /run/user/1000
+/dev/mapper/vg-data xfs        20G  176M   20G   1% /mnt
+</code></pre></div></div>
+
+<p>It now says 20GB.</p>
+
+  </div>
+<a class="u-url" href="/2022/02/05/setup-lvm-on-a-vm.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>copyright © 2012-2025</p>
+      </div>
+    </div>
+    <div class="social-links">
+<ul class="social-media-list"></ul>
+</div>
+  </div>
+</footer>
+
+</body>
+
+</html>

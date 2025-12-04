@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>choosing dns servers | uly.me</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="choosing dns servers" />
+<meta name="author" content="ulysses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Every once in a while (it doesn’t happen very often) DNS servers would stop resolving certain domains causing intermittent issues when accessing the Internet. To solve the DNS issues, I often switch DNS servers on my main router. Changing DNS servers may require rebooting your router." />
+<meta property="og:description" content="Every once in a while (it doesn’t happen very often) DNS servers would stop resolving certain domains causing intermittent issues when accessing the Internet. To solve the DNS issues, I often switch DNS servers on my main router. Changing DNS servers may require rebooting your router." />
+<link rel="canonical" href="http://0.0.0.0:4000/2013/06/28/choosing-dns-servers.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/2013/06/28/choosing-dns-servers.html" />
+<meta property="og:site_name" content="uly.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-06-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="choosing dns servers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"ulysses"},"dateModified":"2013-06-28T00:00:00+00:00","datePublished":"2013-06-28T00:00:00+00:00","description":"Every once in a while (it doesn’t happen very often) DNS servers would stop resolving certain domains causing intermittent issues when accessing the Internet. To solve the DNS issues, I often switch DNS servers on my main router. Changing DNS servers may require rebooting your router.","headline":"choosing dns servers","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2013/06/28/choosing-dns-servers.html"},"url":"http://0.0.0.0:4000/2013/06/28/choosing-dns-servers.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="uly.me" /></head>
+<body><header class="site-header" role="banner">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">uly.me</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484l0,12.031c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,14.515,0,13.85,0,13.031V1.484 C0,0.665,0.665,0,1.484,0h15.032C17.335,0,18,0.665,18,1.484z"></path>
+              <path d="M9,3c-1.657,0-3,1.343-3,3s1.343,3,3,3s3-1.343,3-3S10.657,3,9,3z"></path>
+              <path d="M9,15.891c-4.274,0-8-1.343-8-3s3.726-3,8-3c0.537,0,1.074,0.041,1.605,0.117c0.376,1.371,1.453,2.408,2.77,2.408 c1.317,0,2.395-1.037,2.77-2.408C16.926,11.949,17.463,11.99,18,11.891c4.274,0,8,1.343,8,3s-3.726,3-8,3z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/blog/">blog</a><a class="page-link" href="/docs.html">docs</a><a class="page-link" href="/read.html">read</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">choosing dns servers</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2013-06-28T00:00:00+00:00" itemprop="datePublished">
+        Jun 28, 2013
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">ulysses</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Every once in a while (it doesn’t happen very often) DNS servers would stop resolving certain domains causing intermittent issues when accessing the Internet. To solve the DNS issues, I often switch DNS servers on my main router. Changing DNS servers may require rebooting your router.</p>
+
+<p>So, here’s a list of DNS servers you could use on your router, in case the current DNS servers you are using is having problems. I primarily use OpenDNS and Google DNS servers, but others DNS servers are reliable as well.</p>
+
+<p>OpenDNS</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>208.67.222.222 Primary
+208.67.220.220 Secondary
+</code></pre></div></div>
+
+<p>Google</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8.8.8.8 Primary
+8.8.4.4 Secondary
+</code></pre></div></div>
+
+<p>Comcast</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>75.75.75.75 Primary
+75.75.76.76 Secondary
+</code></pre></div></div>
+
+<p>AT&amp;T DSL</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>68.94.156.1 Primary
+68.94.157.1 Secondary
+</code></pre></div></div>
+
+<p>UltraDNS</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>156.154.70.1 Primary
+156.154.71.1 Secondary
+</code></pre></div></div>
+
+<p>ScrubIt</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>67.138.54.100 Primary
+207.225.209.66 Secondary
+</code></pre></div></div>
+
+<p>DNSResolvers</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>205.210.42.205 Primary
+64.68.200.200 Secondary
+</code></pre></div></div>
+
+  </div>
+<a class="u-url" href="/2013/06/28/choosing-dns-servers.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col-right">
+        <p>copyright © 2012-2025</p>
+      </div>
+    </div>
+    <div class="social-links">
+<ul class="social-media-list"></ul>
+</div>
+  </div>
+</footer>
+
+</body>
+
+</html>
