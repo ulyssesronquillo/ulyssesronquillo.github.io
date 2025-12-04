@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-04T05:16:27+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">file upload</title><link href="http://0.0.0.0:4000/2025/12/02/file-upload.html" rel="alternate" type="text/html" title="file upload" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/02/file-upload</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/02/file-upload.html"><![CDATA[<p>I created a page for uploading file using HTML, PHP, CSS and Javascript.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-04T06:30:24+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><entry><title type="html">more search and replace</title><link href="http://0.0.0.0:4000/2025/12/04/more-search-and-replace.html" rel="alternate" type="text/html" title="more search and replace" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/04/more-search-and-replace</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/04/more-search-and-replace.html"><![CDATA[<p>A couple of years ago, I converted this website from WordPress to Jekyll. At that time, I didn’t bother removing some header data that came with WordPress because it was tedious. It required editing over 1100 files.</p>
+
+<p>But with the help with some search and replace commands, I was able to mass delete specific lines from 1130 files in less than 5 minutes.</p>
+
+<p>Here are the search and replace commands I ran.</p>
+
+<p>Remove “id:” and “date:” lines.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -exec sed -i '/id: /d' {} +
+find . -type f -exec sed -i '/date: /d' {} +
+</code></pre></div></div>
+
+<p>Remove lines starting from “categories:” up to “—”.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -exec sed -i '/^categories:/,/^---/ { /^---/! d }' {} +
+</code></pre></div></div>
+
+<p>Finally, remove lines from “wp-syntax-cache-content” up to “—”.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -exec sed -i '/^wp-syntax-cache-content:/,/^---/ { /^---/! d }' {} +
+</code></pre></div></div>
+
+<p>Needless to say, the blog looks the same, but the file structure beneath it is dramatically different.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[A couple of years ago, I converted this website from WordPress to Jekyll. At that time, I didn’t bother removing some header data that came with WordPress because it was tedious. It required editing over 1100 files.]]></summary></entry><entry><title type="html">file upload</title><link href="http://0.0.0.0:4000/2025/12/02/file-upload.html" rel="alternate" type="text/html" title="file upload" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/02/file-upload</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/02/file-upload.html"><![CDATA[<p>I created a page for uploading file using HTML, PHP, CSS and Javascript.</p>
 
 <ul>
   <li>HTML displays the page</li>
@@ -257,34 +279,4 @@ done
   <li>little bit of flare when shot directly at a light</li>
 </ul>
 
-<p>Otherwise, fantastic lens with super sharp results.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Just started shooting on a Viltrox 27mm f1.2.]]></summary></entry><entry><title type="html">cameras and lenses</title><link href="http://0.0.0.0:4000/2025/05/25/cameras-lenses.html" rel="alternate" type="text/html" title="cameras and lenses" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/05/25/cameras-lenses</id><content type="html" xml:base="http://0.0.0.0:4000/2025/05/25/cameras-lenses.html"><![CDATA[<p>Here’s are my cameras and lenses:</p>
-
-<p>Nikon D90. My first Nikon camera.</p>
-
-<ul>
-  <li>Nikon 18-200mm f3.5-5.6 G ED DX VR</li>
-</ul>
-
-<p>Nikon D700. Bought this legendary D700 camera second hand. A few prime lenses and zoom.</p>
-
-<ul>
-  <li>Nikon 24mm f2.8 AF-D FX</li>
-  <li>Nikon 35mm f2 AF-D FX</li>
-  <li>Nikon 50mm f1.4 AF-D FX</li>
-  <li>Nikon 50mm f1.8 AF-D FX</li>
-  <li>Nikon 24-85mm f3.5-4.5 G FX VR</li>
-</ul>
-
-<p>Fujifilm XT30 ii. Mirrorless, Light and ideal for travel.</p>
-
-<ul>
-  <li>Viltrox 27mm f1.2 AF</li>
-  <li>Viltrox 28mm f4.5 AF</li>
-  <li>Fuji 18-55mm XF f2.8-4 AF R LM OIS</li>
-</ul>
-
-<p>Wish list</p>
-
-<ul>
-  <li>Fuji 70-300 XF f4-5.6 R LM OIS</li>
-</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s are my cameras and lenses:]]></summary></entry></feed>
+<p>Otherwise, fantastic lens with super sharp results.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Just started shooting on a Viltrox 27mm f1.2.]]></summary></entry></feed>
