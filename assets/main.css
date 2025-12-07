@@ -225,14 +225,19 @@ strong {
 
 .multicolumn {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .column {
-  flex: 1;
+  flex: 1 1 45%;
 }
 
+@media (max-width: 1080px) {
+  .column {
+    flex: 1 1 100%;
+  }
+}
 /**
  * Wrapper
  */
