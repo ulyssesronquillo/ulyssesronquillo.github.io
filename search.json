@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "vim motions",
+      "url"      : "/2025/12/07/vim-motions.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2025-12-07 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "jekyll build",
       "url"      : "/2025/12/06/jekyll-build.html",
       "category" : "",
