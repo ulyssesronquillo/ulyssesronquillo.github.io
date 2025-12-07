@@ -12,6 +12,16 @@
   
     {
 
+      "title"    : "install neovim",
+      "url"      : "/2025/12/06/install-neovim.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2025-12-06 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "more search and replace",
       "url"      : "/2025/12/04/more-search-and-replace.html",
       "category" : "",

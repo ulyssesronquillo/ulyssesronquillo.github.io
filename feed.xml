@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-07T01:09:40+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">jekyll build</title><link href="http://0.0.0.0:4000/2025/12/06/jekyll-build.html" rel="alternate" type="text/html" title="jekyll build" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/06/jekyll-build</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/06/jekyll-build.html"><![CDATA[<p>If there’s a need to rebuild Jekyll running in a container, you must do the following.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-07T04:49:05+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">install neovim</title><link href="http://0.0.0.0:4000/2025/12/06/install-neovim.html" rel="alternate" type="text/html" title="install neovim" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/06/install-neovim</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/06/install-neovim.html"><![CDATA[<p>Neovim is a vim-based text editor geared to be extensible.</p>
+
+<p>Install the latest Neovim package on Linux Mint.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+sudo apt add-apt-repository ppa:neovin-ppa/unstable
+sudo apt update
+sudo apt install neovim
+</code></pre></div></div>
+
+<p>To confirm, check neovim version</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>neovim --version
+</code></pre></div></div>
+
+<p>If you had a previous of neovim installed, backup the old version.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv ~/.config/nvim{,.bak}
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+</code></pre></div></div>
+
+<p>Purge it from the system.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get purge neovim
+sudo apt autoremove
+</code></pre></div></div>
+
+<p>And then re-install.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Neovim is a vim-based text editor geared to be extensible.]]></summary></entry><entry><title type="html">jekyll build</title><link href="http://0.0.0.0:4000/2025/12/06/jekyll-build.html" rel="alternate" type="text/html" title="jekyll build" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/06/jekyll-build</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/06/jekyll-build.html"><![CDATA[<p>If there’s a need to rebuild Jekyll running in a container, you must do the following.</p>
 
 <ol>
   <li>stop the current container
@@ -273,11 +302,4 @@ services:
 
 <p>It does struggle a little bit with focusing. You may have to hold your camera steady for a few seconds to nail down the focus. Otherwise, it’s a fun little lens for just $99. I got mine at a discount at $79 that’s why I jumped at the chance. Since the lens is a fixed aperture at f4.5, it will struggle some at night. It’s not totally impossible. You just have to be steady. I’m so used to f1.2 that I forget sometimes other lenses are much slower.</p>
 
-<p>So, give it a try if you are looking for portability. If you’re looking something more with a better quality lens and better focusing and less flare, try the other Viltrox lens that I own, which is the Viltrox 27mm f1.2. Just be mindful of the size and weight. I don’t mind at all. I took it to Europe for 2 weeks and I didn’t find it cumbersome.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I purchased a pancake lens from Viltrox. It’a 28m lens which is a 42mm equivalent on full frame. It comes with a fixed aperture at f4.5 with autofocus. It’s sharp in the center as well as in the edges. There’s a little bit of vignetting on the edges and some flare if you shoot at certain angles at the sun. It’s not quite up to par with the other Viltrox 27mm f1.2 that I own, but it’s super lightweight lens and easy to carry around. It’s perfect lens for street photography if you just want to snap pictures randomly without lugging a heavy lens.]]></summary></entry><entry><title type="html">list file types</title><link href="http://0.0.0.0:4000/2025/10/21/list-file-types.html" rel="alternate" type="text/html" title="list file types" /><published>2025-10-21T00:00:00+00:00</published><updated>2025-10-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/21/list-file-types</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/21/list-file-types.html"><![CDATA[<p>How to list file types in the current directory.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
-fileTypes=("/*.NEF" "/*.JPG")
-for i in "${fileTypes[@]}" ; do
-  echo $i
-done
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to list file types in the current directory.]]></summary></entry></feed>
+<p>So, give it a try if you are looking for portability. If you’re looking something more with a better quality lens and better focusing and less flare, try the other Viltrox lens that I own, which is the Viltrox 27mm f1.2. Just be mindful of the size and weight. I don’t mind at all. I took it to Europe for 2 weeks and I didn’t find it cumbersome.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I purchased a pancake lens from Viltrox. It’a 28m lens which is a 42mm equivalent on full frame. It comes with a fixed aperture at f4.5 with autofocus. It’s sharp in the center as well as in the edges. There’s a little bit of vignetting on the edges and some flare if you shoot at certain angles at the sun. It’s not quite up to par with the other Viltrox 27mm f1.2 that I own, but it’s super lightweight lens and easy to carry around. It’s perfect lens for street photography if you just want to snap pictures randomly without lugging a heavy lens.]]></summary></entry></feed>
