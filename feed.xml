@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-06T16:25:13+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">more search and replace</title><link href="http://0.0.0.0:4000/2025/12/04/more-search-and-replace.html" rel="alternate" type="text/html" title="more search and replace" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/04/more-search-and-replace</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/04/more-search-and-replace.html"><![CDATA[<p>A couple of years ago, I converted this website from WordPress to Jekyll. At that time, I didn’t bother removing some header data that came with WordPress because it was tedious. It required editing over 1100 files. But with the help with some search and replace commands, I was able to mass delete specific lines from 1130 files in less than 5 minutes. Here are the search and replace commands I ran.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-07T01:06:32+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">jekyll build</title><link href="http://0.0.0.0:4000/2025/12/06/jekyll-build.html" rel="alternate" type="text/html" title="jekyll build" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/06/jekyll-build</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/06/jekyll-build.html"><![CDATA[<p>If there’s a need to rebuild Jekyll running in a container, you must do the following.</p>
+
+<ol>
+  <li>stop the current container
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/docker/ulyme
+$ docker-compose down
+</code></pre></div>    </div>
+  </li>
+  <li>once stopped, go ahead and rebuild
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up --build
+</code></pre></div>    </div>
+  </li>
+  <li>once site is rebuilt, stop and delete it the updated container
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker stop ulyme_jekyll_1
+$ docker rm ulyme_jekyll_1
+</code></pre></div>    </div>
+  </li>
+  <li>finally, start a new docker container that’s running it the background
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div>    </div>
+    <p>This is a requirement if you made major changes to your site such as adding or removing plugins, etc.</p>
+  </li>
+</ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If there’s a need to rebuild Jekyll running in a container, you must do the following.]]></summary></entry><entry><title type="html">more search and replace</title><link href="http://0.0.0.0:4000/2025/12/04/more-search-and-replace.html" rel="alternate" type="text/html" title="more search and replace" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/04/more-search-and-replace</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/04/more-search-and-replace.html"><![CDATA[<p>A couple of years ago, I converted this website from WordPress to Jekyll. At that time, I didn’t bother removing some header data that came with WordPress because it was tedious. It required editing over 1100 files. But with the help with some search and replace commands, I was able to mass delete specific lines from 1130 files in less than 5 minutes. Here are the search and replace commands I ran.</p>
 
 <p>Remove “id:” and “date:” lines.</p>
 
@@ -257,22 +279,4 @@ fileTypes=("/*.NEF" "/*.JPG")
 for i in "${fileTypes[@]}" ; do
   echo $i
 done
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to list file types in the current directory.]]></summary></entry><entry><title type="html">viltrox 27mm f1.2</title><link href="http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2.html" rel="alternate" type="text/html" title="viltrox 27mm f1.2" /><published>2025-08-16T00:00:00+00:00</published><updated>2025-08-16T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2</id><content type="html" xml:base="http://0.0.0.0:4000/2025/08/16/viltrox-27mm-f1.2.html"><![CDATA[<p>Just started shooting on a Viltrox 27mm f1.2.</p>
-
-<p>Here are pros and cons.</p>
-
-<p>Pros:</p>
-<ul>
-  <li>sharp all around from 1.2 all the way to f11 before defraction takes over</li>
-  <li>no barrel or pin cushion distortion</li>
-  <li>no chromatic abberation</li>
-</ul>
-
-<p>Cons:</p>
-<ul>
-  <li>heavy lens especially if fitted on a smaller camera</li>
-  <li>vignetting at f1.2. it goes away at around f4.</li>
-  <li>little bit of flare when shot directly at a light</li>
-</ul>
-
-<p>Otherwise, fantastic lens with super sharp results.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Just started shooting on a Viltrox 27mm f1.2.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to list file types in the current directory.]]></summary></entry></feed>
