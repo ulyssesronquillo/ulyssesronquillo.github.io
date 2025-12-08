@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-08T12:42:06+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">two column page</title><link href="http://0.0.0.0:4000/2025/12/08/two-column-page.html" rel="alternate" type="text/html" title="two column page" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/08/two-column-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/08/two-column-page.html"><![CDATA[<p>Here’s some CSS to turn your site into a two-column page.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-08T13:18:36+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">two column page</title><link href="http://0.0.0.0:4000/2025/12/08/two-column-page.html" rel="alternate" type="text/html" title="two column page" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/08/two-column-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/08/two-column-page.html"><![CDATA[<p>Here’s some CSS to turn your site into a two-column page.</p>
 
 <p>I’m using markdown language to list items. To render properly, markdown div is required.</p>
 
@@ -35,7 +35,7 @@
     flex: 1 1 100%;
   }
 }
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s some CSS to turn your site into a two-column page.]]></summary></entry><entry><title type="html">vim motions</title><link href="http://0.0.0.0:4000/2025/12/07/vim-motions.html" rel="alternate" type="text/html" title="vim motions" /><published>2025-12-07T00:00:00+00:00</published><updated>2025-12-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/07/vim-motions</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/07/vim-motions.html"><![CDATA[<p>Here’s a list of Vim cheat sheets:</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s some CSS to turn your site into a two-column page.]]></summary></entry><entry><title type="html">view zip file without extraction</title><link href="http://0.0.0.0:4000/2025/12/08/view-zip-file-without-extraction.html" rel="alternate" type="text/html" title="view zip file without extraction" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/08/view-zip-file-without-extraction</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/08/view-zip-file-without-extraction.html"><![CDATA[]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">vim motions</title><link href="http://0.0.0.0:4000/2025/12/07/vim-motions.html" rel="alternate" type="text/html" title="vim motions" /><published>2025-12-07T00:00:00+00:00</published><updated>2025-12-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/07/vim-motions</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/07/vim-motions.html"><![CDATA[<p>Here’s a list of Vim cheat sheets:</p>
 
 <ul>
   <li><a href="https://vim.rtorr.com">vim.rtoor.com</a></li>
@@ -311,21 +311,4 @@ services:
   <li>Nikon 18-200mm F3.5-5.6G</li>
 </ul>
 
-<p>It’s not 100% compatible. It’s all manual focus on the Fuji camera even though the lenses are autofocus.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Two months ago, I bought a K&amp;F Nikon to Fujifilm lens adapter that will allow Nikon lenses to be used on a Fuji camera.]]></summary></entry><entry><title type="html">fujifilm simulation cc muted</title><link href="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html" rel="alternate" type="text/html" title="fujifilm simulation cc muted" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-cc-muted.html"><![CDATA[<p>I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome.</p>
-
-<p>Here’s the recipe.</p>
-
-<ul>
-  <li>Film Simulation: Classic Chrome</li>
-  <li>Grain Effect: Off</li>
-  <li>Color Chrome Effect: Off</li>
-  <li>Color Chrome FX Blue: Off</li>
-  <li>White Balance: Auto</li>
-  <li>Dynamic Range: DR400</li>
-  <li>D Range Priority: Off</li>
-  <li>Tone Curve: H -1, S +1</li>
-  <li>Color: -3</li>
-  <li>Sharpness: +1</li>
-  <li>Hign ISO NR: 0</li>
-  <li>Clarity: 0</li>
-</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome.]]></summary></entry></feed>
+<p>It’s not 100% compatible. It’s all manual focus on the Fuji camera even though the lenses are autofocus.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Two months ago, I bought a K&amp;F Nikon to Fujifilm lens adapter that will allow Nikon lenses to be used on a Fuji camera.]]></summary></entry></feed>
