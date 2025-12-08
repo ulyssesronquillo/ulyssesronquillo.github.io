@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "two column page",
+      "url"      : "/2025/12/08/two-column-page.html",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2025-12-08 00:00:00 +0000"
+
+    } ,
+  
+    {
+
       "title"    : "vim motions",
       "url"      : "/2025/12/07/vim-motions.html",
       "category" : "",

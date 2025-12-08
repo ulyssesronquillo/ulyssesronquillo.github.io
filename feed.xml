@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-08T12:25:46+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">vim motions</title><link href="http://0.0.0.0:4000/2025/12/07/vim-motions.html" rel="alternate" type="text/html" title="vim motions" /><published>2025-12-07T00:00:00+00:00</published><updated>2025-12-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/07/vim-motions</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/07/vim-motions.html"><![CDATA[<p>Here’s a list of Vim cheat sheets:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-08T12:39:55+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">two column page</title><link href="http://0.0.0.0:4000/2025/12/08/two-column-page.html" rel="alternate" type="text/html" title="two column page" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/08/two-column-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/08/two-column-page.html"><![CDATA[<p>Here’s some CSS to turn your site into a two-column page.</p>
+
+<p>I’m using markdown language to list items. To render properly, markdown div is required.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="multicolumn"&gt;
+&lt;div class="column"&gt;
+&lt;div markdown="1"&gt;
+- link a
+- link b
+- link c
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="column"&gt;
+&lt;div markdown="1"&gt;
+- link d
+- link e
+- link f
+&lt;/div&gt; &lt;!-- close markdown --&gt;
+&lt;/div&gt; &lt;!-- close column --&gt;
+&lt;/div&gt; &lt;!-- close multicolumn --&gt;
+</code></pre></div></div>
+
+<p>Finally the CSS. It will display 2 columns if browser is greater than 1080. Otherwise it collapses to one column.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.multicolumn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.column {
+  flex: 1 1 45%;
+}
+@media (max-width: 1080px) {
+  .column {
+    flex: 1 1 100%;
+  }
+}
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s some CSS to turn your site into a two-column page.]]></summary></entry><entry><title type="html">vim motions</title><link href="http://0.0.0.0:4000/2025/12/07/vim-motions.html" rel="alternate" type="text/html" title="vim motions" /><published>2025-12-07T00:00:00+00:00</published><updated>2025-12-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/07/vim-motions</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/07/vim-motions.html"><![CDATA[<p>Here’s a list of Vim cheat sheets:</p>
 
 <ul>
   <li><a href="https://vim.rtorr.com">vim.rtoor.com</a></li>
@@ -291,21 +328,4 @@ services:
   <li>Sharpness: +1</li>
   <li>Hign ISO NR: 0</li>
   <li>Clarity: 0</li>
-</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome.]]></summary></entry><entry><title type="html">fujifilm simulation noir</title><link href="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-noir.html" rel="alternate" type="text/html" title="fujifilm simulation noir" /><published>2025-10-26T00:00:00+00:00</published><updated>2025-10-26T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-noir</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/26/fujifilm-simulation-noir.html"><![CDATA[<p>I’m sharing by black and white fujifilm simulation called Noir. It’s based on Acros +R with DR set to 400.</p>
-
-<p>Here’s the recipe.</p>
-
-<ul>
-  <li>Film Simulation: Across + R</li>
-  <li>Monochromatic Color: WC 0, MG 0</li>
-  <li>Grain Effect: Off</li>
-  <li>Color Chrome Effect: Off</li>
-  <li>Color Chrome FX Blue: Off</li>
-  <li>White Balance: Auto</li>
-  <li>Dynamic Range: DR400</li>
-  <li>D Range Priority: Off</li>
-  <li>Tone Curve: H 0, S 0</li>
-  <li>Sharpness: 0</li>
-  <li>Hign ISO NR: 0</li>
-  <li>Clarity: 0</li>
-</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I’m sharing by black and white fujifilm simulation called Noir. It’s based on Acros +R with DR set to 400.]]></summary></entry></feed>
+</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I’m sharing my custom Classic Chrome fujifilm simulation called CC Muted. It’s based on Classic Chrome.]]></summary></entry></feed>
