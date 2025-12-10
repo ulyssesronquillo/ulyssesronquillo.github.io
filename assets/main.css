@@ -80,6 +80,7 @@ li > ol {
 ul li {
   margin-left: 0;
   list-style-type: none;
+  border-bottom: 1px solid #555;
 }
 
 ol li {
