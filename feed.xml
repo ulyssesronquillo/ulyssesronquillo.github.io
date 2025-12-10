@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-09T14:59:59+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">two column page</title><link href="http://0.0.0.0:4000/2025/12/08/two-column-page.html" rel="alternate" type="text/html" title="two column page" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/08/two-column-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/08/two-column-page.html"><![CDATA[<p>Here’s some CSS to turn your site into a two-column page.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-10T04:10:44+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">aws efs tls stunnel</title><link href="http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel.html" rel="alternate" type="text/html" title="aws efs tls stunnel" /><published>2025-12-09T00:00:00+00:00</published><updated>2025-12-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel.html"><![CDATA[<p>AWS EFS supports stunnel-based TLS encryption for NFS mounts.</p>
+
+<p>Make sure distro has efs-utils installed.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install -y amazon-efs-utils
+# OR
+sudo apt-get install -y amazon-efs-utils
+</code></pre></div></div>
+
+<p>nfs-utils will mount drives but it will not provide encryption.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install nfs-utils
+</code></pre></div></div>
+
+<p>Standard mount with TLS</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir -p /mnt/efs 
+sudo mount -t efs -o tls fs-12345678:/ /mnt/efs 
+</code></pre></div></div>
+
+<p>Mount via /etc/fstab</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs-12345678:/ /mnt/efs efs _netdev,tls 0 0 
+10.10.10.10:/ /mnt/efs efs _netdev,tls 0 0 
+</code></pre></div></div>
+
+<p>Mount automatically</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mount -a
+</code></pre></div></div>
+
+<p>Check whether stunnel or efs-proxy is running</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps aux | grep -E "stunnel|efs-proxy"
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[AWS EFS supports stunnel-based TLS encryption for NFS mounts.]]></summary></entry><entry><title type="html">two column page</title><link href="http://0.0.0.0:4000/2025/12/08/two-column-page.html" rel="alternate" type="text/html" title="two column page" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/08/two-column-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/08/two-column-page.html"><![CDATA[<p>Here’s some CSS to turn your site into a two-column page.</p>
 
 <p>I’m using markdown language to list items. To render properly, markdown div is required.</p>
 
@@ -299,21 +333,4 @@ services:
 <p>finally, start the node.js web application in a docker container</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Create a node.js web server running on docker.]]></summary></entry><entry><title type="html">nikon to fuji adapter</title><link href="http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter.html" rel="alternate" type="text/html" title="nikon to fuji adapter" /><published>2025-10-31T00:00:00+00:00</published><updated>2025-10-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter</id><content type="html" xml:base="http://0.0.0.0:4000/2025/10/31/nikon-to-fuji-adapter.html"><![CDATA[<p>Two months ago, I bought a <a href="https://www.kentfaith.com/KF06.443_new-product-kf-m18115-nikon-nik-g-fx-pro-20-year-high-precision-lens-adapter-orange">K&amp;F Nikon to Fujifilm lens adapter</a> that will allow Nikon lenses to be used on a Fuji camera.</p>
-
-<p>I have several Nikon prime lenses for the picking.</p>
-
-<ul>
-  <li>Nikon 24mm F2.8D</li>
-  <li>Nikon 35mm F2D</li>
-  <li>Nikon 50mm F1.4D</li>
-</ul>
-
-<p>In addition, I also have a couple of Nikon G lenses.</p>
-
-<ul>
-  <li>Nikon 24-85mm F3.5-4.5G</li>
-  <li>Nikon 18-200mm F3.5-5.6G</li>
-</ul>
-
-<p>It’s not 100% compatible. It’s all manual focus on the Fuji camera even though the lenses are autofocus.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Two months ago, I bought a K&amp;F Nikon to Fujifilm lens adapter that will allow Nikon lenses to be used on a Fuji camera.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Create a node.js web server running on docker.]]></summary></entry></feed>
