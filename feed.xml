@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-10T22:05:05+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">aws efs tls stunnel</title><link href="http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel.html" rel="alternate" type="text/html" title="aws efs tls stunnel" /><published>2025-12-09T00:00:00+00:00</published><updated>2025-12-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel.html"><![CDATA[<p>AWS EFS supports stunnel-based TLS encryption for NFS mounts.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-11T02:47:19+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">new home page</title><link href="http://0.0.0.0:4000/2025/12/10/new-home-page.html" rel="alternate" type="text/html" title="new home page" /><published>2025-12-10T00:00:00+00:00</published><updated>2025-12-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/10/new-home-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/10/new-home-page.html"><![CDATA[<p>I changed the home page just a little bit.</p>
+
+<p>The about page is now the home page.</p>
+
+<p>While the blog have been moved to its own page.</p>
+
+<p>I added a little bit of CSS. Lists now have a subtle border-bottom.</p>
+
+<p>Blog list now display the date first followed by the title.</p>
+
+<p>Subtle changes. I like it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I changed the home page just a little bit.]]></summary></entry><entry><title type="html">aws efs tls stunnel</title><link href="http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel.html" rel="alternate" type="text/html" title="aws efs tls stunnel" /><published>2025-12-09T00:00:00+00:00</published><updated>2025-12-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel.html"><![CDATA[<p>AWS EFS supports stunnel-based TLS encryption for NFS mounts.</p>
 
 <p>Make sure distro has efs-utils installed.</p>
 
@@ -280,59 +290,4 @@ document.getElementById('uploadForm').addEventListener('submit', function() {
 
 <p>The gallery pages are justified and are rendered on the fly when the browser is resized. To build a new galleries, simply create a new directory, drop the images in that directory, and run a couple of scripts to generate the index and gallery files. Once the gallery files are generated, I simply upload to AWS S3 bucket using a couple of custom shell scripts.</p>
 
-<p>The gallery is hosted on <a href="https://s3.us-east-2.amazonaws.com/javison.com/index.html">AWS S3</a>.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I just built a photo gallery from scratch with some help from node.js and lightbox modal to render the images and the galleries. I use docker-compose to install the node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and gallery files.]]></summary></entry><entry><title type="html">nodejs web server docker</title><link href="http://0.0.0.0:4000/2025/11/17/nodejs-web-server-docker.html" rel="alternate" type="text/html" title="nodejs web server docker" /><published>2025-11-17T00:00:00+00:00</published><updated>2025-11-17T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/11/17/nodejs-web-server-docker</id><content type="html" xml:base="http://0.0.0.0:4000/2025/11/17/nodejs-web-server-docker.html"><![CDATA[<p>Create a node.js web server running on docker.</p>
-
-<p>create an index.js.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// index.js
-const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) =&gt; {
-  res.send('Hello from Node.js in Docker!');
-});
-
-app.listen(port, () =&gt; {
-  console.log(`App listening at http://localhost:${port}`);
-});
-</code></pre></div></div>
-
-<p>install node</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install npm
-npm init -y
-npm install express
-</code></pre></div></div>
-
-<p>create a Dockerfile</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Dockerfile
-FROM node:alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 3000
-CMD ["node", "index.js"]
-</code></pre></div></div>
-
-<p>create docker-compose.yml file</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># docker-compose.yml
-version: '3.8'
-services:
-  web:
-    build: .
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/app
-    environment:
-      NODE_ENV: development # Or production
-</code></pre></div></div>
-
-<p>finally, start the node.js web application in a docker container</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Create a node.js web server running on docker.]]></summary></entry></feed>
+<p>The gallery is hosted on <a href="https://s3.us-east-2.amazonaws.com/javison.com/index.html">AWS S3</a>.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I just built a photo gallery from scratch with some help from node.js and lightbox modal to render the images and the galleries. I use docker-compose to install the node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and gallery files.]]></summary></entry></feed>

@@ -80,7 +80,7 @@ li > ol {
 ul li {
   margin-left: 0;
   list-style-type: none;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #444;
 }
 
 ol li {
@@ -208,13 +208,13 @@ ul#results-container li {
 }
 
 .date {
-  #font-family: "Fira Code", serif;
-  color: #999;
+  font-family: "Fira Code", serif;
+  color: #888;
   font-size: 14px;
 }
 
 .highlight code {
-  #font-family: "Fira Code", serif;
+  font-family: "Fira Code", serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 0.5em;
@@ -563,6 +563,10 @@ table td {
     font-size: 20px;
   }
 }
+.post-content ul li {
+  border: none;
+}
+
 .post-content {
   margin-bottom: 30px;
 }
