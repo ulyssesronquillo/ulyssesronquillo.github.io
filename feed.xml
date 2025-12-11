@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-11T02:47:19+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">new home page</title><link href="http://0.0.0.0:4000/2025/12/10/new-home-page.html" rel="alternate" type="text/html" title="new home page" /><published>2025-12-10T00:00:00+00:00</published><updated>2025-12-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/10/new-home-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/10/new-home-page.html"><![CDATA[<p>I changed the home page just a little bit.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-11T12:23:44+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">yank cut paste</title><link href="http://0.0.0.0:4000/2025/12/11/yank-cut-paste.html" rel="alternate" type="text/html" title="yank cut paste" /><published>2025-12-11T00:00:00+00:00</published><updated>2025-12-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/11/yank-cut-paste</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/11/yank-cut-paste.html"><![CDATA[<p>Improve your vi skills by learning how to yank, cut and paste.</p>
+
+<p>Nice little cheat sheet.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yank line</td>
+      <td>yy</td>
+      <td>Copy current line</td>
+    </tr>
+    <tr>
+      <td>Yank N lines</td>
+      <td>Ny</td>
+      <td>Copy N line (e.g. 3yy = 3 lines)</td>
+    </tr>
+    <tr>
+      <td>Yank word</td>
+      <td>yw</td>
+      <td>Copy from cursor to end of word</td>
+    </tr>
+    <tr>
+      <td>Yank to end</td>
+      <td>y$</td>
+      <td>Copy from cursor to end of line</td>
+    </tr>
+    <tr>
+      <td>Cut line</td>
+      <td>dd</td>
+      <td>Delete (cut) current line</td>
+    </tr>
+    <tr>
+      <td>Cut N lines</td>
+      <td>Ndd</td>
+      <td>Delete N lines (e.g., 3dd)</td>
+    </tr>
+    <tr>
+      <td>Cut word</td>
+      <td>dw</td>
+      <td>Delete from cursor to end of word</td>
+    </tr>
+    <tr>
+      <td>Cut to end</td>
+      <td>d$</td>
+      <td>Delete from cursor to end of line</td>
+    </tr>
+    <tr>
+      <td>Paste after</td>
+      <td>p</td>
+      <td>Paste after cursor</td>
+    </tr>
+    <tr>
+      <td>Paste before</td>
+      <td>P</td>
+      <td>Paste before cursor</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Improve your vi skills by learning how to yank, cut and paste.]]></summary></entry><entry><title type="html">new home page</title><link href="http://0.0.0.0:4000/2025/12/10/new-home-page.html" rel="alternate" type="text/html" title="new home page" /><published>2025-12-10T00:00:00+00:00</published><updated>2025-12-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/10/new-home-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/10/new-home-page.html"><![CDATA[<p>I changed the home page just a little bit.</p>
 
 <p>The about page is now the home page.</p>
 
@@ -279,15 +345,4 @@ document.getElementById('uploadForm').addEventListener('submit', function() {
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I created a page for uploading file using HTML, PHP, CSS and Javascript.]]></summary></entry><entry><title type="html">gallery</title><link href="http://0.0.0.0:4000/2025/11/19/gallery.html" rel="alternate" type="text/html" title="gallery" /><published>2025-11-19T00:00:00+00:00</published><updated>2025-11-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/11/19/gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/11/19/gallery.html"><![CDATA[<p>I just built a photo gallery from scratch with some help from node.js and lightbox modal to render the images and the galleries. I use docker-compose to install the node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and gallery files.</p>
-
-<p>2 node.js scripts:</p>
-
-<ul>
-  <li>createIndex.js - scans the root directory for any galleries and adds them to the index.html file.</li>
-  <li>createGallery.js - scans the targeted gallery directory for JPG image files, creates a gallery and saves it as index.html.</li>
-</ul>
-
-<p>The gallery pages are justified and are rendered on the fly when the browser is resized. To build a new galleries, simply create a new directory, drop the images in that directory, and run a couple of scripts to generate the index and gallery files. Once the gallery files are generated, I simply upload to AWS S3 bucket using a couple of custom shell scripts.</p>
-
-<p>The gallery is hosted on <a href="https://s3.us-east-2.amazonaws.com/javison.com/index.html">AWS S3</a>.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I just built a photo gallery from scratch with some help from node.js and lightbox modal to render the images and the galleries. I use docker-compose to install the node.js environment. With some help from Copilot, I created 2 node.js scripts to generate the index and gallery files.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I created a page for uploading file using HTML, PHP, CSS and Javascript.]]></summary></entry></feed>
