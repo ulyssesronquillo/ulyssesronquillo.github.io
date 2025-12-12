@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-12T03:41:21+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">yank cut paste</title><link href="http://0.0.0.0:4000/2025/12/11/yank-cut-paste.html" rel="alternate" type="text/html" title="yank cut paste" /><published>2025-12-11T00:00:00+00:00</published><updated>2025-12-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/11/yank-cut-paste</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/11/yank-cut-paste.html"><![CDATA[<p>Improve your vi skills by learning how to yank, cut and paste.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-12T12:32:38+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">code server</title><link href="http://0.0.0.0:4000/2025/12/12/code-server.html" rel="alternate" type="text/html" title="code server" /><published>2025-12-12T00:00:00+00:00</published><updated>2025-12-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/12/code-server</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/12/code-server.html"><![CDATA[<p>Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.</p>
+
+<p>I use docker-compose to host code-server on a container.</p>
+
+<p>Here’s my docker-compose.yml.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - PASSWORD=xxxxxxxx                   #optional
+      - HASHED_PASSWORD=                    #optional
+      - SUDO_PASSWORD=xxxxxxxx              #optional
+      - SUDO_PASSWORD_HASH=                 #optional
+      - PROXY_DOMAIN=code-server.my.domain  #optional
+      - DEFAULT_WORKSPACE=/config/workspace #optional
+      - PWA_APPNAME=code-server             #optional
+    volumes:
+      - /home/ulysses/Code:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped
+</code></pre></div></div>
+
+<p>There are a few things that are optional and can be skipped.</p>
+
+<p>Bring it up.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div></div>
+
+<p>Access the code-server from a browser.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8443
+# OR
+http://192.168.168.10:8443
+</code></pre></div></div>
+
+<p>It looks just like VSCode, but only in the browser.</p>
+
+<p>If you’re done, just bring it down.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose down
+</code></pre></div></div>
+
+<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.]]></summary></entry><entry><title type="html">yank cut paste</title><link href="http://0.0.0.0:4000/2025/12/11/yank-cut-paste.html" rel="alternate" type="text/html" title="yank cut paste" /><published>2025-12-11T00:00:00+00:00</published><updated>2025-12-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/11/yank-cut-paste</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/11/yank-cut-paste.html"><![CDATA[<p>Improve your vi skills by learning how to yank, cut and paste.</p>
 
 <p>Nice little cheat sheet.</p>
 
@@ -232,117 +281,4 @@ find . -type f -exec sed -i '/date: /d' {} +
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -exec sed -i '/^wp-syntax-cache-content:/,/^---/ { /^---/! d }' {} +
 </code></pre></div></div>
 
-<p>Needless to say, the blog looks the same, but the file structure beneath it is dramatically different.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[A couple of years ago, I converted this website from WordPress to Jekyll. At that time, I didn’t bother removing some header data that came with WordPress because it was tedious. It required editing over 1100 files. But with the help with some search and replace commands, I was able to mass delete specific lines from 1130 files in less than 5 minutes. Here are the search and replace commands I ran.]]></summary></entry><entry><title type="html">file upload</title><link href="http://0.0.0.0:4000/2025/12/02/file-upload.html" rel="alternate" type="text/html" title="file upload" /><published>2025-12-02T00:00:00+00:00</published><updated>2025-12-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/02/file-upload</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/02/file-upload.html"><![CDATA[<p>I created a page for uploading file using HTML, PHP, CSS and Javascript.</p>
-
-<ul>
-  <li>HTML displays the page</li>
-  <li>PHP handles the input form</li>
-  <li>Javascript displays the upload status</li>
-  <li>CSS provides styling and spinning status</li>
-  <li>Using the Roboto Google font</li>
-</ul>
-
-<p>In addition, I also had to tweak the /etc/php.ini settings to allow upload of large files.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>file_uploads = On
-upload_max_filesize = 200M
-post_max_size = 200M
-max_file_uploads = 20
-</code></pre></div></div>
-
-<p>Here’s the code all wrapped in a single file.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap');
-body {
-   font-family: Roboto, sans-serif;
-   font-optical-sizing: normal;
-   font-weight: 400;
-   font-style: normal;
-   background-color: #222;
-   color: #000;
-}
-.content {
-   width: 1080px;
-   margin: 20px auto;
-   padding: 20px;
-   background-color: #fff;
-   min-height: 90vh;
-}
-.loader {
-  border: 5px solid #f3f3f3; /* Light grey */
-  border-top: 5px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 2s linear infinite;
-  display: none; /* Hide loader by default */
-  margin-left: 10px;
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-hr {
-  border: 1px solid #777;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class="content"&gt;
-&lt;h3&gt;Upload Files:&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Click on the "Choose Files" button.&lt;/li&gt;
-&lt;li&gt;You can select one or multiple files to upload.&lt;/li&gt;
-&lt;li&gt;Once files are selected, click on the Upload button to begin the upload process.&lt;/li&gt;
-&lt;li&gt;Depending on file size(s), the upload process could take a few seconds to a few minutes. Please be patient.&lt;/li&gt;
-&lt;li&gt;If uploads are successful, there will be a message saying 'files uploaded successfully.'&lt;/li&gt;
-&lt;/ol&gt;
-&lt;form id="uploadForm" action="" method="post" enctype="multipart/form-data"&gt;
-    &lt;label&gt;Select files to upload:&lt;/label&gt;
-    &lt;input id="fileInput" type="file" name="files[]" multiple required&gt;
-    &lt;button type="submit"&gt;Upload&lt;/button&gt;
-&lt;/form&gt;
-&lt;div class="loader" id="loader"&gt;&lt;/div&gt;
-&lt;?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $uploadDir = 'uploads/';
-    // Ensure the directory exists
-    if (!is_dir($uploadDir)) {
-        mkdir($uploadDir, 0755, true);
-    }
-    // Check if files were uploaded
-    if (isset($_FILES['files'])) {
-        $totalFiles = count($_FILES['files']['name']);
-        for ($i = 0; $i &lt; $totalFiles; $i++) {
-            if ($_FILES['files']['error'][$i] === UPLOAD_ERR_OK) {
-                $fileName = basename($_FILES['files']['name'][$i]);
-                $targetFile = $uploadDir . $fileName;
-                if (move_uploaded_file($_FILES['files']['tmp_name'][$i], $targetFile)) {
-                    echo "File uploaded successfully: " . htmlspecialchars($fileName) . "&lt;br&gt;";
-                } else {
-                    echo "Error uploading file: " . htmlspecialchars($fileName) . "&lt;br&gt;";
-                }
-            } else {
-                echo "Error with file: " . htmlspecialchars($_FILES['files']['name'][$i]) . "&lt;br&gt;";
-            }
-        }
-    } else {
-        echo "No files uploaded.";
-    }
-}
-?&gt;
-&lt;script&gt;
-document.getElementById('uploadForm').addEventListener('submit', function() {
-    // Show loader when form is submitted
-    document.getElementById('loader').style.display = 'block';
-});
-&lt;/script&gt;
-&lt;h3&gt;Upload More Files:&lt;/h3&gt;
-&lt;p&gt;&lt;button onclick="document.location='upload.php'"&gt;Reload Page To Start Another Upload&lt;/button&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I created a page for uploading file using HTML, PHP, CSS and Javascript.]]></summary></entry></feed>
+<p>Needless to say, the blog looks the same, but the file structure beneath it is dramatically different.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[A couple of years ago, I converted this website from WordPress to Jekyll. At that time, I didn’t bother removing some header data that came with WordPress because it was tedious. It required editing over 1100 files. But with the help with some search and replace commands, I was able to mass delete specific lines from 1130 files in less than 5 minutes. Here are the search and replace commands I ran.]]></summary></entry></feed>
