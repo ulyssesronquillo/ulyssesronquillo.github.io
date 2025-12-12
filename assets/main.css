@@ -203,8 +203,6 @@ ul#results-container {
 ul#results-container li {
   margin: 0;
   padding: 0;
-  margin-top: -3px;
-  margin-left: 0;
 }
 
 .date {
@@ -233,6 +231,27 @@ strong {
   flex: 1 1 45%;
 }
 
+/* Container for the two-column layout */
+.blog-posts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 30px;
+}
+
+/* Style for each post item */
+.post-item {
+  margin-bottom: 0;
+  line-height: 1.4;
+  border-bottom: 1px solid #444;
+}
+
+/* Optional: Add responsiveness for mobile devices */
+@media (max-width: 960px) {
+  .blog-posts-container {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+  }
+}
 @media (max-width: 1080px) {
   .column {
     flex: 1 1 100%;
