@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-12T18:58:20+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">code server</title><link href="http://0.0.0.0:4000/2025/12/12/code-server.html" rel="alternate" type="text/html" title="code server" /><published>2025-12-12T00:00:00+00:00</published><updated>2025-12-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/12/code-server</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/12/code-server.html"><![CDATA[<p>Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-13T05:49:02+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">code server</title><link href="http://0.0.0.0:4000/2025/12/12/code-server.html" rel="alternate" type="text/html" title="code server" /><published>2025-12-12T00:00:00+00:00</published><updated>2025-12-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/12/code-server</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/12/code-server.html"><![CDATA[<p>Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.</p>
 
 <p>I use docker-compose to host code-server on a container.</p>
 
@@ -79,6 +79,16 @@ http://192.168.168.10:8443
       <td>Yank to end</td>
       <td>y$</td>
       <td>Copy from cursor to end of line</td>
+    </tr>
+    <tr>
+      <td>Highlight block</td>
+      <td>Ctrl-V</td>
+      <td>Highlight block to cut or copy</td>
+    </tr>
+    <tr>
+      <td>Cut highlight</td>
+      <td>d</td>
+      <td>Cut highlighted block</td>
     </tr>
     <tr>
       <td>Cut line</td>
