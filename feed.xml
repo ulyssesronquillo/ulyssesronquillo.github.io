@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-14T05:20:48+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">code server</title><link href="http://0.0.0.0:4000/2025/12/12/code-server.html" rel="alternate" type="text/html" title="code server" /><published>2025-12-12T00:00:00+00:00</published><updated>2025-12-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/12/code-server</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/12/code-server.html"><![CDATA[<p>Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-14T16:30:47+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">openshot black screen</title><link href="http://0.0.0.0:4000/2025/12/14/openshot-black-screen.html" rel="alternate" type="text/html" title="openshot black screen" /><published>2025-12-14T00:00:00+00:00</published><updated>2025-12-14T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/14/openshot-black-screen</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/14/openshot-black-screen.html"><![CDATA[<p>I’ve been using Openshot video editor to edit or stitch video files.</p>
+
+<p>When exporting to the H.264 format, I’ve been getting a black screen.</p>
+
+<p>I tried other formats, but it’s working only with theora ogg format.</p>
+
+<p>Until I find a fix, I may have to use HandBrake to convert ogg to mp4.</p>
+
+<p>The theora ogg export is super slow. I think I’m have missing codecs.</p>
+
+<p>Update: I was able to fix it. I reinstalled openshot-qt via ppa.</p>
+
+<p>Here are the steps:</p>
+
+<ol>
+  <li>Uninstall openshot-qt</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt purge openshot-qt 
+</code></pre></div></div>
+
+<ol>
+  <li>Install missing codecs</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install libx264-dev libmp3lame-dev
+</code></pre></div></div>
+
+<ol>
+  <li>Install openshot-qt via ppa</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository ppa:openshot.developers/ppa
+sudo apt update
+sudo apt install openshot-qt python3-openshot
+</code></pre></div></div>
+
+<p>After reinstalling, I’m now able to export to a mp4 format successfully.</p>
+
+<p>No more black screen. However, the exported mp4 file is 1400MB.</p>
+
+<p>I ran it through HandBrake on Fast 720p30. It’s down to 105MB.</p>
+
+<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I’ve been using Openshot video editor to edit or stitch video files.]]></summary></entry><entry><title type="html">code server</title><link href="http://0.0.0.0:4000/2025/12/12/code-server.html" rel="alternate" type="text/html" title="code server" /><published>2025-12-12T00:00:00+00:00</published><updated>2025-12-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/12/code-server</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/12/code-server.html"><![CDATA[<p>Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.</p>
 
 <p>I use docker-compose to host code-server on a container.</p>
 
@@ -273,22 +316,4 @@ $ docker rm ulyme_jekyll_1
   </li>
 </ol>
 
-<p>This is a requirement if you made major changes to your site such as adding or removing plugins, etc.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If there’s a need to rebuild Jekyll running in a container, you must do the following.]]></summary></entry><entry><title type="html">more search and replace</title><link href="http://0.0.0.0:4000/2025/12/04/more-search-and-replace.html" rel="alternate" type="text/html" title="more search and replace" /><published>2025-12-04T00:00:00+00:00</published><updated>2025-12-04T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/04/more-search-and-replace</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/04/more-search-and-replace.html"><![CDATA[<p>A couple of years ago, I converted this website from WordPress to Jekyll. At that time, I didn’t bother removing some header data that came with WordPress because it was tedious. It required editing over 1100 files. But with the help with some search and replace commands, I was able to mass delete specific lines from 1130 files in less than 5 minutes. Here are the search and replace commands I ran.</p>
-
-<p>Remove “id:” and “date:” lines.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -exec sed -i '/id: /d' {} +
-find . -type f -exec sed -i '/date: /d' {} +
-</code></pre></div></div>
-
-<p>Remove lines starting from “categories:” up to “—”.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -exec sed -i '/^categories:/,/^---/ { /^---/! d }' {} +
-</code></pre></div></div>
-
-<p>Finally, remove lines from “wp-syntax-cache-content” up to “—”.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -exec sed -i '/^wp-syntax-cache-content:/,/^---/ { /^---/! d }' {} +
-</code></pre></div></div>
-
-<p>Needless to say, the blog looks the same, but the file structure beneath it is dramatically different.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[A couple of years ago, I converted this website from WordPress to Jekyll. At that time, I didn’t bother removing some header data that came with WordPress because it was tedious. It required editing over 1100 files. But with the help with some search and replace commands, I was able to mass delete specific lines from 1130 files in less than 5 minutes. Here are the search and replace commands I ran.]]></summary></entry></feed>
+<p>This is a requirement if you made major changes to your site such as adding or removing plugins, etc.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If there’s a need to rebuild Jekyll running in a container, you must do the following.]]></summary></entry></feed>
