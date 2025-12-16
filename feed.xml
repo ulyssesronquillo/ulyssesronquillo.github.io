@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-16T12:13:56+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">let it snow</title><link href="http://0.0.0.0:4000/2025/12/14/let-it-snow.html" rel="alternate" type="text/html" title="let it snow" /><published>2025-12-14T00:00:00+00:00</published><updated>2025-12-14T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/14/let-it-snow</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/14/let-it-snow.html"><![CDATA[<p>I recently added snowfall on this site with some help from Javascript.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-16T12:16:41+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">let it snow</title><link href="http://0.0.0.0:4000/2025/12/14/let-it-snow.html" rel="alternate" type="text/html" title="let it snow" /><published>2025-12-14T00:00:00+00:00</published><updated>2025-12-14T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/14/let-it-snow</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/14/let-it-snow.html"><![CDATA[<p>I recently added snowfall on this site with some help from Javascript.</p>
 
 <p>You can <a href="https://www.schillmania.com/projects/snowstorm/">download snowstorm.js</a> from online.</p>
 
@@ -6,7 +6,6 @@
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="/snowstorm.js"&gt;&lt;/script&gt;                                             
 &lt;script&gt;                                                                          ```
-// snowStorm.snowColor = '#99ccff';   // blue-ish snow!?                          
 snowStorm.snowColor = '#ffffff';   // white snow                                  
 snowStorm.flakesMaxActive = 50;    // show more snow on screen at once            
 snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view     
