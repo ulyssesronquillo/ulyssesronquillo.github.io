@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-16T12:16:41+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">let it snow</title><link href="http://0.0.0.0:4000/2025/12/14/let-it-snow.html" rel="alternate" type="text/html" title="let it snow" /><published>2025-12-14T00:00:00+00:00</published><updated>2025-12-14T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/14/let-it-snow</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/14/let-it-snow.html"><![CDATA[<p>I recently added snowfall on this site with some help from Javascript.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-18T12:44:55+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">close browser from bash</title><link href="http://0.0.0.0:4000/2025/12/18/close-browser-from-bash.html" rel="alternate" type="text/html" title="close browser from bash" /><published>2025-12-18T00:00:00+00:00</published><updated>2025-12-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/18/close-browser-from-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/18/close-browser-from-bash.html"><![CDATA[<p>There’s a command to close a browser from zsh on Mac OS.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command here
+</code></pre></div></div>
+
+<p>Give it a try.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[There’s a command to close a browser from zsh on Mac OS.]]></summary></entry><entry><title type="html">let it snow</title><link href="http://0.0.0.0:4000/2025/12/14/let-it-snow.html" rel="alternate" type="text/html" title="let it snow" /><published>2025-12-14T00:00:00+00:00</published><updated>2025-12-14T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/14/let-it-snow</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/14/let-it-snow.html"><![CDATA[<p>I recently added snowfall on this site with some help from Javascript.</p>
 
 <p>You can <a href="https://www.schillmania.com/projects/snowstorm/">download snowstorm.js</a> from online.</p>
 
@@ -280,33 +285,4 @@ sudo mount -t efs -o tls fs-12345678:/ /mnt/efs
   <li><a href="https://phoenixnap.com/kb/wp-content/uploads/2021/11/vim-commands-cheat-sheet-by-pnap.pdf">phoenixnap.com</a></li>
 </ul>
 
-<p>Master these keystrokes if you really want to be effective in navigating and editing via a terminal.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a list of Vim cheat sheets:]]></summary></entry><entry><title type="html">install neovim</title><link href="http://0.0.0.0:4000/2025/12/06/install-neovim.html" rel="alternate" type="text/html" title="install neovim" /><published>2025-12-06T00:00:00+00:00</published><updated>2025-12-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/06/install-neovim</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/06/install-neovim.html"><![CDATA[<p>Neovim is a vim-based text editor geared to be extensible.</p>
-
-<p>Install the latest Neovim package on Linux Mint.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
-sudo apt add-apt-repository ppa:neovin-ppa/unstable
-sudo apt update
-sudo apt install neovim
-</code></pre></div></div>
-
-<p>To confirm, check neovim version</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>neovim --version
-</code></pre></div></div>
-
-<p>If you had a previous of neovim installed, backup the old version.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv ~/.config/nvim{,.bak}
-mv ~/.local/share/nvim{,.bak}
-mv ~/.local/state/nvim{,.bak}
-mv ~/.cache/nvim{,.bak}
-</code></pre></div></div>
-
-<p>Purge it from the system.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get purge neovim
-sudo apt autoremove
-</code></pre></div></div>
-
-<p>And then re-install.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Neovim is a vim-based text editor geared to be extensible.]]></summary></entry></feed>
+<p>Master these keystrokes if you really want to be effective in navigating and editing via a terminal.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a list of Vim cheat sheets:]]></summary></entry></feed>
