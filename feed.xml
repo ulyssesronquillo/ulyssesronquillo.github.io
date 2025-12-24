@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-24T16:09:17+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-24T16:11:50+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
 
 <p>Most likely the errors you see will give you clues to what’s going on during the rebuild. In my case it was a simple CSS error.</p>
 
@@ -6,24 +6,24 @@
 
 <p>Perform the following steps to troubleshoot your Jekyll site.</p>
 
-<p>Check if docker container is running. If it’s restarting every 5 seconds, then there’s definitely a problem.</p>
+<p>(1). Check if docker container is running. If it’s restarting every 5 seconds, then there’s definitely a problem.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a
 </code></pre></div></div>
 
-<p>Stop the container.</p>
+<p>(2). Stop the container.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose stop
 </code></pre></div></div>
 
-<p>Rebuild Jekyll.</p>
+<p>(3). Rebuild Jekyll.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up --build
 </code></pre></div></div>
 
-<p>Check for errors. They are usually highlighted in red.</p>
+<p>(4). Check for errors. They are usually highlighted in red.</p>
 
-<p>Once you fixed the errors, restart Jekyll.</p>
+<p>(5). Once you fixed the errors, restart Jekyll.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop ulyme_jekyll_1
 docker rm ulyme_jekyll_1
