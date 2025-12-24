@@ -67,35 +67,35 @@ snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
 
 <p>Most likely the errors you see will give you clues to what’s going on during the rebuild. In my case it was a simple CSS error.</p>
 
-<p>It is surprising that a small syntax CSS error can bring down the Jekyll site.</p>
+<p>It is surprising that a small syntax CSS error can bring down Jekyll.</p>
 
-<p>Perform the following to troubleshoot your Jekyll site.</p>
+<p>Perform the following steps to troubleshoot your Jekyll site.</p>
 
-<p>Check if docker container is running. If it’s restarting every 5 seconds, there’s definitely a problem.</p>
+<p>Check if docker container is running. If it’s restarting every 5 seconds, then there’s definitely a problem.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a
 </code></pre></div></div>
 
-<p>Stop the container and rebuild Jekyll.</p>
+<p>Stop the container.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose stop
 </code></pre></div></div>
 
-<p>Rebuild Jekyll</p>
+<p>Rebuild Jekyll.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up --build
 </code></pre></div></div>
 
-<p>Check for errors. They are highlighted in red.</p>
+<p>Check for errors. They are usually highlighted in red.</p>
 
-<p>Once you fix the errors, restart Jekyll.</p>
+<p>Once you fixed the errors, restart Jekyll.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop ulyme_jekyll_1
 docker rm ulyme_jekyll_1
 docker-compose up -d
 </code></pre></div></div>
 
-<p>Hopefully, this is helpful.</p>
+<p>Hopefully, you find this helpful.</p>
 
   </div>
 <a class="u-url" href="/2025/12/24/troubleshooting-jekyll.html" hidden></a>
