@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-29T18:52:45+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-29T18:54:57+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
 
 <p>Here’s a simple script that reads a certain directory and then lists then.</p>
 
@@ -56,7 +56,7 @@ fi
   <li>Less Scrutiny. Some users report that the atmosphere feels more freeing with less pressure on larger and more visible platforms.</li>
 </ul>
 
-<p>Here are several reasons why GitHub are leaving GitHub.</p>
+<p>Here are several reasons why users are leaving GitHub.</p>
 
 <ul>
   <li>Opposition to AI practices. Major point of contention is GitHub’s use of public code to train AI models like GitHub Copilot.</li>
