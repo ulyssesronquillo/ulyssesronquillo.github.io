@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-29T18:47:28+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-29T18:52:18+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
 
 <p>Here’s a simple script that reads a certain directory and then lists then.</p>
 
@@ -48,17 +48,22 @@ fi
   <li>It’s non-profit and community-driven. Future and direction are determined by members through a democratic voting process.</li>
   <li>It’s privacy-friendly and ethical. The platform does not engage in user tracking, third-party cookies, or selling your data.</li>
   <li>It’s build on FOSS (free and open source software) specifically the Forgejo platform which is a fork of Gitea.</li>
-  <li>No vendor lock-in. By using a self-hostable platform like Forgejo, users avoid lock-in to proprietary ecosystems.</li>
+  <li>No vendor lock-in. By using a self-hosting platform like Forgejo, users avoid lock-in to proprietary ecosystems.</li>
   <li>Simple and focused interface. Many users find Codeberg’s interface more minimal and less cluttered than other platforms.</li>
-  <li>European Digital Sovereignity. Codeberg operates under EU data protection regulations which is significantly prioritizes privacy.</li>
+  <li>European Digital Sovereignty. Codeberg operates under EU data protection regulations which is significantly prioritizes privacy.</li>
   <li>Integrated Services. Codeberg offers other FOSS-based services like static website hosting, CI/CD using Woodpecker and CI/Forgejo Actions.</li>
-  <li>Mission Alignment. For many using Codeberg is an etheical choice to support and contribute to the open-source ecosystem.</li>
+  <li>Mission Alignment. For many using Codeberg is an ethical choice to support and contribute to the open-source ecosystem.</li>
   <li>Less Scrutiny. Some users report that the atmosphere feels more freeing with less pressure on larger and more visible platforms.</li>
+</ul>
+
+<p>Here are several reasons why GitHub are leaving GitHub.</p>
+
+<ul>
   <li>Opposition to AI practices. Major point of contention is GitHub’s use of public code to train AI models like GitHub Copilot.</li>
-  <li>Risk of Single-Point Control. Github can unilaterally can ban repositories or accounts at any time.</li>
-  <li>Performance and UI Issues. Users report that GitHub’s web interface has become slow, resource-hungry and requires Javascript.</li>
+  <li>Risk of Single-Point Control. GitHub can unilaterally can ban repositories or accounts at any time.</li>
+  <li>Performance and UI Issues. Users report that GitHub’s web interface has become slow, resource-hungry and requires JavaScript.</li>
   <li>Intrusive Community Management. The platform is criticized for constantly pushing new, often unwanted features, etc.</li>
-  <li>Inadequate Community Management. Project maintainers find Github’s tools insufficient for managing large communities.</li>
+  <li>Inadequate Community Management. Project maintainers find GitHub’s tools insufficient for managing large communities.</li>
 </ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Ever since Microsoft acquired Github, many developers are reevaluating their use of GitHub.]]></summary></entry><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
 
 <p>Most likely the errors you see will give you clues to what’s going on during the rebuild. In my case it was a simple CSS error.</p>
