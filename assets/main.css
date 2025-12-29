@@ -80,8 +80,8 @@ li > ol {
 }
 
 ul li {
-  margin-left: 0;
-  list-style-type: none;
+  margin-left: 15px;
+  list-style-type: disc;
   border-bottom: 1px solid #444;
 }
 

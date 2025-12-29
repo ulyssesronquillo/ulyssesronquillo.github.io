@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-29T13:47:53+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-29T18:47:28+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
 
 <p>Here’s a simple script that reads a certain directory and then lists then.</p>
 
@@ -40,7 +40,26 @@ fi
 <ol>
   <li>The script checks if directory is available or mounted.</li>
   <li>List subdirectories on directory that’s given.</li>
-</ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[There are times you need to get a list of subdirectories in Shell/Bash.]]></summary></entry><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
+</ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[There are times you need to get a list of subdirectories in Shell/Bash.]]></summary></entry><entry><title type="html">reasons for leaving github</title><link href="http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github.html" rel="alternate" type="text/html" title="reasons for leaving github" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github.html"><![CDATA[<p>Ever since Microsoft acquired Github, many developers are reevaluating their use of GitHub.</p>
+
+<p>Here are several reasons why many developers are moving to <a href="https://codeberg.org">Codeberg</a>.</p>
+
+<ul>
+  <li>It’s non-profit and community-driven. Future and direction are determined by members through a democratic voting process.</li>
+  <li>It’s privacy-friendly and ethical. The platform does not engage in user tracking, third-party cookies, or selling your data.</li>
+  <li>It’s build on FOSS (free and open source software) specifically the Forgejo platform which is a fork of Gitea.</li>
+  <li>No vendor lock-in. By using a self-hostable platform like Forgejo, users avoid lock-in to proprietary ecosystems.</li>
+  <li>Simple and focused interface. Many users find Codeberg’s interface more minimal and less cluttered than other platforms.</li>
+  <li>European Digital Sovereignity. Codeberg operates under EU data protection regulations which is significantly prioritizes privacy.</li>
+  <li>Integrated Services. Codeberg offers other FOSS-based services like static website hosting, CI/CD using Woodpecker and CI/Forgejo Actions.</li>
+  <li>Mission Alignment. For many using Codeberg is an etheical choice to support and contribute to the open-source ecosystem.</li>
+  <li>Less Scrutiny. Some users report that the atmosphere feels more freeing with less pressure on larger and more visible platforms.</li>
+  <li>Opposition to AI practices. Major point of contention is GitHub’s use of public code to train AI models like GitHub Copilot.</li>
+  <li>Risk of Single-Point Control. Github can unilaterally can ban repositories or accounts at any time.</li>
+  <li>Performance and UI Issues. Users report that GitHub’s web interface has become slow, resource-hungry and requires Javascript.</li>
+  <li>Intrusive Community Management. The platform is criticized for constantly pushing new, often unwanted features, etc.</li>
+  <li>Inadequate Community Management. Project maintainers find Github’s tools insufficient for managing large communities.</li>
+</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Ever since Microsoft acquired Github, many developers are reevaluating their use of GitHub.]]></summary></entry><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
 
 <p>Most likely the errors you see will give you clues to what’s going on during the rebuild. In my case it was a simple CSS error.</p>
 
@@ -321,40 +340,4 @@ http://192.168.168.10:8443
 
 <p>Blog list now display the date first followed by the title.</p>
 
-<p>Subtle changes. I like it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I changed the home page just a little bit.]]></summary></entry><entry><title type="html">aws efs tls stunnel</title><link href="http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel.html" rel="alternate" type="text/html" title="aws efs tls stunnel" /><published>2025-12-09T00:00:00+00:00</published><updated>2025-12-09T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/09/aws-efs-tls-stunnel.html"><![CDATA[<p>AWS EFS supports stunnel-based TLS encryption for NFS mounts.</p>
-
-<p>Make sure distro has efs-utils installed.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install -y amazon-efs-utils
-# OR
-sudo apt-get install -y amazon-efs-utils
-</code></pre></div></div>
-
-<p>nfs-utils will mount drives but it will not provide encryption.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo yum install nfs-utils
-</code></pre></div></div>
-
-<p>Standard mount with TLS</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir -p /mnt/efs 
-sudo mount -t efs -o tls fs-12345678:/ /mnt/efs 
-</code></pre></div></div>
-
-<p>Mount via /etc/fstab</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fs-12345678:/ /mnt/efs efs _netdev,tls 0 0 
-10.10.10.10:/ /mnt/efs efs _netdev,tls 0 0 
-</code></pre></div></div>
-
-<p>Mount automatically</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mount -a
-</code></pre></div></div>
-
-<p>Check whether stunnel or efs-proxy is running</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps aux | grep -E "stunnel|efs-proxy"
-</code></pre></div></div>
-
-<p>aws-efs-utils in not avaiable on RedHat 6 &amp; 7.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[AWS EFS supports stunnel-based TLS encryption for NFS mounts.]]></summary></entry></feed>
+<p>Subtle changes. I like it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I changed the home page just a little bit.]]></summary></entry></feed>
