@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-28T13:44:22+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-29T13:47:53+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
+
+<p>Here’s a simple script that reads a certain directory and then lists then.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Function to get subdirectories in a given directory
+get_subdirectories() {
+  dir="/home/ulysses/code11"
+  # Initialize an empty array to store subdirectories
+  local subdirectories=()
+  # Check if the given path is a directory
+  if [ -d "$dir" ]; then
+    # Loop through the contents of the directory
+    for item in "$dir"/*; do
+      # Check if the item is a directory
+      if [ -d "$item" ]; then
+        subdirectories+=("$item")
+      fi
+    done
+  else
+    # not a valid directory
+    return 1
+  fi
+  # Return the array of subdirectories
+  echo "${subdirectories[@]}"
+}
+
+# Example usage
+subdirs=$(get_subdirectories)
+
+if [[ $? -eq 0 ]]; then
+  for source_dir in $subdirs; do
+    srcDir=$(basename "$source_dir")
+    echo $srcDir
+  done
+else
+  echo "The path is not a valid directory."
+fi
+</code></pre></div></div>
+
+<ol>
+  <li>The script checks if directory is available or mounted.</li>
+  <li>List subdirectories on directory that’s given.</li>
+</ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[There are times you need to get a list of subdirectories in Shell/Bash.]]></summary></entry><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
 
 <p>Most likely the errors you see will give you clues to what’s going on during the rebuild. In my case it was a simple CSS error.</p>
 
@@ -315,41 +357,4 @@ sudo mount -t efs -o tls fs-12345678:/ /mnt/efs
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps aux | grep -E "stunnel|efs-proxy"
 </code></pre></div></div>
 
-<p>aws-efs-utils in not avaiable on RedHat 6 &amp; 7.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[AWS EFS supports stunnel-based TLS encryption for NFS mounts.]]></summary></entry><entry><title type="html">two column page</title><link href="http://0.0.0.0:4000/2025/12/08/two-column-page.html" rel="alternate" type="text/html" title="two column page" /><published>2025-12-08T00:00:00+00:00</published><updated>2025-12-08T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/08/two-column-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/08/two-column-page.html"><![CDATA[<p>Here’s some CSS to turn your site into a two-column page.</p>
-
-<p>I’m using markdown language to list items. To render properly, markdown div is required.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="multicolumn"&gt;
-&lt;div class="column"&gt;
-&lt;div markdown="1"&gt;
-- link a
-- link b
-- link c
-&lt;/div&gt; &lt;!-- close markdown --&gt;
-&lt;/div&gt; &lt;!-- close column --&gt;
-&lt;div class="column"&gt;
-&lt;div markdown="1"&gt;
-- link d
-- link e
-- link f
-&lt;/div&gt; &lt;!-- close markdown --&gt;
-&lt;/div&gt; &lt;!-- close column --&gt;
-&lt;/div&gt; &lt;!-- close multicolumn --&gt;
-</code></pre></div></div>
-
-<p>Finally the CSS. It will display 2 columns if browser is greater than 1080. Otherwise it collapses to one column.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.multicolumn {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.column {
-  flex: 1 1 45%;
-}
-@media (max-width: 1080px) {
-  .column {
-    flex: 1 1 100%;
-  }
-}
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s some CSS to turn your site into a two-column page.]]></summary></entry></feed>
+<p>aws-efs-utils in not avaiable on RedHat 6 &amp; 7.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[AWS EFS supports stunnel-based TLS encryption for NFS mounts.]]></summary></entry></feed>
