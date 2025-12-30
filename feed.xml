@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-30T02:15:19+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-30T12:53:09+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">portainer</title><link href="http://0.0.0.0:4000/2025/12/30/portainer.html" rel="alternate" type="text/html" title="portainer" /><published>2025-12-30T00:00:00+00:00</published><updated>2025-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/30/portainer</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/30/portainer.html"><![CDATA[<p>Portainer is an enterpise container management platform to deploy, troubleshoot and secure Kubernetes, Docker and Podman environments.</p>
+
+<p>I run several containers using docker-compose. I was curious installing Portainer to see if there’s any value to this tool.</p>
+
+<p>I’m using docker-compose again to install Portainer.</p>
+
+<p>(1). Setup Portainer</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/code/docker/portainer
+cd ~/code/docker/portainer
+vi docker-compose.yml
+</code></pre></div></div>
+
+<p>(2). Paste content into docker-compose.yml file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3"
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    ports:
+      - 9000:9000
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+volumes:
+  portainer_data:
+</code></pre></div></div>
+
+<p>(3). Run Portainer.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div></div>
+
+<p>(4). Open your browser and open the <a href="http://localhost:9000">web interface</a> on port 9000.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Portainer is an enterpise container management platform to deploy, troubleshoot and secure Kubernetes, Docker and Podman environments.]]></summary></entry><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
 
 <p>Here’s a simple script that reads a certain directory and then lists then.</p>
 
@@ -42,6 +77,16 @@ fi
   <li>List subdirectories on directory that’s given.</li>
 </ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[There are times you need to get a list of subdirectories in Shell/Bash.]]></summary></entry><entry><title type="html">reasons for leaving github</title><link href="http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github.html" rel="alternate" type="text/html" title="reasons for leaving github" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github.html"><![CDATA[<p>Ever since Microsoft acquired Github, many developers are reevaluating their use of GitHub.</p>
 
+<p>Reasons why developers are leaving <a href="https://github.com">GitHub</a>.</p>
+
+<ul>
+  <li>Opposition to AI practices. Major point of contention is GitHub’s use of public code to train AI models like GitHub Copilot.</li>
+  <li>Risk of Single-Point Control. GitHub can unilaterally can ban repositories or accounts at any time.</li>
+  <li>Performance and UI Issues. Users report that GitHub’s web interface has become slow, resource-hungry and requires JavaScript.</li>
+  <li>Intrusive Community Management. The platform is criticized for constantly pushing new, often unwanted features, etc.</li>
+  <li>Inadequate Community Management. Project maintainers find GitHub’s tools insufficient for managing large communities.</li>
+</ul>
+
 <p>Reasons why developers are moving to <a href="https://codeberg.org">Codeberg</a>.</p>
 
 <ul>
@@ -54,16 +99,6 @@ fi
   <li>Integrated Services. Codeberg offers other FOSS-based services like static website hosting, CI/CD using Woodpecker and CI/Forgejo Actions.</li>
   <li>Mission Alignment. For many using Codeberg is an ethical choice to support and contribute to the open-source ecosystem.</li>
   <li>Less Scrutiny. Some users report that the atmosphere feels more freeing with less pressure on larger and more visible platforms.</li>
-</ul>
-
-<p>Reasons why developers are leaving GitHub.</p>
-
-<ul>
-  <li>Opposition to AI practices. Major point of contention is GitHub’s use of public code to train AI models like GitHub Copilot.</li>
-  <li>Risk of Single-Point Control. GitHub can unilaterally can ban repositories or accounts at any time.</li>
-  <li>Performance and UI Issues. Users report that GitHub’s web interface has become slow, resource-hungry and requires JavaScript.</li>
-  <li>Intrusive Community Management. The platform is criticized for constantly pushing new, often unwanted features, etc.</li>
-  <li>Inadequate Community Management. Project maintainers find GitHub’s tools insufficient for managing large communities.</li>
 </ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Ever since Microsoft acquired Github, many developers are reevaluating their use of GitHub.]]></summary></entry><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
 
 <p>Most likely the errors you see will give you clues to what’s going on during the rebuild. In my case it was a simple CSS error.</p>
@@ -335,14 +370,4 @@ http://192.168.168.10:8443
   </tbody>
 </table>
 
-<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Improve your vi skills by learning how to yank, cut and paste.]]></summary></entry><entry><title type="html">new home page</title><link href="http://0.0.0.0:4000/2025/12/10/new-home-page.html" rel="alternate" type="text/html" title="new home page" /><published>2025-12-10T00:00:00+00:00</published><updated>2025-12-10T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/10/new-home-page</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/10/new-home-page.html"><![CDATA[<p>I changed the home page just a little bit.</p>
-
-<p>The about page is now the home page.</p>
-
-<p>While the blog have been moved to its own page.</p>
-
-<p>I added a little bit of CSS. Lists now have a subtle border-bottom.</p>
-
-<p>Blog list now display the date first followed by the title.</p>
-
-<p>Subtle changes. I like it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I changed the home page just a little bit.]]></summary></entry></feed>
+<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Improve your vi skills by learning how to yank, cut and paste.]]></summary></entry></feed>
