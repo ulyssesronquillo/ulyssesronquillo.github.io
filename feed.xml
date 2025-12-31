@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-30T12:57:45+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">portainer</title><link href="http://0.0.0.0:4000/2025/12/30/portainer.html" rel="alternate" type="text/html" title="portainer" /><published>2025-12-30T00:00:00+00:00</published><updated>2025-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/30/portainer</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/30/portainer.html"><![CDATA[<p>Portainer is an enterpise container management platform to deploy, troubleshoot and secure Kubernetes, Docker and Podman environments.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-31T14:17:36+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">immich gallery</title><link href="http://0.0.0.0:4000/2025/12/31/immich-gallery.html" rel="alternate" type="text/html" title="immich gallery" /><published>2025-12-31T00:00:00+00:00</published><updated>2025-12-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/31/immich-gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/31/immich-gallery.html"><![CDATA[<p>If you like hosting a photo gallery on your own desktop or server, give Immich a try.</p>
+
+<p>I installed mine on my Linux Mint desktop using docker compose.</p>
+
+<p>(1). Create a directory.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir immich; cd immich
+</code></pre></div></div>
+
+<p>(2). Download a couple of files.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
+wget -O .env https://github.com/immich-app/immich/releases/latest/download/example.env
+</code></pre></div></div>
+
+<p>(3). Customize the .env file with your custom values.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPLOAD_LOCATION=
+DB_DATA_LOCATION=
+DB_PASSWORD=
+</code></pre></div></div>
+
+<p>(4). Start the container.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up -d
+</code></pre></div></div>
+
+<p>(5). Finally, access the gallery from your browser.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:2283
+# or via ip address
+http://xxx.xxx.xxx.xxx:2283
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you like hosting a photo gallery on your own desktop or server, give Immich a try.]]></summary></entry><entry><title type="html">portainer</title><link href="http://0.0.0.0:4000/2025/12/30/portainer.html" rel="alternate" type="text/html" title="portainer" /><published>2025-12-30T00:00:00+00:00</published><updated>2025-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/30/portainer</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/30/portainer.html"><![CDATA[<p>Portainer is an enterpise container management platform to deploy, troubleshoot and secure Kubernetes, Docker and Podman environments.</p>
 
 <p>I run several containers using docker-compose. I was curious installing Portainer to see if there’s any value to this tool.</p>
 
@@ -294,80 +326,4 @@ http://192.168.168.10:8443
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose down
 </code></pre></div></div>
 
-<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.]]></summary></entry><entry><title type="html">yank cut paste</title><link href="http://0.0.0.0:4000/2025/12/11/yank-cut-paste.html" rel="alternate" type="text/html" title="yank cut paste" /><published>2025-12-11T00:00:00+00:00</published><updated>2025-12-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/11/yank-cut-paste</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/11/yank-cut-paste.html"><![CDATA[<p>Improve your vi skills by learning how to yank, cut and paste.</p>
-
-<p>Nice little cheat sheet.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Action</th>
-      <th>Command</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Yank line</td>
-      <td>yy</td>
-      <td>Copy current line</td>
-    </tr>
-    <tr>
-      <td>Yank N lines</td>
-      <td>Ny</td>
-      <td>Copy N line (e.g. 3yy = 3 lines)</td>
-    </tr>
-    <tr>
-      <td>Yank word</td>
-      <td>yw</td>
-      <td>Copy from cursor to end of word</td>
-    </tr>
-    <tr>
-      <td>Yank to end</td>
-      <td>y$</td>
-      <td>Copy from cursor to end of line</td>
-    </tr>
-    <tr>
-      <td>Highlight block</td>
-      <td>Ctrl-V</td>
-      <td>Highlight block to cut or copy</td>
-    </tr>
-    <tr>
-      <td>Cut highlight</td>
-      <td>d</td>
-      <td>Cut highlighted block</td>
-    </tr>
-    <tr>
-      <td>Cut line</td>
-      <td>dd</td>
-      <td>Delete (cut) current line</td>
-    </tr>
-    <tr>
-      <td>Cut N lines</td>
-      <td>Ndd</td>
-      <td>Delete N lines (e.g., 3dd)</td>
-    </tr>
-    <tr>
-      <td>Cut word</td>
-      <td>dw</td>
-      <td>Delete from cursor to end of word</td>
-    </tr>
-    <tr>
-      <td>Cut to end</td>
-      <td>d$</td>
-      <td>Delete from cursor to end of line</td>
-    </tr>
-    <tr>
-      <td>Paste after</td>
-      <td>p</td>
-      <td>Paste after cursor</td>
-    </tr>
-    <tr>
-      <td>Paste before</td>
-      <td>P</td>
-      <td>Paste before cursor</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Improve your vi skills by learning how to yank, cut and paste.]]></summary></entry></feed>
+<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.]]></summary></entry></feed>
