@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2025-12-31T14:17:36+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">immich gallery</title><link href="http://0.0.0.0:4000/2025/12/31/immich-gallery.html" rel="alternate" type="text/html" title="immich gallery" /><published>2025-12-31T00:00:00+00:00</published><updated>2025-12-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/31/immich-gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/31/immich-gallery.html"><![CDATA[<p>If you like hosting a photo gallery on your own desktop or server, give Immich a try.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-01T19:58:36+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">convert jpg pdf</title><link href="http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf.html" rel="alternate" type="text/html" title="convert jpg pdf" /><published>2026-01-01T00:00:00+00:00</published><updated>2026-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf.html"><![CDATA[<p>Convert is an awesome program.</p>
+
+<p>Here’s another way of converting JPG to PDF.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert input.jpg output.pdf
+</code></pre></div></div>
+
+<p>If you don’t have it installed, run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install imagemagick
+</code></pre></div></div>
+
+<p>Just run convert thereafter.</p>
+
+<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Convert is an awesome program.]]></summary></entry><entry><title type="html">immich gallery</title><link href="http://0.0.0.0:4000/2025/12/31/immich-gallery.html" rel="alternate" type="text/html" title="immich gallery" /><published>2025-12-31T00:00:00+00:00</published><updated>2025-12-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/31/immich-gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/31/immich-gallery.html"><![CDATA[<p>If you like hosting a photo gallery on your own desktop or server, give Immich a try.</p>
 
 <p>I installed mine on my Linux Mint desktop using docker compose.</p>
 
@@ -277,53 +291,4 @@ sudo apt install openshot-qt python3-openshot
 
 <p>I ran it through HandBrake on Fast 720p30. It’s down to 105MB.</p>
 
-<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I’ve been using Openshot video editor to edit or stitch video files.]]></summary></entry><entry><title type="html">code server</title><link href="http://0.0.0.0:4000/2025/12/12/code-server.html" rel="alternate" type="text/html" title="code server" /><published>2025-12-12T00:00:00+00:00</published><updated>2025-12-12T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/12/code-server</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/12/code-server.html"><![CDATA[<p>Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.</p>
-
-<p>I use docker-compose to host code-server on a container.</p>
-
-<p>Here’s my docker-compose.yml.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services:
-  code-server:
-    image: lscr.io/linuxserver/code-server:latest
-    container_name: code-server
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-      - PASSWORD=xxxxxxxx                   #optional
-      - HASHED_PASSWORD=                    #optional
-      - SUDO_PASSWORD=xxxxxxxx              #optional
-      - SUDO_PASSWORD_HASH=                 #optional
-      - PROXY_DOMAIN=code-server.my.domain  #optional
-      - DEFAULT_WORKSPACE=/config/workspace #optional
-      - PWA_APPNAME=code-server             #optional
-    volumes:
-      - /home/ulysses/Code:/config
-    ports:
-      - 8443:8443
-    restart: unless-stopped
-</code></pre></div></div>
-
-<p>There are a few things that are optional and can be skipped.</p>
-
-<p>Bring it up.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
-</code></pre></div></div>
-
-<p>Access the code-server from a browser.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8443
-# OR
-http://192.168.168.10:8443
-</code></pre></div></div>
-
-<p>It looks just like VSCode, but only in the browser.</p>
-
-<p>If you’re done, just bring it down.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose down
-</code></pre></div></div>
-
-<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Code-server runs Visual Studio Code (VS Code) on a remote server making it accessible via a web browser.]]></summary></entry></feed>
+<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I’ve been using Openshot video editor to edit or stitch video files.]]></summary></entry></feed>
