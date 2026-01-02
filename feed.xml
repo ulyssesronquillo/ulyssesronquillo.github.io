@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-01T19:58:36+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">convert jpg pdf</title><link href="http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf.html" rel="alternate" type="text/html" title="convert jpg pdf" /><published>2026-01-01T00:00:00+00:00</published><updated>2026-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf.html"><![CDATA[<p>Convert is an awesome program.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-02T11:53:13+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">gitea</title><link href="http://0.0.0.0:4000/2026/01/02/gitea.html" rel="alternate" type="text/html" title="gitea" /><published>2026-01-02T00:00:00+00:00</published><updated>2026-01-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/02/gitea</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/02/gitea.html"><![CDATA[<p>If you want to host Git repositories on your desktop or server, then give Gitea a try.</p>
+
+<p>Create a new directory.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir gitea
+cd gitea
+</code></pre></div></div>
+
+<p>To install, just use Docker Compose to keep it simple.</p>
+
+<p>Create a docker-compose.yml file and add the following code below.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>networks:
+  gitea:
+    external: false
+
+services:
+  server:
+    image: docker.gitea.com/gitea:1.25.3
+    container_name: gitea
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    networks:
+      - gitea
+    volumes:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3000:3000"
+      - "222:22"
+</code></pre></div></div>
+
+<p>Start Gitea. You will be a sked to create a new account and password.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up -d
+</code></pre></div></div>
+
+<p>Once Gitea is up and running, access it using a web browser.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:3000
+</code></pre></div></div>
+
+<p>If you have a port conflict, you can modify the port to another.</p>
+
+<p>Create a new repository. Clone it or perform a remote add origin.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you want to host Git repositories on your desktop or server, then give Gitea a try.]]></summary></entry><entry><title type="html">convert jpg pdf</title><link href="http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf.html" rel="alternate" type="text/html" title="convert jpg pdf" /><published>2026-01-01T00:00:00+00:00</published><updated>2026-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf.html"><![CDATA[<p>Convert is an awesome program.</p>
 
 <p>Here’s another way of converting JPG to PDF.</p>
 
@@ -248,47 +295,4 @@ snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
 
 <p>Lastly, you can modify the options and tailor it to your site.</p>
 
-<p>Off you go.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I recently added snowfall on this site with some help from Javascript.]]></summary></entry><entry><title type="html">openshot black screen</title><link href="http://0.0.0.0:4000/2025/12/14/openshot-black-screen.html" rel="alternate" type="text/html" title="openshot black screen" /><published>2025-12-14T00:00:00+00:00</published><updated>2025-12-14T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/14/openshot-black-screen</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/14/openshot-black-screen.html"><![CDATA[<p>I’ve been using Openshot video editor to edit or stitch video files.</p>
-
-<p>When exporting to the H.264 format, I’ve been getting a black screen.</p>
-
-<p>I tried other formats, but it’s working only with theora ogg format.</p>
-
-<p>Until I find a fix, I may have to use HandBrake to convert ogg to mp4.</p>
-
-<p>The theora ogg export is super slow. I think I’m have missing codecs.</p>
-
-<p>Update: I was able to fix it. I reinstalled openshot-qt via ppa.</p>
-
-<p>Here are the steps:</p>
-
-<ol>
-  <li>Uninstall openshot-qt</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt purge openshot-qt 
-</code></pre></div></div>
-
-<ol>
-  <li>Install missing codecs</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install libx264-dev libmp3lame-dev
-</code></pre></div></div>
-
-<ol>
-  <li>Install openshot-qt via ppa</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository ppa:openshot.developers/ppa
-sudo apt update
-sudo apt install openshot-qt python3-openshot
-</code></pre></div></div>
-
-<p>After reinstalling, I’m now able to export to a mp4 format successfully.</p>
-
-<p>No more black screen. However, the exported mp4 file is 1400MB.</p>
-
-<p>I ran it through HandBrake on Fast 720p30. It’s down to 105MB.</p>
-
-<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I’ve been using Openshot video editor to edit or stitch video files.]]></summary></entry></feed>
+<p>Off you go.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I recently added snowfall on this site with some help from Javascript.]]></summary></entry></feed>
