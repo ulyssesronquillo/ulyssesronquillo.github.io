@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-02T15:07:10+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">gitea</title><link href="http://0.0.0.0:4000/2026/01/02/gitea.html" rel="alternate" type="text/html" title="gitea" /><published>2026-01-02T00:00:00+00:00</published><updated>2026-01-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/02/gitea</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/02/gitea.html"><![CDATA[<p>If you want to host Git repositories on your desktop or server, then give Gitea a try.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-04T15:05:22+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">gitea</title><link href="http://0.0.0.0:4000/2026/01/02/gitea.html" rel="alternate" type="text/html" title="gitea" /><published>2026-01-02T00:00:00+00:00</published><updated>2026-01-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/02/gitea</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/02/gitea.html"><![CDATA[<p>If you want to host Git repositories on your desktop or server, then give Gitea a try.</p>
 
 <p>Create a new directory.</p>
 
@@ -33,12 +33,12 @@ services:
       - "222:22"
 </code></pre></div></div>
 
-<p>Start Gitea. You will be a sked to create a new account and password.</p>
+<p>Start Gitea. You will be asked to create a new Gitea account and password.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up -d
 </code></pre></div></div>
 
-<p>Once Gitea is up and running, access it using a web browser.</p>
+<p>Once Gitea is up and running, access it using a web browser via link below.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:3000
 </code></pre></div></div>
@@ -47,7 +47,7 @@ services:
 
 <p>Create a new repository. Clone it or perform a remote add origin.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you want to host Git repositories on your desktop or server, then give Gitea a try.]]></summary></entry><entry><title type="html">yazi file manager</title><link href="http://0.0.0.0:4000/2026/01/02/yazi-file-manager.html" rel="alternate" type="text/html" title="yazi file manager" /><published>2026-01-02T00:00:00+00:00</published><updated>2026-01-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/02/yazi-file-manager</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/02/yazi-file-manager.html"><![CDATA[<p>Here’s another great Terminal or CLI tool for navigating files and directories.</p>
 
-<p>To install, just use your package manager.</p>
+<p>To install, just use your package manager. In this case, it’s apt.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install yazi
 brew install yazi
@@ -57,7 +57,7 @@ brew install yazi
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yazi
 </code></pre></div></div>
 
-<p>If text is not readable, search online for catpuccine yazi theme.</p>
+<p>If text is not readable, search online for catppuccin yazi theme.</p>
 
 <p>Download the file and paste it to ~/.config/yazi/theme.toml.</p>
 
@@ -65,6 +65,7 @@ brew install yazi
 touch ~/.config/yazi/theme.toml
 vi ~/.config/yazi/theme.toml
 </code></pre></div></div>
+
 <p>Rerun yazi. The new theme should be activated.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yazi
@@ -191,13 +192,13 @@ fi
 <ol>
   <li>The script checks if directory is available or mounted.</li>
   <li>List subdirectories on directory that’s given.</li>
-</ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[There are times you need to get a list of subdirectories in Shell/Bash.]]></summary></entry><entry><title type="html">reasons for leaving github</title><link href="http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github.html" rel="alternate" type="text/html" title="reasons for leaving github" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github.html"><![CDATA[<p>Ever since Microsoft acquired Github, many developers are reevaluating their use of GitHub.</p>
+</ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[There are times you need to get a list of subdirectories in Shell/Bash.]]></summary></entry><entry><title type="html">reasons for leaving github</title><link href="http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github.html" rel="alternate" type="text/html" title="reasons for leaving github" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/reasons-for-leaving-github.html"><![CDATA[<p>Ever since Microsoft acquired Github, many developers are re-evaluating their use of GitHub.</p>
 
 <p>Reasons why developers are leaving <a href="https://github.com">GitHub</a>.</p>
 
 <ul>
-  <li>Opposition to AI practices. Major point of contention is GitHub’s use of public code to train AI models like GitHub Copilot.</li>
-  <li>Risk of Single-Point Control. GitHub can unilaterally can ban repositories or accounts at any time.</li>
+  <li>Opposition to AI practices. Major point of contention is GitHub’s use of public code to train AI models like Copilot.</li>
+  <li>Risk of Single-Point Control. GitHub has been known to unilaterally ban repositories or accounts at any time.</li>
   <li>Performance and UI Issues. Users report that GitHub’s web interface has become slow, resource-hungry and requires JavaScript.</li>
   <li>Intrusive Community Management. The platform is criticized for constantly pushing new, often unwanted features, etc.</li>
   <li>Inadequate Community Management. Project maintainers find GitHub’s tools insufficient for managing large communities.</li>
@@ -215,7 +216,7 @@ fi
   <li>Integrated Services. Codeberg offers other FOSS-based services like static website hosting, CI/CD using Woodpecker and CI/Forgejo Actions.</li>
   <li>Mission Alignment. For many using Codeberg is an ethical choice to support and contribute to the open-source ecosystem.</li>
   <li>Less Scrutiny. Some users report that the atmosphere feels more freeing with less pressure on larger and more visible platforms.</li>
-</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Ever since Microsoft acquired Github, many developers are reevaluating their use of GitHub.]]></summary></entry><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
+</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Ever since Microsoft acquired Github, many developers are re-evaluating their use of GitHub.]]></summary></entry><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
 
 <p>Most likely the errors you see will give you clues to what’s going on during the rebuild. In my case it was a simple CSS error.</p>
 
