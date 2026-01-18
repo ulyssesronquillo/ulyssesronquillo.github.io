@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-15T02:42:52+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">feeding the starter</title><link href="http://0.0.0.0:4000/2026/01/11/feeding-the-starter.html" rel="alternate" type="text/html" title="feeding the starter" /><published>2026-01-11T00:00:00+00:00</published><updated>2026-01-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/11/feeding-the-starter</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/11/feeding-the-starter.html"><![CDATA[<p>Feeding the sourdough starter (the beast).</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-18T17:59:28+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">run node anywhere</title><link href="http://0.0.0.0:4000/2026/01/18/run-node-anywhere.html" rel="alternate" type="text/html" title="run node anywhere" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/run-node-anywhere</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/run-node-anywhere.html"><![CDATA[<p>Run your node script from anywhere by switching to a specific directory by changing to a working directory.</p>
+
+<p>Place this code at the top of your node script.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/usr/bin/env node 
+
+process.chdir('/absolute/path/to/your/directory');
+console.log('Now running in:', process.cwd());
+</code></pre></div></div>
+
+<p>In addition, you can also add your node directory to your PATH so you can run it anywhere.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH=$PATH:/absolute/path/to/your/directory
+</code></pre></div></div>
+
+<p>If you want it to be more permanent, add the export command to your ~/.bashrc in Linux or ~/.zshrc on a Mac.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Run your node script from anywhere by switching to a specific directory by changing to a working directory.]]></summary></entry><entry><title type="html">feeding the starter</title><link href="http://0.0.0.0:4000/2026/01/11/feeding-the-starter.html" rel="alternate" type="text/html" title="feeding the starter" /><published>2026-01-11T00:00:00+00:00</published><updated>2026-01-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/11/feeding-the-starter</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/11/feeding-the-starter.html"><![CDATA[<p>Feeding the sourdough starter (the beast).</p>
 
 <ol>
   <li>
@@ -355,36 +370,4 @@ fi
   <li>Integrated Services. Codeberg offers other FOSS-based services like static website hosting, CI/CD using Woodpecker and CI/Forgejo Actions.</li>
   <li>Mission Alignment. For many using Codeberg is an ethical choice to support and contribute to the open-source ecosystem.</li>
   <li>Less Scrutiny. Some users report that the atmosphere feels more freeing with less pressure on larger and more visible platforms.</li>
-</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Ever since Microsoft acquired Github, many developers are re-evaluating their use of GitHub.]]></summary></entry><entry><title type="html">troubleshooting jekyll</title><link href="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html" rel="alternate" type="text/html" title="troubleshooting jekyll" /><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/24/troubleshooting-jekyll.html"><![CDATA[<p>If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’</p>
-
-<p>Most likely the errors you see will give you clues to what’s going on during the rebuild. In my case it was a simple CSS error.</p>
-
-<p>It is surprising that a small syntax CSS error can bring down Jekyll.</p>
-
-<p>Perform the following steps to troubleshoot your Jekyll site.</p>
-
-<p>(1) Check if docker container is running. If it’s restarting every 5 seconds, then there’s definitely a problem.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a
-</code></pre></div></div>
-
-<p>(2) Stop the container.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose stop
-</code></pre></div></div>
-
-<p>(3) Rebuild Jekyll.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up --build
-</code></pre></div></div>
-
-<p>(4) Check for errors. They are usually highlighted in red.</p>
-
-<p>(5) Once you fixed the errors, restart Jekyll.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop ulyme_jekyll_1
-docker rm ulyme_jekyll_1
-docker-compose up -d
-</code></pre></div></div>
-
-<p>Hopefully, you’ll find this helpful.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you find yourself scratching your head as to why your Jekyll site is not working, pay attention to the errors when you run ‘build.’]]></summary></entry></feed>
+</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Ever since Microsoft acquired Github, many developers are re-evaluating their use of GitHub.]]></summary></entry></feed>
