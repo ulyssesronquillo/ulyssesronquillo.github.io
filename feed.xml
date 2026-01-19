@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-19T02:57:25+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-19T13:48:31+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">terminal configuration</title><link href="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html" rel="alternate" type="text/html" title="terminal configuration" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/19/terminal-configuration</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html"><![CDATA[<p>My terminal configuration</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Tool</th>
+      <th style="text-align: left">Program</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Prompt</td>
+      <td style="text-align: left">Oh My Posh</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Editor</td>
+      <td style="text-align: left">Neovim (LazyVim)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Terminal</td>
+      <td style="text-align: left">Tmux</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[My terminal configuration]]></summary></entry><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
 
 <ol>
   <li>Go to the first line you want to start to comment. Place cursor at the beginning.</li>
@@ -324,39 +347,4 @@ DB_PASSWORD=
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:2283
 # or via ip address
 http://xxx.xxx.xxx.xxx:2283
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you like hosting a photo gallery on your own desktop or server, give Immich a try.]]></summary></entry><entry><title type="html">portainer</title><link href="http://0.0.0.0:4000/2025/12/30/portainer.html" rel="alternate" type="text/html" title="portainer" /><published>2025-12-30T00:00:00+00:00</published><updated>2025-12-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/30/portainer</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/30/portainer.html"><![CDATA[<p>Portainer is an enterpise container management platform to deploy, troubleshoot and secure Kubernetes, Docker and Podman environments.</p>
-
-<p>I run several containers using docker-compose. I was curious installing Portainer to see if there’s any value to this tool.</p>
-
-<p>I’m using docker-compose again to install Portainer.</p>
-
-<p>(1). Setup Portainer</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/code/docker/portainer
-cd ~/code/docker/portainer
-vi docker-compose.yml
-</code></pre></div></div>
-
-<p>(2). Paste content into docker-compose.yml file.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3"
-services:
-  portainer:
-    image: portainer/portainer-ce:latest
-    container_name: portainer
-    ports:
-      - 9000:9000
-    volumes:
-      - portainer_data:/data
-      - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
-volumes:
-  portainer_data:
-</code></pre></div></div>
-
-<p>(3). Run Portainer.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
-</code></pre></div></div>
-
-<p>(4). Open your browser and open the <a href="http://localhost:9000">web interface</a> on port 9000.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Portainer is an enterpise container management platform to deploy, troubleshoot and secure Kubernetes, Docker and Podman environments.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you like hosting a photo gallery on your own desktop or server, give Immich a try.]]></summary></entry></feed>

@@ -336,9 +336,10 @@ table th, table td {
 }
 
 table th {
-  background-color: #090909;
-  border: 1px solid #100b0d;
+  background-color: #282828;
+  border: 1px solid #222;
   border-bottom-color: #100b0d;
+  border-bottom-color: #222;
 }
 
 table td {
