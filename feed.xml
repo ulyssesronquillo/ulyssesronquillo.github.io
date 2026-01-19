@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-18T21:10:58+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-19T02:41:18+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
 
 <ol>
   <li>Go to the first line you want to start to comment. Place cursor at the beginning.</li>
@@ -28,7 +28,21 @@ Esc
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+v
 Use cursor or j
 x or d
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to comment multiple lines in nvim.]]></summary></entry><entry><title type="html">run node anywhere</title><link href="http://0.0.0.0:4000/2026/01/18/run-node-anywhere.html" rel="alternate" type="text/html" title="run node anywhere" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/run-node-anywhere</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/run-node-anywhere.html"><![CDATA[<p>Run your node script from anywhere by switching to a specific directory by changing to a working directory.</p>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to comment multiple lines in nvim.]]></summary></entry><entry><title type="html">copy paste nvim</title><link href="http://0.0.0.0:4000/2026/01/18/copy-paste-nvim.html" rel="alternate" type="text/html" title="copy paste nvim" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/copy-paste-nvim</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/copy-paste-nvim.html"><![CDATA[<p>How to copy and paste in vim or nvim.</p>
+
+<p>Let’s say you have 10 rows of code that you want to copy somewhere else like at the bottom of your code.</p>
+
+<ol>
+  <li>Press Esc to go to Normal mode.</li>
+  <li>Move the cursor to the first line.</li>
+  <li>Enter Visual Line mode. Shift+V</li>
+  <li>The cursor or letter j or k.</li>
+  <li>Press y to yank the selected lines.</li>
+  <li>Move the cursor to your target location.</li>
+  <li>Press p to paste after the current line. Or P to paste before the current line.</li>
+</ol>
+
+<p>If you want to undo, press u.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to copy and paste in vim or nvim.]]></summary></entry><entry><title type="html">run node anywhere</title><link href="http://0.0.0.0:4000/2026/01/18/run-node-anywhere.html" rel="alternate" type="text/html" title="run node anywhere" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/run-node-anywhere</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/run-node-anywhere.html"><![CDATA[<p>Run your node script from anywhere by switching to a specific directory by changing to a working directory.</p>
 
 <p>Place this code at the top of your node script.</p>
 
@@ -334,46 +348,4 @@ volumes:
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
 </code></pre></div></div>
 
-<p>(4). Open your browser and open the <a href="http://localhost:9000">web interface</a> on port 9000.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Portainer is an enterpise container management platform to deploy, troubleshoot and secure Kubernetes, Docker and Podman environments.]]></summary></entry><entry><title type="html">list directories bash</title><link href="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html" rel="alternate" type="text/html" title="list directories bash" /><published>2025-12-29T00:00:00+00:00</published><updated>2025-12-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/29/list-directories-bash</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/29/list-directories-bash.html"><![CDATA[<p>There are times you need to get a list of subdirectories in Shell/Bash.</p>
-
-<p>Here’s a simple script that reads a certain directory and then lists then.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Function to get subdirectories in a given directory
-get_subdirectories() {
-  dir="/home/ulysses/code11"
-  # Initialize an empty array to store subdirectories
-  local subdirectories=()
-  # Check if the given path is a directory
-  if [ -d "$dir" ]; then
-    # Loop through the contents of the directory
-    for item in "$dir"/*; do
-      # Check if the item is a directory
-      if [ -d "$item" ]; then
-        subdirectories+=("$item")
-      fi
-    done
-  else
-    # not a valid directory
-    return 1
-  fi
-  # Return the array of subdirectories
-  echo "${subdirectories[@]}"
-}
-
-# Example usage
-subdirs=$(get_subdirectories)
-
-if [[ $? -eq 0 ]]; then
-  for source_dir in $subdirs; do
-    srcDir=$(basename "$source_dir")
-    echo $srcDir
-  done
-else
-  echo "The path is not a valid directory."
-fi
-</code></pre></div></div>
-
-<ol>
-  <li>The script checks if directory is available or mounted.</li>
-  <li>List subdirectories on directory that’s given.</li>
-</ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[There are times you need to get a list of subdirectories in Shell/Bash.]]></summary></entry></feed>
+<p>(4). Open your browser and open the <a href="http://localhost:9000">web interface</a> on port 9000.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Portainer is an enterpise container management platform to deploy, troubleshoot and secure Kubernetes, Docker and Podman environments.]]></summary></entry></feed>
