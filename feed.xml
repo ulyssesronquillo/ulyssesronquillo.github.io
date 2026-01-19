@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-19T02:55:26+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-19T02:57:25+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
 
 <ol>
   <li>Go to the first line you want to start to comment. Place cursor at the beginning.</li>
@@ -39,7 +39,8 @@ x or d
   <li>Move cursor or letter j or k.</li>
   <li>Press y to yank the selected lines.</li>
   <li>Move the cursor to your target location.</li>
-  <li>Press p to paste after the current line. Or P to paste before the current line.</li>
+  <li>Press p to paste after the current line.</li>
+  <li>Or P to paste before the current line.</li>
 </ol>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Esc
