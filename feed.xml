@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-19T13:48:31+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">terminal configuration</title><link href="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html" rel="alternate" type="text/html" title="terminal configuration" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/19/terminal-configuration</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html"><![CDATA[<p>My terminal configuration</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-20T11:29:57+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">terminal configuration</title><link href="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html" rel="alternate" type="text/html" title="terminal configuration" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/19/terminal-configuration</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html"><![CDATA[<p>The last year or so, I have been using different tools on my terminal.</p>
+
+<p>It started with the oh-my-posh prompt, then I switched to using tmux.</p>
+
+<p>Now I’m messing around with lazyVim editor which is a tweak of neovim.</p>
+
+<p>So, here’s my configuration so far.</p>
 
 <table>
   <thead>
@@ -9,6 +15,10 @@
   </thead>
   <tbody>
     <tr>
+      <td style="text-align: left">Terminal</td>
+      <td style="text-align: left">Tmux</td>
+    </tr>
+    <tr>
       <td style="text-align: left">Prompt</td>
       <td style="text-align: left">Oh My Posh</td>
     </tr>
@@ -16,12 +26,14 @@
       <td style="text-align: left">Editor</td>
       <td style="text-align: left">Neovim (LazyVim)</td>
     </tr>
-    <tr>
-      <td style="text-align: left">Terminal</td>
-      <td style="text-align: left">Tmux</td>
-    </tr>
   </tbody>
-</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[My terminal configuration]]></summary></entry><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
+</table>
+
+<p>I still use VSCode, but it’s less and less.</p>
+
+<p>LazyVim still has many plugins to explore.</p>
+
+<p>Stay tuned.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[The last year or so, I have been using different tools on my terminal.]]></summary></entry><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
 
 <ol>
   <li>Go to the first line you want to start to comment. Place cursor at the beginning.</li>
