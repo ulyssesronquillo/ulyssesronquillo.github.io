@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-24T18:33:25+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">terminal configuration</title><link href="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html" rel="alternate" type="text/html" title="terminal configuration" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/19/terminal-configuration</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html"><![CDATA[<p>The last year or so, I have been using different tools on my terminal.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-25T15:21:19+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">tmux controls</title><link href="http://0.0.0.0:4000/2026/01/25/tmux-controls.html" rel="alternate" type="text/html" title="tmux controls" /><published>2026-01-25T00:00:00+00:00</published><updated>2026-01-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/25/tmux-controls</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/25/tmux-controls.html"><![CDATA[<p>tmux controls</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>leader key</td>
+      <td>`</td>
+    </tr>
+    <tr>
+      <td>switching windows</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>move to left window</td>
+      <td>shift + left arrow</td>
+    </tr>
+    <tr>
+      <td>move to right window</td>
+      <td>shift + right arrow</td>
+    </tr>
+    <tr>
+      <td>swapping windows</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>swap windows to left</td>
+      <td>ctrl + shift + left</td>
+    </tr>
+    <tr>
+      <td>swap window to right</td>
+      <td>ctrl + shift + right</td>
+    </tr>
+    <tr>
+      <td>switching panes</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>move to next pane</td>
+      <td>leader o</td>
+    </tr>
+    <tr>
+      <td>move between panes</td>
+      <td>leader left, leader right, leader up or leader down</td>
+    </tr>
+    <tr>
+      <td>delete pane</td>
+      <td>leader x</td>
+    </tr>
+    <tr>
+      <td>sync &amp; unsync panes</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>sync &amp; unsync panes</td>
+      <td>leader y</td>
+    </tr>
+    <tr>
+      <td>convert pane into window</td>
+      <td>leader !</td>
+    </tr>
+    <tr>
+      <td>reload configuration</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>reload tmux config</td>
+      <td>leader r</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[tmux controls]]></summary></entry><entry><title type="html">terminal configuration</title><link href="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html" rel="alternate" type="text/html" title="terminal configuration" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/19/terminal-configuration</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html"><![CDATA[<p>The last year or so, I have been using different tools on my terminal.</p>
 
 <p>It started with the oh-my-posh prompt, then I switched to using tmux.</p>
 
@@ -327,36 +396,4 @@ vi ~/.config/yazi/theme.toml
 
 <p>Just run convert thereafter.</p>
 
-<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Convert is an awesome program.]]></summary></entry><entry><title type="html">immich gallery</title><link href="http://0.0.0.0:4000/2025/12/31/immich-gallery.html" rel="alternate" type="text/html" title="immich gallery" /><published>2025-12-31T00:00:00+00:00</published><updated>2025-12-31T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2025/12/31/immich-gallery</id><content type="html" xml:base="http://0.0.0.0:4000/2025/12/31/immich-gallery.html"><![CDATA[<p>If you like hosting a photo gallery on your own desktop or server, give Immich a try.</p>
-
-<p>I installed mine on my Linux Mint desktop using docker compose.</p>
-
-<p>(1). Create a directory.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir immich; cd immich
-</code></pre></div></div>
-
-<p>(2). Download a couple of files.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
-wget -O .env https://github.com/immich-app/immich/releases/latest/download/example.env
-</code></pre></div></div>
-
-<p>(3). Customize the .env file with your custom values.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPLOAD_LOCATION=
-DB_DATA_LOCATION=
-DB_PASSWORD=
-</code></pre></div></div>
-
-<p>(4). Start the container.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up -d
-</code></pre></div></div>
-
-<p>(5). Finally, access the gallery from your browser.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:2283
-# or via ip address
-http://xxx.xxx.xxx.xxx:2283
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you like hosting a photo gallery on your own desktop or server, give Immich a try.]]></summary></entry></feed>
+<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Convert is an awesome program.]]></summary></entry></feed>
