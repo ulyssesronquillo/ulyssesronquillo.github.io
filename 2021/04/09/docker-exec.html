@@ -66,6 +66,7 @@ snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
     <p>If you want to SSH to a Docker container, use the Docker exec command.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it container_name bash
+docker exec -it --user root container_name /bin/bash
 </code></pre></div></div>
 
 <p>I’m using a Git Bash terminal, so I have to prefix the docker command with winpty.</p>
