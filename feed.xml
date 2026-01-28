@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-25T22:24:37+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">tmux controls</title><link href="http://0.0.0.0:4000/2026/01/25/tmux-controls.html" rel="alternate" type="text/html" title="tmux controls" /><published>2026-01-25T00:00:00+00:00</published><updated>2026-01-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/25/tmux-controls</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/25/tmux-controls.html"><![CDATA[<p>tmux controls</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-28T04:08:54+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">disable usb autosuspend</title><link href="http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend.html" rel="alternate" type="text/html" title="disable usb autosuspend" /><published>2026-01-27T00:00:00+00:00</published><updated>2026-01-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend.html"><![CDATA[<p>I use a single keyboard between 2 computer systems (MacOS and Linux). I disconnect my USB keyboard on one system and plug it to another whenever I switch computers. When my keyboard is disconnected from Linux for a very long time, the system no longer recognizes the keyboard when I plugged it back in unless I reboot the system. After a little bit of a research, I found a potential solution to the issue. Essentially the fix is to disable the USB autosuspend option which will need to be added to grub.</p>
+
+<p>Here are the steps:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&amp;usbcore.autosuspend=-1 /' /etc/default/grub
+sudo update-grub
+sudo systemctl reboot
+</code></pre></div></div>
+
+<p>Hopefully it fixes the issue.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I use a single keyboard between 2 computer systems (MacOS and Linux). I disconnect my USB keyboard on one system and plug it to another whenever I switch computers. When my keyboard is disconnected from Linux for a very long time, the system no longer recognizes the keyboard when I plugged it back in unless I reboot the system. After a little bit of a research, I found a potential solution to the issue. Essentially the fix is to disable the USB autosuspend option which will need to be added to grub.]]></summary></entry><entry><title type="html">tmux controls</title><link href="http://0.0.0.0:4000/2026/01/25/tmux-controls.html" rel="alternate" type="text/html" title="tmux controls" /><published>2026-01-25T00:00:00+00:00</published><updated>2026-01-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/25/tmux-controls</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/25/tmux-controls.html"><![CDATA[<p>tmux controls</p>
 
 <table>
   <tbody>
@@ -382,18 +391,4 @@ vi ~/.config/yazi/theme.toml
 <p>Rerun yazi. The new theme should be activated.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yazi
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s another great Terminal or CLI tool for navigating files and directories.]]></summary></entry><entry><title type="html">convert jpg pdf</title><link href="http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf.html" rel="alternate" type="text/html" title="convert jpg pdf" /><published>2026-01-01T00:00:00+00:00</published><updated>2026-01-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/01/convert-jpg-pdf.html"><![CDATA[<p>Convert is an awesome program.</p>
-
-<p>Here’s another way of converting JPG to PDF.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>convert input.jpg output.pdf
-</code></pre></div></div>
-
-<p>If you don’t have it installed, run:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install imagemagick
-</code></pre></div></div>
-
-<p>Just run convert thereafter.</p>
-
-<p>That is all.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Convert is an awesome program.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s another great Terminal or CLI tool for navigating files and directories.]]></summary></entry></feed>
