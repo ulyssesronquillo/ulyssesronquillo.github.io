@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-28T04:08:54+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">disable usb autosuspend</title><link href="http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend.html" rel="alternate" type="text/html" title="disable usb autosuspend" /><published>2026-01-27T00:00:00+00:00</published><updated>2026-01-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend.html"><![CDATA[<p>I use a single keyboard between 2 computer systems (MacOS and Linux). I disconnect my USB keyboard on one system and plug it to another whenever I switch computers. When my keyboard is disconnected from Linux for a very long time, the system no longer recognizes the keyboard when I plugged it back in unless I reboot the system. After a little bit of a research, I found a potential solution to the issue. Essentially the fix is to disable the USB autosuspend option which will need to be added to grub.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-01-29T12:04:58+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">usb commands</title><link href="http://0.0.0.0:4000/2026/01/29/usb-commands.html" rel="alternate" type="text/html" title="usb commands" /><published>2026-01-29T00:00:00+00:00</published><updated>2026-01-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/29/usb-commands</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/29/usb-commands.html"><![CDATA[<p>Here’s a couple of USB command line tools if you having issues with your USB peripherals.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsusb
+xinput
+</code></pre></div></div>
+
+<p>I have issues with my keyboard and this helps.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a couple of USB command line tools if you having issues with your USB peripherals.]]></summary></entry><entry><title type="html">disable usb autosuspend</title><link href="http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend.html" rel="alternate" type="text/html" title="disable usb autosuspend" /><published>2026-01-27T00:00:00+00:00</published><updated>2026-01-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend.html"><![CDATA[<p>I use a single keyboard between 2 computer systems (MacOS and Linux). I disconnect my USB keyboard on one system and plug it to another whenever I switch computers. When my keyboard is disconnected from Linux for a very long time, the system no longer recognizes the keyboard when I plugged it back in unless I reboot the system. After a little bit of a research, I found a potential solution to the issue. Essentially the fix is to disable the USB autosuspend option which will need to be added to grub.</p>
 
 <p>Here are the steps:</p>
 
@@ -367,28 +373,4 @@ services:
 
 <p>If you have a port conflict, you can modify the port to another.</p>
 
-<p>Create a new repository. Clone it or perform a remote add origin.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you want to host Git repositories on your desktop or server, then give Gitea a try.]]></summary></entry><entry><title type="html">yazi file manager</title><link href="http://0.0.0.0:4000/2026/01/02/yazi-file-manager.html" rel="alternate" type="text/html" title="yazi file manager" /><published>2026-01-02T00:00:00+00:00</published><updated>2026-01-02T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/02/yazi-file-manager</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/02/yazi-file-manager.html"><![CDATA[<p>Here’s another great Terminal or CLI tool for navigating files and directories.</p>
-
-<p>To install, just use your package manager. In this case, it’s apt.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install yazi
-brew install yazi
-</code></pre></div></div>
-<p>To run, just type yazi.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yazi
-</code></pre></div></div>
-
-<p>If text is not readable, search online for catppuccin yazi theme.</p>
-
-<p>Download the file and paste it to ~/.config/yazi/theme.toml.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/.config/yazi
-touch ~/.config/yazi/theme.toml
-vi ~/.config/yazi/theme.toml
-</code></pre></div></div>
-
-<p>Rerun yazi. The new theme should be activated.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yazi
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s another great Terminal or CLI tool for navigating files and directories.]]></summary></entry></feed>
+<p>Create a new repository. Clone it or perform a remote add origin.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you want to host Git repositories on your desktop or server, then give Gitea a try.]]></summary></entry></feed>
