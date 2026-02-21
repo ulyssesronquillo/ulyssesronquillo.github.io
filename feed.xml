@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-02-21T15:17:11+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">baggage limits</title><link href="http://0.0.0.0:4000/2026/02/21/baggage-limits.html" rel="alternate" type="text/html" title="baggage limits" /><published>2026-02-21T00:00:00+00:00</published><updated>2026-02-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/02/21/baggage-limits</id><content type="html" xml:base="http://0.0.0.0:4000/2026/02/21/baggage-limits.html"><![CDATA[<p>Here are baggage limits for international travel for these airlines.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-02-21T15:19:50+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">baggage limits</title><link href="http://0.0.0.0:4000/2026/02/21/baggage-limits.html" rel="alternate" type="text/html" title="baggage limits" /><published>2026-02-21T00:00:00+00:00</published><updated>2026-02-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/02/21/baggage-limits</id><content type="html" xml:base="http://0.0.0.0:4000/2026/02/21/baggage-limits.html"><![CDATA[<p>Here are the baggage limits for international travel for the following airlines.</p>
 
 <table>
   <thead>
@@ -40,7 +40,7 @@
       <td>22 lbs</td>
     </tr>
     <tr>
-      <td>Philippine Airlines</td>
+      <td>Philippine Airlines (domestic)</td>
       <td> </td>
       <td> </td>
     </tr>
@@ -55,7 +55,7 @@
       <td>15 lbs</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here are baggage limits for international travel for these airlines.]]></summary></entry><entry><title type="html">keyboard freeze</title><link href="http://0.0.0.0:4000/2026/02/07/keyboard-freeze.html" rel="alternate" type="text/html" title="keyboard freeze" /><published>2026-02-07T00:00:00+00:00</published><updated>2026-02-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/02/07/keyboard-freeze</id><content type="html" xml:base="http://0.0.0.0:4000/2026/02/07/keyboard-freeze.html"><![CDATA[<p>Another potential fix to my keyboard freezing problem on Linux Mint 22.1 after going to sleep.</p>
+</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here are the baggage limits for international travel for the following airlines.]]></summary></entry><entry><title type="html">keyboard freeze</title><link href="http://0.0.0.0:4000/2026/02/07/keyboard-freeze.html" rel="alternate" type="text/html" title="keyboard freeze" /><published>2026-02-07T00:00:00+00:00</published><updated>2026-02-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/02/07/keyboard-freeze</id><content type="html" xml:base="http://0.0.0.0:4000/2026/02/07/keyboard-freeze.html"><![CDATA[<p>Another potential fix to my keyboard freezing problem on Linux Mint 22.1 after going to sleep.</p>
 
 <p>Edit Grub.</p>
 
