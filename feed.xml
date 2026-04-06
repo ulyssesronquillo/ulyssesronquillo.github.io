@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-02-21T15:19:50+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">baggage limits</title><link href="http://0.0.0.0:4000/2026/02/21/baggage-limits.html" rel="alternate" type="text/html" title="baggage limits" /><published>2026-02-21T00:00:00+00:00</published><updated>2026-02-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/02/21/baggage-limits</id><content type="html" xml:base="http://0.0.0.0:4000/2026/02/21/baggage-limits.html"><![CDATA[<p>Here are the baggage limits for international travel for the following airlines.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-06T14:09:35+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">editing crontab without duplicates</title><link href="http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates.html" rel="alternate" type="text/html" title="editing crontab without duplicates" /><published>2026-04-06T00:00:00+00:00</published><updated>2026-04-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates.html"><![CDATA[<p>Here’s a neat script that will edit crontab without creating duplicates.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/usr/bin/env bash
+
+CRON_ENTRY="0 2 * * * /path/to/script.sh"
+
+EXISTING=$(crontab -l 2&gt;/dev/null || true)
+
+if ! echo "$EXISTING" | grep -Fxq "$CRON_ENTRY"; then
+  printf "%s\n%s\n" "$EXISTING" "$CRON_ENTRY" | crontab -
+fi
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a neat script that will edit crontab without creating duplicates.]]></summary></entry><entry><title type="html">baggage limits</title><link href="http://0.0.0.0:4000/2026/02/21/baggage-limits.html" rel="alternate" type="text/html" title="baggage limits" /><published>2026-02-21T00:00:00+00:00</published><updated>2026-02-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/02/21/baggage-limits</id><content type="html" xml:base="http://0.0.0.0:4000/2026/02/21/baggage-limits.html"><![CDATA[<p>Here are the baggage limits for international travel for the following airlines.</p>
 
 <table>
   <thead>
@@ -262,25 +273,4 @@ console.log('Now running in:', process.cwd());
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH=$PATH:/absolute/path/to/your/directory
 </code></pre></div></div>
 
-<p>If you want it to be more permanent, add the export command to your ~/.bashrc in Linux or ~/.zshrc on a Mac.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Run your node script from anywhere by switching to a specific directory by changing to a working directory.]]></summary></entry><entry><title type="html">feeding the starter</title><link href="http://0.0.0.0:4000/2026/01/11/feeding-the-starter.html" rel="alternate" type="text/html" title="feeding the starter" /><published>2026-01-11T00:00:00+00:00</published><updated>2026-01-11T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/11/feeding-the-starter</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/11/feeding-the-starter.html"><![CDATA[<p>Feeding the sourdough starter (the beast).</p>
-
-<ol>
-  <li>
-    <p>Take out 80% of the starter and throw it away or use it on other breads.</p>
-  </li>
-  <li>
-    <p>Add 50 grams of flour to the starter.</p>
-  </li>
-  <li>
-    <p>Add 50 grams of filtered water to the starter.</p>
-  </li>
-  <li>
-    <p>Mix it thoroughly for 30 seconds or so.</p>
-  </li>
-  <li>
-    <p>Place in the fridge until the next feeding or use.</p>
-  </li>
-  <li>
-    <p>Feed your starter at least once a week.</p>
-  </li>
-</ol>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Feeding the sourdough starter (the beast).]]></summary></entry></feed>
+<p>If you want it to be more permanent, add the export command to your ~/.bashrc in Linux or ~/.zshrc on a Mac.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Run your node script from anywhere by switching to a specific directory by changing to a working directory.]]></summary></entry></feed>
