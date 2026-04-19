@@ -588,6 +588,9 @@ table td {
   .post-title {
     font-size: 1.5rem;
   }
+  .column {
+    flex: 1 1 45%;
+  }
 }
 .post-content ul li {
   border: none;
