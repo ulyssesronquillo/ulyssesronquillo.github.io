@@ -324,11 +324,11 @@ table {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-  border: 1px solid #222;
+  border: 1px solid #353535;
 }
 
 table tr:nth-child(even) {
-  background-color: #505050;
+  background-color: #272727;
 }
 
 table th, table td {
@@ -336,10 +336,9 @@ table th, table td {
 }
 
 table th {
-  background-color: #282828;
-  border: 1px solid #222;
-  border-bottom-color: #100b0d;
-  border-bottom-color: #222;
+  background-color: #303030;
+  border: 1px solid #353535;
+  border-bottom-color: #353535;
 }
 
 table td {
