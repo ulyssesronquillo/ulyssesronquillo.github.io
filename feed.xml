@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-21T03:21:14+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">editing crontab without duplicates</title><link href="http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates.html" rel="alternate" type="text/html" title="editing crontab without duplicates" /><published>2026-04-06T00:00:00+00:00</published><updated>2026-04-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates.html"><![CDATA[<p>Here’s a neat script that will edit crontab without creating duplicates.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-21T11:09:14+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">git push script</title><link href="http://0.0.0.0:4000/2026/04/21/git-push-script.html" rel="alternate" type="text/html" title="git push script" /><published>2026-04-21T00:00:00+00:00</published><updated>2026-04-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/21/git-push-script</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/21/git-push-script.html"><![CDATA[<p>Here’s my new git push script.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
+
+comment=$1
+if [[ -z $comment ]]; then
+  echo "Usage: $0 'put your comment here'"
+  exit
+fi
+
+git add .
+git commit -am "$comment"
+git push
+</code></pre></div></div>
+
+<p>To use the script, simply execute ./gitPush.sh ‘put your git comment here’</p>
+
+<p>The script will add, commit and push it to your remote repository.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s my new git push script.]]></summary></entry><entry><title type="html">git remote set url</title><link href="http://0.0.0.0:4000/2026/04/21/git-remote-set-url.html" rel="alternate" type="text/html" title="git remote set url" /><published>2026-04-21T00:00:00+00:00</published><updated>2026-04-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/21/git-remote-set-url</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/21/git-remote-set-url.html"><![CDATA[<p>I run Gitea on my desktop. Recently my desktop IP address changed.</p>
+
+<p>I should really set it to a static IP address, but that’s another story.</p>
+
+<p>Doing a git pull and a git push no longer works since the remote URL changed.</p>
+
+<p>To update to a new remote location, simply run the command below.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote set-url origin http://192.168.68.105:3000/ulysses/scripts.git
+</code></pre></div></div>
+
+<p>If you use SSH, use the SSH remote link instead of HTTP.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I run Gitea on my desktop. Recently my desktop IP address changed.]]></summary></entry><entry><title type="html">editing crontab without duplicates</title><link href="http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates.html" rel="alternate" type="text/html" title="editing crontab without duplicates" /><published>2026-04-06T00:00:00+00:00</published><updated>2026-04-06T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/06/editing-crontab-without-duplicates.html"><![CDATA[<p>Here’s a neat script that will edit crontab without creating duplicates.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/usr/bin/env bash
 
@@ -233,44 +261,4 @@ Esc
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+v
 Use cursor or j
 x or d
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to comment multiple lines in nvim.]]></summary></entry><entry><title type="html">copy paste nvim</title><link href="http://0.0.0.0:4000/2026/01/18/copy-paste-nvim.html" rel="alternate" type="text/html" title="copy paste nvim" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/copy-paste-nvim</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/copy-paste-nvim.html"><![CDATA[<p>How to copy and paste in vim or nvim.</p>
-
-<p>Let’s say you have 10 rows of code that you want to copy somewhere else like at the bottom of your code.</p>
-
-<ol>
-  <li>Press Esc to enter Normal mode.</li>
-  <li>Move the cursor to the first line.</li>
-  <li>Enter Visual Line mode. Shift+V.</li>
-  <li>Move cursor or letter j or k.</li>
-  <li>Press y to yank the selected lines.</li>
-  <li>Move the cursor to your target location.</li>
-  <li>Press p to paste after the current line.</li>
-  <li>Or P to paste before the current line.</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Esc
-Move cursor
-Shift+V
-Move cursor
-y
-Move cursor
-p or P
-u
-</code></pre></div></div>
-
-<p>If you want to undo, press u.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to copy and paste in vim or nvim.]]></summary></entry><entry><title type="html">run node anywhere</title><link href="http://0.0.0.0:4000/2026/01/18/run-node-anywhere.html" rel="alternate" type="text/html" title="run node anywhere" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/run-node-anywhere</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/run-node-anywhere.html"><![CDATA[<p>Run your node script from anywhere by switching to a specific directory by changing to a working directory.</p>
-
-<p>Place this code at the top of your node script.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/usr/bin/env node 
-
-process.chdir('/absolute/path/to/your/directory');
-console.log('Now running in:', process.cwd());
-</code></pre></div></div>
-
-<p>In addition, you can also add your node directory to your PATH so you can run it anywhere.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH=$PATH:/absolute/path/to/your/directory
-</code></pre></div></div>
-
-<p>If you want it to be more permanent, add the export command to your ~/.bashrc in Linux or ~/.zshrc on a Mac.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Run your node script from anywhere by switching to a specific directory by changing to a working directory.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to comment multiple lines in nvim.]]></summary></entry></feed>
