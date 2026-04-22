@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-21T11:18:17+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">git push script</title><link href="http://0.0.0.0:4000/2026/04/21/git-push-script.html" rel="alternate" type="text/html" title="git push script" /><published>2026-04-21T00:00:00+00:00</published><updated>2026-04-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/21/git-push-script</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/21/git-push-script.html"><![CDATA[<p>Here’s my new git push script.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-22T01:38:07+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">confirm random string</title><link href="http://0.0.0.0:4000/2026/04/21/confirm-random-string.html" rel="alternate" type="text/html" title="confirm random string" /><published>2026-04-21T00:00:00+00:00</published><updated>2026-04-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/21/confirm-random-string</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/21/confirm-random-string.html"><![CDATA[<p>Here’s a nice little script that generates a random string.</p>
+
+<p>User is asked to match the string. If there’s a match, it continues.</p>
+
+<p>If there’s no match, it will exit.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>confirm() {
+  CHARNUM=6
+  CHARSET='A-Za-z0-9'
+  # Generate random string
+  RANDOM_STRING=$(LC_ALL=C tr -dc $CHARSET &lt;/dev/urandom | head -c $CHARNUM)
+  printf "%s\n" "Please confirm Code to continue: $RANDOM_STRING"
+  read -r -p "Code: " USER_INPUT
+  if [[ "$USER_INPUT" != "$RANDOM_STRING" ]]; then
+    echo "❌ Code does not match! Exiting!"
+    exit 1
+  fi
+  echo "✅ Code matched!"
+  echo "Shutting down server!"
+}
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a nice little script that generates a random string.]]></summary></entry><entry><title type="html">git push script</title><link href="http://0.0.0.0:4000/2026/04/21/git-push-script.html" rel="alternate" type="text/html" title="git push script" /><published>2026-04-21T00:00:00+00:00</published><updated>2026-04-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/21/git-push-script</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/21/git-push-script.html"><![CDATA[<p>Here’s my new git push script.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 
@@ -231,34 +251,4 @@ sudo systemctl reboot
 
 <p>LazyVim still has many plugins to explore.</p>
 
-<p>Stay tuned.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[The last year or so, I have been using different tools on my terminal.]]></summary></entry><entry><title type="html">comment multiple lines</title><link href="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html" rel="alternate" type="text/html" title="comment multiple lines" /><published>2026-01-18T00:00:00+00:00</published><updated>2026-01-18T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/18/comment-multiple-lines</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/18/comment-multiple-lines.html"><![CDATA[<p>How to comment multiple lines in nvim.</p>
-
-<ol>
-  <li>Go to the first line you want to start to comment. Place cursor at the beginning.</li>
-  <li>Enter Visual Block mode by pressing Ctrl+v.</li>
-  <li>Use arrow keys or j to select multiple lines.</li>
-  <li>Shift+I to enter insert mode.</li>
-  <li>Choose a character (#) to use.</li>
-  <li>Esc to comment multiple lines.</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+v
-Use cursor or j
-Shift+I
-#
-Esc
-</code></pre></div></div>
-
-<p>To uncomment</p>
-
-<ol>
-  <li>Place cursor on the first comment.</li>
-  <li>Enter Visual Block or Ctrl+v.</li>
-  <li>Select columns using cursor or j,k.</li>
-  <li>Press x or d to delete on selected lines.</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl+v
-Use cursor or j
-x or d
-</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[How to comment multiple lines in nvim.]]></summary></entry></feed>
+<p>Stay tuned.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[The last year or so, I have been using different tools on my terminal.]]></summary></entry></feed>
