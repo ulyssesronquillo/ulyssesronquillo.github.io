@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-22T02:06:33+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">confirm random string</title><link href="http://0.0.0.0:4000/2026/04/21/confirm-random-string.html" rel="alternate" type="text/html" title="confirm random string" /><published>2026-04-21T00:00:00+00:00</published><updated>2026-04-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/21/confirm-random-string</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/21/confirm-random-string.html"><![CDATA[<p>Here’s a nice little script that generates a random string.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-22T17:07:34+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">linux gb memory</title><link href="http://0.0.0.0:4000/2026/04/22/linux-gb-memory.html" rel="alternate" type="text/html" title="linux gb memory" /><published>2026-04-22T00:00:00+00:00</published><updated>2026-04-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/22/linux-gb-memory</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/22/linux-gb-memory.html"><![CDATA[<p>This is the command to display system memory in GB in Linux.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep -E 'MemTotal|MemAvailable' /proc/meminfo | awk '{printf "%s %.2f GB\n", $1, $2/1024^2}'
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[This is the command to display system memory in GB in Linux.]]></summary></entry><entry><title type="html">confirm random string</title><link href="http://0.0.0.0:4000/2026/04/21/confirm-random-string.html" rel="alternate" type="text/html" title="confirm random string" /><published>2026-04-21T00:00:00+00:00</published><updated>2026-04-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/21/confirm-random-string</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/21/confirm-random-string.html"><![CDATA[<p>Here’s a nice little script that generates a random string.</p>
 
 <p>User is asked to match the string. If there’s a match, it continues.</p>
 
@@ -216,39 +219,4 @@ sudo systemctl reboot
       <td>leader r</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[tmux controls]]></summary></entry><entry><title type="html">terminal configuration</title><link href="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html" rel="alternate" type="text/html" title="terminal configuration" /><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/19/terminal-configuration</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/19/terminal-configuration.html"><![CDATA[<p>The last year or so, I have been using different tools on my terminal.</p>
-
-<p>It started with the oh-my-posh prompt, then I switched to using tmux.</p>
-
-<p>Now I’m messing around with lazyVim editor which is a tweak of neovim.</p>
-
-<p>So, here’s my configuration so far.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Tool</th>
-      <th style="text-align: left">Program</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Terminal</td>
-      <td style="text-align: left">Tmux</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Prompt</td>
-      <td style="text-align: left">Oh My Posh</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Editor</td>
-      <td style="text-align: left">Neovim (LazyVim)</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>I still use VSCode, but it’s less and less.</p>
-
-<p>LazyVim still has many plugins to explore.</p>
-
-<p>Stay tuned.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[The last year or so, I have been using different tools on my terminal.]]></summary></entry></feed>
+</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[tmux controls]]></summary></entry></feed>
