@@ -236,7 +236,7 @@ strong {
 .multicolumn {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
 .column {
@@ -247,7 +247,7 @@ strong {
 .blog-posts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px 30px;
+  gap: 10px;
 }
 
 /* Style for each post item */
@@ -261,7 +261,15 @@ strong {
 @media (max-width: 960px) {
   .blog-posts-container {
     grid-template-columns: 1fr;
-    gap: 10px 0;
+    gap: 10px;
+  }
+  .multicolumn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .column {
+    flex: 1 1 45%;
   }
 }
 @media (max-width: 1080px) {
