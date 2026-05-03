@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-04-22T17:07:34+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">linux gb memory</title><link href="http://0.0.0.0:4000/2026/04/22/linux-gb-memory.html" rel="alternate" type="text/html" title="linux gb memory" /><published>2026-04-22T00:00:00+00:00</published><updated>2026-04-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/22/linux-gb-memory</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/22/linux-gb-memory.html"><![CDATA[<p>This is the command to display system memory in GB in Linux.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-05-03T15:05:27+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">13 cent cloud bill</title><link href="http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill.html" rel="alternate" type="text/html" title="13 cent cloud bill" /><published>2026-05-03T00:00:00+00:00</published><updated>2026-05-03T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill</id><content type="html" xml:base="http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill.html"><![CDATA[<p>Here’s my $0.13 cent cloud bill.</p>
+
+<p>Back in the day, my cloud bill was anywhere between $10-20 per month because I was hosting a VM.</p>
+
+<p>I converted from WordPress site to Jekyll, a static site generator hosted for free at GitHub.</p>
+
+<p>My photo gallery is hosted in AWS S3. I use node.js programs to generate the galleries.</p>
+
+<p>My total bill this month is $0.13. It will climb a few cents as I upload more photos.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s my $0.13 cent cloud bill.]]></summary></entry><entry><title type="html">linux gb memory</title><link href="http://0.0.0.0:4000/2026/04/22/linux-gb-memory.html" rel="alternate" type="text/html" title="linux gb memory" /><published>2026-04-22T00:00:00+00:00</published><updated>2026-04-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/22/linux-gb-memory</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/22/linux-gb-memory.html"><![CDATA[<p>This is the command to display system memory in GB in Linux.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep -E 'MemTotal|MemAvailable' /proc/meminfo | awk '{printf "%s %.2f GB\n", $1, $2/1024^2}'
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[This is the command to display system memory in GB in Linux.]]></summary></entry><entry><title type="html">confirm random string</title><link href="http://0.0.0.0:4000/2026/04/21/confirm-random-string.html" rel="alternate" type="text/html" title="confirm random string" /><published>2026-04-21T00:00:00+00:00</published><updated>2026-04-21T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/04/21/confirm-random-string</id><content type="html" xml:base="http://0.0.0.0:4000/2026/04/21/confirm-random-string.html"><![CDATA[<p>Here’s a nice little script that generates a random string.</p>
@@ -150,73 +158,4 @@ sudo update-grub
 sudo systemctl reboot
 </code></pre></div></div>
 
-<p>Hopefully it fixes the issue.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I use a single keyboard between 2 computer systems (MacOS and Linux). I disconnect my USB keyboard on one system and plug it to another whenever I switch computers. When my keyboard is disconnected from Linux for a very long time, the system no longer recognizes the keyboard when I plugged it back in unless I reboot the system. After a little bit of a research, I found a potential solution to the issue. Essentially the fix is to disable the USB autosuspend option which will need to be added to grub.]]></summary></entry><entry><title type="html">tmux controls</title><link href="http://0.0.0.0:4000/2026/01/25/tmux-controls.html" rel="alternate" type="text/html" title="tmux controls" /><published>2026-01-25T00:00:00+00:00</published><updated>2026-01-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/25/tmux-controls</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/25/tmux-controls.html"><![CDATA[<p>tmux controls</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>leader key</td>
-      <td>`</td>
-    </tr>
-    <tr>
-      <td>switching windows</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>move to left window</td>
-      <td>shift + left arrow</td>
-    </tr>
-    <tr>
-      <td>move to right window</td>
-      <td>shift + right arrow</td>
-    </tr>
-    <tr>
-      <td>swapping windows</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>swap windows to left</td>
-      <td>ctrl + shift + left</td>
-    </tr>
-    <tr>
-      <td>swap window to right</td>
-      <td>ctrl + shift + right</td>
-    </tr>
-    <tr>
-      <td>switching panes</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>move to next pane</td>
-      <td>leader o</td>
-    </tr>
-    <tr>
-      <td>move between panes</td>
-      <td>leader left, leader right, leader up or leader down</td>
-    </tr>
-    <tr>
-      <td>delete pane</td>
-      <td>leader x</td>
-    </tr>
-    <tr>
-      <td>sync &amp; unsync panes</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>sync &amp; unsync panes</td>
-      <td>leader y</td>
-    </tr>
-    <tr>
-      <td>convert pane into window</td>
-      <td>leader !</td>
-    </tr>
-    <tr>
-      <td>reload configuration</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>reload tmux config</td>
-      <td>leader r</td>
-    </tr>
-  </tbody>
-</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[tmux controls]]></summary></entry></feed>
+<p>Hopefully it fixes the issue.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I use a single keyboard between 2 computer systems (MacOS and Linux). I disconnect my USB keyboard on one system and plug it to another whenever I switch computers. When my keyboard is disconnected from Linux for a very long time, the system no longer recognizes the keyboard when I plugged it back in unless I reboot the system. After a little bit of a research, I found a potential solution to the issue. Essentially the fix is to disable the USB autosuspend option which will need to be added to grub.]]></summary></entry></feed>
