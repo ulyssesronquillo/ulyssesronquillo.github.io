@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-05-03T15:05:27+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">13 cent cloud bill</title><link href="http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill.html" rel="alternate" type="text/html" title="13 cent cloud bill" /><published>2026-05-03T00:00:00+00:00</published><updated>2026-05-03T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill</id><content type="html" xml:base="http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill.html"><![CDATA[<p>Here’s my $0.13 cent cloud bill.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-05-05T14:48:19+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">run command recursively directory</title><link href="http://0.0.0.0:4000/2026/05/05/run-command-recursively-directory.html" rel="alternate" type="text/html" title="run command recursively directory" /><published>2026-05-05T00:00:00+00:00</published><updated>2026-05-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/05/05/run-command-recursively-directory</id><content type="html" xml:base="http://0.0.0.0:4000/2026/05/05/run-command-recursively-directory.html"><![CDATA[<p>Here’s the script that will the dos2unix command recursively in the current directory.</p>
+
+<p>It doesn’t have to be dos2unix but can be any command.</p>
+
+<p>Run it on all files.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -exec dos2unix {} +
+</code></pre></div></div>
+
+<p>Run it on all shell files only.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f -name "*.sh" -exec dos2unix {} +
+</code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s the script that will the dos2unix command recursively in the current directory.]]></summary></entry><entry><title type="html">13 cent cloud bill</title><link href="http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill.html" rel="alternate" type="text/html" title="13 cent cloud bill" /><published>2026-05-03T00:00:00+00:00</published><updated>2026-05-03T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill</id><content type="html" xml:base="http://0.0.0.0:4000/2026/05/03/13-cent-cloud-bill.html"><![CDATA[<p>Here’s my $0.13 cent cloud bill.</p>
 
 <p>Back in the day, my cloud bill was anywhere between $10-20 per month because I was hosting a VM.</p>
 
@@ -149,13 +161,4 @@ reboot
 xinput
 </code></pre></div></div>
 
-<p>I have issues with my keyboard and this helps.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a couple of USB command line tools if you having issues with your USB peripherals.]]></summary></entry><entry><title type="html">disable usb autosuspend</title><link href="http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend.html" rel="alternate" type="text/html" title="disable usb autosuspend" /><published>2026-01-27T00:00:00+00:00</published><updated>2026-01-27T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend</id><content type="html" xml:base="http://0.0.0.0:4000/2026/01/27/disable-usb-autosuspend.html"><![CDATA[<p>I use a single keyboard between 2 computer systems (MacOS and Linux). I disconnect my USB keyboard on one system and plug it to another whenever I switch computers. When my keyboard is disconnected from Linux for a very long time, the system no longer recognizes the keyboard when I plugged it back in unless I reboot the system. After a little bit of a research, I found a potential solution to the issue. Essentially the fix is to disable the USB autosuspend option which will need to be added to grub.</p>
-
-<p>Here are the steps:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="/&amp;usbcore.autosuspend=-1 /' /etc/default/grub
-sudo update-grub
-sudo systemctl reboot
-</code></pre></div></div>
-
-<p>Hopefully it fixes the issue.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[I use a single keyboard between 2 computer systems (MacOS and Linux). I disconnect my USB keyboard on one system and plug it to another whenever I switch computers. When my keyboard is disconnected from Linux for a very long time, the system no longer recognizes the keyboard when I plugged it back in unless I reboot the system. After a little bit of a research, I found a potential solution to the issue. Essentially the fix is to disable the USB autosuspend option which will need to be added to grub.]]></summary></entry></feed>
+<p>I have issues with my keyboard and this helps.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here’s a couple of USB command line tools if you having issues with your USB peripherals.]]></summary></entry></feed>
