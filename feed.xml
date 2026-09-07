@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-05-17T15:22:38+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">column t</title><link href="http://0.0.0.0:4000/2026/05/15/column-t.html" rel="alternate" type="text/html" title="column t" /><published>2026-05-15T00:00:00+00:00</published><updated>2026-05-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/05/15/column-t</id><content type="html" xml:base="http://0.0.0.0:4000/2026/05/15/column-t.html"><![CDATA[<p>If you have a text file with multiple columns, you can use column to align the output vertically.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2026-09-07T12:53:53+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">uly.me</title><subtitle></subtitle><author><name>ulysses</name></author><entry><title type="html">making machine reservations</title><link href="http://0.0.0.0:4000/2026/09/07/making-machine-reservations.html" rel="alternate" type="text/html" title="making machine reservations" /><published>2026-09-07T00:00:00+00:00</published><updated>2026-09-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/09/07/making-machine-reservations</id><content type="html" xml:base="http://0.0.0.0:4000/2026/09/07/making-machine-reservations.html"><![CDATA[<p>The following Ansible script makes multiple machines reservations in a GCP project based on machine type, zone and running instances.</p>
+
+<ul>
+  <li>Create new reservations if non-existent.</li>
+  <li>Update an existing reservation based on count.</li>
+  <li>Delete a reservation if no instances are present.</li>
+  <li>Print a summary at end of the script.</li>
+</ul>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[The following Ansible script makes multiple machines reservations in a GCP project based on machine type, zone and running instances.]]></summary></entry><entry><title type="html">column t</title><link href="http://0.0.0.0:4000/2026/05/15/column-t.html" rel="alternate" type="text/html" title="column t" /><published>2026-05-15T00:00:00+00:00</published><updated>2026-05-15T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/05/15/column-t</id><content type="html" xml:base="http://0.0.0.0:4000/2026/05/15/column-t.html"><![CDATA[<p>If you have a text file with multiple columns, you can use column to align the output vertically.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat output.txt | column -t 
 </code></pre></div></div>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[If you have a text file with multiple columns, you can use column to align the output vertically.]]></summary></entry><entry><title type="html">run command recursively directory</title><link href="http://0.0.0.0:4000/2026/05/05/run-command-recursively-directory.html" rel="alternate" type="text/html" title="run command recursively directory" /><published>2026-05-05T00:00:00+00:00</published><updated>2026-05-05T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/05/05/run-command-recursively-directory</id><content type="html" xml:base="http://0.0.0.0:4000/2026/05/05/run-command-recursively-directory.html"><![CDATA[<p>Here’s the script that will the dos2unix command recursively in the current directory.</p>
@@ -140,22 +147,4 @@ fi
       <td>15 lbs</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here are the baggage limits for international travel for the following airlines.]]></summary></entry><entry><title type="html">keyboard freeze</title><link href="http://0.0.0.0:4000/2026/02/07/keyboard-freeze.html" rel="alternate" type="text/html" title="keyboard freeze" /><published>2026-02-07T00:00:00+00:00</published><updated>2026-02-07T00:00:00+00:00</updated><id>http://0.0.0.0:4000/2026/02/07/keyboard-freeze</id><content type="html" xml:base="http://0.0.0.0:4000/2026/02/07/keyboard-freeze.html"><![CDATA[<p>Another potential fix to my keyboard freezing problem on Linux Mint 22.1 after going to sleep.</p>
-
-<p>Edit Grub.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vi /etc/default/grub
-</code></pre></div></div>
-
-<p>Add i8042.dubkdbd=1 to the GRUB_CMDLINE_LINUX_DEFAULT.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRUB_CMDLINE_LINUX_DEFAULT="usbcore.autosuspend=-1 quiet splash i8042.dumbkbd=1"
-</code></pre></div></div>
-
-<p>Update Grub and reboot.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo update-grub
-reboot
-</code></pre></div></div>
-
-<p>Hopefully that fixes it.</p>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Another potential fix to my keyboard freezing problem on Linux Mint 22.1 after going to sleep.]]></summary></entry></feed>
+</table>]]></content><author><name>ulysses</name></author><summary type="html"><![CDATA[Here are the baggage limits for international travel for the following airlines.]]></summary></entry></feed>
