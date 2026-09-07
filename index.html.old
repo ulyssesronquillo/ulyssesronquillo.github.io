@@ -54,12 +54,14 @@ snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
   <article>
     <h2 class="post-title"><a href="/2026/09/07/making-machine-reservations.html">making machine reservations</a></h2>
     <p><time datetime="2026-09-07">07 September 2026</time></p>
-    <p>The following Ansible script makes multiple machines reservations in a GCP project based on machine type, zone and running instances.</p>
+    <p>An Ansible script that makes multiple machines reservations in a GCP project based on machine type, zone and number of running instances.</p>
+
+<p>The script …</p>
 
 <ul>
-  <li>Create new reservations if non-existent.</li>
-  <li>Update an existing reservation based on count.</li>
-  <li>Delete a reservation if no instances are present.</li>
+  <li>Creates new reservations if it’s non-existent with count.</li>
+  <li>Update an existing reservation by increasing or decreasing count.</li>
+  <li>Delete a reservation if no instances are present or none are running.</li>
   <li>Print a summary at end of the script.</li>
 </ul>
 
